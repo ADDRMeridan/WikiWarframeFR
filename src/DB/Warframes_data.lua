@@ -1,4 +1,3 @@
-
 local WarframeData = {
     ["IgnoreInCount"] = {"Excalibur Umbra Prime", "Equinox Forme Diurne", "Equinox Forme Nocturne"},
     ["Warframes"] = {
@@ -2005,6 +2004,68 @@ local WarframeData = {
             Sex = "Mâle",
             Syndic = {"Céphalon Suda", "Méridien d'Acier"},
         },
+		["Nezha Prime"] = {
+            AuraPolarity = "Bar",
+            Conclave = true,
+            Cost = {
+                Main = {
+                    Credits = 25000,
+                    Rush = 50,
+                    Time = 72,
+                    Parts = {
+                        { Name = "Neuroptiques",Type = "Partie Prime",Count = 1,},
+                        { Name = "Châssis",Type = "Partie Prime",Count = 1,},
+                        { Name = "Systèmes",Type = "Partie Prime",Count = 1,},
+                        { Name = "Cellule Orokin",Type = "Ressource",Count = 5,},
+                    },
+                },
+                Neuro = {
+                    Credits = 15000,
+                    Rush = 25,
+                    Time = 12,
+                    Parts = {
+                        { Name = "Plaque d'Alliage",Type = "Ressource",Count = 5000,},
+                        { Name = "Capteurs Neuronaux",Type = "Ressource",Count = 6,},
+                        { Name = "Oxium",Type = "Ressource",Count = 225,},
+                        { Name = "Cristal d'Argon",Type = "Ressource",Count = 2,},
+                    },
+                },
+                Chassis = {
+                    Credits = 15000,
+                    Rush = 25,
+                    Time = 12,
+                    Parts = {
+                        { Name = "Extrait de Nitain",Type = "Ressource",Count = 2,},
+                        { Name = "Nano Spores",Type = "Ressource",Count = 4750,},
+                        { Name = "Rubedo",Type = "Ressource",Count = 1400,},
+                        { Name = "Morphics",Type = "Ressource",Count = 8,},
+                    },
+                },
+                System = {
+                    Credits = 15000,
+                    Rush = 25,
+                    Time = 12,
+                    Parts = {
+                        { Name = "Module de Contrôle",Type = "Ressource",Count = 10,},
+                        { Name = "Tellure",Type = "Ressource",Count = 3,},
+                        { Name = "Ferrite",Type = "Ressource",Count = 4300,},
+                        { Name = "Circuits",Type = "Ressource",Count = 1450,},
+                    },
+                },
+            },
+			Armor = 250,
+            Energy = 150,
+            Health = 125,
+			Shield = 50,
+            Sprint = 1.20,
+            Image = "Nehza_Prime.png",
+            Portrait = "Nehza PrimeIcon272.png",
+            Name = "Nehza Prime",
+            Polarities = {"D", "V", "Bar"},
+            Introduced = "29.3",
+            Sex = "Femelle",
+            Vaulted = false,
+        },
         ["Nidus"] = {
             Armor = 300,
             ArmorRank30 = 450,
@@ -3172,4 +3233,3 @@ local WarframeData = {
 
  
 return WarframeData
-

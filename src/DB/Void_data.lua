@@ -240,7 +240,7 @@ local VoidData = {
                 {Item = "REDEEMER", Part = "SCHEMA", Rarity = "Inhabituelle"},
                 {Item = "DETHCUBE", Part = "CERVEAU", Rarity = "Rare"}
             },
-            IsVaulted = 0
+            IsVaulted = 1
         }, {
             Tier = "Lith",
             Name = "D3",
@@ -3199,7 +3199,7 @@ local VoidData = {
                 {Item = "FORMA", Part = "SCHEMA", Rarity = "Inhabituelle"},
                 {Item = "ZHUGE", Part = "CANON", Rarity = "Rare"}
             },
-            IsVaulted = 0
+            IsVaulted = 1
         }, {
             Tier = "Neo",
             Name = "Z6",
@@ -3418,7 +3418,7 @@ local VoidData = {
                 {Item = "KARYST", Part = "POIGNEE", Rarity = "Inhabituelle"},
                 {Item = "BAZA", Part = "SCHEMA", Rarity = "Rare"}
             },
-            IsVaulted = 0
+            IsVaulted = 1
         }, {
             Tier = "Axi",
             Name = "C1",

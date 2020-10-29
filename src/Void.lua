@@ -3,7 +3,7 @@ local p = {}
 local VoidData = mw.loadData('Module:Void/data')
 local Icon = require("Module:Icon")
 local Shared = require("Module:Shared")
-local Tooltip = require('Module:Tooltip')
+local TT = require('Module:Tooltip')
 
 local TxtColors = {
     Commune = '#9C7344',
@@ -175,11 +175,15 @@ end
 -- (IE Braton Prime Barrel returns the Braton Prime icon)
 function p.getItemIconForDrop(drop)
     local iName = p.getItemName(drop.Item)
-    local pName = p.getPartName(drop.Part)
-    local iconSize = 'x38'
+    --local pName = p.getPartName(drop.Part)
+    local iconSize = 'x38px'
 
-    local icon = ''
-    icon = Icon._Prime(Shared.titleCase(drop.Item), nil, iconSize)
+    local icon = nil
+    if (TT.checkItemExist(iName, 'Warframe', false)) then
+        icon = TT._tooltipIcon(iName, 'Warframe', iconSize)
+    else
+        icon = Icon._Prime(Shared.titleCase(drop.Item), nil, iconSize)
+    end
 
     return icon
 end
@@ -206,7 +210,7 @@ function p._item(item_type, item_part, relic_tier, platform)
             local dropRarity = p.getRelicDropRarity(relic, item_type, item_part)
             if (dropRarity ~= nil) then
                 local relicText = relic.Tier .. " " .. relic.Name
-                local relicString = Tooltip._tooltipText(relicText, 'Relic',
+                local relicString = TT._tooltipText(relicText, 'Relic',
                                                          relicText ..
                                                              " &ndash; " ..
                                                              dropRarity)
@@ -272,7 +276,7 @@ function p.relicTooltip(frame)
                 elseif (pName == "MOD") then
                     local dbName = string.gsub(iName, "(%a)([%w_']*)",
                                                Shared.titleCase)
-                    icon = Tooltip._tooltipIcon(dbName, 'Mod', "32px")
+                    icon = TT._tooltipIcon(dbName, 'Mod', "32px")
                 elseif (pName == "RESSOURCE") then
                     local dbName = nil
                     if (type(iName) == "table") then
