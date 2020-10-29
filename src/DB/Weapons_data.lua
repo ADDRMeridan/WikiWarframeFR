@@ -2,9 +2,9 @@ local WeaponData = {
     ["IgnoreInCount"] = {
         "Rempart", "Épées Versatiles Sombres (Doubles Épées)", "Cadus",
         "Penta Carmin", "Machette Prisma", "Dargyn", "Arc d'Artémis",
-        "Chargeur Incandescent", "Dex Pixia", "Pacificateurs", "Diwata",
-        "Lame Exaltée", "Bâton de Fer", "Serres Valkyr", "Serres de Garuda",
-        "Vents du Désert", "Corvas (Atmosphère)", "Cyngas (Atmosphère)",
+        "Chargeur Incandescent", "Dex Pixia", "Pacificateurs", "Diwata", "Lame Exaltée", "Bâton de Fer",
+        "Serres Valkyr", "Serres de Garuda", "Vents du Désert",
+        "Corvas (Atmosphère)", "Cyngas (Atmosphère)",
         "Dual Decurion (Atmosphère)", "Fluctus (Atmosphère)",
         "Grattler (Atmosphère)", "Imperator (Atmosphère)",
         "Imperator Vandal (Atmosphère)", "Ayanga Kuva (Atmosphère)",
@@ -3789,6 +3789,55 @@ local WeaponData = {
             MeleeRange = 3.0,
             WallAttack = 150
         },
+		["Guandao Prime"] = {
+        BlockAngle = 55,
+        Class = "Arme d'Hast",
+        ComboDur = 6,
+        Conclave = false,
+        Cost = {
+            Credits = 5000,
+            Rush = 35,
+            Time = 12,
+            Parts = {
+                { Name = "Lame",Type = "Partie Prime",Count = 2,},
+                { Name = "Poignée",Type = "Partie Prime",Count = 1,},
+                { Name = "Cellule Orokin",Type = "Ressource",Count = 15,},},
+        },
+        Disposition = 0.5,
+        Family = "Guandao",
+        FollowThrough = 0.6,
+        HeavyAttack = 1440,
+        HeavySlamAttack = 1200,
+        HeavyRadialDmg = 1200,
+        HeavySlamRadius = 9,
+        Image = "Guandao Prime.png",
+        Introduced = "[[Update 29#Update 29.3|Update 29.3]]",
+        Mastery = 12,
+        MeleeRange = 3,
+        Name = "Guandao Prime",
+        NormalAttack = {
+            Damage = {
+                ["Impact"] = 60,
+                ["Perforation"] = 12,
+                ["Tranchant"] = 168},
+            CritChance = 0.32,
+            CritMultiplier = 2.4,
+            StatusChance = 0.2,
+            FireRate = 1,
+        },
+        Polarities = {"D", "V", "V"},
+        SlamAttack = 480,
+        SlamElement = "Impact",
+        SlamRadialDmg = 249,
+        SlamRadialElement = "Impact",
+        SlamRadialProc = "Impact",
+        SlamRadius = 7,
+        SlideAttack = 480,
+        StancePolarity = "Ability",
+        Traits = {"Prime"},
+        Type = "Mêlée",
+        WindUp = 0.9,
+    },
         ["Gunsen"] = {
             Cost = {
                 Credits = 20000,
@@ -9839,6 +9888,57 @@ local WeaponData = {
             FollowThrough = 0.8,
             WallAttack = 165
         },
+
+		["Vitrica"] = {
+        BlockAngle = 60,
+        Class = "Lame Lourde",
+        ComboDur = 10,
+        Conclave = false,
+        Cost = {
+            Credits = 20000,
+            Rush = 35,
+            Time = 12,
+            Parts = {
+                { Name = "Cellule Orokin",Type = "Ressource",Count = 15,},
+                { Name = "Oxium",Type = "Ressource",Count = 925,},
+                { Name = "Bapholite Trempée",Type = "Ressource",Count = 60,},
+                { Name = "Héciphron Purifié",Type = "Ressource",Count = 10,},},
+        },
+        Disposition = 0.5,
+        Family = "Vitrica",
+        FollowThrough = 0.6,
+        HeavyAttack = 1998,
+        HeavySlamAttack = 1665,
+        HeavyRadialDmg = 1665,
+        HeavySlamRadius = 4,
+        Image = "Vitrica.png",
+        Introduced = "[[Update 29#Update 29.3|Update 29.3]]",
+        Mastery = 13,
+        MeleeRange = 2.9,
+        Name = "Vitrica",
+        NormalAttack = {
+            Damage = {
+                ["Impact"] = 99.9,
+                ["Perforation"] = 99.9,
+                ["Tranchant"] = 133.2},
+            CritChance = 0.23,
+            CritMultiplier = 2.3,
+            StatusChance = 0.33,
+            FireRate = 0.833,
+        },
+        Polarities = {},
+        SlamAttack = 999,
+        --SlamElement = "Heat",
+        SlamRadialDmg = 333,
+        --SlamRadialElement = "Heat",
+        --SlamRadialProc = "Heat",
+        SlamRadius = 4,
+        SlideAttack = 666,
+        StancePolarity = "V",
+        Traits = {"Orokin"},
+        Type = "Mêlée",
+        WindUp = 1.1,
+    },
         ["Volnus"] = {
             -- BlockResist = 0.85,
             Class = "Marteau",
@@ -14875,6 +14975,55 @@ local WeaponData = {
             Trigger = "Semi-Auto",
             Type = "Secondaire"
         },
+		["Zakti Prime"] = {
+        Accuracy = 26.7,
+        AreaAttack = {
+            AttackName = "Nuage de Gaz",
+            Damage = {
+                ["Gas"] = 100,},
+            Radius = 3.8,
+        },
+        Class = "Pistolet",
+        Conclave = false,
+        Cost = {
+            Credits = 20000,
+            Rush = 35,
+            Time = 12,
+            Parts = {
+                { Name = "Canon",Type = "Partie Prime",Count = 1,},
+                { Name = "Receiver",Type = "Partie Prime",Count = 1,},
+                { Name = "Cellule Orokin",Type = "Ressource",Count = 10,},},
+        },
+        Disposition = 0.5,
+        ExilusPolarity = "V",
+        Family = "Zakti",
+        Image = "Zakti Prime.png",
+        Introduced = "[[Update 29#Update 29.3|Update 29.3]]",
+        Magazine = 8,
+        Mastery = 14,
+        MaxAmmo = 210,
+        Name = "Zakti Prime",
+        NormalAttack = {
+            AttackName = "Normal",
+            AmmoCost = 1,
+            Damage = {
+                ["Impact"] = 12,
+                ["Perforation"] = 18,},
+            CritChance = 0.08,
+            CritMultiplier = 1.8,
+            StatusChance = 0.42,
+            FireRate = 5.0,
+            ShotType = "Projectile",
+            ShotSpeed = "?",
+            Trigger = "Semi-Auto"
+        },
+        NoiseLevel = "Bruyant",
+        Polarities = {"Bar", "Bar", "V"},
+        Reload = 1,
+        Trigger = "Semi-Auto",
+        Traits = {"Prime"},
+        Type = "Secondaire",
+    },
         ["Zylok"] = {
             Accuracy = 23.5,
             Class = "Pistolet",
@@ -15554,12 +15703,14 @@ local WeaponData = {
                     {Name = "Morphics", Type = "Ressource", Count = 1},
                     {Name = "Pack Polymère", Type = "Ressource", Count = 400},
                     {Name = "Plaque d'Alliage", Type = "Ressource", Count = 150},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 600}
+                    {Name = "Ferrite", Type = "Ressource", Count = 600}
                 }
             },
-            Disposition = 1.3,
+            Disposition = 1.45,
+            ExilusPolarity = "Bar",
             Family = "Burston",
             Image = "Burston.png",
+            Introduced = "[[Closed Beta Updates#Vanilla|Vanilla]]",
             Magazine = 45,
             Mastery = 0,
             MaxAmmo = 540,
@@ -15600,7 +15751,8 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
                 }
             },
-            Disposition = 1.3,
+            Disposition = 1.35,
+            ExilusPolarity = "V",
             Family = "Burston",
             Image = "PrimeBurston.png",
             Introduced = "[[Update 11#Update 11.5|Update 11.5]]",
@@ -15999,7 +16151,8 @@ local WeaponData = {
             Accuracy = 100,
             Class = "Fusil",
             Conclave = true,
-            Disposition = 1.3,
+            Disposition = 1.4,
+            ExilusPolarity = "Bar",
             Family = "Dera",
             Image = "Dera.png",
             Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
@@ -16041,7 +16194,8 @@ local WeaponData = {
             Accuracy = 100,
             Class = "Fusil",
             Conclave = true,
-            Disposition = 1.245,
+            Disposition = 1.35,
+            ExilusPolarity = "Bar",
             Family = "Dera",
             Image = "DeraVandal.png",
             Introduced = "[[Update 16#Update 16.5|Update 16.5]]",
@@ -16072,7 +16226,8 @@ local WeaponData = {
             BurstFireRate = 3.33,
             Class = "Fusil",
             Conclave = true,
-            Disposition = 1.0,
+            Disposition = 1.2,
+            ExilusPolarity = "V",
             Family = "Sybaris",
             Image = "DexSybaris.png",
             Introduced = "[[Update 18#Hotfix 18.6.2|Hotfix 18.6.2]]",
@@ -16161,6 +16316,17 @@ local WeaponData = {
         },
         ["Ferrox"] = {
             Accuracy = 16.7,
+            AreaAttack = {
+                AttackName = "Effet de Zone",
+                Damage = {
+                    ["Impact"] = 100,
+                },
+                CritChance = 0.32,
+                CritMultiplier = 2.8,
+                StatusChance = 0.1,
+                Radius = 3.6,
+                Falloff = {StartRange = 0, EndRange = 3.6, Reduction = 0.4,},
+            },
             ChargeAttack = {
                 AttackName = "Tir Chargé",
                 Damage = {
@@ -16196,6 +16362,7 @@ local WeaponData = {
                 }
             },
             Disposition = 1.15,
+            ExilusPolarity = "Bar",
             Image = "Ferrox.png",
             Introduced = "[[Update 19#Update 19.13|Update 19.13]]",
             Magazine = 10,
@@ -16205,11 +16372,11 @@ local WeaponData = {
             Polarities = {"V", "D"},
             Reload = 1.8,
             SecondaryAttack = {
-                AttackName = "Throw Spear",
+                AttackName = "Lancer d'Harpon (Chargé)",
                 Damage = {
-                    ["Impact"] = 455,
-                    ["Perforation"] = 72.5,
-                    ["Tranchant"] = 122.5
+                    ["Impact"] = 385,
+                    ["Perforation"] = 55,
+                    ["Tranchant"] = 110
                 },
                 CritChance = 0.04,
                 CritMultiplier = 2,
@@ -16220,6 +16387,17 @@ local WeaponData = {
                 Trigger = "Chargé",
                 ShotType = "Projectile",
                 ShotSpeed = "???"
+            },
+            SecondaryAreaAttack = {
+                AttackName = "Lancer d'Harpon (Déchargé)",
+                Damage = {
+                    ["Impact"] = 385,
+                    ["Perforation"] = 55,
+                    ["Tranchant"] = 110,
+                },
+                CritChance = 0.04,
+                CritMultiplier = 2,
+                StatusChance = 0.33,
             },
             Traits = {"Corpus"},
             Trigger = "Chargé",
@@ -16243,6 +16421,7 @@ local WeaponData = {
             Class = "Fusil",
             Conclave = true,
             Disposition = 1.55,
+            ExilusPolarity = "Bar",
             Image = "Fusil à Flux.png",
             Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
             Magazine = 50,
@@ -16264,7 +16443,7 @@ local WeaponData = {
             Traits = {"Corpus"},
             Trigger = "Maintenu",
             Type = "Principale",
-            Users = {"[[Elite Crewman]]"}
+            Users = {"[[Homme d'Équipage d'Élite]]"}
         },
         ["Fulmin"] = {
             Accuracy = 9.1,
@@ -17099,6 +17278,7 @@ local WeaponData = {
             Class = "Fusil",
             Conclave = true,
             Disposition = 1.28,
+            ExilusPolarity = "Bar",
             Family = "Karak",
             Image = "KarakWraith.png",
             Introduced = "[[Update 16#Update 16.5|Update 16.5]]",
@@ -17124,7 +17304,7 @@ local WeaponData = {
             Trigger = "Auto",
             Type = "Principale",
             Users = {
-                "[[Grineer Nightwatch Corps#Nightwatch Lancer|Nightwatch Lancer]]"
+                "[[Lancier Nightwatch]]"
             }
         },
         ["Komorex"] = {
@@ -17277,7 +17457,7 @@ local WeaponData = {
                     {Name = "Récupération", Type = "Ressource", Count = 900}
                 }
             },
-            Disposition = 1.25,
+            Disposition = 1.4,
             Family = "Latron",
             Image = "Latron.png",
             Introduced = "[[Closed Beta Updates#Vanilla|Vanilla]]",
@@ -17319,7 +17499,8 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
                 }
             },
-            Disposition = 1.15,
+            Disposition = 1.3,
+            ExilusPolarity = "V",
             Family = "Latron",
             Image = "LatronPrime.png",
             Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
@@ -21662,15 +21843,29 @@ local WeaponData = {
             Type = "Robotique"
         },
         ["Cryotra"] = {
+            Cost = {
+                Credits = 50000,
+                BPStanding = 10000,
+                MarketCost = nil,
+                Rush = 25,
+                Time = 24,
+                Parts = {
+                    {Name = "Cœur de Noctrul",Type = "Ressource",Count = 10},
+                    {Name = "Devar Esher", Type = "Ressource", Count = 10},
+                    {Name = "Rotolame", Type = "Ressource", Count = 10},
+                    {Name = "Module Sagan", Type = "Ressource", Count = 5}
+                }
+            },
             Accuracy = 12.5,
             Class = "Fusil",
-            -- Disposition = 1.0,
+            Disposition = 1.0,
             Image = "Cryotra.png",
             Introduced = "[[Update 24#Update 24.0|Update 24.0]]",
             Magazine = 80,
             Mastery = 0,
             Name = "Cryotra",
             NormalAttack = {
+	            Range = 30,
                 Damage = {["Glace"] = 10},
                 CritChance = 0.05,
                 CritMultiplier = 2,
@@ -21730,8 +21925,8 @@ local WeaponData = {
             NormalAttack = {
                 Damage = {
                     ["Impact"] = 0.5,
-                    ["Perforation"] = 0.3,
-                    ["Tranchant"] = 4.3
+                    ["Perforation"] = 0.25,
+                    ["Tranchant"] = 4.25
                 },
                 CritChance = 0.05,
                 CritMultiplier = 2,
@@ -23916,4 +24111,3 @@ local WeaponData = {
 }
 
 return WeaponData
-
