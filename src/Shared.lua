@@ -286,4 +286,10 @@ function p.printTemplateError(str, functionName)
     return table.concat(ret)
 end
 
+function p.parseArticleTest(frame)
+
+    local txt2Parse = frame.args ~= nil and frame.args[1] or nil
+    return frame:preprocess(txt2Parse)
+end
+
 return p
