@@ -39,7 +39,7 @@ end
 
 local function getTierImage(tierName)
 
-    return VoidData["ImageTier"][tierName]
+    return VoidData["ImageTier"][tierName] or Shared.getDefaultImg()
 end
 
 local function _getValue(relicFullName, valueName)
