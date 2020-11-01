@@ -15,6 +15,61 @@ local tooltipStart = '<span class="relic-tooltip" data-param="'
 local tooltipCenter = '">'
 local tooltipEnd = "</span>"
 
+-- Gets the relic with the appropriate name
+local function _getRelic(Tier, Name)
+    for _, relic in pairs(VoidData["Relics"]) do
+        if (relic.Tier == Tier and relic.Name == Name) then return relic end
+    end
+    return nil
+end
+
+function p.getRelic(fullName) 
+
+    local tokens = Shared.splitString(fullName, ' ')
+    local tier = tokens[0]
+    local name = tokens[1]
+
+    local ret = nil
+    if(tier ~= nil and name ~= nil) then
+        ret = _getRelic(tier, name)
+    end
+
+    return ret
+end
+
+local function getTierImage(tierName)
+
+    return VoidData["ImageTier"][tierName]
+end
+
+local function _getValue(relicFullName, valueName)
+
+    local relic = p.getRelic(relicFullName)
+    local ret = nil
+
+    if(relic ~= nil) then
+        local upCaseVal = string.upper(valueName)
+        if(upCaseVal == "IMAGE") then
+            ret = getTierImage(relic.Tier)
+        end
+    end
+
+    return ret
+end
+
+function p.getValue(frame)
+
+    local relicFullName = frame.args ~= nil and frame.args[0] or nil
+    local valueName = frame.args ~= nil and frame.args[1] or nil
+
+    local ret = nil
+    if(relicFullName ~= nil and valueName ~= nil) then
+        ret = _getValue(relicFullName, valueName)
+    end
+
+    return ret
+end
+
 -- Ajoute les accents francais aux objets liste
 -- User:ADDRMeridan
 function p.getFrenchName(toConvert)
@@ -68,6 +123,8 @@ function p.frenchUpCase(toConvert)
     return result
 end
 
+
+
 -- Converts item names in data to proper names
 -- So for example 'LATRON' becomes 'Latron Prime'
 function p.getItemName(itemStr)
@@ -102,14 +159,6 @@ function p.getPartName(partStr, keepBlueprint)
     result = p.getFrenchName(result)
 
     return result
-end
-
--- Gets the relic with the appropriate name
-function p.getRelic(Tier, Name)
-    for i, relic in pairs(VoidData["Relics"]) do
-        if (relic.Tier == Tier and relic.Name == Name) then return relic end
-    end
-    return nil
 end
 
 -- Right now, all relics are on the same platform
@@ -241,7 +290,7 @@ function p.relicTooltip(frame)
     local Tier = bits[1]
     local RName = bits[2]
 
-    local theRelic = p.getRelic(Tier, RName)
+    local theRelic = _getRelic(Tier, RName)
     if (theRelic == nil) then return 'ERREUR : Aucune relique trouvée' end
     if (not p.isRelicOnPlatform(theRelic, platform)) then
         return "ERREUR : Cette relique n'est pas sur cette plateforme"
@@ -338,7 +387,7 @@ function p.getRelicDrop(frame)
     local Tier = bits[1]
     local RName = bits[2]
 
-    local theRelic = p.getRelic(Tier, RName)
+    local theRelic = _getRelic(Tier, RName)
 
     -- Return an error if the relic wasn't found
     if theRelic == nil then

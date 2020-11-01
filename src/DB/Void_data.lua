@@ -4409,6 +4409,13 @@ local VoidData = {
             },
             IsVaulted = 0
         }
+    },
+    ["ImageTier"] = {
+        ["Axi"] = "VoidProjectionsGoldD.png",
+        ["Lith"] = "VoidProjectionsIronD.png",
+        ["Meso"] = "VoidProjectionsBronzeD.png",
+        ["Neo"] = "VoidProjectionsSilverD.png",
+        ["Requiem"] = "Relique_Requiem.png"
     }
 }
 return VoidData
