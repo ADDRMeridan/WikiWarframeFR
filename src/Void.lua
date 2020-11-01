@@ -26,8 +26,8 @@ end
 function p.getRelic(fullName) 
 
     local tokens = Shared.splitString(fullName, ' ')
-    local tier = tokens[0]
-    local name = tokens[1]
+    local tier = tokens[1]
+    local name = tokens[2]
 
     local ret = nil
     if(tier ~= nil and name ~= nil) then
@@ -59,8 +59,8 @@ end
 
 function p.getValue(frame)
 
-    local relicFullName = frame.args ~= nil and frame.args[0] or nil
-    local valueName = frame.args ~= nil and frame.args[1] or nil
+    local relicFullName = frame.args ~= nil and frame.args[1]
+    local valueName = frame.args ~= nil and frame.args[2]
 
     local ret = nil
     if(relicFullName ~= nil and valueName ~= nil) then
