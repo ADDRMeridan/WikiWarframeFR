@@ -6,9 +6,9 @@ local Shared = require('Module:Shared')
 -- =============================================================================
 -- Outils tooltip
 
-function p.tooltipStart(img) return '<div class="Tooltip">' end
+function p.tooltipStart(img) return '<div class="Tooltip" style="padding:0; position:relative;"><div class="Sub">' end
 
-function p.tooltipEnd() return '</div>' end
+function p.tooltipEnd() return '</div></div>' end
 
 function p.tooltipImageStart(img)
 

@@ -1,0 +1,1487 @@
+/***** Le CSS placé ici sera appliqué à tous les habillages autres que Wikia *****/
+@import url("/MediaWiki:Tooltips.css?ctype=text/css&action=raw");/*Current Tooltips.js */
+
+/* Polices importées */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Philosopher&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Maoutpunjari&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manjari&display=swap');
+
+@font-face {
+    font-family: 'Ailerons';
+    src: url('https://vignette.wikia.nocookie.net/warframe/images/c/cc/Ailerons-Typeface.ttf/revision/latest?cb=20200810110512&path-prefix=fr') format('opentype'),
+         url('https://vignette.wikia.nocookie.net/warframe/images/c/cc/Ailerons-Typeface.ttf/revision/latest?cb=20200810110512&path-prefix=fr') format('truetype');
+}
+/*@font-face {
+    font-family: Prototype;
+    src: url('.otf') format('opentype'),
+         url('.woff') format('woff'),
+         url('.ttf') format('truetype');
+}*/
+
+
+/* ------ Scrollbar ------ */
+* {
+    scrollbar-color: #626262 #353535;
+}
+
+/* ------ Divers ------ */
+
+.mw-parser-output a.external::after {
+	display: none !important;
+}
+
+.WikiaPage .page-header__title {
+    font-family: 'Michroma', serif;
+}
+
+.WikiaPage h2 {
+    font-size: 28px;
+    line-height: 30px;
+}
+
+.WikiaPage h3 {
+    font-size: 22px;
+    line-height: 24px;
+	margin-top: 30px;
+}
+.WikiaArticle h3 .mw-headline {
+    font-weight: bold;
+}
+
+.main-tooltip,
+#tooltip-storage > .main-tooltip,
+#tooltip-storage .main-tooltip {
+    background-color: none !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: 0 !important;
+}
+
+.ooui-theme-fandom .article-table th, .ooui-theme-fandom .WikiaTable th {
+	background: #061d40 !important;
+}
+.ooui-theme-fandom .article-table th, .ooui-theme-fandom .article-table td, .ooui-theme-fandom .WikiaTable th, .ooui-theme-fandom .WikiaTable td {
+	border-bottom: 1px #012b53 solid;
+}
+
+.mobile-wiki .warframevisualnav {
+	display: none !important;
+}
+
+.WikiaMainContent h2 {
+	border-bottom: 1px solid #ffffff40;
+}
+
+/* Marque les redirections dans Special:Allpages et Special:Watchlist */
+.allpagesredirect {
+   font-style: italic;
+}
+.allpagesredirect:after {
+   color: #808080; content: " (redirect)"
+}
+.watchlistredir {
+   font-style: italic;
+}
+
+/* Templates */
+/** Navbox template **/
+.navbox {
+     background-color: rgba(65,85,143,0.16);
+     border: 1px solid #5288DD63;
+     margin-bottom: 10px;
+     text-align: center;
+     width: 100%;
+}
+
+.navboxhead {
+     background-color: #5288DD63;
+     color: white;
+     font-size: 14px;
+     margin: 0 auto;
+     padding: 2px 0;
+     text-align: center;
+}
+
+.navboxhead a {
+     color: white;
+}
+
+.navbox a {
+     color: white;
+}
+
+
+.navboxgroup {
+     background-color: #5288DD63;
+     color: white;
+     font-weight: bold;
+     text-align: center;
+     width: 15%;
+}
+
+.navboxfooter {
+     background-color: #5288DD63;
+     color: white;
+     font-size: 14px;
+     margin: 0 auto;
+     padding: 2px 0;
+     text-align: center;
+}
+
+ /* TabView extension */
+.yui-content {
+    background-color: #EDF5FF;
+    text-align:center !important;
+    padding: 0px;
+}
+ 
+.yui-nav {
+    border-color:#EDF5FF;
+    border-style:solid;
+    text-align:center !important;
+}
+  
+.yui-skin-sam .yui-navset .yui-nav, .yui-skin-sam .yui-navset .yui-navset-top .yui-nav {
+    border-color:#EDF5FF;
+    border-style:solid;
+}
+ 
+.yui-navset .yui-nav .selected {
+    background-color: #EDF5FF;
+}
+ 
+/* Style des tabview non sélectionnées */
+.yui-navset .yui-nav li {
+    color:black !important; /* couleur du texte de l'onglet inactif */
+    border:none !important; /* contour des onglets inactifs */
+    background-color:#EDF5FF !important; /* fond de l'onglet inactif */
+}
+
+/* Personnalisation de TabView */
+ul.tabs {
+    border:none !important; /* bordure autour des onglets */
+    background-color:#474747 !important;
+    text-align:center !important;
+    color:black !important;
+    font-weight:normal !important;
+    text-transform:uppercase !important;
+}
+
+/** Onglet actif **/
+ul.tabs li.selected a {
+    color:black !important; /* couleur du texte de l'onglet actif */
+    font-weight:normal !important; /* typographie du texte de l'onglet actif */
+    border:none !important; /* contour de l'onglet actif */
+    background-color:white !important; /* fond de l'onglet actif */
+}
+ 
+/** Onglet inactif **/
+ul.tabs li a {
+    color:white !important; /* couleur du texte de l'onglet inactif */
+    border:none !important; /* contour des onglets inactifs */
+    background-color:#474747 !important; /* fond de l'onglet inactif */
+}
+ 
+/** Contenu de l'onglet actif **/
+div.tabBody.selected {
+    color: white !important;
+    border: 2px solid #474747 !important;
+    border-top: none !important;
+}
+
+
+
+
+/** Infobox template **/
+.infobox {
+     width: 270px;
+     background-color: rgba(109, 97, 72, 0.25);
+     border: 1px solid #061D40D6;
+     color: white;
+     float: right;
+     font-size: 12px;
+     margin:0px 0px 10px 2em;
+
+}
+.infobox .name {
+     text-align:center; 
+     background-color:#5288DD63; 
+     font-size:18px; 
+     height:50px
+}
+.infobox .image {
+     height: 200px;
+     padding:0.5em; 
+     text-align:center;
+}
+.infobox .category {
+     background:#5288DD63;
+     font-size:13px;
+}
+.infobox .category a {
+     color:#afd8ff;
+}
+.infobox .left {
+     width:50%; 
+     background-color:#5288DD63; 
+     text-align:right; 
+     padding:0px 5px;
+     color: white;
+}
+.infobox .left a {
+     color:#afd8ff;
+}
+.infobox .right {
+     width:50%; 
+     text-align:left; 
+     padding:0px 5px; 
+}
+
+
+
+
+/** Infobox horizontal**/
+.infobox-hori {
+     background-color: rgba(65,85,143,0.16);
+     border: 1px solid #5288DD63;
+     color: white;
+     float: left;
+     font-size: 12px;
+     margin: 0px 0px 10px 2em;
+     width: 660px;
+}
+.infobox-hori .name {
+     background: #061d40a3;
+     color: white;
+     font-size: 18px;
+     padding: 3px;
+     text-align: center;
+}
+.infobox-hori .image {
+     height: 200px;
+     padding: 0.5em;
+     text-align: center;
+}
+.infobox-hori .category {
+     background: #061d40a3;
+     color: white;
+}
+.infobox-hori .category a {
+     color:white;
+}
+.infobox-hori .left {
+     background: #5288DD63;
+     color: white;
+     text-align: right;
+     padding-right: 5px;
+}
+.infobox-hori .left a {
+     color:white;
+}
+.infobox-hori .right {
+    padding: 1px 5px;
+    text-align: left;
+    width: 110px;
+    background-color: #3F73C614;
+}
+.infobox-hori .statut {
+    background: #5288DD63;
+    text-align:center;
+}
+.htt .tooltip-content .tooltip-hide, .hidden { 
+    display:none; 
+}
+.tooltip-ready {
+    visibility:hidden;
+    display:block;
+    z-index:999;
+}
+
+
+
+
+/* Prise en compte des titres de section dans Tabber */
+.tabberlive .tabbertab h2, .tabberlive .tabbertab h3 { 
+    display:block !important; 
+}
+
+/* Personnalisation des onglets Tabber */
+
+/** Personnalisation générale des onglets (navigation) **/
+ul.tabbernav {
+    border: none !important; /* bordure autour des onglets */
+    background-color: rgb(19, 55, 111);
+    padding: 0px !important; /*8px*/
+    text-align: center !important;
+    color: black !important;
+    font-weight: normal !important;
+    text-transform: uppercase !important;
+}
+ul.tabbernav li {
+    margin: 0px !important;
+    display: inline-grid !important;
+    font-family: 'Roboto', serif;
+}
+ul.tabbernav li a:hover {
+    padding-top: 8px;
+    padding-bottom: 6px;
+    border-bottom: #FFF solid 2px;
+}
+
+.tabbertab-borderless .tabber .tabbertab {
+    padding: 10px !important;
+}
+
+
+
+/** Personnalisation des onglets inactifs **/
+ul.tabbernav li:not(.tabberactive) a {
+    color: white !important; /* couleur du texte de l'onglet inactif */
+    padding: 8px !important;
+    border: none !important; /* contour des onglets inactifs */
+    background-color: rgb(19, 55, 111) !important; /* fond de l'onglet inactif */
+}
+
+
+
+
+
+
+
+/** Personnalisation des onglets actifs **/
+ul.tabbernav li.tabberactive a {
+ color: black !important; /* couleur du texte de l'onglet actif */
+ padding: 8px !important;
+ font-weight: normal !important; /* typographie du texte de l'onglet actif */
+ border: none !important; /* contour de l'onglet actif */
+ background-color: white !important; /* fond de l'onglet actif */
+}
+
+
+
+
+
+
+/** Personnalisation générale du tabber **/
+.tabberlive {
+ width: 100% !important; /* longueur du tabber */
+}
+.tabberlive .tabbertab {
+ border: none; /* contour du contenu de l'onglet */
+ border-top: none !important; /* bordure au dessus du contenu de l'onglet (donc sous les onglets) */
+}
+.tabber .tabbertab {
+    border: none !important; 
+}
+
+
+
+
+
+/* Void drop table*/
+table.voidtable {
+    width:100%;
+    text-align:left;
+    border:1px solid #5288DD63;
+    border-collapse: collapse;
+    background:rgba(65,85,143,0.16);
+}
+table.voidtable th {
+    background-color: #5288DD63;
+    color:white;
+    width:50%;
+    padding:0px 4px;
+    border:1px solid #5288DD63;
+}
+
+table.voidtable td {
+    width:50%;
+    border:1px solid #5288DD63;
+    vertical-align: top;
+}
+
+/* Custom list table*/
+table.listtable {
+    width:100%;
+    text-align:center;
+}
+ 
+table.listtable th {
+    background-color: #061D40D6;
+}
+
+
+/* Custom Foundry table*/
+table.foundrytable {
+    color:white;
+    text-align:center;
+    max-width:calc(100% - 305px);
+}
+table.article-table {
+    color:white;
+    text-align:center;
+    border-collapse: collapse;
+    background: none !important;
+}
+table.foundrytable th,
+table.article-table th {
+    background-color: #061d40;
+    color: white;
+}
+table.foundrytable td,
+table.article-table td {
+    background-color: rgba(65,85,143,0.16);
+}
+table.foundrytable th a,
+table.article-table th a{
+    color: white;
+}
+.article-table.specialwrap > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1), .article-table > tbody:nth-child(1) > tr:nth-child(11) > td:nth-child(1) {
+    white-space: nowrap
+}
+.article-table, .WikiaTable {
+    margin: 0;
+}
+
+.abilityTable {
+    background-color: #061D40D6;
+    color: white;
+}
+.abilityTable > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(3) {
+    display: flex;
+}
+table.foundrytable .mw-collapsible-content {
+    min-width: 100%;
+}
+table.foundrytable .mw-collapsible-content table {
+    min-width: 100%;
+}
+
+
+/* Custom Mod table*/
+.emodtable, .emodlist, .bigmodtable, .wikitable {
+    text-align: center;
+    margin-left:auto; 
+    margin-right:auto;
+    border-collapse: collapse;
+}
+.bigmodtable {
+    width: 100%;
+}
+.emodtable th, .bigmodtable th, .wikitable th {
+    border: 1px solid #5288DD63;
+    color: #FF8000;
+    width: 65px;
+}
+.emodtable th a, .bigmodtable th a, .wikitable th a {
+    color: #FF8000;
+}
+.emodtable td, .bigmodtable td {
+    background-color: #353535;
+    background-color: rgba(65,85,143,0.16);
+    border: 1px solid #5288DD63;
+}
+
+/* Tableau des Dégâts */
+.damagetable tr:not(tr:first-child) {
+    border-top: 1px solid black !important;
+    border-bottom: 1px solid black !important;
+}
+.damagetable tr td:nth-child(2 + 0n) {
+    border-right: 1px solid black !important;
+}
+
+/* --------- Warframe Nav Box START --------- */
+.WarframeNavBox
+{
+    position: relative;
+    display: inline-block;
+    margin-top: 1px;
+    margin-bottom: 2px;
+    height: 65px;
+    width: 64px;
+    z-index: 0;
+}
+.WarframeNavBoxText {
+    position:absolute;
+    z-index: 3;
+    left: 0;
+    bottom: 0;
+    font-size: 11px;
+    background: rgba(0,0,0,0.6);
+    padding: 0 2px;
+    line-height: 15px;
+    width: 90%;
+}
+.WarframeNavBoxImage {
+    position: absolute;
+    top: 0;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    opacity: 1;
+    z-index: 1;
+    width: 100%;
+}
+.WarframeNavBox:hover .WarframeNavBoxImage {
+    opacity: 0;
+}
+ 
+    /*Fade START*/
+.WarframeNavBoxImage2 {
+    position: absolute;
+    top: 0;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    opacity: 0;
+    z-index: 2;
+    width: 100%;
+}
+.WarframeNavBox:hover .WarframeNavBoxImage2 {
+    opacity: 1;
+}
+
+/* ----- Widget : Forum ----- */
+/*#ForumActivityModule .activity-items {
+    background-color: rgba(109, 97, 72, 0.25);
+    border: 1px solid #6D614852;
+    padding: 5px 10px;
+    margin: 0;
+}*/
+.mw-content-ltr .forum-activity-module h2 {
+    display:none;
+}
+.mw-content-ltr .forum-activity-module ul {
+    background-color: rgba(28, 27, 27, 0.58); /*rgba(109, 97, 72, 0.25);*/
+    border: 1px solid #061D40; 
+    padding: 5px 10px;
+    margin: 0;
+    list-style: none;
+}
+.mw-content-ltr .forum-activity-module {
+    width: initial !important;
+}
+.mw-content-ltr .forum-activity-module .page-title {
+    font-family: 'Days One', serif;
+}
+.mw-content-ltr .forum-activity-module .edit-info {
+    font-family: 'Manjari', serif;
+    font-size: 13px;
+}
+
+.activity-module ul .activity-item {
+    display: block !important;
+    margin: 6px 0 !important;
+}
+.activity-module ul .activity-item::not(:last-child) {
+    border-bottom: 1px solid #233859;
+}
+.activity-module ul .activity-item .wds-avatar {
+    display: table;
+    margin: auto 10px auto 0;
+}
+.activity-module ul .activity-item .activity-info {
+    line-height: 20px;
+}
+
+/* Main page */
+/** General **/
+.mainpage-header {
+    position:relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #5288DD63;
+    padding-top: 11px;
+    padding-left: 22px;
+    height: 54px;
+    width: 97.5%;
+    width: -moz-calc(100% - 35px);
+    width: -webkit-calc(100% - 35px);
+    width: -o-calc(100% - 35px);
+    width: calc(100% - 35px);
+    margin-bottom: 5px;
+    margin-top: 19px;
+    font-size: 20px;
+    color: white;
+    font-family: 'Michroma', serif;
+    font-weight: bold;
+}
+ 
+.mainpage-header-right {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    height: 100%; 
+    width: 50px;
+    background: #213657;
+    transform: skew(30deg);
+}
+ 
+.mainpage-header-sub {
+    font-size: 18px;
+    color: orange;
+    font-family: 'Michroma', serif;
+    font-weight: 700;
+}
+ 
+.mainpage-header-news {
+    margin-bottom: 10px;
+    font-size:25px;
+    color: #5288DD;
+    font-family:'Open Sans';
+    font-weight:700;
+}
+
+.mainpage-box-blogs .WikiaBlogListing {
+    border: 1px solid #5288DD63;
+    margin-top: 9px;
+    background: #5288DD63;
+}
+
+.mainpage-box-blogs .recent {
+    float: left;
+    margin-top: 7px;
+    width: 50%;
+}
+.recent {
+    width: 49.25% !important;
+    height: 100%;
+}
+
+.mainpage-box-blogs .popular {
+    float: right;
+    margin-top: 7px;
+    width: 48%;
+    width: -moz-calc(50% - 10px);
+    width: -webkit-calc(50% - 10px);
+    width: -o-calc(50% - 10px);
+    width: calc(50% - 10px);
+}
+.popular {
+    width: 49.25% !important;
+    height: 100%;
+    float: right;
+}
+
+.author-details h2 a {
+    font-family: 'Michroma', serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #3788dd;
+}
+.author-details span {
+    font-family: 'Manjari', serif;
+    font-size: 15px;
+}
+
+/***** Portable Infobox - styles for new class names *****/
+/***** (changes to be announced soon) *****/
+ 
+.portable-infobox {
+     width: 270px;
+     background-color: rgba(65,85,143,0.16);
+     border: 1px solid #061D40;
+     color: white;
+     float: right;
+     font-size: 11px;
+     /*padding: 0 0 5px 0;*/
+}
+ 
+.portable-infobox .item-type-key-val {
+    box-sizing: border-box;
+    display:table;
+    width: 100%;
+}
+
+.portable-infobox .pi-data-label,
+.portable-infobox .pi-data-value {
+    display: table-cell !important; /* needed for proper handling of tabber */
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 11px;
+}
+ 
+.portable-infobox .pi-data-value {
+    padding-top: 2px;
+}
+ 
+.tabberlive .tabbertab .portable-infobox h3.pi-data-label {
+    display: table-cell !important; /* needed for proper handling of tabber */
+}
+ 
+/* Custom Tabber style*/
+.WikiaArticle .tabbertab-borderless ul.tabbernav,
+.WikiaArticle .tabbertab-bordered ul.tabbernav {
+    background-color: #081f42;
+    padding: 8px;
+    border: none;
+    text-align: center;
+    color: #FFF;
+    font-weight:normal;
+    text-transform:uppercase;
+}
+ 
+.WikiaArticle .tabbertab-borderless ul.tabbernav li a,
+.WikiaArticle .tabbertab-bordered ul.tabbernav li a {
+    border: none;
+    background: none;
+    text-decoration: none;
+    color: white; 
+}
+ 
+.WikiaArticle .tabbertab-borderless ul.tabbernav li a:link,
+.WikiaArticle .tabbertab-bordered ul.tabbernav li a:link {
+    color: white; 
+}
+ 
+.WikiaArticle .tabbertab-borderless ul.tabbernav li a:hover,
+.WikiaArticle .tabbertab-bordered ul.tabbernav li a:hover {
+    background-color:transparent;
+}
+ 
+.WikiaArticle .tabbertab-borderless ul.tabbernav li.tabberactive a,
+.WikiaArticle .tabbertab-bordered ul.tabbernav li.tabberactive a {
+    border-bottom: none;
+    /*background-color: #517783;*/
+    padding: 8px;
+    color: white;
+}
+ 
+.WikiaArticle .tabbertab-borderless .tabberlive,
+.WikiaArticle .tabbertab-bordered .tabberlive {
+    width: 100%;
+}
+ 
+.WikiaArticle .tabbertab-borderless .tabberlive .tabbertab {
+    border: none;
+    padding: 0px;
+}
+ 
+.WikiaArticle .tabbertab-bordered .tabberlive .tabbertab {
+    border: #878894 solid 1px;
+}
+ 
+.tabbertab-borderless .tabberlive .tabbertab {
+    border: 0 !important;
+}
+.tabbertab-bordered {
+    border: 1px solid #061D40D6;
+}
+
+ 
+
+/* Portable Infobox */
+ 
+.portable-infobox .pi-data-label {
+    width: 89px;
+    background: #5288DD63;
+    color: #FFFFFF;
+    text-align: right;
+    padding: 0 5px 0 10px;
+    vertical-align: middle;
+}
+ 
+.portable-infobox .pi-data-label a {
+    color: #FFFFFF;
+}
+ 
+.portable-infobox .pi-item:not(:last-of-type) {
+    border-bottom: 0px;
+}
+ 
+/** Styling section headers **/
+ 
+.portable-infobox .pi-header.pi-secondary-font {
+    font-size: 13px;
+    padding: 5px;
+    color: #FFFFFF;
+    margin-top: 1px;
+}
+
+.pi-image-collection-tabs .pi-tab-link {
+    margin: 0 5px;
+    padding: 3px;
+    border: 0px;
+}
+
+.portable-infobox .pi-item-spacing {
+    /*padding: 2px 4px 0px 4px;
+    min-height: 24px;*/
+    padding: 0;
+    padding-top: 1px;
+}
+ 
+.portable-infobox .pi-header {
+    background-color: #5288DD63;
+    /*margin: 2px 4px 0px 4px;
+    height: 24px;*/
+    text-align: center;
+    min-height: 0px;
+}
+ 
+.portable-infobox .pi-title {
+    background-color: #5288DD63;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 1em;
+    text-align: center;
+    margin: 4px;
+}
+
+.portable-infobox .pi-data .pi-data-value:only-child {
+    /*background-color:rgba(56,45,20,0.75);*/
+    text-align: center;
+    width: 100%;
+}
+
+.pi-theme-Voile-Rouge .pi-image {background:#3D1839;}
+.pi-theme-Arbitres-d_Hexis .pi-image, .pi-theme-Méridien-d_Acier .pi-image {background:#374045;}
+.pi-theme-Céphalon-Suda .pi-image {background:#3D375D;}
+.pi-theme-La-Séquence-Perrin .pi-image {background:#3D4963;}
+.pi-theme-Céphalon-Simaris .pi-image {background:#5F3C0D;}
+.pi-theme-Conclave .pi-image {background:black;}
+.pi-theme-Nouveau-Loka .pi-image {background:#2A3C2E;}
+
+
+/*--PERSONNAL CSS Yazuh--*/
+.goldy {
+    background: -webkit-linear-gradient(transparent, transparent),
+    -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.3s;
+}
+
+.goldy:hover {
+    filter: brightness(150%);
+    transition: 0.3s;
+}
+
+.goldy a {
+    text-decoration:none;
+}
+
+.profile_container_15 {
+    border: solid;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-image: linear-gradient(167deg, #68602d 1%, #605425 25%, #eee3a1 50%, #6d684b 75%, #aa953e 100%) 30;
+    background: radial-gradient(ellipse at center, #443501 0%,#000000 100%);
+}
+/*----*/
+
+
+/** Discord box **/
+.mainpage-box-discord {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -user-select: none;
+    cursor: pointer;
+    display: inline-flex;
+    transform: skew(30deg);
+    width: 260px;
+    margin: 0 25px 15px auto;
+    padding:10px 0px;
+    text-align: center;
+}
+ 
+.mainpage-box-discord a {
+    vertical-align:middle;
+    font-family:'Open Sans';
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FFFFFF;
+}
+
+.tooltip-contents {
+    background: rgba(0, 0, 0, 0.80);
+}
+/* ------------------ */
+
+/* ================ Ceci est un test pas très convainquant :P  !!!!!! ===================== */
+.navigation {
+    position: fixed;
+    left: 0px;
+    top: 55px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    line-height: 1;
+    font-family: 'Open Sans', serif;
+    font-size: 14px;
+    height: 100vh;
+    width: 13em;
+    background: #002a32; /*#212121;*/
+    zoom: 1;
+}
+
+.navigation:before {
+  content: '';
+  display: block;
+}
+
+.navigation:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.navigation a,
+.navigation .btn-nav {
+  display: block;
+  padding: 8px 1.3em;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navigation ul,
+.navigation ul li,
+.navigation ul ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation ul {
+  position: relative;
+  z-index: 500;
+  float: left;
+}
+
+.navigation ul li {
+  float: left;
+  min-height: 0.05em;
+  line-height: 1em;
+  vertical-align: middle;
+  position: relative;
+}
+
+.navigation ul li.hover,
+.navigation ul li:hover {
+  position: relative;
+  z-index: 510;
+  cursor: default;
+}
+
+.navigation ul ul {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  z-index: 520;
+  width: 100%;
+}
+
+.navigation ul ul li { float: none; }
+
+.navigation ul ul ul {
+  top: 0;
+  right: 0;
+}
+
+.navigation ul li:hover > ul { visibility: visible; }
+
+.navigation ul ul {
+  top: -1px;
+  left: 100%;
+}
+
+.navigation ul li { float: none; }
+
+.navigation ul ul { margin-top: 0.05em; }
+
+.navigation > ul { width: 13em; }
+
+.navigation ul ul { width: 15em; }
+
+.navigation > ul > li > a {
+    border-left: 2px solid transparent;
+    color: #ffffff;
+    transition: .5s;
+}
+
+.navigation > ul > li > a:hover { color: #ffffff; }
+
+.navigation > ul > li a:hover,
+.navigation > ul > li:hover a,
+.navigation > ul > li:hover .btn-nav { 
+    background: #002A32; 
+    border-left: 2px solid #00b5b6;
+}
+
+.navigation li { position: relative; }
+
+.navigation ul li.has-sub > a:after,
+.navigation ul li > .btn-nav:after {
+  content: '»';
+  position: absolute;
+  right: 1em;
+}
+
+.navigation ul ul li.first {
+  -webkit-border-radius: 0 3px 0 0;
+  -moz-border-radius: 0 3px 0 0;
+  border-radius: 0 3px 0 0;
+}
+
+.navigation ul ul li.last {
+  -webkit-border-radius: 0 0 3px 0;
+  -moz-border-radius: 0 0 3px 0;
+  border-radius: 0 0 3px 0;
+  border-bottom: 0;
+}
+
+.navigation ul ul {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+
+/*.navigation ul ul { 
+    border: 1px solid #031D22; 
+}*/
+
+.navigation ul ul a { 
+    color: #ffffff; 
+}
+.navigation ul ul a:hover { 
+    color: #ffffff; 
+}
+
+/*.navigation ul ul li { 
+    border-bottom: 1px solid #031D22;
+    transition: .5s;
+}*/
+.navigation ul ul li:hover > a,
+.navigation ul ul li:hover > .btn-nav {
+    background: #0e5968;
+    color: #ffffff;
+}
+
+.navigation.align-right > ul > li > a {
+  border-left: 0.3em solid #5288DD63;
+  border-right: none;
+}
+
+.navigation.align-right { float: right; }
+
+.navigation.align-right li { text-align: right; }
+
+.navigation.align-right ul li.has-sub > a:before,
+.navigation.align-right ul li.has-sub > .btn-nav:before {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  margin-top: -6px;
+}
+
+.navigation.align-right ul li.has-sub > a:after,
+.navigation.align-right ul li.has-sub > .btn-nav:after { 
+    content: none; 
+}
+
+.navigation.align-right ul ul {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 598;
+  width: 100%;
+}
+
+.navigation.align-right ul ul li.first {
+  -webkit-border-radius: 3px 0 0 0;
+  -moz-border-radius: 3px 0 0 0;
+  border-radius: 3px 0 0 0;
+}
+
+.navigation.align-right ul ul li.last {
+  -webkit-border-radius: 0 0 0 3px;
+  -moz-border-radius: 0 0 0 3px;
+  border-radius: 0 0 0 3px;
+}
+
+.navigation.align-right ul ul {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* ---------------------- */
+.Ambox table > tbody {
+    border: solid 2px #4f4f4f;
+}
+.Ambox table tbody tr > td {
+    background:black;
+}
+
+
+/* ---------SOUNDTRACK CSS------------- */
+#box-soundtrack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  color: white;
+  font-family: 'Raleway';
+  font-size: 2.5rem;
+}
+.gradient-border {
+    margin-left:3px;
+    margin-right:3px;
+    border-width: 3px;
+    background: #1D1F20;
+    position: relative;
+    border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #DAA520, #D2691E, #F0E68C, #CD853F, #EEE8AA, #8B4513);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* ---------------------- */
+
+/* ---------SOUNDTRACK CSS - TEST------------- */
+.soundtrack-container a {
+    color:#20B2AA;
+    text-decoration:none;
+    transition: 0.3s;
+}
+
+.soundtrack-container a:hover {
+    filter: brightness(135%);
+    transition: 0.3s;
+}
+
+.type-soundtrack-test .portable-infobox,
+.type-soundtrack-test .pi-title {
+    background:#1D1F20;
+}
+
+.type-soundtrack-test .pi-header,
+.type-soundtrack-test .pi-data-label{
+    background-color: rgb(50, 52, 53);
+}
+
+.type-soundtrack-test {
+    margin-left: 10px;
+    margin-right: 5px;
+  background: #1D1F20;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* ---------------------- */
+table.listtable tr td, table.foundrytable tr td {
+    background-color: rgba(65,85,143,0.16);
+}
+
+
+/* WikiTable */
+table.wikitable {
+    background:rgba(65,85,143,0.16);
+}
+table.wikitable > tr > th, table.wikitable > tr > td, table.wikitable > * > tr > th, table.wikitable > * > tr > td {
+    border: 1px solid #061d40;
+}
+
+
+
+.grid-container {
+    display: grid;
+    gap: 3px;
+    grid-template-areas: "x1 x2 x3 x4 x5 x6"
+                         "x7 x8 x9 x10 x11 x12"
+                         "x13 x14 x15 x16 x17 x18";
+    grid-template-columns:repeat(6, auto);
+    grid-template-rows:repeat(3, auto);
+    width: 670px;
+    margin:auto;
+    justify-items: center;
+}
+.grid_gallery_btn {
+    text-align:center
+}
+.grid_gallery_btn pre {
+    position: relative;
+    display: grid;
+    grid-template-areas: "content";
+    max-width: 120px;
+    max-height: 120px;
+    padding: 0;
+    margin: 0;
+    /*! overflow: hidden; */
+    background-image: url(https://vignette.wikia.nocookie.net/warframe/images/a/a7/Codex_wallpaper.jpg/revision/latest?cb=20200112094224&format=original&path-prefix=fr);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+  .grid_gallery_btn pre > img:first-of-type {
+    z-index: 1;
+    grid-area: content;
+    animation: Spin 4s linear infinite;
+    animation-play-state: running;
+    animation-play-state: paused;
+  }
+  .grid_gallery_btn:hover pre img:first-of-type {
+    -webkit-animation-play-state:running;
+  }
+  .grid_gallery_btn pre a {
+    grid-area: content;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 2;
+    display: grid;
+    align-items: center;
+  }
+  @-webkit-keyframes Spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+  }
+  
+.grid_gallery_btn a {
+    text-decoration: none;
+    color: #fff;
+}
+/*
+.title {
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 0 2px;
+    font-size: 11px;
+    font-family: 'Raleway', sans-serif;
+    padding:4px 0px 1px;
+    position: absolute;
+    bottom: 0;
+    z-index: 6;
+}*/
+.grid_gallery_btn:hover .title {
+    text-shadow: 0 0 4px;
+}
+.frame_ease_out {
+    opacity: 1;
+    transition-duration: 600ms;
+}
+.grid_gallery_btn pre:hover .frame_ease_out {
+    opacity:0;
+    transition-delay: 0.5s;
+    transition-duration: 500ms;
+}
+.grid_gallery_btn .frame_ease_in {
+    opacity:0;
+    grid-area: content;
+    z-index: 5;
+}
+/*.grid_gallery_btn .frame_ease_in img {
+}*/
+.grid_gallery_btn pre:hover .frame_ease_in {
+    opacity:1;
+    transition-delay: 0.5s;
+}
+.frame_ease_in {
+    transition-duration: 500ms;
+}
+
+/* TennoScript */
+.tennoscript_S
+{
+    display:inline-block;
+    margin:1px;
+}
+ 
+.tennoscript_C {
+    display:inline-block;
+    width:75px;
+    margin:1px;
+    transform:rotate(25deg) translateY(-25px);
+    transform-origin:bottom left;
+    margin-right:-16px;
+}
+ 
+.tennoscript_V {
+    display:inline-block;
+    width:50px;
+    text-align:right;
+    margin:1px;
+    transform:rotate(25deg) translateX(-45px) translateY(0px);
+    transform-origin:bottom right;
+    margin-right:-55px;
+}
+
+.tennoscript_SPeriod {
+    display:inline-block;
+    margin:1px;
+    margin-right:-17px
+}
+ 
+.tennoscript_EPeriod {
+    display:inline-block;
+    margin:1px;
+    transform: translateX(34px);
+    transform-origin:bottom left;
+    margin-right:-17px
+}
+
+/*Tooltip*/
+.Tooltip {
+    background-color: #ddd0;
+    border: 1px solid #313234;
+    border-spacing: 0;
+    border-radius: 4px;
+    font-size: 11px;
+    max-width: 200px;
+    color: #fff;
+}
+
+.Tooltip.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "Left Right";
+    max-width: 100%;
+}
+
+.Tooltip.leftCol {
+    grid-area: Left;
+}
+
+.Tooltip.rightCol {
+    grid-area: Right;
+}
+
+.Tooltip a {
+    text-decoration: none;
+    color: #5288dd;
+}
+
+.Tooltip p {
+    margin: 0;
+    padding: 0;
+}
+
+.Tooltip_imgbox {
+    position: relative;
+    background-color: rgba(77,86,93,0.9);
+    display: block;
+    max-width: 200px;
+    height: 170px;
+    overflow: hidden;
+}
+
+.Tooltip img {
+    max-width: 200px;
+    max-height: 170px;
+    object-fit: contain;
+}
+
+.Tooltip .Tooltip_bg {
+    background-color: #0D1B1C;
+}
+
+.Tooltip .HeadText {
+    color:rgb(175, 216, 255);
+    font-weight: bold;
+}
+
+.Tooltip .center_me {
+    text-align: center;
+}
+.Tooltip .Tooltip_spaced {
+    margin: 2px 0px;
+    padding: 5px 2px;
+}
+.Tooltip .Tooltip_bg:nth-child(2) {
+    margin-top: 0px;
+}
+p.HeadText:nth-child(3),p.HeadText:nth-child(7) {
+    margin-top: 2px;
+}
+
+body .tooltips-init-complete {
+    word-break: break-all !important;
+}
+
+/*End Tooltip*/
+
+/* Relique*/
+#relic-intact-button, #relic-exceptional-button, #relic-flawless-button, #relic-radiant-button {
+	background: #061d40;
+	padding: 4px 5px;
+	margin: 4px 0;
+	display: inline-block;
+	border-radius: 8px;
+}
+.mw-collapsible-text , .mw-collapsible-toggle {
+	color: #5288dd !important;
+}
+
+/* Activité recente */
+.mainpage-box-recentactivity .activity-tabs.wds-tabs,
+.mainpage-box-recentactivity .mw-changeslist-links,
+.mainpage-box-recentactivity .mw-changeslist-line-inner-characterDiff,
+.mainpage-box-recentactivity .mw-changeslist-line-inner-separatorAftercharacterDiff,
+.mainpage-box-recentactivity .td.mw-enhanced-rc,
+.mainpage-box-recentactivity .mw-plusminus-null,
+.mainpage-box-recentactivity .mw-plusminus-pos {
+	display: none !important;
+}
+
+.mainpage-box-recentactivity .mw-changeslist-legend {
+	display: none !important;
+}
+
+.mainpage-box-recentactivity .mw-usertoollinks {
+	display: none !important;
+}
+
+.mainpage-box-recentactivity .mw-changeslist-separator:empty:before {
+	content: " » ";
+}
