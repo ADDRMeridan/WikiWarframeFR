@@ -4524,4 +4524,49 @@ function p._getWeaponsList(mainCat, subCat, triggerType, conclave)
     return table.concat(ret, Shared.getListSep())
 end
 
+local function getAbilityWeaponArray(abilityName)
+
+    local ret = WeaponData["AbilityWeapons"][abilityName]
+    if(ret == nil) then
+        ret = {}
+    end
+
+    return ret
+end
+
+function p.buildAbilityWeaponTab(frame)
+
+    local abilityName = frame.args[1]
+    local ret = {}
+    local left = true
+
+    local wpArray = getAbilityWeaponArray(abilityName)
+    for _, wpName in pairs(wpArray) do
+        table.insert(ret, '[[File:')
+        table.insert(ret, getValue(p.getWeapon(wpName), "IMAGE"))
+        table.insert(ret, '|200px|')
+        if(left) then
+            left = false
+            table.insert(ret, 'left]]')
+        else
+            left = true
+            table.insert(ret, 'right]]')
+        end
+        local pageName = p._getLink(wpName)
+        table.insert(ret, frame:preprocess('{{main|'..pageName..'}}'))
+        local introSection = frame:expandTemplate{
+            title = 'fetchSection',
+            args = {pageName, 'intro'}
+        }
+        if(introSection == nil or introSection == '') then
+            introSection = "L'article [["..pageName.."]] ne possède pas de section intro."
+        end
+        table.insert(ret, '<br/>')
+        table.insert(ret, introSection)
+        table.insert(ret, frame:expandTemplate{title = 'clr'})
+    end
+
+    return table.concat(ret)
+end
+
 return p

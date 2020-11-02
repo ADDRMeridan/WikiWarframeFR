@@ -24107,7 +24107,10 @@ local WeaponData = {
             Users = {"[[Garuda]]"},
             WallAttack = 216
         }
-    }
+    },
+    ["AbilityWeapons"] = {
+        ["Incandescence"] = {"Chargeur Incandescent"},
+    },
 }
 
 return WeaponData
