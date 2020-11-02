@@ -24109,7 +24109,14 @@ local WeaponData = {
         }
     },
     ["AbilityWeapons"] = {
+        ["Ailes Rasoirs"] = {"Dex Pixia", "Diwata"},
+        ["Arc d'Artémis"] = {"Arc d'Artémis"},
+        ["Fureur Primale"] = {"Bâton de Fer"},
+        ["Hystérie"] = {"Serres Valkyr"},
         ["Incandescence"] = {"Chargeur Incandescent"},
+        ["Lame Exaltée"] = {"Lame Exaltée"},
+        ["Pacificateurs"] = {"Pacificateurs"},
+        ["Tempête Reposante"] = {"Vents du Désert"},
     },
 }
 
