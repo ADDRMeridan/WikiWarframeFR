@@ -1,7 +1,7 @@
-/***** Le CSS placé ici sera appliqué à tous les habillages autres que Wikia *****/
+/***** Feuille CSS principale qui inclut tout le style CSS appliqué sur le Wiki *****/
 @import url("/MediaWiki:Tooltips.css?ctype=text/css&action=raw");/*Current Tooltips.js */
 
-/* Polices importées */
+/* ---------==========Polices importées==========------------- */
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Michroma&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
@@ -9,86 +9,15 @@
 @import url('https://fonts.googleapis.com/css?family=Maoutpunjari&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manjari&display=swap');
-
 @font-face {
     font-family: 'Ailerons';
     src: url('https://vignette.wikia.nocookie.net/warframe/images/c/cc/Ailerons-Typeface.ttf/revision/latest?cb=20200810110512&path-prefix=fr') format('opentype'),
          url('https://vignette.wikia.nocookie.net/warframe/images/c/cc/Ailerons-Typeface.ttf/revision/latest?cb=20200810110512&path-prefix=fr') format('truetype');
 }
-/*@font-face {
-    font-family: Prototype;
-    src: url('.otf') format('opentype'),
-         url('.woff') format('woff'),
-         url('.ttf') format('truetype');
-}*/
 
 
-/* ------ Scrollbar ------ */
-* {
-    scrollbar-color: #626262 #353535;
-}
-
-/* ------ Divers ------ */
-
-.mw-parser-output a.external::after {
-	display: none !important;
-}
-
-.WikiaPage .page-header__title {
-    font-family: 'Michroma', serif;
-}
-
-.WikiaPage h2 {
-    font-size: 28px;
-    line-height: 30px;
-}
-
-.WikiaPage h3 {
-    font-size: 22px;
-    line-height: 24px;
-	margin-top: 30px;
-}
-.WikiaArticle h3 .mw-headline {
-    font-weight: bold;
-}
-
-.main-tooltip,
-#tooltip-storage > .main-tooltip,
-#tooltip-storage .main-tooltip {
-    background-color: none !important;
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: 0 !important;
-}
-
-.ooui-theme-fandom .article-table th, .ooui-theme-fandom .WikiaTable th {
-	background: #061d40 !important;
-}
-.ooui-theme-fandom .article-table th, .ooui-theme-fandom .article-table td, .ooui-theme-fandom .WikiaTable th, .ooui-theme-fandom .WikiaTable td {
-	border-bottom: 1px #012b53 solid;
-}
-
-.mobile-wiki .warframevisualnav {
-	display: none !important;
-}
-
-.WikiaMainContent h2 {
-	border-bottom: 1px solid #ffffff40;
-}
-
-/* Marque les redirections dans Special:Allpages et Special:Watchlist */
-.allpagesredirect {
-   font-style: italic;
-}
-.allpagesredirect:after {
-   color: #808080; content: " (redirect)"
-}
-.watchlistredir {
-   font-style: italic;
-}
-
-/* Templates */
-/** Navbox template **/
+/* ---------==========TEMPLATES==========------------- */
+/* ---------Navbox Template------------- */
 .navbox {
      background-color: rgba(65,85,143,0.16);
      border: 1px solid #5288DD63;
@@ -96,7 +25,6 @@
      text-align: center;
      width: 100%;
 }
-
 .navboxhead {
      background-color: #5288DD63;
      color: white;
@@ -105,16 +33,12 @@
      padding: 2px 0;
      text-align: center;
 }
-
 .navboxhead a {
      color: white;
 }
-
 .navbox a {
      color: white;
 }
-
-
 .navboxgroup {
      background-color: #5288DD63;
      color: white;
@@ -122,7 +46,6 @@
      text-align: center;
      width: 15%;
 }
-
 .navboxfooter {
      background-color: #5288DD63;
      color: white;
@@ -132,119 +55,1293 @@
      text-align: center;
 }
 
- /* TabView extension */
+
+/* ---------Infobox Template------------- */
+.infobox {
+    width: 270px;
+    background-color: rgba(109, 97, 72, 0.25);
+    border: 1px solid #061D40D6;
+    color: white;
+    float: right;
+    font-size: 12px;
+    margin:0px 0px 10px 2em;
+}
+.infobox .name {
+    text-align:center; 
+    background-color:#5288DD63; 
+    font-size:18px; 
+    height:50px
+}
+.infobox .image {
+    height: 200px;
+    padding:0.5em; 
+    text-align:center;
+}
+.infobox .category {
+    background:#5288DD63;
+    font-size:13px;
+}
+.infobox .category a {
+    color:#afd8ff;
+}
+.infobox .left {
+    width:50%; 
+    background-color:#5288DD63; 
+    text-align:right; 
+    padding:0px 5px;
+    color: white;
+}
+.infobox .left a {
+    color:#afd8ff;
+}
+.infobox .right {
+    width:50%; 
+    text-align:left; 
+    padding:0px 5px; 
+}
+
+
+/* ---------- Invasion ---------- */
+.invasion_container {
+    max-width: 700px;
+    color: #cecece;
+}
+.invasion_container .box {
+    margin: 15px 0 25px;
+}
+.invasion_container .topbar {
+    display: flex;
+    justify-content: space-between;
+}
+.topbar.infested {
+      justify-content: flex-end;
+}
+.invasion_container .reward_left {
+    background-color: #6a241c;
+    border-radius: 7px;
+    padding: 3px 7px;
+}
+.invasion_container .reward_right {
+    background-color: #003e66;
+    border-radius: 7px;
+    padding: 3px 7px;
+}
+.invasion_container .reward_planet {
+    text-align: center;
+}
+  .invasion_container .reward_planet span {
+    font-weight: bold;
+}
+  .invasion_container .bottom_bar {
+    position: relative;
+}
+  .invasion_container .progression_bar_content {
+    position: relative;
+    text-align: center;
+    height: 24px;
+    z-index: 2;
+}
+.invasion_container .progression_bar_box_value {
+width: 700px;
+height: 24px;
+position: absolute;
+top: 0;
+border-radius: 7px;
+background-color: #003e66;
+}
+.invasion_container .progression_bar {
+background-color: #461914;
+width: 17.93%;
+border-top-left-radius: 7px;
+border-top-right-radius: 0;
+border-bottom-right-radius: 0;
+border-bottom-left-radius: 7px;
+position: absolute;
+top: 0;
+left: 0;
+}
+.invasion_container .progression_bar {
+display: block;
+height: 24px;
+z-index: 1;
+}
+.invasion_container .align-me {
+display: grid;
+align-items: center;
+}
+
+
+/* ---------HomeNav------------- */
+.HomeNav {
+    display:inline-block;
+    position:relative;
+    width:112px;
+    transform: skew(30deg);
+    text-align:center;
+    background:#5288DD63;
+    padding:5px;
+    text-transform:uppercase;
+    font-size:14px;
+    margin:2px;
+    color:white;
+}
+.HomeNav span {
+    display:inline-block;
+    transform: skew(-30deg);
+    color:white;
+}
+.HomeNav span a {
+    font-size:14px;
+    font-weight:bold;
+    color:white;
+    text-decoration:none;
+}
+.HomeNav .trapzoidleft {
+    position:absolute;
+    top:0;
+    left:-10px;
+    height:100%;
+    width:30px;
+    background:transparent;
+    transform: skew(-30deg);
+}
+.HomeNav .trapzoidright {
+    position:absolute;
+    top:0;
+    right:-10px;
+    height:100%; 
+    width:30px;
+    background:transparent;
+    transform: skew(-30deg);
+}
+.HomeNav:hover span a {
+    color:white;   
+}
+
+
+/* ---------Modèle:HomePage/RecentActivity------------- */
+#ActivityFeed .mw-changeslist-line-inner-rollback,
+#ActivityFeed .mw-changeslist-line-inner-tags,
+#ActivityFeed .mw-changeslist-line-inner-userTalkLink,
+#ActivityFeed .mw-changeslist-line-inner-separatorAftercharacterDiff,
+#ActivityFeed .mw-changeslist-line-inner-separatorAftercharacterDiff
+#ActivityFeed .mw-changeslist-line-inner-userTalkLink,
+#ActivityFeed .mw-changeslist-legend,
+#ActivityFeed .mw-changeslist-line-inner-historyLink,
+#ActivityFeed .mw-changeslist-line-inner-separatorAfterLinks,
+#ActivityFeed .mw-changeslist-line-inner-characterDiff,
+#ActivityFeed .mw-changeslist-line-inner-comment,
+#ActivityFeed .activity-tabs{
+display:none;
+}
+#ActivityFeed .mw-changeslist-line-inner-userLink:before {
+content:" edité par ";
+white-space: pre-wrap;
+}
+#ActivityFeed .mw-changeslist-line-inner {
+text-align:left;
+margin-left: 50px;
+}
+#ActivityFeed tr {
+    display: flex;
+    position: relative;
+    font-size: 16px;
+}
+#ActivityFeed  td.mw-enhanced-rc {
+    position: absolute;
+    left: -40px;
+    text-align: left;
+}
+#ActivityFeed td.mw-enhanced-rc abbr[title], .explain[title] {
+    opacity: 0;
+}
+
+
+/* ---------Play Free box------------- */
+.mainpage-box-playfree {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -user-select: none;
+    cursor: pointer;
+    display: inline-flex;
+    transform: skew(30deg);
+    width: 260px;
+    margin: 0 25px 15px auto;
+    padding:10px 0px;
+    text-align: center;
+}
+.mainpage-box-playfree a {
+    vertical-align:middle;
+    font-family:'Open Sans';
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FFFFFF;
+}
+.mainpage-box-recentactivity li {
+    list-style: none;
+}
+
+
+/* ---------Mainpage Box Gallery Container------------- */
+.mainpage-box-gallery-container {
+    position: relative;
+    width: 95.6%;
+    font-size: 25px;
+    font-family:'Open Sans';
+    font-weight: lighter;
+    overflow: hidden;
+    margin-bottom: 7px;/*3%;*/
+}
+.mainpage-box-gallery-container a {
+    text-decoration: none;
+}
+.mainpage-box-gallery {
+    background: #061D40D6;
+    width: 93.6%;
+    padding: 20px;
+    transform: skew(30deg);
+    overflow: hidden;
+    position: relative;
+    left: -2%;
+}
+.mainpage-box-gallery-text {
+    background: #5288DD63;
+    position: absolute;
+    transform: skew(-30deg);
+    top: -2px; /*-8%;*/
+    left: 45%;
+    color: #FFFFFF;
+}
+
+
+/* ---------Email Infox & Table------------- */
+.einfobox_collapsible {
+    display:none;
+}
+.einfobox_collapsible>td:nth-child(2) {
+    box-shadow:0 0 10px 2px #AAAAAA inset;
+}
+.einfobox {
+    float:right;
+    width:270px;
+    background:#E6E6E6;
+    border:3px solid #424242;
+    border-radius: 4px;
+    box-shadow:3px 3px 2px;
+    margin:0 0 2em 2em;
+    margin-bottom: 10px;
+    color:#1C1C1C;
+    font-size:11px;
+}
+.einfobox  th {
+    background-color:#7C7C7C;
+    color:#FFFFFF;
+    text-align: center;
+}
+.einfobox  tr>td:nth-child(1) {
+    width:50%;
+    background-color:#D8D8D8;
+    text-align:right;
+    padding:1px 5px;
+}
+.einfobox  tr>td:nth-child(2) {
+    width:50%;
+    text-align:left;
+    padding:1px 5px;
+}
+.emarkettable {
+    width: 100%;
+    background: black;
+    text-align: center;
+}
+.emarkettable th {
+    background: #696969;
+    color: white;
+}
+.emarkettable td {
+    background: #9AACBF;
+    width: 20%;
+    padding: 5px;
+}
+
+
+/* ---------MEAG Buttons------------- */
+.MEAG {
+    width:150px;
+    height:150px;
+    box-shadow: inset 0px 0px 25px 20px rgba(15, 15, 15, 0.75);
+    background-color: #eeeeee;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
+    background-image: -webkit-linear-gradient(top, #646464, #909090);
+    background-image: -moz-linear-gradient(top, #646464, #909090);
+    background-image: -ms-linear-gradient(top, #646464, #909090);
+    background-image: -o-linear-gradient(top, #646464, #909090);
+    background-image: linear-gradient(top, #646464, #909090);
+    border-width: 1px;
+    border-style: solid;
+    border-color:#4a4a4a;
+    border-radius: 0% 25% 0% 25%;
+    -webkit-border-radius: 0% 25% 0% 25%;
+    -moz-border-radius: 0% 25% 0% 25%;
+    overflow:hidden;
+    color: #ffa02d;
+    text-align: center;
+    text-shadow: 0 0 5px #ffa02d;
+}
+.MEAG:hover {
+    box-shadow: inset 0px 0px 25px 20px rgba(15, 15, 15, 0.75);
+    background-color: #dddddd;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #bbbbbb));
+    background-image: -webkit-linear-gradient(top, #FF6600, #000000);
+    background-image: -moz-linear-gradient(top, #FF6600, #000000);
+        background-image: -ms-linear-gradient(top, #FF6600, #000000);
+        background-image: -o-linear-gradient(top, #FF6600, #000000);
+    background-image: linear-gradient(top, #FF6600, #000000);
+    border-width: 1px;
+    border-style: solid;
+    border-color:#4a4a4a;
+    cursor: pointer;
+    text-shadow: 0 0 5px #ffa02d;
+}
+.MEAG:active {
+    border: 1px solid #aaa;
+    border-bottom: 1px solid #888;
+    border-color:#4a4a4a;
+    -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+    -moz-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+    box-shadow: inset 8px 8px 25px 20px rgba(15, 15, 15, 0.75);
+}
+
+
+/* ---------Codex------------- */
+.codex_page_container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px 0%;
+}
+div.codex_box_container > div > a > img {
+    object-fit: contain;
+    width: 67px;
+    height: 72px;
+}
+.codex_box_container {
+    height: 109px;
+    width: 109px;
+    display:grid;
+    grid-template-rows: 65% 1fr;
+    grid-template-areas: "img"
+                        "text";
+    position: relative;
+    background: rgba(38, 62, 81, 0.46);
+    border: 1px solid #67819c;
+    text-align: center;
+    margin-bottom: 4px;
+}
+.codex_box_img {
+    grid-area: img;
+}
+.codex_box_text {
+    display: grid;
+    align-items: center;
+    grid-area: text;
+    font-family:'Roboto';
+    background-color: rgba(36, 44, 70, 0.44);
+    text-transform:uppercase;
+    font-weight:bold;
+    font-size:80%;
+    line-height:1.5em;
+    color:white;
+    overflow:hidden;
+}
+.codex_box_text a {
+    text-decoration:none;
+    color:white;
+}
+.codexflower {
+    background-color: rgba(47,56,66,0.23);
+    background-image: url(https://vignette.wikia.nocookie.net/warframe/images/a/a7/Codex_wallpaper.jpg/revision/latest?cb=20200112094224&format=original&path-prefix=fr);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1em;
+}
+
+
+/* ---------ACTIVITY TABBER CSS------------- */
+.activity_tabber .tabbernav ul li {
+    color:red;
+}
+.activity_tabber ul.tabbernav li {
+    margin:0 45px;
+    transition: 0.3s;
+}
+.activity_tabber ul.tabbernav li a {
+    transition: 0.3s;
+}
+.activity_tabber ul.tabbernav li a:hover {
+    transition: 0.3s;
+    filter: brightness(150%);
+}
+
+
+/* ---------Alert Tabber------------- */
+.Alert_tabber .tabberlive {
+    display: flex;
+    width: 100%;
+    margin-top: 0.5em;
+    border:none;
+}
+.Alert_tabber .tabber .tabbernav {
+    display: flex;
+    flex-direction: column;
+    max-width:10%;
+    padding: 0;
+    border:none;
+}
+.Alert_tabber .tabbernav a {
+    display: block;
+    margin: 0;
+    padding: 5px;
+    font-size: 14px;
+    background: transparent;
+    color: black;
+    transition: 0.3s;
+    border:none;
+}
+.Alert_tabber .tabbernav a:hover {
+    filter: brightness(150%);
+    transition: 0.3s;  
+}
+.Alert_tabber .tabbernav li {
+    vertical-align: middle;
+    margin:auto 0;
+    padding:0;
+    border:none;
+}
+.Alert_tabber .tabbertab {
+    border:none;
+    display:flex;
+}
+.Alert_tabber .tabberactive a {
+    background: #2aa198;
+    color: white;
+    border-radius: 3px;
+}
+
+
+/* ---------Switch Homepage------------- */
+.Switch-Box {
+    Display: grid;
+    grid-template-columns: repeat(5,125px);
+    grid-template-rows: repeat(5,auto);
+    column-gap: 0.2em;
+    row-gap: 0.05em;
+}
+.Switch-Box .Switcher {
+    height: 115px;
+    width: 115px;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #5288DD63;
+    display: grid;
+    justify-items: center;
+}
+.Switch-Box .Switcher .switch_img {
+position: absolute;
+top: 0;
+}
+.Switch-Box .Switcher .Switch_link {
+position: absolute;
+bottom: 0;
+width: 100%;
+text-align: center;
+background-color: #012e5963;
+z-index: 2;
+}
+.Switch-Box .Switcher .Switch_link a {
+color: #fff;
+}
+.Switch-Box .Switcher .Switch_link a:hover {
+    text-decoration: none;
+}
+.Switch-Box .Switcher .Switcherimage, .Switch-Box .Switcher .Switcherimage2 {
+    transition:0.3s;
+    position: absolute;
+    top: 0;
+}
+.Switch-Box .Switcher:hover .Switcherimage, .Switch-Box .Switcher:hover .Switcherimage-overlap {
+    opacity:0;
+}
+.Switch-Box .Switcher .Switcherimage2 {
+    opacity:0;
+}
+.Switch-Box .Switcher:hover .Switcherimage2 {
+    opacity:1;
+}
+/* SPECIAL PLACEMENT */
+.switch-placement a img[alt="PlanetsButtonStill"] {
+    width: 115px;
+    height: 109px;
+}
+.Switch-Box img[data-image-key="PrimeBraton.png"], .Switch-Box img[data-image-key="Braton.png"], .Switch-Box img[data-image-key="Orokin_Reactor.png"], .Switch-Box img[data-image-key="Orokin_Catalyst.png"]  {
+    width: 100%;
+    height: 125px;
+    object-fit: none;
+}
+/* Switcher Effect in Switch Homepage Template*/ 
+.PolButton2 {
+    height: 30px;
+    width:127px;
+    background-color:#000011;
+    transition: 0.3s;
+    -webkit-transition: 0.3s; 
+    -moz-transition: 0.3s; 
+    -o-transition: 0.3s; 
+}
+.PolButton2:hover {
+    background-color:#dfe6f0;
+}
+.Switcher {
+    position:relative;
+    height: 106px;
+    width: 106px;
+    z-index:0;
+}
+.Switcherlink {
+    position:absolute;
+    top:84px;
+    width:100%;
+    background-color: rgba(0,0,0,0.6);
+    text-align:center;
+    text-transform:uppercase;
+    color:white;
+    text-shadow: 0 0 2px;
+    font-size:12px;
+    z-index:4;
+}
+.Switcherlink a {
+    color:white;
+    text-decoration: none;
+}
+.Switcherimage, .Switcherimage-overlap {
+    position:absolute;
+    top:0px;
+    transition:0.3s;
+    -webkit-transition: 0.3s; 
+    -moz-transition: 0.3s; 
+    -o-transition: 0.3s; 
+    opacity:1;
+    z-index:1;
+}
+.Switcherimage2 {
+    position:absolute;
+    top:0px;
+    transition:0.3s;
+    -webkit-transition: 0.3s; 
+    -moz-transition: 0.3s; 
+    -o-transition: 0.3s; 
+    opacity:0;
+    z-index:2;
+}
+.Switcher:hover .Switcherimage {
+    opacity:0;
+}
+.Switcher:hover .Switcherimage2 {
+    opacity:1;
+}
+.Switcher:hover .Switcherlink {
+    text-shadow: 0 0 4px;
+}
+
+
+/* ---------SyndicatesNavVisual------------- */
+.syndicate_container {
+    width:100%; 
+    height:100px;
+    text-align:center;
+}
+.syndicate_container .flag {
+    position:relative;
+    height:95px; 
+    width:60px;
+    display:inline-block;
+    margin:0 2px;
+}
+.syndicate_container .flag .text {
+    position:absolute;
+    top:30px;
+    text-align:center;
+    width:100%;
+    color:white;
+    text-shadow: 0px 0px 2px black;
+    opacity:0;
+    transition:0.2s;
+    font-size:12px;
+    line-height:13px;
+}
+.syndicate_container .flag .text a {
+    color:white;
+}
+.syndicate_container .flag:hover .text {
+    opacity:1;
+}
+
+
+/* ---------Tooltip------------- */
+.Tooltip {
+    background-color: #ddd0;
+    border: 1px solid #313234;
+    border-spacing: 0;
+    border-radius: 4px;
+    font-size: 11px;
+    max-width: 200px;
+    color: #fff;
+}
+.Tooltip.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "Left Right";
+    max-width: 100%;
+}
+.Tooltip.leftCol {
+    grid-area: Left;
+}
+.Tooltip.rightCol {
+    grid-area: Right;
+}
+.Tooltip a {
+    text-decoration: none;
+    color: #5288dd;
+}
+.Tooltip p {
+    margin: 0;
+    padding: 0;
+}
+.Tooltip_imgbox {
+    position: relative;
+    background-color: rgba(77,86,93,0.9);
+    display: block;
+    max-width: 200px;
+    height: 170px;
+    overflow: hidden;
+}
+.Tooltip img {
+    max-width: 200px;
+    max-height: 170px;
+    object-fit: contain;
+}
+.Tooltip .Tooltip_bg {
+    background-color: #0D1B1C;
+}
+.Tooltip .HeadText {
+    color:rgb(175, 216, 255);
+    font-weight: bold;
+}
+.Tooltip .center_me {
+    text-align: center;
+}
+.Tooltip .Tooltip_spaced {
+    margin: 2px 0px;
+    padding: 5px 2px;
+}
+.Tooltip .Tooltip_bg:nth-child(2) {
+    margin-top: 0px;
+}
+p.HeadText:nth-child(3),p.HeadText:nth-child(7) {
+    margin-top: 2px;
+}
+body .tooltips-init-complete {
+    word-break: break-all;
+}
+
+
+/* ---------Void drop table------------- */
+table.voidtable {
+    width:100%;
+    text-align:left;
+    border:1px solid #5288DD63;
+    border-collapse: collapse;
+    background:rgba(65,85,143,0.16);
+}
+table.voidtable th {
+    background-color: #5288DD63;
+    color:white;
+    width:50%;
+    padding:0px 4px;
+    border:1px solid #5288DD63;
+}
+table.voidtable td {
+    width:50%;
+    border:1px solid #5288DD63;
+    vertical-align: top;
+}
+.voidbutton {
+    display:inline-block;
+    width:230px;
+    height:30px;
+    border:1px solid orange;
+    background:#061D40D6;
+    padding:5px;
+    font-family:Open Sans;
+}
+.voidbutton:hover {
+    background:transparent;
+    transition:0.1s;
+}
+
+
+/* ---------Ability table------------- */
+.abilityTable {
+    background-color: #061D40D6;
+    color: white;
+}
+.abilityTable > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(3) {
+    display: flex;
+}
+table.foundrytable .mw-collapsible-content {
+    min-width: 100%;
+}
+table.foundrytable .mw-collapsible-content table {
+    min-width: 100%;
+}
+/* New T:Ability Stuff START*/
+.button-c {
+    cursor: pointer;
+    width: 100%;
+    height: 32px;
+    background-color: #061D40D6;
+    text-align: center;
+    padding: 0;
+    border: none;
+    transition:all 0.5s;
+}
+.button-c:hover {
+    background: #5288DD63;
+}
+/* Rotate-c*/
+.rotate2-c {
+    padding: 5px 0 7px 0;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+.rotate2-c {
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+}
+.rotate-c {
+    padding: 5px 0 7px 0;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+/*Ability tabbers*/
+.tabber-dark, .tabber-light {
+    border: none;
+    padding: 0;
+}
+.tabber-dark ul.tabbernav, .tabber-light ul.tabbernav {
+    background-color: #061D40D6;
+    border: none;
+    text-align: center;
+    color: white;
+    font-family: "Roboto";
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.tabber-light ul.tabbernav {
+    background-color: #bcbcc5;
+    color: #2a2a31;
+}
+.tabber-dark ul.tabbernav li a, .tabber-light ul.tabbernav li a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: white;
+}
+.tabber-light ul.tabbernav li a {
+    color: #2a2a31;
+}
+.tabber-dark ul.tabbernav li a:visited, .tabber-light ul.tabbernav li a:visited {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: white;
+}
+.tabber-light ul.tabbernav li a:visited {
+    color: #2a2a31;
+}
+.tabber-dark ul.tabbernav li a:hover, .tabber-light ul.tabbernav li a:hover {
+    padding-top: 8px;
+    padding-bottom: 6px;
+    border-bottom: #bcbcc5 solid 2px;
+}
+.tabber-light ul.tabbernav li a:hover {
+    border-bottom: #061D40D6 solid 2px;
+}
+.tabber-dark ul.tabbernav li.tabberactive a, .tabber-light ul.tabbernav li.tabberactive a {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border-bottom: none;
+    color: #2a2a31;
+    background-color: #061D40D6;
+}
+.tabber-light ul.tabbernav li.tabberactive a {
+    color: white;
+    background-color: #2a2a31;
+}
+.tabber-dark ul.tabbernav li.tabberactive a:hover, .tabber-light ul.tabbernav li.tabberactive a:hover {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border-bottom: none;
+    color: #2a2a31;
+    background-color: #bcbcc5;
+}
+.tabber-light ul.tabbernav li.tabberactive a:hover {
+    color: white;
+    background-color: #061D40D6;
+}
+.tabber-dark .tabberlive, .tabber-light .tabberlive {
+    width: 100%;
+}
+.tabber-dark .tabberlive .tabbertab, .tabber-light .tabberlive .tabbertab {
+    border: none;
+    padding: 0 7px;
+}
+
+
+/* ---------Custom Mod table------------- */
+.emodtable {
+    width: 55%;
+}
+.bigmodtable {
+    width: 100%;
+}
+.emodtable td, .bigmodtable td, .wikitable td {
+    background-color: #353535;
+    background-color: rgba(65,85,143,0.16);
+    border: 1px solid black;
+}
+.emodtable th, .bigmodtable th, .wikitable th {
+    background-color: #5288DD63;
+    border: 1px solid black;
+    color: white;
+    width: 10%;
+    /* width: 65px; */ /*OLD DATA*/ 
+}
+.emodtable th a, .bigmodtable th a, .wikitable th a {
+    color: white;
+}
+.emodtable, .emodlist, .bigmodtable, .wikitable {
+    text-align: center;
+    margin-left:auto; 
+    margin-right:auto;
+    border-collapse: collapse;
+}
+
+
+/* ---------Warframe Nav Box------------- */
+.WarframeNavBox {
+    position: relative;
+    display: inline-block;
+    margin-top: 1px;
+    margin-bottom: 2px;
+    height: 65px;
+    width: 64px;
+    z-index: 0;
+}
+.WarframeNavBoxText {
+    position:absolute;
+    z-index: 3;
+    left: 0;
+    bottom: 0;
+    font-size: 11px;
+    background: rgba(0,0,0,0.6);
+    padding: 0 2px;
+    line-height: 15px;
+    width: 90%;
+}
+.WarframeNavBoxImage {
+    position: absolute;
+    top: 0;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    opacity: 1;
+    z-index: 1;
+    width: 100%;
+}
+.WarframeNavBox:hover .WarframeNavBoxImage {
+    opacity: 0;
+}
+/*Fade img  START*/
+.WarframeNavBoxImage2 {
+    position: absolute;
+    top: 0;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    opacity: 0;
+    z-index: 2;
+    width: 100%;
+}
+.WarframeNavBox:hover .WarframeNavBoxImage2 {
+    opacity: 1;
+}
+
+
+/* ---------Portable Infobox - styles for new class names------------- */
+.portable-infobox {
+    width: 270px;
+    background-color: rgba(65,85,143,0.16);
+    border: 1px solid #061D40;
+    color: white;
+    float: right;
+    font-size: 11px;
+    /*padding: 0 0 5px 0;*/
+}
+.portable-infobox .pi-title {
+   font-weight: bold;
+}
+.portable-infobox .pi-title {
+   background-color: #061d40;
+}
+.portable-infobox .pi-header {
+   background-color: #061d40a3;
+}
+ul.pi-image-collection-tabs li.current {
+   background: 
+   #324666;
+   font-weight: bold;
+   padding: 0px 7px;
+}
+.portable-infobox .item-type-key-val {
+   box-sizing: border-box;
+   display:table;
+   width: 100%;
+}
+.portable-infobox .pi-data-label, .portable-infobox .pi-data-value {
+   display: table-cell; /* needed for proper handling of tabber */
+   padding-left: 7px;
+   padding-right: 7px;
+   font-size: 11px;
+}
+.portable-infobox .pi-data-value {
+   padding-top: 2px;
+}
+.tabberlive .tabbertab .portable-infobox h3.pi-data-label {
+   display: table-cell; /* needed for proper handling of tabber */
+}
+.pi-image {
+   text-align: center;
+   background-image: url(https://vignette.wikia.nocookie.net/warframe/images/a/a7/Codex_wallpaper.jpg/revision/latest?cb=20200112094224&format=original&path-prefix=fr);
+   background-position: center;
+   background-size: cover;
+}
+
+
+/* ---------Ambox------------- */
+.ambox {
+    font-size: 95%;
+    width: 80%;
+    padding: 25px;
+    margin: 0 auto;
+    border-left: 10px solid #1e90ff;
+    border-collapse: collapse;
+}
+.ambox-blue {
+    border-left: 10px solid #1e90ff;    /* Blue (notice) */
+}
+.ambox-red {
+    border-left: 10px solid #ff0000;    /* Red (delete/serious) */
+}
+.ambox-orange {
+    border-left: 10px solid #f28500;    /* Orange (content) */
+}
+.ambox-yellow {
+    border-left: 10px solid #f4c430;    /* Yellow (style) */
+}
+.ambox-purple {
+    border-left: 10px solid #9932cc;    /* Purple (merge) */
+}
+.ambox-gray {
+    border-left: 10px solid #4d4d4d;    /* Gray (protection) */
+}
+.ambox-green {
+    border-left: 10px solid #228b22;    /* Green */
+}
+.ambox-none {
+    border-left: 0;
+}
+.ambox-smalltext {
+    font-size: smaller;
+    margin-top:0.5em;
+    margin-left:0.8em;
+}
+.ambox-image {
+    width: 60px;
+    padding: 2px 0px 2px 0.5em;
+    text-align: center;
+}
+.ambox table > tbody {
+    border: solid 2px #4f4f4f;
+}
+.ambox table tbody tr > td {
+    background:black;
+}
+
+
+/* ---------Discord Box HomePage------------- */
+.mainpage-box-discord {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -user-select: none;
+    cursor: pointer;
+    display: inline-flex;
+    transform: skew(30deg);
+    width: 260px;
+    margin: 0 25px 15px auto;
+    padding:10px 0px;
+    text-align: center;
+}
+.mainpage-box-discord a {
+    vertical-align:middle;
+    font-family:'Open Sans';
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FFFFFF;
+}
+.tooltip-contents {
+    background: rgba(0, 0, 0, 0.80);
+}
+
+
+/* ---------Portable Infobox------------- */
+.portable-infobox .pi-data-label {
+    width: 89px;
+    background: #5288DD63;
+    color: #FFFFFF;
+    text-align: right;
+    padding: 0 5px 0 10px;
+    vertical-align: middle;
+}
+.portable-infobox .pi-data-label a {
+    color: #FFFFFF;
+}
+.portable-infobox .pi-item:not(:last-of-type) {
+    border-bottom: 0px;
+}
+.portable-infobox .pi-item-spacing {
+    /*padding: 2px 4px 0px 4px;
+    min-height: 24px;*/
+    padding: 0;
+    padding-top: 1px;
+}
+.portable-infobox .pi-header {
+    background-color: #5288DD63;
+    /*margin: 2px 4px 0px 4px;
+    height: 24px;*/
+    text-align: center;
+    min-height: 0px;
+}
+.portable-infobox .pi-title {
+    background-color: #5288DD63;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 1em;
+    text-align: center;
+    margin: 4px;
+}
+
+
+/* ---------Grid Container------------- */
+.grid-container {
+    display: grid;
+    gap: 3px;
+    grid-template-areas: "x1 x2 x3 x4 x5 x6"
+                         "x7 x8 x9 x10 x11 x12"
+                         "x13 x14 x15 x16 x17 x18";
+    grid-template-columns:repeat(6, auto);
+    grid-template-rows:repeat(3, auto);
+    width: 670px;
+    margin:auto;
+    justify-items: center;
+}
+.grid_gallery_btn {
+    text-align:center
+}
+.grid_gallery_btn pre {
+    position: relative;
+    display: grid;
+    grid-template-areas: "content";
+    max-width: 120px;
+    max-height: 120px;
+    padding: 0;
+    margin: 0;
+    /*! overflow: hidden; */
+    background-image: url(https://vignette.wikia.nocookie.net/warframe/images/a/a7/Codex_wallpaper.jpg/revision/latest?cb=20200112094224&format=original&path-prefix=fr);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.grid_gallery_btn pre > img:first-of-type {
+    z-index: 1;
+    grid-area: content;
+    animation: Spin 4s linear infinite;
+    animation-play-state: running;
+    animation-play-state: paused;
+  }
+.grid_gallery_btn:hover pre img:first-of-type {
+    -webkit-animation-play-state:running;
+  }
+.grid_gallery_btn pre a {
+    grid-area: content;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 2;
+    display: grid;
+    align-items: center;
+  }
+@-webkit-keyframes Spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+  }
+.grid_gallery_btn a {
+    text-decoration: none;
+    color: #fff;
+}
+/*.title {
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 0 2px;
+    font-size: 11px;
+    font-family: 'Raleway', sans-serif;
+    padding:4px 0px 1px;
+    position: absolute;
+    bottom: 0;
+    z-index: 6;
+}*/
+.grid_gallery_btn:hover .title {
+    text-shadow: 0 0 4px;
+}
+.frame_ease_out {
+    opacity: 1;
+    transition-duration: 600ms;
+}
+.grid_gallery_btn pre:hover .frame_ease_out {
+    opacity:0;
+    transition-delay: 0.5s;
+    transition-duration: 500ms;
+}
+.grid_gallery_btn .frame_ease_in {
+    opacity:0;
+    grid-area: content;
+    z-index: 5;
+}
+.grid_gallery_btn pre:hover .frame_ease_in {
+    opacity:1;
+    transition-delay: 0.5s;
+}
+.frame_ease_in {
+    transition-duration: 500ms;
+}
+/* ---------==============================------------- */
+
+
+/* ---------TabView Extension------------- */
 .yui-content {
     background-color: #EDF5FF;
-    text-align:center !important;
+    text-align:center;
     padding: 0px;
 }
- 
 .yui-nav {
     border-color:#EDF5FF;
     border-style:solid;
-    text-align:center !important;
+    text-align:center;
 }
-  
 .yui-skin-sam .yui-navset .yui-nav, .yui-skin-sam .yui-navset .yui-navset-top .yui-nav {
     border-color:#EDF5FF;
     border-style:solid;
 }
- 
 .yui-navset .yui-nav .selected {
     background-color: #EDF5FF;
 }
- 
 /* Style des tabview non sélectionnées */
 .yui-navset .yui-nav li {
-    color:black !important; /* couleur du texte de l'onglet inactif */
-    border:none !important; /* contour des onglets inactifs */
-    background-color:#EDF5FF !important; /* fond de l'onglet inactif */
+    color:black; /* couleur du texte de l'onglet inactif */
+    border:none; /* contour des onglets inactifs */
+    background-color:#EDF5FF; /* fond de l'onglet inactif */
 }
-
 /* Personnalisation de TabView */
 ul.tabs {
-    border:none !important; /* bordure autour des onglets */
-    background-color:#474747 !important;
-    text-align:center !important;
-    color:black !important;
-    font-weight:normal !important;
-    text-transform:uppercase !important;
+    border:none; /* bordure autour des onglets */
+    background-color:#474747;
+    text-align:center;
+    color:black;
+    font-weight:normal;
+    text-transform:uppercase;
 }
-
 /** Onglet actif **/
 ul.tabs li.selected a {
-    color:black !important; /* couleur du texte de l'onglet actif */
-    font-weight:normal !important; /* typographie du texte de l'onglet actif */
-    border:none !important; /* contour de l'onglet actif */
-    background-color:white !important; /* fond de l'onglet actif */
+    color:black; /* couleur du texte de l'onglet actif */
+    font-weight:normal; /* typographie du texte de l'onglet actif */
+    border:none; /* contour de l'onglet actif */
+    background-color:white; /* fond de l'onglet actif */
 }
- 
 /** Onglet inactif **/
 ul.tabs li a {
-    color:white !important; /* couleur du texte de l'onglet inactif */
-    border:none !important; /* contour des onglets inactifs */
-    background-color:#474747 !important; /* fond de l'onglet inactif */
+    color:white; /* couleur du texte de l'onglet inactif */
+    border:none; /* contour des onglets inactifs */
+    background-color:#474747; /* fond de l'onglet inactif */
 }
- 
 /** Contenu de l'onglet actif **/
 div.tabBody.selected {
-    color: white !important;
-    border: 2px solid #474747 !important;
-    border-top: none !important;
+    color: white;
+    border: 2px solid #474747;
+    border-top: none;
 }
 
 
-
-
-/** Infobox template **/
-.infobox {
-     width: 270px;
-     background-color: rgba(109, 97, 72, 0.25);
-     border: 1px solid #061D40D6;
-     color: white;
-     float: right;
-     font-size: 12px;
-     margin:0px 0px 10px 2em;
-
-}
-.infobox .name {
-     text-align:center; 
-     background-color:#5288DD63; 
-     font-size:18px; 
-     height:50px
-}
-.infobox .image {
-     height: 200px;
-     padding:0.5em; 
-     text-align:center;
-}
-.infobox .category {
-     background:#5288DD63;
-     font-size:13px;
-}
-.infobox .category a {
-     color:#afd8ff;
-}
-.infobox .left {
-     width:50%; 
-     background-color:#5288DD63; 
-     text-align:right; 
-     padding:0px 5px;
-     color: white;
-}
-.infobox .left a {
-     color:#afd8ff;
-}
-.infobox .right {
-     width:50%; 
-     text-align:left; 
-     padding:0px 5px; 
-}
-
-
-
-
-/** Infobox horizontal**/
+/* ---------Infobox horizontal------------- */
 .infobox-hori {
      background-color: rgba(65,85,143,0.16);
      border: 1px solid #5288DD63;
@@ -300,30 +1397,23 @@ div.tabBody.selected {
     display:block;
     z-index:999;
 }
-
-
-
-
 /* Prise en compte des titres de section dans Tabber */
-.tabberlive .tabbertab h2, .tabberlive .tabbertab h3 { 
-    display:block !important; 
-}
 
-/* Personnalisation des onglets Tabber */
-
+/*-------- Personnalisation des onglets Tabber -------*/
 /** Personnalisation générale des onglets (navigation) **/
 ul.tabbernav {
-    border: none !important; /* bordure autour des onglets */
+    border: none; /* bordure autour des onglets */
     background-color: rgb(19, 55, 111);
-    padding: 0px !important; /*8px*/
-    text-align: center !important;
-    color: black !important;
-    font-weight: normal !important;
-    text-transform: uppercase !important;
+    padding: 0px; /*8px*/
+    text-align: center;
+    color: black;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 ul.tabbernav li {
-    margin: 0px !important;
-    display: inline-grid !important;
+    margin: 0;
+    padding: 0;
+    display: inline-grid;
     font-family: 'Roboto', serif;
 }
 ul.tabbernav li a:hover {
@@ -331,91 +1421,84 @@ ul.tabbernav li a:hover {
     padding-bottom: 6px;
     border-bottom: #FFF solid 2px;
 }
-
 .tabbertab-borderless .tabber .tabbertab {
-    padding: 10px !important;
+    padding: 10px;
 }
-
-
-
 /** Personnalisation des onglets inactifs **/
 ul.tabbernav li:not(.tabberactive) a {
-    color: white !important; /* couleur du texte de l'onglet inactif */
-    padding: 8px !important;
-    border: none !important; /* contour des onglets inactifs */
-    background-color: rgb(19, 55, 111) !important; /* fond de l'onglet inactif */
+    color: white; /* couleur du texte de l'onglet inactif */
+    padding: 8px;
+    border: none; /* contour des onglets inactifs */
+    background-color: rgb(19, 55, 111); /* fond de l'onglet inactif */
 }
-
-
-
-
-
-
-
 /** Personnalisation des onglets actifs **/
 ul.tabbernav li.tabberactive a {
- color: black !important; /* couleur du texte de l'onglet actif */
- padding: 8px !important;
- font-weight: normal !important; /* typographie du texte de l'onglet actif */
- border: none !important; /* contour de l'onglet actif */
- background-color: white !important; /* fond de l'onglet actif */
+ color: black; /* couleur du texte de l'onglet actif */
+ padding: 8px;
+ font-weight: normal; /* typographie du texte de l'onglet actif */
+ border: none; /* contour de l'onglet actif */
+ background-color: white; /* fond de l'onglet actif */
 }
-
-
-
-
-
-
-/** Personnalisation générale du tabber **/
+/** Tabber / Tabberlive **/
+.tabber .tabbertab {
+    border: none; 
+}
 .tabberlive {
- width: 100% !important; /* longueur du tabber */
+    width: 100%; /* longueur du tabber */
 }
 .tabberlive .tabbertab {
- border: none; /* contour du contenu de l'onglet */
- border-top: none !important; /* bordure au dessus du contenu de l'onglet (donc sous les onglets) */
+    border: none; /* contour du contenu de l'onglet */
+    border-top: none; /* bordure au dessus du contenu de l'onglet (donc sous les onglets) */
 }
-.tabber .tabbertab {
-    border: none !important; 
+.tabberlive .tabbertab h2, .tabberlive .tabbertab h3 { 
+    display:block; 
+}
+.tabberlive-full-page > .tabberlive > .tabbertab {
+    border: 0;
+    padding: 0;    
+}
+.tabberlive-full-page > .tabberlive > ul.tabbernav li {
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid #4a4a4a;
+    border-right: 1px solid #4a4a4a;
+    border-top: 1px solid #4a4a4a;
+    background: #1e1e1e;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: inline-grid;
+    font-size: 14px;
+    line-height: 23px;
+    padding: 6px 12px 3px;
+    position: relative;
+    top: 1px;
+}
+.tabberlive-full-page > .tabberlive > ul.tabbernav li.tabberactive {
+    cursor: text;
+}
+.tabberlive-full-page > .tabberlive > ul.tabbernav li a {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.tabberlive-full-page > .tabberlive > ul.tabbernav li.tabberactive a {
+    cursor: text;
 }
 
 
-
-
-
-/* Void drop table*/
-table.voidtable {
-    width:100%;
-    text-align:left;
-    border:1px solid #5288DD63;
-    border-collapse: collapse;
-    background:rgba(65,85,143,0.16);
-}
-table.voidtable th {
-    background-color: #5288DD63;
-    color:white;
-    width:50%;
-    padding:0px 4px;
-    border:1px solid #5288DD63;
-}
-
-table.voidtable td {
-    width:50%;
-    border:1px solid #5288DD63;
-    vertical-align: top;
-}
-
-/* Custom list table*/
+/* ---------Custom list table------------- */
 table.listtable {
     width:100%;
     text-align:center;
 }
- 
 table.listtable th {
     background-color: #061D40D6;
 }
 
 
-/* Custom Foundry table*/
+/* ---------Custom Foundry table------------- */
 table.foundrytable {
     color:white;
     text-align:center;
@@ -427,17 +1510,14 @@ table.article-table {
     border-collapse: collapse;
     background: none !important;
 }
-table.foundrytable th,
-table.article-table th {
+table.foundrytable th, table.article-table th {
     background-color: #061d40;
     color: white;
 }
-table.foundrytable td,
-table.article-table td {
+table.foundrytable td, table.article-table td {
     background-color: rgba(65,85,143,0.16);
 }
-table.foundrytable th a,
-table.article-table th a{
+table.foundrytable th a, table.article-table th a{
     color: white;
 }
 .article-table.specialwrap > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1), .article-table > tbody:nth-child(1) > tr:nth-child(11) > td:nth-child(1) {
@@ -446,117 +1526,22 @@ table.article-table th a{
 .article-table, .WikiaTable {
     margin: 0;
 }
-
-.abilityTable {
-    background-color: #061D40D6;
-    color: white;
-}
-.abilityTable > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(3) {
-    display: flex;
-}
-table.foundrytable .mw-collapsible-content {
-    min-width: 100%;
-}
-table.foundrytable .mw-collapsible-content table {
-    min-width: 100%;
-}
-
-
-/* Custom Mod table*/
-.emodtable, .emodlist, .bigmodtable, .wikitable {
-    text-align: center;
-    margin-left:auto; 
-    margin-right:auto;
-    border-collapse: collapse;
-}
-.bigmodtable {
-    width: 100%;
-}
-.emodtable th, .bigmodtable th, .wikitable th {
-    border: 1px solid #5288DD63;
-    color: #FF8000;
-    width: 65px;
-}
-.emodtable th a, .bigmodtable th a, .wikitable th a {
-    color: #FF8000;
-}
-.emodtable td, .bigmodtable td {
-    background-color: #353535;
+table.listtable tr td, table.foundrytable tr td {
     background-color: rgba(65,85,143,0.16);
-    border: 1px solid #5288DD63;
 }
 
-/* Tableau des Dégâts */
+
+/* ---------Tableau des Dégâts------------- */
 .damagetable tr:not(tr:first-child) {
-    border-top: 1px solid black !important;
-    border-bottom: 1px solid black !important;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 .damagetable tr td:nth-child(2 + 0n) {
-    border-right: 1px solid black !important;
+    border-right: 1px solid black;
 }
 
-/* --------- Warframe Nav Box START --------- */
-.WarframeNavBox
-{
-    position: relative;
-    display: inline-block;
-    margin-top: 1px;
-    margin-bottom: 2px;
-    height: 65px;
-    width: 64px;
-    z-index: 0;
-}
-.WarframeNavBoxText {
-    position:absolute;
-    z-index: 3;
-    left: 0;
-    bottom: 0;
-    font-size: 11px;
-    background: rgba(0,0,0,0.6);
-    padding: 0 2px;
-    line-height: 15px;
-    width: 90%;
-}
-.WarframeNavBoxImage {
-    position: absolute;
-    top: 0;
-    transition: 0.2s;
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -ms-transition: 0.2s;
-    -o-transition: 0.2s;
-    opacity: 1;
-    z-index: 1;
-    width: 100%;
-}
-.WarframeNavBox:hover .WarframeNavBoxImage {
-    opacity: 0;
-}
- 
-    /*Fade START*/
-.WarframeNavBoxImage2 {
-    position: absolute;
-    top: 0;
-    transition: 0.2s;
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -ms-transition: 0.2s;
-    -o-transition: 0.2s;
-    opacity: 0;
-    z-index: 2;
-    width: 100%;
-}
-.WarframeNavBox:hover .WarframeNavBoxImage2 {
-    opacity: 1;
-}
 
-/* ----- Widget : Forum ----- */
-/*#ForumActivityModule .activity-items {
-    background-color: rgba(109, 97, 72, 0.25);
-    border: 1px solid #6D614852;
-    padding: 5px 10px;
-    margin: 0;
-}*/
+/* ---------Activity Module Forum------------- */
 .mw-content-ltr .forum-activity-module h2 {
     display:none;
 }
@@ -568,7 +1553,7 @@ table.foundrytable .mw-collapsible-content table {
     list-style: none;
 }
 .mw-content-ltr .forum-activity-module {
-    width: initial !important;
+    width: initial;
 }
 .mw-content-ltr .forum-activity-module .page-title {
     font-family: 'Days One', serif;
@@ -578,9 +1563,12 @@ table.foundrytable .mw-collapsible-content table {
     font-size: 13px;
 }
 
+
+/* ---------Activity Module------------- */
 .activity-module ul .activity-item {
-    display: block !important;
-    margin: 6px 0 !important;
+    display: block;
+    /* display: flex; */
+    margin: 6px 0;
 }
 .activity-module ul .activity-item::not(:last-child) {
     border-bottom: 1px solid #233859;
@@ -593,8 +1581,9 @@ table.foundrytable .mw-collapsible-content table {
     line-height: 20px;
 }
 
-/* Main page */
-/** General **/
+
+/* ---------Pages Principales------------- */
+/* -Règles génériques- */
 .mainpage-header {
     position:relative;
     -moz-box-sizing: border-box;
@@ -616,7 +1605,6 @@ table.foundrytable .mw-collapsible-content table {
     font-family: 'Michroma', serif;
     font-weight: bold;
 }
- 
 .mainpage-header-right {
     position: absolute;
     top: 0;
@@ -626,14 +1614,12 @@ table.foundrytable .mw-collapsible-content table {
     background: #213657;
     transform: skew(30deg);
 }
- 
 .mainpage-header-sub {
     font-size: 18px;
     color: orange;
     font-family: 'Michroma', serif;
     font-weight: 700;
 }
- 
 .mainpage-header-news {
     margin-bottom: 10px;
     font-size:25px;
@@ -641,23 +1627,20 @@ table.foundrytable .mw-collapsible-content table {
     font-family:'Open Sans';
     font-weight:700;
 }
-
 .mainpage-box-blogs .WikiaBlogListing {
     border: 1px solid #5288DD63;
     margin-top: 9px;
     background: #5288DD63;
 }
-
 .mainpage-box-blogs .recent {
     float: left;
     margin-top: 7px;
     width: 50%;
 }
 .recent {
-    width: 49.25% !important;
+    width: 49.25%;
     height: 100%;
 }
-
 .mainpage-box-blogs .popular {
     float: right;
     margin-top: 7px;
@@ -668,11 +1651,10 @@ table.foundrytable .mw-collapsible-content table {
     width: calc(50% - 10px);
 }
 .popular {
-    width: 49.25% !important;
+    width: 49.25%;
     height: 100%;
     float: right;
 }
-
 .author-details h2 a {
     font-family: 'Michroma', serif;
     font-size: 18px;
@@ -684,44 +1666,9 @@ table.foundrytable .mw-collapsible-content table {
     font-size: 15px;
 }
 
-/***** Portable Infobox - styles for new class names *****/
-/***** (changes to be announced soon) *****/
- 
-.portable-infobox {
-     width: 270px;
-     background-color: rgba(65,85,143,0.16);
-     border: 1px solid #061D40;
-     color: white;
-     float: right;
-     font-size: 11px;
-     /*padding: 0 0 5px 0;*/
-}
- 
-.portable-infobox .item-type-key-val {
-    box-sizing: border-box;
-    display:table;
-    width: 100%;
-}
 
-.portable-infobox .pi-data-label,
-.portable-infobox .pi-data-value {
-    display: table-cell !important; /* needed for proper handling of tabber */
-    padding-left: 7px;
-    padding-right: 7px;
-    font-size: 11px;
-}
- 
-.portable-infobox .pi-data-value {
-    padding-top: 2px;
-}
- 
-.tabberlive .tabbertab .portable-infobox h3.pi-data-label {
-    display: table-cell !important; /* needed for proper handling of tabber */
-}
- 
-/* Custom Tabber style*/
-.WikiaArticle .tabbertab-borderless ul.tabbernav,
-.WikiaArticle .tabbertab-bordered ul.tabbernav {
+/* ---------Custom Tabber style------------- */
+.WikiaArticle .tabbertab-borderless ul.tabbernav,.WikiaArticle .tabbertab-bordered ul.tabbernav {
     background-color: #081f42;
     padding: 8px;
     border: none;
@@ -730,196 +1677,85 @@ table.foundrytable .mw-collapsible-content table {
     font-weight:normal;
     text-transform:uppercase;
 }
- 
-.WikiaArticle .tabbertab-borderless ul.tabbernav li a,
-.WikiaArticle .tabbertab-bordered ul.tabbernav li a {
+.WikiaArticle .tabbertab-borderless ul.tabbernav li a, .WikiaArticle .tabbertab-bordered ul.tabbernav li a {
     border: none;
     background: none;
     text-decoration: none;
     color: white; 
 }
- 
-.WikiaArticle .tabbertab-borderless ul.tabbernav li a:link,
-.WikiaArticle .tabbertab-bordered ul.tabbernav li a:link {
+.WikiaArticle .tabbertab-borderless ul.tabbernav li a:link, .WikiaArticle .tabbertab-bordered ul.tabbernav li a:link {
     color: white; 
 }
- 
-.WikiaArticle .tabbertab-borderless ul.tabbernav li a:hover,
-.WikiaArticle .tabbertab-bordered ul.tabbernav li a:hover {
+.WikiaArticle .tabbertab-borderless ul.tabbernav li a:hover, .WikiaArticle .tabbertab-bordered ul.tabbernav li a:hover {
     background-color:transparent;
 }
- 
-.WikiaArticle .tabbertab-borderless ul.tabbernav li.tabberactive a,
-.WikiaArticle .tabbertab-bordered ul.tabbernav li.tabberactive a {
+.WikiaArticle .tabbertab-borderless ul.tabbernav li.tabberactive a, .WikiaArticle .tabbertab-bordered ul.tabbernav li.tabberactive a {
     border-bottom: none;
     /*background-color: #517783;*/
     padding: 8px;
     color: white;
 }
- 
-.WikiaArticle .tabbertab-borderless .tabberlive,
-.WikiaArticle .tabbertab-bordered .tabberlive {
+.WikiaArticle .tabbertab-borderless .tabberlive, .WikiaArticle .tabbertab-bordered .tabberlive {
     width: 100%;
 }
- 
 .WikiaArticle .tabbertab-borderless .tabberlive .tabbertab {
     border: none;
     padding: 0px;
 }
- 
 .WikiaArticle .tabbertab-bordered .tabberlive .tabbertab {
-    border: #878894 solid 1px;
+    border: 1px solid #061D40D6;
 }
- 
 .tabbertab-borderless .tabberlive .tabbertab {
-    border: 0 !important;
+    border: 0;
 }
 .tabbertab-bordered {
     border: 1px solid #061D40D6;
 }
 
- 
 
-/* Portable Infobox */
- 
-.portable-infobox .pi-data-label {
-    width: 89px;
-    background: #5288DD63;
-    color: #FFFFFF;
-    text-align: right;
-    padding: 0 5px 0 10px;
-    vertical-align: middle;
-}
- 
-.portable-infobox .pi-data-label a {
-    color: #FFFFFF;
-}
- 
-.portable-infobox .pi-item:not(:last-of-type) {
-    border-bottom: 0px;
-}
- 
-/** Styling section headers **/
- 
+/* ---------Styling section headers------------- */
 .portable-infobox .pi-header.pi-secondary-font {
     font-size: 13px;
     padding: 5px;
     color: #FFFFFF;
     margin-top: 1px;
 }
-
 .pi-image-collection-tabs .pi-tab-link {
     margin: 0 5px;
     padding: 3px;
     border: 0px;
 }
-
-.portable-infobox .pi-item-spacing {
-    /*padding: 2px 4px 0px 4px;
-    min-height: 24px;*/
-    padding: 0;
-    padding-top: 1px;
-}
- 
-.portable-infobox .pi-header {
-    background-color: #5288DD63;
-    /*margin: 2px 4px 0px 4px;
-    height: 24px;*/
-    text-align: center;
-    min-height: 0px;
-}
- 
-.portable-infobox .pi-title {
-    background-color: #5288DD63;
-    color: #FFFFFF;
-    font-size: 18px;
-    padding: 1em;
-    text-align: center;
-    margin: 4px;
-}
-
 .portable-infobox .pi-data .pi-data-value:only-child {
     /*background-color:rgba(56,45,20,0.75);*/
     text-align: center;
     width: 100%;
 }
 
-.pi-theme-Voile-Rouge .pi-image {background:#3D1839;}
-.pi-theme-Arbitres-d_Hexis .pi-image, .pi-theme-Méridien-d_Acier .pi-image {background:#374045;}
-.pi-theme-Céphalon-Suda .pi-image {background:#3D375D;}
-.pi-theme-La-Séquence-Perrin .pi-image {background:#3D4963;}
-.pi-theme-Céphalon-Simaris .pi-image {background:#5F3C0D;}
-.pi-theme-Conclave .pi-image {background:black;}
-.pi-theme-Nouveau-Loka .pi-image {background:#2A3C2E;}
-
-
-/*--PERSONNAL CSS Yazuh--*/
-.goldy {
-    background: -webkit-linear-gradient(transparent, transparent),
-    -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
-    background: -o-linear-gradient(transparent, transparent);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: 0.3s;
+/* ---------Thème Voile Rouge ? ------------- */
+.pi-theme-Voile-Rouge .pi-image {
+    background:#3D1839;
+}
+.pi-theme-Arbitres-d_Hexis .pi-image, .pi-theme-Méridien-d_Acier .pi-image {
+    background:#374045;
+}
+.pi-theme-Céphalon-Suda .pi-image {
+    background:#3D375D;
+}
+.pi-theme-La-Séquence-Perrin .pi-image {
+    background:#3D4963;
+}
+.pi-theme-Céphalon-Simaris .pi-image {
+    background:#5F3C0D;
+}
+.pi-theme-Conclave .pi-image {
+    background:black;
+}
+.pi-theme-Nouveau-Loka .pi-image {
+    background:#2A3C2E;
 }
 
-.goldy:hover {
-    filter: brightness(150%);
-    transition: 0.3s;
-}
 
-.goldy a {
-    text-decoration:none;
-}
-
-.profile_container_15 {
-    border: solid;
-    border-image-outset: 0;
-    border-image-repeat: stretch;
-    border-image-slice: 100%;
-    border-image-source: none;
-    border-image-width: 1;
-    border-image: linear-gradient(167deg, #68602d 1%, #605425 25%, #eee3a1 50%, #6d684b 75%, #aa953e 100%) 30;
-    background: radial-gradient(ellipse at center, #443501 0%,#000000 100%);
-}
-/*----*/
-
-
-/** Discord box **/
-.mainpage-box-discord {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    -user-select: none;
-    cursor: pointer;
-    display: inline-flex;
-    transform: skew(30deg);
-    width: 260px;
-    margin: 0 25px 15px auto;
-    padding:10px 0px;
-    text-align: center;
-}
- 
-.mainpage-box-discord a {
-    vertical-align:middle;
-    font-family:'Open Sans';
-    font-weight: lighter;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 25px;
-    color: #FFFFFF;
-}
-
-.tooltip-contents {
-    background: rgba(0, 0, 0, 0.80);
-}
-/* ------------------ */
-
-/* ================ Ceci est un test pas très convainquant :P  !!!!!! ===================== */
+/* ---------Navigation Test------------- */
 .navigation {
     position: fixed;
     left: 0px;
@@ -935,41 +1771,32 @@ table.foundrytable .mw-collapsible-content table {
     background: #002a32; /*#212121;*/
     zoom: 1;
 }
-
 .navigation:before {
   content: '';
   display: block;
 }
-
 .navigation:after {
   content: '';
   display: table;
   clear: both;
 }
-
-.navigation a,
-.navigation .btn-nav {
+.navigation a, .navigation .btn-nav {
   display: block;
   padding: 8px 1.3em;
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
 }
-
-.navigation ul,
-.navigation ul li,
-.navigation ul ul {
+.navigation ul, .navigation ul li, .navigation ul ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
 .navigation ul {
   position: relative;
   z-index: 500;
   float: left;
 }
-
 .navigation ul li {
   float: left;
   min-height: 0.05em;
@@ -977,14 +1804,11 @@ table.foundrytable .mw-collapsible-content table {
   vertical-align: middle;
   position: relative;
 }
-
-.navigation ul li.hover,
-.navigation ul li:hover {
+.navigation ul li.hover, .navigation ul li:hover {
   position: relative;
   z-index: 510;
   cursor: default;
 }
-
 .navigation ul ul {
   visibility: hidden;
   position: absolute;
@@ -993,116 +1817,105 @@ table.foundrytable .mw-collapsible-content table {
   z-index: 520;
   width: 100%;
 }
-
-.navigation ul ul li { float: none; }
-
+.navigation ul ul li {
+    float: none;
+}
 .navigation ul ul ul {
   top: 0;
   right: 0;
 }
-
-.navigation ul li:hover > ul { visibility: visible; }
-
+.navigation ul li:hover > ul {
+    visibility: visible;
+}
 .navigation ul ul {
   top: -1px;
   left: 100%;
 }
-
-.navigation ul li { float: none; }
-
-.navigation ul ul { margin-top: 0.05em; }
-
-.navigation > ul { width: 13em; }
-
-.navigation ul ul { width: 15em; }
-
+.navigation ul li {
+    float: none;
+}
+.navigation ul ul {
+    margin-top: 0.05em;
+}
+.navigation > ul {
+    width: 13em;
+}
+.navigation ul ul {
+    width: 15em;
+}
 .navigation > ul > li > a {
     border-left: 2px solid transparent;
     color: #ffffff;
     transition: .5s;
 }
-
-.navigation > ul > li > a:hover { color: #ffffff; }
-
-.navigation > ul > li a:hover,
-.navigation > ul > li:hover a,
-.navigation > ul > li:hover .btn-nav { 
+.navigation > ul > li > a:hover {
+    color: #ffffff;
+}
+.navigation > ul > li a:hover, .navigation > ul > li:hover a, .navigation > ul > li:hover .btn-nav { 
     background: #002A32; 
     border-left: 2px solid #00b5b6;
 }
-
-.navigation li { position: relative; }
-
-.navigation ul li.has-sub > a:after,
-.navigation ul li > .btn-nav:after {
+.navigation li {
+    position: relative;
+}
+.navigation ul li.has-sub > a:after, .navigation ul li > .btn-nav:after {
   content: '»';
   position: absolute;
   right: 1em;
 }
-
 .navigation ul ul li.first {
   -webkit-border-radius: 0 3px 0 0;
   -moz-border-radius: 0 3px 0 0;
   border-radius: 0 3px 0 0;
 }
-
 .navigation ul ul li.last {
   -webkit-border-radius: 0 0 3px 0;
   -moz-border-radius: 0 0 3px 0;
   border-radius: 0 0 3px 0;
   border-bottom: 0;
 }
-
 .navigation ul ul {
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-
 /*.navigation ul ul { 
     border: 1px solid #031D22; 
 }*/
-
 .navigation ul ul a { 
     color: #ffffff; 
 }
 .navigation ul ul a:hover { 
     color: #ffffff; 
 }
-
 /*.navigation ul ul li { 
     border-bottom: 1px solid #031D22;
     transition: .5s;
 }*/
-.navigation ul ul li:hover > a,
-.navigation ul ul li:hover > .btn-nav {
+.navigation ul ul li:hover > a, .navigation ul ul li:hover > .btn-nav {
     background: #0e5968;
     color: #ffffff;
 }
-
 .navigation.align-right > ul > li > a {
   border-left: 0.3em solid #5288DD63;
   border-right: none;
 }
-
-.navigation.align-right { float: right; }
-
-.navigation.align-right li { text-align: right; }
-
-.navigation.align-right ul li.has-sub > a:before,
-.navigation.align-right ul li.has-sub > .btn-nav:before {
+.navigation.align-right {
+    float: right;
+}
+.navigation.align-right li {
+    text-align: right;
+}
+.navigation.align-right ul li.has-sub > a:before, .navigation.align-right ul li.has-sub > .btn-nav:before {
   content: '+';
   position: absolute;
   top: 50%;
   left: 15px;
   margin-top: -6px;
 }
-
-.navigation.align-right ul li.has-sub > a:after,
-.navigation.align-right ul li.has-sub > .btn-nav:after { 
+.navigation.align-right ul li.has-sub > a:after, .navigation.align-right ul li.has-sub > .btn-nav:after { 
     content: none; 
 }
-
 .navigation.align-right ul ul {
   visibility: hidden;
   position: absolute;
@@ -1111,31 +1924,20 @@ table.foundrytable .mw-collapsible-content table {
   z-index: 598;
   width: 100%;
 }
-
 .navigation.align-right ul ul li.first {
   -webkit-border-radius: 3px 0 0 0;
   -moz-border-radius: 3px 0 0 0;
   border-radius: 3px 0 0 0;
 }
-
 .navigation.align-right ul ul li.last {
   -webkit-border-radius: 0 0 0 3px;
   -moz-border-radius: 0 0 0 3px;
   border-radius: 0 0 0 3px;
 }
-
 .navigation.align-right ul ul {
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
-}
-
-/* ---------------------- */
-.Ambox table > tbody {
-    border: solid 2px #4f4f4f;
-}
-.Ambox table tbody tr > td {
-    background:black;
 }
 
 
@@ -1171,8 +1973,6 @@ table.foundrytable .mw-collapsible-content table {
     animation: animatedgradient 3s ease alternate infinite;
     background-size: 300% 300%;
 }
-
-
 @keyframes animatedgradient {
 	0% {
 		background-position: 0% 50%;
@@ -1184,31 +1984,22 @@ table.foundrytable .mw-collapsible-content table {
 		background-position: 0% 50%;
 	}
 }
-
-/* ---------------------- */
-
-/* ---------SOUNDTRACK CSS - TEST------------- */
+/* SOUNDTRACK CSS - TEST */
 .soundtrack-container a {
     color:#20B2AA;
     text-decoration:none;
     transition: 0.3s;
 }
-
 .soundtrack-container a:hover {
     filter: brightness(135%);
     transition: 0.3s;
 }
-
-.type-soundtrack-test .portable-infobox,
-.type-soundtrack-test .pi-title {
+.type-soundtrack-test .portable-infobox, .type-soundtrack-test .pi-title {
     background:#1D1F20;
 }
-
-.type-soundtrack-test .pi-header,
-.type-soundtrack-test .pi-data-label{
+.type-soundtrack-test .pi-header, .type-soundtrack-test .pi-data-label{
     background-color: rgb(50, 52, 53);
 }
-
 .type-soundtrack-test {
     margin-left: 10px;
     margin-right: 5px;
@@ -1217,127 +2008,29 @@ table.foundrytable .mw-collapsible-content table {
   margin-bottom: 20px;
 }
 
-/* ---------------------- */
-table.listtable tr td, table.foundrytable tr td {
-    background-color: rgba(65,85,143,0.16);
+
+/* ---------WikiTable------------- */
+.wikitable tr:first-child {
+    background-color: #5288DD63;
+    color: white;
+    border: 1px solid black;
 }
-
-
-/* WikiTable */
-table.wikitable {
+.wikitable_first_reset tr:first-child {
+    background-color: none;
+}
+.wikitable {
     background:rgba(65,85,143,0.16);
 }
-table.wikitable > tr > th, table.wikitable > tr > td, table.wikitable > * > tr > th, table.wikitable > * > tr > td {
+.wikitable > tr > th, table.wikitable > tr > td, table.wikitable > * > tr > th, table.wikitable > * > tr > td {
     border: 1px solid #061d40;
 }
 
 
-
-.grid-container {
-    display: grid;
-    gap: 3px;
-    grid-template-areas: "x1 x2 x3 x4 x5 x6"
-                         "x7 x8 x9 x10 x11 x12"
-                         "x13 x14 x15 x16 x17 x18";
-    grid-template-columns:repeat(6, auto);
-    grid-template-rows:repeat(3, auto);
-    width: 670px;
-    margin:auto;
-    justify-items: center;
-}
-.grid_gallery_btn {
-    text-align:center
-}
-.grid_gallery_btn pre {
-    position: relative;
-    display: grid;
-    grid-template-areas: "content";
-    max-width: 120px;
-    max-height: 120px;
-    padding: 0;
-    margin: 0;
-    /*! overflow: hidden; */
-    background-image: url(https://vignette.wikia.nocookie.net/warframe/images/a/a7/Codex_wallpaper.jpg/revision/latest?cb=20200112094224&format=original&path-prefix=fr);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-  .grid_gallery_btn pre > img:first-of-type {
-    z-index: 1;
-    grid-area: content;
-    animation: Spin 4s linear infinite;
-    animation-play-state: running;
-    animation-play-state: paused;
-  }
-  .grid_gallery_btn:hover pre img:first-of-type {
-    -webkit-animation-play-state:running;
-  }
-  .grid_gallery_btn pre a {
-    grid-area: content;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: 2;
-    display: grid;
-    align-items: center;
-  }
-  @-webkit-keyframes Spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-  }
-  
-.grid_gallery_btn a {
-    text-decoration: none;
-    color: #fff;
-}
-/*
-.title {
-    background-color: rgba(0,0,0,0.6);
-    width: 100%;
-    text-align: center;
-    text-transform: uppercase;
-    color: white;
-    text-shadow: 0 0 2px;
-    font-size: 11px;
-    font-family: 'Raleway', sans-serif;
-    padding:4px 0px 1px;
-    position: absolute;
-    bottom: 0;
-    z-index: 6;
-}*/
-.grid_gallery_btn:hover .title {
-    text-shadow: 0 0 4px;
-}
-.frame_ease_out {
-    opacity: 1;
-    transition-duration: 600ms;
-}
-.grid_gallery_btn pre:hover .frame_ease_out {
-    opacity:0;
-    transition-delay: 0.5s;
-    transition-duration: 500ms;
-}
-.grid_gallery_btn .frame_ease_in {
-    opacity:0;
-    grid-area: content;
-    z-index: 5;
-}
-/*.grid_gallery_btn .frame_ease_in img {
-}*/
-.grid_gallery_btn pre:hover .frame_ease_in {
-    opacity:1;
-    transition-delay: 0.5s;
-}
-.frame_ease_in {
-    transition-duration: 500ms;
-}
-
-/* TennoScript */
-.tennoscript_S
-{
+/* ---------TennoScript------------- */
+.tennoscript_S {
     display:inline-block;
     margin:1px;
 }
- 
 .tennoscript_C {
     display:inline-block;
     width:75px;
@@ -1346,7 +2039,6 @@ table.wikitable > tr > th, table.wikitable > tr > td, table.wikitable > * > tr >
     transform-origin:bottom left;
     margin-right:-16px;
 }
- 
 .tennoscript_V {
     display:inline-block;
     width:50px;
@@ -1356,13 +2048,11 @@ table.wikitable > tr > th, table.wikitable > tr > td, table.wikitable > * > tr >
     transform-origin:bottom right;
     margin-right:-55px;
 }
-
 .tennoscript_SPeriod {
     display:inline-block;
     margin:1px;
     margin-right:-17px
 }
- 
 .tennoscript_EPeriod {
     display:inline-block;
     margin:1px;
@@ -1371,87 +2061,8 @@ table.wikitable > tr > th, table.wikitable > tr > td, table.wikitable > * > tr >
     margin-right:-17px
 }
 
-/*Tooltip*/
-.Tooltip {
-    background-color: #ddd0;
-    border: 1px solid #313234;
-    border-spacing: 0;
-    border-radius: 4px;
-    font-size: 11px;
-    max-width: 200px;
-    color: #fff;
-}
 
-.Tooltip.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "Left Right";
-    max-width: 100%;
-}
-
-.Tooltip.leftCol {
-    grid-area: Left;
-}
-
-.Tooltip.rightCol {
-    grid-area: Right;
-}
-
-.Tooltip a {
-    text-decoration: none;
-    color: #5288dd;
-}
-
-.Tooltip p {
-    margin: 0;
-    padding: 0;
-}
-
-.Tooltip_imgbox {
-    position: relative;
-    background-color: rgba(77,86,93,0.9);
-    display: block;
-    max-width: 200px;
-    height: 170px;
-    overflow: hidden;
-}
-
-.Tooltip img {
-    max-width: 200px;
-    max-height: 170px;
-    object-fit: contain;
-}
-
-.Tooltip .Tooltip_bg {
-    background-color: #0D1B1C;
-}
-
-.Tooltip .HeadText {
-    color:rgb(175, 216, 255);
-    font-weight: bold;
-}
-
-.Tooltip .center_me {
-    text-align: center;
-}
-.Tooltip .Tooltip_spaced {
-    margin: 2px 0px;
-    padding: 5px 2px;
-}
-.Tooltip .Tooltip_bg:nth-child(2) {
-    margin-top: 0px;
-}
-p.HeadText:nth-child(3),p.HeadText:nth-child(7) {
-    margin-top: 2px;
-}
-
-body .tooltips-init-complete {
-    word-break: break-all !important;
-}
-
-/*End Tooltip*/
-
-/* Relique*/
+/* ---------Relique------------- */
 #relic-intact-button, #relic-exceptional-button, #relic-flawless-button, #relic-radiant-button {
 	background: #061d40;
 	padding: 4px 5px;
@@ -1460,28 +2071,266 @@ body .tooltips-init-complete {
 	border-radius: 8px;
 }
 .mw-collapsible-text , .mw-collapsible-toggle {
-	color: #5288dd !important;
+	color: #5288dd;
 }
 
-/* Activité recente */
-.mainpage-box-recentactivity .activity-tabs.wds-tabs,
-.mainpage-box-recentactivity .mw-changeslist-links,
-.mainpage-box-recentactivity .mw-changeslist-line-inner-characterDiff,
-.mainpage-box-recentactivity .mw-changeslist-line-inner-separatorAftercharacterDiff,
-.mainpage-box-recentactivity .td.mw-enhanced-rc,
-.mainpage-box-recentactivity .mw-plusminus-null,
-.mainpage-box-recentactivity .mw-plusminus-pos {
-	display: none !important;
-}
 
+/* ---------Recent Activity------------- */
+.mainpage-box-recentactivity .activity-tabs.wds-tabs,.mainpage-box-recentactivity .mw-changeslist-links, .mainpage-box-recentactivity .mw-changeslist-line-inner-characterDiff, .mainpage-box-recentactivity .mw-changeslist-line-inner-separatorAftercharacterDiff, .mainpage-box-recentactivity .td.mw-enhanced-rc, .mainpage-box-recentactivity .mw-plusminus-null, .mainpage-box-recentactivity .mw-plusminus-pos {
+	display: none;
+}
 .mainpage-box-recentactivity .mw-changeslist-legend {
-	display: none !important;
+	display: none;
 }
-
 .mainpage-box-recentactivity .mw-usertoollinks {
-	display: none !important;
+	display: none;
 }
-
 .mainpage-box-recentactivity .mw-changeslist-separator:empty:before {
 	content: " » ";
 }
+
+
+/* ---------==========ICONS==========------------- */
+/* ---------Social Icons------------- */
+.SocialIcon {
+    width:15px;
+    height:32px;
+    background: rgba(0,0,0,0) top right fixed no-repeat;
+    transition:width 0.3s;
+    -webkit-transition:width 0.3s;
+    -moz-transition:width 0.3s;
+    -o-transition:width 0.3s;
+    overflow:hidden;
+}
+.SocialIcon:hover {
+    width:29px;
+}
+.SocialMedia {
+    margin:auto;
+    display: flex;
+    justify-content: space-evenly; 
+    width:300px;
+}
+.SocialMedia img {
+    max-width:20px;
+    margin:0 7px;
+    filter: brightness(75%);
+    transition:0.4s;
+}
+.SocialMedia img:hover {
+    filter: brightness(150%);
+    transition:0.4s;
+}
+
+
+/* ---------Warframe Icon------------- */
+.WarframeIcon {
+    width:20px;
+    height:400px;
+    background: rgba(0,0,0,0) top right fixed no-repeat;
+    transition:width 0.3s;
+    -webkit-transition:width 0.3s;
+    -moz-transition:width 0.3s;
+    -o-transition:width 0.3s;
+    overflow:hidden;
+}
+.WarframeIcon:hover {
+    width:300px;
+    z-index: 10;
+}
+.WarframeIcon2 {
+    width:55px;
+    height:290px;
+    background: rgba(0,0,0,0) top right fixed no-repeat;
+    -moz-transition:width 0.3s;
+    -webkit-transition:width 0.3s;
+    -o-transition:width 0.3s;
+    overflow:hidden;
+}
+.WarframeIcon2:hover {
+    width:690px;
+        z-index: 10;
+}
+
+
+ /* ---------- MEDIA QUERIES  ---------- */
+@media (max-width:1023px) {
+	.mainpage-box-playfree {
+    display: grid;
+    margin: auto;
+	}
+}
+@media print { /* Modèle ambox dispsrait lors de l'impression d'une page avec ce dernier */
+    .ambox {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1595px) {
+    .codex_page_container {
+        grid-template-columns: repeat(6,1fr);
+    }
+}
+ /* ---------- OTHERS - OTHERS - OTHERS ---------- */
+
+/*--Cursor--*/
+body {
+    cursor: url(https://images.wikia.nocookie.net/__cb20150224072054/warframe/fr/images/e/eb/Warframe_cursor.png), default;
+    }
+
+a:link {
+    cursor: url(https://images.wikia.nocookie.net/__cb20150224072917/warframe/fr/images/b/bf/Warframe_cursor_lien.png), pointer;
+}
+
+
+ /* ---------- COMMENTS / UNUSED ---------- */
+
+ /* ----- Widget : Forum ----- */
+/*#ForumActivityModule .activity-items {
+    background-color: rgba(109, 97, 72, 0.25);
+    border: 1px solid #6D614852;
+    padding: 5px 10px;
+    margin: 0;
+}*/
+
+/*@font-face {
+    font-family: Prototype;
+    src: url('.otf') format('opentype'),
+         url('.woff') format('woff'),
+         url('.ttf') format('truetype');
+}*/
+
+
+/* Marque les redirections dans Special:Allpages et Special:Watchlist */
+.allpagesredirect {
+    font-style: italic;
+ }
+ .allpagesredirect:after {
+    color: #808080; content: " (redirect)"
+ }
+ .watchlistredir {
+    font-style: italic;
+ }
+ /* ---------- SCROLLBAR  ---------- */
+* {
+    scrollbar-color: #626262 #353535;
+}
+ /* ---------- Glow Button Prop  ---------- */
+.glow_hover_element {
+    background:#5288DD63;
+    transition: all 0.3s
+}
+.glow_hover_element:hover {
+    background:#061D40D6;
+    transition: all 0.3s
+}
+ /* ---------- UNKNOW  ---------- */
+ .mw-parser-output a.external::after {
+	display: none;
+}
+.WikiaPage .page-header__title {
+    font-family: 'Michroma', serif;
+}
+.WikiaPage h2 {
+    font-size: 28px;
+    line-height: 30px;
+}
+.WikiaPage h3 {
+    font-size: 22px;
+    line-height: 24px;
+	margin-top: 30px;
+}
+.WikiaArticle h3 .mw-headline {
+    font-weight: bold;
+}
+.main-tooltip, #tooltip-storage > .main-tooltip, #tooltip-storage .main-tooltip {
+    background-color: none;
+    background: transparent;
+    border: 0;
+    box-shadow: 0;
+}
+.ooui-theme-fandom .article-table th, .ooui-theme-fandom .WikiaTable th {
+	background: #061d40;
+}
+.ooui-theme-fandom .article-table th, .ooui-theme-fandom .article-table td, .ooui-theme-fandom .WikiaTable th, .ooui-theme-fandom .WikiaTable td {
+	border-bottom: 1px #012b53 solid;
+}
+.mobile-wiki .warframevisualnav {
+	display: none;
+}
+.WikiaMainContent h2 {
+	border-bottom: 1px solid #ffffff40;
+}
+
+
+/* ---------- Body ---------- */
+/*body.background-dynamic.skin-oasis::after, 
+body.background-dynamic.skin-oasis::before,
+body.skin-oasis{
+    background-size: cover;
+}*/
+
+/*.background-image-gradient,
+body.background-dynamic.skin-oasis .background-image-gradient::before,
+body.background-dynamic.skin-oasis .background-image-gradient::after {
+    display: none;
+    background-color: transparent;
+    opacity: 0;
+} 
+
+body.background-dynamic.skin-oasis::before {
+    background-position: 0;
+    left: 0;
+    margin-left: 0;
+}
+body.background-dynamic.skin-oasis::after {
+    background-position: right;
+    margin-right: 0;
+    right: 0;
+}*/
+
+
+/* -- */
+.mw-parser-output a.external::after {
+    display: none;
+    width: 0px;
+    mask: "";
+}
+.tabber.tabberlive .tabbertab p a.external.text span.button {
+    background-color: #294067 !important;
+    color: white !important;
+    padding: 3px 10px !important;
+}
+.WikiaPage h2 {
+    margin-top: 30px;
+}
+.CategorySelect.articlePage {
+    background: none;
+    border: none;
+}
+/* -- */
+.catlinks, .toc {
+    border: 1px solid #2a61b782;
+}
+.toctext b {
+    font-weight: normal;
+}
+.toc  {
+    padding: 0;
+}
+.toc ul, .toc ul ul {
+    list-style: none;
+    margin: 0;
+    padding: 0px 10px;
+}
+.toc .toctitle {
+    padding: 3px 9px;
+    background: #012e59;
+}
+.toclimit-2 .toclevel-2 , .toclimit-3 .toclevel-3 , .toclimit-4 .toclevel-4 , .toclimit-5 .toclevel-5 ,.toclimit-6 .toclevel-6 , .toclimit-7 .toclevel-7 {
+    display:none;
+}
+/* -- */
+.selflink {
+    color: #5288dd;
+}
+/* -- */
