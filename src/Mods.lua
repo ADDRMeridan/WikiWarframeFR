@@ -1059,6 +1059,8 @@ function p.printAllMods()
 
     local ret = {}
     local modArray = Shared.getKeySet(ModData["Mods"])
+
+    table.insert(ret, 'Nb mods:' .. #modArray .. ' ///')
     for _, modName in pairs(modArray) do
         table.insert(ret, Tooltip._tooltipText(modName, 'Mod'))
     end
