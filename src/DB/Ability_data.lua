@@ -922,10 +922,10 @@ local AbilityData = {
             Cost = 50,
             Key = 2,
             Description = "Crée un champ magnétique autour de la cible, piégeant les ennemis proches et infligeant des dégâts continus. Le champ réagit aux projectiles et aux éclats créés par une Polarisation en augmentant ses dégâts.",
-            CardImage = "MagnetizeModx256.png",
-            DarkIcon = "Magnetize130xDark.png",
+            CardImage = "BulletAttractorModU15.jpeg",
+            DarkIcon = nil,
             Name = "Magnétisation",
-            WhiteIcon = "Magnetize130xWhite.png",
+            WhiteIcon = "BulletAttractor.png",
             Warframe = "Mag"
         },
         ["Polarisation"] = {
