@@ -230,31 +230,38 @@ function p.buildModTableByRarity()
     local countUncommon = 0
     local buildCommonTable = ""
     local countCommon = 0
+    local buildOtherTable = ''
+    local countOther = 0
 
     for key, Mod in Shared.skpairs(ModData["Mods"]) do
         --        mw.log(Mod.Rarity)
 
+        local modImg = p._getValue(Mod, "IMAGE")
         if Mod.Rarity == "Légendaire" then
-            buildLegendaryTable =
-                buildLegendaryTable .. "[[File:" .. Mod.Image .. "|114px|link=" ..
-                    Mod.Name .. "]]"
+            buildLegendaryTable = buildLegendaryTable .. "[[File:" .. modImg ..
+                                      "|114px|link=" .. Mod.Name .. "]]"
             countLegendary = countLegendary + 1
         elseif Mod.Rarity == "Rare" then
-            buildRareTable = buildRareTable .. "[[File:" .. Mod.Image ..
+            buildRareTable = buildRareTable .. "[[File:" .. modImg ..
                                  "|114px|link=" .. Mod.Name .. "]]"
             countRare = countRare + 1
         elseif Mod.Rarity == "Inhabituel" then
-            buildUncommonTable = buildUncommonTable .. "[[File:" .. Mod.Image ..
+            buildUncommonTable = buildUncommonTable .. "[[File:" .. modImg ..
                                      "|114px|link=" .. Mod.Name .. "]]"
             countUncommon = countUncommon + 1
         elseif Mod.Rarity == "Commun" then
-            buildCommonTable = buildCommonTable .. "[[File:" .. Mod.Image ..
+            buildCommonTable = buildCommonTable .. "[[File:" .. modImg ..
                                    "|114px|link=" .. Mod.Name .. "]]"
             countCommon = countCommon + 1
+        else
+            countOther = countOther + 1
+            buildOtherTable = buildOtherTable .. "[[File:" .. modImg ..
+                                  "|114px|link=" .. Mod.Name .. "]]"
         end
     end
 
-    local countTotal = countLegendary + countRare + countUncommon + countCommon
+    local countTotal =
+        countLegendary + countRare + countUncommon + countCommon + countOther
     local buildTable = countTotal .. "\n" ..
                            "{| border=\"1\" cellpadding=\"1\" cellspacing=\"1\" class=\"article-table\"\n" ..
                            "|-\n" .. "!Légendaire\n" .. countLegendary .. "\n" ..
@@ -263,7 +270,8 @@ function p.buildModTableByRarity()
                            buildRareTable .. "\n" .. "|-\n" .. "! Inhabituel\n" ..
                            countUncommon .. "\n" .. "| " .. buildUncommonTable ..
                            "\n" .. "|-\n" .. "! Commun\n" .. countCommon .. "\n" ..
-                           "| " .. buildCommonTable .. "\n" .. "|}"
+                           "| " .. buildCommonTable .. "\n" .. '\n|-\n! Other\n' ..
+                           countOther .. '\n|' .. buildOtherTable .. "\n|}"
 
     return buildTable
 end
