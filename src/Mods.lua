@@ -1055,4 +1055,15 @@ function p.buildAbilityAugmentTab(frame)
     return table.concat(ret)
 end
 
+function p.printAllMods()
+
+    local ret = {}
+    local modArray = Shared.getKeySet(ModData["Mods"])
+    for _, modName in pairs(modArray) do
+        table.insert(ret, Tooltip._tooltipText(modName, 'Mod'))
+    end
+
+    return table.concat(ret, ' ')
+end
+
 return p
