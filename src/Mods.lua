@@ -6,6 +6,7 @@ local Icon = require("Module:Icon")
 local Version = require("Module:Version")
 local Tooltip = require('Module:Tooltip')
 local Warframe = require('Module:Warframes')
+local Ability = require('Module:Ability')
 
 local IMG_MOD_INCONNU = 'Mod_inconnu.png'
 
@@ -1015,9 +1016,13 @@ function p.buildAbilityAugmentTab(frame)
     local ret = {}
     local left = true
 
+    local abilityArchived = Ability._getValue(abilityName, "Archived", frame)
     local augmentArray = p.getAbilityAugmentArray(abilityName)
     for _, augmentName in pairs(augmentArray) do
-        if (not p._getValue(augmentName, "ARCHIVED")) then
+        local augmentArchived = p._getValue(augmentName, "ARCHIVED")
+        local toInsert = (not abilityArchived and not augmentArchived) or
+                             (abilityArchived and augmentArchived)
+        if (toInsert) then
             table.insert(ret, '[[File:')
             table.insert(ret, p._getValue(augmentName, "IMAGE"))
             table.insert(ret, '|200px|')
