@@ -1664,10 +1664,10 @@ local AbilityData = {
             Cost = 75,
             Key = 3,
             Description = "Crée un champ énergétique de contention dans lequel les captifs sont maintenus en stase.",
-            CardImage = "BastilleModx256.png/revision/20200103184634",
-            DarkIcon = "Bastille130xDark.png",
+            CardImage = "Vauban_capacité_3.png",
+            DarkIcon = nil,
             Name = "Bastille",
-            WhiteIcon = "Bastille130xWhite.png",
+            WhiteIcon = "VaubanLevBastille.png",
             Warframe = "Vauban"
         },
         ["Vortex"] = {
