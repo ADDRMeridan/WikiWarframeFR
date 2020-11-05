@@ -1858,7 +1858,7 @@ local AbilityData = {
             WhiteIcon = "Tornado130xWhite.png",
             Warframe = "Zephyr"
         },
-        --Zephyr Archive
+        -- Zephyr Archive
         ["Bombe Plongeante"] = {
             Archived = true,
             Cost = 25,
@@ -1910,6 +1910,18 @@ local AbilityData = {
             Name = "Vide Intemporel",
             WhiteIcon = "Vide Intemporel130xWhite.png",
             Warframe = "Xaku"
+        },
+        -- Itzal
+        ["Intervalle"] = {
+            Archived = true,
+            Cost = 25,
+            Key = 1,
+            Description = "L'Archwing Itzal se téléporte sur une courte distance, annulant tous les verrouillages de cible ennemis.",
+            CardImage = "Itzal_1-1.png",
+            DarkIcon = nil,
+            Name = "Intervalle",
+            WhiteIcon = "50px-ItzalIntervalle.png",
+            Warframe = nil
         },
 
         -- Helminth
