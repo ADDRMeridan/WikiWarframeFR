@@ -1936,6 +1936,18 @@ local AbilityData = {
             Warframe = nil
         },
 
+        --Odonata
+        ["Bouclier d'Énergie"] = {
+            Cost = 25,
+            Key = 1,
+            Description = "Forme un bouclier d'énergie protectrice devant votre archwing.",
+            CardImage = "150px-OdonataBouclierEnergie.png",
+            DarkIcon = nil,
+            Name = "Bouclier d'Énergie",
+            WhiteIcon = "50px-OdonataBouclierEnergie.png",
+            Warframe = nil
+        },
+
         -- Helminth
         ["Appel du Maître"] = {
             Cost = 50,
