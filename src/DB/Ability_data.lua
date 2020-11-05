@@ -1858,7 +1858,18 @@ local AbilityData = {
             WhiteIcon = "Tornado130xWhite.png",
             Warframe = "Zephyr"
         },
-
+        --Zephyr Archive
+        ["Bombe Plongeante"] = {
+            Archived = true,
+            Cost = 25,
+            Key = 2,
+            Description = "Le nez de Zephyr plonge vers le sol et crée une explosion à son contact.",
+            CardImage = "DiveBombModU15.jpeg",
+            DarkIcon = nil,
+            Name = "Bombe Plongeante",
+            WhiteIcon = "2tech.png",
+            Warframe = "Zephyr"
+        },
         -- Xaku
         ["Murmure de Xata"] = {
             Cost = 25,
