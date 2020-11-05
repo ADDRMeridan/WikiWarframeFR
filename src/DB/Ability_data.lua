@@ -1911,7 +1911,19 @@ local AbilityData = {
             WhiteIcon = "Vide Intemporel130xWhite.png",
             Warframe = "Xaku"
         },
+
         -- Itzal
+        ["Arch Crochet"] = {
+            Cost = 25,
+            Key = 1,
+            Description = "Lance un grappin pouvant remorquer un ennemi vers soi, ou permettre de se déplacer vers n'importe quel objet immobile sur lequel il s'agrippe.",
+            CardImage = nil,
+            DarkIcon = nil,
+            Name = "Arch Crochet",
+            WhiteIcon = nil,
+            Warframe = nil
+        },
+        -- Itzal Archive
         ["Intervalle"] = {
             Archived = true,
             Cost = 25,
