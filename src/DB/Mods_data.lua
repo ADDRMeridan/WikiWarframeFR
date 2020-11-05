@@ -8447,6 +8447,17 @@ local ModData = {
             Transmutable = false,
             WarframeAugment = true
         },
+        ["Bombe Plongeante Vortex"] = {
+            Archived = true,
+            Image = nil,
+            Introduced = "15.0",
+            Name = "Bombe Plongeante Vortex",
+            NameEN = "Divebomb Vortex",
+            Polarity = "Zenurik",
+            Rarity = "Rare",
+            Transmutable = false,
+            WarframeAugment = true
+        },
         ["Vulcain d'Atlantis"] = {
             Image = "VulcainAtlantis.png",
             Introduced = "17.4.0",
@@ -10104,7 +10115,8 @@ local ModData = {
             Warframe = "Zephyr",
             Ability = "Vent Contraire"
         }, {Name = "Courant-Jet", Warframe = "Zephyr", Ability = "Turbulence"},
-        {Name = "Tourbillons", Warframe = "Zephyr", Ability = "Tornades"}
+        {Name = "Tourbillons", Warframe = "Zephyr", Ability = "Tornades"},
+        {Name = "Bombe Plongeante Vortex", Warframe = "Zephyr", Ability = "Bombe Plongeante"}
     }
 }
 
