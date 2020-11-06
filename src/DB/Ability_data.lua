@@ -1936,7 +1936,7 @@ local AbilityData = {
             Warframe = nil
         },
 
-        --Odonata
+        -- Odonata
         ["Bouclier d'Énergie"] = {
             Cost = 25,
             Key = 1,
@@ -1945,6 +1945,16 @@ local AbilityData = {
             DarkIcon = nil,
             Name = "Bouclier d'Énergie",
             WhiteIcon = "50px-OdonataBouclierEnergie.png",
+            Warframe = nil
+        },
+        ["Artifice"] = {
+            Cost = 50,
+            Key = 2,
+            Description = "Déploie des leurres qui dispersent les missiles guidés.",
+            CardImage = "150px-OdonataDésarroi.png",
+            DarkIcon = nil,
+            Name = "Bouclier d'Énergie",
+            WhiteIcon = "50px-OdonataDésarroi.png",
             Warframe = nil
         },
 
