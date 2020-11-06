@@ -1933,6 +1933,16 @@ local AbilityData = {
             WhiteIcon = "50px-Itzal-Penombre.png",
             Warframe = nil
         },
+        ["Compression Cosmique"] = {
+            Cost = 75,
+            Key = 3,
+            Description = "Forme un mini trou noir qui aspire les objets alentours avant de s'inverser en une gigantesque onde de choc.",
+            CardImage = "150px-Itzal-CompressionComsique.png",
+            DarkIcon = nil,
+            Name = "Compression Cosmique",
+            WhiteIcon = "50px-Itzal-CompressionCosmique.png",
+            Warframe = nil
+        },
 
         -- Itzal Archive
         ["Intervalle"] = {
