@@ -1953,8 +1953,18 @@ local AbilityData = {
             Description = "Déploie des leurres qui dispersent les missiles guidés.",
             CardImage = "150px-OdonataDésarroi.png",
             DarkIcon = nil,
-            Name = "Bouclier d'Énergie",
+            Name = "Artifice",
             WhiteIcon = "50px-OdonataDésarroi.png",
+            Warframe = nil
+        },
+        ["Tir Guidés"] = {
+            Cost = 75,
+            Key = 3,
+            Description = "Tire une grande salve de missiles à tête chercheuse.",
+            CardImage = "150px-OdonataFeuCherchant.png",
+            DarkIcon = nil,
+            Name = "Tir Guidés",
+            WhiteIcon = "50px-OdonataFeuCherchant.png",
             Warframe = nil
         },
 
