@@ -1967,6 +1967,16 @@ local AbilityData = {
             WhiteIcon = "50px-OdonataFeuCherchant.png",
             Warframe = nil
         },
+        ["Répulsion"] = {
+            Cost = 100,
+            Key = 4,
+            Description = "Votre Archwing émet une déflagration massive d'énergie, étourdissant les ennemis proches.",
+            CardImage = "150px-OdonataRepousse.png",
+            DarkIcon = nil,
+            Name = "Répulsion",
+            WhiteIcon = "50px-OdonataRepousse.png",
+            Warframe = nil
+        },
 
         -- Helminth
         ["Appel du Maître"] = {
