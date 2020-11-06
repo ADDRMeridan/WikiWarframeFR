@@ -1943,6 +1943,16 @@ local AbilityData = {
             WhiteIcon = "50px-Itzal-CompressionCosmique.png",
             Warframe = nil
         },
+        ["Escorte de Combattant"] = {
+            Cost = 100,
+            Key = 4,
+            Description = "Déploie des drones qui se battent aux côtés du Tenno, déclenchant une explosion contrôlée s'ils sont détruits.",
+            CardImage = "150px-Itzal-Escorte.png",
+            DarkIcon = nil,
+            Name = "Escorte de Combattant",
+            WhiteIcon = "50px-Itzal-Escorte.png",
+            Warframe = nil
+        },
 
         -- Itzal Archive
         ["Intervalle"] = {
