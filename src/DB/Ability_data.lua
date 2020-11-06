@@ -1957,13 +1957,13 @@ local AbilityData = {
             WhiteIcon = "50px-OdonataDésarroi.png",
             Warframe = nil
         },
-        ["Tir Guidés"] = {
+        ["Tirs Guidés"] = {
             Cost = 75,
             Key = 3,
             Description = "Tire une grande salve de missiles à tête chercheuse.",
             CardImage = "150px-OdonataFeuCherchant.png",
             DarkIcon = nil,
-            Name = "Tir Guidés",
+            Name = "Tirs Guidés",
             WhiteIcon = "50px-OdonataFeuCherchant.png",
             Warframe = nil
         },
