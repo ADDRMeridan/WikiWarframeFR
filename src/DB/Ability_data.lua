@@ -1923,6 +1923,17 @@ local AbilityData = {
             WhiteIcon = nil,
             Warframe = nil
         },
+        ["Pénombre"] = {
+            Cost = 15,
+            Key = 2,
+            Description = "Active un champ dissimulateur autour du Tenno camouflant les alliés proches qui y restent stationnaires.",
+            CardImage = "150px-Itzal-Penombre.png",
+            DarkIcon = nil,
+            Name = "Pénombre",
+            WhiteIcon = "50px-Itzal-Penombre.png",
+            Warframe = nil
+        },
+
         -- Itzal Archive
         ["Intervalle"] = {
             Archived = true,
