@@ -981,7 +981,7 @@ function p.getRelicByLocation(frame)
 end
 
 function p.getSingleRelicByLocation(tier, name)
-    local relicData = {Drops = {}, Rewards = Void.getRelic(tier, name).Drops}
+    local relicData = {Drops = {}, Rewards = Void._getRelic(tier, name).Drops}
     local missionData = {}
 
     local result = ""

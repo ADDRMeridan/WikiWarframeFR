@@ -16,23 +16,21 @@ local tooltipCenter = '">'
 local tooltipEnd = "</span>"
 
 -- Gets the relic with the appropriate name
-local function _getRelic(Tier, Name)
+function p._getRelic(Tier, Name)
     for _, relic in pairs(VoidData["Relics"]) do
         if (relic.Tier == Tier and relic.Name == Name) then return relic end
     end
     return nil
 end
 
-function p.getRelic(fullName) 
+function p.getRelic(fullName)
 
     local tokens = Shared.splitString(fullName, ' ')
     local tier = tokens[1]
     local name = tokens[2]
 
     local ret = nil
-    if(tier ~= nil and name ~= nil) then
-        ret = _getRelic(tier, name)
-    end
+    if (tier ~= nil and name ~= nil) then ret = p._getRelic(tier, name) end
 
     return ret
 end
@@ -47,11 +45,9 @@ local function _getValue(relicFullName, valueName)
     local relic = p.getRelic(relicFullName)
     local ret = nil
 
-    if(relic ~= nil) then
+    if (relic ~= nil) then
         local upCaseVal = string.upper(valueName)
-        if(upCaseVal == "IMAGE") then
-            ret = getTierImage(relic.Tier)
-        end
+        if (upCaseVal == "IMAGE") then ret = getTierImage(relic.Tier) end
     end
 
     return ret
@@ -63,7 +59,7 @@ function p.getValue(frame)
     local valueName = frame.args ~= nil and frame.args[2]
 
     local ret = nil
-    if(relicFullName ~= nil and valueName ~= nil) then
+    if (relicFullName ~= nil and valueName ~= nil) then
         ret = _getValue(relicFullName, valueName)
     end
 
@@ -122,8 +118,6 @@ function p.frenchUpCase(toConvert)
     result = string.upper(result)
     return result
 end
-
-
 
 -- Converts item names in data to proper names
 -- So for example 'LATRON' becomes 'Latron Prime'
@@ -224,7 +218,7 @@ end
 -- (IE Braton Prime Barrel returns the Braton Prime icon)
 function p.getItemIconForDrop(drop)
     local iName = p.getItemName(drop.Item)
-    --local pName = p.getPartName(drop.Part)
+    -- local pName = p.getPartName(drop.Part)
     local iconSize = 'x38px'
 
     local icon = nil
@@ -260,9 +254,8 @@ function p._item(item_type, item_part, relic_tier, platform)
             if (dropRarity ~= nil) then
                 local relicText = relic.Tier .. " " .. relic.Name
                 local relicString = TT._tooltipText(relicText, 'Relic',
-                                                         relicText ..
-                                                             " &ndash; " ..
-                                                             dropRarity)
+                                                    relicText .. " &ndash; " ..
+                                                        dropRarity)
                 if (relic.IsVaulted == 1) then
                     relicString = relicString .. " ([[Soute Prime|V]])"
                     table.insert(vaultLocations, relicString)
@@ -290,7 +283,7 @@ function p.relicTooltip(frame)
     local Tier = bits[1]
     local RName = bits[2]
 
-    local theRelic = _getRelic(Tier, RName)
+    local theRelic = p._getRelic(Tier, RName)
     if (theRelic == nil) then return 'ERREUR : Aucune relique trouvée' end
     if (not p.isRelicOnPlatform(theRelic, platform)) then
         return "ERREUR : Cette relique n'est pas sur cette plateforme"
@@ -387,7 +380,7 @@ function p.getRelicDrop(frame)
     local Tier = bits[1]
     local RName = bits[2]
 
-    local theRelic = _getRelic(Tier, RName)
+    local theRelic = p._getRelic(Tier, RName)
 
     -- Return an error if the relic wasn't found
     if theRelic == nil then
