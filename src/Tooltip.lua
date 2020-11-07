@@ -6,7 +6,10 @@ local Shared = require('Module:Shared')
 -- =============================================================================
 -- Outils tooltip
 
-function p.tooltipStart(img) return '<div class="Tooltip" style="padding:0; position:relative;"><div class="Sub">' end
+function p.tooltipStart(img)
+    return
+        '<div class="Tooltip" style="padding:0; position:relative;"><div class="Sub">'
+end
 
 function p.tooltipEnd() return '</div></div>' end
 
@@ -150,7 +153,7 @@ local function getObjIcon(obj, objType, conclave, imgSize)
     -- Recover image
     local image = nil
     if (objType == 'Ability') then
-        image = obj.WhiteIcon
+        image = obj.Icon
     elseif (objType == 'Enemy') then
         image = obj.Icon or obj.Image
     elseif (objType == 'Mod') then
@@ -196,7 +199,7 @@ local function getObjImage(obj, objType, conclave, imgSize)
     -- Recover image
     local image = nil
     if (objType == 'Ability') then
-        image = obj.WhiteIcon
+        image = obj.Icon
     elseif (objType == 'Relic') then
         image =
             mw.loadData('Module:Icon/data')["Objets"]["Relique " .. obj.Tier]

@@ -55,26 +55,46 @@ end
 
 function p._getValue(abiName, valName, frame)
 
+    local ret = nil
     local ability = getAbility(abiName)
-    if ability ~= nil then
-        if (valName == "Description") then
-            return frame:preprocess(ability.Description)
-        elseif (valName == "Archived") then
-            return ability.Archived
-        end
-        local temp = ability[valName]
-        if temp ~= nil then
-            return temp
-        else
-            if valName == "Link" then
-                return abiName
-            else
-                return "Check the value name"
+    if (ability ~= nil) then
+        local upVal = string.upper(valName)
+        if (upVal == 'ARCHIVED') then
+            ret = ability.Archived
+        elseif (upVal == "COST") then
+            ret = ability.Cost
+        elseif (upVal == "DESCRIPTION") then
+            ret = frame:preprocess(ability.Description)
+        elseif (upVal == "ICON") then
+            ret = ability.Icon
+            if (ret == nil or ret == "") then
+                ret = Shared.getDefaultImg()
             end
+        elseif (upVal == "IMAGE") then
+            ret = ability.Image
+            if (ret == nil or ret == "") then
+                ret = Shared.getDefaultImg()
+            end
+        elseif (upVal == "KEY") then
+            ret = ability.Key
+        elseif (upVal == "LINK") then
+            ret = ability.Link
+            if (ret == nil) then ret = ability.Name end
+        elseif (upVal == "NAME") then
+            ret = ability.Name
+        elseif (upVal == "USER") then
+            ret = ability.User
+        elseif (upVal == "USERTYPE") then
+            ret = ability.UserType
+        else
+            ret =
+                Shared.printTemplateError('Check the value name.', '_getValue')
         end
     else
-        return "Check the ability name"
+        ret = Shared.printTemplateError('Check the ability name.', '_getValue')
     end
+
+    return ret
 end
 
 local function getLink(ability)
@@ -104,7 +124,7 @@ function p.getAbilityIconsList(wfName)
     local result = ""
     if abilities == nil then return "Data not found" end
     for i, ability in pairs(abilities) do
-        local fileName = getAbilityData(ability, "WhiteIcon")
+        local fileName = getAbilityData(ability, "Icon")
         result = result .. "[[File:" .. fileName .. "|30px]]" .. " " .. ability
         if i < 4 then result = result .. "<br>" end
     end
@@ -143,10 +163,10 @@ function p.tooltip(frame)
 
     local result =
         '{| class="Sub" style="width:500px;"\n|-\n| class="Spacer" style="padding:0;"| [[File:' ..
-            ability["CardImage"] .. '|130px]]\n| class="Spacer"|'
+            ability["Image"] .. '|130px]]\n| class="Spacer"|'
     result = result ..
                  '\n| class="Data" style="line-height:20px; text-align:center; width:64px; padding:2px;"| [[File:' ..
-                 ability["WhiteIcon"] ..
+                 ability["Icon"] ..
                  '|48px]]<br><div style="display:inline-block; margin: 4px 2px 8px 2px;"><div style="display:inline-block; position:relative; top:-2px;">[[File:Orbe d\'énergie.png|18px]]</div> <span style="font-size:14px; font-weight:bold;">' ..
                  ability["Cost"] ..
                  '</span></div><br><div style="display:inline-block;">' .. key ..

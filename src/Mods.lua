@@ -4,7 +4,7 @@ local ModData = mw.loadData('Module:Mods/data')
 local Shared = require("Module:Shared")
 local Icon = require("Module:Icon")
 local Version = require("Module:Version")
-local Tooltip = require('Module:Tooltip')
+local TT = require('Module:Tooltip')
 local Warframe = require('Module:Warframes')
 local Ability = require('Module:Ability')
 
@@ -188,9 +188,9 @@ local function buildModColumn(modArray)
         for i, Mod in pairs(modArray) do
             if (first) then
                 first = false
-                ret = Tooltip._tooltipText(Mod.Name, 'Mod')
+                ret = TT._tooltipText(Mod.Name, 'Mod')
             else
-                ret = ret .. '<br/>' .. Tooltip._tooltipText(Mod.Name, 'Mod')
+                ret = ret .. '<br/>' .. TT._tooltipText(Mod.Name, 'Mod')
             end
             if (Mod.PvP) then ret = ret .. " (PvP)" end
         end
@@ -419,7 +419,7 @@ local function buildModGallery(modArray)
             ret = ret .. '\n| style="width:165px" |[[File:' .. modImg ..
                       '|150px|link=' .. modLink .. ']]'
             nameRow = nameRow .. '\n| style="vertical-align:text-top;" | ' ..
-                          Tooltip._tooltipText(Mod.Name, 'Mod')
+                          TT._tooltipText(Mod.Name, 'Mod')
             if (Mod.PvP) then
                 nameRow = nameRow .. '<br/>([[Conclave]] uniquement)'
             end
@@ -464,9 +464,9 @@ local function buildModPrint(Mod, newName)
 
     local ret = ""
     if (newName ~= nil) then
-        ret = ret .. Tooltip._tooltipText(Mod.Name, 'Mod', newName)
+        ret = ret .. TT._tooltipText(Mod.Name, 'Mod', newName)
     else
-        ret = ret .. Tooltip._tooltipText(Mod.Name, 'Mod')
+        ret = ret .. TT._tooltipText(Mod.Name, 'Mod')
     end
     if (Mod.PvP) then ret = ret .. " (PvP)" end
     return ret
@@ -588,6 +588,19 @@ end
 --    end
 --    return ret
 -- end
+
+function p.printAllMods()
+
+    local ret = {}
+    local modArray = Shared.getKeySet(ModData["Mods"])
+
+    table.insert(ret, 'Nb mods:' .. #modArray .. ' ///')
+    for _, modName in pairs(modArray) do
+        table.insert(ret, TT._tooltipText(modName, 'Mod'))
+    end
+
+    return table.concat(ret, ' ')
+end
 
 ------------------------
 ------------------------
@@ -716,6 +729,86 @@ local function getAugmentTypeArray(augmentType)
     return ret
 end
 
+local function getAugment(augmentName, augmentType)
+
+    local ret = nil
+
+    local array2Parse = getAugmentTypeArray(augmentType)
+    local i = 1
+    while (i <= Shared.tableCount(array2Parse) and ret == nil) do
+        local tmp = array2Parse[i]
+        if (tmp.Name == augmentName) then ret = tmp end
+        i = i + 1
+    end
+
+    return ret
+end
+
+local function _isModAnAugment(modName)
+
+    local mod = getMod(modName)
+    return mod.AugmentType ~= nil
+end
+
+function p.isModAnAugment(frame)
+
+    local modName = frame.args ~= nil and frame.args[1] or nil
+    return _isModAnAugment(modName)
+end
+
+local function printModUsableOnArchwing(Augment)
+
+    local ret = {}
+    table.insert(ret, '[[' .. Augment.Archwing .. ']]')
+    table.insert(ret, TT._tooltipText(Augment.Ability, 'Ability'))
+
+    return table.concat(ret, ' &ndash; ')
+end
+
+local function printModUsableOnWeapon(Augment)
+
+    local ret = {}
+    for _, weaponName in pairs(Augment.Weapons) do
+        table.insert(ret, TT._tooltipText(weaponName, 'Weapon'))
+    end
+
+    return table.concat(ret, '\n')
+end
+
+local function printModUsableOnWarframe(Augment)
+
+    local ret = {}
+    table.insert(ret, TT._tooltipText(Augment.Warframe, 'Warframe'))
+    if (Augment.Ability ~= 'Passif') then
+        table.insert(ret, TT._tooltipText(Augment.Ability, 'Ability'))
+    else
+        table.insert(ret, 'Passif')
+    end
+    return table.concat(ret, ' &ndash; ')
+end
+
+function p.printModUsableOn(frame)
+
+    local modName = frame.args ~= nil and frame.args[1] or nil
+    local mod = getMod(modName)
+    local augmentType = mod.AugmentType
+    local augment = getAugment(modName, augmentType)
+
+    local ret = nil
+    if (augmentType == 'Archwing') then
+        ret = printModUsableOnArchwing(augment)
+    elseif (augmentType == 'Arme') then
+        ret = printModUsableOnWeapon(augment)
+    elseif (augmentType == 'Warframe') then
+        ret = printModUsableOnWarframe(augment)
+    else
+        ret = Shared.printTemplateError("Type d'augment inconnu.",
+                                        'printModUsableOn')
+    end
+
+    return ret
+end
+
 function p.getWeaponAugments(Weapon)
 
     local name = Weapon.Name ~= nil and Weapon.Name or Weapon
@@ -779,25 +872,6 @@ function p._getAugmentWeapons(augmentName)
     return ret
 end
 
-function p.printAugmentWeaponsColumn(frame)
-
-    local modName = frame.args ~= nil and frame.args[1]
-
-    return p._printAugmentWeapons_Column(modName)
-end
-
-function p._printAugmentWeapons_Column(modName)
-
-    local ret = {}
-
-    local wpList = p._getAugmentWeapons(modName)
-    for _, wp in pairs(wpList) do
-        table.insert(ret, Tooltip._tooltipText(wp, 'Weapon'))
-    end
-
-    return table.concat(ret, '\n')
-end
-
 local function _getWeaponAugmentList(category, source)
 
     local ret = nil
@@ -851,7 +925,7 @@ function p.buildWarframeAugmentGallery(frame)
     local ret = nil
     local augmentArray = p.getWarframeAugments(warframeName)
     if (#augmentArray == 0) then
-        ret = Tooltip._tooltipText(warframeName, 'Warframe') ..
+        ret = TT._tooltipText(warframeName, 'Warframe') ..
                   " n'a pas encore de [[Mod d'Augmentation de Warframe]]."
     else
         local modArray = {}
@@ -907,40 +981,11 @@ function p._buildWarframeAugmentList(warframeName, gameMode, includeArchived)
     return ret
 end
 
-function p.getWarframeAugmentUser(frame)
-
-    local modName = frame.args[1]
-    local ret = nil
-
-    if (modName ~= nil) then
-        for _, augment in pairs(getAugmentTypeArray('Warframe')) do
-            if (augment.Name == modName) then
-                ret = Tooltip._tooltipText(augment.Warframe, 'Warframe') ..
-                          ' - '
-                if (augment.Ability == "Passif") then
-                    ret = ret .. "Passif"
-                else
-                    ret = ret ..
-                              Tooltip._tooltipText(augment.Ability, 'Ability')
-                end
-                return ret
-            end
-        end
-    end
-    return ret
-end
-
 function p.getAbilityAugmentArray(abilityName, userType)
 
     local augmentArray = {}
 
-    local arrayToFilter = nil
-    if (userType == 'Archwing') then
-        arrayToFilter = getAugmentTypeArray('Archwing')
-    else
-        arrayToFilter = getAugmentTypeArray('Warframe')
-    end
-
+    local arrayToFilter = getAugmentTypeArray(userType)
     for _, augment in pairs(arrayToFilter) do
         if (augment.Ability == abilityName) then
             table.insert(augmentArray, augment.Name)
@@ -969,7 +1014,7 @@ function p._getAbilityAugmentsColumn(abilityName, gameMode)
         if (not p._getValue(augmentName, "ARCHIVED") and
             ((gameMode == "PVP" and modPVP) or
                 (gameMode == "PVE" and not modPVP))) then
-            table.insert(ret, Tooltip._tooltipText(augmentName, 'Mod'))
+            table.insert(ret, TT._tooltipText(augmentName, 'Mod'))
         end
     end
 
@@ -993,7 +1038,7 @@ function p.buildWarframeAugmentNavBoxRows()
     for _, wfName in pairs(getAugmentedWarframes()) do
         ret = ret .. '\n|-'
         ret = ret .. '\n| class="navboxgroup" | ' ..
-                  Tooltip._tooltipText(wfName, 'Warframe')
+                  TT._tooltipText(wfName, 'Warframe')
         ret = ret .. '\n| ' .. p._buildWarframeAugmentList(wfName, nil, false)
     end
 
@@ -1012,14 +1057,14 @@ function p.buildTableauAugment()
         table.insert(ret, '\n|-')
         -- Colonne Warframe
         table.insert(ret, '\n|')
-        table.insert(ret, Tooltip._tooltipIcon(wfName, 'Warframe', "100px"))
+        table.insert(ret, TT._tooltipIcon(wfName, 'Warframe', "100px"))
         table.insert(ret, '\n')
-        table.insert(ret, Tooltip._tooltipText(wfName, 'Warframe'))
+        table.insert(ret, TT._tooltipText(wfName, 'Warframe'))
         -- Colonne Mods d'augment
         table.insert(ret, '\n|')
         local augmentArray = p.getWarframeAugments(wfName, false)
         for _, aug in pairs(augmentArray) do
-            table.insert(ret, Tooltip._tooltipIcon(aug.Name, 'Mod', "100px"))
+            table.insert(ret, TT._tooltipIcon(aug.Name, 'Mod', "100px"))
         end
         -- Colonne Syndic
         table.insert(ret, '\n|')
@@ -1039,13 +1084,8 @@ function p.buildAbilityAugmentTab(frame)
     local ret = {}
     local left = true
 
-    local abilityArchived = Ability._getValue(abilityName, "Archived", frame)
-    local userType = nil
-    if (Ability._getValue(abilityName, "Warframe", frame) == nil) then
-        userType = 'Archwing'
-    else
-        userType = 'Warframe'
-    end
+    local abilityArchived = Ability._getValue(abilityName, "Archived")
+    local userType = Ability._getValue(abilityName, 'UserType')
     local augmentArray = p.getAbilityAugmentArray(abilityName, userType)
     for _, augmentName in pairs(augmentArray) do
         local augmentArchived = p._getValue(augmentName, "ARCHIVED")
@@ -1087,19 +1127,6 @@ function p.buildAbilityAugmentTab(frame)
         end
     end
     return table.concat(ret)
-end
-
-function p.printAllMods()
-
-    local ret = {}
-    local modArray = Shared.getKeySet(ModData["Mods"])
-
-    table.insert(ret, 'Nb mods:' .. #modArray .. ' ///')
-    for _, modName in pairs(modArray) do
-        table.insert(ret, Tooltip._tooltipText(modName, 'Mod'))
-    end
-
-    return table.concat(ret, ' ')
 end
 
 return p
