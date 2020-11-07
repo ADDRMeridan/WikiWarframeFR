@@ -81,6 +81,10 @@ local IconData = {
         ["Forme Nocturne"] = {icon = "AnimaAspect.png", link = "Equinox"},
         -- G
         ["Gantelet"] = {icon = "Lame.png"},
+        ["Gravimag"] = {
+            icon = "Gravimag.png",
+            link = "Gravimag",
+        },
         -- H
         -- I
         ["Inhérence"] = {icon = "Inhérences.png", link = "Inhérence"},
