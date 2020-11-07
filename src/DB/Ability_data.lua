@@ -1912,6 +1912,48 @@ local AbilityData = {
             Warframe = "Xaku"
         },
 
+        -- Elytron
+        ["Traquenard"] = {
+            Cost = 25,
+            Key = 1,
+            Description = "Tire un projectile explosif qui peut s'accrocher à la cible et peut être détonné à distance.",
+            CardImage = "150px-Elytron-Fleuraison.png",
+            DarkIcon = nil,
+            Name = "Traquenard",
+            WhiteIcon = "54px-Elytron-Fleuraison.png",
+            Warframe = nil
+        },
+        ["Purge de Noyau"] = {
+            Cost = 50,
+            Key = 2,
+            Description = "Purge le système de propulsion de l'archwing, perturbant les tirs ennemis et les faisant exploser.",
+            CardImage = "150px-Elytron-Purge.png",
+            DarkIcon = nil,
+            Name = "Purge de Noyau",
+            WhiteIcon = "54px-Elytron-Purge.png",
+            Warframe = nil
+        },
+        ["Barrage"] = {
+            Cost = 75,
+            Key = 3,
+            Description = "Crée une zone orageuse d'explosions punitives.",
+            CardImage = "150px-Elytron-Barrage.png",
+            DarkIcon = nil,
+            Name = "Barrage",
+            WhiteIcon = "54px-Elytron-Barrage.png",
+            Warframe = nil
+        },
+        ["Ogive"] = {
+            Cost = 100,
+            Key = 4,
+            Description = "Lance un missile capable de déclencher une explosion massive.",
+            CardImage = "150px-Elytron-Barrage.png",
+            DarkIcon = nil,
+            Name = "Ogive",
+            WhiteIcon = "54px-Elytron-Barrage.png",
+            Warframe = nil
+        },
+
         -- Itzal
         ["Arch Crochet"] = {
             Cost = 25,
