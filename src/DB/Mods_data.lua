@@ -9222,6 +9222,14 @@ local ModData = {
         }
     },
 
+    ["ArchwingAugments"] = {
+        -- Elytron
+        {
+            Name = "Postcombustion",
+            Archwing = "Elytron",
+            Ability = "Purge de Noyau"
+        }
+    },
     ["Augments"] = {
         -- Syndicats
         {
@@ -10115,8 +10123,11 @@ local ModData = {
             Warframe = "Zephyr",
             Ability = "Vent Contraire"
         }, {Name = "Courant-Jet", Warframe = "Zephyr", Ability = "Turbulence"},
-        {Name = "Tourbillons", Warframe = "Zephyr", Ability = "Tornades"},
-        {Name = "Bombe Plongeante Vortex", Warframe = "Zephyr", Ability = "Bombe Plongeante"}
+        {Name = "Tourbillons", Warframe = "Zephyr", Ability = "Tornades"}, {
+            Name = "Bombe Plongeante Vortex",
+            Warframe = "Zephyr",
+            Ability = "Bombe Plongeante"
+        }
     }
 }
 
