@@ -2,9 +2,9 @@ local WeaponData = {
     ["IgnoreInCount"] = {
         "Rempart", "Épées Versatiles Sombres (Doubles Épées)", "Cadus",
         "Penta Carmin", "Machette Prisma", "Dargyn", "Arc d'Artémis",
-        "Chargeur Incandescent", "Dex Pixia", "Pacificateurs", "Diwata", "Lame Exaltée", "Bâton de Fer",
-        "Serres Valkyr", "Serres de Garuda", "Vents du Désert",
-        "Corvas (Atmosphère)", "Cyngas (Atmosphère)",
+        "Chargeur Incandescent", "Dex Pixia", "Pacificateurs", "Diwata",
+        "Lame Exaltée", "Bâton de Fer", "Serres Valkyr", "Serres de Garuda",
+        "Vents du Désert", "Corvas (Atmosphère)", "Cyngas (Atmosphère)",
         "Dual Decurion (Atmosphère)", "Fluctus (Atmosphère)",
         "Grattler (Atmosphère)", "Imperator (Atmosphère)",
         "Imperator Vandal (Atmosphère)", "Ayanga Kuva (Atmosphère)",
@@ -3789,55 +3789,57 @@ local WeaponData = {
             MeleeRange = 3.0,
             WallAttack = 150
         },
-		["Guandao Prime"] = {
-        BlockAngle = 55,
-        Class = "Arme d'Hast",
-        ComboDur = 6,
-        Conclave = false,
-        Cost = {
-            Credits = 5000,
-            Rush = 35,
-            Time = 12,
-            Parts = {
-                { Name = "Lame",Type = "Partie Prime",Count = 2,},
-                { Name = "Poignée",Type = "Partie Prime",Count = 1,},
-                { Name = "Cellule Orokin",Type = "Ressource",Count = 15,},},
+        ["Guandao Prime"] = {
+            BlockAngle = 55,
+            Class = "Arme d'Hast",
+            ComboDur = 6,
+            Conclave = false,
+            Cost = {
+                Credits = 5000,
+                Rush = 35,
+                Time = 12,
+                Parts = {
+                    {Name = "Lame", Type = "Partie Prime", Count = 2},
+                    {Name = "Poignée", Type = "Partie Prime", Count = 1},
+                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
+                }
+            },
+            Disposition = 0.5,
+            Family = "Guandao",
+            FollowThrough = 0.6,
+            HeavyAttack = 1440,
+            HeavySlamAttack = 1200,
+            HeavyRadialDmg = 1200,
+            HeavySlamRadius = 9,
+            Image = "Guandao Prime.png",
+            Introduced = "[[Update 29#Update 29.3|Update 29.3]]",
+            Mastery = 12,
+            MeleeRange = 3,
+            Name = "Guandao Prime",
+            NormalAttack = {
+                Damage = {
+                    ["Impact"] = 60,
+                    ["Perforation"] = 12,
+                    ["Tranchant"] = 168
+                },
+                CritChance = 0.32,
+                CritMultiplier = 2.4,
+                StatusChance = 0.2,
+                FireRate = 1
+            },
+            Polarities = {"D", "V", "V"},
+            SlamAttack = 480,
+            SlamElement = "Impact",
+            SlamRadialDmg = 249,
+            SlamRadialElement = "Impact",
+            SlamRadialProc = "Impact",
+            SlamRadius = 7,
+            SlideAttack = 480,
+            StancePolarity = "Ability",
+            Traits = {"Prime"},
+            Type = "Mêlée",
+            WindUp = 0.9
         },
-        Disposition = 0.5,
-        Family = "Guandao",
-        FollowThrough = 0.6,
-        HeavyAttack = 1440,
-        HeavySlamAttack = 1200,
-        HeavyRadialDmg = 1200,
-        HeavySlamRadius = 9,
-        Image = "Guandao Prime.png",
-        Introduced = "[[Update 29#Update 29.3|Update 29.3]]",
-        Mastery = 12,
-        MeleeRange = 3,
-        Name = "Guandao Prime",
-        NormalAttack = {
-            Damage = {
-                ["Impact"] = 60,
-                ["Perforation"] = 12,
-                ["Tranchant"] = 168},
-            CritChance = 0.32,
-            CritMultiplier = 2.4,
-            StatusChance = 0.2,
-            FireRate = 1,
-        },
-        Polarities = {"D", "V", "V"},
-        SlamAttack = 480,
-        SlamElement = "Impact",
-        SlamRadialDmg = 249,
-        SlamRadialElement = "Impact",
-        SlamRadialProc = "Impact",
-        SlamRadius = 7,
-        SlideAttack = 480,
-        StancePolarity = "Ability",
-        Traits = {"Prime"},
-        Type = "Mêlée",
-        WindUp = 0.9,
-    },
         ["Gunsen"] = {
             Cost = {
                 Credits = 20000,
@@ -9889,56 +9891,66 @@ local WeaponData = {
             WallAttack = 165
         },
 
-		["Vitrica"] = {
-        BlockAngle = 60,
-        Class = "Lame Lourde",
-        ComboDur = 10,
-        Conclave = false,
-        Cost = {
-            Credits = 20000,
-            Rush = 35,
-            Time = 12,
-            Parts = {
-                { Name = "Cellule Orokin",Type = "Ressource",Count = 15,},
-                { Name = "Oxium",Type = "Ressource",Count = 925,},
-                { Name = "Bapholite Trempée",Type = "Ressource",Count = 60,},
-                { Name = "Héciphron Purifié",Type = "Ressource",Count = 10,},},
+        ["Vitrica"] = {
+            BlockAngle = 60,
+            Class = "Lame Lourde",
+            ComboDur = 10,
+            Conclave = false,
+            Cost = {
+                Credits = 20000,
+                Rush = 35,
+                Time = 12,
+                Parts = {
+                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15},
+                    {Name = "Oxium", Type = "Ressource", Count = 925},
+                    {
+                        Name = "Bapholite Trempée",
+                        Type = "Ressource",
+                        Count = 60
+                    },
+                    {
+                        Name = "Héciphron Purifié",
+                        Type = "Ressource",
+                        Count = 10
+                    }
+                }
+            },
+            Disposition = 0.5,
+            Family = "Vitrica",
+            FollowThrough = 0.6,
+            HeavyAttack = 1998,
+            HeavySlamAttack = 1665,
+            HeavyRadialDmg = 1665,
+            HeavySlamRadius = 4,
+            Image = "Vitrica.png",
+            Introduced = "[[Update 29#Update 29.3|Update 29.3]]",
+            Mastery = 13,
+            MeleeRange = 2.9,
+            Name = "Vitrica",
+            NormalAttack = {
+                Damage = {
+                    ["Impact"] = 99.9,
+                    ["Perforation"] = 99.9,
+                    ["Tranchant"] = 133.2
+                },
+                CritChance = 0.23,
+                CritMultiplier = 2.3,
+                StatusChance = 0.33,
+                FireRate = 0.833
+            },
+            Polarities = {},
+            SlamAttack = 999,
+            -- SlamElement = "Heat",
+            SlamRadialDmg = 333,
+            -- SlamRadialElement = "Heat",
+            -- SlamRadialProc = "Heat",
+            SlamRadius = 4,
+            SlideAttack = 666,
+            StancePolarity = "V",
+            Traits = {"Orokin"},
+            Type = "Mêlée",
+            WindUp = 1.1
         },
-        Disposition = 0.5,
-        Family = "Vitrica",
-        FollowThrough = 0.6,
-        HeavyAttack = 1998,
-        HeavySlamAttack = 1665,
-        HeavyRadialDmg = 1665,
-        HeavySlamRadius = 4,
-        Image = "Vitrica.png",
-        Introduced = "[[Update 29#Update 29.3|Update 29.3]]",
-        Mastery = 13,
-        MeleeRange = 2.9,
-        Name = "Vitrica",
-        NormalAttack = {
-            Damage = {
-                ["Impact"] = 99.9,
-                ["Perforation"] = 99.9,
-                ["Tranchant"] = 133.2},
-            CritChance = 0.23,
-            CritMultiplier = 2.3,
-            StatusChance = 0.33,
-            FireRate = 0.833,
-        },
-        Polarities = {},
-        SlamAttack = 999,
-        --SlamElement = "Heat",
-        SlamRadialDmg = 333,
-        --SlamRadialElement = "Heat",
-        --SlamRadialProc = "Heat",
-        SlamRadius = 4,
-        SlideAttack = 666,
-        StancePolarity = "V",
-        Traits = {"Orokin"},
-        Type = "Mêlée",
-        WindUp = 1.1,
-    },
         ["Volnus"] = {
             -- BlockResist = 0.85,
             Class = "Marteau",
@@ -14975,55 +14987,53 @@ local WeaponData = {
             Trigger = "Semi-Auto",
             Type = "Secondaire"
         },
-		["Zakti Prime"] = {
-        Accuracy = 26.7,
-        AreaAttack = {
-            AttackName = "Nuage de Gaz",
-            Damage = {
-                ["Gas"] = 100,},
-            Radius = 3.8,
+        ["Zakti Prime"] = {
+            Accuracy = 26.7,
+            AreaAttack = {
+                AttackName = "Nuage de Gaz",
+                Damage = {["Gas"] = 100},
+                Radius = 3.8
+            },
+            Class = "Pistolet",
+            Conclave = false,
+            Cost = {
+                Credits = 20000,
+                Rush = 35,
+                Time = 12,
+                Parts = {
+                    {Name = "Canon", Type = "Partie Prime", Count = 1},
+                    {Name = "Receiver", Type = "Partie Prime", Count = 1},
+                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
+                }
+            },
+            Disposition = 0.5,
+            ExilusPolarity = "V",
+            Family = "Zakti",
+            Image = "Zakti Prime.png",
+            Introduced = "[[Update 29#Update 29.3|Update 29.3]]",
+            Magazine = 8,
+            Mastery = 14,
+            MaxAmmo = 210,
+            Name = "Zakti Prime",
+            NormalAttack = {
+                AttackName = "Normal",
+                AmmoCost = 1,
+                Damage = {["Impact"] = 12, ["Perforation"] = 18},
+                CritChance = 0.08,
+                CritMultiplier = 1.8,
+                StatusChance = 0.42,
+                FireRate = 5.0,
+                ShotType = "Projectile",
+                ShotSpeed = "?",
+                Trigger = "Semi-Auto"
+            },
+            NoiseLevel = "Bruyant",
+            Polarities = {"Bar", "Bar", "V"},
+            Reload = 1,
+            Trigger = "Semi-Auto",
+            Traits = {"Prime"},
+            Type = "Secondaire"
         },
-        Class = "Pistolet",
-        Conclave = false,
-        Cost = {
-            Credits = 20000,
-            Rush = 35,
-            Time = 12,
-            Parts = {
-                { Name = "Canon",Type = "Partie Prime",Count = 1,},
-                { Name = "Receiver",Type = "Partie Prime",Count = 1,},
-                { Name = "Cellule Orokin",Type = "Ressource",Count = 10,},},
-        },
-        Disposition = 0.5,
-        ExilusPolarity = "V",
-        Family = "Zakti",
-        Image = "Zakti Prime.png",
-        Introduced = "[[Update 29#Update 29.3|Update 29.3]]",
-        Magazine = 8,
-        Mastery = 14,
-        MaxAmmo = 210,
-        Name = "Zakti Prime",
-        NormalAttack = {
-            AttackName = "Normal",
-            AmmoCost = 1,
-            Damage = {
-                ["Impact"] = 12,
-                ["Perforation"] = 18,},
-            CritChance = 0.08,
-            CritMultiplier = 1.8,
-            StatusChance = 0.42,
-            FireRate = 5.0,
-            ShotType = "Projectile",
-            ShotSpeed = "?",
-            Trigger = "Semi-Auto"
-        },
-        NoiseLevel = "Bruyant",
-        Polarities = {"Bar", "Bar", "V"},
-        Reload = 1,
-        Trigger = "Semi-Auto",
-        Traits = {"Prime"},
-        Type = "Secondaire",
-    },
         ["Zylok"] = {
             Accuracy = 23.5,
             Class = "Pistolet",
@@ -16318,14 +16328,12 @@ local WeaponData = {
             Accuracy = 16.7,
             AreaAttack = {
                 AttackName = "Effet de Zone",
-                Damage = {
-                    ["Impact"] = 100,
-                },
+                Damage = {["Impact"] = 100},
                 CritChance = 0.32,
                 CritMultiplier = 2.8,
                 StatusChance = 0.1,
                 Radius = 3.6,
-                Falloff = {StartRange = 0, EndRange = 3.6, Reduction = 0.4,},
+                Falloff = {StartRange = 0, EndRange = 3.6, Reduction = 0.4}
             },
             ChargeAttack = {
                 AttackName = "Tir Chargé",
@@ -16393,11 +16401,11 @@ local WeaponData = {
                 Damage = {
                     ["Impact"] = 385,
                     ["Perforation"] = 55,
-                    ["Tranchant"] = 110,
+                    ["Tranchant"] = 110
                 },
                 CritChance = 0.04,
                 CritMultiplier = 2,
-                StatusChance = 0.33,
+                StatusChance = 0.33
             },
             Traits = {"Corpus"},
             Trigger = "Chargé",
@@ -17303,9 +17311,7 @@ local WeaponData = {
             Traits = {"Wraith", "Invasion Reward", "Grineer"},
             Trigger = "Auto",
             Type = "Principale",
-            Users = {
-                "[[Lancier Nightwatch]]"
-            }
+            Users = {"[[Lancier Nightwatch]]"}
         },
         ["Komorex"] = {
             Accuracy = 20,
@@ -21850,7 +21856,7 @@ local WeaponData = {
                 Rush = 25,
                 Time = 24,
                 Parts = {
-                    {Name = "Cœur de Noctrul",Type = "Ressource",Count = 10},
+                    {Name = "Cœur de Noctrul", Type = "Ressource", Count = 10},
                     {Name = "Devar Esher", Type = "Ressource", Count = 10},
                     {Name = "Rotolame", Type = "Ressource", Count = 10},
                     {Name = "Module Sagan", Type = "Ressource", Count = 5}
@@ -21865,7 +21871,7 @@ local WeaponData = {
             Mastery = 0,
             Name = "Cryotra",
             NormalAttack = {
-	            Range = 30,
+                Range = 30,
                 Damage = {["Glace"] = 10},
                 CritChance = 0.05,
                 CritMultiplier = 2,
@@ -23002,10 +23008,24 @@ local WeaponData = {
         ["Mausolon"] = {
             Accuracy = 80,
             AreaAttack = {
-                AttackName = "Attaque Radiale",
+                AttackName = "Explosion Tir Auto",
                 Damage = {["Feu"] = 48},
-                Radius = 9.6,
-                Falloff = {StartRange = 0, EndRange = 9.6, Reduction = 0.6}
+                Radius = 1.8,
+                Falloff = {StartRange = 0, EndRange = 1.8, Reduction = 0.1}
+            },
+            ChargeAttack = {
+                AttackName = "Tir Chargé",
+                Damage = {
+                    ["Impact"] = 100,
+                    ["Perforation"] = 400,
+                    ["Feu"] = 500
+                },
+                ChargeTime = 4,
+                CritChance = 0.5,
+                CritMultiplier = 3.5,
+                ShotType = "Projectile",
+                ShotSpeed = "?",
+                StatusChance = 0.5
             },
             Conclave = false,
             Disposition = 0.5,
@@ -23021,15 +23041,65 @@ local WeaponData = {
                 CritChance = 0.3,
                 CritMultiplier = 2.2,
                 StatusChance = 0.26,
+                Falloff = {StartRange = 100, EndRange = 350},
                 FireRate = 8.33,
                 ShotType = "Hitscan"
             },
             NoiseLevel = "Bruyant",
             Polarities = {"V"},
             Reload = 5.5,
+            SecondaryAreaAttack = {
+                AttackName = "Explosion Tir Chargé",
+                Damage = {["Feu"] = 3000},
+                Radius = 8,
+                Falloff = {StartRange = 0, EndRange = 8, Reduction = 0.4}
+            },
+            Traits = {"Entrati"},
+            Trigger = "Auto / Semi",
+            Type = "Arch-Fusil"
+        },
+        ["Mausolon (Atmosphere)"] = {
+            Accuracy = 80,
+            AreaAttack = {
+                AttackName = "Auto Radial Attack",
+                Damage = {["Heat"] = 48},
+                Radius = 1.8,
+                Falloff = {StartRange = 0, EndRange = 1.8, Reduction = 0.1}
+            },
+            ChargeAttack = {
+                AttackName = "Charged Shot",
+                Damage = {["Heat"] = 3000},
+                ChargeTime = 4,
+                CritChance = 0.5,
+                CritMultiplier = 3.5,
+                Falloff = {StartRange = 0, EndRange = 8, Reduction = 0.4},
+                ShotType = "Projectile",
+                ShotSpeed = "?",
+                StatusChance = 0.5
+            },
+            Conclave = false,
+            Disposition = 0.5,
+            Image = "Mausolon.png",
+            Introduced = "[[Update 29]]",
+            Magazine = 300,
+            Mastery = 14,
+            MaxAmmo = 900,
+            Name = "Mausolon (Atmosphere)",
+            NormalAttack = {
+                AttackName = "Auto",
+                Damage = {["Impact"] = 24, ["Puncture"] = 46, ["Heat"] = 50},
+                CritChance = 0.3,
+                CritMultiplier = 2.2,
+                StatusChance = 0.26,
+                FireRate = 8.33,
+                ShotType = "Hitscan"
+            },
+            NoiseLevel = "Alarming",
+            Polarities = {"V"},
+            Reload = 2.0,
             SecondaryAttack = {
-                AttackName = "Activé",
-                Damage = {["Feu"] = 10},
+                AttackName = "Active",
+                Damage = {["Heat"] = 1000},
                 FireRate = 0.25,
                 CritChance = 0.3,
                 CritMultiplier = 2.4,
@@ -23038,9 +23108,8 @@ local WeaponData = {
             },
             Traits = {"Entrati"},
             Trigger = "Auto / Semi",
-            Type = "Arch-Fusil"
+            Type = "Arch-Fusil (Atmosphère)"
         },
-
         ["Phaedra"] = {
             Accuracy = 11.8,
             Cost = {
@@ -24116,8 +24185,8 @@ local WeaponData = {
         ["Incandescence"] = {"Chargeur Incandescent"},
         ["Lame Exaltée"] = {"Lame Exaltée"},
         ["Pacificateurs"] = {"Pacificateurs"},
-        ["Tempête Reposante"] = {"Vents du Désert"},
-    },
+        ["Tempête Reposante"] = {"Vents du Désert"}
+    }
 }
 
 return WeaponData
