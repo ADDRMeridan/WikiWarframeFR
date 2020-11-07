@@ -914,11 +914,18 @@ function p.getWarframeAugmentUser(frame)
     return ret
 end
 
-function p.getAbilityAugmentArray(abilityName)
+function p.getAbilityAugmentArray(abilityName, userType)
 
     local augmentArray = {}
 
-    for _, augment in pairs(ModData["WarframeAugments"]) do
+    local arrayToFilter = nil
+    if (userType == 'Archwing') then
+        arrayToFilter = ModData["ArchwingAugments"]
+    else
+        arrayToFilter = ModData["WarframeAugments"]
+    end
+
+    for _, augment in pairs(arrayToFilter) do
         if (augment.Ability == abilityName) then
             table.insert(augmentArray, augment.Name)
         end
@@ -1017,7 +1024,13 @@ function p.buildAbilityAugmentTab(frame)
     local left = true
 
     local abilityArchived = Ability._getValue(abilityName, "Archived", frame)
-    local augmentArray = p.getAbilityAugmentArray(abilityName)
+    local userType = nil
+    if (Ability._getValue(abilityName, "Warframe", frame) == nil) then
+        userType = 'Archwing'
+    else
+        userType = 'Warframe'
+    end
+    local augmentArray = p.getAbilityAugmentArray(abilityName, userType)
     for _, augmentName in pairs(augmentArray) do
         local augmentArchived = p._getValue(augmentName, "ARCHIVED")
         local toInsert = (not abilityArchived and not augmentArchived) or
