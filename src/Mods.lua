@@ -701,11 +701,26 @@ end
 ------------------------
 ------------------------
 
-function p.getAugments(Weapon)
+local function getAugmentTypeArray(augmentType)
+
+    local ret = {}
+
+    if (augmentType == 'Archwing') then
+        ret = ModData["ArchwingAugments"]
+    elseif (augmentType == 'Arme') then
+        ret = ModData["WeaponAugments"]
+    elseif (augmentType == 'Warframe') then
+        ret = ModData["WarframeAugments"]
+    end
+
+    return ret
+end
+
+function p.getWeaponAugments(Weapon)
 
     local name = Weapon.Name ~= nil and Weapon.Name or Weapon
     local augments = {}
-    for i, Augment in pairs(ModData["Augments"]) do
+    for i, Augment in pairs(getAugmentTypeArray('Arme')) do
         for j, WeapName in pairs(Augment.Weapons) do
             if (WeapName == name) then
                 table.insert(augments, getMod(Augment.Name))
@@ -715,7 +730,7 @@ function p.getAugments(Weapon)
     return augments
 end
 
-function p.buildAugmentTable(frame)
+function p.buildWeaponAugmentTable(frame)
     local result = ""
     result = result .. '\n{|class="listtable sortable" style="width:100%;"'
     result = result .. '\n|-'
@@ -724,7 +739,7 @@ function p.buildAugmentTable(frame)
     result = result .. '\n! Source'
     result = result .. '\n! Arme'
 
-    for i, Augment in pairs(ModData["Augments"]) do
+    for i, Augment in pairs(getAugmentTypeArray('Arme')) do
         local thisStr = "\n|-"
         thisStr = thisStr .. "\n| <span class=\"mod-tooltip\" data-param=\"" ..
                       Augment.Name .. "\" style=\"white-space:pre\">[[" ..
@@ -754,9 +769,10 @@ function p._getAugmentWeapons(augmentName)
 
     local ret = nil
     local i = 1
-    while (i <= Shared.tableCount(ModData["Augments"]) and ret == nil) do
-        if (ModData["Augments"][i].Name == augmentName) then
-            ret = ModData["Augments"][i].Weapons
+    local array2Parse = getAugmentTypeArray('Arme')
+    while (i <= Shared.tableCount(array2Parse) and ret == nil) do
+        if (array2Parse[i].Name == augmentName) then
+            ret = array2Parse[i].Weapons
         end
         i = i + 1
     end
@@ -782,10 +798,10 @@ function p._printAugmentWeapons_Column(modName)
     return table.concat(ret, '\n')
 end
 
-local function _getAugmentList(category, source)
+local function _getWeaponAugmentList(category, source)
 
     local ret = nil
-    local augmentArray = ModData["Augments"]
+    local augmentArray = getAugmentTypeArray('Arme')
     local modArray = {}
     for _, val in pairs(augmentArray) do
         if (val.Category == category and val.Source == source) then
@@ -797,19 +813,19 @@ local function _getAugmentList(category, source)
     return ret
 end
 
-function p.getAugmentList(frame)
+function p.getWeaponAugmentList(frame)
 
     local category = frame.args[1]
     local source = frame.args[2]
 
-    return _getAugmentList(category, source)
+    return _getWeaponAugmentList(category, source)
 end
 
 function p.getWarframeAugments(warframe, includeArchived)
 
     local warframeName = warframe.Name ~= nil and warframe.Name or warframe
     local augments = {}
-    for i, Augment in pairs(ModData["WarframeAugments"]) do
+    for i, Augment in pairs(getAugmentTypeArray('Warframe')) do
         if (Augment.Warframe == warframeName) then
             if (includeArchived) then
                 table.insert(augments, Augment)
@@ -897,7 +913,7 @@ function p.getWarframeAugmentUser(frame)
     local ret = nil
 
     if (modName ~= nil) then
-        for _, augment in pairs(ModData["WarframeAugments"]) do
+        for _, augment in pairs(getAugmentTypeArray('Warframe')) do
             if (augment.Name == modName) then
                 ret = Tooltip._tooltipText(augment.Warframe, 'Warframe') ..
                           ' - '
@@ -920,9 +936,9 @@ function p.getAbilityAugmentArray(abilityName, userType)
 
     local arrayToFilter = nil
     if (userType == 'Archwing') then
-        arrayToFilter = ModData["ArchwingAugments"]
+        arrayToFilter = getAugmentTypeArray('Archwing')
     else
-        arrayToFilter = ModData["WarframeAugments"]
+        arrayToFilter = getAugmentTypeArray('Warframe')
     end
 
     for _, augment in pairs(arrayToFilter) do
@@ -963,7 +979,7 @@ end
 local function getAugmentedWarframes()
 
     local warf = {}
-    for _, augment in pairs(ModData["WarframeAugments"]) do
+    for _, augment in pairs(getAugmentTypeArray('Warframe')) do
         if (not Shared.contains(warf, augment.Warframe)) then
             table.insert(warf, augment.Warframe)
         end

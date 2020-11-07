@@ -1342,7 +1342,7 @@ local function getValue(Weapon, ValName, giveDefault, asString, forTable)
             return nil
         end
     elseif (ValName == "AUGMENT") then
-        local augments = Mod.getAugments(Weapon)
+        local augments = Mod.getWeaponAugments(Weapon)
         local ret = {}
         for i, Aug in pairs(augments) do
             if (Aug.PvP) then
@@ -3227,7 +3227,7 @@ function p.buildAutoboxCategories(frame)
         result = result .. "[[Category:" .. Weapon.Class .. "]]"
     end
 
-    local augments = Mod.getAugments(Weapon)
+    local augments = Mod.getWeaponAugments(Weapon)
     if (Shared.tableCount(augments) > 0) then
         result = result .. "[[Category:Arme d'Augment]]"
     end
@@ -4527,9 +4527,7 @@ end
 local function getAbilityWeaponArray(abilityName)
 
     local ret = WeaponData["AbilityWeapons"][abilityName]
-    if(ret == nil) then
-        ret = {}
-    end
+    if (ret == nil) then ret = {} end
 
     return ret
 end
@@ -4545,7 +4543,7 @@ function p.buildAbilityWeaponTab(frame)
         table.insert(ret, '[[File:')
         table.insert(ret, getValue(p.getWeapon(wpName), "IMAGE"))
         table.insert(ret, '|200px|')
-        if(left) then
+        if (left) then
             left = false
             table.insert(ret, 'left]]')
         else
@@ -4553,13 +4551,14 @@ function p.buildAbilityWeaponTab(frame)
             table.insert(ret, 'right]]')
         end
         local pageName = p._getLink(wpName)
-        table.insert(ret, frame:preprocess('{{main|'..pageName..'}}'))
+        table.insert(ret, frame:preprocess('{{main|' .. pageName .. '}}'))
         local introSection = frame:expandTemplate{
             title = 'fetchSection',
             args = {pageName, 'intro'}
         }
-        if(introSection == nil or introSection == '') then
-            introSection = "L'article [["..pageName.."]] ne possède pas de section intro."
+        if (introSection == nil or introSection == '') then
+            introSection = "L'article [[" .. pageName ..
+                               "]] ne possède pas de section intro."
         end
         table.insert(ret, '<br/>')
         table.insert(ret, introSection)
