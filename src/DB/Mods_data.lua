@@ -180,7 +180,8 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Commun",
             Set = "Chasseur",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"WARFRAME"}
         },
         ["Affliction Persistante"] = {
             Image = "",
@@ -1506,8 +1507,8 @@ local ModData = {
             NameEN = "Blind Rage",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"CORROMPU_WARFRAME"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"WARFRAME", "CORROMPU_WARFRAME"}
         },
         ["Combat Rapproché"] = {
             Image = "Combat Rapproché.png",
@@ -1566,8 +1567,8 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Rare",
             Set = "Motus",
-            Traits = {"+%CRITCHANCE_POMPE", "+%STATCHANCE_POMPE"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"+%CRITCHANCE_POMPE", "+%STATCHANCE_POMPE"}
         },
         ["Connexion Électrique"] = {
             Image = "Connexion Électrique.png",
@@ -1606,7 +1607,8 @@ local ModData = {
             Name = "Continuité",
             NameEN = "Continuity",
             Polarity = "Madurai",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"WARFRAME"}
         },
         ["Continuité Accrue"] = {
             Image = "Continuité_Accrue.png",
@@ -1614,7 +1616,8 @@ local ModData = {
             NameEN = "Primed Continuity",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"WARFRAME"}
         },
         ["Continuum Cataclysmique"] = {
             AugmentType = 'Warframe',
@@ -1652,13 +1655,14 @@ local ModData = {
             Polarity = "Penjaga",
             Rarity = "Commun"
         },
-        ["Conversion d'énergie"] = {
-            Image = "EnergyConversion.png",
-            Name = "Conversion d'énergie",
+        ["Conversion d'Énergie"] = {
+            Image = "Mod inconnu.png",
+            Name = "Conversion d'Énergie",
             NameEN = "Energy Conversion",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"WARFRAME"}
         },
         ["Conversion de Santé"] = {
             Image = "HealthConversion.png",
@@ -1771,7 +1775,7 @@ local ModData = {
             NameEN = "Transient Fortitude",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"CORROMPU_WARFRAME"},
+            Traits = {"WARFRAME", "CORROMPU_WARFRAME"},
             Transmutable = false
         },
         ["Courant Curatif"] = {
@@ -3869,7 +3873,8 @@ local ModData = {
             Name = "Intensité",
             NameEN = "Intensify",
             Polarity = "Madurai",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"WARFRAME"}
         },
         ["Intensité Umbra"] = {
             Image = "Intensité Umbra.png",
@@ -4669,7 +4674,8 @@ local ModData = {
             Name = "Mise à Feu",
             NameEN = "Firewalker",
             Polarity = "Madurai",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"WARFRAME"}
         },
         ["Mobilisation"] = {
             Image = "Mobilisation.png",
@@ -5849,7 +5855,8 @@ local ModData = {
             Name = "Provocation",
             NameEN = "Provoked",
             Polarity = "Madurai",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"WARFRAME"}
         },
         ["Provocation Pacifique"] = {
             AugmentType = 'Warframe',
@@ -6089,7 +6096,7 @@ local ModData = {
             NameEN = "Gale Kick",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"+%IMPACT_WARFRAME"},
+            Traits = {"+%IMPACT_WARFRAME", "WARFRAME"},
             Transmutable = false
         },
         ["Rage"] = {
@@ -6097,7 +6104,8 @@ local ModData = {
             Name = "Rage",
             NameEN = "Rage",
             Polarity = "Madurai",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"WARFRAME"}
         },
         ["Rage Primale"] = {
             AugmentType = 'Warframe',
@@ -7903,7 +7911,8 @@ local ModData = {
             Name = "Tour Déchirant",
             NameEN = "Rending Turn",
             Polarity = "Madurai",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"WARFRAME"}
         },
         ["Tourbillon"] = {
             Image = "TourbillonU14.png",
@@ -8656,7 +8665,8 @@ local ModData = {
             NameEN = "Lightning Dash",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Introduced = "17"
+            Introduced = "17",
+            Traits = {"WARFRAME"}
         },
         ["Élan Frêle"] = {
             Image = "Elan_Frêle.png",
@@ -10133,4 +10143,3 @@ local ModData = {
 }
 
 return ModData
-

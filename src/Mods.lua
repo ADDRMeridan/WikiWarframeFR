@@ -491,7 +491,7 @@ local function buildModList(modArray, ignoreFamily)
                         ret = ""
                     else
                         -- Insert separator
-                        ret = ret .. " • "
+                        ret = ret .. Shared.getListSep()
                     end
                     -- Check for family
                     if (ignoreFamily or Mod.Family == nil) then
@@ -525,7 +525,7 @@ local function buildModList(modArray, ignoreFamily)
                                 if (famFirst) then
                                     famFirst = false
                                 else
-                                    ret = ret .. " • "
+                                    ret = ret .. Shared.getListSep()
                                 end
                                 -- Get new name
                                 local tmp = familyName:gsub("([^%w])", "%%%1")
@@ -575,19 +575,49 @@ function p.getSetList(frame)
     return ret
 end
 
--- function p.getModTraitsCategories(frame)
---    
---    local modName = frame.args[1]
---    local Mod = getMod(modName)
---    local ret = ""
---    
---    if(Mod ~= nil and Mod.Traits ~= nil) then
---        if(Shared.contains(Mod.Traits, "CORROMPU")) then
---            ret = ret.."[[Category:Mod Corrompu]]"
---        end
---    end
---    return ret
--- end
+local function doesModContainTraits(Mod, traitsArray)
+
+    local contains = true
+    local i = 1
+    while (i <= #traitsArray and contains) do
+        contains = contains and Shared.contains(Mod.Traits, traitsArray[i])
+        i = i + 1
+    end
+
+    return contains
+end
+
+-- Filter all mods using multiple criteria by parsing through the Moddata table only once
+local function filterAllMods(set2Get, polarity2Get, traits2Get)
+
+    local ret = {}
+
+    for _, Mod in Shared.skpairs(ModData['Mods']) do
+        -- Gros bloc qui permet de filtrer: savoir si on garde le mod ou non
+        local keepMod = (set2Get == nil or
+                            (set2Get ~= nil and set2Get == Mod.Set)) and
+                            (polarity2Get == nil or
+                                (polarity2Get ~= nil and polarity2Get ==
+                                    Mod.Polarity)) and (traits2Get == nil or
+                            (traits2Get ~= nil and
+                                doesModContainTraits(Mod, traits2Get)))
+        -- On garde le mod si le test est true
+        if (keepMod) then table.insert(ret, Mod) end
+    end
+
+    return ret
+end
+
+function p.getModList(frame)
+
+    local set2Get = frame.args ~= nil and frame.args['set'] or nil
+    local polarity2Get = frame.args ~= nil and frame.args['polarity'] or nil
+    local traits2Get = {}
+    for _, trait in ipairs(frame.args) do table.insert(traits2Get, trait) end
+
+    local modArray = filterAllMods(set2Get, polarity2Get, traits2Get)
+    return buildModList(modArray)
+end
 
 function p.printAllMods()
 
@@ -595,7 +625,7 @@ function p.printAllMods()
     local modArray = Shared.getKeySet(ModData["Mods"])
 
     table.insert(ret, 'Nb mods:' .. #modArray .. ' ///')
-    for _, modName in pairs(modArray) do
+    for _, modName in Shared.skpairs(modArray) do
         table.insert(ret, TT._tooltipText(modName, 'Mod'))
     end
 
