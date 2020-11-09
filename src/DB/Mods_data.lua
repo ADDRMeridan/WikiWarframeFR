@@ -140,6 +140,16 @@ local ModData = {
             Transmutable = false,
             Traits = {"+%CRITCHANCE", "AUGMENT_ARME", "AUGMENT"}
         },
+        ["Acrobate"] = {
+            Archived = true,
+            Image = "acrobate.png",
+            Introduced = "8.0",
+            Name = "Acrobate",
+            NameEN = "Acrobat",
+            Polarity = "Vazarin ",
+            Rarity = "Inhabituel",
+            Transmutable = false,
+        },
         ["Acrobate Aérien"] = {
             Image = "Acrobate Aérien.png",
             Name = "Acrobate Aérien",
