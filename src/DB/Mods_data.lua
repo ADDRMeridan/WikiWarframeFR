@@ -37,6 +37,7 @@ local ModData = {
         },
         ["Accord de l'Augure"] = {
             Image = "Accord_de_l'Augure.jpg",
+            Introduced = "22.0",
             Name = "Accord de l'Augure",
             NameEN = "Augur Accord",
             Polarity = "Vazarin",
@@ -4544,9 +4545,7 @@ local ModData = {
             NameEN = "Hammer Shot",
             Polarity = "Vazarin",
             Rarity = "Rare",
-            Traits = {
-                "+%CRITMULT", "FUSIL", "NIGHTMARE", "+%STATCHANCE"
-            }
+            Traits = {"+%CRITMULT", "FUSIL", "NIGHTMARE", "+%STATCHANCE"}
         },
         ["Fureur Martiale"] = {
             Image = "Fureur Martiale.png",
