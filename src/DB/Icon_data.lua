@@ -55,7 +55,7 @@ local IconData = {
         -- E
         ["Energie"] = {icon = "Orbe d'énergie.png", link = "Energie"},
         ["Energy"] = {icon = "Orbe d'énergie.png", link = "Energie"},
-        ["Endurance"] = {icon = "StaminaOrb.png", link = "Endurance"},
+        ["Endurance"] = {icon = "OrbeEndurance.png", link = "Endurance"},
         ["Étoile Ayatan Ambre"] = {
             icon = "OroFusexOrnamentB.png",
             link = "Sculpture Ayatan#Étoiles"
