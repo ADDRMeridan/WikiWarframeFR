@@ -983,6 +983,7 @@ local ModData = {
             Transmutable = false
         },
         ["Canon à Diffusion"] = {
+            Family = "Canon à Diffusion",
             Image = "Canon à Diffusion.png",
             Name = "Canon à Diffusion",
             NameEN = "Barrel Diffusion",
@@ -991,6 +992,7 @@ local ModData = {
             Traits = {"SECONDAIRE", "+%TIRMULTIPLE"}
         },
         ["Canon à Diffusion Amalgame"] = {
+            Family = "Canon à Diffusion",
             Image = "AmalgamBarrelDiffusionMod.png",
             Name = "Canon à Diffusion Amalgame",
             NameEN = "Amalgam Barrel Diffusion",
