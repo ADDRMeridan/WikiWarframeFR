@@ -357,7 +357,8 @@ local ModData = {
             Name = "Antre de l'Enfer",
             NameEN = "Hell's Chamber",
             Polarity = "Madurai",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"POMPE", "+%TIRMULTIPLE"}
         },
         ["Approche Vicieuse"] = {
             Image = "Approche Vicieuse.jpg",
@@ -387,6 +388,7 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Commun",
             Set = "Vigile",
+            Traits = {"FUSIL", "+%TIRMULTIPLE"},
             Transmutable = false
         },
         ["Art de L'Endurance"] = {
@@ -985,7 +987,8 @@ local ModData = {
             Name = "Canon à Diffusion",
             NameEN = "Barrel Diffusion",
             Polarity = "Madurai",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"SECONDAIRE", "+%TIRMULTIPLE"}
         },
         ["Canon à Diffusion Amalgame"] = {
             Image = "AmalgamBarrelDiffusionMod.png",
@@ -993,6 +996,7 @@ local ModData = {
             NameEN = "Amalgam Barrel Diffusion",
             Polarity = "Madurai",
             Rarity = "Amalgame",
+            Traits = {"SECONDAIRE", "+%TIRMULTIPLE"},
             Transmutable = false
         },
         ["Canonnade"] = {
@@ -1149,7 +1153,8 @@ local ModData = {
             Name = "Chambre Divisée",
             NameEN = "Split Chamber",
             Polarity = "Madurai",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"FUSIL", "+%TIRMULTIPLE"}
         },
         ["Chambre Magmatique"] = {
             Image = "Chambre_Magmatique.png",
@@ -1772,7 +1777,8 @@ local ModData = {
             Name = "Coups Doubles",
             NameEN = "Dual Rounds",
             Polarity = "Madurai",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"ARCH-FUSIL", "+%TIRMULTIPLE"}
         },
         ["Courage"] = {
             Image = "Courage.png",
@@ -2187,7 +2193,7 @@ local ModData = {
             NameEN = "Lethal Torrent",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"NIGHTMARE", "SECONDAIRE"}
+            Traits = {"NIGHTMARE", "SECONDAIRE", "+%TIRMULTIPLE"}
         },
         ["Démarche Pressée"] = {
             Image = "Démarche Pressée.png",
@@ -4085,6 +4091,7 @@ local ModData = {
             NameEN = "Scattered Justice",
             Polarity = "Madurai",
             Rarity = "Rare",
+            Traits = {"POMPE", "+%TIRMULTIPLE"},
             Transmutable = false
         },
         ["Grâce du Kavat"] = {
