@@ -7370,7 +7370,7 @@ local DropData = {
                 {"Endo", 11.06, 50}
             }
         }, {
-            Name = "Lancer Dreg",
+            Name = "Dreg Lancier",
             ModChance = 3,
             Mods = {
                 {"Transformateur de Morphic", 2.01}, {"Prolongement", 37.94},
@@ -8355,7 +8355,7 @@ local DropData = {
                 {"Endo", 5.53, 50}, {"Endo", 1.01, 80}
             }
         }, {
-            Name = "Shield-Hellion Dargyn",
+            Name = "Hellion-Bouclier Dargyn",
             ModChance = 20,
             Mods = {
                 {"Amplificateur d'Énergie", 7.37}, {"Rebord Saignant", 37.94},
@@ -9129,7 +9129,7 @@ local DropData = {
                 {"Rasoir Lucide", 3.22}
             }
         }, {
-            Name = "Vapos Aquila",
+            Name = "Aquila Vapos",
             ModChance = 5,
             Mods = {
                 {"Endo", 7.58, 15}, {"Rebord Saignant", 7.58},
@@ -9191,7 +9191,32 @@ local DropData = {
                 {"Impact Motus", 5.81}, {"Jet Proton", 5.81},
                 {"Configuration Motus", 0.97}, {"Claquement Proton", 0.97}
             }
-        }, {
+        },
+        { Name = "Officier Gokstad Kosma",
+          ModChance = 5,
+          Mods = {
+            {"Energy Inversion",75.88},
+            {"Cutting Edge",4.42},
+            {"Glacial Edge",4.42},
+            {"Rubedo-Lined Barrel",4.42},
+            {"Polar Magazine",4.42},
+            {"Amplificateur d'Énergie",4.42},
+            {"Astral Autopsy",2.01},
+          },
+        },
+        { Name = "Pilote de Gokstad Kosma",
+          ModChance = 5,
+          Mods = {
+            {"Energy Inversion",75.88},
+            {"Cutting Edge",4.42},
+            {"Glacial Edge",4.42},
+            {"Rubedo-Lined Barrel",4.42},
+            {"Polar Magazine",4.42},
+            {"Amplificateur d'Énergie",4.42},
+            {"Astral Autopsy",2.01},
+          },
+        },
+        {
             Name = "Machiniste Amalgame",
             ModChance = 15,
             Mods = {
