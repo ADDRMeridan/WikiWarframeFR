@@ -55,6 +55,7 @@ local IconData = {
         -- E
         ["Energie"] = {icon = "Orbe d'énergie.png", link = "Energie"},
         ["Energy"] = {icon = "Orbe d'énergie.png", link = "Energie"},
+        ["Endurance"] = {icon = "StaminaOrb.png", link = "Endurance"},
         ["Étoile Ayatan Ambre"] = {
             icon = "OroFusexOrnamentB.png",
             link = "Sculpture Ayatan#Étoiles"
@@ -81,10 +82,7 @@ local IconData = {
         ["Forme Nocturne"] = {icon = "AnimaAspect.png", link = "Equinox"},
         -- G
         ["Gantelet"] = {icon = "Lame.png"},
-        ["Gravimag"] = {
-            icon = "Gravimag.png",
-            link = "Gravimag",
-        },
+        ["Gravimag"] = {icon = "Gravimag.png", link = "Gravimag"},
         -- H
         -- I
         ["Inhérence"] = {icon = "Inhérences.png", link = "Inhérence"},
