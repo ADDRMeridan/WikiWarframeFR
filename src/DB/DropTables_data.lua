@@ -5924,7 +5924,7 @@ local DropData = {
                 {"Endo", 18.97, 15}, {"Endo", 2.01, 80}
             }
         }, {
-            Name = "Attack Drone",
+            Name = "Drone d'Attaque",
             ModChance = 3,
             Mods = {
                 {"Vitalité", 25.29}, {"Antre de l'Enfer", 1.01},
@@ -8970,15 +8970,16 @@ local DropData = {
                 {"Phénix de Fer", 0.5}, {"Endo", 0.5}
             }
         }, {
-            Name = "Terra Turret Osprey",
+            Name = "Osprey Tourelle Terra",
             ModChance = 3,
             Mods = {
                 {"Antre de l'Enfer", 1.01}, {"Vitalité", 25.29},
                 {"Prouesse de Mêlée", 25.29}, {"Furie", 7.37},
                 {"Convulsion", 7.37}, {"Endo", 33.67}
             }
-        }, {
-            Name = "Terra Turret Osprey (2)",
+        },
+        {
+            Name = "Osprey Tourelle Terra (2)",
             ModChance = 5,
             Ignore = true,
             Mods = {
@@ -8989,7 +8990,33 @@ local DropData = {
                 {"Fibre Antichoc", 0.67}, {"Portée Sinistre", 3.69},
                 {"Explosifs Dissimulés", 0.67}
             }
-        }, {
+        },
+        { Name = "Homme d'Équipage d'Élite Juno",
+          ModChance = 3,
+          Mods = {
+            {"Ammo Drum",25.29},
+            {"Thief's Wit",25.29},
+            {"Endo",25.29,15},
+            {"No Return",11.06},
+            {"Reaping Spiral",11.06},
+            {"Antre de l'Enfer",1.01},
+            {"Endo",1.01,80},
+          },
+        },
+        { Name = "Osprey Oxium Juno",
+          ModChance = 3,
+          Mods = {
+            {"Melee Prowess",25.29},
+            {"Vitality",25.29},
+            {"Endo",25.29,15},
+            {"Fury",7.37},
+            {"Convulsion",7.37},
+            {"Endo",7.37,50},
+            {"Antre de l'Enfer",1.01},
+            {"Endo",1.01,80},
+          },
+        },
+        {
             Name = "Terra Oxium Osprey",
             ModChance = 5,
             Mods = {
