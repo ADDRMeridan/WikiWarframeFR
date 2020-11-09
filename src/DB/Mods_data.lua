@@ -148,7 +148,8 @@ local ModData = {
             NameEN = "Acrobat",
             Polarity = "Vazarin ",
             Rarity = "Inhabituel",
-            Transmutable = false,
+            Traits = {"ENDURANCE"},
+            Transmutable = false
         },
         ["Acrobate Aérien"] = {
             Image = "Acrobate Aérien.png",
@@ -2367,6 +2368,16 @@ local ModData = {
             Stance = true,
             Transmutable = false
         },
+        ["Étreinte du Guerrier"] = {
+            Archived = true,
+            Image = "EtreinteGuerrierU14.png",
+            Name = "Étreinte du Guerrier",
+            NameEN = "Warrior's Grip",
+            Polarity = "Vazarin",
+            Rarity = "Inhabituel",
+            Traits = {"ENDURANCE"},
+            Transmutable = false
+        },
         ["Evasion Blindée"] = {
             Image = "ArmoredEvade.png",
             Name = "Evasion Blindée",
@@ -2733,6 +2744,16 @@ local ModData = {
             NameEN = "Primed Flow",
             Polarity = "Naramon",
             Rarity = "Légendaire",
+            Transmutable = false
+        },
+        ["Flux de Bouclier"] = {
+            Archived = true,
+            Image = "FluxBouclierU14.png",
+            Name = "Flux de Bouclier",
+            NameEN = "Shield Flux",
+            Polarity = "Naramon",
+            Rarity = "Commun",
+            Traits = {"ENDURANCE"},
             Transmutable = false
         },
         ["Flux Pyroclastique"] = {
@@ -4671,6 +4692,16 @@ local ModData = {
             Polarity = "Penjaga",
             Rarity = "Rare"
         },
+        ["Marathon"] = {
+            Archived = true,
+            Image = "MarathonU145.png",
+            Name = "Marathon",
+            NameEN = "Marathon",
+            Polarity = "Vazarin",
+            Rarity = "Commun",
+            Traits = {"ENDURANCE"},
+            Transmutable = false
+        },
         ["Mise en Pièces"] = {
             Image = "Mise en Pièces.png",
             Name = "Mise en Pièces",
@@ -6345,6 +6376,15 @@ local ModData = {
             Transmutable = false,
             Traits = {"CONCLAVE", "FUSIL"}
         },
+        ["Repos Rapide"] = {
+            Archived = true,
+            Image = "Repos_rapide.jpg",
+            Name = "Repos Rapide",
+            NameEN = "Quick Rest",
+            Polarity = "Vazarin ",
+            Traits = {"ENDURANCE"},
+            Transmutable = false
+        },
         ["Rétablissement"] = {
             Image = "Rétablissement.png",
             Name = "Rétablissement",
@@ -6911,6 +6951,16 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false,
             Traits = {"CONCLAVE_COSME"}
+        },
+        ["Second Souffle"] = {
+            Archived = true,
+            Image = nil,
+            Name = "Second Souffle",
+            NameEN = "Second Wind",
+            Polarity = "Second Wind",
+            Rarity = "Madurai",
+            Traits = {"ENDURANCE"},
+            Transmutable = false
         },
         ["Seconde Chance"] = {
             Image = "Seconde Chance.png",
