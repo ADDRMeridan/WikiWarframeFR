@@ -311,11 +311,12 @@ local ModData = {
         },
         ["Amplificateur d'Énergie"] = {
             Image = "Amplificateur d'Énergie.png",
+            Introduced = "15.1",
             Name = "Amplificateur d'Énergie",
             NameEN = "Energy Amplifier",
             Polarity = "Naramon",
-            Archived = true,
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"CAPACITE", "PORTEE", "ARCHWING"}
         },
         ["Amélioration Tek"] = {
             Image = "Amélioration Tek.png",
