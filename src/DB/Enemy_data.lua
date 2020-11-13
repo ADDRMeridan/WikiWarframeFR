@@ -44,7 +44,39 @@ local EnemyData = {
         Weapons = {"Paracyst"}
     },
     -- B
+    ["Baptiste Fanatique"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = {},
+        Faction = "Infesté",
+        Family = "Fanatique",
+        HealthTypes = {["Tendon Infesté"] = 100, ["Chair Infestée"] = 1200},
+        Image = "Baptiseur_fanatique.png",
+        Icon = nil,
+        Introduced = "25.7.3.1",
+        Link = nil,
+        Name = "Baptiste Fanatique",
+        NameEN = "Zealot Baptizer",
+        Regions = {},
+        Scans = 5,
+        Weapons = {}
+    },
     -- C
+    ["Comba"] = {
+        Affinity = 500,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        HealthTypes = {["Bouclier"] = 400, ["Chair"] = 1100},
+        Image = "FogBrouillard.png",
+        Introduced = "17.5",
+        Link = nil,
+        Name = "Comba",
+        NameEN = "Comba",
+        Regions = {"Jupiter", "Neptune", "Pluton", "Europe"},
+        Scans = 3,
+        Weapons = {"Lecta", "Detron Essaim", "Angstrum Chercheur"}
+    },
     -- D
     -- E
     -- F
@@ -100,7 +132,7 @@ local EnemyData = {
         Link = nil,
         Name = "Homme d'Équipage",
         NameEN = "Crewman",
-        Regions = {"Venus", "Mars", "Jupiter", "Phobos", "Europa"},
+        Regions = {"Venus", "Mars", "Jupiter", "Phobos", "Europe"},
         Scans = 20,
         Weapons = {"Dera", "Prova"}
     },
@@ -249,6 +281,23 @@ local EnemyData = {
         Weapons = {"Grinlok", "Sheev"}
     },
     -- M
+    ["Messager Fanatique"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = {},
+        Faction = "Infesté",
+        Family = "Fanatique",
+        HealthTypes = {["Tendon Infesté"] = 200, ["Chair Infestée"] = 1000},
+        Image = "MessagerFanatique.png",
+        Icon = nil,
+        Introduced = "25.3",
+        Link = nil,
+        Name = "Messager Fanatique",
+        NameEN = "Zealot Proselytizer",
+        Regions = {},
+        Scans = 5,
+        Weapons = {"Torid"}
+    },
     ["MOA à Canon Électrique"] = {
         Affinity = 114.25,
         BaseLevel = 1,
@@ -271,6 +320,23 @@ local EnemyData = {
     -- N
     -- O
     -- P
+    ["Prosélyte Fanatique"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = {},
+        Faction = "Infesté",
+        Family = "Fanatique",
+        HealthTypes = {["Tendon Infesté"] = 200, ["Chair Infestée"] = 1200},
+        Image = "Prosélyte_Fanatique.png",
+        Icon = nil,
+        Introduced = "25.3",
+        Link = nil,
+        Name = "Prosélyte Fanatique",
+        NameEN = "Zealot Proselytizer",
+        Regions = {},
+        Scans = 5,
+        Weapons = {"Zymos"}
+    },
     -- Q
     -- R
     -- S
@@ -283,7 +349,7 @@ local EnemyData = {
         HealthTypes = {["Armure en Ferrite"] = 150, ["Chair Clonée"] = 150},
         Image = "250px-ScorpionDE.png",
         Icon = nil,
-        Introduced = nil,
+        Introduced = "8.0",
         Link = nil,
         Name = "Scorpion",
         NameEN = "Scorpion",
