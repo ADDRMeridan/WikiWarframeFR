@@ -3681,7 +3681,7 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
                 }
             },
-            Disposition = 1.44,
+            Disposition = 0.9,
             Family = "Gram",
             Image = "GramPrime.png",
             Introduced = "[[Update 23#Update 23.9|Update 23.9]]",
