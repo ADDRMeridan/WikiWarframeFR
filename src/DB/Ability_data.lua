@@ -185,12 +185,12 @@ local AbilityData = {
             User = "Chroma",
             UserType = "Warframe"
         },
-        ["Armure Vex"] = {
+        ["Armure d'Épines"] = {
             Cost = 75,
             Key = 3,
             Description = "Renforce l'armure de Chroma lorsque son bouclier est attaqué.<br/>Augmente les dégâts des armes de Chroma lorsque sa santé est attaquée.",
             Image = "VexArmorModx256.png",
-            Name = "Armure Vex",
+            Name = "Armure d'Épines",
             Icon = "VexArmor130xWhite.png",
             User = "Chroma",
             UserType = "Warframe"
@@ -1884,19 +1884,19 @@ local AbilityData = {
         ["Étreinte de Lohk"] = {
             Cost = 50,
             Key = 2,
-            Description = "Des vrilles du Néant volent les armes des ennemis proches qui se mettent à votre service comme armes à ciblage automatique.",
+            Description = "Les Vrilles du Néant volent des armes aux ennemis proches pour les utiliser comme votre propre armement à ciblage automatique. Les dégâts augmentent en fonction du niveau de l'ennemi. Le nombre d'armes saisies détermine également le multiplicateur de dégâts du rayon de Déni, des Égarées.",
             Image = "Étreinte de Lohkx256.png",
             Name = "Étreinte de Lohk",
             Icon = "Étreinte de Lohk130xWhite.png",
             User = "Xaku",
             UserType = "Warframe"
         },
-        ["L'Égaré"] = {
+        ["Les Égarées"] = {
             Cost = 75,
             Key = 3,
             Description = "Parcourez un trio de Pouvoirs appartenant à des Warframes perdues. Accusation génère une fissure du Néant pour transformer les ennemis en alliés. Regard piège les cibles dans les vrilles du Néant qui accumulent les dégâts et les infligent lorsque les cibles sont relâchées. Déni projette un faisceau d'énergie du Néant qui élimine les résistances Sentient.",
             Image = "L'Égaréx256.png",
-            Name = "L'Égaré",
+            Name = "Les Égarées",
             Icon = "L'Égaré130xWhite.png",
             User = "Xaku",
             UserType = "Warframe"
@@ -1904,7 +1904,7 @@ local AbilityData = {
         ["Vide Intemporel"] = {
             Cost = 100,
             Key = 4,
-            Description = "Expulsez temporairement les fragments externes de votre Warframe dans une explosion destructrice, puis parcourez le champ de bataille sous une nouvelle forme squelettique plus rapide. Les ennemis endommagés par les éclats sont rendus plus vulnérables aux Dégâts du Néant.",
+            Description = "Perdez temporairement les morceaux extérieurs de Xaku via une explosion destructrice, puis parcourez le champ de bataille sous une nouvelle forme squelettique plus rapide. Les ennemis endommagés par les shrapnels du corps sont rendus plus vulnérables aux dégâts du Néant. La durée des autres pouvoirs actifs de Xaku est figée dans le temps et reprend une fois que le Vide Intemporel expire.",
             Image = "Vide Intemporelx256.png",
             Name = "Vide Intemporel",
             Icon = "Vide Intemporel130xWhite.png",
@@ -2189,7 +2189,7 @@ local AbilityData = {
             "Esquive", "Accalmie", "Mains Amères", "Tempête Reposante"
         },
         ["Chroma"] = {
-            "Hurlement Spectral", "Protection Élémentaire", "Armure Vex",
+            "Hurlement Spectral", "Protection Élémentaire", "Armure d'Épines",
             "Effigie"
         },
         ["Ember"] = {"Boule de Feu", "Immolation", "Souffle de Feu", "Inferno"},
@@ -2299,7 +2299,7 @@ local AbilityData = {
         },
         ["Zephyr"] = {"Vent Contraire", "Rafale", "Turbulence", "Tornades"},
         ["Xaku"] = {
-            "Murmure de Xata", "Étreinte de Lohk", "L'Égaré",
+            "Murmure de Xata", "Étreinte de Lohk", "Les Égarées",
             "Vide Intemporel"
         }
     }
