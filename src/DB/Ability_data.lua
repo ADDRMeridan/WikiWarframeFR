@@ -2189,8 +2189,8 @@ local AbilityData = {
             "Esquive", "Accalmie", "Mains Amères", "Tempête Reposante"
         },
         ["Chroma"] = {
-            "Hurlement Spectral", "Protection Élémentaire", "Armure d'Épines",
-            "Effigie"
+            "Hurlement Spectral", "Protection Élémentaire",
+            "Armure d'Épines", "Effigie"
         },
         ["Ember"] = {"Boule de Feu", "Immolation", "Souffle de Feu", "Inferno"},
         ["Equinox"] = {
@@ -2248,7 +2248,7 @@ local AbilityData = {
             "Pacificateurs"
         },
         ["Mirage"] = {
-            "Galerie des Glaces", "Tour de Passe", "Éclipse", "Prisme"
+            "Galerie des Glaces", "Tour de Passe-Passe", "Éclipse", "Prisme"
         },
         ["Nekros"] = {
             "Perforation d'Âme", "Terreur", "Profanation", "Ombres des Morts"

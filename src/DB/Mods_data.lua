@@ -512,12 +512,12 @@ local ModData = {
         },
         ["Astuce du Voleur"] = {
             Image = "Astuce_du_Voleur.png",
-	    Introduced = nil,
+            Introduced = nil,
             Name = "Astuce du Voleur",
             NameEN = "Thief's Wit",
             Polarity = "Naramon",
             Rarity = "Commun",
-	    Transmutable = true
+            Transmutable = true
         },
         ["Attaque de faucon"] = {
             Image = "",
@@ -9381,8 +9381,7 @@ local ModData = {
             Name = "Protection Éternelle",
             Warframe = "Chroma",
             Ability = "Protection Élémentaire"
-        },
-        {
+        }, {
             Name = "Vengeance Épineuse",
             Warframe = "Chroma",
             Ability = "Armure d'Épines"
@@ -9622,7 +9621,7 @@ local ModData = {
         }, {
             Name = "Prestidigitation Explosive",
             Warframe = "Mirage",
-            Ability = "Tour de Passe"
+            Ability = "Tour de Passe-Passe"
         },
         {Name = "Éclipse Totale", Warframe = "Mirage", Ability = "Éclipse"},
         {Name = "Garde Prismatique", Warframe = "Mirage", Ability = "Prisme"},
