@@ -346,11 +346,13 @@ local ModData = {
         },
         ["Antitoxine"] = {
             Image = "Antitoxine.png",
+            Introduced = "8.0",
             Link = "Antitoxine",
             Name = "Antitoxine",
             NameEN = "Antitoxin",
             Polarity = "Vazarin",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Transmutable = true
         },
         ["Antre de l'Enfer"] = {
             Image = "Antre_de_l'Enfer.png",
@@ -509,11 +511,13 @@ local ModData = {
             Transmutable = false
         },
         ["Astuce du Voleur"] = {
-            Image = "ThiefsWitModU145.png",
+            Image = "Astuce_du_Voleur.png",
+	    Introduced = nil,
             Name = "Astuce du Voleur",
             NameEN = "Thief's Wit",
             Polarity = "Naramon",
-            Rarity = "Commun"
+            Rarity = "Commun",
+	    Transmutable = true
         },
         ["Attaque de faucon"] = {
             Image = "",
@@ -2456,10 +2460,12 @@ local ModData = {
         },
         ["Expulse-Corpus"] = {
             Image = "Expulse-Corpus.png",
+            Introduced = "9.0",
             Name = "Expulse-Corpus",
             NameEN = "Expel Corpus",
             Polarity = "Madurai",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Transmutable = true
         },
         ["Expulse-Corpus Accru"] = {
             Image = "PrimedExpelCorpus.png",
@@ -9047,9 +9053,9 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Mycélium latrique"] = {
+        ["Mycélium Latrique"] = {
             Image = "Mycélium latrique.png",
-            Name = "Mycélium latrique",
+            Name = "Mycélium Latrique",
             NameEN = "Iatric Mycelium",
             Polarity = "Penjaga",
             Rarity = "Rare",
@@ -9379,7 +9385,7 @@ local ModData = {
         {
             Name = "Vengeance Épineuse",
             Warframe = "Chroma",
-            Ability = "Armure Vex"
+            Ability = "Armure d'Épines"
         }, {Name = "Effigie Guidée", Warframe = "Chroma", Ability = "Effigie"},
         -- Ember
         {
