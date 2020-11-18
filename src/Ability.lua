@@ -197,9 +197,9 @@ function p._getAbilityNameByIndex(wfName, index)
     end
     local abilities = getAbilityList(wfName)
     if abilities == nil then return "Data not found" end
-    for i, ability in pairs(abilities) do
-        local keyNum = getAbilityData(ability, "Key")
-        if (keyNum == index) then return ability end
+    for _, abilityName in pairs(abilities) do
+        local keyNum = p._getValue(abilityName, "KEY")
+        if (keyNum == index) then return abilityName end
     end
     return nil
 end
