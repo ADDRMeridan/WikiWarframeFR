@@ -1791,7 +1791,7 @@ local AbilityData = {
             Description = "Wukong et son jumeau deviennent invulnérable et provoquent leurs ennemis. Tous les dégâts sont capturés, gardés et retournés d'un seul coup violent de bâton.<br/>Le Bonus d'Armure est ensuite octroyé selon les dégâts capturés.",
             Image = "DefyModx256.png",
             Name = "Défi",
-            Icon = "Defy130xWhite.png",
+            Icon = "DefyIcon.png",
             User = "Wukong",
             UserType = "Warframe"
         },
