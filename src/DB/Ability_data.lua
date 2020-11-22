@@ -1498,7 +1498,7 @@ local AbilityData = {
             Cost = 50,
             Key = 2,
             Description = "Extrait une offrande d'un ennemi sous la forme d'une amélioration de pouvoir aléatoire. Les attaques des survivants sont affaiblies.",
-            Image = "RributeModx256.png",
+            Image = "Tribute.png",
             Name = "Tribut",
             Icon = "Tribute130xWhite.png",
             User = "Titania",
@@ -2133,7 +2133,7 @@ local AbilityData = {
             UserType = nil
         },
 
-        -- Necramech
+        -- Necramech Voidrig
         ["Graviton"] = {
             Cost = 25,
             Key = 1,
@@ -2171,6 +2171,48 @@ local AbilityData = {
             Image = "Mode Statique.png",
             Name = "Mode Statique",
             Icon = "Mode Statique.png",
+            User = nil,
+            UserType = "Necramech"
+        },
+
+        -- Necramech Bonewidow
+        ["Crochet de Boucher"] = {
+            Cost = 25,
+            Key = 1,
+            Description = "Embrochez et maintenez une cible. Utilisez à nouveau pour projeter la victime en lui infligeant des Dégâts ainsi qu'à quiconque à proximité du point d'impact.",
+            Image = "Crochet de Boucher.png",
+            Name = "Crochet de Boucher",
+            Icon = "Crochet de Boucher.png",
+            User = nil,
+            UserType = "Necramech"
+        },
+        ["Pavois"] = {
+            Cost = 50,
+            Key = 2,
+            Description = "Levez le bouclier de Bonewidow pour bloquer les Dégâts arrivant de face.",
+            Image = "Pavois.png",
+            Name = "Pavois",
+            Icon = "Pavois.png",
+            User = nil,
+            UserType = "Necramech"
+        },
+        ["Ligne de Tir"] = {
+            Cost = 75,
+            Key = 3,
+            Description = "Balayez les ennemis dans la ligne de tir avec un rayon de force.",
+            Image = "Ligne de Tir.png",
+            Name = "Ligne de Tir",
+            Icon = "Ligne de Tir.png",
+            User = nil,
+            UserType = "Necramech"
+        },
+        ["Ironbride Exaltée"] = {
+            Cost = 100,
+            Key = 4,
+            Description = "Invoquez une Lame Exaltée dévastatrice.",
+            Image = "Ironbride Exaltée.png",
+            Name = "Ironbride Exaltée",
+            Icon = "Ironbride Exaltée.png",
             User = nil,
             UserType = "Necramech"
         }
