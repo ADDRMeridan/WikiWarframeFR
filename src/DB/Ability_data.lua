@@ -1495,7 +1495,7 @@ local AbilityData = {
             UserType = "Warframe"
         },
         ["Tribut"] = {
-            Cost = 50,
+            Cost = 25,
             Key = 2,
             Description = "Extrait une offrande d'un ennemi sous la forme d'une amélioration de pouvoir aléatoire. Les attaques des survivants sont affaiblies.",
             Image = "Tribute.png",
