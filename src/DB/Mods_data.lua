@@ -9478,7 +9478,13 @@ local ModData = {
             Name = "Forge Ensanglantée",
             Warframe = "Garuda",
             Ability = "Saignée"
-        }, -- Grendel
+        }, {
+            Name = "Serres Composées",
+            Warframe = "Garuda",
+            Ability = "Serres Possédées"
+        }, -- Gauss
+        {Name = "Superbang", Warframe = "Gauss", Ability = "Supersonique"},
+        -- Grendel
         {Name = "Catapulte", Warframe = "Grendel", Ability = "Pulvérisation"},
         -- Harrow
         {Name = "Tribunal", Warframe = "Harrow", Ability = "Condamnation"},
@@ -9725,6 +9731,7 @@ local ModData = {
             Warframe = "Octavia",
             Ability = "Résonateur"
         }, -- Revenant
+        {Name = "Pacte des Serfs", Warframe = "Revenant", Ability = "Servitude"},
         {Name = "Pillage Aveuglant", Warframe = "Revenant", Ability = "Pillage"},
         -- Rhino
         {
@@ -9820,7 +9827,12 @@ local ModData = {
             Ability = "Bouclier Électrique"
         }, {Name = "Surtension", Warframe = "Volt", Ability = "Décharge"},
         {Name = "Collision Cinétique", Warframe = "Volt", Ability = "Vitesse"},
-        -- Wukong
+        -- Wisp
+        {
+            Name = "Surcharge Critique",
+            Warframe = "Wisp",
+            Ability = "Surcharge de Faille"
+        }, -- Wukong
         {
             Name = "Impact Céleste",
             Warframe = "Wukong",
