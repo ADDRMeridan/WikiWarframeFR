@@ -1912,6 +1912,48 @@ local AbilityData = {
             UserType = "Warframe"
         },
 
+        -- Amesha
+        ["Essaim Vigilant"] = {
+            Cost = 25,
+            Description = "De minuscules drones orbitent autour de vous ou d'un allié, interceptant les tirs ennemis.",
+            Icon = "Essaim_Vigilant-Icon.png",
+            Image = "Essaim_Vigilant.png",
+            Key = 1,
+            Name = "Essaim Vigilant",
+            User = "Amesha",
+            UserType = "Archwing"
+        },
+        ["Leurre Bienveillant"] = {
+            Cost = "50",
+            Description = "Crée des balises qui attirent l'attention des ennemis, convertissant les dégâts qu'ils leur font en impulsions régénérantes.",
+            Icon = "Leurre_Bienveillant-Icon.png",
+            Image = "Leurre_Bienveillant.png ",
+            Key = 2,
+            Name = "Leurre Bienveillant",
+            User = "Amesha",
+            UserType = "Archwing"
+        },
+        ["Grâce Protectrice"] = {
+            Cost = 25,
+            Description = "Vous immunise ainsi que les alliés à proximité contre les effets de statut tout en ralentissant les ennemis proches.",
+            Icon = "Grace_Protectrice-Icon.png",
+            Image = "Grace_Protectrice.png",
+            Key = 3,
+            Name = "Grâce Protectrice",
+            User = "Amesha",
+            UserType = "Archwing"
+        },
+        ["Ruée Vengeresse"] = {
+            Cost = 100,
+            Description = "Tous les dégâts reçus lorsque active sont transformés en énergie. De plus, les pouvoirs voient leurs portée, durée et puissance améliorées. Vous affecte ainsi que les alliés à proximité.",
+            Icon = "Ruee_Vengeresse-Icon.png",
+            Image = "Ruee_Vengeresse.png",
+            Key = 4,
+            Name = "Ruée Vengeresse",
+            User = "Amesha",
+            UserType = "Archwing"
+        },
+
         -- Elytron
         ["Traquenard"] = {
             Cost = 25,
