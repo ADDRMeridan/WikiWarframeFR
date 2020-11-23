@@ -9212,6 +9212,42 @@ local ModData = {
             Set = "Saxum",
             Traits = {"+%IMPACT", "SECONDAIRE"},
             Transmutable = false
+        },
+        ["Superbang"] = {
+            AugmentType = 'Warframe',
+            Image = nil,
+            Name = "Superbang",
+            NameEN = "Mach Crash",
+            Polarity = "Zenurik",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Serres Composées"] = {
+            AugmentType = 'Warframe',
+            Image = nil,
+            Name = "Serres Composées",
+            NameEN = "Bleeding Talons",
+            Polarity = "Zenurik",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Pacte des Serfs"] = {
+            AugmentType = 'Warframe',
+            Image = nil,
+            Name = "Pacte des Serfs",
+            NameEN = "Thrall Pact",
+            Polarity = "Zenurik",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Surcharge Critique"] = {
+            AugmentType = 'Warframe',
+            Image = nil,
+            Name = "Surcharge Critique",
+            NameEN = "Critical Surge",
+            Polarity = "Zenurik",
+            Rarity = "Rare",
+            Transmutable = false
         }
     },
 
