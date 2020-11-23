@@ -934,7 +934,7 @@ local AbilityData = {
             Description = "Émet une pulsation énergétique qui disloque les boucliers ou l'armure ennemie, créant des éclats extrêmement dangereux, particulièrement sur les cibles magnétisées. Les boucliers alliés touchés par l'impulsion seront restaurés.",
             Image = "ShieldPolarizeModU15.jpeg",
             Name = "Polarisation",
-            Icon = "Polarize130xWhite.png",
+            Icon = "ShieldPolarize.png",
             User = "Mag",
             UserType = "Warframe"
         },
