@@ -993,17 +993,12 @@ function p._buildWarframeAugmentList(warframeName, gameMode, includeArchived)
 
     local augmentArray = p.getWarframeAugments(warframeName, includeArchived)
     local modArray = {}
-    if (gameMode == nil) then
-        for _, augment in pairs(augmentArray) do
-            table.insert(modArray, getMod(augment.Name))
-        end
-    else
-        for _, augment in pairs(augmentArray) do
-            local tmp = getMod(augment.Name)
-            if ((gameMode == "PVP" and tmp.PvP) or
-                (gameMode == "PVE" and not tmp.PvP)) then
-                table.insert(modArray, getMod(augment.Name))
-            end
+    for _, augment in pairs(augmentArray) do
+        local tmp = getMod(augment.Name)
+        if (tmp ~= nil and (gameMode == nil or
+            ((gameMode == "PVP" and tmp.PvP) or
+                (gameMode == "PVE" and not tmp.PvP)))) then
+            table.insert(modArray, tmp)
         end
     end
 
@@ -1059,20 +1054,24 @@ local function getAugmentedWarframes()
             table.insert(warf, augment.Warframe)
         end
     end
+
     return warf
 end
 
 function p.buildWarframeAugmentNavBoxRows()
 
-    local ret = ""
+    local ret = {}
     for _, wfName in pairs(getAugmentedWarframes()) do
-        ret = ret .. '\n|-'
-        ret = ret .. '\n| class="navboxgroup" | ' ..
-                  TT._tooltipText(wfName, 'Warframe')
-        ret = ret .. '\n| ' .. p._buildWarframeAugmentList(wfName, nil, false)
+        local tmp = p._buildWarframeAugmentList(wfName, nil, false)
+        if (tmp ~= nil) then
+            table.insert(ret, '\n|-\n| class="navboxgroup" | ')
+            table.insert(ret, TT._tooltipText(wfName, 'Warframe'))
+            table.insert(ret, '\n| ')
+            table.insert(ret, tmp)
+        end
     end
 
-    return ret
+    return table.concat(ret)
 end
 
 function p.buildTableauAugment()
