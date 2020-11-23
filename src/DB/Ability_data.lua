@@ -1618,9 +1618,9 @@ local AbilityData = {
             UserType = "Warframe"
         },
         ["Poseur de Mines"] = {
-            Cost = 50,
+            Cost = 25,
             Key = 2,
-            Description = "Faites votre choix entre quatre mines déployables: Bobine Liante, Orbe à fléchettes, Propulseur Vectoriel et Tonic Dynamique.",
+            Description = "Faites défilez quatre mines déployables. Bobine Liante immobilise et regroupe les ennemis. Orbe à Fléchettes tire des clous mortels dans toutes les directions. Propulseur Vectoriel fait accélérer les ennemis comme les alliés dans la direction indiquée. Tonic Dynamique se verrouille sur l'allié le plus proche et augmente les dégâts de son arme.",
             Image = "MinelayerModx256.png",
             Name = "Poseur de Mines",
             Icon = "Minelayer130xWhite.png",
