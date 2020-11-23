@@ -1303,7 +1303,7 @@ local AbilityData = {
             Description = "Octroie des avantages aux Tenno qui réalisent des actions synchronisées avec la musique d'Octavia. Les sauts au bon moment fournissent l'avantage de vitesse de course Vivace. S'accroupir sur le tempo permet de se camoufler avec l'avantage Nocturne. Tirer en rythme accorde l'avantage de tirs multiples Opéra. Les coups de mêlée synchrones donnent l'avantage de dégâts en mêlée Forte.",
             Image = "MetronomeModx256.png",
             Name = "Métronome",
-            Icon = "Metronome130xWhite.png",
+            Icon = "Métronome_Icon.png",
             User = "Octavia",
             UserType = "Warframe"
         },
