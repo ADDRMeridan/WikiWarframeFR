@@ -1313,7 +1313,7 @@ local AbilityData = {
             Description = "Capte l'énergie des décibels de son environnement afin d'amplifier les dégâts des armes d'Octavia et de ses alliés. Double aussi les dégâts et la portée des Maillets proches.",
             Image = "AmpModx256.png",
             Name = "Ampli",
-            Icon = "Amp130xWhite.png",
+            Icon = "Ampli_Icon.png",
             User = "Octavia",
             UserType = "Warframe"
         },
