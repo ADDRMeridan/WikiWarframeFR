@@ -16935,6 +16935,7 @@ local WeaponData = {
                 }
             },
             Disposition = 1.4,
+            ExilusPolarity = "Madurai",
             Family = "Gorgon",
             Image = "Gorgon.png",
             Introduced = "[[Closed Beta Updates#Vanilla|Vanilla]]",
