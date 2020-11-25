@@ -43,6 +43,44 @@ local EnemyData = {
         Scans = 3,
         Weapons = {"Paracyst"}
     },
+    ["Artilleuse Lourde"] = {
+        Affinity = 500,
+        BaseLevel = 8,
+        Capacities = {"Onde de Choc"},
+        Faction = "Grineer",
+        Family = "Artilleuse Lourde",
+        HealthTypes = {["Chair Clonée"] = 300, ["Armure en Ferrite"] = 500},
+        Image = "Mitrailleur_Lourd.png",
+        Icon = nil,
+        Introduced = "Vanilla",
+        Link = nil,
+        Name = "Artilleuse Lourde",
+        NameEN = "Heavy Gunner",
+        Regions = {
+            "Mercure", "Mars", "Saturne", "Uranus", "Cérès", "Sedna",
+            "Deimos", "Lua"
+        },
+        Scans = 3,
+        Weapons = {"Gorgon", "Sheev"}
+    },
+    ["Artilleuse Lourde Aride"] = {
+        Affinity = 500,
+        BaseLevel = 8,
+        Capacities = {"Onde de Choc"},
+        Faction = "Grineer",
+        Family = "Artilleuse Lourde",
+        HealthTypes = {["Chair Clonée"] = 300, ["Armure en Ferrite"] = 500},
+        Image = "DesertHeavyFemaleGrineerAvatarDesert.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Artilleuse Lourde Aride",
+        NameEN = "Arid Heavy Gunner",
+        Regions = {"Mars", "Deimos"},
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = {"Gorgon", "Sheev"}
+    },
     -- B
     ["Baptiste Fanatique"] = {
         Affinity = nil,
@@ -98,6 +136,40 @@ local EnemyData = {
     -- E
     -- F
     -- G
+    ["Gardien Grineer"] = {
+        Affinity = 500,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        HealthTypes = {["Armure en Ferrite"] = 500, ["Chair Clonée"] = 600},
+        Image = "DEGrineerWarden.png",
+        Icon = nil,
+        Introduced = "13.2",
+        Link = nil,
+        Name = "Gardien Grineer",
+        NameEN = "Grineer Warden",
+        Regions = {"Cérès"},
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = {"Gorgon", "Hind", "Vulkar", "Sheev"}
+    },
+    ["Général Sargas Ruk"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = {"Grenade Explosive", "Explosion de Feu", "Fournaise"},
+        Faction = "Grineer",
+        HealthTypes = {["Armure en Alliage"] = 250, ["Chair Clonée"] = 2000},
+        Image = "GeneralSargasRukCodex.png",
+        Icon = "SargusRuk sigil.png",
+        Introduced = "11.0",
+        Link = nil,
+        Name = "Général Sargas Ruk",
+        NameEN = "General Sargas Ruk",
+        Regions = {"Saturne"},
+        Scans = 3,
+        SpawnLevel = 26,
+        Weapons = {"Bras Canon"}
+    },
     ["Golem Jordas"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -297,6 +369,28 @@ local EnemyData = {
         Scans = 20,
         Weapons = {"Grinlok", "Sheev"}
     },
+    ["Lieutenant Lech Kril"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = {"Vague de Glace", "Vague de Feu", "Barrière de Flammes"},
+        Faction = "Grineer",
+        Family = "Lieutenant Lech Kril",
+        HealthTypes = {
+            ["Armure en Alliage"] = 250,
+            ["Bouclier"] = 400,
+            ["Chair Clonée"] = 4000
+        },
+        Image = "LechKril.png",
+        Icon = "LechKril_sigil.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Lieutenant Lech Kril",
+        NameEN = "Lieutenant Lech Kril",
+        Regions = {"Mars"},
+        Scans = 3,
+        SpawnLevel = 13,
+        Weapons = {"Gorgon", "Brokk"}
+    },
     -- M
     ["Messager Fanatique"] = {
         Affinity = nil,
@@ -336,6 +430,24 @@ local EnemyData = {
     },
     -- N
     -- O
+    ["Officier Gokstad"] = {
+        Affinity = nil,
+        BaseLevel = 8,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Officier Gokstad",
+        HealthTypes = {["Chair Clonée"] = 1000, ["Armure en Ferrite"] = 1000},
+        Image = "KosmaGokstadOfficer.png",
+        Icon = nil,
+        Introduced = "27.0",
+        Link = nil,
+        Name = "Officier Gokstad",
+        NameEN = "Gokstad Officer",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = {"Karak Wraith"}
+    },
     -- P
     ["Prosélyte Fanatique"] = {
         Affinity = nil,
