@@ -78,6 +78,23 @@ local EnemyData = {
         Weapons = {"Lecta", "Detron Essaim", "Angstrum Chercheur"}
     },
     -- D
+    ["Dreg Temporel"] = {
+        Affinity = 57.13,
+        BaseLevel = 1,
+        Capacities = {},
+        Faction = "Grineer",
+        Family = "Dreg",
+        HealthTypes = {["Armure en Ferrite"] = 150, ["Chair Clonée"] = 100},
+        Image = "GrnStasisDrone.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Dreg Temporel",
+        NameEN = "Temporal Dreg",
+        Regions = {"Terre", "Saturne", "Uranus"},
+        Scans = 10,
+        Weapons = {}
+    },
     -- E
     -- F
     -- G
@@ -383,7 +400,7 @@ local EnemyData = {
         Regions = {"Toutes"},
         Scans = 3,
         Weapons = {"Dread", "Despair", "Hate"}
-    }
+    },
     -- T
     -- U
     -- V
@@ -391,6 +408,23 @@ local EnemyData = {
     -- X
     -- Y
     -- Z
+    ["Zeplen"] = {
+        Affinity = 2000,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = nil,
+        HealthTypes = {["Armure en Ferrite"] = 2750, ["Chair Clonée"] = 400},
+        Image = "GrnMissilePlatform.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Zeplen",
+        NameEN = "Zeplen",
+        Regions = nil,
+        Scans = 3,
+        Weapons = nil
+    }
 }
 
 return EnemyData
