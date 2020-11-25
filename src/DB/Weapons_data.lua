@@ -408,6 +408,64 @@ local WeaponData = {
             Users = {"[[Arca Heqet Amalgame]]"},
             WallAttack = 360
         },
+
+        ["Arum Spinosa"] = {
+            BlockAngle = 55,
+            Class = "Warfan",
+            ComboDur = 5,
+            Conclave = false,
+            Cost = {
+                Credits = 5000,
+                Rush = 35,
+                Time = 12,
+                Parts = {
+                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
+                    {Name = "Kuva", Type = "Ressource", Count = 1200},
+                    {
+                        Name = "Alliage d'Auroxium",
+                        Type = "Ressource",
+                        Count = 100
+                    },
+                    {Name = "Alliage Hespazym", Type = "Ressource", Count = 100}
+                }
+            },
+            Disposition = 0.5,
+            Family = "Arum Spinosa",
+            FollowThrough = 0.7,
+            HeavyAttack = 594 * 2,
+            HeavySlamAttack = 297,
+            HeavyRadialDmg = 297,
+            HeavySlamRadius = 6,
+            Image = "ArumSpinosa.png",
+            Introduced = "[[Update 29#Update 29.5|Update 29.5",
+            Mastery = 11,
+            MeleeRange = 1.7,
+            Name = "Arum Spinosa",
+            NormalAttack = {
+                Damage = {
+                    ["Impact"] = 35.6,
+                    ["Perforation"] = 59.4,
+                    ["Tranchant"] = 202
+                },
+                CritChance = 0.09,
+                CritMultiplier = 1.9,
+                StatusChance = 0.37,
+                FireRate = 1.08
+            },
+            Polarities = {},
+            SlamAttack = 594,
+            SlamElement = "",
+            SlamRadialDmg = 297,
+            SlamRadialElement = "",
+            SlamRadialProc = "",
+            SlamRadius = 5,
+            SlideAttack = 297,
+            StancePolarity = "Bar",
+            Traits = {"Infested"},
+            Type = "Melee",
+            WindUp = 0.5
+        },
+
         ["Atterax"] = {
             -- BlockResist = 0.5,
             Class = "Fouet",
@@ -690,6 +748,60 @@ local WeaponData = {
             MeleeRange = 2.5,
             Users = {"[[Spectre Loki]]"},
             WallAttack = 340
+        },
+        ["Bursite"] = {
+            BlockAngle = 55,
+            Class = "Nunchaku",
+            ComboDur = 9,
+            Conclave = false,
+            Cost = {
+                Credits = 15000,
+                BPCost = 50000,
+                MarketCost = 180,
+                Rush = 35,
+                Time = 12,
+                Parts = {
+                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
+                    {
+                        Name = "Trompe Parasitaire",
+                        Type = "Ressource",
+                        Count = 24
+                    },
+                    {Name = "Namalon Dévolu", Type = "Ressource", Count = 60},
+                    {Name = "Nano Spores", Type = "Ressource", Count = 24000}
+                }
+            },
+            Disposition = 0.5,
+            Family = "Bursite",
+            FollowThrough = 0.5,
+            HeavyAttack = 1450,
+            HeavySlamAttack = 1160,
+            HeavyRadialDmg = 1160,
+            HeavySlamRadius = 9,
+            Image = "Bursite.png",
+            Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            Mastery = 11,
+            MeleeRange = 2.51,
+            Name = "Bursite",
+            NormalAttack = {
+                Damage = {["Impact"] = 193, ["Viral"] = 97},
+                CritChance = 0.19,
+                CritMultiplier = 2.3,
+                StatusChance = 0.33,
+                FireRate = 0.917
+            },
+            Polarities = {"V", "V"},
+            SlamAttack = 580,
+            SlamElement = "",
+            SlamRadialDmg = 290,
+            SlamRadialElement = "",
+            SlamRadialProc = "",
+            SlamRadius = 7,
+            SlideAttack = 580,
+            StancePolarity = "D",
+            Traits = {"Infesté"},
+            Type = "Mêlée",
+            WindUp = 0.5
         },
         ["Sceptre Brisé"] = {
             -- BlockResist = 0.6,
@@ -4194,7 +4306,7 @@ local WeaponData = {
             ChannelCost = 5,
             Class = "Marteau",
             Conclave = true,
-            Disposition = 0.94,
+            Disposition = 1.3,
             Family = "Heliocor",
             Image = "CephHammer.png",
             Introduced = "[[Update 19#Update: Specters of the Rail 1.0|Update: Specters of the Rail 1.0]]",
@@ -4212,7 +4324,7 @@ local WeaponData = {
                 StatusChance = 0.12,
                 FireRate = 0.833
             },
-            SlideAttack = 280,
+            SlideAttack = 560,
             StancePolarity = "V",
             Traits = {"Cephalon Simaris"},
             Type = "Mêlée",
@@ -9674,7 +9786,7 @@ local WeaponData = {
                 }
 
             },
-            Disposition = 1.48,
+            Disposition = 1.2,
             Family = "Krohkur Jumeaux",
             Image = "DualGrnEgyptSwords.png",
             Introduced = "[[Update 22#Update 22|Update 22]]",
@@ -9890,14 +10002,11 @@ local WeaponData = {
             FollowThrough = 0.8,
             WallAttack = 165
         },
-
         ["Vitrica"] = {
-            BlockAngle = 60,
-            Class = "Lame Lourde",
-            ComboDur = 10,
-            Conclave = false,
             Cost = {
                 Credits = 20000,
+                BPStanding = 100000,
+                MarketCost = nil,
                 Rush = 35,
                 Time = 12,
                 Parts = {
@@ -9914,18 +10023,16 @@ local WeaponData = {
                         Count = 10
                     }
                 }
-            },
+            }, -- BlockResist = 0.85,
+            -- ChannelCost = 5,
+            Class = "Lame Lourde",
+            Conclave = false,
             Disposition = 0.5,
             Family = "Vitrica",
-            FollowThrough = 0.6,
-            HeavyAttack = 1998,
-            HeavySlamAttack = 1665,
-            HeavyRadialDmg = 1665,
-            HeavySlamRadius = 4,
             Image = "Vitrica.png",
             Introduced = "[[Update 29#Update 29.3|Update 29.3]]",
+            -- JumpAttack = 333,
             Mastery = 13,
-            MeleeRange = 2.9,
             Name = "Vitrica",
             NormalAttack = {
                 Damage = {
@@ -9938,18 +10045,47 @@ local WeaponData = {
                 StatusChance = 0.33,
                 FireRate = 0.833
             },
-            Polarities = {},
-            SlamAttack = 999,
-            -- SlamElement = "Heat",
-            SlamRadialDmg = 333,
-            -- SlamRadialElement = "Heat",
-            -- SlamRadialProc = "Heat",
-            SlamRadius = 4,
             SlideAttack = 666,
-            StancePolarity = "V",
+            Polarities = {"V", "V"},
+            StancePolarity = "D",
             Traits = {"Orokin"},
             Type = "Mêlée",
-            WindUp = 1.1
+            SecondaryAttack = {
+                AttackName = "Explosion de verre",
+                Damage = {
+                    ["Impact"] = 299.7,
+                    ["Perforation"] = 299.7,
+                    ["Tranchant"] = 399.6
+                },
+                CritChance = 0.23,
+                CritMultiplier = 2.3,
+                StatusChance = 0.33,
+                Radius = 6.0,
+                Falloff = {StartRange = 0, EndRange = 6, Reduction = 0.9}
+                -- FireRate = 0.833
+            },
+            MeleeSlam = {
+                Damage = 999.0,
+                Element = nil,
+                RadialDamage = 333.0,
+                RadialElement = nil,
+                Radius = 4.0
+            },
+            MeleeHeavy = {
+                Damage = 1998.0,
+                Element = nil,
+                WindUp = 1.1,
+                SlamDamage = 1665.0,
+                SlamElement = nil,
+                SlamRadialDamage = 1665.0,
+                SlamRadialElement = nil,
+                SlamRadius = 4.0
+            },
+            BlockAngle = 60,
+            MeleeComboDur = 10.0,
+            FollowThrough = 0.6,
+            MeleeRange = 2.9,
+            WallAttack = 333
         },
         ["Volnus"] = {
             -- BlockResist = 0.85,
@@ -11844,6 +11980,77 @@ local WeaponData = {
             Type = "Secondaire",
             Users = {"[[Nouveau Loka]] [[Operative]]s"}
         },
+
+        ["Catabolyste"] = {
+            Accuracy = 6.3,
+            AreaAttack = {
+                AttackName = "Partial Reload Explosion",
+                Damage = {["Corrosif"] = 203},
+                Falloff = {StartRange = 0, EndRange = 5, Reduction = 0.5},
+                Radius = 5
+            },
+            Class = "Pistolet",
+            Conclave = false,
+            Cost = {
+                Credits = 30000,
+                MarketCost = 190,
+                Rush = 35,
+                Time = 24,
+                Parts = {
+                    {Name = "Scintillateur", Type = "Ressource", Count = 5},
+                    {Name = "Racine Oculaire", Type = "Ressource", Count = 4},
+                    {Name = "Masse Mutagène", Type = "Composant", Count = 7},
+                    {
+                        Name = "Nécrathène Stellé",
+                        Type = "Composant",
+                        Count = 10
+                    }
+                }
+            },
+            Disposition = 0.5,
+            ExilusPolarity = "V",
+            Family = "Catabolyste",
+            Image = "Catabolyste.png",
+            Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            Magazine = 31,
+            Mastery = 11,
+            MaxAmmo = 540,
+            Name = "Catabolyste",
+            NormalAttack = {
+                AttackName = "Principale",
+                Damage = {["Corrosif"] = 53},
+                CritChance = 0.11,
+                CritMultiplier = 2.9,
+                StatusChance = 0.1,
+                FireRate = 1.0,
+                Falloff = {StartRange = 9, EndRange = 19, Reduction = 0.2},
+                PunchThrough = 0.9,
+                ShotType = "Projectile",
+                ShotSpeed = "?",
+                Trigger = "Semi-Auto"
+            },
+            NoiseLevel = "Bruyant",
+            Polarities = {},
+            Reload = 1.7,
+            SecondaryAreaAttack = {
+                AttackName = "Reload From Empty Explosion",
+                Damage = {["Corrosif"] = 1997},
+                Falloff = {StartRange = 0, EndRange = 7, Reduction = 0.5}
+            },
+            SecondaryAttack = {
+                AttackName = "Reload From Empty Impact",
+                Damage = {["Impact"] = 11},
+                CritChance = 0.31,
+                CritMultiplier = 2.9,
+                PunchThrough = 0.9,
+                Reload = 2.1,
+                StatusChance = 0.59
+            },
+            Trigger = "Semi-Auto",
+            Traits = {"Infesté"},
+            Type = "Secondaire"
+        },
+
         ["Cestra"] = {
             Accuracy = 33.3,
             Class = "Pistolet",
@@ -15698,6 +15905,74 @@ local WeaponData = {
             Type = "Principale",
             Users = {"[[Junction|Excalibur Specter]]"}
         },
+
+        ["Bubonico"] = {
+            Accuracy = 25,
+            Class = "Bras-Cannon",
+            Conclave = false,
+            Cost = {
+                Credits = 20000,
+                BPCost = 15000,
+                MarketCost = 265,
+                Rush = 35,
+                Time = 24,
+                Parts = {
+                    {Name = "Masse Mutagène", Type = "Ressource", Count = 10},
+                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 3},
+                    {Name = "Plastides", Type = "Ressource", Count = 1200},
+                    {Name = "Nano Spores", Type = "Ressource", Count = 22000}
+                }
+            },
+            Disposition = 0.5,
+            ExilusPolarity = "V",
+            Family = "Bubonico",
+            Image = "Bubonico.png",
+            Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            Magazine = 27,
+            Mastery = 13,
+            Name = "Bubonico",
+            NormalAttack = {
+                AttackName = "Auto",
+                Damage = {
+                    ["Impact"] = 14,
+                    ["Perforation"] = 91,
+                    ["Tranchant"] = 133,
+                    ["Poison"] = 49
+                },
+                CritChance = 0.25,
+                CritMultiplier = 2.3,
+                Falloff = {StartRange = 19, EndRange = 41, Reduction = 0.5},
+                FireRate = 3.83,
+                PelletCount = 7,
+                ShotType = "Hit-Scan",
+                StatusChance = 0.1,
+                Trigger = "Auto"
+            },
+            NoiseLevel = "Bruyant",
+            Polarities = {},
+            Reload = 0.5,
+            ReloadStyle = "Régénération",
+            SecondaryAreaAttack = {
+                AttackName = "Attaque Radial",
+                Damage = {["Viral"] = 143},
+                Falloff = {StartRange = 0, EndRange = 7, Reduction = 0.5},
+                Radius = 7
+            },
+            SecondaryAttack = {
+                Accuracy = 100,
+                AttackName = "Burst",
+                Damage = {["Impact"] = 9},
+                CritChance = 0.03,
+                CritMultiplier = 3.5,
+                FireRate = 3.37,
+                ShotType = "Projectile",
+                StatusChance = 0.57,
+                Trigger = "Burst"
+            },
+            Traits = {"Infesté"},
+            Type = "Principale"
+        },
+
         ["Burston"] = {
             Accuracy = 25,
             BurstFireRate = 5,
@@ -16047,6 +16322,81 @@ local WeaponData = {
                 {Name = "[NAME] (Déchargé)", Attacks = {"NormalAttack"}},
                 {Name = "[NAME] (Chargé)", Attacks = {"ChargeAttack"}}
             }
+        },
+        ["Proboscis Cernos"] = {
+            Accuracy = 16.6,
+            AreaAttack = {
+                AttackName = "Uncharged Shot Explosion",
+                Damage = {["Viral"] = 1003},
+                Radius = 7,
+                ExplosionDelay = 1.7
+            },
+            Class = "Arc",
+            Conclave = false,
+            ChargeAreaAttack = {
+                Attackame = "Charged Shot Explosion",
+                Damage = {["Viral"] = 1},
+                Radius = 7,
+                ExplosionDelay = 1.7
+            },
+            ChargeAttack = {
+                AttackName = "Tir Chargé",
+                ChargeTime = 0.1,
+                Damage = {
+                    ["Impact"] = 1,
+                    ["Perforation"] = 1,
+                    ["Tranchant"] = 1
+                },
+                CritChance = 0.1,
+                CritMultiplier = 1,
+                StatusChance = 0.1,
+                PelletCount = 10,
+                PunchThrough = 1.5,
+                ShotSpeed = 100,
+                ShotType = "Hit-Scan"
+            },
+            Cost = {
+                Credits = 15000,
+                BPCost = 30000,
+                MarketCost = 245,
+                Rush = 35,
+                Time = 12,
+                Parts = {
+                    {Name = "Cernos Mutaliste", Type = "Arme", Count = 1},
+                    {Name = "Pack Polymère", Type = "Ressource", Count = 1600},
+                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 5}
+                }
+            },
+            Disposition = 0.5,
+            ExilusPolarity = "V",
+            Family = "Cernos",
+            Image = "Cernos Proboscis.png",
+            Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            Magazine = 1,
+            Mastery = 15,
+            MaxAmmo = 540,
+            Name = "Proboscis Cernos",
+            NormalAttack = {
+                AttackName = "Normal",
+                ChargeTime = 0.7,
+                Damage = {
+                    ["Impact"] = 103.2,
+                    ["Perforation"] = 30.7,
+                    ["Tranchant"] = 145.1
+                },
+                CritChance = 0.07,
+                CritMultiplier = 1.9,
+                StatusChance = 0.43,
+                ShotType = "Projectile",
+                ShotSpeed = "?",
+                Trigger = "Charge"
+            },
+            NoiseLevel = "Silencieux",
+            Polarities = {},
+            Reload = 0.6,
+            Trigger = "Charge",
+            Traits = {"Infesté"},
+            Type = "Principale"
         },
         ["Cernos Rakta"] = {
             Accuracy = 16.7,
@@ -19426,6 +19776,64 @@ local WeaponData = {
             Trigger = "Auto à Chauffe",
             Type = "Principale"
         },
+
+        ["Sporothrix"] = {
+            Accuracy = 100,
+            AreaAttack = {
+                Damage = {["Tranchant"] = 22, ["Viral"] = 19},
+                ExplosionDelay = 0.9,
+                Falloff = {StartRange = 0, EndRange = 1.7, Reduction = 0.1},
+                Radius = 1.7
+            },
+            Class = "Fusil Sniper",
+            Conclave = false,
+            Cost = {
+                Credits = 20000,
+                Rush = 35,
+                Time = 12,
+                Parts = {
+                    {Name = "Fieldron", Type = "Ressource", Count = 5},
+                    {Name = "Ferrite", Type = "Ressource", Count = 6200},
+                    {Name = "Hexenon", Type = "Ressource", Count = 300},
+                    {Name = "Forma", Type = "Ressource", Count = 1}
+                }
+            },
+            Disposition = 0.5,
+            ExilusPolarity = "Bar",
+            Image = "Sporothrix.png",
+            Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            Magazine = 9,
+            Mastery = 13,
+            MaxAmmo = 40,
+            Name = "Sporothrix",
+            NormalAttack = {
+                AttackName = "Normal",
+                Damage = {
+                    ["Impact"] = 100.2,
+                    ["Perforation"] = 115,
+                    ["Tranchant"] = 155.8
+                },
+                CritChance = 0.01,
+                CritMultiplier = 3,
+                Falloff = {StartRange = 400, EndRange = 600, Reduction = 0.5},
+                FireRate = 1.83,
+                StatusChance = 0.53,
+                ShotType = "Hit-Scan",
+                Trigger = "Semi-Auto"
+            },
+            Polarities = {},
+            Reload = 2.7,
+            SniperComboMin = 5,
+            SniperComboReset = 2,
+            Traits = {"Infesté"},
+            Trigger = "Semi-Auto",
+            Type = "Principale",
+            Zoom = {
+                "2x Zoom (-50% Recul, +2m Pénétration)",
+                "3.5x Zoom (+100% Dégâts, +3.5m Rayon d'Explosion, -75% Cadence de Tir)"
+            }
+        },
+
         ["Stahlta"] = {
             Accuracy = 50,
             AreaAttack = {
@@ -22286,9 +22694,9 @@ local WeaponData = {
                 Rush = 35,
                 Time = 12,
                 Parts = {
-                    {Name = "Canon Cortège", Type = "Objet", Count = 1},
-                    {Name = "Culasse Cortège", Type = "Objet", Count = 1},
-                    {Name = "Crosse Cortège", Type = "Objet", Count = 1}
+                    {Name = "Cortège Canon", Type = "Objet", Count = 1},
+                    {Name = "Cortège Culasse", Type = "Objet", Count = 1},
+                    {Name = "Cortège Crosse", Type = "Objet", Count = 1}
                 }
             },
             Disposition = 0.5,
@@ -22312,13 +22720,13 @@ local WeaponData = {
             Polarities = {},
             Reload = 1,
             SecondaryAreaAttack = {
-                AttackName = "Attaque Radial",
+                AttackName = "Attaque Radiale",
                 Damage = {["Explosif"] = 1000},
                 Falloff = {StartRange = 0, EndRange = 4, Reduction = 0.3},
                 Radius = 4
             },
             SecondaryAttack = {
-                AttackName = "Activé",
+                AttackName = "Impact de Grenade",
                 Damage = {["Impact"] = 10},
                 FireRate = 0.25,
                 CritChance = 0.3,
@@ -22329,6 +22737,67 @@ local WeaponData = {
             },
             Traits = {"Entrati"},
             Type = "Arch-Fusil"
+        },
+
+        ["Cortège (Atmosphère)"] = {
+            Accuracy = 100,
+            Conclave = false,
+            Cost = {
+                Credits = 20000,
+                Rush = 35,
+                Time = 12,
+                Parts = {
+                    {Name = "Canon", Type = "Objet", Count = 1},
+                    {Name = "Culasse", Type = "Objet", Count = 1},
+                    {Name = "Crosse", Type = "Objet", Count = 1}
+                }
+            },
+            Disposition = 0.5,
+            Image = "Cortège.png",
+            Introduced = "[[Update 29]]",
+            Magazine = 100,
+            Mastery = 14,
+            MaxAmmo = 300,
+            Link = "Cortège",
+            Name = "Cortège (Atmosphère)",
+            NormalAttack = {
+                AttackName = "Maintenu",
+                Damage = {["Feu"] = 90},
+                CritChance = 0.2,
+                CritMultiplier = 1.9,
+                StatusChance = 0.4,
+                FireRate = 12,
+                ShotType = "Décharge",
+                Trigger = "Maintenu"
+            },
+            NoiseLevel = "Bruyant",
+            Polarities = {},
+            Reload = 2.5,
+            AreaAttack = {
+                AttackName = "Attaque Radiale",
+                Damage = {["Explosif"] = 3000},
+                Falloff = {StartRange = 0, EndRange = 4, Reduction = 0.3},
+                Radius = 4,
+                FireRate = 0.25,
+                CritChance = 0.3,
+                CritMultiplier = 2.4,
+                StatusChance = 0.167,
+                PelletCount = 3,
+                PelletName = "Grenade"
+            },
+            ChargeAttack = {
+                AttackName = "Impact de Grenade",
+                Damage = {["Impact"] = 30},
+                FireRate = 0.25,
+                CritChance = 0.3,
+                CritMultiplier = 2.4,
+                StatusChance = 0.167,
+                PelletCount = 3,
+                PelletName = "Grenade",
+                Trigger = "Activé"
+            },
+            Traits = {"Entrati"},
+            Type = "Arch-Fusil (Atmosphère)"
         },
 
         ["Corvas"] = {
@@ -23062,13 +23531,13 @@ local WeaponData = {
             Accuracy = 80,
             AreaAttack = {
                 AttackName = "Auto Radial Attack",
-                Damage = {["Heat"] = 48},
+                Damage = {["Feu"] = 48},
                 Radius = 1.8,
                 Falloff = {StartRange = 0, EndRange = 1.8, Reduction = 0.1}
             },
             ChargeAttack = {
                 AttackName = "Charged Shot",
-                Damage = {["Heat"] = 3000},
+                Damage = {["Feu"] = 3000},
                 ChargeTime = 4,
                 CritChance = 0.5,
                 CritMultiplier = 3.5,
@@ -23087,19 +23556,19 @@ local WeaponData = {
             Name = "Mausolon (Atmosphere)",
             NormalAttack = {
                 AttackName = "Auto",
-                Damage = {["Impact"] = 24, ["Puncture"] = 46, ["Heat"] = 50},
+                Damage = {["Impact"] = 24, ["Perforation"] = 46, ["Feu"] = 50},
                 CritChance = 0.3,
                 CritMultiplier = 2.2,
                 StatusChance = 0.26,
                 FireRate = 8.33,
                 ShotType = "Hitscan"
             },
-            NoiseLevel = "Alarming",
+            NoiseLevel = "Bruyant",
             Polarities = {"V"},
             Reload = 2.0,
             SecondaryAttack = {
                 AttackName = "Active",
-                Damage = {["Heat"] = 1000},
+                Damage = {["Feu"] = 1000},
                 FireRate = 0.25,
                 CritChance = 0.3,
                 CritMultiplier = 2.4,
@@ -23110,6 +23579,72 @@ local WeaponData = {
             Trigger = "Auto / Semi",
             Type = "Arch-Fusil (Atmosphère)"
         },
+
+        ["Morgha"] = {
+            Accuracy = 6.7,
+            Conclave = false,
+            Cost = {
+                Credits = 20000,
+                Rush = 35,
+                Time = 12,
+                Parts = {
+                    {Name = "Canon", Type = "Item", Count = 1},
+                    {Name = "Culasse", Type = "Item", Count = 1},
+                    {Name = "Crosse", Type = "Item", Count = 1}
+                }
+            },
+            Disposition = 0.5,
+            Image = "Morgha.png",
+            Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            Magazine = 100,
+            Mastery = 15,
+            Name = "Morgha",
+            NormalAttack = {
+                AttackName = "Auto Burst",
+                BurstCount = 2,
+                Damage = {["Impact"] = 32},
+                CritChance = 0.3,
+                CritMultiplier = 2.2,
+                StatusChance = 0.14,
+                FireRate = 6,
+                ShotType = "Projectile"
+            },
+            NoiseLevel = "Bruyant",
+            Polarities = {},
+            Reload = 1,
+            ReloadStyle = "Régénération",
+            SecondaryAreaAttack = {
+                AttackName = "Charged Shot Explosion",
+                Damage = {
+                    ["Impact"] = 600,
+                    ["Perforation"] = 800,
+                    ["Tranchant"] = 1000,
+                    ["Explosif"] = 1200
+                },
+                Falloff = {StartRange = 0, EndRange = 20, Reduction = 0.6}
+            },
+            SecondaryAttack = {
+                Accuracy = 100,
+                AttackName = "Tir Chargé",
+                Damage = {["Impact"] = 100},
+                FireRate = 0.833,
+                CritChance = 0.4,
+                CritMultiplier = 3,
+                StatusChance = 0.5,
+                Radius = 20,
+                Trigger = "Semi"
+            },
+            AreaAttack = {
+                AttackName = "Attaque Radiale",
+                Damage = {["Explosif"] = 164},
+                Falloff = {StartRange = 0, EndRange = 3, Reduction = 0.3},
+                Radius = 3
+            },
+            Traits = {"Entrati"},
+            Trigger = "Auto Burst",
+            Type = "Arch-Fusil"
+        },
+
         ["Phaedra"] = {
             Accuracy = 11.8,
             Cost = {
@@ -23815,6 +24350,43 @@ local WeaponData = {
             Type = "Secondaire",
             Users = {"[[Titania]]"}
         },
+
+        ["Ironbride"] = {
+            BlockAngle = 90,
+            Class = "Arme Exaltée",
+            ComboDur = 5,
+            Conclave = false,
+            FollowThrough = 0.7,
+            HeavyAttack = 1500,
+            HeavySlamAttack = 3000,
+            HeavyRadialDmg = 0,
+            HeavySlamRadius = 0,
+            Image = "Ironbride.png",
+            Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            MeleeRange = 3,
+            Name = "Ironbride",
+            NormalAttack = {
+                Damage = {
+                    ["Impact"] = 225,
+                    ["Perforation"] = 225,
+                    ["Tranchant"] = 1050
+                },
+                CritChance = 0.45,
+                CritMultiplier = 3,
+                StatusChance = 0.15,
+                FireRate = 0.833
+            },
+            Polarities = {},
+            SlamAttack = 3000,
+            SlamRadialDmg = 585,
+            SlamRadius = 10,
+            SlideAttack = 3000,
+            Traits = {"Entrati"},
+            Type = "Arch-Mêlée",
+            Users = {"[[Bonewidow]]"},
+            WindUp = 0.7
+        },
+
         ["Lame Exaltée"] = {
             Name = "Lame Exaltée",
             -- BlockResist = 0.6,
