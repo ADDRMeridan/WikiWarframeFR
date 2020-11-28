@@ -777,7 +777,7 @@ end
 local function _isModAnAugment(modName)
 
     local mod = getMod(modName)
-    return mod.AugmentType ~= nil
+    return mod ~= nil and mod.AugmentType ~= nil
 end
 
 function p.isModAnAugment(frame)
