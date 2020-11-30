@@ -2963,8 +2963,9 @@ local function buildGunComparisonString(Weapon1, Weapon2, Conclave)
                                         nil, {"plus lent", "plus rapide"})
     end
     result = result ..
-                 buildCompareString(Weapon1.Spool, Weapon2.Spool, "spool-up", 0,
-                                    " balle<s>", {"Slower", "Faster"})
+                 buildCompareString(Weapon1.Spool, Weapon2.Spool,
+                                    "Temps de chauffe", 0, " balle<s>",
+                                    {"", ""}, nil, {"plus lent", "plus rapide"})
     local Acc1 = getValue(Weapon1, "Accuracy")
     local Acc2 = getValue(Weapon2, "Accuracy")
     if (type(Acc1) == "number" and type(Acc2) == "number") then
