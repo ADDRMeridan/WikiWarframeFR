@@ -1098,8 +1098,11 @@ function p.buildTableauAugment()
         -- Colonne Syndic
         table.insert(ret, '\n|')
         local syndicList = {}
-        for j, syndic in pairs((Warframe.getWarframe(wfName)).Syndic) do
-            table.insert(syndicList, Icon._Syndicat(syndic, "text"))
+        local syndicArray = (Warframe.getWarframe(wfName)).Syndic
+        if (syndicArray ~= nil) then
+            for j, syndic in pairs(syndicArray) do
+                table.insert(syndicList, Icon._Syndicat(syndic, "text"))
+            end
         end
         table.insert(ret, table.concat(syndicList, "\n"))
     end
