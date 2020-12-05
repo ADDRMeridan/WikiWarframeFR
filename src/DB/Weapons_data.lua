@@ -7705,7 +7705,7 @@ local WeaponData = {
                     }
                 }
             },
-            Disposition = 0.5,
+            Disposition = 0.75,
             Family = "Quassus",
             FollowThrough = 0.7,
             Image = "Quassus.png",
