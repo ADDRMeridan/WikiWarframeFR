@@ -4118,7 +4118,7 @@ local WeaponData = {
                     {Name = "Récupération", Type = "Ressource", Count = 4500}
                 }
             },
-            Disposition = 1.36,
+            Disposition = 1.1,
             Image = "Hate.png",
             Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
             -- JumpAttack = 140,
@@ -7708,14 +7708,27 @@ local WeaponData = {
             Disposition = 0.5,
             Family = "Quassus",
             FollowThrough = 0.7,
-            HeavyAttack = 460 * 2,
-            HeavySlamAttack = 230,
-            HeavyRadialDmg = 230,
-            HeavySlamRadius = 6,
             Image = "Quassus.png",
             Introduced = "[[Update 29]]",
             Mastery = 8,
+            MeleeHeavy = {
+                Damage = 460 * 2,
+                Element = nil,
+                WindUp =  0.5,
+                SlamDamage = 230,
+                SlamElement = nil,
+                SlamRadialDamage = 230,
+                SlamRadialElement = nil,
+                SlamRadius = 6
+            },
             MeleeRange = 1.7,
+            MeleeSlam = {
+                Damage = 690,
+                Element = nil,
+                RadialDamage = 230,
+                RadialElement = nil,
+                Radius = 5,
+            },
             Name = "Quassus",
             NormalAttack = {
                 Damage = {
@@ -7729,14 +7742,10 @@ local WeaponData = {
                 FireRate = 0.833
             },
             Polarities = {},
-            SlamAttack = 690,
-            SlamRadialDmg = 230,
-            SlamRadius = 5,
             SlideAttack = 230,
             StancePolarity = "Bar",
             Traits = {"Tenno"},
             Type = "Mêlée",
-            WindUp = 0.5
         },
         ["Dague Sombre Rakta"] = {
             -- BlockResist = 0.35,
@@ -14147,8 +14156,11 @@ local WeaponData = {
                 Rush = 35,
                 Time = 12,
                 Parts = {
-                    {Name = "Éclat de Sériglas", Type = "Objet", Count = 1},
-                    {Name = "Canon", Type = "Objet", Count = 1},
+                    {
+                        Name = "Éclat de Sériglas",
+                        Type = "Ressource",
+                        Count = 1
+                    }, {Name = "Canon", Type = "Objet", Count = 1},
                     {Name = "Culasse", Type = "Objet", Count = 1}
                 }
             },
@@ -15772,6 +15784,7 @@ local WeaponData = {
                 }
             },
             Disposition = 1.15,
+            ExilusPolarity = "Bar",
             Family = "Boltor",
             Image = "DEPrimeBoltor.png",
             Introduced = "[[Update 12#Update 12.4|Update 12.4]]",
@@ -16961,8 +16974,9 @@ local WeaponData = {
             Trigger = "Auto à Chauffe",
             Type = "Principale",
             Users = {
-                "[[Lieutenant Lech Kril]]", "[[Heavy Gunner]] + Variants",
-                "[[Corrupted Heavy Gunner]]", "[[Manic Bombard]] + Variants"
+                "[[Lieutenant Lech Kril]]", "[[Artilleuse Lourde]] + Variantes",
+                "[[Artilleuse Lourde Corrompue]]",
+                "[[Bombardier Maniaque]] + Variantes"
             }
         },
         ["Gorgon Wraith"] = {
@@ -16979,7 +16993,8 @@ local WeaponData = {
                     {Name = "Crosse", Type = "Objet", Count = 1}
                 }
             },
-            Disposition = 1.4,
+            Disposition = 1.35,
+            ExilusPolarity = "V",
             Family = "Gorgon",
             Image = "WraithGorgon.png",
             Introduced = "[[Update 12#Update 12.4|Update 12.4]]",
@@ -18965,7 +18980,8 @@ local WeaponData = {
             Accuracy = 20.0,
             Class = "Fusil",
             Conclave = true,
-            Disposition = 1.4,
+            Disposition = 1.3,
+            ExilusPolarity = "Bar",
             Family = "Gorgon",
             Image = "PrismaGorgon.png",
             Introduced = "[[Update 15#Update 15.11.1|Update 15.11.1]]",
@@ -18975,8 +18991,8 @@ local WeaponData = {
             Name = "Gorgon Prisma",
             NormalAttack = {
                 Damage = {
-                    ["Impact"] = 17.3,
-                    ["Perforation"] = 3.5,
+                    ["Impact"] = 17.25,
+                    ["Perforation"] = 3.45,
                     ["Tranchant"] = 2.3
                 },
                 CritChance = 0.30,
