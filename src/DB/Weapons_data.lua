@@ -15181,7 +15181,7 @@ local WeaponData = {
                 Damage = {["Gaz"] = 80},
                 Radius = 5
             },
-            Class = "Lanceur de Poche",
+            Class = "Pistolet",
             Conclave = true,
             Disposition = 1.2,
             Image = "Zakti.png",
