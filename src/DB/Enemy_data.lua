@@ -301,6 +301,23 @@ local EnemyData = {
         Scans = 20,
         Weapons = {"Grakata", "Sheev"}
     },
+    ["Lancier d'Élite"] = {
+        Affinity = 150,
+        BaseLevel = 15,
+        Capacities = {"Grenade à Plasma"},
+        Faction = "Grineer",
+        Family = "Lancier d'Élite",
+        HealthTypes = {["Armure en Alliage"] = 200, ["Chair Clonée"] = 150},
+        Image = "Lancier_Elite.png",
+        Icon = nil,
+        Introduced = "9.0",
+        Link = nil,
+        Name = "Lancier d'Élite",
+        NameEN = "Elite Lancer",
+        Regions = {"Mercure", "Saturne", "Cérès", "Sedna", "Deimos", "Lua"},
+        Scans = 5,
+        Weapons = {"Hind", "Sheev"}
+    },
     ["Lancier Frontalier"] = {
         Affinity = 50,
         BaseLevel = 1,
