@@ -389,20 +389,6 @@ function p.getRarityList()
     return result
 end
 
--- Returns the mods (structures) that have the given trait
-local function getTraitArray(trait2LookFor)
-
-    local ret = {}
-    for name, Mod in Shared.skpairs(ModData["Mods"]) do
-        if (Mod.Traits ~= nil) then
-            if (Shared.contains(Mod.Traits, trait2LookFor)) then
-                table.insert(ret, Mod)
-            end
-        end
-    end
-    return ret
-end
-
 local function buildModGallery(modArray)
 
     local ret = '\n{| style="margin:auto; text-align:center;"'
@@ -430,33 +416,69 @@ local function buildModGallery(modArray)
     return ret
 end
 
-function p.getTraitGallery(frame)
+local function doesModContainTraits(Mod, traitsArray)
 
-    local trait2LookFor = frame.args[1]
+    local contains = true
+    local i = 1
+    while (i <= #traitsArray and contains) do
+        contains = contains and Shared.contains(Mod.Traits, traitsArray[i])
+        i = i + 1
+    end
 
-    local modArray = getTraitArray(trait2LookFor)
-    local ret = buildModGallery(modArray)
-    return ret
+    return contains
 end
 
--- Returns the mods (structures) that are from the given set
-local function getSetArray(set2LookFor)
+-- Struct to store the different filters on mods
+local modFilters = {Polarity = nil, Set = nil, Traits = {}}
 
-    local ret = {}
-    for name, Mod in Shared.skpairs(ModData["Mods"]) do
-        if (Mod.Set ~= nil and Mod.Set == set2LookFor) then
-            table.insert(ret, Mod)
+local function getFiltersFromFrame(frame)
+
+    local filter = modFilters
+    if (frame.args ~= nil) then
+        -- Polarite
+        filter.Polarity = frame.args['polarity'] or nil
+        -- Set
+        filter.Set = frame.args['set'] or nil
+        -- Traits
+        for _, trait in ipairs(frame.args) do
+            table.insert(filter.Traits, trait)
+        end
+        if (Shared.tableCount(filter.Traits) == 0) then
+            filter.Traits = nil
         end
     end
+
+    return filter
+end
+
+-- Filter all mods using multiple criteria by parsing through the Moddata table only once
+-- See the filter structure above
+local function filterAllMods(filter)
+
+    local ret = {}
+
+    for _, Mod in Shared.skpairs(ModData['Mods']) do
+        -- Gros bloc qui permet de filtrer: savoir si on garde le mod ou non
+        local keepMod = (filter.Set == nil or
+                            (filter.Set ~= nil and filter.Set == Mod.Set)) and
+                            (filter.Polarity == nil or
+                                (filter.Polarity ~= nil and filter.Polarity ==
+                                    Mod.Polarity)) and (filter.Traits == nil or
+                            (filter.Traits ~= nil and
+                                doesModContainTraits(Mod, filter.Traits)))
+        -- On garde le mod si le test est true
+        if (keepMod) then table.insert(ret, Mod) end
+    end
+
     return ret
 end
 
-function p.getSetGallery(frame)
+function p.getModGallery(frame)
 
-    local set2LookFor = frame.args[1]
-
-    local modArray = getSetArray(set2LookFor)
+    local filter = getFiltersFromFrame(frame)
+    local modArray = filterAllMods(filter)
     local ret = buildModGallery(modArray)
+
     return ret
 end
 
@@ -557,65 +579,10 @@ local function buildModList(modArray, ignoreFamily)
     return ret
 end
 
-function p.getTraitList(frame)
-
-    local trait2LookFor = frame.args[1]
-
-    local modArray = getTraitArray(trait2LookFor)
-    local ret = buildModList(modArray)
-    return ret
-end
-
-function p.getSetList(frame)
-
-    local set2LookFor = frame.args[1]
-
-    local modArray = getSetArray(set2LookFor)
-    local ret = buildModList(modArray)
-    return ret
-end
-
-local function doesModContainTraits(Mod, traitsArray)
-
-    local contains = true
-    local i = 1
-    while (i <= #traitsArray and contains) do
-        contains = contains and Shared.contains(Mod.Traits, traitsArray[i])
-        i = i + 1
-    end
-
-    return contains
-end
-
--- Filter all mods using multiple criteria by parsing through the Moddata table only once
-local function filterAllMods(set2Get, polarity2Get, traits2Get)
-
-    local ret = {}
-
-    for _, Mod in Shared.skpairs(ModData['Mods']) do
-        -- Gros bloc qui permet de filtrer: savoir si on garde le mod ou non
-        local keepMod = (set2Get == nil or
-                            (set2Get ~= nil and set2Get == Mod.Set)) and
-                            (polarity2Get == nil or
-                                (polarity2Get ~= nil and polarity2Get ==
-                                    Mod.Polarity)) and (traits2Get == nil or
-                            (traits2Get ~= nil and
-                                doesModContainTraits(Mod, traits2Get)))
-        -- On garde le mod si le test est true
-        if (keepMod) then table.insert(ret, Mod) end
-    end
-
-    return ret
-end
-
 function p.getModList(frame)
 
-    local set2Get = frame.args ~= nil and frame.args['set'] or nil
-    local polarity2Get = frame.args ~= nil and frame.args['polarity'] or nil
-    local traits2Get = {}
-    for _, trait in ipairs(frame.args) do table.insert(traits2Get, trait) end
-
-    local modArray = filterAllMods(set2Get, polarity2Get, traits2Get)
+    local filter = getFiltersFromFrame(frame)
+    local modArray = filterAllMods(filter)
     return buildModList(modArray)
 end
 
