@@ -3474,7 +3474,7 @@ local ModData = {
             NameEN = "Anti-Grav Grenade",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"+%IMPACT", "MOA"},
+            Traits = {"+%IMPACT", "COMPAGNON", "MOA"},
             Transmutable = false
         },
         ["Grenades Liantes"] = {
