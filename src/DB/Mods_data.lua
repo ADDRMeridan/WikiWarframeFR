@@ -7415,6 +7415,7 @@ local ModData = {
         },
         ["Lame à Ressorts"] = {
             Image = "Lame à Ressorts.png ",
+            Introduced = "22.0",
             Name = "Lame à Ressorts",
             NameEN = "Spring-Loaded Blade",
             Polarity = "Vazarin",
