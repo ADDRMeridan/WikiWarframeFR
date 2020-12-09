@@ -9233,14 +9233,6 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Symbiose Martyre"] = {
-            Image = "Symbiose Martyre.png",
-            Name = "Symbiose Martyre",
-            NameEN = "Martyr Symbiosis",
-            Polarity = "Penjaga",
-            Rarity = "Rare",
-            Transmutable = false
-        },
         ["Parasite Volatil"] = {
             Image = "Parasite Volatil.png",
             Name = "Parasite Volatil",
