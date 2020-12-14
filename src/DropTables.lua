@@ -20,7 +20,7 @@ local Icon = require("Module:Icon")
 local Shared = require("Module:Shared")
 local Void = require("Module:Void")
 local Relics = require("Module:VoidByReward")
-local Tooltip = require("Module:Tooltip")
+local TT = require("Module:Tooltip")
 
 local relicTooltipStart =
     "<span style=\"border-bottom: 1px dotted;\" class=\"relic-tooltip\" data-param=\""
@@ -129,38 +129,9 @@ local function asPercent(val, digits)
     return Shared.round(val, digits) .. "%"
 end
 
-local function linkEnemy(EName)
-    -- Cut off enemy names before parentheses while linking
-    local paren, trash = string.find(EName, "%(")
-    local Result = ""
-    if (paren ~= nil) then
-        Result = "[[" .. string.sub(EName, 1, paren - 2) .. "|" .. EName .. "]]"
-    elseif (EName == "Fissure Corrupted Enemy") then
-        Result = "[[Void Fissure|" .. EName .. "]]"
-    elseif (EName == "Dargyn" or EName == "Carrier") then
-        Result = "[[" .. EName .. " (Enemy)" .. "|" .. EName .. "]]"
-    else
-        Result = "[[" .. EName .. "]]"
-    end
-    return Result
-end
-
 -- Links a Syndicate and returns it.
 -- Doesn't actually do anything but add brackets right now
 local function linkSyndicate(SName) return '[[' .. SName .. ']]' end
-
--- Sorts theTable based on the listed column
-local function tableSort(theTable, sortCol, ascend)
-    local new
-    local function sorter(r1, r2)
-        if (ascend) then
-            return r1[sortCol] < r2[sortCol]
-        else
-            return r1[sortCol] > r2[sortCol]
-        end
-    end
-    table.sort(theTable, sorter)
-end
 
 local function getAllModDrops(enemyName)
     local drops = {}
@@ -249,7 +220,7 @@ local function formatDropString(drop, frame)
     local iconText = ""
     if (dropType == "MorceauArme") then
         result = result .. Icon._Item(drop.IName[1], "text", nil) .. ' - ' ..
-                     Tooltip._tooltipText(drop.IName[2], "Weapon")
+                     TT._tooltipText(drop.IName[2], "Weapon")
     elseif (dropType == "Ressource") then
         iconText = Icon._Ressource(drop.IName, nil, nil)
         local pieces = Shared.splitString(drop.IName, " ")
@@ -274,11 +245,11 @@ local function formatDropString(drop, frame)
         -- iconText = Icon._Item(drop.IName)
         result = "[[Ayatan Sculpture|" .. drop.IName .. "]]"
     elseif (dropType == "Mod") then
-        result = result .. Tooltip._tooltipText(drop.IName, "Mod")
+        result = result .. TT._tooltipText(drop.IName, "Mod")
     elseif (dropType == "Relique") then
 
         if (Void.getRelic(drop.IName).isVaulted ~= 1) then
-            result = result .. Tooltip._tooltipText(drop.IName, "Relic")
+            result = result .. TT._tooltipText(drop.IName, "Relic")
         end
     elseif (dropType == "Credits") then
         iconText = Icon._Item("Crédits", nil, nil)
@@ -1155,7 +1126,7 @@ function p.getItemByEnemyTable(frame)
     local rTable = rHeader
 
     for i, d in pairs(Drops) do
-        rTable = rTable .. "\n|-\n|" .. linkEnemy(d.EName)
+        rTable = rTable .. "\n|-\n|" .. TT._tooltipText(d.EName, 'Enemy')
         rTable = rTable .. "||" .. asPercent(d.Chance)
     end
 
@@ -1249,8 +1220,9 @@ function p.getItemDropList(frame)
         if (string.len(result) > 0) then result = result .. "<br/>" end
         result = result .. "'''Ennemis :'''"
         for i, Drop in pairs(Drops) do
-            result = result .. "<br/>" .. linkEnemy(Drop.EName) .. space ..
-                         asPercent(Drop.Chance)
+            result =
+                result .. "<br/>" .. TT._tooltipText(Drop.EName, 'Enemy') ..
+                    space .. asPercent(Drop.Chance)
         end
     end
 
@@ -1282,7 +1254,7 @@ function p.getFullEnemyList(frame)
 
     table.sort(ENames, function(n1, n2) return n1 < n2 end)
     for i, Name in pairs(ENames) do
-        result = result .. "\n* " .. linkEnemy(Name)
+        result = result .. "\n* " .. TT._tooltipText(Name, 'Enemy')
     end
     return result
 end
