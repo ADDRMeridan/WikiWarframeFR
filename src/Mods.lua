@@ -17,8 +17,6 @@ local function getMod(name)
     return ret
 end
 
-local function doesModExists(name) return getMod(name) ~= nil end
-
 function p.getValue(frame)
 
     local modName = frame.args[1]
@@ -29,6 +27,9 @@ end
 
 function p._getValue(ModName, ValName)
 
+    local ret = nil
+
+    -- Recover Mod from DB
     local Mod = nil
     if (type(ModName) == "table") then
         Mod = ModName
@@ -36,110 +37,94 @@ function p._getValue(ModName, ValName)
     else
         Mod = getMod(ModName)
     end
-    local UpName = string.upper(ValName)
 
-    if (ModName == nil) then return "ERREUR : Pas de mod spécifié" end
-    if (ValName == nil) then return "ERREUR : Pas de valeur spécifiée" end
-    if (not doesModExists(ModName)) then
-        if (UpName == "IMAGE") then
-            return IMG_MOD_INCONNU
-        else
-            return "ERREUR : Le Mod '" .. ModName .. "' n'a pas été trouvé"
-        end
-    end
-
-    if (UpName == "ARCHIVED") then
-        return Mod.Archived
-    elseif (UpName == "FAMILY") then
-        return Mod.Family
-    elseif (UpName == "HASFAMILY") then
-        return Mod.Family ~= nil
-    elseif (UpName == "IMAGE") then
-        if (Mod.Image ~= nil and Mod.Image ~= "") then
-            return Mod.Image
-        else
-            return IMG_MOD_INCONNU
-        end
-    elseif (UpName == "INTRODUCED") then
-        if (Mod.Introduced ~= nil) then
-            return Version._getVersionLink(Mod.Introduced)
-        else
-            return nil
-        end
-    elseif (UpName == "LINK") then
-        if (Mod.Link ~= nil) then
-            return Mod.Link
-        else
-            return Mod.Name
-        end
-    elseif (UpName == "NAME") then
-        return Mod.Name
-    elseif (UpName == "NAMEEN") then
-        return Shared.trim(Mod.NameEN:gsub(" ", "_"))
-    elseif (UpName == "POLARITY") then
-        if (Mod.Polarity ~= nil) then
-            return Mod.Polarity
-        else
-            return "Aucune"
-        end
-    elseif (UpName == "POLARITYICON") then
-        if (Mod.Polarity ~= nil) then
-            return Icon._Pol(Mod.Polarity)
-        else
-            return "Aucune"
-        end
-    elseif (UpName == "PVP") then
-        return Mod.PvP
-    elseif (UpName == "RARITY") then
-        if (Mod.Rarity ~= nil) then
-            return Mod.Rarity
-        else
-            return "Inconnue"
-        end
-    elseif (UpName == "STANCE") then
-        return Mod.Stance
-    elseif (UpName == "TRADETAX") then
-        if (Mod.Rarity ~= nil) then
-            if (Mod.Rarity == "Commun") then
-                return '2,000 ' .. Icon._Item("Crédits")
-            elseif (Mod.Rarity == "Inhabituel") then
-                return '4,000 ' .. Icon._Item("Crédits")
-            elseif (Mod.Rarity == "Rare") then
-                return '8,000 ' .. Icon._Item("Crédits")
-            elseif (Mod.Rarity == "Légendaire") then
-                return '1,000,000 ' .. Icon._Item("Crédits")
-            elseif (Mod.Rarity == "Atypique") then
-                return '4,000 ' .. Icon._Item("Crédits")
-            elseif (Mod.Rarity == "Amalgame") then
-                return "Non Échangeable"
-            else
-                return nil
+    if (Mod ~= nil) then
+        if (ValName ~= nil) then
+            local UpName = string.upper(ValName)
+            if (UpName == "ARCHIVED") then
+                ret = Mod.Archived
+            elseif (UpName == "FAMILY") then
+                ret = Mod.Family
+            elseif (UpName == "HASFAMILY") then
+                ret = Mod.Family ~= nil
+            elseif (UpName == "IMAGE") then
+                if (Mod.Image ~= nil and Mod.Image ~= "") then
+                    ret = Mod.Image
+                else
+                    ret = IMG_MOD_INCONNU
+                end
+            elseif (UpName == "INTRODUCED") then
+                if (Mod.Introduced ~= nil) then
+                    ret = Version._getVersionLink(Mod.Introduced)
+                end
+            elseif (UpName == "LINK") then
+                if (Mod.Link ~= nil) then
+                    ret = Mod.Link
+                else
+                    ret = Mod.Name
+                end
+            elseif (UpName == "NAME") then
+                ret = Mod.Name
+            elseif (UpName == "NAMEEN") then
+                ret = Shared.trim(Mod.NameEN:gsub(" ", "_"))
+            elseif (UpName == "POLARITY") then
+                if (Mod.Polarity ~= nil) then
+                    ret = Mod.Polarity
+                else
+                    ret = "Aucune"
+                end
+            elseif (UpName == "POLARITYICON") then
+                if (Mod.Polarity ~= nil) then
+                    ret = Icon._Pol(Mod.Polarity)
+                end
+            elseif (UpName == "PVP") then
+                ret = Mod.PvP
+            elseif (UpName == "RARITY") then
+                if (Mod.Rarity ~= nil) then
+                    ret = Mod.Rarity
+                else
+                    ret = "Inconnue"
+                end
+            elseif (UpName == "STANCE") then
+                ret = Mod.Stance
+            elseif (UpName == "TRADETAX") then
+                if (Mod.Rarity ~= nil) then
+                    local credIcon = Icon._Item("Crédits")
+                    local rarityTab = {
+                        ["Commun"] = '2,000 ' .. credIcon,
+                        ["Inhabituel"] = '4,000 ' .. credIcon,
+                        ["Rare"] = '8,000 ' .. credIcon,
+                        ["Légendaire"] = '1,000,000 ' .. credIcon,
+                        ["Atypique"] = '4,000 ' .. credIcon,
+                        ["Amalgame"] = 'Non Échangeable'
+                    }
+                    ret = rarityTab[Mod.Rarity]
+                end
+            elseif (UpName == "TRANSMUTABLE") then
+                if (Mod.Transmutable) then
+                    ret =
+                        '[[Transmutation|<span style="color:green">Transmutable</span>]][[Category:Mod Transmutable]]'
+                else
+                    ret =
+                        '[[Transmutation|<span style="color:red">Non Transmutable</span>]][[Category:Mod Non Transmutable]]'
+                end
             end
         else
-            return nil
+            ret = Shared.printModuleError("Pas de valeur spécifiée")
         end
-    elseif (UpName == "TRANSMUTABLE") then
-        if (Mod.Transmutable ~= nil) then
-            if (Mod.Transmutable) then
-                return
-                    '[[Transmutation|<span style="color:green">Transmutable</span>]][[Category:Mod Transmutable]]'
-            else
-                return
-                    '[[Transmutation|<span style="color:red">Non Transmutable</span>]][[Category:Mod Non Transmutable]]'
-            end
-        else
-            return
-                '[[Transmutation|<span style="color:green">Transmutable</span>]][[Category:Mod Transmutable]]'
-        end
-    elseif (UpName == "WARFRAMEAUGMENT") then
-        return Mod.WarframeAugment
-    elseif (UpName == "WEAPONAUGMENT") then
-        return Mod.WeaponAugment
     else
-        return ModData["Mods"][ModName][ValName]
+        if (ValName ~= nil and string.upper(ValName) == "IMAGE") then
+            return IMG_MOD_INCONNU
+        else
+            ret = Shared.printModuleError("Mod '" .. ModName .. "' introuvable",
+                                          "Mods._getValue")
+        end
     end
+
+    return ret
 end
 
+-- Converts an array of modName strings to a Mod array
 local function build_checkArray(modArray)
 
     if (type(modArray[1]) == 'string') then
@@ -152,24 +137,21 @@ local function build_checkArray(modArray)
     return modArray
 end
 
+-- Prints an array of mods in a column format with their tooltip
 local function buildModColumn(modArray)
 
-    local ret = nil
-    if (Shared.tableCount(modArray) > 0) then
-
+    local ret = {}
+    if (not Shared.isTableEmpty(modArray)) then
         modArray = build_checkArray(modArray)
-        local first = true
-        for i, Mod in pairs(modArray) do
-            if (first) then
-                first = false
-                ret = TT._tooltipText(Mod.Name, 'Mod')
-            else
-                ret = ret .. '<br/>' .. TT._tooltipText(Mod.Name, 'Mod')
-            end
-            if (Mod.PvP) then ret = ret .. " (PvP)" end
+        for i, mod in pairs(modArray) do
+            local tmp = {}
+            table.insert(tmp, TT._tooltipText(mod.Name, 'Mod'))
+            if (mod.PvP) then table.insert(tmp, "(PvP)") end
+            table.insert(ret, table.concat(tmp, ' '))
         end
     end
-    return ret
+
+    return table.concat(ret, '<br/>')
 end
 
 local function getFamilyArray(family2LookFor, mod2Exclude)
@@ -195,199 +177,51 @@ function p.getFamilyInfoBox(frame)
     return ret
 end
 
-function p.buildModTableByRarity()
-
-    local buildLegendaryTable = ""
-    local countLegendary = 0
-    local buildRareTable = ""
-    local countRare = 0
-    local buildUncommonTable = ""
-    local countUncommon = 0
-    local buildCommonTable = ""
-    local countCommon = 0
-    local buildOtherTable = ''
-    local countOther = 0
-
-    for key, Mod in Shared.skpairs(ModData["Mods"]) do
-        --        mw.log(Mod.Rarity)
-
-        local modImg = p._getValue(Mod, "IMAGE")
-        if Mod.Rarity == "Légendaire" then
-            buildLegendaryTable = buildLegendaryTable .. "[[File:" .. modImg ..
-                                      "|114px|link=" .. Mod.Name .. "]]"
-            countLegendary = countLegendary + 1
-        elseif Mod.Rarity == "Rare" then
-            buildRareTable = buildRareTable .. "[[File:" .. modImg ..
-                                 "|114px|link=" .. Mod.Name .. "]]"
-            countRare = countRare + 1
-        elseif Mod.Rarity == "Inhabituel" then
-            buildUncommonTable = buildUncommonTable .. "[[File:" .. modImg ..
-                                     "|114px|link=" .. Mod.Name .. "]]"
-            countUncommon = countUncommon + 1
-        elseif Mod.Rarity == "Commun" then
-            buildCommonTable = buildCommonTable .. "[[File:" .. modImg ..
-                                   "|114px|link=" .. Mod.Name .. "]]"
-            countCommon = countCommon + 1
-        else
-            countOther = countOther + 1
-            buildOtherTable = buildOtherTable .. "[[File:" .. modImg ..
-                                  "|114px|link=" .. Mod.Name .. "]]"
-        end
-    end
-
-    local countTotal =
-        countLegendary + countRare + countUncommon + countCommon + countOther
-    local buildTable = countTotal .. "\n" ..
-                           "{| border=\"1\" cellpadding=\"1\" cellspacing=\"1\" class=\"article-table\"\n" ..
-                           "|-\n" .. "!Légendaire\n" .. countLegendary .. "\n" ..
-                           "| " .. buildLegendaryTable .. "\n" .. "|-\n" ..
-                           "! Rare\n" .. countRare .. "\n" .. "| " ..
-                           buildRareTable .. "\n" .. "|-\n" .. "! Inhabituel\n" ..
-                           countUncommon .. "\n" .. "| " .. buildUncommonTable ..
-                           "\n" .. "|-\n" .. "! Commun\n" .. countCommon .. "\n" ..
-                           "| " .. buildCommonTable .. "\n" .. '\n|-\n! Other\n' ..
-                           countOther .. '\n|' .. buildOtherTable .. "\n|}"
-
-    return buildTable
-end
-
-function p.buildModTableByPolarity()
-
-    local buildMaduraiTable = ""
-    local buildVazarinTable = ""
-    local buildNaramonTable = ""
-    local buildZenurikTable = ""
-    local buildPenjagaTable = ""
-    local buildUnairuTable = ""
-
-    local countMadurai = 0
-    local countVazarin = 0
-    local countNaramon = 0
-    local countZenurik = 0
-    local countPenjaga = 0
-    local countUnairu = 0
-
-    -- Madurai "V" "Madurai"
-    -- Vazarin "D"
-    -- Naramon "Bar"
-    -- Zenurik "Ability" "Zenurik"
-    -- Penjaga "Sentinel"
-    -- Unairu Pol Unairu  - R - Introduced in Update 13.0 and used for certain Melee Stance Mods.
-
-    for key, Mod in Shared.skpairs(ModData["Mods"]) do
-        --        mw.log(Mod.Polarity)
-
-        if Mod.Polarity == "V" or Mod.Polarity == "Madurai" then
-            buildMaduraiTable = buildMaduraiTable .. "[[File:" .. Mod.Image ..
-                                    "|114px|link=" .. Mod.Name .. "]]"
-            countMadurai = countMadurai + 1
-        elseif Mod.Polarity == "D" or Mod.Polarity == "Vazarin" then
-            buildVazarinTable = buildVazarinTable .. "[[File:" .. Mod.Image ..
-                                    "|114px|link=" .. Mod.Name .. "]]"
-            countVazarin = countVazarin + 1
-        elseif Mod.Polarity == "Bar" or Mod.Polarity == "Dash" or Mod.Polarity ==
-            "Naramon" then
-            buildNaramonTable = buildNaramonTable .. "[[File:" .. Mod.Image ..
-                                    "|114px|link=" .. Mod.Name .. "]]"
-            countNaramon = countNaramon + 1
-        elseif Mod.Polarity == "Ability" or Mod.Polarity == "Zenurik" or
-            Mod.Polarity == "Scratch" then
-            buildZenurikTable = buildZenurikTable .. "[[File:" .. Mod.Image ..
-                                    "|114px|link=" .. Mod.Name .. "]]"
-            countZenurik = countZenurik + 1
-        elseif Mod.Polarity == "Sentinel" or Mod.Polarity == "Penjaga" then
-            buildPenjagaTable = buildPenjagaTable .. "[[File:" .. Mod.Image ..
-                                    "|114px|link=" .. Mod.Name .. "]]"
-            countPenjaga = countPenjaga + 1
-        elseif Mod.Polarity == "R" or Mod.Polarity == "Unairu" or Mod.Polarity ==
-            "Ward" then
-            buildUnairuTable = buildUnairuTable .. "[[File:" .. Mod.Image ..
-                                   "|114px|link=" .. Mod.Name .. "]]"
-            countUnairu = countUnairu + 1
-        end
-    end
-
-    local countTotal =
-        countMadurai + countVazarin + countNaramon + countZenurik + countPenjaga +
-            countUnairu
-    local buildTable = countTotal .. "\n" ..
-                           "{| border=\"1\" cellpadding=\"1\" cellspacing=\"1\" class=\"article-table\"\n" ..
-                           "|-\n" .. "! Madurai\n" .. countMadurai .. "\n" ..
-                           "| " .. buildMaduraiTable .. "\n" .. "|-\n" ..
-                           "! Vazarin\n" .. countVazarin .. "\n" .. "| " ..
-                           buildVazarinTable .. "\n" .. "|-\n" .. "! Naramon\n" ..
-                           countNaramon .. "\n" .. "| " .. buildNaramonTable ..
-                           "\n" .. "|-\n" .. "! Zenurik\n" .. countZenurik ..
-                           "\n" .. "| " .. buildZenurikTable .. "\n" .. "|-\n" ..
-                           "! Penjaga\n" .. countPenjaga .. "\n" .. "| " ..
-                           buildPenjagaTable .. "\n" .. "|-\n" .. "! Unairu\n" ..
-                           countUnairu .. "\n" .. "| " .. buildUnairuTable ..
-                           "\n" .. "|}"
-
-    return buildTable
-end
-
-function p.getPolarityList()
-    local pols = {}
-
-    for name, Mod in Shared.skpairs(ModData["Mods"]) do
-        if (pols[Mod.Polarity] == nil) then
-            pols[Mod.Polarity] = 1
-        else
-            pols[Mod.Polarity] = pols[Mod.Polarity] + 1
-        end
-    end
-
-    local result = "POLARITES:"
-    for key, trash in Shared.skpairs(pols) do
-        result = result .. "\n" .. key .. " (" .. trash .. ")"
-    end
-    return result
-end
-
-function p.getRarityList()
-    local pols = {}
-
-    for name, Mod in Shared.skpairs(ModData["Mods"]) do
-        if (pols[Mod.Rarity] == nil) then
-            pols[Mod.Rarity] = 1
-        else
-            pols[Mod.Rarity] = pols[Mod.Rarity] + 1
-        end
-    end
-
-    local result = "RARETES:"
-    for key, trash in Shared.skpairs(pols) do
-        result = result .. "\n" .. key .. " (" .. trash .. ")"
-    end
-    return result
-end
-
 local function buildModGallery(modArray)
 
-    local ret = '\n{| style="margin:auto; text-align:center;"'
-    if (Shared.tableCount(modArray) > 0) then
+    local ret = {}
+    if (not Shared.isTableEmpty(modArray)) then
         modArray = build_checkArray(modArray)
-        local nameRow = ''
-        for i, Mod in pairs(modArray) do
+        table.insert(ret, '\n{| style="margin:auto; text-align:center;"')
+        local imgRow = {}
+        local nameRow = {}
+        for i, Mod in ipairs(modArray) do
             if ((i - 1) % 4 == 0) then
-                ret = ret .. nameRow .. '\n|-'
-                nameRow = '\n|-'
+                table.insert(ret, '|-')
+                table.insert(ret, table.concat(imgRow, '\n'))
+                table.insert(ret, '|-')
+                table.insert(ret, table.concat(nameRow, '\n'))
+                imgRow = {}
+                nameRow = {}
             end
-            local modImg = p._getValue(Mod, "IMAGE")
-            local modLink = p._getValue(Mod, "LINK")
-            ret = ret .. '\n| style="width:165px" |[[File:' .. modImg ..
-                      '|150px|link=' .. modLink .. ']]'
-            nameRow = nameRow .. '\n| style="vertical-align:text-top;" | ' ..
-                          TT._tooltipText(Mod.Name, 'Mod')
+            -- Image Row
+            local imgBuilder = {}
+            table.insert(imgBuilder, '| style="width:165px" |[[File:')
+            table.insert(imgBuilder, p._getValue(Mod, "IMAGE"))
+            table.insert(imgBuilder, '|150px|link=')
+            table.insert(imgBuilder, p._getValue(Mod, "LINK"))
+            table.insert(imgBuilder, ']]')
+            table.insert(imgRow, table.concat(imgBuilder))
+            -- Name Row
+            local nameBuilder = {}
+            table.insert(nameBuilder, '| style="vertical-align:text-top;" | ')
+            table.insert(nameBuilder, TT._tooltipText(Mod.Name, 'Mod'))
             if (Mod.PvP) then
-                nameRow = nameRow .. '<br/>([[Conclave]] uniquement)'
+                table.insert(nameBuilder, '<br/>([[Conclave]] uniquement)')
             end
+            table.insert(nameRow, table.concat(nameBuilder))
         end
-        ret = ret .. nameRow
+        -- Add the remaining 1-4 mods
+        if (not Shared.isTableEmpty(imgRow)) then
+            table.insert(ret, '|-')
+            table.insert(ret, table.concat(imgRow, '\n'))
+            table.insert(ret, '|-')
+            table.insert(ret, table.concat(nameRow, '\n'))
+        end
+        table.insert(ret, '|}')
     end
-    ret = ret .. '\n|}'
-    return ret
+
+    return table.concat(ret, '\n')
 end
 
 local function doesModContainTraits(Mod, traitsArray)
