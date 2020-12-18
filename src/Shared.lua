@@ -103,6 +103,13 @@ function p.titleCase(head, tail)
     end
 end
 
+-- Returns true if the given table is empty
+function p.isTableEmpty(t)
+
+    local next = next
+    return next(t) == nil
+end
+
 -- Returns the number of rows in a table
 -- Originally snagged this from Module:VoidByReward written by User:NoBrainz
 function p.tableCount(t)
