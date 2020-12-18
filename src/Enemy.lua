@@ -260,12 +260,12 @@ function p._getValue(enemyName, valName)
                 ret = table.concat(tmp, '<br/>')
             end
         else
-            errorMess = Shared.printTemplateError('Check the value name.',
-                                                  '_getValue')
+            errorMess = Shared.printModuleError('Check the value name.',
+                                                '_getValue')
         end
     else
-        errorMess = Shared.printTemplateError('Check the enemy name.',
-                                              '_getValue')
+        errorMess =
+            Shared.printModuleError('Check the enemy name.', '_getValue')
     end
 
     return ret, errorMess

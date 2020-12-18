@@ -101,8 +101,7 @@ local function buildPrimeTable(Data)
     for i, v in ipairs(Parts) do
         local Part = Shared.titleCase(v);
         table = table .. '\n! style="text-align:center; width: ' ..
-                    (100 / (#Parts + 1)) .. '%" | ' ..
-                    Icon._Item(partType .. Part) .. Part;
+                    (100 / (#Parts + 1)) .. '%" | ' .. Icon._Item(Part, true);
     end
     table = table .. '\n|-';
 

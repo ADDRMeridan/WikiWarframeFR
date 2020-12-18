@@ -44,12 +44,11 @@ function p._Item(itemName, textExist, imgSize)
             -- Close Image
             table.insert(ret, ']]')
         else
-            table.insert(ret, Shared.printTemplateError('Aucun icon trouvé.',
-                                                        '_Item'))
+            table.insert(ret, Shared.printModuleError('Aucun icon trouvé.',
+                                                      '_Item'))
         end
     else
-        table.insert(ret,
-                     Shared.printTemplateError(
+        table.insert(ret, Shared.printModuleError(
                          "Item introuvable dans [[Module:Icon/data]].", "_Item"))
     end
 

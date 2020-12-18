@@ -87,11 +87,10 @@ function p._getValue(abiName, valName, frame)
         elseif (upVal == "USERTYPE") then
             ret = ability.UserType
         else
-            ret =
-                Shared.printTemplateError('Check the value name.', '_getValue')
+            ret = Shared.printModuleError('Check the value name.', '_getValue')
         end
     else
-        ret = Shared.printTemplateError('Check the ability name.', '_getValue')
+        ret = Shared.printModuleError('Check the ability name.', '_getValue')
     end
 
     return ret

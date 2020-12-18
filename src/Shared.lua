@@ -271,7 +271,7 @@ function p.charChiantFRTab(tab)
     return t
 end
 
-function p.printTemplateError(str, functionName)
+function p.printModuleError(str, functionName)
 
     local ret = {}
     table.insert(ret, '<span style="color:red; font-weight:bold;">Error: ')
@@ -281,7 +281,7 @@ function p.printTemplateError(str, functionName)
     end
     table.insert(ret, str)
     table.insert(ret, '</span>[[Category:') -- Separation pour eviter de faire apparaitre le module dans la category
-    table.insert(ret, 'Template Error]]')
+    table.insert(ret, 'Module Error]]')
 
     return table.concat(ret)
 end

@@ -376,8 +376,7 @@ function p.checkItemExist(itemName, itemType, conclave)
     local objDB, objDBName, objTooltipClass = getObjDB(itemType, conclave)
     -- Check if data has been found
     if (objDB == nil) then
-        return Shared.printTemplateError('Unknow object type.',
-                                         'checkItemExists')
+        return Shared.printModuleError('Unknow object type.', 'checkItemExists')
     end
 
     -- Search object

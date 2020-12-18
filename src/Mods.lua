@@ -11,39 +11,13 @@ local Ability = require('Module:Ability')
 local IMG_MOD_INCONNU = 'Mod_inconnu.png'
 
 local function getMod(name)
-    local _mod = ModData["Mods"][name]
-    if _mod ~= nil and _mod.Name == name then
-        return _mod
-    else
-        for modName, Mod in pairs(ModData["Mods"]) do
-            if modName == name or Mod.Name == name then return Mod end
-        end
-    end
+
+    local ret = ModData["Mods"][name]
+
+    return ret
 end
 
-local function ifModExists(name, _mod)
-    if type(_mod) ~= table then
-        _mod = ModData["Mods"][name]
-    elseif _mod.Name == name then
-        return true
-    end
-
-    if _mod ~= nil and _mod.Name == name then
-        return true
-    else
-        for modName, Mod in pairs(ModData["Mods"]) do
-            if modName == name or Mod.Name == name then return true end
-        end
-    end
-    return false
-end
-
-function p.getValueRaw(frame)
-    local ModName = frame.args[1]
-    local ValName = frame.args[2]
-    local Mod = getMod(ModName)
-    if Mod ~= nil then return Mod[ValName] end
-end
+local function doesModExists(name) return getMod(name) ~= nil end
 
 function p.getValue(frame)
 
@@ -66,7 +40,7 @@ function p._getValue(ModName, ValName)
 
     if (ModName == nil) then return "ERREUR : Pas de mod spécifié" end
     if (ValName == nil) then return "ERREUR : Pas de valeur spécifiée" end
-    if (not ifModExists(ModName, Mod)) then
+    if (not doesModExists(ModName)) then
         if (UpName == "IMAGE") then
             return IMG_MOD_INCONNU
         else
@@ -799,8 +773,8 @@ function p.printModUsableOn(frame)
     elseif (augmentType == 'Warframe') then
         ret = printModUsableOnWarframe(augment)
     else
-        ret = Shared.printTemplateError("Type d'augment inconnu.",
-                                        'printModUsableOn')
+        ret = Shared.printModuleError("Type d'augment inconnu.",
+                                      'printModUsableOn')
     end
 
     return ret

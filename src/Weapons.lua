@@ -3770,7 +3770,7 @@ local function BuildCompTable(Head, Weapons, UseCompDisplay)
         --    mw.log(tRows)
         return tHeader .. tRows .. "\n|}"
     else
-        return Shared.printTemplateError('Pas d\'armes trouvees.',
+        return Shared.printModuleError('Pas d\'armes trouvees.',
                                          'BuildCompTable')
     end
 end
@@ -3792,7 +3792,7 @@ function p.getCompTableGuns(frame)
             return weaponFilter_NonMelee(x, compType, compCat, compTrigger)
         end)
     else
-        return Shared.printTemplateError('Type inconnu.', 'getCompTableGuns')
+        return Shared.printModuleError('Type inconnu.', 'getCompTableGuns')
     end
 
     local Head = {{"Name", false, "Name"}}
