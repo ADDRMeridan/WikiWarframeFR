@@ -6,6 +6,10 @@ local misCountCol = 4 -- Number of things dropped. If empty, default to 1
 local modNameCol = 1 -- Name of the mod
 local modChanceCol = 2 -- The chance of a mod dropping
 local modCountCol = 3 -- If empty, default to 1. Normally only different for Endo
+--    in DropData["Enemies"].Avionics
+local aviNameCol = 1 -- Avionic name
+local aviChanceCol = 2 -- Avionic drop chance
+local aviHouseCol = 3 -- Avionic house (optional if known)
 --    in DropData["Syndicates"].Offerings
 local synNameCol = 1 -- Name of the offering
 local synTypeCol = 2 -- Type of offering
@@ -121,6 +125,41 @@ local function buildSyndicateDrop(theSyndicate, Item)
     return drop
 end
 
+-- Like above, but for Avionics
+local function buildAvionicDrop(Enemy, Avionic)
+    local drop = {EName = Enemy.Name, IName = Avionic[aviNameCol]}
+    drop.Chance = (Enemy.ModChance * Avionic[aviChanceCol]) / 100
+    drop.Count = 1
+    drop.Type = 'Avionic'
+    if (Avionic[aviHouseCol] ~= nil) then drop.House = Avionic[aviHouseCol] end
+    return drop
+end
+
+-- Like above, but for resource drops
+local function buildResourceDrop(Enemy, Resource)
+    local drop = {EName = Enemy.Name, IName = Resource[resourceNameCol]}
+    drop.Chance = (Enemy.ResourceChance * Resource[resourceChanceCol]) / 100
+    drop.Count = 1
+    drop.Type = 'Resource'
+    return drop
+end
+
+local function linkEnemy(EName)
+    -- Cut off enemy names before parentheses while linking
+    local paren, trash = string.find(EName, "%(")
+    local Result = ""
+    if (paren ~= nil) then
+        Result = "[[" .. string.sub(EName, 1, paren - 2) .. "|" .. EName .. "]]"
+    elseif (EName == "Fissure Corrupted Enemy") then
+        Result = "[[Fissure du Néant|" .. EName .. "]]"
+    elseif (EName == "Dargyn" or EName == "Carrier") then
+        Result = "[[" .. EName .. " (Enemy)" .. "|" .. EName .. "]]"
+    else
+        Result = "[[" .. EName .. "]]"
+    end
+    return Result
+end
+
 -- Copied wholesale from Module:Weapons
 -- Possibly should just go live in Shared
 local function asPercent(val, digits)
@@ -132,6 +171,16 @@ end
 -- Links a Syndicate and returns it.
 -- Doesn't actually do anything but add brackets right now
 local function linkSyndicate(SName) return '[[' .. SName .. ']]' end
+
+-- Returns the real drop chance of a specific enemy drop
+-- This involves combining chance to drop mod/blueprint with chance of that specific item dropping
+-- So 3% Mod Chance + 37.94% Pressure Point chance = 1.1382% real chance
+local function getRealDropChance(EnemyDrop)
+    local odds1 = EnemyDrop[eChance1Col]
+    local odds2 = EnemyDrop[eChance2Col]
+    local result = ((odds1 * odds2) / 100)
+    return result
+end
 
 local function getAllModDrops(enemyName)
     local drops = {}
@@ -206,6 +255,18 @@ local function getModLink(ModName)
         return "<span class=\"mod-tooltip\" data-param=\"" .. ModName ..
                    "\" style=\"white-space:pre\">[[" .. ModName .. "]]</span>"
     end
+end
+
+local function getAvionicLink(AName, AHouse)
+    local result = '<span style="white-space:pre">[[' .. AName
+    -- Wiki name collisions are handled here
+    -- Warhead is also an Archwing ability
+    if (AName == 'Warhead') then result = result .. ' (Avionique)|' .. AName end
+    result = result .. ']]'
+    -- Add the house if it was passed in
+    if (AHouse ~= nil) then result = result .. ' (' .. AHouse .. ')' end
+    result = result .. '</span>'
+    return result
 end
 
 -- Formats a string of text for a reward table
@@ -901,7 +962,7 @@ function p.getRelicByLocation(frame)
     rHeader = rHeader .. "style=\"width:100%;border:1px solid black; "
     rHeader = rHeader .. "text-align:right;font-size:12px;\""
     rHeader = rHeader .. "\n!Type"
-    rHeader = rHeader .. "\n!Category"
+    rHeader = rHeader .. "\n!Catégorie"
     rHeader = rHeader .. "\n!Rotation"
     rHeader = rHeader .. "\n!Chance"
 
