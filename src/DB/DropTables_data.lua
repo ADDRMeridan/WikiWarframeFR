@@ -1,4 +1,3 @@
--- REMINDER: Also update "Last Updated" on Template:Rewards
 local DropData = {
     ["Missions"] = {
         {
@@ -2998,6 +2997,144 @@ local DropData = {
                 }
             }
         }, {
+            Type = "Event",
+            Tier = "Normal",
+            Name = "Venin Orphix Normal",
+            Alias = "Venin Orphix Normal",
+            ShortName = "[[Operation: Venin Orphix]]",
+            Ignore = true,
+            Rewards = {
+                ["A"] = {
+                    {"Aviateur du Necramech", "Mod", 2.50},
+                    {"Rage du Necramech", "Mod", 2.50},
+                    {"Perception des Ennemis du Necramech", "Mod", 2.50},
+                    {"Necramech Deflection", "Mod", 2.50},
+                    {"Reproche du Necramech", "Mod", 2.50},
+                    {"Rafistolage du Necramech", "Mod", 2.50},
+                    {"Augure du Necramech", "Mod", 2.50},
+                    {"Lith P4", "Relique", 5.00}, {"Lith N5", "Relique", 5.00},
+                    {"Lith D3", "Relique", 5.00}, {"Lith P5", "Relique", 5.00},
+                    {"Lith B7", "Relique", 5.00}, {"Lith N6", "Relique", 5.00},
+                    {"Lith T4", "Relique", 5.00}, {"Lith K5", "Relique", 5.00},
+                    {"Lith M7", "Relique", 5.00}, {"Endo", "Endo", 37.50, 500}
+                },
+                ["B"] = {
+                    {"{{Weapon|Cedo}}", "Schéma", 2.00},
+                    {"{{Weapon|Cedo|Cedo - Canon}}", "Schéma", 2.00},
+                    {"{{Weapon|Cedo|Cedo - Culasse}}", "Schéma", 2.00},
+                    {"{{Weapon|Cedo|Cedo - Crosse}}", "Schéma", 2.00},
+                    {"Meso E4", "Relique", 8.00}, {"Meso C6", "Relique", 8.00},
+                    {"Meso I1", "Relique", 8.00}, {"Meso P2", "Relique", 8.00},
+                    {"Meso K3", "Relique", 8.00}, {"Meso G2", "Relique", 8.00},
+                    {"Meso N10", "Relique", 8.00}, {"Meso E5", "Relique", 8.00},
+                    {"Endo", "Endo", 28.00, 750}
+                },
+                ["C"] = {
+                    {"{{WF|Lavos}}", "Schéma", 2.00},
+                    {"{{WF|Lavos|Lavos - Châssis}}", "Schéma", 2.00},
+                    {"{{WF|Lavos|Lavos - Neuroptiques}}", "Schéma", 2.00},
+                    {"{{WF|Lavos|Lavos - Systèmes}}", "Schéma", 2.00},
+                    {"Casque Lavos Cordatus ", "Schéma", 2.00},
+                    {"Neo T2", "Relique", 8.00}, {"Neo D2", "Relique", 8.00},
+                    {"Neo N13", "Relique", 8.00}, {"Neo I2", "Relique", 8.00},
+                    {"Neo S14", "Relique", 8.00}, {"Neo Z6", "Relique", 8.00},
+                    {"Neo E2", "Relique", 8.00}, {"Neo B6", "Relique", 8.00},
+                    {"Endo", "Endo", 26.00, 1000}
+                }
+            }
+        }, {
+            Type = "Event",
+            Tier = "Avancé",
+            Name = "Venin Orphix Avancé",
+            Alias = "Venin Orphix Avancé",
+            ShortName = "[[Operation: Venin Orphix]]",
+            Ignore = true,
+            Rewards = {
+                ["A"] = {
+                    {"Aviateur du Necramech", "Mod", 3.00},
+                    {"Rage du Necramech", "Mod", 3.00},
+                    {"Perception des Ennemis du Necramech", "Mod", 3.00},
+                    {"Necramech Deflection", "Mod", 3.00},
+                    {"Reproche du Necramech", "Mod", 3.00},
+                    {"Rafistolage du Necramech", "Mod", 3.00},
+                    {"Augure du Necramech", "Mod", 3.00},
+                    {"Lith P4", "Relique", 6.00}, {"Lith N5", "Relique", 6.00},
+                    {"Lith D3", "Relique", 6.00}, {"Lith P5", "Relique", 6.00},
+                    {"Lith B7", "Relique", 6.00}, {"Lith N6", "Relique", 6.00},
+                    {"Lith T4", "Relique", 6.00}, {"Lith K5", "Relique", 6.00},
+                    {"Lith M7", "Relique", 6.00}, {"Endo", "Endo", 25.00, 750}
+                },
+                ["B"] = {
+                    {"{{Weapon|Cedo}}", "Schéma", 3.00},
+                    {"{{Weapon|Cedo|Cedo - Canon}}", "Schéma", 3.00},
+                    {"{{Weapon|Cedo|Cedo - Culasse}}", "Schéma", 3.00},
+                    {"{{Weapon|Cedo|Cedo - Crosse}}", "Schéma", 3.00},
+                    {"Meso E4", "Relique", 6.00}, {"Meso C6", "Relique", 6.00},
+                    {"Meso I1", "Relique", 6.00}, {"Meso P2", "Relique", 6.00},
+                    {"Meso K3", "Relique", 6.00}, {"Meso G2", "Relique", 6.00},
+                    {"Meso N10", "Relique", 6.00}, {"Meso E5", "Relique", 6.00},
+                    {"Endo", "Endo", 40.00, 1500}
+                },
+                ["C"] = {
+                    {"{{WF|Lavos}}", "Schéma", 3.00},
+                    {"{{WF|Lavos|Lavos - Châssis}}", "Schéma", 3.00},
+                    {"{{WF|Lavos|Lavos - Neuroptiques}}", "Schéma", 3.00},
+                    {"{{WF|Lavos|Lavos - Systèmes}}", "Schéma", 3.00},
+                    {"Casque Lavos Cordatus ", "Schéma", 3.00},
+                    {"Neo T2", "Relique", 6.00}, {"Neo D2", "Relique", 6.00},
+                    {"Neo N13", "Relique", 6.00}, {"Neo I2", "Relique", 6.00},
+                    {"Neo S14", "Relique", 6.00}, {"Neo Z6", "Relique", 6.00},
+                    {"Neo E2", "Relique", 6.00}, {"Neo B6", "Relique", 6.00},
+                    {"Endo", "Endo", 37.00, 2250}
+                }
+            }
+        }, {
+            Type = "Event",
+            Tier = "Endurance",
+            Name = "Venin Orphix Endurance",
+            Alias = "Venin Orphix Endurance",
+            ShortName = "[[Operation: Venin Orphix]]",
+            Ignore = true,
+            Rewards = {
+                ["A"] = {
+                    {"{{WF|Lavos}}", "Schéma", 4.00},
+                    {"{{WF|Lavos|Lavos - Châssis}}", "Schéma", 4.00},
+                    {"{{WF|Lavos|Lavos - Neuroptiques}}", "Schéma", 4.00},
+                    {"{{WF|Lavos|Lavos - Systèmes}}", "Schéma", 4.00},
+                    {"Casque Lavos Cordatus ", "Schéma", 8.00},
+                    {"Neo T2", "Relique", 8.00}, {"Neo D2", "Relique", 8.00},
+                    {"Neo N13", "Relique", 8.00}, {"Neo I2", "Relique", 8.00},
+                    {"Neo S14", "Relique", 8.00}, {"Neo Z6", "Relique", 8.00},
+                    {"Neo E2", "Relique", 8.00}, {"Neo B6", "Relique", 8.00},
+                    {"Endo", "Endo", 12.00, 1000}
+                },
+                ["B"] = {
+                    {"{{Weapon|Cedo}}", "Schéma", 4.00},
+                    {"{{Weapon|Cedo|Cedo - Canon}}", "Schéma", 4.00},
+                    {"{{Weapon|Cedo|Cedo - Culasse}}", "Schéma", 4.00},
+                    {"{{Weapon|Cedo|Cedo - Crosse}}", "Schéma", 4.00},
+                    {"Meso E4", "Relique", 8.00}, {"Meso C6", "Relique", 8.00},
+                    {"Meso I1", "Relique", 8.00}, {"Meso P2", "Relique", 8.00},
+                    {"Meso K3", "Relique", 8.00}, {"Meso G2", "Relique", 8.00},
+                    {"Meso N10", "Relique", 8.00}, {"Meso E5", "Relique", 8.00},
+                    {"Endo", "Endo", 20.00, 2000}
+                },
+                ["C"] = {
+                    {"Aviateur du Necramech", "Mod", 4.00},
+                    {"Rage du Necramech", "Mod", 4.00},
+                    {"Perception des Ennemis du Necramech", "Mod", 4.00},
+                    {"Necramech Deflection", "Mod", 4.00},
+                    {"Reproche du Necramech", "Mod", 4.00},
+                    {"Rafistolage du Necramech", "Mod", 4.00},
+                    {"Augure du Necramech", "Mod", 4.00},
+                    {"Lith P4", "Relique", 8.00}, {"Lith N5", "Relique", 8.00},
+                    {"Lith D3", "Relique", 8.00}, {"Lith P5", "Relique", 8.00},
+                    {"Lith B7", "Relique", 8.00}, {"Lith N6", "Relique", 8.00},
+                    {"Lith T4", "Relique", 8.00}, {"Lith K5", "Relique", 8.00},
+                    {"Lith M7", "Relique", 8.00}
+                }
+            }
+        }, {
             Type = "Mise à Prix de Cetus",
             Tier = "5-15-1",
             Name = "Niv&nbsp;5-15 Étapes 1",
@@ -4810,8 +4947,7 @@ local DropData = {
                     {"Lentille Madurai", "Ressource", 17.5},
                     {"Résidu de Vome", "Ressource", 7.5, 5},
                     {"Défense Focalisée", "Mod", 12.5}
-                },
-                ["C"] = {}
+                }
             }
         }, {
             Type = "Mise à Prix - Necralisk",
@@ -4840,8 +4976,7 @@ local DropData = {
                     {"{{WF|Xaku}} - Systèmes", "Schéma", 7.5},
                     {"Sous-Système de Ciblage", "Mod", 8.75},
                     {"Ordonnance Guidée", "Mod", 8.75}
-                },
-                ["C"] = {}
+                }
             }
         }, {
             Type = "Mise à Prix - Necralisk",
@@ -4872,8 +5007,7 @@ local DropData = {
                     {"Sous-Système de Ciblage", "Mod", 7},
                     {"Ordonnance Guidée", "Mod", 7},
                     {"Canon Étroit", "Mod", 20}
-                },
-                ["C"] = {}
+                }
             }
         }, {
             Type = "Mise à Prix - Necralisk",
@@ -4895,8 +5029,7 @@ local DropData = {
                     {"Sous-Système de Ciblage", "Mod", 11.67},
                     {"Ordonnance Guidée", "Mod", 11.67},
                     {"Canon Étroit", "Mod", 33.33}
-                },
-                ["C"] = {}
+                }
             }
         },
         -- Cambion Drift Tier 5/6 Bounty does not have a rotation B and C reward so putting an empty key-value pair
@@ -4912,9 +5045,7 @@ local DropData = {
                     {"Étoile Ayatan Ambre", "Ressource", 45.45, 1},
                     {"Endo", "Endo", 45.45, 1000},
                     {"Kuva", "Ressource", 9.09, 750}
-                },
-                ["B"] = {},
-                ["C"] = {}
+                }
             }
         }, {
             Type = "Mise à Prix - Necralisk",
@@ -4929,9 +5060,7 @@ local DropData = {
                     {"Kuva", "Ressource", 5.71, 750},
                     {"Axi E1", "Relique", 28.57},
                     {"{{WF|Xaku}} - Châssis", "Schéma", 8.57}
-                },
-                ["B"] = {},
-                ["C"] = {}
+                }
             }
         }, {
             Type = "Mise à Prix - Necralisk",
@@ -4947,9 +5076,7 @@ local DropData = {
                     {"Axi E1", "Relique", 22.22},
                     {"{{WF|Xaku}} - Châssis", "Schéma", 6.67},
                     {"{{Weapon|Quassus}}", "Schéma", 22.22}
-                },
-                ["B"] = {},
-                ["C"] = {}
+                }
             }
         }, {
             Type = "Mise à Prix - Necralisk",
@@ -4962,9 +5089,7 @@ local DropData = {
                     {"Axi E1", "Relique", 43.48},
                     {"{{WF|Xaku}} Châssis", "Schéma", 13.04},
                     {"{{Weapon|Quassus}}", "Schéma", 43.48}
-                },
-                ["B"] = {},
-                ["C"] = {}
+                }
             }
         }, {
             Type = "Mise à Prix - Necralisk (Route de l'Acier)",
@@ -4977,9 +5102,7 @@ local DropData = {
                     {"Étoile Ayatan Ambre", "Ressource", 45.45, 1},
                     {"Endo", "Endo", 45.45, 1000},
                     {"Kuva", "Ressource", 9.09, 750}
-                },
-                ["B"] = {},
-                ["C"] = {}
+                }
             }
         }, {
             Type = "Mise à Prix - Necralisk (Route de l'Acier)",
@@ -4994,9 +5117,7 @@ local DropData = {
                     {"Kuva", "Ressource", 5.71, 750},
                     {"Axi E1", "Relique", 28.57},
                     {"{{WF|Xaku}} - Châssis", "Schéma", 8.57}
-                },
-                ["B"] = {},
-                ["C"] = {}
+                }
             }
         }, {
             Type = "Mise à Prix - Necralisk (Route de l'Acier)",
@@ -5012,9 +5133,7 @@ local DropData = {
                     {"Axi E1", "Relique", 22.22},
                     {"{{WF|Xaku}} - Châssis", "Schéma", 6.67},
                     {"{{Weapon|Quassus}}", "Schéma", 22.22}
-                },
-                ["B"] = {},
-                ["C"] = {}
+                }
             }
         }, {
             Type = "Mise à Prix - Necralisk (Route de l'Acier)",
@@ -5027,55 +5146,107 @@ local DropData = {
                     {"Axi E1", "Relique", 43.48},
                     {"{{WF|Xaku}} - Châssis", "Schéma", 13.04},
                     {"{{Weapon|Quassus}}", "Schéma", 43.48}
-                },
-                ["B"] = {},
-                ["C"] = {}
+                }
             }
         }, {
             Type = "Mise à Prix - Salle d'Isolement",
-            Tier = "1",
-            Name = "1",
+            Tier = "30-40",
+            Name = "Lvl&nbsp;30-40",
             Alias = "Isolation Vault Tier 1",
-            ShortName = "IsoVault-1",
+            ShortName = "30-40",
             Rewards = {
                 ["A"] = {
-                    {"Matrice d'Orientation Orokin", "Ressource", 50, 3},
-                    {"Meso N10", "Relique", 12.5}, {"Meso C6", "Relique", 12.5},
-                    {"Meso E4", "Relique", 12.5},
-                    {"Xénorhast Trapèze", "Ressource", 6.25, 1},
-                    {"Cabochon Embolos", "Ressource", 6.25, 1}
-                }
-            }
-        }, {
-            Type = "Mise à Prix - Salle d'Isolement",
-            Tier = "2",
-            Name = "2",
-            Alias = "Isolation Vault Tier 2",
-            ShortName = "IsoVault-2",
-            Rewards = {
-                ["A"] = {
-                    {"Matrice Balistique Orokin", "Ressource", 50, 3},
-                    {"Neo D2", "Relique", 12.5}, {"Neo I2", "Relique", 12.5},
-                    {"Neo T2", "Relique", 12.5}, {"Neo N13", "Relique", 12.5}
-                }
-            }
-        }, {
-            Type = "Mise à Prix - Salle d'Isolement",
-            Tier = "3",
-            Name = "3",
-            Alias = "Isolation Vault Tier 3",
-            ShortName = "IsoVault-3",
-            Rewards = {
-                ["A"] = {
-                    {"Matrice Animus Orokin", "Ressource", 51.25, 3},
-                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 5, 1},
+                    {"Furoncles Résiduels", "Ressource", 50.00},
+                    {"Redirection du Necramech", "Mod", 25.00},
+                    {"Matrice d'Orientation Orokin", "Ressource", 12.50, 2},
+                    {"Meso N10", "Relique", 12.50}
+                },
+                ["B"] = {
+                    {"Virémie Résiduelle", "Ressource", 50.00},
+                    {"Efficacité du Necramech", "Mod", 25.00},
+                    {"Matrice Balistique Orokin", "Ressource", 12.50, 2},
+                    {"Neo I2", "Relique", 12.50}
+                },
+                ["C"] = {
+                    {"Théorème de Contagion", "Ressource", 50.00},
+                    {"Propulseurs du Necramech", "Mod", 20.00},
                     {
-                        "Culasse d'Arme de Necramech Endommagé", "Ressource",
-                        5, 1
+                        "Crosse d'Arme de Necramech Endommagé", "Ressource",
+                        15.00
+                    }, {"Scintillateur", "Ressource", 10.00, 3},
+                    {"Matrice Animus Orokin", "Ressource", 2.50, 2},
+                    {"Axi C5", "Relique", 2.50}
+                }
+            }
+        }, {
+            Type = "Mise à Prix - Salle d'Isolement",
+            Tier = "40-50",
+            Name = "Lvl&nbsp;40-50",
+            Alias = "Isolation Vault Tier 2",
+            ShortName = "40-50",
+            Rewards = {
+                ["A"] = {
+                    {"Furoncles Résiduels", "Ressource", 50.00},
+                    {"Assaut du Necramech", "Mod", 25.00},
+                    {"{{Weapon|Arum Spinosa}}", "Schéma", 12.50},
+                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 3},
+                    {"Meso N10", "Relique", 6.25}
+                },
+                ["B"] = {
+                    {"Virémie Résiduelle", "Ressource", 50.00},
+                    {"Continuité du Necramech", "Mod", 25.00},
+                    {
+                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
+                        "Schéma", 12.50
+                    }, {"Matrice Balistique Orokin", "Ressource", 6.25, 3},
+                    {"Neo I2", "Relique", 6.25}
+                },
+                ["C"] = {
+                    {"Théorème de Contagion", "Ressource", 50.00},
+                    {"Onde Sismique du Necramech", "Mod", 20.00},
+                    {
+                        "Crosse d'Arme de Necramech Endommagé", "Ressource",
+                        15.00
                     },
-                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 5, 1},
-                    {"Axi B3", "Relique", 11.25}, {"Axi T4", "Relique", 11.25},
-                    {"Axi C5", "Relique", 11.25}
+                    {
+                        "{{Weapon|Arum Spinosa|Arum Spinosa - Rivet}}",
+                        "Schéma", 10.00
+                    }, {"Matrice Animus Orokin", "Ressource", 2.50, 3},
+                    {"Axi C5", "Relique", 2.50}
+                }
+            }
+        }, {
+            Type = "Mise à Prix - Salle d'Isolement",
+            Tier = "50-60",
+            Name = "Lvl&nbsp;50-60",
+            Alias = "Isolation Vault Tier 3",
+            ShortName = "50-60",
+            Rewards = {
+                ["A"] = {
+                    {"Furoncles Résiduels", "Ressource", 50.00},
+                    {"Furie du Necramech", "Mod", 25.00},
+                    {"{{Weapon|Sporothrix}}", "Schéma", 12.50},
+                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 4},
+                    {"Meso N10", "Relique", 6.25}
+                },
+                ["B"] = {
+                    {"Endo", "Endo", 50.00, 2500},
+                    {"Virémie Résiduelle", "Ressource", 25.00},
+                    {"Hydrauliques du Necramech", "Mod", 12.50},
+                    {
+                        "{{Weapon|Sporothrix|Sporothrix - Culasse}}", "Schéma",
+                        6.25
+                    }, {"Matrice Balistique Orokin", "Ressource", 3.13, 4},
+                    {"Neo I2", "Relique", 3.13}
+                },
+                ["C"] = {
+                    {"Théorème de Contagion", "Ressource", 50.00},
+                    {"Rationalisation du Necramech", "Mod", 20.00},
+                    {
+                        "Crosse d'Arme de Necramech Endommagé", "Ressource",
+                        15.00
+                    }, {"Matrice Animus Orokin", "Ressource", 7.50, 4},
+                    {"Axi C5", "Relique", 7.50}
                 }
             }
         }, {
@@ -5086,12 +5257,22 @@ local DropData = {
             ShortName = "30-40",
             Rewards = {
                 ["A"] = {
-                    {"Endo", "Endo", 31.25, 500},
-                    {"Matrice d'Orientation Orokin", "Ressource", 25.00, 2},
+                    {"Furoncles Résiduels", "Ressource", 50.00},
                     {"Redirection du Necramech", "Mod", 25.00},
-                    {"Furoncles Résiduels", "Ressource", 6.25},
-                    {"Brume Résiduelle", "Ressource", 6.25},
-                    {"Théorème Émollient", "Ressource", 6.25}
+                    {"Matrice d'Orientation Orokin", "Ressource", 12.50, 2},
+                    {"Meso N10", "Relique", 12.50}
+                },
+                ["B"] = {
+                    {"Brume Résiduelle", "Ressource", 50.00},
+                    {"Redirection du Necramech", "Mod", 25.00},
+                    {"Matrice d'Orientation Orokin", "Ressource", 12.50, 2},
+                    {"Meso C6", "Relique", 12.50}
+                },
+                ["C"] = {
+                    {"Théorème Émollient", "Ressource", 50.00},
+                    {"Redirection du Necramech", "Mod", 25.00},
+                    {"Matrice d'Orientation Orokin", "Ressource", 12.50, 2},
+                    {"Meso E4", "Relique", 12.50}
                 }
             }
         }, {
@@ -5102,19 +5283,34 @@ local DropData = {
             ShortName = "30-40",
             Rewards = {
                 ["A"] = {
-                    {"Endo", "Endo", 15.63, 500},
-                    {"Matrice d'Orientation Orokin", "Ressource", 12.50, 2},
+                    {"Furoncles Résiduels", "Ressource", 25.00},
                     {"Redirection du Necramech", "Mod", 12.50},
-                    {"Furoncles Résiduels", "Ressource", 3.13},
-                    {"Brume Résiduelle", "Ressource", 3.13},
-                    {"Théorème Émollient", "Ressource", 3.13},
-                    {"Endo", "Endo", 15.63, 750},
-                    {"Matrice Balistique Orokin", "Ressource", 12.50, 2},
-                    {"Fibre d'Acier du Necramech", "Mod", 6.25},
-                    {"Efficacité du Necramech", "Mod", 6.25},
-                    {"Choc Résiduel", "Ressource", 3.13},
-                    {"Virémie Résiduelle", "Ressource", 3.13},
-                    {"Théorème d'Infection", "Ressource", 3.13}
+                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 2},
+                    {"Meso N10", "Relique", 6.25},
+                    {"Choc Résiduel", "Ressource", 25.00},
+                    {"Fibre d'Acier du Necramech", "Mod", 12.50},
+                    {"Matrice Balistique Orokin", "Ressource", 6.25, 2},
+                    {"Neo D2", "Relique", 3.13}, {"Neo N13", "Relique", 3.13}
+                },
+                ["B"] = {
+                    {"Brume Résiduelle", "Ressource", 25.00},
+                    {"Redirection du Necramech", "Mod", 12.50},
+                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 2},
+                    {"Meso C6", "Relique", 6.25},
+                    {"Virémie Résiduelle", "Ressource", 25.00},
+                    {"Efficacité du Necramech", "Mod", 12.50},
+                    {"Matrice Balistique Orokin", "Ressource", 6.25, 2},
+                    {"Neo I2", "Relique", 6.25}
+                },
+                ["C"] = {
+                    {"Théorème Émollient", "Ressource", 25.00},
+                    {"Redirection du Necramech", "Mod", 12.50},
+                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 2},
+                    {"Meso E4", "Relique", 6.25},
+                    {"Théorème d'Infection", "Ressource", 25.00},
+                    {"Atteinte du Necramech", "Mod", 12.50},
+                    {"Matrice Balistique Orokin", "Ressource", 6.25, 2},
+                    {"Neo N13", "Relique", 6.25}
                 }
             }
         }, {
@@ -5126,23 +5322,54 @@ local DropData = {
             Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Endo", "Endo", 12.50, 500},
-                    {"Matrice d'Orientation Orokin", "Ressource", 10.00, 2},
-                    {"Redirection du Necramech", "Mod", 10.00},
-                    {"Furoncles Résiduels", "Ressource", 2.50},
-                    {"Brume Résiduelle", "Ressource", 2.50},
-                    {"Théorème Émollient", "Ressource", 2.50},
-                    {"Endo", "Endo", 12.50, 750},
-                    {"Matrice Balistique Orokin", "Ressource", 10.00, 2},
-                    {"Fibre d'Acier du Necramech", "Mod", 5.00},
-                    {"Efficacité du Necramech", "Mod", 5.00},
-                    {"Choc Résiduel", "Ressource", 2.50},
-                    {"Virémie Résiduelle", "Ressource", 2.50},
-                    {"Théorème d'Infection", "Ressource", 2.50},
-                    {"Scintillateur", "Ressource", 7.50, 3},
-                    {"Matrice Animus Orokin", "Ressource", 5.00, 2},
-                    {"Propulseurs du Necramech", "Mod", 5.00},
-                    {"Théorème de Contagion", "Ressource", 2.50}
+                    {"Furoncles Résiduels", "Ressource", 11.11},
+                    {"Redirection du Necramech", "Mod", 5.56},
+                    {"Matrice d'Orientation Orokin", "Ressource", 2.78, 2},
+                    {"Meso N10", "Relique", 2.78},
+                    {"Choc Résiduel", "Ressource", 11.11},
+                    {"Fibre d'Acier du Necramech", "Mod", 5.56},
+                    {"Matrice Balistique Orokin", "Ressource", 2.78, 2},
+                    {"Neo D2", "Relique", 1.39}, {"Neo N13", "Relique", 1.39},
+                    {"Théorème de Contagion", "Ressource", 27.78},
+                    {"Propulseurs du Necramech", "Mod", 11.11},
+                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 8.33},
+                    {"Scintillateur", "Ressource", 5.56, 3},
+                    {"Matrice Animus Orokin", "Ressource", 1.39, 2},
+                    {"Axi B3", "Relique", 1.39}
+                },
+                ["B"] = {
+                    {"Brume Résiduelle", "Ressource", 11.11},
+                    {"Redirection du Necramech", "Mod", 5.56},
+                    {"Matrice d'Orientation Orokin", "Ressource", 2.78, 2},
+                    {"Meso C6", "Relique", 2.78},
+                    {"Virémie Résiduelle", "Ressource", 11.11},
+                    {"Efficacité du Necramech", "Mod", 5.56},
+                    {"Matrice Balistique Orokin", "Ressource", 2.78, 2},
+                    {"Neo I2", "Relique", 2.78},
+                    {"Théorème de Contagion", "Ressource", 27.78},
+                    {"Propulseurs du Necramech", "Mod", 11.11},
+                    {
+                        "Culasse d'Arme de Necramech Endommagé", "Ressource",
+                        8.33
+                    }, {"Scintillateur", "Ressource", 5.56, 3},
+                    {"Matrice Animus Orokin", "Ressource", 1.39, 2},
+                    {"Axi T4", "Relique", 1.39}
+                },
+                ["C"] = {
+                    {"Théorème Émollient", "Ressource", 11.11},
+                    {"Redirection du Necramech", "Mod", 5.56},
+                    {"Matrice d'Orientation Orokin", "Ressource", 2.78, 2},
+                    {"Meso E4", "Relique", 2.78},
+                    {"Théorème d'Infection", "Ressource", 11.11},
+                    {"Atteinte du Necramech", "Mod", 5.56},
+                    {"Matrice Balistique Orokin", "Ressource", 2.78, 2},
+                    {"Neo N13", "Relique", 2.78},
+                    {"Théorème de Contagion", "Ressource", 27.78},
+                    {"Propulseurs du Necramech", "Mod", 11.11},
+                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 8.33},
+                    {"Scintillateur", "Ressource", 5.56, 3},
+                    {"Matrice Animus Orokin", "Ressource", 1.39, 2},
+                    {"Axi C5", "Relique", 1.39}
                 }
             }
         }, {
@@ -5153,17 +5380,44 @@ local DropData = {
             ShortName = "30-40",
             Rewards = {
                 ["A"] = {
-                    {"Endo", "Endo", 20.83, 750},
-                    {"Matrice Balistique Orokin", "Ressource", 16.67, 2},
-                    {"Fibre d'Acier du Necramech", "Mod", 8.33},
-                    {"Efficacité du Necramech", "Mod", 8.33},
-                    {"Choc Résiduel", "Ressource", 4.17},
-                    {"Virémie Résiduelle", "Ressource", 4.17},
-                    {"Théorème d'Infection", "Ressource", 4.17},
-                    {"Scintillateur", "Ressource", 12.50, 3},
-                    {"Matrice Animus Orokin", "Ressource", 8.33, 2},
-                    {"Propulseurs du Necramech", "Mod", 8.33},
-                    {"Théorème de Contagion", "Ressource", 4.17}
+                    {"Choc Résiduel", "Ressource", 14.29},
+                    {"Fibre d'Acier du Necramech", "Mod", 7.14},
+                    {"Matrice Balistique Orokin", "Ressource", 3.57, 2},
+                    {"Neo D2", "Relique", 1.79}, {"Neo N13", "Relique", 1.79},
+                    {"Théorème de Contagion", "Ressource", 35.71},
+                    {"Propulseurs du Necramech", "Mod", 14.29},
+                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 10.71},
+                    {"Scintillateur", "Ressource", 7.14, 3},
+                    {"Matrice Animus Orokin", "Ressource", 1.79, 2},
+                    {"Axi B3", "Relique", 1.79}
+                },
+                ["B"] = {
+                    {"Virémie Résiduelle", "Ressource", 14.29},
+                    {"Efficacité du Necramech", "Mod", 7.14},
+                    {"Matrice Balistique Orokin", "Ressource", 3.57, 2},
+                    {"Neo I2", "Relique", 3.57},
+                    {"Théorème de Contagion", "Ressource", 35.71},
+                    {"Propulseurs du Necramech", "Mod", 14.29},
+                    {
+                        "Culasse d'Arme de Necramech Endommagé", "Ressource",
+                        10.71
+                    }, {"Scintillateur", "Ressource", 7.14, 3},
+                    {"Matrice Animus Orokin", "Ressource", 1.79, 2},
+                    {"Axi T4", "Relique", 1.79}
+                },
+                ["C"] = {
+                    {"Théorème d'Infection", "Ressource", 14.29},
+                    {"Atteinte du Necramech", "Mod", 7.14},
+                    {"Matrice Balistique Orokin", "Ressource", 3.57, 2},
+                    {"Neo N13", "Relique", 3.57},
+                    {"Théorème de Contagion", "Ressource", 35.71},
+                    {"Propulseurs du Necramech", "Mod", 14.29},
+                    {
+                        "Crosse d'Arme de Necramech Endommagé", "Ressource",
+                        10.71
+                    }, {"Scintillateur", "Ressource", 7.14, 3},
+                    {"Matrice Animus Orokin", "Ressource", 1.79, 2},
+                    {"Axi C5", "Relique", 1.79}
                 }
             }
         }, {
@@ -5174,14 +5428,25 @@ local DropData = {
             ShortName = "40-50",
             Rewards = {
                 ["A"] = {
-                    {"{{Weapon|Arum Spinosa}}", "Schéma", 18.52},
-                    {"Endo", "Endo", 18.52, 1000},
-                    {"Matrice d'Orientation Orokin", "Ressource", 11.11, 3},
-                    {"Atteinte du Necramech", "Mod", 14.81},
-                    {"Assaut du Necramech", "Mod", 14.81},
-                    {"Furoncles Résiduels", "Ressource", 7.41},
-                    {"Brume Résiduelle", "Ressource", 7.41},
-                    {"Théorème Émollient", "Ressource", 7.41}
+                    {"Furoncles Résiduels", "Ressource", 50.00},
+                    {"Assaut du Necramech", "Mod", 25.00},
+                    {"{{Weapon|Arum Spinosa}}", "Schéma", 12.50},
+                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 3},
+                    {"Meso N10", "Relique", 6.25}
+                },
+                ["B"] = {
+                    {"Brume Résiduelle", "Ressource", 50.00},
+                    {"Assaut du Necramech", "Mod", 25.00},
+                    {"{{Weapon|Arum Spinosa}}", "Schéma", 12.50},
+                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 3},
+                    {"Meso C6", "Relique", 6.25}
+                },
+                ["C"] = {
+                    {"Théorème Émollient", "Ressource", 50.00},
+                    {"Assaut du Necramech", "Mod", 25.00},
+                    {"{{Weapon|Arum Spinosa}}", "Schéma", 12.50},
+                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 3},
+                    {"Meso E4", "Relique", 6.25}
                 }
             }
         }, {
@@ -5192,22 +5457,46 @@ local DropData = {
             ShortName = "40-50",
             Rewards = {
                 ["A"] = {
-                    {"{{Weapon|Arum Spinosa}}", "Schéma", 9.09},
-                    {"Endo", "Endo", 9.09, 1000},
-                    {"Matrice d'Orientation Orokin", "Ressource", 5.45, 3},
-                    {"Atteinte du Necramech", "Mod", 7.27},
-                    {"Assaut du Necramech", "Mod", 7.27},
-                    {"Furoncles Résiduels", "Ressource", 3.64},
-                    {"Brume Résiduelle", "Ressource", 3.64},
-                    {"Théorème Émollient", "Ressource", 3.64},
-                    {{"Garde", "Arum Spinosa"}, "MorceauArme", 10.91},
-                    {"Matrice Balistique Orokin", "Ressource", 7.27, 3},
-                    {"Sillage du Necramech", "Mod", 7.27},
-                    {"Continuité du Necramech", "Mod", 7.27},
-                    {"Force du Necramech", "Mod", 7.27},
-                    {"Choc Résiduel", "Ressource", 3.64},
-                    {"Virémie Résiduelle", "Ressource", 3.64},
-                    {"Théorème d'Infection", "Ressource", 3.64}
+                    {"Furoncles Résiduels", "Ressource", 16.67},
+                    {"Assaut du Necramech", "Mod", 8.33},
+                    {"{{Weapon|Arum Spinosa}}", "Schéma", 4.17},
+                    {"Matrice d'Orientation Orokin", "Ressource", 2.08, 3},
+                    {"Meso N10", "Relique", 2.08},
+                    {"Choc Résiduel", "Ressource", 33.33},
+                    {"Sillage du Necramech", "Mod", 16.67},
+                    {
+                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
+                        "Schéma", 8.33
+                    }, {"Matrice Balistique Orokin", "Ressource", 4.17, 3},
+                    {"Neo D2", "Relique", 2.08}, {"Neo N13", "Relique", 2.08}
+                },
+                ["B"] = {
+                    {"Brume Résiduelle", "Ressource", 16.67},
+                    {"Assaut du Necramech", "Mod", 8.33},
+                    {"{{Weapon|Arum Spinosa}}", "Schéma", 4.17},
+                    {"Matrice d'Orientation Orokin", "Ressource", 2.08, 3},
+                    {"Meso C6", "Relique", 2.08},
+                    {"Virémie Résiduelle", "Ressource", 33.33},
+                    {"Continuité du Necramech", "Mod", 16.67},
+                    {
+                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
+                        "Schéma", 8.33
+                    }, {"Matrice Balistique Orokin", "Ressource", 4.17, 3},
+                    {"Neo I2", "Relique", 4.17}
+                },
+                ["C"] = {
+                    {"Théorème Émollient", "Ressource", 16.67},
+                    {"Assaut du Necramech", "Mod", 8.33},
+                    {"{{Weapon|Arum Spinosa}}", "Schéma", 4.17},
+                    {"Matrice d'Orientation Orokin", "Ressource", 2.08, 3},
+                    {"Meso E4", "Relique", 2.08},
+                    {"Théorème d'Infection", "Ressource", 33.33},
+                    {"Force du Necramech", "Mod", 16.67},
+                    {
+                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
+                        "Schéma", 8.33
+                    }, {"Matrice Balistique Orokin", "Ressource", 4.17, 3},
+                    {"Neo N13", "Relique", 4.17}
                 }
             }
         }, {
@@ -5218,26 +5507,73 @@ local DropData = {
             ShortName = "40-50",
             Rewards = {
                 ["A"] = {
-                    {"{{Weapon|Arum Spinosa}}", "Schéma", 7.04},
-                    {"Endo", "Endo", 7.04, 1000},
-                    {"Matrice d'Orientation Orokin", "Ressource", 4.23, 3},
-                    {"Atteinte du Necramech", "Mod", 5.63},
-                    {"Assaut du Necramech", "Mod", 5.63},
-                    {"Furoncles Résiduels", "Ressource", 2.82},
-                    {"Brume Résiduelle", "Ressource", 2.82},
-                    {"Théorème Émollient", "Ressource", 2.82},
-                    {{"Garde", "Arum Spinosa"}, "MorceauArme", 8.45},
-                    {"Matrice Balistique Orokin", "Ressource", 5.63, 3},
-                    {"Sillage du Necramech", "Mod", 5.63},
-                    {"Continuité du Necramech", "Mod", 5.63},
-                    {"Force du Necramech", "Mod", 5.63},
-                    {"Choc Résiduel", "Ressource", 2.82},
-                    {"Virémie Résiduelle", "Ressource", 2.82},
-                    {"Théorème d'Infection", "Ressource", 2.82},
-                    {{"Rivet", "Arum Spinosa"}, "MorceauArme", 7.61},
-                    {"Matrice Animus Orokin", "Ressource", 5.63, 3},
-                    {"Onde Sismique du Necramech", "Mod", 5.63},
-                    {"Théorème de Contagion", "Ressource", 3.63}
+                    {"Furoncles Résiduels", "Ressource", 9.09},
+                    {"Assaut du Necramech", "Mod", 4.55},
+                    {"{{Weapon|Arum Spinosa}}", "Schéma", 2.27},
+                    {"Matrice d'Orientation Orokin", "Ressource", 1.14, 3},
+                    {"Meso N10", "Relique", 1.14},
+                    {"Choc Résiduel", "Ressource", 18.18},
+                    {"Sillage du Necramech", "Mod", 9.09},
+                    {
+                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
+                        "Schéma", 4.55
+                    }, {"Matrice Balistique Orokin", "Ressource", 2.27, 3},
+                    {"Neo D2", "Relique", 1.14}, {"Neo N13", "Relique", 1.14},
+                    {"Théorème de Contagion", "Ressource", 22.73},
+                    {"Onde Sismique du Necramech", "Mod", 9.09},
+                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 6.82},
+                    {
+                        "{{Weapon|Arum Spinosa|Arum Spinosa - Rivet}}",
+                        "Schéma", 4.55
+                    }, {"Matrice Animus Orokin", "Ressource", 1.14, 3},
+                    {"Axi B3", "Relique", 1.14}
+                },
+                ["B"] = {
+                    {"Brume Résiduelle", "Ressource", 9.09},
+                    {"Assaut du Necramech", "Mod", 4.55},
+                    {"{{Weapon|Arum Spinosa}}", "Schéma", 2.27},
+                    {"Matrice d'Orientation Orokin", "Ressource", 1.14, 3},
+                    {"Meso C6", "Relique", 1.14},
+                    {"Virémie Résiduelle", "Ressource", 18.18},
+                    {"Continuité du Necramech", "Mod", 9.09},
+                    {
+                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
+                        "Schéma", 4.55
+                    }, {"Matrice Balistique Orokin", "Ressource", 2.27, 3},
+                    {"Neo I2", "Relique", 2.27},
+                    {"Théorème de Contagion", "Ressource", 22.73},
+                    {"Onde Sismique du Necramech", "Mod", 9.09},
+                    {
+                        "Culasse d'Arme de Necramech Endommagé", "Ressource",
+                        6.82
+                    },
+                    {
+                        "{{Weapon|Arum Spinosa|Arum Spinosa - Rivet}}",
+                        "Schéma", 4.55
+                    }, {"Matrice Animus Orokin", "Ressource", 1.14, 3},
+                    {"Axi T4", "Relique", 1.14}
+                },
+                ["C"] = {
+                    {"Théorème Émollient", "Ressource", 9.09},
+                    {"Assaut du Necramech", "Mod", 4.55},
+                    {"{{Weapon|Arum Spinosa|Arum Spinosa}}", "Schéma", 2.27},
+                    {"Matrice d'Orientation Orokin", "Ressource", 1.14, 3},
+                    {"Meso E4", "Relique", 1.14},
+                    {"Théorème d'Infection", "Ressource", 18.18},
+                    {"Force du Necramech", "Mod", 9.09},
+                    {
+                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
+                        "Schéma", 4.55
+                    }, {"Matrice Balistique Orokin", "Ressource", 2.27, 3},
+                    {"Neo N13", "Relique", 2.27},
+                    {"Théorème de Contagion", "Ressource", 22.73},
+                    {"Onde Sismique du Necramech", "Mod", 9.09},
+                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 6.82},
+                    {
+                        "{{Weapon|Arum Spinosa|Arum Spinosa - Rivet}}",
+                        "Schéma", 4.55
+                    }, {"Matrice Animus Orokin", "Ressource", 1.14, 3},
+                    {"Axi C5", "Relique", 1.14}
                 }
             }
         }, {
@@ -5248,18 +5584,58 @@ local DropData = {
             ShortName = "40-50",
             Rewards = {
                 ["A"] = {
-                    {{"Garde", "Arum Spinosa"}, "MorceauArme", 13.64},
-                    {"Matrice Balistique Orokin", "Ressource", 9.09, 3},
-                    {"Sillage du Necramech", "Mod", 9.09},
-                    {"Continuité du Necramech", "Mod", 9.09},
-                    {"Force du Necramech", "Mod", 9.09},
-                    {"Choc Résiduel", "Ressource", 4.55},
-                    {"Virémie Résiduelle", "Ressource", 4.55},
-                    {"Théorème d'Infection", "Ressource", 4.55},
-                    {{"Rivet", "Arum Spinosa"}, "MorceauArme", 12.27},
-                    {"Matrice Animus Orokin", "Ressource", 9.09, 3},
-                    {"Onde Sismique du Necramech", "Mod", 9.09},
-                    {"Théorème de Contagion", "Ressource", 5.91}
+                    {"Choc Résiduel", "Ressource", 22.22},
+                    {"Sillage du Necramech", "Mod", 11.11},
+                    {
+                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
+                        "Schéma", 5.56
+                    }, {"Matrice Balistique Orokin", "Ressource", 2.78, 3},
+                    {"Neo D2", "Relique", 1.39}, {"Neo N13", "Relique", 1.39},
+                    {"Théorème de Contagion", "Ressource", 27.78},
+                    {"Onde Sismique du Necramech", "Mod", 11.11},
+                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 8.33},
+                    {
+                        "{{Weapon|Arum Spinosa|Arum Spinosa - Rivet}}",
+                        "Schéma", 5.56
+                    }, {"Matrice Animus Orokin", "Ressource", 1.39, 3},
+                    {"Axi B3", "Relique", 1.39}
+                },
+                ["B"] = {
+                    {"Virémie Résiduelle", "Ressource", 22.22},
+                    {"Continuité du Necramech", "Mod", 11.11},
+                    {
+                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
+                        "Schéma", 5.56
+                    }, {"Matrice Balistique Orokin", "Ressource", 2.78, 3},
+                    {"Neo I2", "Relique", 2.78},
+                    {"Théorème de Contagion", "Ressource", 27.78},
+                    {"Onde Sismique du Necramech", "Mod", 11.11},
+                    {
+                        "Culasse d'Arme de Necramech Endommagé", "Ressource",
+                        8.33
+                    },
+                    {
+                        "{{Weapon|Arum Spinosa|Arum Spinosa - Rivet}}",
+                        "Schéma", 5.56
+                    }, {"Matrice Animus Orokin", "Ressource", 1.39, 3},
+                    {"Axi T4", "Relique", 1.39}
+                },
+                ["C"] = {
+                    {"Théorème d'Infection", "Ressource", 22.22},
+                    {"Force du Necramech", "Mod", 11.11},
+                    {
+                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
+                        "Schéma", 5.56
+                    }, {"Matrice Balistique Orokin", "Ressource", 2.78, 3},
+                    {"Neo N13", "Relique", 2.78},
+                    {"Théorème de Contagion", "Ressource", 27.78},
+                    {"Onde Sismique du Necramech", "Mod", 11.11},
+                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 8.33},
+                    {
+                        "{{Weapon|Arum Spinosa|Arum Spinosa - Rivet}}",
+                        "Schéma", 5.56
+                    }, {"Matrice Animus Orokin", "Ressource", 1.39, 3},
+                    {"Axi C5", "Relique", 1.39}
                 }
             }
         }, {
@@ -5270,13 +5646,25 @@ local DropData = {
             ShortName = "50-60",
             Rewards = {
                 ["A"] = {
-                    {"{{Weapon|Sporothrix}}", "Schéma", 21.74},
-                    {"Endo", "Endo", 21.74, 1500},
-                    {"Matrice d'Orientation Orokin", "Ressource", 13.04, 4},
-                    {"Furie du Necramech", "Mod", 17.39},
-                    {"Furoncles Résiduels", "Ressource", 8.70},
-                    {"Brume Résiduelle", "Ressource", 8.70},
-                    {"Théorème Émollient", "Ressource", 8.70}
+                    {"Furoncles Résiduels", "Ressource", 50.00},
+                    {"Furie du Necramech", "Mod", 25.00},
+                    {"{{Weapon|Sporothrix}}", "Schéma", 12.50},
+                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 4},
+                    {"Meso N10", "Relique", 6.25}
+                },
+                ["B"] = {
+                    {"Brume Résiduelle", "Ressource", 50.00},
+                    {"Furie du Necramech", "Mod", 25.00},
+                    {"{{Weapon|Sporothrix}}", "Schéma", 12.50},
+                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 4},
+                    {"Meso C6", "Relique", 6.25}
+                },
+                ["C"] = {
+                    {"Théorème Émollient", "Ressource", 50.00},
+                    {"Furie du Necramech", "Mod", 25.00},
+                    {"{{Weapon|Sporothrix}}", "Schéma", 12.50},
+                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 4},
+                    {"Meso E4", "Relique", 6.25}
                 }
             }
         }, {
@@ -5287,22 +5675,46 @@ local DropData = {
             ShortName = "50-60",
             Rewards = {
                 ["A"] = {
-                    {"{{Weapon|Sporothrix}}", "Schéma", 8.77},
-                    {"Endo", "Endo", 8.77, 1500},
-                    {"Matrice d'Orientation Orokin", "Ressource", 5.26, 4},
-                    {"Furie du Necramech", "Mod", 7.02},
-                    {"Furoncles Résiduels", "Ressource", 3.51},
-                    {"Brume Résiduelle", "Ressource", 3.51},
-                    {"Théorème Émollient", "Ressource", 3.751},
-                    {{"Canon", "Sporothrix"}, "MorceauArme", 7.89},
-                    {{"Culasse", "Sporothrix"}, "MorceauArme", 7.89},
-                    {"Matrice Balistique Orokin", "Ressource", 7.02, 4},
-                    {"Allonge du Necramech", "Mod", 7.02},
-                    {"Hydrauliques du Necramech", "Mod", 7.02},
-                    {"Friction du Necramech", "Mod", 7.02},
-                    {"Choc Résiduel", "Ressource", 5.26},
-                    {"Virémie Résiduelle", "Ressource", 5.26},
-                    {"Théorème d'Infection", "Ressource", 5.26}
+                    {"Furoncles Résiduels", "Ressource", 16.67},
+                    {"Furie du Necramech", "Mod", 8.33},
+                    {"{{Weapon|Sporothrix}}", "Schéma", 4.17},
+                    {"Matrice d'Orientation Orokin", "Ressource", 2.08, 4},
+                    {"Meso N10", "Relique", 2.08},
+                    {"Choc Résiduel", "Ressource", 33.33},
+                    {"Allonge du Necramech", "Mod", 16.67},
+                    {
+                        "{{Weapon|Sporothrix|Sporothrix - Canon}}", "Schéma",
+                        8.33
+                    }, {"Matrice Balistique Orokin", "Ressource", 4.17, 4},
+                    {"Neo D2", "Relique", 2.08}, {"Neo N13", "Relique", 2.08}
+                },
+                ["B"] = {
+                    {"Brume Résiduelle", "Ressource", 16.67},
+                    {"Furie du Necramech", "Mod", 8.33},
+                    {"{{Weapon|Sporothrix}}", "Schéma", 4.17},
+                    {"Matrice d'Orientation Orokin", "Ressource", 2.08, 4},
+                    {"Meso C6", "Relique", 2.08}, {"Endo", "Endo", 33.33, 2500},
+                    {"Virémie Résiduelle", "Ressource", 16.67},
+                    {"Hydrauliques du Necramech", "Mod", 8.33},
+                    {
+                        "{{Weapon|Sporothrix|Sporothrix - Culasse}}", "Schéma",
+                        4.17
+                    }, {"Matrice Balistique Orokin", "Ressource", 2.08, 4},
+                    {"Neo I2", "Relique", 2.08}
+                },
+                ["C"] = {
+                    {"Théorème Émollient", "Ressource", 16.67},
+                    {"Furie du Necramech", "Mod", 8.33},
+                    {"{{Weapon|Sporothrix}}", "Schéma", 4.17},
+                    {"Matrice d'Orientation Orokin", "Ressource", 2.08, 4},
+                    {"Meso E4", "Relique", 2.08},
+                    {"Théorème d'Infection", "Ressource", 33.33},
+                    {"Friction du Necramech", "Mod", 16.67},
+                    {
+                        "{{Weapon|Sporothrix|Sporothrix - Crosse}}", "Schéma",
+                        8.33
+                    }, {"Matrice Balistique Orokin", "Ressource", 4.17, 4},
+                    {"Neo N13", "Relique", 4.17}
                 }
             }
         }, {
@@ -5313,26 +5725,63 @@ local DropData = {
             ShortName = "50-60",
             Rewards = {
                 ["A"] = {
-                    {"{{Weapon|Sporothrix}}", "Schéma", 6.85},
-                    {"Endo", "Endo", 6.85, 1500},
-                    {"Matrice d'Orientation Orokin", "Ressource", 4.11, 4},
-                    {"Furie du Necramech", "Mod", 5.48},
-                    {"Furoncles Résiduels", "Ressource", 2.74},
-                    {"Brume Résiduelle", "Ressource", 2.74},
-                    {"Théorème Émollient", "Ressource", 2.74},
-                    {{"Canon", "Sporothrix"}, "MorceauArme", 6.16},
-                    {{"Culasse", "Sporothrix"}, "MorceauArme", 6.16},
-                    {"Matrice Balistique Orokin", "Ressource", 5.48, 4},
-                    {"Allonge du Necramech", "Mod", 5.48},
-                    {"Hydrauliques du Necramech", "Mod", 5.48},
-                    {"Friction du Necramech", "Mod", 5.48},
-                    {"Choc Résiduel", "Ressource", 4.11},
-                    {"Virémie Résiduelle", "Ressource", 4.11},
-                    {"Théorème d'Infection", "Ressource", 4.11},
-                    {{"Crosse", "Sporothrix"}, "MorceauArme", 6.85},
-                    {"Matrice Animus Orokin", "Ressource", 5.48, 4},
-                    {"Rationalisation du Necramech", "Mod", 5.48},
-                    {"Théorème de Contagion", "Ressource", 4.11}
+                    {"Furoncles Résiduels", "Ressource", 9.09},
+                    {"Furie du Necramech", "Mod", 4.55},
+                    {"{{Weapon|Sporothrix}}", "Schéma", 2.27},
+                    {"Matrice d'Orientation Orokin", "Ressource", 1.14, 4},
+                    {"Meso N10", "Relique", 1.14},
+                    {"Choc Résiduel", "Ressource", 18.18},
+                    {"Allonge du Necramech", "Mod", 9.09},
+                    {
+                        "{{Weapon|Sporothrix|Sporothrix - Canon}}", "Schéma",
+                        4.55
+                    }, {"Matrice Balistique Orokin", "Ressource", 2.27, 4},
+                    {"Neo D2", "Relique", 1.14}, {"Neo N13", "Relique", 1.14},
+                    {"Théorème de Contagion", "Ressource", 22.73},
+                    {"Rationalisation du Necramech", "Mod", 9.09},
+                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 6.82},
+                    {"Matrice Animus Orokin", "Ressource", 3.41, 4},
+                    {"Axi B3", "Relique", 3.41}
+                },
+                ["B"] = {
+                    {"Brume Résiduelle", "Ressource", 9.09},
+                    {"Furie du Necramech", "Mod", 4.55},
+                    {"{{Weapon|Sporothrix}}", "Schéma", 2.27},
+                    {"Matrice d'Orientation Orokin", "Ressource", 1.14, 4},
+                    {"Meso C6", "Relique", 1.14}, {"Endo", "Endo", 18.18, 2500},
+                    {"Virémie Résiduelle", "Ressource", 9.09},
+                    {"Hydrauliques du Necramech", "Mod", 4.55},
+                    {
+                        "{{Weapon|Sporothrix|Sporothrix - Culasse}}", "Schéma",
+                        2.27
+                    }, {"Matrice Balistique Orokin", "Ressource", 1.14, 4},
+                    {"Neo I2", "Relique", 1.14},
+                    {"Théorème de Contagion", "Ressource", 22.73},
+                    {"Rationalisation du Necramech", "Mod", 9.09},
+                    {
+                        "Culasse d'Arme de Necramech Endommagé", "Ressource",
+                        6.82
+                    }, {"Matrice Animus Orokin", "Ressource", 3.41, 4},
+                    {"Axi T4", "Relique", 3.41}
+                },
+                ["C"] = {
+                    {"Théorème Émollient", "Ressource", 9.09},
+                    {"Furie du Necramech", "Mod", 4.55},
+                    {"{{Weapon|Sporothrix}}", "Schéma", 2.27},
+                    {"Matrice d'Orientation Orokin", "Ressource", 1.14, 4},
+                    {"Meso E4", "Relique", 1.14},
+                    {"Théorème d'Infection", "Ressource", 18.18},
+                    {"Friction du Necramech", "Mod", 9.09},
+                    {
+                        "{{Weapon|Sporothrix|Sporothrix - Crosse}}", "Schéma",
+                        4.55
+                    }, {"Matrice Balistique Orokin", "Ressource", 2.27, 4},
+                    {"Neo N13", "Relique", 2.27},
+                    {"Théorème de Contagion", "Ressource", 22.73},
+                    {"Rationalisation du Necramech", "Mod", 9.09},
+                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 6.82},
+                    {"Matrice Animus Orokin", "Ressource", 3.41, 4},
+                    {"Axi C5", "Relique", 3.41}
                 }
             }
         }, {
@@ -5343,19 +5792,49 @@ local DropData = {
             ShortName = "50-60",
             Rewards = {
                 ["A"] = {
-                    {{"Canon", "Sporothrix"}, "MorceauArme", 9.00},
-                    {{"Culasse", "Sporothrix"}, "MorceauArme", 9.00},
-                    {"Matrice Balistique Orokin", "Ressource", 8.00, 4},
-                    {"Allonge du Necramech", "Mod", 8.00},
-                    {"Hydrauliques du Necramech", "Mod", 8.00},
-                    {"Friction du Necramech", "Mod", 8.00},
-                    {"Choc Résiduel", "Ressource", 6.00},
-                    {"Virémie Résiduelle", "Ressource", 6.00},
-                    {"Théorème d'Infection", "Ressource", 6.00},
-                    {{"Crosse", "Sporothrix"}, "MorceauArme", 10.00},
-                    {"Matrice Animus Orokin", "Ressource", 8.00, 4},
-                    {"Rationalisation du Necramech", "Mod", 8.00},
-                    {"Théorème de Contagion", "Ressource", 6.00}
+                    {"Choc Résiduel", "Ressource", 22.22},
+                    {"Allonge du Necramech", "Mod", 11.11},
+                    {
+                        "{{Weapon|Sporothrix|Sporothrix - Canon}}", "Schéma",
+                        5.56
+                    }, {"Matrice Balistique Orokin", "Ressource", 2.78, 4},
+                    {"Neo D2", "Relique", 1.39}, {"Neo N13", "Relique", 1.39},
+                    {"Théorème de Contagion", "Ressource", 27.78},
+                    {"Rationalisation du Necramech", "Mod", 11.11},
+                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 8.33},
+                    {"Matrice Animus Orokin", "Ressource", 4.17, 4},
+                    {"Axi B3", "Relique", 4.17}
+                },
+                ["B"] = {
+                    {"Endo", "Endo", 22.22, 2500},
+                    {"Virémie Résiduelle", "Ressource", 11.11},
+                    {"Hydrauliques du Necramech", "Mod", 5.56},
+                    {
+                        "{{Weapon|Sporothrix|Sporothrix - Culasse}}", "Schéma",
+                        2.78
+                    }, {"Matrice Balistique Orokin", "Ressource", 1.39, 4},
+                    {"Neo I2", "Relique", 1.39},
+                    {"Théorème de Contagion", "Ressource", 27.78},
+                    {"Rationalisation du Necramech", "Mod", 11.11},
+                    {
+                        "Culasse d'Arme de Necramech Endommagé", "Ressource",
+                        8.33
+                    }, {"Matrice Animus Orokin", "Ressource", 4.17, 4},
+                    {"Axi T4", "Relique", 4.17}
+                },
+                ["C"] = {
+                    {"Théorème d'Infection", "Ressource", 22.22},
+                    {"Friction du Necramech", "Mod", 11.11},
+                    {
+                        "{{Weapon|Sporothrix|Sporothrix - Crosse}}", "Schéma",
+                        5.56
+                    }, {"Matrice Balistique Orokin", "Ressource", 2.78, 4},
+                    {"Neo N13", "Relique", 2.78},
+                    {"Théorème de Contagion", "Ressource", 27.78},
+                    {"Rationalisation du Necramech", "Mod", 11.11},
+                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 8.33},
+                    {"Matrice Animus Orokin", "Ressource", 4.17, 4},
+                    {"Axi C5", "Relique", 4.17}
                 }
             }
         }, {
@@ -5448,12 +5927,12 @@ local DropData = {
                 ["A"] = {
                     {"Dirac", "Ressource", 20, 100},
                     {"Dirac", "Ressource", 10, 200},
-                    {"Moteur Lavan MK I", "Blueprint", 4},
-                    {"Réacteur Lavan MK I", "Blueprint", 4},
-                    {"Réseau de Boucliers Lavan MK I", "Blueprint", 4},
-                    {"Moteur Vidar MK I", "Blueprint", 4},
-                    {"Réacteur Vidar MK I", "Blueprint", 4},
-                    {"Réseau de Boucliers Vidar MK I", "Blueprint", 4},
+                    {"Moteur Lavan MK I", "Schéma", 4},
+                    {"Réacteur Lavan MK I", "Schéma", 4},
+                    {"Réseau de Boucliers Lavan MK I", "Schéma", 4},
+                    {"Moteur Vidar MK I", "Schéma", 4},
+                    {"Réacteur Vidar MK I", "Schéma", 4},
+                    {"Réseau de Boucliers Vidar MK I", "Schéma", 4},
                     {"Lith C4", "Relique", 7.75}, {"Lith S8", "Relique", 7.75},
                     {"Lith L2", "Relique", 7.75}, {"Lith M4", "Relique", 7.75},
                     {"Lith W2", "Relique", 7.75}, {"Lith D1", "Relique", 7.25}
@@ -5468,13 +5947,13 @@ local DropData = {
                     {"Dirac", "Ressource", 20, 150},
                     {"Dirac", "Ressource", 10, 300},
                     {"Brisure Riven", "Ressource", 5, 2},
-                    {"Forma (Schéma)", "Blueprint", 2.5},
-                    {"Moteur Lavan MK II", "Blueprint", 4},
-                    {"Réacteur Lavan MK II", "Blueprint", 4},
-                    {"Réseau de Boucliers Lavan MK II", "Blueprint", 4},
-                    {"Moteur Vidar MK II", "Blueprint", 4},
-                    {"Réacteur Vidar MK II", "Blueprint", 4},
-                    {"Réseau de Boucliers Vidar MK II", "Blueprint", 4},
+                    {"Forma (Schéma)", "Schéma", 2.5},
+                    {"Moteur Lavan MK II", "Schéma", 4},
+                    {"Réacteur Lavan MK II", "Schéma", 4},
+                    {"Réseau de Boucliers Lavan MK II", "Schéma", 4},
+                    {"Moteur Vidar MK II", "Schéma", 4},
+                    {"Réacteur Vidar MK II", "Schéma", 4},
+                    {"Réseau de Boucliers Vidar MK II", "Schéma", 4},
                     {"Meso R2", "Relique", 5.75}, {"Meso C4", "Relique", 5.75},
                     {"Meso L1", "Relique", 5.75}, {"Meso B4", "Relique", 5.75},
                     {"Meso D4", "Relique", 5.75}, {"Meso E3", "Relique", 5.75},
@@ -5491,13 +5970,13 @@ local DropData = {
                     {"Dirac", "Ressource", 20, 400},
                     {"Dirac", "Ressource", 10, 1000},
                     {"Brisure Riven", "Ressource", 5, 3},
-                    {"Forma (Schéma)", "Blueprint", 2.5},
-                    {"Moteur Lavan MK III", "Blueprint", 4},
-                    {"Réacteur Lavan MK III", "Blueprint", 4},
-                    {"Réseau de Boucliers Lavan MK III", "Blueprint", 4},
-                    {"Moteur Vidar MK III", "Blueprint", 4},
-                    {"Réacteur Vidar MK III", "Blueprint", 4},
-                    {"Réseau de Boucliers Vidar MK III", "Blueprint", 4},
+                    {"Forma (Schéma)", "Schéma", 2.5},
+                    {"Moteur Lavan MK III", "Schéma", 4},
+                    {"Réacteur Lavan MK III", "Schéma", 4},
+                    {"Réseau de Boucliers Lavan MK III", "Schéma", 4},
+                    {"Moteur Vidar MK III", "Schéma", 4},
+                    {"Réacteur Vidar MK III", "Schéma", 4},
+                    {"Réseau de Boucliers Vidar MK III", "Schéma", 4},
                     {"Neo T2", "Relique", 5.50}, {"Neo A3", "Relique", 5.50},
                     {"Neo Z5", "Relique", 5.50}, {"Neo M2", "Relique", 5.50},
                     {"Neo I1", "Relique", 5.50}, {"Neo R3", "Relique", 5.50},
@@ -5510,10 +5989,10 @@ local DropData = {
             Alias = "VeilProximaCaches",
             Rewards = {
                 ["A"] = {
-                    {"Spectra Vandal Schéma", "Blueprint", 8.6},
-                    {"Spectra Vandal Canon", "Blueprint", 8.6},
-                    {"Spectra Vandal Châssis", "Blueprint", 8.6},
-                    {"Spectra Vandal Poignée", "Blueprint", 8.6},
+                    {"Spectra Vandal Schéma", "Schéma", 8.6},
+                    {"Spectra Vandal Canon", "Schéma", 8.6},
+                    {"Spectra Vandal Châssis", "Schéma", 8.6},
+                    {"Spectra Vandal Poignée", "Schéma", 8.6},
                     {"Fresnels", "Ressource", 8.6, 3},
                     {"Kesslers", "Ressource", 8.6, 4},
                     {"Dirac", "Ressource", 8.6, 50},
@@ -5524,10 +6003,10 @@ local DropData = {
                     {"Dirac", "Ressource", 7.52, 300}
                 },
                 ["B"] = {
-                    {"Spectra Vandal Schéma", "Blueprint", 8.6},
-                    {"Spectra Vandal Canon", "Blueprint", 8.6},
-                    {"Spectra Vandal Châssis", "Blueprint", 8.6},
-                    {"Spectra Vandal Poignée", "Blueprint", 8.6},
+                    {"Spectra Vandal Schéma", "Schéma", 8.6},
+                    {"Spectra Vandal Canon", "Schéma", 8.6},
+                    {"Spectra Vandal Châssis", "Schéma", 8.6},
+                    {"Spectra Vandal Poignée", "Schéma", 8.6},
                     {"Fresnels", "Ressource", 8.6, 3},
                     {"Kesslers", "Ressource", 8.6, 4},
                     {"Dirac", "Ressource", 8.6, 50},
@@ -5538,10 +6017,10 @@ local DropData = {
                     {"Dirac", "Ressource", 7.52, 300}
                 },
                 ["C"] = {
-                    {"Spectra Vandal Schéma", "Blueprint", 8.6},
-                    {"Spectra Vandal Canon", "Blueprint", 8.6},
-                    {"Spectra Vandal Châssis", "Blueprint", 8.6},
-                    {"Spectra Vandal Poignée", "Blueprint", 8.6},
+                    {"Spectra Vandal Schéma", "Schéma", 8.6},
+                    {"Spectra Vandal Canon", "Schéma", 8.6},
+                    {"Spectra Vandal Châssis", "Schéma", 8.6},
+                    {"Spectra Vandal Poignée", "Schéma", 8.6},
                     {"Fresnels", "Ressource", 8.6, 3},
                     {"Kesslers", "Ressource", 8.6, 4},
                     {"Dirac", "Ressource", 8.6, 50},
@@ -6243,7 +6722,7 @@ local DropData = {
                 {"Endo", 7.37, 50}, {"Endo", 2.01, 80}
             }
         }, {
-            Name = "Swarm Mutalist MOA",
+            Name = "MOA Mutaliste Essaim",
             ModChance = 3,
             Mods = {
                 {"Paratonnerre", 25.29}, {"Ignifugé", 25.29},
