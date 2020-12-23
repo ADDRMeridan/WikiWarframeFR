@@ -346,28 +346,28 @@ local function findMaxLines(missionRewards)
     return ret
 end
 
-local function buildMissionRewardsTable(mission, frame)
+local function buildMissionRewardsTable(missionRewards, frame)
 
     local ret = {}
-    if (mission.Rewards ~= nil) then
+    if (missionRewards ~= nil) then
         table.insert(ret, '{| class="wikitable" style="margin:auto" border="0"')
-        local nbCol = Shared.tableCount(mission.Rewards)
+        local nbCol = Shared.tableCount(missionRewards)
         -- Header
         if (nbCol == 1) then
             table.insert(ret,
                          '! colspan="2" style="text-align:center;" | Récompenses')
         else
-            for rot, loot in Shared.skpairs(mission.Rewards) do
+            for rot, loot in Shared.skpairs(missionRewards) do
                 table.insert(ret,
                              '! colspan="2" style="text-align:center;" | Rotation ' ..
                                  rot)
             end
         end
         -- Lines
-        local nbLines = findMaxLines(mission.Rewards)
+        local nbLines = findMaxLines(missionRewards)
         for i = 1, nbLines, 1 do
             table.insert(ret, '|-')
-            for _, loot in Shared.skpairs(mission.Rewards) do
+            for _, loot in Shared.skpairs(missionRewards) do
                 table.insert(ret, '| align="right" | ' ..
                                  formatDropString(loot[i], frame))
             end
@@ -386,13 +386,35 @@ function p.getRewards(frame)
         frame.args ~= nil and frame.args[2] ~= "" and frame.args[2] or nil
 
     local ret = nil
-    local mission = p.getMission(missType, missCat)
+    local mission = nil
+    if (missCat == "AllTier") then
+        mission = {}
+        mission.Rewards = {}
+        local tmpArr = p.getMissionAllTier(missType)
+        if (tmpArr ~= nil) then
+            for _, tmpMiss in pairs(tmpArr) do
+                if (tmpMiss.Rewards ~= nil) then
+                    for key, drops in Shared.skpairs(tmpMiss.Rewards) do
+                        if (mission.Rewards[key] == nil) then
+                            mission.Rewards[key] = {}
+                        end
+                        for _, drop in pairs(drops) do
+                            table.insert(mission.Rewards[key], drop)
+                        end
+                    end
+                end
+            end
+        end
+    else
+        mission = p.getMission(missType, missCat)
+    end
     if (mission == nil) then
-        ret = Shared.printModuleError('Aucune mission avec "' .. tostring(missType) ..
-                                          '" et "' .. tostring(missCat) .. '"',
+        ret = Shared.printModuleError('Aucune mission avec "' ..
+                                          tostring(missType) .. '" et "' ..
+                                          tostring(missCat) .. '"',
                                       'DropTables.getRewards')
     else
-        ret = buildMissionRewardsTable(mission, frame)
+        ret = buildMissionRewardsTable(mission.Rewards, frame)
     end
 
     return ret

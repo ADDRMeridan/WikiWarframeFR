@@ -2337,7 +2337,7 @@ local DropData = {
             }
         }, {
             Type = "Assassinate",
-            Tier = "Raptor",
+            Tier = "Trio Raptors",
             Rewards = {
                 ["A"] = {
                     {"Nova Neuroptiques Blueprint", "Schéma", 38.72},
@@ -2356,8 +2356,8 @@ local DropData = {
                 }
             }
         }, {
-            Type = "Assassinate",
-            Tier = "Sergeant",
+            Type = "Assassinat",
+            Tier = "Le Sergent",
             Rewards = {
                 ["A"] = {
                     {"Mag Neuroptiques Blueprint", "Schéma", 38.72},
@@ -3008,7 +3008,7 @@ local DropData = {
                     {"Aviateur du Necramech", "Mod", 2.50},
                     {"Rage du Necramech", "Mod", 2.50},
                     {"Perception des Ennemis du Necramech", "Mod", 2.50},
-                    {"Necramech Deflection", "Mod", 2.50},
+                    {"Déviation du Necramech", "Mod", 2.50},
                     {"Reproche du Necramech", "Mod", 2.50},
                     {"Rafistolage du Necramech", "Mod", 2.50},
                     {"Augure du Necramech", "Mod", 2.50},
@@ -3054,7 +3054,7 @@ local DropData = {
                     {"Aviateur du Necramech", "Mod", 3.00},
                     {"Rage du Necramech", "Mod", 3.00},
                     {"Perception des Ennemis du Necramech", "Mod", 3.00},
-                    {"Necramech Deflection", "Mod", 3.00},
+                    {"Déviation du Necramech", "Mod", 3.00},
                     {"Reproche du Necramech", "Mod", 3.00},
                     {"Rafistolage du Necramech", "Mod", 3.00},
                     {"Augure du Necramech", "Mod", 3.00},
@@ -3123,7 +3123,7 @@ local DropData = {
                     {"Aviateur du Necramech", "Mod", 4.00},
                     {"Rage du Necramech", "Mod", 4.00},
                     {"Perception des Ennemis du Necramech", "Mod", 4.00},
-                    {"Necramech Deflection", "Mod", 4.00},
+                    {"Déviation du Necramech", "Mod", 4.00},
                     {"Reproche du Necramech", "Mod", 4.00},
                     {"Rafistolage du Necramech", "Mod", 4.00},
                     {"Augure du Necramech", "Mod", 4.00},
@@ -6817,7 +6817,7 @@ local DropData = {
             ModChance = 60,
             Mods = {
                 {"Chargeur Trafiqué", 38.72}, {"Acier Véritable", 38.72},
-                {"Hit And Run", 11.28}, {"Vent du Nord", 11.28}
+                {"Délit de Fuite", 11.28}, {"Vent du Nord", 11.28}
             }
         }, {
             Name = "Phorid",
@@ -6836,7 +6836,7 @@ local DropData = {
                 {"Fléau des Infestés", 11.06}
             }
         }, {
-            Name = "The Sergeant",
+            Name = "Le Sergent",
             ModChance = 100,
             Mods = {
                 {"Bobine Réflexe", 15.04}, {"Toucher Choquant", 7.52},
@@ -6887,7 +6887,7 @@ local DropData = {
                 {"Endo", 20, 80}
             }
         }, {
-            Name = "Raptor",
+            Name = "Raptors",
             ModChance = 100,
             Ignore = true,
             Mods = {
@@ -7932,7 +7932,7 @@ local DropData = {
             Ignore = true,
             Mods = {
                 {"Chargeur Trafiqué", 38.72}, {"Acier Véritable", 38.72},
-                {"Hit And Run", 11.28}, {"Vent du Nord", 11.28}
+                {"Délit de Fuite", 11.28}, {"Vent du Nord", 11.28}
             }
         }, {
             Name = "Hyena NG",
@@ -7940,7 +7940,7 @@ local DropData = {
             Ignore = true,
             Mods = {
                 {"Chargeur Trafiqué", 38.72}, {"Acier Véritable", 38.72},
-                {"Hit And Run", 11.28}, {"Vent du Nord", 11.28}
+                {"Délit de Fuite", 11.28}, {"Vent du Nord", 11.28}
             }
         }, {
             Name = "Hyena LN2",
@@ -7948,7 +7948,7 @@ local DropData = {
             Ignore = true,
             Mods = {
                 {"Chargeur Trafiqué", 38.72}, {"Acier Véritable", 38.72},
-                {"Hit And Run", 11.28}, {"Vent du Nord", 11.28}
+                {"Délit de Fuite", 11.28}, {"Vent du Nord", 11.28}
             }
         }, {
             Name = "Hyena TH",
@@ -7956,10 +7956,10 @@ local DropData = {
             Ignore = true,
             Mods = {
                 {"Chargeur Trafiqué", 38.72}, {"Acier Véritable", 38.72},
-                {"Hit And Run", 11.28}, {"Vent du Nord", 11.28}
+                {"Délit de Fuite", 11.28}, {"Vent du Nord", 11.28}
             }
         }, {
-            Name = "Raptors",
+            Name = "Trio Raptors",
             ModChance = 5,
             Mods = {
                 {"Bobine Réflexe", 11.06}, {"Allonge", 11.06},
@@ -8272,6 +8272,18 @@ local DropData = {
                 {"Coup de Foudre", 0.67}, {"Serpents Croisés", 0.67},
                 {"Volonté de Survie", 0.67}, {"Endo", 11.06, 50}
             }
+        } , {
+            Name = "Massacreur Kosma",
+            ModChance = 5,
+            Mods = {
+                {"Lame Tempérée",76.47},
+                {"Débordement",5.04},
+                {"Piqûre Toxique",5.04},
+                {"Chargeur Venimeux",5.04},
+                {"Durabilité Améliorée",5.04},
+                {"Détente Automatique",1.68},
+                {"Transfert Efficace",1.68},
+          },
         }, {
             Name = "Massacreur Kuva",
             ModChance = 3,
@@ -8831,8 +8843,10 @@ local DropData = {
             Name = "Drone d'Attaque (Archwing)",
             ModChance = 3,
             Mods = {
-                {"Prolongement", 25.29}, {"Magasin Profond", 25.29},
-                {"Transfert Efficace", 2.01}, {"Endo", 25.29, 15},
+                {"Prolongement", 25.29},
+                {"Magasin Profond", 25.29},
+                {"Transfert Efficace", 2.01},
+                {"Endo", 25.29, 15},
                 {"Endo", 22.11, 50}
             }
         }, {
