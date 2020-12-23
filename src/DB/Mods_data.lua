@@ -393,9 +393,9 @@ local ModData = {
             Traits = {"FUSIL", "+%TIRMULTIPLE"},
             Transmutable = false
         },
-        ["Art de L'Endurance"] = {
-            Image = "EnduranceDriftMod.png",
-            Name = "Art de L'Endurance",
+        ["Art de l'Endurance"] = {
+            Image = "Art_de_l'Endurance.png",
+            Name = "Art de l'Endurance",
             NameEN = "Endurance Drift",
             Polarity = "Zenurik",
             Rarity = "Rare",
