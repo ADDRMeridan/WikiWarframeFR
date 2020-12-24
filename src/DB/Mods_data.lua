@@ -393,9 +393,9 @@ local ModData = {
             Traits = {"FUSIL", "+%TIRMULTIPLE"},
             Transmutable = false
         },
-        ["Art de L'Endurance"] = {
+        ["Art de l'Endurance"] = {
             Image = "Art_de_l'Endurance.png",
-            Name = "Art de L'Endurance",
+            Name = "Art de l'Endurance",
             NameEN = "Endurance Drift",
             Polarity = "Zenurik",
             Rarity = "Rare",
@@ -9465,7 +9465,7 @@ local ModData = {
             NameEN = "Necramech Rage",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Transmutable = "false"
+            Transmutable = false
         },
         ["Reproche du Necramech"] = {
             Image = "Reproche du Necramech.png",
@@ -9474,7 +9474,7 @@ local ModData = {
             NameEN = "Necramech Rebuke",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Transmutable = "false"
+            Transmutable = false
         },
         ["Rafistolage du Necramech"] = {
             Image = "Rafistolage du Necramech.png",
@@ -9483,7 +9483,7 @@ local ModData = {
             NameEN = "Necramech Repair",
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
-            Transmutable = "false"
+            Transmutable = false
         },
         ["Augure du Necramech"] = {
             Image = "Augure du Necramech.png",
@@ -9492,7 +9492,7 @@ local ModData = {
             NameEN = "Necramech Augur",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Transmutable = "false"
+            Transmutable = false
         },
         ["Aviateur du Necramech"] = {
             Image = "Aviateur du Necramech.png",
@@ -9501,7 +9501,7 @@ local ModData = {
             NameEN = "Necramech Aviator",
             Polarity = "Vazarin",
             Rarity = "Commun",
-            Transmutable = "false"
+            Transmutable = false
         },
         ["Perception des Ennemis du Necramech"] = {
             Image = "Perception des Ennemis du Necramech.png",
@@ -9510,7 +9510,7 @@ local ModData = {
             NameEN = "Necramech Enemy Sense",
             Polarity = "Naramon",
             Rarity = "Commun",
-            Transmutable = "false"
+            Transmutable = false
         },
         ["Déviation du Necramech"] = {
             Image = "Déviation du Necramech.png",
@@ -9519,7 +9519,7 @@ local ModData = {
             NameEN = "Necramech Deflection",
             Polarity = "Vazarin",
             Rarity = "Commun",
-            Transmutable = "false"
+            Transmutable = false
         }
     },
 
