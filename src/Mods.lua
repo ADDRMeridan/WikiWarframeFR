@@ -247,7 +247,13 @@ local function doesModContainTraits(Mod, traitsArray)
 end
 
 -- Struct to store the different filters on mods
-local modFilters = {AugmentType = nil, Polarity = nil, Set = nil, Traits = {}}
+local modFilters = {
+    AugmentType = nil,
+    Polarity = nil,
+    Rarity = nil,
+    Set = nil,
+    Traits = {}
+}
 
 local function getFiltersFromFrame(frame)
 
@@ -257,6 +263,8 @@ local function getFiltersFromFrame(frame)
         filter.AugmentType = frame.args['augment'] or nil
         -- Polarite
         filter.Polarity = frame.args['polarity'] or nil
+        -- Rarete
+        filter.Rarity = frame.args['rarity'] or nil
         -- Set
         filter.Set = frame.args['set'] or nil
         -- Traits
@@ -282,6 +290,9 @@ local function filterAllMods(filter)
         local keepMod = (filter.AugmentType == nil or
                             (filter.AugmentType ~= nil and filter.AugmentType ==
                                 Mod.AugmentType)) and
+                            (filter.Rarity == nil or
+                                (filter.Rarity ~= nil and filter.Rarity ==
+                                    Mod.Rarity)) and
                             (filter.Set == nil or
                                 (filter.Set ~= nil and filter.Set == Mod.Set)) and
                             (filter.Polarity == nil or
