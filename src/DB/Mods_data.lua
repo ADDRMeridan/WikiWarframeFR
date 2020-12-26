@@ -395,10 +395,12 @@ local ModData = {
         },
         ["Art de l'Endurance"] = {
             Image = "Art_de_l'Endurance.png",
+            Introduced = "18.0",
             Name = "Art de l'Endurance",
             NameEN = "Endurance Drift",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Traits = {"EXILUS", "ART"},
             Transmutable = false
         },
         ["Art de l'Agilité"] = {
@@ -407,6 +409,7 @@ local ModData = {
             NameEN = "Agility Drift",
             Polarity = "Vazarin",
             Rarity = "Rare",
+            Traits = {"EXILUS", "ART"},
             Transmutable = false
         },
         ["Art de la Coaction"] = {
@@ -415,6 +418,7 @@ local ModData = {
             NameEN = "Coaction Drift",
             Polarity = "Naramon",
             Rarity = "Rare",
+            Traits = {"EXILUS", "ART"},
             Transmutable = false
         },
         ["Art de la Furtivité"] = {
@@ -423,6 +427,7 @@ local ModData = {
             NameEN = "Stealth Drift",
             Polarity = "Naramon",
             Rarity = "Rare",
+            Traits = {"EXILUS", "ART"},
             Transmutable = false
         },
         ["Art de la Puissance"] = {
@@ -431,6 +436,7 @@ local ModData = {
             NameEN = "Power Drift",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Traits = {"EXILUS", "ART"},
             Transmutable = false
         },
         ["Art de la Ruse"] = {
@@ -439,6 +445,7 @@ local ModData = {
             NameEN = "Cunning Drift",
             Polarity = "Madurai",
             Rarity = "Rare",
+            Traits = {"EXILUS", "ART"},
             Transmutable = false
         },
         ["Art de la Vitesse"] = {
@@ -447,6 +454,7 @@ local ModData = {
             NameEN = "Speed Drift",
             Polarity = "Madurai",
             Rarity = "Rare",
+            Traits = {"EXILUS", "ART"},
             Transmutable = false
         },
         ["Virtuose de l'Arch-Fusil"] = {
@@ -943,6 +951,7 @@ local ModData = {
         ["Calme & Frénésie"] = {
             AugmentType = 'Warframe',
             Image = "Calme_&_Frénésie.png",
+            Introduced = "18.4.7",
             Name = "Calme & Frénésie",
             NameEN = "Calm & Frenzy",
             Polarity = "Zenurik",
@@ -1193,7 +1202,9 @@ local ModData = {
             Transmutable = false
         },
         ["Champ d'Énergie"] = {
+            AugmentType = 'Archwing',
             Image = "Champ d'Energie.png",
+            Introduced = "SotR",
             Name = "Champ d'Énergie",
             NameEN = "Energy Field",
             Polarity = "Zenurik",
@@ -1360,7 +1371,7 @@ local ModData = {
             NameEN = "Shred",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"NIGHTMARE", "FUSIL"}
+            Traits = {"NIGHTMARE", "FUSIL", "+PENETRATION"}
         },
         ["Charpie Accrue"] = {
             Family = "Charpie",
@@ -1369,6 +1380,7 @@ local ModData = {
             NameEN = "Primed Shred",
             Polarity = "Madurai",
             Rarity = "Légendaire",
+            Traits = {"FUSIL", "+PENETRATION"},
             Transmutable = false
         },
         ["Chasseur de Prime"] = {
@@ -3018,7 +3030,8 @@ local ModData = {
             Name = "Force de Pénétration",
             NameEN = "Seeking Force",
             Polarity = "Naramon",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"POMPE", "+PENETRATION"}
         },
         ["Foreuse Quasar"] = {
             Image = "Foreuse Quasar.png",
@@ -3301,7 +3314,7 @@ local ModData = {
             NameEN = "Seeking Fury",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"NIGHTMARE", "POMPE"}
+            Traits = {"NIGHTMARE", "POMPE", "+PENETRATION"}
         },
         ["Fusillade de Crocs"] = {
             Image = "Fusillade de Crocs.png",
@@ -4265,7 +4278,8 @@ local ModData = {
             Name = "Lancer Puissant",
             NameEN = "Power Throw",
             Polarity = "Madurai",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"MELEE", "+PENETRATION"}
         },
         ["Lanterne Séduisante"] = {
             AugmentType = 'Warframe',
@@ -5076,7 +5090,7 @@ local ModData = {
             Rarity = "Inhabituel",
             Transmutable = false
         },
-        ["Nitro Boost"] = {
+        ["Boost Nitro"] = {
             Image = "Boost Nitro.png",
             Name = "Boost Nitro",
             NameEN = "Nitro Boost",
@@ -5648,7 +5662,8 @@ local ModData = {
             Name = "Pointe Métallique",
             NameEN = "Metal Auger",
             Polarity = "Naramon",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"FUSIL", "+PENETRATION"}
         },
         ["Pointe Métallique Argonak Amalgame"] = {
             AugmentType = 'Arme',
@@ -5659,6 +5674,7 @@ local ModData = {
             NameEN = "Amalgam Argonak Metal Auger",
             Polarity = "Madurai",
             Rarity = "Amalgame",
+            Traits = {"+PENETRATION"},
             Transmutable = false
         },
         ["Pointe de Flèche à Ressort"] = {
@@ -7095,7 +7111,8 @@ local ModData = {
             Name = "Chercheur",
             NameEN = "Seeker",
             Polarity = "Naramon",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"SECONDAIRE", "+PENETRATION"}
         },
         ["Onde Sismique"] = {
             Image = "Onde Sismique.png",
@@ -9617,7 +9634,12 @@ local ModData = {
     },
 
     ["ArchwingAugments"] = {
-        -- Elytron
+        -- Odonata
+        {
+            Name = "Champ d'Énergie",
+            Archwing = "Odonata",
+            Ability = "Bouclier d'Énergie"
+        }, -- Elytron
         {
             Name = "Postcombustion",
             Archwing = "Elytron",

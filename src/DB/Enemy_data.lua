@@ -43,6 +43,68 @@ local EnemyData = {
         Scans = 3,
         Weapons = {"Paracyst"}
     },
+    ["Ambulas"] = {
+        Affinity = 1.500,
+        BaseLevel = 1,
+        Capacities = {},
+        Faction = "Corpus",
+        Family = "Ambulas",
+        HealthTypes = {
+            ["Robot"] = 1.100,
+            ["Bouclier"] = 500,
+            ["Armure en Alliage"] = 150
+        },
+        Image = "Ambulas3.png",
+        Icon = "Ambulas sigil.png",
+        Introduced = "6.0",
+        Link = nil,
+        Name = "Ambulas",
+        NameEN = "Ambulas",
+        Regions = {"Pluton"},
+        Scans = 3,
+        SpawnLevel = 45,
+        Weapons = {}
+    },
+    ["Ancien Guérisseur"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = {},
+        Faction = "Infesté",
+        Family = "Ancien Guérisseur",
+        HealthTypes = {["Fossilisé"] = 400},
+        Image = "Ancien_guerisseur.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Ancien Guérisseur",
+        NameEN = "Ancient Healer",
+        Regions = {
+            "Mercure", "Vénus", "Terre", "Mars", "Jupiter", "Saturne",
+            "Uranus", "Neptune", "Pluton", "Cérès", "Éris", "Sedna",
+            "Europe", "Phobos", "Deimos"
+        },
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = {}
+    },
+    ["Ancien Guérisseur Deimos"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = {},
+        Faction = "Infesté",
+        Family = "Ancien Guérisseur",
+        HealthTypes = {["Fossilisé"] = 400},
+        Image = "HealingAncientMicroPlanetAvatar.png",
+        Icon = nil,
+        Introduced = "29.0",
+        Link = nil,
+        Name = "Ancien Guérisseur Deimos",
+        NameEN = "Deimos Ancient Healer",
+        Regions = {"Deimos"},
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = {}
+    },
     ["Artilleuse Lourde"] = {
         Affinity = 500,
         BaseLevel = 8,
@@ -116,6 +178,22 @@ local EnemyData = {
         Weapons = {"Lecta", "Detron Essaim", "Angstrum Chercheur"}
     },
     -- D
+    ["Dargyn"] = {
+        Affinity = 57.13,
+        BaseLevel = 1,
+        Capacities = {},
+        Faction = "Grineer",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 200},
+        Image = "GrnSkiff.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Dargyn",
+        NameEN = "Dargyn",
+        Regions = {"Espace Libre"},
+        Scans = 5,
+        Weapons = {}
+    },
     ["Dreg Temporel"] = {
         Affinity = 57.13,
         BaseLevel = 1,
@@ -131,6 +209,22 @@ local EnemyData = {
         NameEN = "Temporal Dreg",
         Regions = {"Terre", "Saturne", "Uranus"},
         Scans = 10,
+        Weapons = {}
+    },
+    ["Drone d'Attaque (Archwing)"] = {
+        Affinity = 57.13,
+        BaseLevel = 1,
+        Capacities = {},
+        Faction = "Corpus",
+        HealthTypes = {["Robot"] = 250, ["Bouclier"] = 75},
+        Image = "FusionDroneDE.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Drone d'Attaque (Archwing)",
+        NameEN = "Attack Drone (Archwing Enemy)",
+        Regions = {"Venus", "Mars", "Jupiter", "Neptune"},
+        Scans = 20,
         Weapons = {}
     },
     -- E
@@ -192,19 +286,36 @@ local EnemyData = {
     },
     -- H
     ["Hellion"] = {
-        Affinity = nil,
+        Affinity = 250,
         BaseLevel = 1,
         Capacities = {"Jet-Pack", "Barrage de Missiles"},
         Faction = "Grineer",
         Family = "Hellion",
         HealthTypes = {["Armure en Ferrite"] = 100, ["Chair Clonée"] = 100},
-        Image = "HellionClassic.png",
+        Image = "Hellion.png",
         Icon = nil,
         Introduced = nil,
         Link = nil,
         Name = "Hellion",
         NameEN = "Hellion",
         Regions = {"Cérès", "Sedna", "Deimos"},
+        Scans = 5,
+        Weapons = {"Grakata", "Sheev"}
+    },
+    ["Hellion Aride"] = {
+        Affinity = 250,
+        BaseLevel = 1,
+        Capacities = {"Jet-Pack", "Barrage de Missiles"},
+        Faction = "Grineer",
+        Family = "Hellion",
+        HealthTypes = {["Armure en Ferrite"] = 100, ["Chair Clonée"] = 180},
+        Image = "HellionAride.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Hellion Aride",
+        NameEN = "Arid Hellion",
+        Regions = {"Colonie Grineer"},
         Scans = 5,
         Weapons = {"Grakata", "Sheev"}
     },
@@ -409,6 +520,23 @@ local EnemyData = {
         Weapons = {"Gorgon", "Brokk"}
     },
     -- M
+    ["Massacreur Kosma"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = {},
+        Faction = "Grineer",
+        Family = "Massacreur",
+        HealthTypes = {["Chair Clonée"] = 750, ["Armure en Ferrite"] = 200},
+        Image = "Massacreur Kosma.png",
+        Icon = nil,
+        Introduced = 27.0,
+        Link = nil,
+        Name = "Massacreur Kosma",
+        NameEN = "Kosma Butcher",
+        Regions = {"Proxima de la Terre"},
+        Scans = 20,
+        Weapons = {"Machette"}
+    },
     ["Messager Fanatique"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -444,6 +572,27 @@ local EnemyData = {
         },
         Scans = 10,
         Weapons = {"Canon Électrique"}
+    },
+    ["MOA Mutaliste Essaim"] = {
+        Affinity = 150,
+        BaseLevel = 12,
+        Capacities = {"Onde de Choc"},
+        Faction = "Infesté",
+        Family = "MOA Mutaliste Essaim",
+        HealthTypes = {["Fossilisé"] = 350},
+        Image = "MOA-Essaim.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "MOA Mutaliste Essaim",
+        NameEN = "Swarm Mutalist MOA",
+        Regions = {
+            "Mercure", "Vénus", "Terre", "Mars", "Jupiter", "Saturne",
+            "Uranus", "Neptune", "Pluton", "Cérès", "Éris", "Sedna",
+            "Europe", "Phobos", "Deimos"
+        },
+        Scans = 5,
+        Weapons = {"Spores Infestées"}
     },
     -- N
     -- O
@@ -485,6 +634,30 @@ local EnemyData = {
     },
     -- Q
     -- R
+    ["Ropalolyste"] = {
+        Affinity = nil,
+        BaseLevel = 17,
+        Capacities = {
+            "Lasers", "Hurlement Zéro", "Flux Électrique", "Laser Géant",
+            "Missiles à Têtes Chercheuses", "Attrape"
+        },
+        Faction = "Sentient",
+        Family = "Ropalolyste",
+        HealthTypes = {
+            ["Armure en Alliage"] = 200,
+            ["Bouclier"] = 2000,
+            ["Robot"] = 5000
+        },
+        Image = "Ropalolyst.png",
+        Icon = nil,
+        Introduced = "25.0",
+        Link = nil,
+        Name = "Ropalolyste",
+        NameEN = "Ropalolyste",
+        Regions = {"Jupiter"},
+        Scans = 3,
+        Weapons = {}
+    },
     -- S
     ["Scorpion"] = {
         Affinity = 145.06,

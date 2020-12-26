@@ -6525,7 +6525,7 @@ local DropData = {
                 {"Cible Acquise", 4.17}
             }
         }, {
-            Name = "Ropalolyst",
+            Name = "Ropalolyste",
             ModChance = 100,
             Mods = {
                 {"Pointe Métallique Argonak Amalgame", 20},
@@ -8272,18 +8272,15 @@ local DropData = {
                 {"Coup de Foudre", 0.67}, {"Serpents Croisés", 0.67},
                 {"Volonté de Survie", 0.67}, {"Endo", 11.06, 50}
             }
-        } , {
+        }, {
             Name = "Massacreur Kosma",
             ModChance = 5,
             Mods = {
-                {"Lame Tempérée",76.47},
-                {"Débordement",5.04},
-                {"Piqûre Toxique",5.04},
-                {"Chargeur Venimeux",5.04},
-                {"Durabilité Améliorée",5.04},
-                {"Détente Automatique",1.68},
-                {"Transfert Efficace",1.68},
-          },
+                {"Lame Tempérée", 76.47}, {"Débordement", 5.04},
+                {"Piqûre Toxique", 5.04}, {"Chargeur Venimeux", 5.04},
+                {"Durabilité Améliorée", 5.04},
+                {"Détente Automatique", 1.68}, {"Transfert Efficace", 1.68}
+            }
         }, {
             Name = "Massacreur Kuva",
             ModChance = 3,
@@ -8843,10 +8840,8 @@ local DropData = {
             Name = "Drone d'Attaque (Archwing)",
             ModChance = 3,
             Mods = {
-                {"Prolongement", 25.29},
-                {"Magasin Profond", 25.29},
-                {"Transfert Efficace", 2.01},
-                {"Endo", 25.29, 15},
+                {"Prolongement", 25.29}, {"Magasin Profond", 25.29},
+                {"Transfert Efficace", 2.01}, {"Endo", 25.29, 15},
                 {"Endo", 22.11, 50}
             }
         }, {
@@ -10054,6 +10049,14 @@ local DropData = {
                 {"Impulsion Proton", 22.03}, {"Avantage Aéro", 5.81},
                 {"Impact Motus", 5.81}, {"Jet Proton", 5.81},
                 {"Configuration Motus", 0.97}, {"Claquement Proton", 0.97}
+            }
+        }, {
+            Name = "Ancien Guérisseur Deimos",
+            ModChance = 3,
+            Mods = {
+                {"Paratonnerre", 25.29}, {"Ignifugé", 25.29},
+                {"Endo", 25.29, 15}, {"Endo", 25.11, 50}, {"Chercheur", 1.01},
+                {"Endo", 1.01, 80}
             }
         }
     }

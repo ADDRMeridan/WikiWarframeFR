@@ -12,7 +12,16 @@ local IMG_MOD_INCONNU = 'Mod_inconnu.png'
 
 local function getMod(name)
 
-    local ret = ModData["Mods"][name]
+    local ret = nil
+    local modArray = ModData["Mods"]
+    if (Shared.containsCharChiantFR(name)) then
+        local tmpName = Shared.charChiantFR(name)
+        for k, v in Shared.skpairs(modArray) do
+            if (Shared.charChiantFR(k) == tmpName) then return v end
+        end
+    else
+        ret = modArray[name]
+    end
 
     return ret
 end
@@ -110,7 +119,8 @@ function p._getValue(ModName, ValName)
                 end
             end
         else
-            ret = Shared.printModuleError("Pas de valeur spécifiée")
+            ret = Shared.printModuleError("Pas de valeur spécifiée",
+                                          "Mods._getValue")
         end
     else
         if (ValName ~= nil and string.upper(ValName) == "IMAGE") then
@@ -237,12 +247,14 @@ local function doesModContainTraits(Mod, traitsArray)
 end
 
 -- Struct to store the different filters on mods
-local modFilters = {Polarity = nil, Set = nil, Traits = {}}
+local modFilters = {AugmentType = nil, Polarity = nil, Set = nil, Traits = {}}
 
 local function getFiltersFromFrame(frame)
 
     local filter = modFilters
     if (frame.args ~= nil) then
+        -- AugmentType
+        filter.AugmentType = frame.args['augment'] or nil
         -- Polarite
         filter.Polarity = frame.args['polarity'] or nil
         -- Set
@@ -267,8 +279,11 @@ local function filterAllMods(filter)
 
     for _, Mod in Shared.skpairs(ModData['Mods']) do
         -- Gros bloc qui permet de filtrer: savoir si on garde le mod ou non
-        local keepMod = (filter.Set == nil or
-                            (filter.Set ~= nil and filter.Set == Mod.Set)) and
+        local keepMod = (filter.AugmentType == nil or
+                            (filter.AugmentType ~= nil and filter.AugmentType ==
+                                Mod.AugmentType)) and
+                            (filter.Set == nil or
+                                (filter.Set ~= nil and filter.Set == Mod.Set)) and
                             (filter.Polarity == nil or
                                 (filter.Polarity ~= nil and filter.Polarity ==
                                     Mod.Polarity)) and (filter.Traits == nil or
@@ -833,7 +848,7 @@ local function getAugmentedWarframes()
     return warf
 end
 
-function p.buildWarframeAugmentNavBoxRows()
+local function buildAugmentNavBoxRows_Warframe()
 
     local ret = {}
     for _, wfName in pairs(getAugmentedWarframes()) do
@@ -847,6 +862,40 @@ function p.buildWarframeAugmentNavBoxRows()
     end
 
     return table.concat(ret)
+end
+
+local function buildAugmentNavBoxRows_Archwing()
+
+    local archwingAugments = {}
+    for _, augment in pairs(getAugmentTypeArray('Archwing')) do
+        if (archwingAugments[augment.Archwing] == nil) then
+            archwingAugments[augment.Archwing] = {}
+        end
+        table.insert(archwingAugments[augment.Archwing], augment.Name)
+    end
+
+    local ret = {}
+    for archName, augmentsName in Shared.skpairs(archwingAugments) do
+        table.insert(ret, '\n|-\n| class="navboxgroup" | [[')
+        table.insert(ret, archName)
+        table.insert(ret, ']]\n| ')
+        table.insert(ret, buildModList(augmentsName))
+    end
+    return table.concat(ret)
+end
+
+function p.buildAugmentNavBoxRows(frame)
+
+    local ret = nil
+
+    local augmentType = frame.args[1]
+    if (augmentType == "Archwing") then
+        ret = buildAugmentNavBoxRows_Archwing()
+    elseif (augmentType == "Warframe") then
+        ret = buildAugmentNavBoxRows_Warframe()
+    end
+
+    return ret
 end
 
 function p.buildTableauAugment()
