@@ -1717,6 +1717,15 @@ local ModData = {
             Traits = {"+%IMPACT", "MELEE"},
             Transmutable = false
         },
+        ["Contrôle des Foules"] = {
+            Archived = true,
+            Image = "Contrôle_des_Foules.png",
+            Name = "Contrôle des Foules",
+            NameEN = "Crowd Control",
+            Polarity = "Vazarin",
+            Rarity = "Inhabituel",
+            Traits = {"POMPE", "+%ETOURDISSEMENT"}
+        },
         ["Convergence Maîtrisée"] = {
             AugmentType = 'Arme',
             Image = "Convergence Maîtrisée.png",
