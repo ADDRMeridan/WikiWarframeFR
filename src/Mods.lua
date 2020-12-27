@@ -15,6 +15,7 @@ local function getMod(name)
     local ret = nil
     local modArray = ModData["Mods"]
     if (Shared.containsCharChiantFR(name)) then
+        -- Gestion des chars bloquant la recherche par index
         local tmpName = Shared.charChiantFR(name)
         for k, v in Shared.skpairs(modArray) do
             if (Shared.charChiantFR(k) == tmpName) then return v end
@@ -252,6 +253,7 @@ local modFilters = {
     Polarity = nil,
     Rarity = nil,
     Set = nil,
+    Stance = nil,
     Traits = {}
 }
 
@@ -267,6 +269,11 @@ local function getFiltersFromFrame(frame)
         filter.Rarity = frame.args['rarity'] or nil
         -- Set
         filter.Set = frame.args['set'] or nil
+        -- Stance
+        filter.Stance = frame.args['stance'] or nil
+        if (filter.Stance ~= nil) then
+            filter.Stance = filter.Stance == "true"
+        end
         -- Traits
         for _, trait in ipairs(frame.args) do
             table.insert(filter.Traits, trait)
@@ -295,6 +302,8 @@ local function filterAllMods(filter)
                                     Mod.Rarity)) and
                             (filter.Set == nil or
                                 (filter.Set ~= nil and filter.Set == Mod.Set)) and
+                            (filter.Stance == nil or
+                                (filter.Stance ~= nil and Mod.Stance)) and
                             (filter.Polarity == nil or
                                 (filter.Polarity ~= nil and filter.Polarity ==
                                     Mod.Polarity)) and (filter.Traits == nil or
@@ -431,6 +440,23 @@ function p.printAllMods()
     end
 
     return table.concat(ret, ' ')
+end
+
+function p.printAllTraits()
+
+    local ret = {}
+    local modArray = ModData["Mods"]
+    for _, mod in pairs(modArray) do
+        if (mod.Traits ~= nil) then
+            for _, trait in pairs(mod.Traits) do
+                if (not Shared.contains(ret, trait)) then
+                    table.insert(ret, trait)
+                end
+            end
+        end
+    end
+
+    return table.concat(ret, ', ')
 end
 
 ------------------------
