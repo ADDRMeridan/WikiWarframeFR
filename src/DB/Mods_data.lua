@@ -1725,7 +1725,8 @@ local ModData = {
             NameEN = "Crowd Control",
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
-            Traits = {"POMPE", "+%ETOURDISSEMENT"}
+            Traits = {"POMPE", "+%ETOURDISSEMENT"},
+            Transmutable = false
         },
         ["Convergence Maîtrisée"] = {
             AugmentType = 'Arme',
