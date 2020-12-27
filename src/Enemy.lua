@@ -271,4 +271,71 @@ function p._getValue(enemyName, valName)
     return ret, errorMess
 end
 
+-- ===================
+--   CODEX
+-- ===================
+
+local function buildCodexCell(mobStruct)
+
+    local ret = {}
+    if (mobStruct ~= nil) then
+        table.insert(ret, '<span class="enemy-tooltip" data-param="')
+        table.insert(ret, mobStruct.Name)
+        table.insert(ret,
+                     '" style="white-space:pre;"><div class="codex_box_container"><div class="codex_box_img">[[File:')
+        local img2Insert = mobStruct.Image
+        if (img2Insert == nil) then img2Insert = Shared.getDefaultImg() end
+        table.insert(ret, img2Insert)
+        table.insert(ret, '|link=')
+        if (mobStruct.Link ~= nil) then
+            table.insert(ret, mobStruct.Link)
+        else
+            table.insert(ret, mobStruct.Name)
+        end
+        table.insert(ret, ']]</div><div class="codex_box_text">[[')
+        if (mobStruct.Link ~= nil) then
+            table.insert(ret, mobStruct.Link)
+            table.insert(ret, '|')
+        end
+        table.insert(ret, mobStruct.Name)
+        table.insert(ret, ']]</div></div></span>')
+    end
+
+    return table.concat(ret)
+end
+
+local function buildCodexAll()
+
+    local ret = {}
+    for _, mob in pairs(EnemyData) do table.insert(ret, buildCodexCell(mob)) end
+    return table.concat(ret)
+end
+
+local function buildCodexFaction(factionName)
+
+    local ret = {}
+    if (factionName ~= nil) then
+        for _, mob in pairs(EnemyData) do
+            if (factionName == mob.Faction) then
+                table.insert(ret, buildCodexCell(mob))
+            end
+        end
+    end
+    return table.concat(ret)
+end
+
+function p.buildCodex(frame)
+
+    local faction = (frame.args ~= nil and frame.args[1]) or nil
+
+    local ret = nil
+    if (faction == nil) then
+        ret = buildCodexAll()
+    else
+        ret = buildCodexFaction(faction)
+    end
+
+    return ret
+end
+
 return p
