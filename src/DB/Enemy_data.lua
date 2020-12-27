@@ -223,7 +223,7 @@ local EnemyData = {
         Link = nil,
         Name = "Drone d'Attaque (Archwing)",
         NameEN = "Attack Drone (Archwing Enemy)",
-        Regions = {"Venus", "Mars", "Jupiter", "Neptune"},
+        Regions = {"Vénus", "Mars", "Jupiter", "Neptune"},
         Scans = 20,
         Weapons = {}
     },
@@ -332,9 +332,26 @@ local EnemyData = {
         Link = nil,
         Name = "Homme d'Équipage",
         NameEN = "Crewman",
-        Regions = {"Venus", "Mars", "Jupiter", "Phobos", "Europe"},
+        Regions = {"Vénus", "Mars", "Jupiter", "Phobos", "Europe"},
         Scans = 20,
         Weapons = {"Dera", "Prova"}
+    },
+    ["Homme d'Équipage Prod"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Homme d'Équipage Prod",
+        HealthTypes = {["Bouclier"] = 50, ["Chair"] = 100},
+        Image = "250px-CrewmanProd.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Homme d'Équipage Prod",
+        NameEN = "Prod Crewman",
+        Regions = {"Vénus", "Mars", "Deimos"},
+        Scans = 20,
+        Weapons = {"Prova"}
     },
     -- I
     -- J
