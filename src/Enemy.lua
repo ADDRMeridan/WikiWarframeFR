@@ -279,10 +279,10 @@ local function buildCodexCell(mobStruct)
 
     local ret = {}
     if (mobStruct ~= nil) then
-        table.insert(ret, '<span class="enemy-tooltip" data-param="')
-        table.insert(ret, mobStruct.Name)
         table.insert(ret,
-                     '" style="white-space:pre;"><div class="codex_box_container"><div class="codex_box_img">[[File:')
+                     '<div class="codex_box_container enemy-tooltip" data-param="')
+        table.insert(ret, mobStruct.Name)
+        table.insert(ret, '"><div class="codex_box_img">[[File:')
         local img2Insert = mobStruct.Image
         if (img2Insert == nil) then img2Insert = Shared.getDefaultImg() end
         table.insert(ret, img2Insert)
@@ -307,7 +307,9 @@ end
 local function buildCodexAll()
 
     local ret = {}
-    for _, mob in pairs(EnemyData) do table.insert(ret, buildCodexCell(mob)) end
+    for _, mob in Shared.skpairs(EnemyData) do
+        table.insert(ret, buildCodexCell(mob))
+    end
     return table.concat(ret)
 end
 
@@ -315,7 +317,7 @@ local function buildCodexFaction(factionName)
 
     local ret = {}
     if (factionName ~= nil) then
-        for _, mob in pairs(EnemyData) do
+        for _, mob in Shared.skpairs(EnemyData) do
             if (factionName == mob.Faction) then
                 table.insert(ret, buildCodexCell(mob))
             end
@@ -328,14 +330,16 @@ function p.buildCodex(frame)
 
     local faction = (frame.args ~= nil and frame.args[1]) or nil
 
-    local ret = nil
+    local ret = {}
+    table.insert(ret, '<div class="codex_page_container">')
     if (faction == nil) then
-        ret = buildCodexAll()
+        table.insert(ret, buildCodexAll())
     else
-        ret = buildCodexFaction(faction)
+        table.insert(ret, buildCodexFaction(faction))
     end
+    table.insert(ret, '</div>')
 
-    return ret
+    return table.concat(ret)
 end
 
 return p
