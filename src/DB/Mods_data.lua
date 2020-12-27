@@ -1720,6 +1720,7 @@ local ModData = {
         ["Contrôle des Foules"] = {
             Archived = true,
             Image = "Contrôle_des_Foules.png",
+            Introduced = "Vanilla",
             Name = "Contrôle des Foules",
             NameEN = "Crowd Control",
             Polarity = "Vazarin",
