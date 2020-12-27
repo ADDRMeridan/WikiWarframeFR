@@ -549,7 +549,8 @@ local ModData = {
             NameEN = "Primed Reach",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"MELEE", "BARO"}
         },
         ["Atterrissage Frigide"] = {
             Image = "Atterrissage Frigide.png",
@@ -667,7 +668,8 @@ local ModData = {
             NameEN = "Primed Cryo Rounds",
             Polarity = "Vazarin",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"FUSIL", "BARO"}
         },
         ["Balles Incendiaires"] = {
             Image = "Balles_Incendiaires.png",
@@ -698,7 +700,7 @@ local ModData = {
             NameEN = "Thermite Rounds",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%STATCHANCE", "FUSIL"},
+            Traits = {"+%STATCHANCE", "FUSIL", "BARO"},
             Transmutable = false
         },
         ["Barrage Corrosif"] = {
@@ -897,7 +899,7 @@ local ModData = {
             NameEN = "Scattering Inferno",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%STATCHANCE", "POMPE"},
+            Traits = {"+%STATCHANCE", "POMPE", "BARO"},
             Transmutable = false
         },
         ["Brume de Contagion"] = {
@@ -945,7 +947,7 @@ local ModData = {
             NameEN = "Scorch",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%STATCHANCE", "SECONDAIRE"},
+            Traits = {"+%STATCHANCE", "SECONDAIRE", "BARO"},
             Transmutable = false
         },
         ["Calme & Frénésie"] = {
@@ -987,7 +989,8 @@ local ModData = {
             Introduced = "28.0.5",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"ARCH-FUSIL", "BARO"}
         },
         ["Canon Électrifié"] = {
             Image = "Canon Électrifié.png",
@@ -1166,7 +1169,8 @@ local ModData = {
             NameEN = "Primed Chamber",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"BARO", "FUSIL", "SNIPER"}
         },
         ["Chambre Chargée"] = {
             Image = "Chambre_Chargée.png",
@@ -1420,7 +1424,8 @@ local ModData = {
             NameEN = "Primed Pack Leader",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"COMPAGNON", "BARO"}
         },
         ["Châtie-Corrompu"] = {
             Image = "Chatie-Corrompu.png",
@@ -1552,7 +1557,7 @@ local ModData = {
             NameEN = "Crash Course",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"+%IMPACT", "FUSIL"},
+            Traits = {"+%IMPACT", "FUSIL", "BARO"},
             Transmutable = false
         },
         ["Colère Aveugle"] = {
@@ -1573,6 +1578,26 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
+        ["Combo Furie"] = {
+            Image = "Combo Furie.png",
+            Introduced = "29.2.3",
+            Name = "Combo Furie",
+            NameEN = "Combo Fury",
+            Polarity = "Naramon",
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"MELEE", "BARO"}
+        },
+        ["Combo Meurtrier"] = {
+            Image = "Combo Meurtrier.png",
+            Introduced = "29.3.2",
+            Name = "Combo Meurtrier",
+            NameEN = "Combo Killer",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Transmutable = false,
+            Traits = {"MELEE", "BARO"}
+        },
         ["Commande du Chasseur"] = {
             Image = "Commande_du_Chasseur.jpg",
             Name = "Commande du Chasseur",
@@ -1588,7 +1613,7 @@ local ModData = {
             NameEN = "Shell Shock",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%STATCHANCE", "POMPE"},
+            Traits = {"+%STATCHANCE", "POMPE", "BARO"},
             Transmutable = false
         },
         ["Compagnon Loyal"] = {
@@ -1671,7 +1696,7 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Légendaire",
             Transmutable = false,
-            Traits = {"WARFRAME"}
+            Traits = {"WARFRAME", "BARO"}
         },
         ["Continuum Cataclysmique"] = {
             AugmentType = 'Warframe',
@@ -1774,7 +1799,7 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Rare",
             Transmutable = false,
-            Traits = {"+%STATCHANCE", "MELEE"}
+            Traits = {"+%STATCHANCE", "MELEE", "BARO"}
         },
         ["Coup de Foudre"] = {
             Image = "Coup de Foudre.png",
@@ -1894,7 +1919,7 @@ local ModData = {
             NameEN = "Primed Target Cracker",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"+%CRITMULT", "SECONDAIRE"},
+            Traits = {"+%CRITMULT", "SECONDAIRE", "BARO"},
             Transmutable = false
         },
         ["Crocs Autoguidés"] = {
@@ -1920,7 +1945,8 @@ local ModData = {
             NameEN = "Astral Twilight",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Stance = true
+            Stance = true,
+            Traits = {"BARO"}
         },
         ["Crépuscule Céleste"] = {
             Image = "Crépuscule_Céleste.jpg",
@@ -2031,7 +2057,7 @@ local ModData = {
             Rarity = "Commun"
         },
         ["Don de Puissance"] = {
-            Image = "Don_de_Puissance.jpg",
+            Image = "Don de Puissance.png",
             Name = "Don de Puissance",
             NameEN = "Power Donation",
             Polarity = "Madurai",
@@ -2156,7 +2182,7 @@ local ModData = {
             Transmutable = false
         },
         ["Déconstruction Synth"] = {
-            Image = "Déconstruction_Synth.jpg",
+            Image = "Déconstruction Synth.png",
             Name = "Déconstruction Synth",
             NameEN = "Synth Deconstruct",
             Polarity = "Madurai",
@@ -2204,7 +2230,8 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Légendaire",
             Transmutable = false,
-            Introduced = "23.1.3"
+            Introduced = "23.1.3",
+            Traits = {"SECONDAIRE", "BARO"}
         },
         ["Délai Critique"] = {
             Image = "Délai_Critique.png",
@@ -2506,7 +2533,8 @@ local ModData = {
             NameEN = "Primed Expel Corpus",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"SECONDAIRE", "BARO"}
         },
         ["Expulse-Corrompu"] = {
             Image = "Expulse-Corrompu.png",
@@ -2521,7 +2549,8 @@ local ModData = {
             NameEN = "Primed Expel Corrupted",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"SECONDAIRE", "BARO"}
         },
         ["Expulse-Grineer"] = {
             Image = "Expulse-Grineer.png",
@@ -2536,7 +2565,8 @@ local ModData = {
             NameEN = "Primed Expel Grineer",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"SECONDAIRE", "BARO"}
         },
         ["Expulse-Infestés Accru"] = {
             Image = "Expulse-Infestés Accru.png",
@@ -2544,7 +2574,8 @@ local ModData = {
             NameEN = "Primed Expel Infested",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"SECONDAIRE", "BARO"}
         },
         ["Expulse-Infestés"] = {
             Image = "Expulse-Infestés.png",
@@ -2645,7 +2676,7 @@ local ModData = {
             Traits = {"+%ARMURE", "COMPAGNON"}
         },
         ["Fibre Synth"] = {
-            Image = "Fibre_Synth.jpg",
+            Image = "Fibre Synth.png",
             Name = "Fibre Synth",
             NameEN = "Synth Fiber",
             Polarity = "Madurai",
@@ -2679,7 +2710,7 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Rare",
             Transmutable = false,
-            Traits = {"+%STATCHANCE", "MELEE"}
+            Traits = {"+%STATCHANCE", "MELEE", "BARO"}
         },
         ["Fin Explosive"] = {
             Image = "FinExplosive.png",
@@ -2792,7 +2823,8 @@ local ModData = {
             NameEN = "Primed Flow",
             Polarity = "Naramon",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"WARFRAME", "BARO"}
         },
         ["Flux de Bouclier"] = {
             Archived = true,
@@ -2914,7 +2946,8 @@ local ModData = {
             NameEN = "Primed Bane of Corpus",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"FUSIL", "BARO"}
         },
         ["Fléau des Corrompus"] = {
             Image = "Fléau des Corrompus.png",
@@ -2929,7 +2962,8 @@ local ModData = {
             NameEN = "Primed Bane of Corrupted",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"FUSIL", "BARO"}
         },
         ["Fléau des Grineer"] = {
             Image = "Fléau des Grineer.png",
@@ -2944,7 +2978,8 @@ local ModData = {
             NameEN = "Primed Bane of Grineer",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"FUSIL", "BARO"}
         },
         ["Fléau des Infestés"] = {
             Image = "Fléau des Infestés.png",
@@ -2959,7 +2994,8 @@ local ModData = {
             NameEN = "Primed Bane of Infested",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"FUSIL", "BARO"}
         },
         ["Fléau Érodant"] = {
             AugmentType = 'Arme',
@@ -3012,7 +3048,7 @@ local ModData = {
             NameEN = "Collision Force",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"+%IMPACT", "MELEE"},
+            Traits = {"+%IMPACT", "MELEE", "BARO"},
             Transmutable = false
         },
         ["Force de Gel"] = {
@@ -3194,7 +3230,8 @@ local ModData = {
             NameEN = "Primed Fever Strike",
             Polarity = "Naramon",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"MELEE", "BARO"}
         },
         ["Frappe de Précision"] = {
             AugmentType = 'Arme',
@@ -3254,7 +3291,7 @@ local ModData = {
             NameEN = "Full Contact",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"+%IMPACT", "POMPE"},
+            Traits = {"+%IMPACT", "POMPE", "BARO"},
             Transmutable = false
         },
         ["Fulmination"] = {
@@ -3322,7 +3359,8 @@ local ModData = {
             NameEN = "Fanged Fusillade",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"FUSIL", "BARO"}
         },
         ["Fusée de Marquage"] = {
             AugmentType = 'Warframe',
@@ -3626,7 +3664,7 @@ local ModData = {
             NameEN = "High Voltage",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%STATCHANCE", "FUSIL"},
+            Traits = {"+%STATCHANCE", "FUSIL", "BARO"},
             Transmutable = false
         },
         ["Havre de Faille"] = {
@@ -3938,7 +3976,7 @@ local ModData = {
             NameEN = "Animal Instinct",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"NIGHTMARE", "COMPAGNON"}
+            Traits = {"COMPAGNON", "NIGHTMARE"}
         },
         ["Instinct Animal Accru"] = {
             Image = "Instinct Animal Accru.png",
@@ -3946,7 +3984,8 @@ local ModData = {
             NameEN = "Primed Animal Instinct",
             Polarity = "Naramon",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"COMPAGNON", "BARO"}
         },
         ["Isolation"] = {
             Image = "Isolation.png",
@@ -4525,7 +4564,8 @@ local ModData = {
             NameEN = "Maim",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"SECONDAIRE", "BARO"}
         },
         ["Main Traumatique"] = {
             Image = "Main_Traumatique.jpg",
@@ -4560,7 +4600,8 @@ local ModData = {
             NameEN = "Primed Fast Hands",
             Polarity = "Naramon",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"FUSIL", "BARO"}
         },
         ["Mains Stables"] = {
             Image = "Mains Stables.png",
@@ -4612,7 +4653,7 @@ local ModData = {
             NameEN = "Primed Pistol Gambit",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"+%CRITCHANCE", "SECONDAIRE"},
+            Traits = {"+%CRITCHANCE", "SECONDAIRE", "BARO"},
             Transmutable = false
         },
         ["Manteau Chaud"] = {
@@ -5018,7 +5059,7 @@ local ModData = {
             NameEN = "Primed Pistol Ammo Mutation",
             Polarity = "Naramon",
             Rarity = "Légendaire",
-            Traits = {"SECONDAIRE", "MUNITIONS", "MUTATION"},
+            Traits = {"SECONDAIRE", "MUNITIONS", "MUTATION", "BARO"},
             Transmutable = false
         },
         ["Mâchoire Gelée"] = {
@@ -5525,13 +5566,13 @@ local ModData = {
             Transmutable = false
         },
         ["Pistolet amplifié"] = {
-            Image = "Pistolet Amplifié.png",
+            Image = "Pistolet amplifié.png",
             Name = "Pistolet amplifié",
             NameEN = "Pistol Amp",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
             Transmutable = false,
-            Traits = {"AURA", "MADURAI"}
+            Traits = {"AURA"}
         },
         ["Pistolero"] = {
             Image = "Pistolero.png",
@@ -5634,7 +5675,8 @@ local ModData = {
             NameEN = "Primed Pressure Point",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"MELEE", "BARO"}
         },
         ["Pointe Creuse"] = {
             Image = "Pointe_Creuse.png",
@@ -5809,7 +5851,8 @@ local ModData = {
             NameEN = "Primed Charged Shell",
             Polarity = "Naramon",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"POMPE", "BARO"}
         },
         ["Charge de Chaleur Accrue"] = {
             Image = "Charge de Chaleur Accrue.png",
@@ -5817,7 +5860,8 @@ local ModData = {
             NameEN = "Primed Heated Charge",
             Polarity = "Naramon",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"SECONDAIRE", "BARO"}
         },
         ["Traumatisme Lourd Accru"] = {
             Family = "Traumatisme Lourd",
@@ -5826,7 +5870,7 @@ local ModData = {
             NameEN = "Primed Heavy Trauma",
             Polarity = "Naramon",
             Rarity = "Légendaire",
-            Traits = {"+%IMPACT", "MELEE"},
+            Traits = {"+%IMPACT", "MELEE", "BARO"},
             Transmutable = false
         },
         ["Mutation de Fusil Accrue"] = {
@@ -5836,7 +5880,7 @@ local ModData = {
             NameEN = "Primed Rifle Ammo Mutation",
             Polarity = "Naramon",
             Rarity = "Légendaire",
-            Traits = {"FUSIL", "MUNITIONS", "MUTATION"},
+            Traits = {"FUSIL", "MUNITIONS", "MUTATION", "BARO"},
             Transmutable = false
         },
         ["Mutation de Fusil à Pompe Accrue"] = {
@@ -5846,7 +5890,7 @@ local ModData = {
             NameEN = "Primed Shotgun Ammo Mutation",
             Polarity = "Naramon",
             Rarity = "Légendaire",
-            Traits = {"POMPE", "MUNITIONS", "MUTATION"},
+            Traits = {"POMPE", "MUNITIONS", "MUTATION", "BARO"},
             Transmutable = false
         },
         ["Chargeur Glissant Accru"] = {
@@ -5857,7 +5901,7 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Légendaire",
             Transmutable = false,
-            Traits = {"SECONDAIRE", "MUNITIONS", "+%TAILLE_CHARGEUR"}
+            Traits = {"SECONDAIRE", "MUNITIONS", "+%TAILLE_CHARGEUR", "BARO"}
         },
         ["Châtie-Corpus Accru"] = {
             Image = "Châtie-Corpus Accru.png",
@@ -5865,7 +5909,8 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Légendaire",
             Transmutable = false,
-            NameEN = "Primed Smite Corpus"
+            NameEN = "Primed Smite Corpus",
+            Traits = {"MELEE", "BARO"}
         },
         ["Châtie-Corrompu Accru"] = {
             Image = "Châtie-Corrompu Accru.png",
@@ -5873,7 +5918,8 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Légendaire",
             Transmutable = false,
-            NameEN = "Primed Smite Corrupted"
+            NameEN = "Primed Smite Corrupted",
+            Traits = {"MELEE", "BARO"}
         },
         ["Châtie-Grineer Accru"] = {
             Image = "Châtie-Grineer Accru.png",
@@ -5881,7 +5927,8 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Légendaire",
             Transmutable = false,
-            NameEN = "Primed Smite Grineer"
+            NameEN = "Primed Smite Grineer",
+            Traits = {"MELEE", "BARO"}
         },
         ["Châtie-Infestés Accru"] = {
             Image = "Châtie-Infestés Accru.png",
@@ -5889,7 +5936,8 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Légendaire",
             Transmutable = false,
-            NameEN = "Primed Smite Infested"
+            NameEN = "Primed Smite Infested",
+            Traits = {"MELEE", "BARO"}
         },
         ["Fierté Guerrière"] = {
             Image = "Fierté Guerrière.png",
@@ -6034,7 +6082,7 @@ local ModData = {
             NameEN = "Pummel",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"+%IMPACT", "SECONDAIRE"},
+            Traits = {"+%IMPACT", "SECONDAIRE", "BARO"},
             Transmutable = false
         },
         ["Pureté Désarmante"] = {
@@ -6080,7 +6128,8 @@ local ModData = {
             NameEN = "Primed Cleanse Corpus",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"POMPE", "BARO"}
         },
         ["Purifie-Corrompu"] = {
             Image = "CleanseCorruptedMod.png",
@@ -6095,7 +6144,8 @@ local ModData = {
             NameEN = "Primed Cleanse Corrupted",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"POMPE", "BARO"}
         },
         ["Purifie-Grineer"] = {
             Image = "Purifie-GrineersU145.png",
@@ -6110,7 +6160,8 @@ local ModData = {
             NameEN = "Primed Cleanse Grineer",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"POMPE", "BARO"}
         },
         ["Purifie-Infestés"] = {
             Image = nil,
@@ -6125,7 +6176,8 @@ local ModData = {
             NameEN = "Primed Cleanse Infested",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"POMPE", "BARO"}
         },
         ["Périphérie Aéro"] = {
             Image = "Périphérie_Aéro.png",
@@ -6177,12 +6229,13 @@ local ModData = {
             Rarity = "Commun"
         },
         ["Rabat-Joie"] = {
-            Image = "Rabat-Joie.jpg",
+            Image = "Rabat-Joie.png",
             Name = "Rabat-Joie",
             NameEN = "Buzz Kill",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"MELEE", "BARO"}
         },
         ["Radar ennemi"] = {
             Image = "Radar ennemi.png",
@@ -6260,7 +6313,7 @@ local ModData = {
             Transmutable = false
         },
         ["Rajeunissement"] = {
-            Image = "Rajeunissement.jpg",
+            Image = "Rajeunissement.png",
             Name = "Rajeunissement",
             NameEN = "Rejuvenation",
             Polarity = "Vazarin",
@@ -6316,7 +6369,7 @@ local ModData = {
             NameEN = "Primed Ravage",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"+%CRITMULT", "POMPE"},
+            Traits = {"+%CRITMULT", "POMPE", "BARO"},
             Transmutable = false
         },
         ["Ravage Tonitruant"] = {
@@ -6362,7 +6415,7 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Inhabituel",
             Transmutable = false,
-            Traits = {"CONCLAVE", "PISTOLET"}
+            Traits = {"CONCLAVE", "SECONDAIRE"}
         },
         ["Tir de Rasoir"] = {
             Image = "Tir de Rasoir.png",
@@ -6486,7 +6539,7 @@ local ModData = {
             Polarity = "Vazarin",
             Rarity = "Rare",
             Transmutable = false,
-            Traits = {"CONCLAVE", "PISTOLET"}
+            Traits = {"CONCLAVE", "SECONDAIRE"}
         },
         ["Redirection"] = {
             Image = "Redirection.png",
@@ -6801,7 +6854,7 @@ local ModData = {
             Transmutable = false
         },
         ["Réflexe Synth"] = {
-            Image = "Réflexe_Synth.jpg",
+            Image = "Réflexe Synth.png",
             Name = "Réflexe Synth",
             NameEN = "Synth Reflex",
             Polarity = "Madurai",
@@ -6836,7 +6889,8 @@ local ModData = {
             NameEN = "Primed Regen",
             Polarity = "Penjaga",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"COMPAGNON", "BARO"}
         },
         ["Répétition photonique"] = {
             AugmentType = 'Warframe',
@@ -6938,7 +6992,8 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Rare",
             Introduced = "25.8.2",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"BARO", "FUSIL", "ARC"}
         },
         ["Salves de Lames"] = {
             Image = "Salves_de_Lames.png",
@@ -7068,7 +7123,7 @@ local ModData = {
             Polarity = "Vazarin",
             Rarity = "Rare",
             Transmutable = false,
-            Traits = {"CONCLAVE", "PISTOLET"}
+            Traits = {"CONCLAVE", "SECONDAIRE"}
         },
         ["Secousse"] = {
             Image = "Secousse2.png",
@@ -7076,7 +7131,7 @@ local ModData = {
             NameEN = "Jolt",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%STATCHANCE", "SECONDAIRE"},
+            Traits = {"+%STATCHANCE", "SECONDAIRE", "BARO"},
             Transmutable = false
         },
         ["Secousse Résonnante"] = {
@@ -7089,7 +7144,7 @@ local ModData = {
             Transmutable = false
         },
         ["Secrets de l'Augure"] = {
-            Image = "Secrets_de_l'Augure.jpg",
+            Image = "Secrets de l'Augure.png",
             Name = "Secrets de l'Augure",
             NameEN = "Augur Secrets",
             Polarity = "Naramon",
@@ -7188,7 +7243,7 @@ local ModData = {
             Traits = {"POMPE", "MUNITIONS", "+%RESERVES"}
         },
         ["Perturbation du bouclier"] = {
-            Image = "Perturbation du Bouclier.png",
+            Image = "Perturbation du bouclier.png",
             Name = "Perturbation du bouclier",
             NameEN = "Shield Disruption",
             Polarity = "Naramon",
@@ -7348,7 +7403,7 @@ local ModData = {
             Transmutable = false
         },
         ["Récupérateur de Sniper"] = {
-            Image = "Récupérateur de Sniper.jpg",
+            Image = "Récupérateur de Sniper.png",
             Name = "Récupérateur de Sniper",
             NameEN = "Sniper Scavenger",
             Polarity = "Naramon",
@@ -7638,7 +7693,8 @@ local ModData = {
             NameEN = "Sweeping Serration",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"POMPE", "BARO"}
         },
         ["Balayage"] = {
             Image = "Balayage.png",
@@ -7786,7 +7842,8 @@ local ModData = {
             NameEN = "Tempo Royale",
             Polarity = "Vazarin",
             Rarity = "Rare",
-            Stance = true
+            Stance = true,
+            Traits = {"BARO"}
         },
         ["Temps de Vol"] = {
             Image = "Temps de Vol.png",
@@ -7841,7 +7898,8 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Rare",
             Stance = true,
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"BARO"}
         },
         ["Tempête de Feu"] = {
             Image = "Tempête de Feu.png",
@@ -8026,7 +8084,7 @@ local ModData = {
             Transmutable = false
         },
         ["Tireur d'élite"] = {
-            Image = "Tireur d'Élite.jpg",
+            Image = "Tireur d'élite.png",
             Name = "Tireur d'élite",
             NameEN = "Dead Eye",
             Introduced = "12.0",
@@ -8169,7 +8227,8 @@ local ModData = {
             NameEN = "Primed Morphic Transformer",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"ARCHWING", "BARO"}
         },
         ["Transfusion"] = {
             Image = "Transfusion.png",
@@ -8583,7 +8642,7 @@ local ModData = {
             Transmutable = false
         },
         ["Vol Toxique"] = {
-            Image = "VolToxique.png",
+            Image = "Vol Toxique.png",
             Name = "Vol Toxique",
             NameEN = "Toxic Flight",
             Polarity = "Naramon",
@@ -8756,7 +8815,8 @@ local ModData = {
             NameEN = "Primed Point Blank",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"POMPE", "BARO"}
         },
         ["Âme Survivante"] = {
             AugmentType = 'Warframe',
@@ -9290,7 +9350,8 @@ local ModData = {
             Introduced = "29.5.6",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"SECONDAIRE", "BARO"}
         },
         ["Tempête de Feu Accrue"] = {
             Image = "Tempête de Feu Accrue.png",
@@ -9299,7 +9360,8 @@ local ModData = {
             Introduced = "29.5.6",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"FUSIL", "BARO"}
         },
         ["Damzav-Vati"] = {
             AugmentType = 'Arme',
@@ -9416,7 +9478,7 @@ local ModData = {
             NameEN = "Jugulus Barbs",
             Polarity = "Naramon",
             Rarity = "Commun",
-            Set = "Melee",
+            Set = "Jugulus",
             Traits = {"+%PERFORATION", "+%STATCHANCE", "MELEE"},
             Transmutable = false
         },
@@ -9427,7 +9489,7 @@ local ModData = {
             NameEN = "Carnis Mandible",
             Polarity = "Naramon",
             Rarity = "Commun",
-            Set = "Melee",
+            Set = "Carnis",
             Traits = {"+%TRANCHANT", "+%STATCHANCE", "MELEE"},
             Transmutable = false
         },
@@ -9438,7 +9500,7 @@ local ModData = {
             NameEN = "Carnis Carapace",
             Polarity = "Vazarin",
             Rarity = "Inhatbituel",
-            Set = "Warframe",
+            Set = "Carnis",
             Traits = {"+%SANTE", "+%ARMURE", "WARFRAME"},
             Transmutable = false
         },
@@ -9449,7 +9511,7 @@ local ModData = {
             NameEN = "Jugulus Carapace",
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
-            Set = "Warframe",
+            Set = "Jugulus",
             Traits = {"+%ARMURE", "+%SANTE", "WARFRAME"},
             Transmutable = false
         },
@@ -9460,8 +9522,8 @@ local ModData = {
             NameEN = "Carnis Stinger",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Set = "Pistolet",
-            Traits = {"+%TRANCHANT", "+%STATCHANCE", "PISTOLET"},
+            Set = "Carnis",
+            Traits = {"+%TRANCHANT", "+%STATCHANCE", "SECONDAIRE"},
             Transmutable = false
         },
         ["Pointes Jugulus"] = {
@@ -9471,8 +9533,8 @@ local ModData = {
             NameEN = "Jugulus Spines",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Set = "Pistolet",
-            Traits = {"+%PERFORATION", "+%STATCHANCE", "Pistolet"},
+            Set = "Jugulus",
+            Traits = {"+%PERFORATION", "+%STATCHANCE", "SECONDAIRE"},
             Transmutable = false
         },
         ["Rage du Necramech"] = {
