@@ -3034,6 +3034,28 @@ local ModData = {
             Rarity = "Rare",
             Traits = {"+%CRITCHANCE", "+%CRITMULT", "ARCHFUSIL"}
         },
+        ["Force Chancelante"] = {
+            Archived = true,
+            Image = "Force_chancelante.jpg",
+            Introduced = "Vanilla",
+            Name = "Force Chancelante",
+            NameEN = "Staggering Force",
+            Polarity = "Vazarin",
+            Rarity = "Commun",
+            Traits = {"MELEE", "+%ETOURDISSEMENT"},
+            Transmutable = false,
+        },
+        ["Force d'Arrêt"] = {
+            Archived = true,
+            Image = "Force_d'arrêt.jpg",
+            Introduced = "Vanilla",
+            Name = "Force d'Arrêt",
+            NameEN = "Stopping Power",
+            Polarity = "Vazarin",
+            Rarity = "Commun",
+            Traits = {"SECONDAIRE", "+%ETOURDISSEMENT"},
+            Transmutable = false,
+        },
         ["Force Magnum"] = {
             Image = "Force_Magnum-0.jpg",
             Name = "Force Magnum",

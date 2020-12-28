@@ -211,6 +211,22 @@ local EnemyData = {
         Scans = 10,
         Weapons = {}
     },
+    ["Drone d'Attaque"] = {
+        Affinity = 200,
+        BaseLevel = 1,
+        Capacities = {},
+        Faction = "Corpus",
+        HealthTypes = {["Robot"] = 250, ["Bouclier"] = 75},
+        Image = "FusionDroneDE.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Drone d'Attaque",
+        NameEN = "Attack Drone",
+        Regions = {"Mars", "Sedna", "Forteresse Kuva"},
+        Scans = 5,
+        Weapons = {"Répéteur Plasma"}
+    },
     ["Drone d'Attaque (Archwing)"] = {
         Affinity = 57.13,
         BaseLevel = 1,
