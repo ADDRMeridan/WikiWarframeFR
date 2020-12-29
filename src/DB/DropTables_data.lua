@@ -7598,7 +7598,7 @@ local DropData = {
             Mods = {
                 {"Peau de Diamant", 11.06}, {"Allonge", 11.06},
                 {"Mutation de Chargeur", 25.29}, {"Chambre Divisée", 0.67},
-                {"Dispersion des Foules", 25.29}, {"Serre Étincelante", 0.67},
+                {"Dispersion des foules", 25.29}, {"Serre Étincelante", 0.67},
                 {"Endo", 25.29, 15}, {"Endo", 0.67, 80}
             }
         }, {
@@ -7837,7 +7837,7 @@ local DropData = {
             Mods = {
                 {"Peau de Diamant", 11.06}, {"Allonge", 11.06},
                 {"Mutation de Chargeur", 25.29}, {"Chambre Divisée", 0.67},
-                {"Dispersion des Foules", 25.29}, {"Serre Étincelante", 0.67},
+                {"Dispersion des foules", 25.29}, {"Serre Étincelante", 0.67},
                 {"Endo", 25.29, 15}, {"Endo", 0.67, 80}
             }
         }, {
