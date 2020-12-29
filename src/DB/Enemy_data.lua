@@ -65,6 +65,24 @@ local EnemyData = {
         SpawnLevel = 45,
         Weapons = {}
     },
+    ["Ancien Corrompu"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = {},
+        Faction = "Orokin",
+        Family = "Ancien Corrompu",
+        HealthTypes = {["Fossilisé"] = 400},
+        Image = "AncienCorrompu.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Ancien Corrompu",
+        NameEN = "Corrupted Ancient",
+        Regions = {"Le Néant"},
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = {}
+    },
     ["Ancien Guérisseur"] = {
         Affinity = 150,
         BaseLevel = 1,
@@ -242,6 +260,22 @@ local EnemyData = {
         Regions = {"Vénus", "Mars", "Jupiter", "Neptune"},
         Scans = 20,
         Weapons = {}
+    },
+    ["Drone d'Attaque Terra"] = {
+        Affinity = 200,
+        BaseLevel = 1,
+        Capacities = {},
+        Faction = "Corpus",
+        HealthTypes = {["Robot"] = 250, ["Bouclier"] = 75},
+        Image = "Drone d'Attaque Terra.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Drone d'Attaque Terra",
+        NameEN = "Terra Attack Drone",
+        Regions = {"Vallée Orbis"},
+        Scans = 10,
+        Weapons = {"Répéteur Plasma"}
     },
     -- E
     -- F
@@ -667,6 +701,23 @@ local EnemyData = {
     },
     -- Q
     -- R
+    ["Raie du Désert"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Non-affilié",
+        Family = nil,
+        HealthTypes = {["Chair"] = 250, ["Armure en Ferrite"] = 200},
+        Image = "Raie du Désert.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Raie du Désert",
+        NameEN = "Desert Skate",
+        Regions = nil,
+        Scans = 20,
+        Weapons = nil
+    },
     ["Ropalolyste"] = {
         Affinity = nil,
         BaseLevel = 17,
