@@ -681,6 +681,63 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = {"Karak Wraith"}
     },
+    ["Osprey Sangsue"] = {
+        Affinity = 100,
+        BaseLevel = 15,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Osprey Sangsue",
+        HealthTypes = {["Bouclier"] = 50, ["Robot"] = 100},
+        Image = "LeechOspreyDE.png",
+        Icon = nil,
+        Introduced = "Vanilla",
+        Link = nil,
+        Name = "Osprey Sangsue",
+        NameEN = "Leech Osprey",
+        Regions = {"Neptune", "Pluton", "Europe", "Le Néant", "Lua"},
+        Scans = 10,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
+    ["Osprey Sapeur"] = {
+        Affinity = 150,
+        BaseLevel = 15,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Osprey Sapeur",
+        HealthTypes = {["Bouclier"] = 50, ["Robot"] = 200},
+        Image = "SapeurOsprey.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Osprey Sapeur",
+        NameEN = "Sapping Osprey",
+        Regions = {"Jupiter", "Neptune", "Pluton", "Europe", "Lua"},
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
+    ["Osprey Sapeur Vapos"] = {
+        Affinity = nil,
+        BaseLevel = 15,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Osprey Sapeur",
+        HealthTypes = {
+            ["Bouclier"] = 50,
+            ["Robot"] = 80
+        },
+        Image = "VaposSappingOsprey.png",
+        Icon = nil,
+        Introduced = "25.0",
+        Link = nil,
+        Name = "Osprey Sapeur Vapos",
+        NameEN = "Vapos Sapping Osprey",
+        Regions = {"Jupiter"},
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
     -- P
     ["Prosélyte Fanatique"] = {
         Affinity = nil,
