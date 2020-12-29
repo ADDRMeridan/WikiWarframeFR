@@ -572,6 +572,7 @@ local ModData = {
             Transmutable = false
         },
         ["Attraction Fatale"] = {
+            AugmentType = 'Sentinelle',
             Image = "Attraction Fatale.png",
             Introduced = "10.0",
             Name = "Attraction Fatale",
@@ -794,6 +795,7 @@ local ModData = {
             Transmutable = false
         },
         ["Bobine Foudroyante"] = {
+            AugmentType = 'Sentinelle',
             Image = "Arc Coil 19.6.3.png",
             Name = "Bobine Foudroyante",
             NameEN = "Arc Coil",
@@ -834,6 +836,7 @@ local ModData = {
         },
 
         ["Botaniste"] = {
+            AugmentType = 'Sentinelle',
             Image = "Botaniste.png",
             Name = "Botaniste",
             NameEN = "Botanist",
@@ -936,6 +939,7 @@ local ModData = {
             Transmutable = false
         },
         ["Caisse à Munitions"] = {
+            AugmentType = 'Sentinelle',
             Image = "Caisse_à_Munitions.png",
             Name = "Caisse à Munitions",
             NameEN = "Ammo Case",
@@ -1746,6 +1750,7 @@ local ModData = {
             Transmutable = false
         },
         ["Conversion Moléculaire"] = {
+            AugmentType = 'Sentinelle',
             Image = "Molecular Conversion 19.10.png",
             Name = "Conversion Moléculaire",
             NameEN = "Molecular Conversion",
@@ -2069,6 +2074,7 @@ local ModData = {
             Transmutable = false
         },
         ["Dispersion des foules"] = {
+            AugmentType = 'Sentinelle',
             Image = "Dispersion_des_foules.png",
             Name = "Dispersion des foules",
             NameEN = "Crowd Dispersion",
@@ -2316,6 +2322,7 @@ local ModData = {
             Traits = {"AURA", "NARAMON"}
         },
         ["Détection de Vulnérabilité"] = {
+            AugmentType = 'Sentinelle',
             Image = "Détection de Vulnérabilité.png",
             Name = "Détection de Vulnérabilité",
             NameEN = "Detect Vulnerability",
@@ -2411,6 +2418,7 @@ local ModData = {
             Transmutable = false
         },
         ["Embuscade"] = {
+            AugmentType = 'Sentinelle',
             Image = "Ambush.png",
             Name = "Embuscade",
             NameEN = "Ambush",
@@ -2625,6 +2633,7 @@ local ModData = {
             Transmutable = false
         },
         ["Fantôme"] = {
+            AugmentType = 'Sentinelle',
             Image = "Ghost 19.6.3.png",
             Name = "Fantôme",
             NameEN = "Ghost",
@@ -3672,6 +3681,7 @@ local ModData = {
             Stance = true
         },
         ["Générateur d'Énergie"] = {
+            AugmentType = 'Sentinelle',
             Image = "Générateur d'Énergie.png",
             Name = "Générateur d'Énergie",
             NameEN = "Energy Generator",
@@ -4085,6 +4095,7 @@ local ModData = {
             Rarity = "Commun"
         },
         ["Inspecteur"] = {
+            AugmentType = 'Sentinelle',
             Image = "Inspecteur.png",
             Name = "Inspecteur",
             NameEN = "Investigator",
@@ -5235,6 +5246,7 @@ local ModData = {
             Rarity = "Rare"
         },
         ["Négation"] = {
+            AugmentType = 'Sentinelle',
             Image = "Négation.png",
             Name = "Négation",
             NameEN = "Negate",
@@ -5570,6 +5582,7 @@ local ModData = {
             Transmutable = false
         },
         ["Pilleur"] = {
+            AugmentType = 'Sentinelle',
             Image = "Pilleur.jpg",
             Name = "Pilleur",
             NameEN = "Looter",
@@ -6126,6 +6139,7 @@ local ModData = {
             Transmutable = false
         },
         ["Pulsation Électrique"] = {
+            AugmentType = 'Sentinelle',
             Image = "Electro Pulse 19.6.3.png",
             Name = "Pulsation Électrique",
             NameEN = "Electro Pulse",
@@ -6664,6 +6678,7 @@ local ModData = {
             Transmutable = false
         },
         ["Renaissance"] = {
+            AugmentType = 'Sentinelle',
             Image = "Renaissance.jpg",
             Name = "Renaissance",
             NameEN = "Reawaken",
@@ -7131,6 +7146,7 @@ local ModData = {
             Rarity = "Commun"
         },
         ["Détecteur Formes de Vie Aquatiques"] = {
+            AugmentType = 'Sentinelle',
             Image = nil,
             Name = "Détecteur Formes de Vie Aquatiques",
             NameEN = "Scan Aquatic Lifeforms",
@@ -7140,6 +7156,7 @@ local ModData = {
             Transmutable = false
         },
         ["Détecteur de Matière"] = {
+            AugmentType = 'Sentinelle',
             Image = "Détecteur de Matière.png",
             Name = "Détecteur de Matière",
             NameEN = "Scan Matter",
@@ -7881,6 +7898,7 @@ local ModData = {
             Traits = {"FUSIL", "MUNITIONS", "+%RESERVES"}
         },
         ["Récepteur de Ciblage"] = {
+            AugmentType = 'Sentinelle',
             Image = "Récepteur de Ciblage.png",
             Name = "Récepteur de Ciblage",
             NameEN = "Targeting Receptor",
@@ -8035,6 +8053,7 @@ local ModData = {
             Transmutable = false
         },
         ["Cogneur"] = {
+            AugmentType = 'Sentinelle',
             Image = "Cogneur.png",
             Name = "Cogneur",
             NameEN = "Thumper",
@@ -8078,6 +8097,7 @@ local ModData = {
             Transmutable = false
         },
         ["Tir Calculé"] = {
+            AugmentType = 'Sentinelle',
             Image = "Calculated Shot 19.6.3.png",
             Name = "Tir Calculé",
             NameEN = "Calculated Shot",
@@ -8442,6 +8462,7 @@ local ModData = {
             Transmutable = false
         },
         ["Vaporisation"] = {
+            AugmentType = 'Sentinelle',
             Image = "Vaporisation.png",
             Name = "Vaporisation",
             NameEN = "Vaporize",
@@ -8451,6 +8472,7 @@ local ModData = {
             Transmutable = false
         },
         ["Vengeance"] = {
+            AugmentType = 'Sentinelle',
             Image = "Vegeance.png",
             Name = "Vengeance",
             NameEN = "Revenge",
