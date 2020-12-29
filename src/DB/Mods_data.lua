@@ -291,7 +291,7 @@ local ModData = {
             NameEN = "Fired Up",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"SENTINELLE", "COMPAGNON"},
+            Traits = {"SENTINELLE", "COMPAGNON"}
         },
         ["Allée de Statues"] = {
             AugmentType = 'Warframe',
@@ -596,7 +596,7 @@ local ModData = {
             NameEN = "Self Destruct",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"SENTINELLE", "COMPAGNON"},
+            Traits = {"SENTINELLE", "COMPAGNON"}
         },
         ["Autopsie Astrale"] = {
             Image = "AstralAutopsyMod.png",
@@ -839,7 +839,7 @@ local ModData = {
             NameEN = "Botanist",
             Polarity = "Penjaga",
             Rarity = "Rare",
-            Traits = {"SENTINELLE", "COMPAGNON", "OXYLUS"},
+            Traits = {"SENTINELLE", "COMPAGNON", "OXYLUS"}
         },
 
         ["Bouclier Déstabilisant"] = {
@@ -1386,7 +1386,7 @@ local ModData = {
         },
         ["Charpie Accrue"] = {
             Family = "Charpie",
-            Image = "",
+            Image = "Charpie Accrue.png",
             Name = "Charpie Accrue",
             NameEN = "Primed Shred",
             Polarity = "Madurai",
@@ -1751,7 +1751,7 @@ local ModData = {
             NameEN = "Molecular Conversion",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON", "TAXON"},
+            Traits = {"SENTINELLE", "COMPAGNON", "TAXON"}
         },
         ["Conversion d'Énergie"] = {
             Image = "Mod inconnu.png",
@@ -2074,7 +2074,7 @@ local ModData = {
             NameEN = "Crowd Dispersion",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON", "WYRM"},
+            Traits = {"SENTINELLE", "COMPAGNON", "WYRM"}
         },
         ["Don de Puissance"] = {
             Image = "Don de Puissance.png",
@@ -2361,7 +2361,7 @@ local ModData = {
             NameEN = "Accelerated Deflection",
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
-            Traits = {"SENTINELLE", "COMPAGNON"},
+            Traits = {"SENTINELLE", "COMPAGNON"}
         },
         ["Déviation Précipitée"] = {
             Image = "Déviation Précipitée.png",
@@ -2630,7 +2630,7 @@ local ModData = {
             NameEN = "Ghost",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON", "SHADE"},
+            Traits = {"SENTINELLE", "COMPAGNON", "SHADE"}
         },
         ["Fass"] = {
             Image = "Fass.png",
@@ -3331,7 +3331,7 @@ local ModData = {
             NameEN = "Coolant Leak",
             Polarity = "Penjaga",
             Rarity = "Rare",
-            Traits = {"SENTINELLE", "COMPAGNON"},
+            Traits = {"SENTINELLE", "COMPAGNON"}
         },
         ["Full-Contact"] = {
             Image = "Full-Contact.png",
@@ -3474,7 +3474,7 @@ local ModData = {
             NameEN = "Guardian",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON"},
+            Traits = {"SENTINELLE", "COMPAGNON"}
         },
         ["Gargouille"] = {
             AugmentType = 'Warframe',
@@ -4027,7 +4027,7 @@ local ModData = {
             NameEN = "Animal Instinct",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"COMPAGNON", "NIGHTMARE", "SENTINELLE"},
+            Traits = {"COMPAGNON", "NIGHTMARE", "SENTINELLE"}
         },
         ["Instinct Animal Accru"] = {
             Family = "Instinct Animal",
@@ -4037,7 +4037,7 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Légendaire",
             Traits = {"COMPAGNON", "BARO", "SENTINELLE"},
-            Transmutable = false,
+            Transmutable = false
         },
         ["Isolation"] = {
             Image = "Isolation.png",
@@ -4090,7 +4090,7 @@ local ModData = {
             NameEN = "Investigator",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON", "HELIOS"},
+            Traits = {"SENTINELLE", "COMPAGNON", "HELIOS"}
         },
         ["Invisibilité Feutrée"] = {
             AugmentType = 'Warframe',
@@ -4647,9 +4647,9 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Commun"
         },
-        ["Mains Rapides Accru"] = {
-            Image = "PrimedFastHands.png",
-            Name = "Mains Rapides Accru",
+        ["Mains Rapides Accrues"] = {
+            Image = "Mains Rapides Accrues.png",
+            Name = "Mains Rapides Accrues",
             NameEN = "Primed Fast Hands",
             Polarity = "Naramon",
             Rarity = "Légendaire",
@@ -6613,7 +6613,7 @@ local ModData = {
             NameEN = "Calculated Redirection",
             Polarity = "Vazarin",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON"},
+            Traits = {"SENTINELLE", "COMPAGNON"}
         },
         ["Redirection de Système"] = {
             Image = "RedirectionSysteme.png",
@@ -6945,7 +6945,7 @@ local ModData = {
             NameEN = "Regen",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON"},
+            Traits = {"SENTINELLE", "COMPAGNON"}
         },
         ["Régénération Accrue"] = {
             Family = "Régénération",
@@ -6955,7 +6955,7 @@ local ModData = {
             Polarity = "Penjaga",
             Rarity = "Légendaire",
             Traits = {"COMPAGNON", "BARO", "SENTINELLE"},
-            Transmutable = false,
+            Transmutable = false
         },
         ["Répétition photonique"] = {
             AugmentType = 'Warframe',
@@ -7040,7 +7040,7 @@ local ModData = {
             NameEN = "Sacrifice",
             Polarity = "Penjaga",
             Rarity = "Rare",
-            Traits = {"SENTINELLE", "COMPAGNON"},
+            Traits = {"SENTINELLE", "COMPAGNON"}
         },
         ["Saignée d'Urgence"] = {
             AugmentType = 'Warframe',
@@ -7079,7 +7079,7 @@ local ModData = {
             NameEN = "Sanctuary",
             Polarity = "Vazarin",
             Rarity = "Rare",
-            Traits = {"SENTINELLE", "COMPAGNON"},
+            Traits = {"SENTINELLE", "COMPAGNON"}
         },
         ["Sans Retour"] = {
             Image = "Sans Retour.jpg",
@@ -7546,7 +7546,7 @@ local ModData = {
             NameEN = "Spare Parts",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Traits = {"COMPAGNON", "SENTINELLE"},
+            Traits = {"COMPAGNON", "SENTINELLE"}
         },
         ["Spectrosiphon"] = {
             AugmentType = 'Warframe',
@@ -8663,7 +8663,7 @@ local ModData = {
             NameEN = "Enhanced Vitality",
             Polarity = "Vazarin",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON"},
+            Traits = {"SENTINELLE", "COMPAGNON"}
         },
         ["Vitalité Umbra"] = {
             Image = "Vitalité Umbra.png",
