@@ -290,7 +290,8 @@ local ModData = {
             Name = "Allumage",
             NameEN = "Fired Up",
             Polarity = "Madurai",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"SENTINELLE", "COMPAGNON"},
         },
         ["Allée de Statues"] = {
             AugmentType = 'Warframe',
@@ -481,6 +482,7 @@ local ModData = {
             NameEN = "Vacuum",
             Polarity = "Penjaga",
             Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Assaut Hystérique"] = {
@@ -576,7 +578,7 @@ local ModData = {
             NameEN = "Fatal Attraction",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON"},
+            Traits = {"SENTINELLE", "COMPAGNON", "DJINN"},
             Transmutable = true
         },
         ["Aura IEM"] = {
@@ -593,7 +595,8 @@ local ModData = {
             Name = "Autodestruction",
             NameEN = "Self Destruct",
             Polarity = "Madurai",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"SENTINELLE", "COMPAGNON"},
         },
         ["Autopsie Astrale"] = {
             Image = "AstralAutopsyMod.png",
@@ -796,6 +799,7 @@ local ModData = {
             NameEN = "Arc Coil",
             Polarity = "Penjaga",
             Rarity = "Commun",
+            Traits = {"DIRIGA", "SENTINELLE"},
             Transmutable = false
         },
         ["Bobine Réflexe"] = {
@@ -834,7 +838,8 @@ local ModData = {
             Name = "Botaniste",
             NameEN = "Botanist",
             Polarity = "Penjaga",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"SENTINELLE", "COMPAGNON", "OXYLUS"},
         },
 
         ["Bouclier Déstabilisant"] = {
@@ -937,7 +942,8 @@ local ModData = {
             Polarity = "Penjaga",
             Rarity = "Commun",
             Traits = {
-                "SENTINELLE", "COMPAGNON", "MUNITIONS", "+%RESERVES", "MUTATION"
+                "SENTINELLE", "COMPAGNON", "MUNITIONS", "+%RESERVES",
+                "MUTATION", "CARRIER"
             },
             Transmutable = false
         },
@@ -1332,6 +1338,7 @@ local ModData = {
             NameEN = "Shield Charger",
             Polarity = "Penjaga",
             Rarity = "Rare",
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Chargeur sous Pression"] = {
@@ -1743,7 +1750,8 @@ local ModData = {
             Name = "Conversion Moléculaire",
             NameEN = "Molecular Conversion",
             Polarity = "Penjaga",
-            Rarity = "Commun"
+            Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON", "TAXON"},
         },
         ["Conversion d'Énergie"] = {
             Image = "Mod inconnu.png",
@@ -2065,7 +2073,8 @@ local ModData = {
             Name = "Dispersion des foules",
             NameEN = "Crowd Dispersion",
             Polarity = "Penjaga",
-            Rarity = "Commun"
+            Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON", "WYRM"},
         },
         ["Don de Puissance"] = {
             Image = "Don de Puissance.png",
@@ -2199,6 +2208,7 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Rare",
             Set = "Synth",
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Décélération Critique"] = {
@@ -2311,6 +2321,7 @@ local ModData = {
             NameEN = "Detect Vulnerability",
             Polarity = "Penjaga",
             Rarity = "Rare",
+            Traits = {"SENTINELLE", "COMPAGNON", "HELIOS"},
             Transmutable = false
         },
         ["Détente Automatique"] = {
@@ -2349,7 +2360,8 @@ local ModData = {
             Name = "Déviation Accélérée",
             NameEN = "Accelerated Deflection",
             Polarity = "Vazarin",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"SENTINELLE", "COMPAGNON"},
         },
         ["Déviation Précipitée"] = {
             Image = "Déviation Précipitée.png",
@@ -2404,6 +2416,7 @@ local ModData = {
             NameEN = "Ambush",
             Polarity = "Penjaga",
             Rarity = "Rare",
+            Traits = {"SENTINELLE", "COMPAGNON", "SHADE"},
             Transmutable = false
         },
         ["Encensoir Protecteur"] = {
@@ -2616,7 +2629,8 @@ local ModData = {
             Name = "Fantôme",
             NameEN = "Ghost",
             Polarity = "Penjaga",
-            Rarity = "Commun"
+            Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON", "SHADE"},
         },
         ["Fass"] = {
             Image = "Fass.png",
@@ -2684,7 +2698,7 @@ local ModData = {
             NameEN = "Metal Fiber",
             Polarity = "Vazarin",
             Rarity = "Commun",
-            Traits = {"+%ARMURE", "COMPAGNON"}
+            Traits = {"+%ARMURE", "COMPAGNON", "SENTINELLE"}
         },
         ["Fibre Synth"] = {
             Image = "Fibre Synth.png",
@@ -2693,7 +2707,7 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Rare",
             Set = "Synth",
-            Traits = {"+%ARMURE", "COMPAGNON"},
+            Traits = {"+%ARMURE", "COMPAGNON", "SENTINELLE"},
             Transmutable = false
         },
         ["Fibre d'Acier"] = {
@@ -3316,7 +3330,8 @@ local ModData = {
             Name = "Fuite de Réfrigérant",
             NameEN = "Coolant Leak",
             Polarity = "Penjaga",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"SENTINELLE", "COMPAGNON"},
         },
         ["Full-Contact"] = {
             Image = "Full-Contact.png",
@@ -3458,7 +3473,8 @@ local ModData = {
             Name = "Gardien",
             NameEN = "Guardian",
             Polarity = "Penjaga",
-            Rarity = "Commun"
+            Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON"},
         },
         ["Gargouille"] = {
             AugmentType = 'Warframe',
@@ -3661,6 +3677,7 @@ local ModData = {
             NameEN = "Energy Generator",
             Polarity = "Penjaga",
             Rarity = "Rare",
+            Traits = {"DETHCUBE", "SENTINELLE"},
             Transmutable = false
         },
         ["Habile du Canon"] = {
@@ -4004,21 +4021,23 @@ local ModData = {
             Transmutable = false
         },
         ["Instinct Animal"] = {
+            Family = "Instinct Animal",
             Image = "Instinct_Animal.png",
             Name = "Instinct Animal",
             NameEN = "Animal Instinct",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"COMPAGNON", "NIGHTMARE"}
+            Traits = {"COMPAGNON", "NIGHTMARE", "SENTINELLE"},
         },
         ["Instinct Animal Accru"] = {
+            Family = "Instinct Animal",
             Image = "Instinct Animal Accru.png",
             Name = "Instinct Animal Accru",
             NameEN = "Primed Animal Instinct",
             Polarity = "Naramon",
             Rarity = "Légendaire",
+            Traits = {"COMPAGNON", "BARO", "SENTINELLE"},
             Transmutable = false,
-            Traits = {"COMPAGNON", "BARO"}
         },
         ["Isolation"] = {
             Image = "Isolation.png",
@@ -4070,7 +4089,8 @@ local ModData = {
             Name = "Inspecteur",
             NameEN = "Investigator",
             Polarity = "Penjaga",
-            Rarity = "Commun"
+            Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON", "HELIOS"},
         },
         ["Invisibilité Feutrée"] = {
             AugmentType = 'Warframe',
@@ -4866,6 +4886,7 @@ local ModData = {
             NameEN = "Assault Mode",
             Polarity = "Penjaga",
             Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Moisson Enchanteresse"] = {
@@ -5219,6 +5240,7 @@ local ModData = {
             NameEN = "Negate",
             Polarity = "Penjaga",
             Rarity = "Rare",
+            Traits = {"SENTINELLE", "COMPAGNON", "WYRM"},
             Transmutable = false
         },
         ["Obus Corrompu"] = {
@@ -5236,6 +5258,7 @@ local ModData = {
             NameEN = "Odomedic",
             Polarity = "Penjaga",
             Rarity = "Rare",
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Oeil d'Aigle"] = {
@@ -5552,6 +5575,7 @@ local ModData = {
             NameEN = "Looter",
             Polarity = "Penjaga",
             Rarity = "Rare",
+            Traits = {"CARRIER", "SENTINELLE"},
             Transmutable = false
         },
         ["Pilonnage Mecha"] = {
@@ -6107,6 +6131,7 @@ local ModData = {
             NameEN = "Electro Pulse",
             Polarity = "Penjaga",
             Rarity = "Commun",
+            Traits = {"DIRIGA", "SENTINELLE"},
             Transmutable = false
         },
         ["Martèlement"] = {
@@ -6428,6 +6453,7 @@ local ModData = {
             NameEN = "Medi-Ray",
             Polarity = "Penjaga",
             Rarity = "Inhabituel",
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Rayons Efficaces"] = {
@@ -6586,7 +6612,8 @@ local ModData = {
             Name = "Redirection Calculée",
             NameEN = "Calculated Redirection",
             Polarity = "Vazarin",
-            Rarity = "Commun"
+            Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON"},
         },
         ["Redirection de Système"] = {
             Image = "RedirectionSysteme.png",
@@ -6642,6 +6669,7 @@ local ModData = {
             NameEN = "Reawaken",
             Polarity = "Penjaga",
             Rarity = "Rare",
+            Traits = {"SENTINELLE", "COMPAGNON", "DJINN"},
             Transmutable = false
         },
         ["Renouveau du Phénix"] = {
@@ -6666,6 +6694,7 @@ local ModData = {
             NameEN = "Repair Kit",
             Polarity = "Penjaga",
             Rarity = "Rare",
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Resilient Focus"] = {
@@ -6910,20 +6939,23 @@ local ModData = {
             Rarity = "Commun"
         },
         ["Régénération"] = {
+            Family = "Régénération",
             Image = "Regeneration.png",
             Name = "Régénération",
             NameEN = "Regen",
             Polarity = "Penjaga",
-            Rarity = "Commun"
+            Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON"},
         },
         ["Régénération Accrue"] = {
+            Family = "Régénération",
             Image = "Régénération_Accrue.jpg",
             Name = "Régénération Accrue",
             NameEN = "Primed Regen",
             Polarity = "Penjaga",
             Rarity = "Légendaire",
+            Traits = {"COMPAGNON", "BARO", "SENTINELLE"},
             Transmutable = false,
-            Traits = {"COMPAGNON", "BARO"}
         },
         ["Répétition photonique"] = {
             AugmentType = 'Warframe',
@@ -6940,6 +6972,7 @@ local ModData = {
             NameEN = "Anti-Grav Array",
             Polarity = "Penjaga",
             Rarity = "Rare",
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Résilience Rapide"] = {
@@ -7006,7 +7039,8 @@ local ModData = {
             Name = "Sacrifice",
             NameEN = "Sacrifice",
             Polarity = "Penjaga",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"SENTINELLE", "COMPAGNON"},
         },
         ["Saignée d'Urgence"] = {
             AugmentType = 'Warframe',
@@ -7044,7 +7078,8 @@ local ModData = {
             Name = "Sanctuaire",
             NameEN = "Sanctuary",
             Polarity = "Vazarin",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"SENTINELLE", "COMPAGNON"},
         },
         ["Sans Retour"] = {
             Image = "Sans Retour.jpg",
@@ -7101,6 +7136,7 @@ local ModData = {
             NameEN = "Scan Aquatic Lifeforms",
             Polarity = "Penjaga",
             Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON", "OXYLUS"},
             Transmutable = false
         },
         ["Détecteur de Matière"] = {
@@ -7109,6 +7145,7 @@ local ModData = {
             NameEN = "Scan Matter",
             Polarity = "Penjaga",
             Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON", "OXYLUS"},
             Transmutable = false
         },
         ["Recherche"] = {
@@ -7508,7 +7545,8 @@ local ModData = {
             Name = "Pièces de Rechange",
             NameEN = "Spare Parts",
             Polarity = "Naramon",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"COMPAGNON", "SENTINELLE"},
         },
         ["Spectrosiphon"] = {
             AugmentType = 'Warframe',
@@ -7848,6 +7886,7 @@ local ModData = {
             NameEN = "Targeting Receptor",
             Polarity = "Penjaga",
             Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON", "HELIOS"},
             Transmutable = false
         },
         ["Tas de Gravats"] = {
@@ -8001,6 +8040,7 @@ local ModData = {
             NameEN = "Thumper",
             Polarity = "Penjaga",
             Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON", "DJINN"},
             Transmutable = false
         },
         ["Tigre Tourbillonnant"] = {
@@ -8043,6 +8083,7 @@ local ModData = {
             NameEN = "Calculated Shot",
             Polarity = "Penjaga",
             Rarity = "Commun",
+            Traits = {"DIRIGA", "SENTINELLE"},
             Transmutable = false
         },
         ["Tir Chanceux"] = {
@@ -8406,6 +8447,7 @@ local ModData = {
             NameEN = "Vaporize",
             Polarity = "Penjaga",
             Rarity = "Commun",
+            Traits = {"DETHCUBE", "SENTINELLE"},
             Transmutable = false
         },
         ["Vengeance"] = {
@@ -8414,6 +8456,7 @@ local ModData = {
             NameEN = "Revenge",
             Polarity = "Penjaga",
             Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON", "SHADE"},
             Transmutable = false
         },
         ["Vengeance Épineuse"] = {
@@ -8619,7 +8662,8 @@ local ModData = {
             Name = "Vitalité Améliorée",
             NameEN = "Enhanced Vitality",
             Polarity = "Vazarin",
-            Rarity = "Commun"
+            Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON"},
         },
         ["Vitalité Umbra"] = {
             Image = "Vitalité Umbra.png",
