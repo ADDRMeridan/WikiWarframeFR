@@ -10058,7 +10058,20 @@ local DropData = {
                 {"Endo", 25.29, 15}, {"Endo", 25.11, 50}, {"Chercheur", 1.01},
                 {"Endo", 1.01, 80}
             }
-        }
+        },
+        { Name = "Osprey Sapeur Vapos",
+          ModChance = 3,
+          Mods = {
+            {"Mutation de Chargeur",25.29},
+            {"Dispersion des foules",25.29},
+            {"Endo",25.29,15},
+            {"Allonge",11.06},
+            {"Peau de Diamant",11.06},
+            {"Chambre Divisée",0.67},
+            {"Serre Étincelante",0.67},
+            {"Endo",0.67,80},
+          },
+        },
     }
 }
 
