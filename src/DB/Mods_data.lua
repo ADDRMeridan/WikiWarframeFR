@@ -2060,9 +2060,9 @@ local ModData = {
             Traits = {"CORROMPU", "POMPE"},
             Transmutable = false
         },
-        ["Dispersion des Foules"] = {
-            Image = "Crowd Dispersion 19.6.3.png",
-            Name = "Dispersion des Foules",
+        ["Dispersion des foules"] = {
+            Image = "Dispersion_des_foules.png",
+            Name = "Dispersion des foules",
             NameEN = "Crowd Dispersion",
             Polarity = "Penjaga",
             Rarity = "Commun"
@@ -3043,7 +3043,7 @@ local ModData = {
             Polarity = "Vazarin",
             Rarity = "Commun",
             Traits = {"MELEE", "+%ETOURDISSEMENT"},
-            Transmutable = false,
+            Transmutable = false
         },
         ["Force d'Arrêt"] = {
             Archived = true,
@@ -3054,7 +3054,7 @@ local ModData = {
             Polarity = "Vazarin",
             Rarity = "Commun",
             Traits = {"SECONDAIRE", "+%ETOURDISSEMENT"},
-            Transmutable = false,
+            Transmutable = false
         },
         ["Force Magnum"] = {
             Image = "Force_Magnum-0.jpg",
