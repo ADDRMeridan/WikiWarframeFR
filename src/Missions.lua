@@ -1,7 +1,17 @@
+-- 260620 : Importé du wiki EN, et traduit
+-- Rework by [[User:Giga Martin|Giga Martin]] ([[User talk:Giga Martin|talk]]) at 23:59, September 16, 2020 (UTC)
+-- Use:
+-- {{#invoke:Missions|getMissions|missionname1|missionname2|...}} (e.g. {{#i:M|getMissions|Tessera|Oro}} )
+-- {{#i:M|Var|Val}} (e.g. {{#i:M|PlaneEt|Venus|expanded=yes}} )
+-- {{#i:M||Val}} (e.g. {{#i:M||Venus|expanded=yes}} )
+-- {{#i:M|Select|Var=Val|Var2=Val2|expanded=yes|partmatch=yes}} (e.g. {{#i:M|Select|Planet=Venus|Type=Capture|expanded=yes}} )
+-- possible variables (case sensitive):
+-- p.listVars() or {{#invoke:Missions|listVars}} 
 local p = {}
 
 local MissionData = mw.loadData('Module:Missions/data')
 local Shared = require('Module:Shared')
+local Icons = require('Module:Icon')
 local DropTables = {
     linkType = function(Type)
         return ({
@@ -95,7 +105,7 @@ do
         local data = MissionData.by.Planet[Planet] -- DropTables.getMissions(function(mission) return mission.Planet == Planet end)
         local tHeader = ''
         tHeader = tHeader ..
-                      '{| style="max-width:700px;margin:auto; text-align: center; background: #848484; color:#1C1C1C; font-size: 11px;"'
+                      '{| style="max-width:700px;margin:auto; text-align: center; background: #848484; font-size: 11px;"'
         tHeader = tHeader .. 'cellpadding="3" cellspacing="2" |-'
         tHeader = tHeader ..
                       '\n! style="width:15%; background-color:rgb(6, 29, 64); font-size:12px; color:#FFFFFF;" | Cible'
@@ -694,7 +704,7 @@ local function FewMissions(data, Header)
     end
 
     local tHeader =
-        '{| class="sortable" style="max-width: 700px; margin:auto; width: 100%;  text-align: center; background: #848484; color:#1C1C1C; font-size: 11px;" cellpadding="3" cellspacing="2" |-'
+        '{| class="sortable" style="max-width: 85%;  text-align: center; font-size: 11px;" cellpadding="3" cellspacing="2" |-'
 
     local Header = Header or {
         {
@@ -703,14 +713,14 @@ local function FewMissions(data, Header)
             cell = function(this, mission)
                 if (mission.FactionImage) then
                     return
-                        '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|[' ..
+                        '\n| style="background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|[' ..
                             '[File:' .. (mission.FactionImage or mission.Pic) ..
                             '|link=' .. (mission.LinkName or
                             (type(mission.Enemy) == 'table' and 'Feux Croisés' or
                                 mission.Enemy)) .. '|x64px]' .. ']'
                 else
                     return
-                        '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|[' ..
+                        '\n| style="background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|[' ..
                             '[File:Panel.png|64px]' .. ']'
                 end
             end
@@ -719,7 +729,7 @@ local function FewMissions(data, Header)
             'Planet',
             cell = function(this, mission)
                 return
-                    '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|[' ..
+                    '\n| style="background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|[' ..
                         '[' .. mission.Planet .. ']]'
             end
         }, {
@@ -727,7 +737,7 @@ local function FewMissions(data, Header)
             'Name',
             cell = function(this, mission)
                 return
-                    '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                    '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                         mission.Node
             end
         }, {
@@ -735,7 +745,7 @@ local function FewMissions(data, Header)
             'Type',
             cell = function(this, mission)
                 return
-                    '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                    '\n| style="background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                         DropTables.linkType(mission.Type) ..
                         (mission.IsDarkSector == 1 and " ([[Dark Sector]])" or
                             '')
@@ -745,7 +755,7 @@ local function FewMissions(data, Header)
             'Level',
             cell = function(this, mission)
                 return
-                    '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                    '\n| style="background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                         mission.MinLevel .. ' - ' .. mission.MaxLevel
             end
         }, {
@@ -753,14 +763,14 @@ local function FewMissions(data, Header)
             'Tile Set',
             cell = function(this, mission)
                 return
-                    '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|[' ..
+                    '\n| style="background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|[' ..
                         '[' .. mission.Tileset .. ']]'
             end
         }
     }
     for i, v in ipairs(Header) do
         tHeader = tHeader .. '\n! style="width:' .. v[1] ..
-                      '%; background-color:#585858; font-size:12px; color:#FFFFFF;" | ' ..
+                      '%; background-color:#294067; font-size:12px; color:#FFFFFF;" | ' ..
                       v[2]
     end
 
@@ -774,9 +784,10 @@ local function FewMissions(data, Header)
     return tHeader .. tBody .. '\n|}' -- ]]
 end
 
+-- {{#i:M|getMissions|missionname1|missionname2|...}}
 function p.getMissions(frame)
     local data = {}
-    for _, missionName in ipairs(frame.args or frame) do
+    for i, missionName in ipairs(frame.args or frame) do
         table.insert(data, MissionData.by.Node[missionName][1])
     end
     return FewMissions(data)
@@ -916,7 +927,7 @@ local function FewMissionsBy(B, M)
                 cell = function(this, mission)
                     if (mission.FactionImage) then
                         return
-                            '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|[' ..
+                            '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|[' ..
                                 '[File:' ..
                                 (mission.FactionImage or mission.Pic) ..
                                 '|link=' .. (mission.LinkName or
@@ -925,7 +936,7 @@ local function FewMissionsBy(B, M)
                                 '|x64px]' .. ']'
                     else
                         return
-                            '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|[' ..
+                            '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|[' ..
                                 '[File:Panel.png|64px]' .. ']'
                     end
                 end
@@ -934,7 +945,7 @@ local function FewMissionsBy(B, M)
                 'Nom',
                 cell = function(this, mission)
                     return
-                        '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                        '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                             mission.Node
                 end
             }, {
@@ -942,7 +953,7 @@ local function FewMissionsBy(B, M)
                 'Type',
                 cell = function(this, mission)
                     return
-                        '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                        '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                             DropTables.linkType(mission.Type) ..
                             (mission.IsDarkSector == 1 and " ([[Dark Sector]])" or
                                 '')
@@ -952,7 +963,7 @@ local function FewMissionsBy(B, M)
                 'Niveau',
                 cell = function(this, mission)
                     return
-                        '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                        '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                             mission.MinLevel .. ' - ' .. mission.MaxLevel
                 end
             }, {
@@ -960,7 +971,7 @@ local function FewMissionsBy(B, M)
                 'Environnement',
                 cell = function(this, mission)
                     return
-                        '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|[' ..
+                        '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|[' ..
                             '[' .. mission.Tileset .. ']]'
                     --                ..( mission.Tier and '\n| colspan="5" |<div class="mw-collapsible mw-collapsed" style="width:100%;text-align:center;">'
                     --            .."'''Rewards'''"
@@ -975,7 +986,7 @@ local function FewMissionsBy(B, M)
                 cell = function(this, mission)
                     if (mission.FactionImage) then
                         return
-                            '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|[' ..
+                            '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|[' ..
                                 '[File:' ..
                                 (mission.FactionImage or mission.Pic) ..
                                 '|link=' .. (mission.LinkName or
@@ -984,7 +995,7 @@ local function FewMissionsBy(B, M)
                                 '|x64px]' .. ']'
                     else
                         return
-                            '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|[' ..
+                            '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|[' ..
                                 '[File:Panel.png|64px]' .. ']'
                     end
                 end
@@ -993,7 +1004,7 @@ local function FewMissionsBy(B, M)
                 'Planète',
                 cell = function(this, mission)
                     return
-                        '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|[' ..
+                        '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|[' ..
                             '[' .. mission.Planet .. ']]'
                 end
             }, {
@@ -1001,7 +1012,7 @@ local function FewMissionsBy(B, M)
                 'Nom',
                 cell = function(this, mission)
                     return
-                        '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                        '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                             mission.Node
                 end
             }, {
@@ -1009,7 +1020,7 @@ local function FewMissionsBy(B, M)
                 'Type',
                 cell = function(this, mission)
                     return
-                        '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                        '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                             DropTables.linkType(mission.Type) ..
                             (mission.IsDarkSector == 1 and " ([[Dark Sector]])" or
                                 '')
@@ -1019,7 +1030,7 @@ local function FewMissionsBy(B, M)
                 'Niveau',
                 cell = function(this, mission)
                     return
-                        '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                        '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                             mission.MinLevel .. ' - ' .. mission.MaxLevel
                 end
             }
@@ -1031,7 +1042,7 @@ local function FewMissionsBy(B, M)
                 cell = function(this, mission)
                     if (mission.FactionImage) then
                         return
-                            '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|[' ..
+                            '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|[' ..
                                 '[File:' ..
                                 (mission.FactionImage or mission.Pic) ..
                                 '|link=' .. (mission.LinkName or
@@ -1040,7 +1051,7 @@ local function FewMissionsBy(B, M)
                                 '|x64px]' .. ']'
                     else
                         return
-                            '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|[' ..
+                            '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|[' ..
                                 '[File:Panel.png|64px]' .. ']'
                     end
                 end
@@ -1049,7 +1060,7 @@ local function FewMissionsBy(B, M)
                 'Planète',
                 cell = function(this, mission)
                     return
-                        '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|[' ..
+                        '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|[' ..
                             '[' .. mission.Planet .. ']]'
                 end
             }, {
@@ -1057,18 +1068,18 @@ local function FewMissionsBy(B, M)
                 'Nom',
                 cell = function(this, mission)
                     return
-                        '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                        '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                             mission.Node
                 end
             }, --            {'20','Tier', cell = function(this, mission)
-            --                return '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|'..(mission.Tier or mission.Type)
+            --                return '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|'..(mission.Tier or mission.Type)
             --            end},
             {
                 '20',
                 'Niveau',
                 cell = function(this, mission)
                     return
-                        '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                        '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                             mission.MinLevel .. ' - ' .. mission.MaxLevel
                 end
             }, {
@@ -1076,7 +1087,7 @@ local function FewMissionsBy(B, M)
                 'Environnement',
                 cell = function(this, mission)
                     return
-                        '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|[' ..
+                        '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|[' ..
                             '[' .. mission.Tileset .. ']]'
                     --                ..( mission.Tier and '\n| colspan="5" |<div class="mw-collapsible mw-collapsed" style="width:100%;text-align:center;">'
                     --            .."'''Rewards'''"
@@ -1091,14 +1102,14 @@ local function FewMissionsBy(B, M)
             cell = function(this, mission)
                 if (mission.FactionImage) then
                     return
-                        '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|[' ..
+                        '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|[' ..
                             '[File:' .. (mission.FactionImage or mission.Pic) ..
                             '|link=' .. (mission.LinkName or
                             (type(mission.Enemy) == 'table' and 'Feux Croisés' or
                                 mission.Enemy)) .. '|x64px]' .. ']'
                 else
                     return
-                        '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|[' ..
+                        '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|[' ..
                             '[File:Panel.png|64px]' .. ']'
                 end
             end
@@ -1107,7 +1118,7 @@ local function FewMissionsBy(B, M)
             'Planète',
             cell = function(this, mission)
                 return
-                    '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|[' ..
+                    '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|[' ..
                         '[' .. mission.Planet .. ']]'
             end
         }, {
@@ -1115,7 +1126,7 @@ local function FewMissionsBy(B, M)
             'Nom',
             cell = function(this, mission)
                 return
-                    '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                    '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                         mission.Node
             end
         }, {
@@ -1123,7 +1134,7 @@ local function FewMissionsBy(B, M)
             'Type',
             cell = function(this, mission)
                 return
-                    '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                    '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                         DropTables.linkType(mission.Type) ..
                         (mission.IsDarkSector == 1 and " ([[Dark Sector]])" or
                             '')
@@ -1133,7 +1144,7 @@ local function FewMissionsBy(B, M)
             'Niveau',
             cell = function(this, mission)
                 return
-                    '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                    '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                         mission.MinLevel .. ' - ' .. mission.MaxLevel
             end
         }, {
@@ -1141,7 +1152,7 @@ local function FewMissionsBy(B, M)
             'Environnement',
             cell = function(this, mission)
                 return
-                    '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|[' ..
+                    '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|[' ..
                         '[' .. mission.Tileset .. ']]'
                 --                ..( mission.Tier and '\n| colspan="5" |<div class="mw-collapsible mw-collapsed" style="width:100%;text-align:center;">'
                 --            .."'''Rewards'''"
@@ -1166,7 +1177,7 @@ local function FewMissionsBy(B, M)
             'Fighter Level',
             cell = function(this, mission)
                 return
-                    '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                    '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                         mission.FighterMinLevel .. ' - ' ..
                         mission.FighterMaxLevel
             end
@@ -1179,7 +1190,7 @@ local function FewMissionsBy(B, M)
             'Max Fighters',
             cell = function(this, mission)
                 return
-                    '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                    '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                         mission.MaxFighters
             end
         })
@@ -1188,7 +1199,7 @@ local function FewMissionsBy(B, M)
             'Max Crewships',
             cell = function(this, mission)
                 return
-                    '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                    '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                         mission.MaxCrewships
             end
         })
@@ -1197,7 +1208,7 @@ local function FewMissionsBy(B, M)
             'Other Objective',
             cell = function(this, mission)
                 return
-                    '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                    '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                         mission.Objectives ..
                         (mission.ObjectiveDetails and ' (' ..
                             mission.ObjectiveDetails .. ')' or '')
@@ -1225,7 +1236,7 @@ local function FewMissionsBy(B, M)
                             (numDrops ~= i and numDrops > 2 and ', ' or ' ')
                 end
                 return
-                    '\n| style=" background-color:#D8D8D8; font-size:12px; border:1px solid black;"|' ..
+                    '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
                         r
             end
         })
