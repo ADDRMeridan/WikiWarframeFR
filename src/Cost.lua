@@ -178,9 +178,9 @@ local function buildPrimeItems(primePartsArray, baseItemName)
         foundryTable = foundryTable .. 'Lieux d\'Obtention'
         foundryTable = foundryTable .. '\n|-\n| colspan="6" |'
         foundryTable = foundryTable ..
-                           '<div class="mw-collapsible mw-collapsed" style="max-width:350px; text-align:center;">'
+                           '<div class="mw-collapsible mw-collapsed" style="text-align:center;">'
         foundryTable = foundryTable ..
-                           '<div class="mw-collapsible-content" style="margin-left: 4px;">'
+                           '<div class="mw-collapsible-content" style="margin: 0 2%;">'
         foundryTable = foundryTable ..
                            '\n{| style="width:100%;"\n|-\n|Schéma||' ..
                            Void.item({args = {"PC", itemName, "SCHEMA"}})
@@ -218,7 +218,7 @@ local function buildResearchLines(itemName)
         foundryTable = foundryTable .. p.getLabLink(itemRes.Lab, true)
         foundryTable = foundryTable .. '\n|-\n| colspan="6"|'
         foundryTable = foundryTable ..
-                           '<div class="mw-collapsible" style="max-width:380px;text-align:center;">'
+                           '<div class="mw-collapsible" style="text-align:center;">'
         foundryTable = foundryTable .. '<div class="mw-collapsible-content">'
         foundryTable = foundryTable ..
                            '\n{| style="width:100%;"\n|-\n| colspan="6" style="background-color:#061D40D6"|Schéma ' ..
