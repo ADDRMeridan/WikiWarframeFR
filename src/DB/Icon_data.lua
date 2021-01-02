@@ -2,20 +2,48 @@ local IconData = {
 
     ["Objets"] = {
         -- A
-        ["Adaptateur Exilus"] = {
+        ["Accélération Arcane"] = {
+            icon = "Arcane_Acceleration_160.png",
+            link = "Accélération Arcane"
+        },
+        ["Adaptateur Exilus pour Warframe"] = {
             icon = "Adapteur Exilus.png",
-            link = "Adaptateur Exilus"
+            link = "Adaptateur Exilus pour Warframe"
         },
         ["Adaptateur Exilus pour Arme"] = {
             icon = "Adaptateur Exilus pour Arme.png",
             link = "Adaptateur Exilus pour Arme"
         },
-        ["Adaptateur Exilus Pour Arme"] = { -- requis pour tooltip Relique
+        ["Adaptateur Exilus Pour Arme"] = {
             icon = "Adaptateur Exilus pour Arme.png",
             link = "Adaptateur Exilus pour Arme"
-        },
+        }, -- requis pour tooltip Relique
         ["Affinity"] = {icon = "Orb_affinite.png", link = "Ramassables#Orbes"},
         ["Affinité"] = {icon = "Orb_affinite.png", link = "Ramassables#Orbes"},
+        ["Agilité Arcane"] = {
+            icon = "Arcane_Agility_160.png",
+            link = "Agilité Arcane"
+        },
+        ["Ailes Archwing"] = {
+            icon = "AilesArchwing.png",
+            link = "Schéma Ailes Archwing"
+        },
+        ["Arcane"] = {
+            icon = "CosmeticEnhancer.png",
+            link = "Amélioration Arcane"
+        },
+        ["Arcane Nullifier"] = {
+            icon = "Arcane_Nullifier_160.png",
+            link = "Arcane Nullifier"
+        },
+        ["Attaque Arcane"] = {
+            icon = "Arcane_Strike_160.png",
+            link = "Attaque Arcane"
+        },
+        ["Avioniques"] = {
+            icon = "GenericLandingCraftSystems.png",
+            link = "Vaisseau"
+        },
         -- B
         ["Balise de Navigation Animo"] = {
             icon = "AnimoNavBeacon.png",
@@ -25,19 +53,38 @@ local IconData = {
             icon = "BoosterAffinité.png",
             link = "Booster d'Affinité"
         },
+        ["Barrière Arcane"] = {
+            icon = "Arcane_Barrière_160.png",
+            link = "Barrière Arcane"
+        },
         -- C
         ["Canon"] = {icon = "Canon.png"},
         ["Catalyseur Orokin"] = {
             icon = "OrokinCatalyst64.png",
             link = "Catalyseur Orokin"
         },
+        ["Catalyseur Infesté"] = {
+            icon = "Catalyseur Infesté.png",
+            link = "Catalyseur Infesté"
+        },
+        ["Chaleur Arcane"] = {
+            icon = "Arcane_Warmth_160.png",
+            link = "Chaleur Arcane"
+        },
         ["Châssis"] = {icon = "Chassis.png", link = "Châssis"},
         ["Châssis Arme"] = {icon = "Crosse.png"},
         ["Châssis Frost"] = {icon = "Chassis.png", link = "Frost"},
+        ["Clé du Néant"] = {icon = "DEVoid Key.png", link = "Clés du Néant"},
+        ["Coeur de Fusion"] = {
+            icon = "FusionCorePackSilversingle.png",
+            link = "Coeur de Fusion"
+        },
+        ["Cortège Canon"] = {icon = "Cortège Canon.png", link = ""},
+        ["Cortège Crosse"] = {icon = "Cortège Crosse.png", link = ""},
+        ["Cortège Culasse"] = {icon = "Cortège Culasse.png", link = ""},
         ["Crédits"] = {icon = "Credits64.png", link = "Crédits"},
         ["Crosse"] = {icon = "Crosse.png"},
         ["Culasse"] = {icon = "Culasse.png"},
-
         -- D
         ["Décoration Couronne Granum"] = {
             icon = "Couronne Granum.png",
@@ -51,19 +98,28 @@ local IconData = {
             icon = "Couronne Granum Zénith.png",
             link = "Orbiteur"
         },
-
+        ["Déviation Arcane"] = {
+            icon = "Arcane_Deflection_160.png",
+            link = "Déviation Arcane"
+        },
+        ["Ducats"] = {icon = "PrimeBucks.png", link = "Ducats"},
         -- E
+        ["Endo"] = {icon = "Endo.png", link = "Endo"},
         ["Energie"] = {icon = "Orbe d'énergie.png", link = "Energie"},
         ["Energy"] = {icon = "Orbe d'énergie.png", link = "Energie"},
         ["Endurance"] = {icon = "OrbeEndurance.png", link = "Endurance"},
+        ["Éruption Arcane"] = {
+            icon = "Arcane_Eruption_160.png",
+            link = "Éruption Arcane"
+        },
         ["Étoile Ayatan Ambre"] = {
             icon = "OroFusexOrnamentB.png",
             link = "Sculpture Ayatan#Étoiles"
         },
-        ["ÉToile Ayatan Ambre"] = { -- Requis pour tooltip Relique
+        ["ÉToile Ayatan Ambre"] = {
             icon = "OroFusexOrnamentB.png",
             link = "Sculpture Ayatan#Étoiles"
-        },
+        }, -- Requis pour tooltip Relique
         ["Étoile Ayatan Cyan"] = {
             icon = "OroFusexOrnamentA.png",
             link = "Sculpture Ayatan#Étoiles"
@@ -76,20 +132,86 @@ local IconData = {
             icon = "Essence d'Acier.png",
             link = "Essence d'Acier"
         },
-
+        ["Eveil Arcane"] = {
+            icon = "Arcane_Awakening_160.png",
+            link = "Eveil Arcane"
+        },
         -- F
+        ["Fantasme Arcane"] = {
+            icon = "Arcane_Phantasm_160.png",
+            link = "Fantasme Arcane"
+        },
+        ["Fonderie"] = {icon = "BuildComplete_w.png", link = "Fonderie"},
+        ["Forma"] = {icon = "Forma64.png", link = "Forma"},
+        ["Forma Aura"] = {icon = "Forma_Aura.png", link = "Forma Aura"},
+        ["Forma Umbra"] = {icon = "Forma_Umbra.png", link = "Forma Umbra"},
         ["Forme Diurne"] = {icon = "AnimusAspect.png", link = "Equinox"},
         ["Forme Nocturne"] = {icon = "AnimaAspect.png", link = "Equinox"},
+        ["Fuselage"] = {
+            icon = "GenericLandingCraftFuselage.png",
+            link = "Vaisseau"
+        },
         -- G
         ["Gantelet"] = {icon = "Lame.png"},
+        ["Garde"] = {icon = "Lame.png"},
+        ["Gardien Arcane"] = {
+            icon = "Arcane_Guardian_160.png",
+            link = "Gardien Arcane"
+        },
+        ["Glace Arcane"] = {icon = "Arcane_Ice_160.png", link = "Glace Arcane"},
+        ["Grâce Arcane"] = {
+            icon = "Arcane_Grâce_160.png",
+            link = "Grâce Arcane"
+        },
         ["Gravimag"] = {icon = "Gravimag.png", link = "Gravimag"},
+        ["Guérison Arcane"] = {
+            icon = "Arcane_Healing_160.png",
+            link = "Guérison Arcane"
+        },
         -- H
+        ["Harnais Archwing"] = {
+            icon = "HarnaisArchwing.png",
+            link = "Schéma Harnais Archwing"
+        },
         -- I
+        ["Influence"] = {icon = "ReputationBlancx64.png", link = "Influence"},
         ["Inhérence"] = {icon = "Inhérences.png", link = "Inhérence"},
+        ["Injecteur d'Antisérum"] = {
+            icon = "SyringeStandardFull.png",
+            link = "Injecteur d'Antisérum"
+        },
         -- J
+        ["Jeton du Loup"] = {icon = "Jeton_du_Loup.png", link = "Jeton du Loup"},
+        ["Jeton de Nora"] = {
+            icon = "Jetons_de_Nora.png",
+            link = "Jeton de Nora"
+        },
+        ["Jeton d'Émissaire"] = {
+            icon = "Jeton_d'Émissaire.png",
+            link = "Jeton d'Émissaire"
+        },
+        ["Jeton d'Interlude II"] = {
+            icon = "Jeton_d'Interlude II.png",
+            link = "Jeton d'Interlude II"
+        },
+        ["Jeton de Cristal"] = {
+            icon = "Jeton de Cristal.png",
+            link = "Jeton de Cristal"
+        },
         -- K
         -- L
         -- M
+        ["Marché"] = {icon = "MarketIcon2.png", link = "Marché"},
+        ["Mods"] = {icon = "FusionCorePackSilversingle.png", link = "Mods"},
+        ["Mod"] = {icon = "FusionCorePackSilversingle.png", link = "Mods"},
+        ["Moteurs"] = {
+            icon = "GenericLandingCraftEngines.png",
+            link = "Vaisseau"
+        },
+        ["Mutation"] = {
+            icon = "AmmoMutation.png",
+            link = ":Catégorie:Mod Mutation de Munitions"
+        },
         -- N
         ["Neuroptiques"] = {icon = "Helmet.png", link = "Neuroptiques"},
         ["Neuroptiques Ember"] = {icon = "Helmet.png", link = "Ember"},
@@ -116,8 +238,16 @@ local IconData = {
             link = "Ramassables#Orbes|Orbes d'Affinité"
         },
         -- P
+        ["Partie"] = {icon = "Weapon Part 32px.png", link = "Armes"},
+        ["Platinum"] = {icon = "Platinum64.png", link = "Platinum"},
+        ["Platine"] = {icon = "Platinum64.png", link = "Platine"},
+        ["Pulsation Arcane"] = {
+            icon = "Arcane_Pulse_160.png",
+            link = "Pulsation Arcane"
+        },
         -- Q
         -- R
+        ["Rage Arcane"] = {icon = "Arcane_Rage_160.png", link = "Rage Arcane"},
         ["Relique Axi"] = {
             icon = "VoidProjectionsGoldD.png",
             link = "Reliques du Néant"
@@ -138,183 +268,62 @@ local IconData = {
             icon = "Relique_Requiem.png",
             link = "Reliques du Néant"
         },
-        ["Restauration de Santé"] = {
-            icon = "Large Health Restore.png",
-            link = "Restauration de Santé"
-        },
-        ["Réacteur Orokin"] = {
-            icon = "OrokinReactor64.png",
-            link = "Réacteur Orokin"
-        },
-        -- S
-        ["Systèmes"] = {icon = "Systems.png", link = "Systèmes"},
-        ["Systèmes Saryn"] = {icon = "Systems.png", link = "Saryn"},
-        -- T
-        -- U
-        -- V
-        -- W
-        -- X
-        -- Y
-        -- Z
-        -- A TRIER
-        ["Forma"] = {icon = "Forma64.png", link = "Forma"},
-        ["Forma Aura"] = {icon = "Forma_Aura.png", link = "Forma Aura"},
-        ["Forma Umbra"] = {icon = "Forma_Umbra.png", link = "Forma Umbra"},
-        ["Marché"] = {icon = "MarketIcon2.png", link = "Marché"},
-        ["Fonderie"] = {icon = "BuildComplete_w.png", link = "Fonderie"},
-        ["Clés du Néant"] = {
-            icon = "DEVoid Key.png",
-            link = "Clés du Néant"
-        },
-        ["Clé du Néant"] = {icon = "DEVoid Key.png", link = "Clés du Néant"},
-        ["Coeur de Fusion"] = {
-            icon = "FusionCorePackSilversingle.png",
-            link = "Coeur de Fusion"
-        },
-        ["Endo"] = {icon = "Endo.png", link = "Endo"},
-        ["Mods"] = {icon = "FusionCorePackSilversingle.png", link = "Mods"},
-        ["Mod"] = {icon = "FusionCorePackSilversingle.png", link = "Mods"},
-
-        ["Platinum"] = {icon = "Platinum64.png", link = "Platinum"},
-        ["Platine"] = {icon = "Platinum64.png", link = "Platine"},
-        ["Ducats"] = {icon = "PrimeBucks.png", link = "Ducats"},
-        ["Jeton du Loup"] = {icon = "Jeton_du_Loup.png", link = "Jeton du Loup"},
-        ["Jeton de Nora"] = {
-            icon = "Jetons_de_Nora.png",
-            link = "Jeton de Nora"
-        },
-        ["Jeton d'Émissaire"] = {
-            icon = "Jeton_d'Émissaire.png",
-            link = "Jeton d'Émissaire"
-        },
-        ["Jeton d'Interlude II"] = {
-            icon = "Jeton_d'Interlude II.png",
-            link = "Jeton d'Interlude II"
-        },
-        ["Jeton de Cristal"] = {
-            icon = "Jeton de Cristal.png",
-            link = "Jeton de Cristal"
-        },
-        ["Influence"] = {icon = "ReputationBlancx64.png", link = "Influence"},
         ["Réputation"] = {icon = "ReputationBlancx64.png", link = "Influence"},
-        ["Schéma"] = {icon = "Blueprint2.png", link = "Schéma"},
-        ["Schémas"] = {icon = "Blueprint_Orb.png", link = "Schémas"},
-        ["Ressources"] = {icon = "Resource Orange.png", link = "Ressources"},
+        ["Résistance Arcane"] = {
+            icon = "Arcane_Resistance_160.png",
+            link = "Résistance Arcane"
+        },
         ["Restauration de Munitions d'Équipe"] = {
             icon = "Warframe_-_Team_Ammo_Restore_Picture.png",
             link = "Consommables#Munitions"
+        },
+        ["Restauration de Santé"] = {
+            icon = "Large Health Restore.png",
+            link = "Restauration de Santé"
         },
         ["Restauration de Santé d'Équipe"] = {
             icon = "Warframe_-_Team_Health_Restore_Picture.png",
             link = "Consommables#Soins"
         },
-        ["Mutation"] = {
-            icon = "AmmoMutation.png",
-            link = ":Catégorie:Mod Mutation de Munitions"
+        ["Ressources"] = {icon = "Resource Orange.png", link = "Ressources"},
+        ["Réacteur Orokin"] = {
+            icon = "OrokinReactor64.png",
+            link = "Réacteur Orokin"
         },
-        ["Ailes Archwing"] = {
-            icon = "AilesArchwing.png",
-            link = "Schéma Ailes Archwing"
-        },
+        -- S
+        ["Schéma"] = {icon = "Blueprint2.png", link = "Schéma"},
+        ["Schémas"] = {icon = "Blueprint_Orb.png", link = "Schémas"},
+        ["Systèmes"] = {icon = "Systems.png", link = "Systèmes"},
         ["Systèmes Archwing"] = {
             icon = "SystemesArchwing.png",
             link = "Schéma Systèmes Archwing"
         },
-        ["Harnais Archwing"] = {
-            icon = "HarnaisArchwing.png",
-            link = "Schéma Harnais Archwing"
-        },
-        ["Partie"] = {icon = "Weapon Part 32px.png", link = "Armes"},
-        ["Arcane"] = {
-            icon = "CosmeticEnhancer.png",
-            link = "Amélioration Arcane"
-        },
-        ["Accélération Arcane"] = {
-            icon = "Arcane_Acceleration_160.png",
-            link = "Accélération Arcane"
-        },
-        ["Agilité Arcane"] = {
-            icon = "Arcane_Agility_160.png",
-            link = "Agilité Arcane"
-        },
-        ["Vengeance Arcane"] = {
-            icon = "Arcane_Avenger_160.png",
-            link = "Vengeance Arcane"
-        },
-        ["Eveil Arcane"] = {
-            icon = "Arcane_Awakening_160.png",
-            link = "Eveil Arcane"
-        },
-        ["Barrière Arcane"] = {
-            icon = "Arcane_Barrière_160.png",
-            link = "Barrière Arcane"
-        },
-        ["Déviation Arcane"] = {
-            icon = "Arcane_Deflection_160.png",
-            link = "Déviation Arcane"
-        },
-        ["Éruption Arcane"] = {
-            icon = "Arcane_Eruption_160.png",
-            link = "Éruption Arcane"
-        },
-        ["Grâce Arcane"] = {
-            icon = "Arcane_Grâce_160.png",
-            link = "Grâce Arcane"
-        },
-        ["Gardien Arcane"] = {
-            icon = "Arcane_Guardian_160.png",
-            link = "Gardien Arcane"
-        },
-        ["Guérison Arcane"] = {
-            icon = "Arcane_Healing_160.png",
-            link = "Guérison Arcane"
-        },
-        ["Glace Arcane"] = {icon = "Arcane_Ice_160.png", link = "Glace Arcane"},
-        ["Arcane Nullifier"] = {
-            icon = "Arcane_Nullifier_160.png",
-            link = "Arcane Nullifier"
-        },
-        ["Fantasme Arcane"] = {
-            icon = "Arcane_Phantasm_160.png",
-            link = "Fantasme Arcane"
-        },
-        ["Pulsation Arcane"] = {
-            icon = "Arcane_Pulse_160.png",
-            link = "Pulsation Arcane"
-        },
-        ["Rage Arcane"] = {icon = "Arcane_Rage_160.png", link = "Rage Arcane"},
-        ["Résistance Arcane"] = {
-            icon = "Arcane_Resistance_160.png",
-            link = "Résistance Arcane"
-        },
-        ["Attaque Arcane"] = {
-            icon = "Arcane_Strike_160.png",
-            link = "Attaque Arcane"
+        ["Systèmes Saryn"] = {icon = "Systems.png", link = "Saryn"},
+        -- T
+        ["Théorème de Contagion"] = {
+            icon = "Théorème de Contagion.png",
+            link = "Théorème de Contagion"
         },
         ["Tromperie Arcane"] = {
             icon = "Arcane_Trickery_160.png",
             link = "Tromperie Arcane"
         },
+        -- U
+        -- V
+        ["Vengeance Arcane"] = {
+            icon = "Arcane_Avenger_160.png",
+            link = "Vengeance Arcane"
+        },
         ["Victoire Arcane"] = {
             icon = "Arcane_Victory_160.png",
             link = "Victoire Arcane"
         },
-        ["Chaleur Arcane"] = {
-            icon = "Arcane_Warmth_160.png",
-            link = "Chaleur Arcane"
-        },
-        ["Fuselage"] = {
-            icon = "GenericLandingCraftFuselage.png",
-            link = "Vaisseau"
-        },
-        ["Moteurs"] = {
-            icon = "GenericLandingCraftEngines.png",
-            link = "Vaisseau"
-        },
-        ["Avioniques"] = {
-            icon = "GenericLandingCraftSystems.png",
-            link = "Vaisseau"
-        },
+        -- W
+        -- X
+        -- Y
+        -- Z
+        -- A TRIER
+
         -- Composants Armes
         ["Coeur"] = {icon = "Link.png"},
         ["Cortex Inférieur"] = {icon = "Cortex Inférieur.png"},
@@ -329,6 +338,7 @@ local IconData = {
         ["Partie Inférieure"] = {icon = "LamePrime.png"},
         ["Partie Supérieure"] = {icon = "LamePrime.png"},
         ["Poignée"] = {icon = "Poignée.png"},
+        ["Rivet"] = {icon = "Link.png"},
         ["Tête"] = {icon = "Lame.png"}
     },
 
@@ -637,50 +647,22 @@ local IconData = {
         -- Poissons de la Vallée Orbis
 
         -- Poissons du Puy de Cambion
-        ["Duroïde"] = {
-            icon = "Duroïde.png",
-            link = "Pêcher#Poissons du Puy de Cambion"
+        ["Duroïde"] = {icon = "Duroïde.png", link = "Duroïde"},
+        ["Aquapulmo"] = {icon = "Aquapulmo.png", link = "Aquapulmo"},
+        ["Kymaeros"] = {icon = "Kymaeros.png", link = "Kymaeros"},
+        ["Vitreospina"] = {icon = "Vitreospina.png", link = "Vitreospina"},
+        ["Chondricord"] = {icon = "Chondricord.png", link = "Chondricord"},
+        ["Barbisteo"] = {icon = "Barbisteo.png", link = "Barbisteo"},
+        ["Myxostomata"] = {icon = "Myxostomata.png", link = "Myxostomata"},
+        ["Ostimyr"] = {icon = "Ostimyr.png", link = "Ostimyr"},
+        ["Cryptosuctus"] = {icon = "Cryptosuctus.png", link = "Cryptosuctus"},
+        ["Glutinox"] = {icon = "Glutinox.png", link = "ggg"},
+        ["Amniophysi"] = {icon = "Amniophysi.png", link = "Amniophysi"},
+        ["Flagellocanthe"] = {
+            icon = "Flagellocanthe.png",
+            link = "Flagellocanthe"
         },
-        ["Aquapulmo"] = {
-            icon = "Aquapulmo.png",
-            link = "Pêcher#Poissons du Puy de Cambion"
-        },
-        ["Kymaeros"] = {
-            icon = "Kymaeros.png",
-            link = "Pêcher#Poissons du Puy de Cambion"
-        },
-        ["Vitreospina"] = {
-            icon = "Vitreospina.png",
-            link = "Pêcher#Poissons du Puy de Cambion"
-        },
-        ["Chondricord"] = {
-            icon = "Chondricord.png",
-            link = "Pêcher#Poissons du Puy de Cambion"
-        },
-        ["Barbisteo"] = {
-            icon = "Barbisteo.png",
-            link = "Pêcher#Poissons du Puy de Cambion"
-        },
-        ["Myxostomata"] = {
-            icon = "Myxostomata.png",
-            link = "Pêcher#Poissons du Puy de Cambion"
-        },
-        ["Ostimyr"] = {
-            icon = "Ostimyr.png",
-            link = "Pêcher#Poissons du Puy de Cambion"
-        },
-        ["Cryptosuctus"] = {
-            icon = "Cryptosuctus.png",
-            link = "Pêcher#Poissons du Puy de Cambion"
-        },
-        ["Glutinox"] = {
-            icon = "Glutinox.png",
-            link = "Pêcher#Poissons du Puy de Cambion"
-        },
-        ["Amniophysi"] = {
-            icon = "Amniophysi.png",
-            link = "Pêcher#Poissons du Puy de Cambion"
-        }
+        ["Lobotriscide"] = {icon = "Lobotriscide.png", link = "Lobotriscide"}
     },
 
     -- Affiche les îcones des K-Drives
@@ -700,7 +682,11 @@ local IconData = {
         ["Runway"] = {icon = "Runway.png", link = "Runway"},
         ["Highbrow"] = {icon = "Highbrow.png", link = "Highbrow"},
         ["Two-Sloops"] = {icon = "Two-Sloops.png", link = "Two-Sloops"},
-        ["Thugs"] = {icon = "Thugs.png", link = "Thugs"}
+        ["Thugs"] = {icon = "Thugs.png", link = "Thugs"},
+        ["Feverspine"] = {icon = "Feverspine.png", link = "Feverspine"},
+        ["Gristlebuck"] = {icon = "Gristlebuck.png", link = "Gristlebuck"},
+        ["Nodulite"] = {icon = "Nodulite.png", link = "Nodulite"},
+        ["Steeba"] = {icon = "Steeba.png", link = "Steeba"}
     },
 
     -- Armes et Warframes Prime
@@ -755,7 +741,7 @@ local IconData = {
         },
         ["Helios"] = {icon = "HeliosPrime.png", link = "Helios Prime"},
         ["Fusil Machine de Mort Prime"] = {
-            icon = "Fusil Machine de Mort Prime.png",
+            icon = "FusilMachinedeMortPrime.png",
             link = "Fusil Machine de Mort Prime"
         },
         ["Sweeper"] = {icon = "SweeperPrime.png", link = "Sweeper Prime"},
@@ -804,6 +790,7 @@ local IconData = {
         ["Fragor"] = {icon = "FragorPrime.png", link = "Fragor Prime"},
         ["Galatine"] = {icon = "PrimeGalatine342.png", link = "Galatine Prime"},
         ["Glaive"] = {icon = "PrimeGlaive.png", link = "Glaive Prime"},
+        ["Guandao"] = {icon = "Guandao Prime.png", link = "Guandao Prime"},
         ["Gram"] = {icon = "Arme gramPrime.png", link = "Gram Prime"},
         ["Hikou"] = {icon = "PrimeHikou.png", link = "Hikou Prime"},
         ["Karyst"] = {icon = "Karyst Prime.png", link = "Karyst Prime"},
@@ -846,6 +833,7 @@ local IconData = {
         ["Vasto"] = {icon = "PrimeVasto.png", link = "Vasto Prime"},
         ["Vectis"] = {icon = "VectisPrime.png", link = "Vectis Prime"},
         ["Venka"] = {icon = "Venka_Prime.png", link = "Venka Prime"},
+        ["Zakti"] = {icon = "Zakti Prime.png", link = "Zakti Prime"},
         ["Zhuge"] = {icon = "Zhuge Prime.png", link = "Zhuge Prime"},
 
         -- Composants Primes
@@ -915,6 +903,10 @@ local IconData = {
             link = "Capteurs Neuronaux"
         },
         ["Circuits"] = {icon = "Circuits64.png", link = "Circuits"},
+        ["Cernos Mutaliste"] = {
+            icon = "Cernos Mutaliste.png",
+            link = "Cernos Mutaliste"
+        },
         ["Coord. Nav"] = {icon = "NavCoordinates64.png", link = "Coord. Nav"},
         ["Coord. Nav Alad V Mutaliste"] = {
             icon = "NavCoordMutaliste.png",
@@ -1691,12 +1683,32 @@ local IconData = {
             icon = "Jeton Avichaea Commun.png",
             link = "Avichaea"
         },
+        ["Jeton Cryptilex Terrier"] = {
+            icon = "Jeton Cryptilex Terrier.png",
+            link = "Cryptilex"
+        },
+        ["Jeton Cryptilex Septique"] = {
+            icon = "Jeton Cryptilex Septique.png",
+            link = "Cryptilex"
+        },
+        ["Jeton Cryptilex Caustique"] = {
+            icon = "Jeton Cryptilex Caustique.png",
+            link = "Cryptilex"
+        },
         ["Jeton Prédasite Medjaÿ"] = {
             icon = "Jeton Prédasite Medjaÿ.png",
             link = "Prédasite"
         },
+        ["Jeton Vélocipode Vert"] = {
+            icon = "Jeton Vélocipode Vert.png",
+            link = "Vélocipode"
+        },
         ["Jeton Vélocipode Mauve"] = {
             icon = "Jeton Vélocipode Mauve.png",
+            link = "Vélocipode"
+        },
+        ["Jeton Vélocipode Blanc"] = {
+            icon = "Jeton Vélocipode Blanc.png",
             link = "Vélocipode"
         },
         ["Masse Musculaire Saturée"] = {
@@ -1775,6 +1787,10 @@ local IconData = {
             link = "Nodule Cognitif Purulent"
         },
         ["Pustulite"] = {icon = "Pustulite.png", link = "Pustulite"},
+        ["Racine Oculaire"] = {
+            icon = "Racine Oculaire.png",
+            link = "Racine Oculaire"
+        },
         ["Résidu de Fass"] = {
             icon = "Résidu de Fass.png",
             link = "Résidu de Fass"
@@ -1806,6 +1822,10 @@ local IconData = {
         ["Teroglobe Lumineux"] = {
             icon = "Teroglobe Lumineux.png",
             link = "Teroglobe Lumineux"
+        },
+        ["Trompe Parasitaire"] = {
+            icon = "Trompe Parasitaire.png",
+            link = "Trompe Parasitaire"
         },
         ["Tumeur Bénine Infestée"] = {
             icon = "Tumeur Bénine Infestée.png",
@@ -2004,7 +2024,19 @@ local IconData = {
                 "LentilleMaduraiTourWhite.png", "LentilleMaduraiTourBlack.png"
             }
         },
+        ["Lentille Madurai"] = {
+            icon = {"LentilleMaduraiWhite.png", "LentilleMaduraiBlack.png"},
+            seal = {
+                "LentilleMaduraiTourWhite.png", "LentilleMaduraiTourBlack.png"
+            }
+        },
         ["Naramon"] = {
+            icon = {"LentilleNaramonWhite.png", "LentilleNaramonBLack.png"},
+            seal = {
+                "LentilleNaramonTourWhite.png", "LentilleNaramonTourBlack.png"
+            }
+        },
+        ["Lentille Naramon"] = {
             icon = {"LentilleNaramonWhite.png", "LentilleNaramonBLack.png"},
             seal = {
                 "LentilleNaramonTourWhite.png", "LentilleNaramonTourBlack.png"
@@ -2016,13 +2048,31 @@ local IconData = {
                 "LentilleUnairuTourWhite.png", "LentilleUnairuTourBlack.png"
             }
         },
+        ["Lentille Unairu"] = {
+            icon = {"LentilleUnairuWhite.png", "LentilleUnairuBlack.png"},
+            seal = {
+                "LentilleUnairuTourWhite.png", "LentilleUnairuTourBlack.png"
+            }
+        },
         ["Vazarin"] = {
             icon = {"LentilleVazarinWhite.png", "LentilleVazarinBlack.png"},
             seal = {
                 "LentilleVazarinTourWhite.png", "LentilleVazarinTourBlack.png"
             }
         },
+        ["Lentille Vazarin"] = {
+            icon = {"LentilleVazarinWhite.png", "LentilleVazarinBlack.png"},
+            seal = {
+                "LentilleVazarinTourWhite.png", "LentilleVazarinTourBlack.png"
+            }
+        },
         ["Zenurik"] = {
+            icon = {"LentilleZenurikWhite.png", "LentilleZenurikBlack.png"},
+            seal = {
+                "LentilleZenurikTourWhite.png", "LentilleZenurikTourBlack.png"
+            }
+        },
+        ["Lentille Zenurik"] = {
             icon = {"LentilleZenurikWhite.png", "LentilleZenurikBlack.png"},
             seal = {
                 "LentilleZenurikTourWhite.png", "LentilleZenurikTourBlack.png"
@@ -2088,6 +2138,25 @@ local IconData = {
             color = ""
         }
 
+    },
+
+    ["Void"] = {
+        ["CANON"] = {Icon = "Canon Prime.png", Name = "Canon"},
+        ["CROSSE"] = {Icon = "Crosse Prime.png", Name = "Crosse"},
+        ["CULASSE"] = {Icon = "Culasse Prime.png", Name = "Culasse"},
+        ["SCHEMA"] = {Icon = "Blueprint2.png", Name = "Schéma"},
+        ["SCHEMA CHASSIS"] = {
+            Icon = "Châssis Prime.png",
+            Name = "Schéma Châssis"
+        },
+        ["SCHEMA NEUROPTIQUES"] = {
+            Icon = "Neuroptiques Prime.png",
+            Name = "Schéma Neuroptiques"
+        },
+        ["SCHEMA SYSTEMES"] = {
+            Icon = "Systèmes Prime.png",
+            Name = "Schéma Systèmes"
+        }
     }
 }
 return IconData

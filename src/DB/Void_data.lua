@@ -143,8 +143,11 @@ local VoidData = {
                     Rarity = "Commune"
                 },
                 {Item = "NOVA", Part = "SCHEMA SYSTEMES", Rarity = "Commune"},
-                {Item = "COLLIER KAVASA", Part = "LANIERE", Rarity = "Inhabituelle"},
-                {Item = "FORMA", Part = "SCHEMA", Rarity = "Inhabituelle"},
+                {
+                    Item = "COLLIER KAVASA",
+                    Part = "LANIERE",
+                    Rarity = "Inhabituelle"
+                }, {Item = "FORMA", Part = "SCHEMA", Rarity = "Inhabituelle"},
                 {Item = "CARRIER", Part = "CERVEAU", Rarity = "Rare"}
             },
             IsVaulted = 1
@@ -294,7 +297,7 @@ local VoidData = {
                 }, {Item = "FORMA", Part = "SCHEMA", Rarity = "Inhabituelle"},
                 {Item = "GLAIVE", Part = "SCHEMA", Rarity = "Rare"}
             },
-            IsVaulted = 0
+            IsVaulted = 1
         }, {
             Tier = "Lith",
             Name = "G2",
@@ -400,6 +403,21 @@ local VoidData = {
             IsVaulted = 1
         }, {
             Tier = "Lith",
+            Name = "K5",
+            Drops = {
+                {Item = "FORMA", Part = "SCHEMA", Rarity = "Commune"},
+                {Item = "HELIOS", Part = "CARAPACE", Rarity = "Commune"},
+                {Item = "MIRAGE", Part = "SCHEMA CHASSIS", Rarity = "Commune"},
+                {Item = "AKBOLTO", Part = "CANON", Rarity = "Inhabituelle"},
+                {
+                    Item = "BANSHEE",
+                    Part = "SCHEMA SYSTEMES",
+                    Rarity = "Inhabituelle"
+                }, {Item = "KOGAKE", Part = "GANTELET", Rarity = "Rare"}
+            },
+            IsVaulted = 0
+        }, {
+            Tier = "Lith",
             Name = "L1",
             Drops = {
                 {Item = "DESTREZA", Part = "POIGNEE", Rarity = "Commune"},
@@ -502,6 +520,21 @@ local VoidData = {
             IsVaulted = 1
         }, {
             Tier = "Lith",
+            Name = "M7",
+            Drops = {
+                {Item = "AKBOLTO", Part = "SCHEMA", Rarity = "Commune"},
+                {
+                    Item = "BANSHEE",
+                    Part = "SCHEMA NEUROPTIQUES",
+                    Rarity = "Commune"
+                }, {Item = "KOGAKE", Part = "BOTTES", Rarity = "Commune"},
+                {Item = "EUPHONA", Part = "CANON", Rarity = "Inhabituelle"},
+                {Item = "FORMA", Part = "SCHEMA", Rarity = "Inhabituelle"},
+                {Item = "MIRAGE", Part = "SCHEMA", Rarity = "Rare"}
+            },
+            IsVaulted = 0
+        }, {
+            Tier = "Lith",
             Name = "N1",
             Drops = {
                 {Item = "NEKROS", Part = "SCHEMA CHASSIS", Rarity = "Commune"},
@@ -520,8 +553,11 @@ local VoidData = {
                 {Item = "SPIRA", Part = "SCHEMA", Rarity = "Commune"},
                 {Item = "CARRIER", Part = "SYSTEMES", Rarity = "Commune"},
                 {Item = "HELIOS", Part = "SCHEMA", Rarity = "Inhabituelle"},
-                {Item = "COLLIER KAVASA", Part = "LANIERE", Rarity = "Inhabituelle"},
-                {Item = "NEKROS", Part = "SCHEMA SYSTEMES", Rarity = "Rare"}
+                {
+                    Item = "COLLIER KAVASA",
+                    Part = "LANIERE",
+                    Rarity = "Inhabituelle"
+                }, {Item = "NEKROS", Part = "SCHEMA SYSTEMES", Rarity = "Rare"}
             },
             IsVaulted = 1
         }, {
@@ -689,8 +725,11 @@ local VoidData = {
                 {Item = "AKBRONCO", Part = "SCHEMA", Rarity = "Commune"},
                 {Item = "NYX", Part = "SCHEMA", Rarity = "Commune"},
                 {Item = "FORMA", Part = "SCHEMA", Rarity = "Inhabituelle"},
-                {Item = "COLLIER KAVASA", Part = "LANIERE", Rarity = "Inhabituelle"},
-                {Item = "SOMA", Part = "CROSSE", Rarity = "Rare"}
+                {
+                    Item = "COLLIER KAVASA",
+                    Part = "LANIERE",
+                    Rarity = "Inhabituelle"
+                }, {Item = "SOMA", Part = "CROSSE", Rarity = "Rare"}
             },
             IsVaulted = 1
         }, {
@@ -743,7 +782,11 @@ local VoidData = {
                 {Item = "FORMA", Part = "SCHEMA", Rarity = "Commune"},
                 {Item = "FANG", Part = "LAME", Rarity = "Commune"},
                 {Item = "DOUBLES KAMAS", Part = "SCHEMA", Rarity = "Commune"},
-                {Item = "COLLIER KAVASA", Part = "LANIERE", Rarity = "Inhabituelle"},
+                {
+                    Item = "COLLIER KAVASA",
+                    Part = "LANIERE",
+                    Rarity = "Inhabituelle"
+                },
                 {
                     Item = "VALKYR",
                     Part = "SCHEMA NEUROPTIQUES",
@@ -1321,6 +1364,21 @@ local VoidData = {
             IsVaulted = 0
         }, {
             Tier = "Meso",
+            Name = "E5",
+            Drops = {
+                {Item = "FORMA", Part = "SCHEMA", Rarity = "Commune"},
+                {Item = "HELIOS", Part = "CARAPACE", Rarity = "Commune"},
+                {
+                    Item = "MIRAGE",
+                    Part = "SCHEMA NEUROPTIQUES",
+                    Rarity = "Commune"
+                }, {Item = "BANSHEE", Part = "SCHEMA", Rarity = "Inhabituelle"},
+                {Item = "HELIOS", Part = "SCHEMA", Rarity = "Inhabituelle"},
+                {Item = "EUPHONA", Part = "CULASSE", Rarity = "Rare"}
+            },
+            IsVaulted = 0
+        }, {
+            Tier = "Meso",
             Name = "F1",
             Drops = {
                 {Item = "BRONCO", Part = "CULASSE", Rarity = "Commune"},
@@ -1349,7 +1407,7 @@ local VoidData = {
                 {Item = "FORMA", Part = "SCHEMA", Rarity = "Inhabituelle"},
                 {Item = "FROST", Part = "SCHEMA", Rarity = "Rare"}
             },
-            IsVaulted = 0
+            IsVaulted = 1
         }, {
             Tier = "Meso",
             Name = "F3",
@@ -1726,7 +1784,7 @@ local VoidData = {
             Name = "O4",
             Drops = {
                 {Item = "FANG", Part = "SCHEMA", Rarity = "Commune"},
-                {Item = "FORMA", Part = "SCHEMA SYSTEMES", Rarity = "Commune"},
+                {Item = "FORMA", Part = "SCHEMA", Rarity = "Commune"},
                 {Item = "SILVA & AEGIS", Part = "POIGNEE", Rarity = "Commune"},
                 {Item = "GALATINE", Part = "POIGNEE", Rarity = "Inhabituelle"},
                 {
@@ -2017,7 +2075,11 @@ local VoidData = {
                 {Item = "CARRIER", Part = "SCHEMA", Rarity = "Commune"},
                 {Item = "FORMA", Part = "SCHEMA", Rarity = "Commune"},
                 {Item = "SPIRA", Part = "SCHEMA", Rarity = "Commune"},
-                {Item = "COLLIER KAVASA", Part = "LANIERE", Rarity = "Inhabituelle"},
+                {
+                    Item = "COLLIER KAVASA",
+                    Part = "LANIERE",
+                    Rarity = "Inhabituelle"
+                },
                 {
                     Item = "VOLT",
                     Part = "SCHEMA CHASSIS",
@@ -2246,6 +2308,21 @@ local VoidData = {
                 {Item = "BANSHEE", Part = "SCHEMA SYSTEMES", Rarity = "Rare"}
             },
             IsVaulted = 1
+        }, {
+            Tier = "Neo",
+            Name = "B6",
+            Drops = {
+                {Item = "EUPHONA", Part = "SCHEMA", Rarity = "Commune"},
+                {Item = "FORMA", Part = "SCHEMA", Rarity = "Commune"},
+                {
+                    Item = "MIRAGE",
+                    Part = "SCHEMA NEUROPTIQUES",
+                    Rarity = "Commune"
+                }, {Item = "AKBOLTO", Part = "LIEN", Rarity = "Inhabituelle"},
+                {Item = "KOGAKE", Part = "SCHEMA", Rarity = "Inhabituelle"},
+                {Item = "BANSHEE", Part = "SCHEMA CHASSIS", Rarity = "Rare"}
+            },
+            IsVaulted = 0
         }, {
             Tier = "Neo",
             Name = "C1",
@@ -2678,11 +2755,7 @@ local VoidData = {
                 {Item = "BRATON", Part = "CANON", Rarity = "Commune"},
                 {Item = "SYBARIS", Part = "SCHEMA", Rarity = "Commune"},
                 {Item = "TIGRIS", Part = "CROSSE", Rarity = "Commune"},
-                {
-                    Item = "FORMA",
-                    Part = "PARTIE SUPERIEURE",
-                    Rarity = "Inhabituelle"
-                },
+                {Item = "FORMA", Part = "SCHEMA", Rarity = "Inhabituelle"},
                 {
                     Item = "OBERON",
                     Part = "SCHEMA SYSTEMES",
@@ -2701,8 +2774,12 @@ local VoidData = {
                     Item = "DOUBLES KAMAS",
                     Part = "POIGNEE",
                     Rarity = "Inhabituelle"
-                }, {Item = "COLLIER KAVASA", Part = "LANIERE", Rarity = "Inhabituelle"},
-                {Item = "NOVA", Part = "SCHEMA CHASSIS", Rarity = "Rare"}
+                },
+                {
+                    Item = "COLLIER KAVASA",
+                    Part = "LANIERE",
+                    Rarity = "Inhabituelle"
+                }, {Item = "NOVA", Part = "SCHEMA CHASSIS", Rarity = "Rare"}
             },
             IsVaulted = 1
         }, {
@@ -2858,7 +2935,7 @@ local VoidData = {
                     Rarity = "Inhabituelle"
                 }, {Item = "SICARUS", Part = "CULASSE", Rarity = "Rare"}
             },
-            IsVaulted = 0
+            IsVaulted = 1
         }, {
             Tier = "Neo",
             Name = "S6",
@@ -2870,8 +2947,11 @@ local VoidData = {
                     Part = "SCHEMA NEUROPTIQUES",
                     Rarity = "Commune"
                 }, {Item = "TIGRIS", Part = "CULASSE", Rarity = "Inhabituelle"},
-                {Item = "COLLIER KAVASA", Part = "BOUCLE", Rarity = "Inhabituelle"},
-                {Item = "SILVA & AEGIS", Part = "GARDE", Rarity = "Rare"}
+                {
+                    Item = "COLLIER KAVASA",
+                    Part = "BOUCLE",
+                    Rarity = "Inhabituelle"
+                }, {Item = "SILVA & AEGIS", Part = "GARDE", Rarity = "Rare"}
             },
             IsVaulted = 1
         }, {
@@ -3370,14 +3450,29 @@ local VoidData = {
             IsVaulted = 0
         }, {
             Tier = "Axi",
+            Name = "A12",
+            Drops = {
+                {Item = "FORMA", Part = "SCHEMA", Rarity = "Commune"},
+                {Item = "KOGAKE", Part = "BOTTE", Rarity = "Commune"},
+                {Item = "MIRAGE", Part = "SCHEMA CHASSIS", Rarity = "Commune"},
+                {Item = "BANSHEE", Part = "SCHEMA", Rarity = "Inhabituelle"},
+                {Item = "HELIOS", Part = "SYSTEMES", Rarity = "Inhabituelle"},
+                {Item = "AKBOLTO", Part = "CULASSE", Rarity = "Rare"}
+            },
+            IsVaulted = 0
+        }, {
+            Tier = "Axi",
             Name = "B1",
             Drops = {
                 {Item = "EUPHONA", Part = "SCHEMA", Rarity = "Commune"},
                 {Item = "ASH", Part = "SCHEMA CHASSIS", Rarity = "Commune"},
                 {Item = "FANG", Part = "LAME", Rarity = "Commune"},
                 {Item = "CERNOS", Part = "SCHEMA", Rarity = "Inhabituelle"},
-                {Item = "COLLIER KAVASA", Part = "BOUCLE", Rarity = "Inhabituelle"},
-                {Item = "BANSHEE", Part = "SCHEMA SYSTEMES", Rarity = "Rare"}
+                {
+                    Item = "COLLIER KAVASA",
+                    Part = "BOUCLE",
+                    Rarity = "Inhabituelle"
+                }, {Item = "BANSHEE", Part = "SCHEMA SYSTEMES", Rarity = "Rare"}
             },
             IsVaulted = 1
         }, {
@@ -3520,7 +3615,7 @@ local VoidData = {
                 {Item = "FORMA", Part = "SCHEMA", Rarity = "Inhabituelle"},
                 {Item = "EMBER", Part = "SCHEMA", Rarity = "Rare"}
             },
-            IsVaulted = 0
+            IsVaulted = 1
         }, {
             Tier = "Axi",
             Name = "E2",
@@ -3643,6 +3738,24 @@ local VoidData = {
                 {Item = "HYDROID", Part = "SCHEMA SYSTEMES", Rarity = "Rare"}
             },
             IsVaulted = 1
+        }, {
+            Tier = "Axi",
+            Name = "H5",
+            Drops = {
+                {Item = "AKBOLTO", Part = "SCHEMA", Rarity = "Commune"},
+                {
+                    Item = "BANSHEE",
+                    Part = "SCHELA NEUROPTIQUES",
+                    Rarity = "Commune"
+                }, {Item = "EUPHONA", Part = "SCHEMA", Rarity = "Commune"},
+                {Item = "FORMA", Part = "SCHEMA", Rarity = "Inhabituelle"},
+                {
+                    Item = "MIRAGE",
+                    Part = "SCHEMA SYSTEMES",
+                    Rarity = "Inhabituelle"
+                }, {Item = "HELIOS", Part = "CERVEAU", Rarity = "Rare"}
+            },
+            IsVaulted = 0
         }, {
             Tier = "Axi",
             Name = "K1",

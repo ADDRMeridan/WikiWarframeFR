@@ -556,4 +556,24 @@ function p._Manuf(manufName, color, text, imagesize)
     end
 end
 
+function p._Void(voidItemName)
+
+    local ret = {}
+    local iconSize = 'x32px'
+    local icon = IconData["Void"][voidItemName]
+    if (icon ~= nil) then
+        table.insert(ret, icon.Name)
+        table.insert(ret, ' [[File:')
+        table.insert(ret, icon.Icon)
+        table.insert(ret, '|')
+        table.insert(ret, iconSize)
+        table.insert(ret, ']]')
+    else
+        table.insert(ret, Shared.printModuleError(
+                         "Icon " .. voidItemName .. " introuvable", "Icon._Void"))
+    end
+
+    return table.concat(ret)
+end
+
 return p

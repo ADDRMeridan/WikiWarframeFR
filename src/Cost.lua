@@ -9,6 +9,7 @@ local Icon = require("Module:Icon")
 local Shared = require("Module:Shared")
 local Void = require("Module:Void")
 local ResearchData = mw.loadData("Module:Research/data")
+local TT = require('Module:Tooltip')
 
 -- String constant
 local mainHeader =
@@ -420,6 +421,82 @@ function p.buildWarframeCostBox(frame)
                            '\n|}<div style="clear:left; margin:0; padding:0;"></div>'
         return foundryTable
     end
+end
+
+-- =============================
+--   OBTENTION
+-- =============================
+
+local DROPLOCTABLEINIT =
+    'class="article-table" style="width:100%" cellspacing="1" cellpadding="1" border="0" align="left"'
+
+local function buildVoidDropLoc(itemName)
+
+    local ret = {}
+    local relicsPerPart = Void.getItemRelics(itemName)
+    if (not Shared.isTableEmpty(relicsPerPart)) then
+        -- Ordre particulier pour mettre le schema devant
+        local keys = {}
+        for k, _ in Shared.skpairs(relicsPerPart) do
+            if (k == "SCHEMA") then
+                table.insert(keys, 1, k)
+            else
+                table.insert(keys, k)
+            end
+        end
+        -- Construction du tableau
+        table.insert(ret, '{|')
+        table.insert(ret, DROPLOCTABLEINIT)
+        for _, k in ipairs(keys) do
+            table.insert(ret, '\n! style="text-align:center;" | ')
+            table.insert(ret, Icon._Void(k))
+        end
+        table.insert(ret, '\n|-')
+        for _, k in ipairs(keys) do
+            table.insert(ret, '\n| style="text-align:center;" | ')
+            local relicsCol = {}
+            for _, relic in ipairs(relicsPerPart[k]) do
+                local relicName = relic.Tier .. ' ' .. relic.Name
+                if (relic.IsVaulted) then
+                    table.insert(relicsCol,
+                                 TT._tooltipText(relicName, 'Relic') ..
+                                     ' ([[Soute Prime|V]])')
+                else
+                    table.insert(relicsCol, TT._tooltipText(relicName, 'Relic'))
+                end
+            end
+            table.insert(ret, table.concat(relicsCol, '<br/>'))
+        end
+        table.insert(ret, '\n|}')
+    end
+    return table.concat(ret)
+end
+
+local function isForVoid(itemName)
+
+    local toFind = {"Prime", "Forma"}
+    local found = false
+    local i = 1
+    while not found and i <= #toFind do
+        found = string.find(itemName, toFind[i]) ~= nil
+        i = i + 1
+    end
+
+    return found
+end
+
+function p.dropLoc(frame)
+
+    local ret = nil
+    local itemName = (frame.args ~= nil and frame.args[1]) or nil
+    if (itemName ~= nil) then
+        if (isForVoid(itemName)) then ret = buildVoidDropLoc(itemName) end
+    else
+        ret = Shared.printModuleError("Veuillez entrer un nom d'objet.",
+                                      "Cost.dropLoc")
+    end
+
+    return ret
 end
 
 return p

@@ -765,4 +765,31 @@ function p.isItemVaulted(itemName)
     return ret
 end
 
+-- Returns a table with the item parts used as keys and the values being tables containing the corresponding relics
+function p.getItemRelics(itemName)
+
+    local ret = {}
+    -- Remove the prime from the itemName and upcase it
+    local itemDBFormat = string.gsub(itemName, " Prime", "")
+    itemDBFormat = string.upper(itemDBFormat)
+    for _, relic in ipairs(VoidData["Relics"]) do
+        local drops = relic.Drops
+        local nbDrops = Shared.tableCount(drops)
+        local partFound = nil
+        local i = 1
+        while partFound == nil and i <= nbDrops do
+            if (drops[i].Item == itemDBFormat) then
+                partFound = drops[i].Part
+            end
+            i = i + 1
+        end
+        if (partFound ~= nil) then
+            if (ret[partFound] == nil) then ret[partFound] = {} end
+            table.insert(ret[partFound], relic)
+        end
+    end
+
+    return ret
+end
+
 return p
