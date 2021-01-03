@@ -3,12 +3,14 @@
 -- Me contacter en cas d'erreur
 local p = {}
 
+local ResearchData = mw.loadData("Module:Research/data")
+local DropsData = mw.loadData("Module:DropTables/data")
 local WeaponModule = require('Module:Weapons')
 local WarframeModule = require('Module:Warframes')
 local Icon = require("Module:Icon")
+local Math = require('Module:Math')
 local Shared = require("Module:Shared")
 local Void = require("Module:Void")
-local ResearchData = mw.loadData("Module:Research/data")
 local TT = require('Module:Tooltip')
 
 -- String constant
@@ -457,7 +459,7 @@ local function buildVoidDropLoc(itemName)
             local relicsCol = {}
             for _, relic in ipairs(relicsPerPart[k]) do
                 local relicName = relic.Tier .. ' ' .. relic.Name
-                if (relic.IsVaulted) then
+                if (relic.IsVaulted == 1) then
                     table.insert(relicsCol,
                                  TT._tooltipText(relicName, 'Relic') ..
                                      ' ([[Soute Prime|V]])')
@@ -472,17 +474,119 @@ local function buildVoidDropLoc(itemName)
     return table.concat(ret)
 end
 
-local function isForVoid(itemName)
+local function buildFormaDropLoc()
 
-    local toFind = {"Prime", "Forma"}
-    local found = false
-    local i = 1
-    while not found and i <= #toFind do
-        found = string.find(itemName, toFind[i]) ~= nil
-        i = i + 1
+    local ret = {}
+    -- Preparation des donnees
+    local relicsPerPart = Void.getItemRelics("Forma")
+    local relicsPerTier = {}
+    for _, array in pairs(relicsPerPart) do
+        for _, relic in pairs(array) do
+            if (relicsPerTier[relic.Tier] == nil) then
+                relicsPerTier[relic.Tier] = {}
+            end
+            table.insert(relicsPerTier[relic.Tier], relic)
+        end
     end
+    -- Construction de la table
+    table.insert(ret, '{|')
+    table.insert(ret, DROPLOCTABLEINIT)
+    table.insert(ret, '\n! style="text-align:center;" | Lith')
+    table.insert(ret, '\n! style="text-align:center;" | Meso')
+    table.insert(ret, '\n! style="text-align:center;" | Neo')
+    table.insert(ret, '\n! style="text-align:center;" | Axi\n|-')
+    local keysOrder = {"Lith", "Meso", "Neo", "Axi"}
+    for _, key in ipairs(keysOrder) do
+        table.insert(ret, '\n| style="text-align:center;" | ')
+        local relicsCol = {}
+        for _, relic in ipairs(relicsPerTier[key]) do
+            local relicName = relic.Tier .. ' ' .. relic.Name
+            if (relic.IsVaulted) then
+                table.insert(relicsCol, TT._tooltipText(relicName, 'Relic') ..
+                                 ' ([[Soute Prime|V]])')
+            else
+                table.insert(relicsCol, TT._tooltipText(relicName, 'Relic'))
+            end
+        end
+        table.insert(ret, table.concat(relicsCol, '<br/>'))
+    end
+    table.insert(ret, '\n|}')
 
-    return found
+    return table.concat(ret)
+end
+
+local function buildItemDropLoc(itemName)
+
+    local ret = {}
+    local itemNameDBFormat = string.upper(itemName)
+    local itemDropLoc = DropsData["Items"][itemNameDBFormat]
+    if (itemDropLoc ~= nil) then
+        table.insert(ret, '{| ')
+        table.insert(ret, DROPLOCTABLEINIT)
+        table.insert(ret,
+                     '\n! style="width: 27.5%;" | Drop \n! style="text-align:center" | Chance \n! style="text-align:center" | Estimation \n! style="text-align:center" | Presque garanti \n|-')
+        for _, v in ipairs(itemDropLoc) do
+            local partCount = 0
+            local dropChances = {}
+            local dropParts = {}
+            for _, w in ipairs(v) do
+                partCount = partCount + 1
+                dropChances[partCount] = w.Chance
+                dropParts[partCount] = w.Part
+            end
+
+            for j = 1, partCount do
+                local part = dropParts[j]
+                for k = 1, partCount do
+                    if (dropParts[k] == part and k ~= j) then
+                        dropChances[j] = dropChances[j] + dropChances[k]
+                        dropChances[k] = 0
+                        dropParts[k] = nil
+                    end
+                end
+            end
+
+            for j, w in ipairs(v) do
+                table.insert(ret, '\n| ')
+                table.insert(ret, w.Part)
+                if (w.Desc ~= nil and w.Desc ~= '') then
+                    table.insert(ret, '<br/>(')
+                    table.insert(ret, w.Desc)
+                    table.insert(ret, ')')
+                end
+                table.insert(ret, '\n| style="text-align:center" | ')
+                table.insert(ret, Math._round(w.Chance, 0.001, true, false))
+                table.insert(ret, '%')
+                if (j == 1) then
+                    local unit = ''
+                    if (w.Unit ~= nil and w.Unit ~= '') then
+                        unit = w.Unit
+                    end
+                    table.insert(ret, '\n| rowspan=')
+                    table.insert(ret, partCount)
+                    table.insert(ret, ' style="text-align:center" | ')
+                    table.insert(ret, Math._expected(dropChances))
+                    table.insert(ret, ' ')
+                    table.insert(ret, unit)
+                    table.insert(ret, '\n| rowspan=')
+                    table.insert(ret, partCount)
+                    table.insert(ret, ' style="text-align:center" | ')
+                    table.insert(ret, Math._nearlyGuaranteed(dropChances))
+                    table.insert(ret, ' ')
+                    table.insert(ret, unit)
+                end
+                table.insert(ret, '\n|-')
+            end
+        end
+        table.insert(ret, '\n|}')
+    else
+        table.insert(ret,
+                     Shared.printModuleError(
+                         "Objet " .. itemNameDBFormat ..
+                             "introuvable dans [[Module:DropTables/data]].",
+                         "Cost.buildItemDropLoc"))
+    end
+    return table.concat(ret)
 end
 
 function p.dropLoc(frame)
@@ -490,7 +594,13 @@ function p.dropLoc(frame)
     local ret = nil
     local itemName = (frame.args ~= nil and frame.args[1]) or nil
     if (itemName ~= nil) then
-        if (isForVoid(itemName)) then ret = buildVoidDropLoc(itemName) end
+        if (string.find(itemName, "Prime")) then
+            ret = buildVoidDropLoc(itemName)
+        elseif (itemName == "Forma") then
+            ret = buildFormaDropLoc()
+        else
+            ret = buildItemDropLoc(itemName)
+        end
     else
         ret = Shared.printModuleError("Veuillez entrer un nom d'objet.",
                                       "Cost.dropLoc")

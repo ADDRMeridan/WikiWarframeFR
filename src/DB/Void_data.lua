@@ -3745,7 +3745,7 @@ local VoidData = {
                 {Item = "AKBOLTO", Part = "SCHEMA", Rarity = "Commune"},
                 {
                     Item = "BANSHEE",
-                    Part = "SCHELA NEUROPTIQUES",
+                    Part = "SCHEMA NEUROPTIQUES",
                     Rarity = "Commune"
                 }, {Item = "EUPHONA", Part = "SCHEMA", Rarity = "Commune"},
                 {Item = "FORMA", Part = "SCHEMA", Rarity = "Inhabituelle"},

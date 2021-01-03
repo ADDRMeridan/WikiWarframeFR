@@ -1,3 +1,12 @@
+-- Constantes pour les warframes de bases
+local WFDefault = {
+    {
+        {Part = "Schéma Châssis", Chance = 0.3872},
+        {Part = "Schéma Neuroptiques", Chance = 0.3872},
+        {Part = "Schéma Systèmes", Chance = 0.2256}
+    }
+}
+
 local DropData = {
     ["Missions"] = {
         {
@@ -14,7 +23,7 @@ local DropData = {
                     {"Tambour de Munitions", "Mod", 11.06},
                     {"Mains Rapides", "Mod", 10.84}, {"Dégaine", "Mod", 10.84},
                     {"Restauration de Santé", "Item", 10.84},
-                    {"Boîte de Munitions", "Item", 0.34},
+                    {"Boîte de Munition Omni", "Item", 0.34},
                     {"Vent du Nord", "Mod", 0.34},
                     {"Toucher Choquant", "Mod", 0.34},
                     {"Impact Brûlant", "Mod", 0.34}, {"Allonge", "Mod", 0.34}
@@ -2605,7 +2614,7 @@ local DropData = {
                     {"Cellule Orokin", "Ressource", 12.65, 2},
                     {"Kuva", "Ressource", 12.65, 150},
                     {"Kuva", "Ressource", 12.65, 200},
-                    {"Mutagen Mass", "Ressource", 11.06},
+                    {"Masse Mutagène", "Ressource", 11.06},
                     {"{{Icon|Item|Forma|text}}", "Schéma", 11.06},
                     {"Clem Clone Blueprint", "Schéma", 1.01},
                     {"Universal Medallion", "Ressource", 1.01}
@@ -3417,14 +3426,14 @@ local DropData = {
                 },
                 ["B"] = {
                     {"Armement du Vigile", "Mod", 35.19},
-                    {"Vazarin Lens", "Ressource", 14.81},
+                    {"Lentille Vazarin", "Ressource", 14.81},
                     {"Lentille Unairu", "Ressource", 14.81},
                     {"Endo", "Endo", 35.19, 200}
                 },
                 ["C"] = {
                     {"Pacte de l'Augure", "Mod", 35.19},
-                    {"Naramon Lens", "Ressource", 14.81},
-                    {"Zenurik Lens", "Ressource", 14.81},
+                    {"Lentille Naramon", "Ressource", 14.81},
+                    {"Lentille Zenurik", "Ressource", 14.81},
                     {"Endo", "Endo", 35.19, 200}
                 }
             }
@@ -3448,7 +3457,7 @@ local DropData = {
                 },
                 ["B"] = {
                     {"Armement du Vigile", "Mod", 20.43},
-                    {"Vazarin Lens", "Ressource", 8.6},
+                    {"Lentille Vazarin", "Ressource", 8.6},
                     {"Lentille Unairu", "Ressource", 8.6},
                     {"Endo", "Endo", 20.43, 200},
                     {"Gara Neuroptiques Blueprint", "Schéma", 8.6},
@@ -3458,8 +3467,8 @@ local DropData = {
                 },
                 ["C"] = {
                     {"Pacte de l'Augure", "Mod", 20.21},
-                    {"Naramon Lens", "Ressource", 8.51},
-                    {"Zenurik Lens", "Ressource", 8.51},
+                    {"Lentille Naramon", "Ressource", 8.51},
+                    {"Lentille Zenurik", "Ressource", 8.51},
                     {"Endo", "Endo", 20.21, 200},
                     {"Gara Neuroptiques Blueprint", "Schéma", 9.57},
                     {"Ferveur du Vigile", "Mod", 8.51},
@@ -3488,7 +3497,7 @@ local DropData = {
                 },
                 ["B"] = {
                     {"Armement du Vigile", "Mod", 20},
-                    {"Vazarin Lens", "Ressource", 8.42},
+                    {"Lentille Vazarin", "Ressource", 8.42},
                     {"Lentille Unairu", "Ressource", 8.42},
                     {"Endo", "Endo", 20, 200},
                     {"Gara Neuroptiques Blueprint", "Schéma", 8.42},
@@ -3499,8 +3508,8 @@ local DropData = {
                 },
                 ["C"] = {
                     {"Pacte de l'Augure", "Mod", 19.79},
-                    {"Naramon Lens", "Ressource", 8.33},
-                    {"Zenurik Lens", "Ressource", 8.33},
+                    {"Lentille Naramon", "Ressource", 8.33},
+                    {"Lentille Zenurik", "Ressource", 8.33},
                     {"Endo", "Endo", 19.79, 200},
                     {"Gara Neuroptiques Blueprint", "Schéma", 9.38},
                     {"Ferveur du Vigile", "Mod", 8.33},
@@ -3555,14 +3564,14 @@ local DropData = {
                 },
                 ["B"] = {
                     {"Vigueur du Vigile", "Mod", 35.19},
-                    {"Zenurik Lens", "Ressource", 14.81},
-                    {"Vazarin Lens", "Ressource", 14.81},
+                    {"Lentille Zenurik", "Ressource", 14.81},
+                    {"Lentille Vazarin", "Ressource", 14.81},
                     {"Endo", "Endo", 35.19, 300}
                 },
                 ["C"] = {
                     {"Message de l'Augure", "Mod", 29.31},
                     {"Kuva", "Ressource", 27.59, 100},
-                    {"Naramon Lens", "Ressource", 13.79},
+                    {"Lentille Naramon", "Ressource", 13.79},
                     {"Endo", "Endo", 29.31, 300}
                 }
             }
@@ -3586,8 +3595,8 @@ local DropData = {
                 },
                 ["B"] = {
                     {"Vigueur du Vigile", "Mod", 20.21},
-                    {"Zenurik Lens", "Ressource", 8.51},
-                    {"Vazarin Lens", "Ressource", 8.51},
+                    {"Lentille Zenurik", "Ressource", 8.51},
+                    {"Lentille Vazarin", "Ressource", 8.51},
                     {"Endo", "Endo", 20.21, 300},
                     {"Feu Follet de Cetus", "Ressource", 9.57},
                     {"Résolution du Gladiateur", "Mod", 8.51},
@@ -3597,7 +3606,7 @@ local DropData = {
                 ["C"] = {
                     {"Message de l'Augure", "Mod", 17.71},
                     {"Kuva", "Ressource", 16.67, 100},
-                    {"Naramon Lens", "Ressource", 8.33},
+                    {"Lentille Naramon", "Ressource", 8.33},
                     {"Endo", "Endo", 17.71, 300},
                     {"Feu Follet de Cetus", "Ressource", 8.33},
                     {"Poursuite du Vigile", "Mod", 8.33},
@@ -3625,8 +3634,8 @@ local DropData = {
                 },
                 ["B"] = {
                     {"Vigueur du Vigile", "Mod", 19.79},
-                    {"Zenurik Lens", "Ressource", 8.33},
-                    {"Vazarin Lens", "Ressource", 8.33},
+                    {"Lentille Zenurik", "Ressource", 8.33},
+                    {"Lentille Vazarin", "Ressource", 8.33},
                     {"Endo", "Endo", 19.79, 300},
                     {"Feu Follet de Cetus", "Ressource", 9.38},
                     {"Résolution du Gladiateur", "Mod", 8.33},
@@ -3637,7 +3646,7 @@ local DropData = {
                 ["C"] = {
                     {"Message de l'Augure", "Mod", 17.35},
                     {"Kuva", "Ressource", 16.33, 100},
-                    {"Naramon Lens", "Ressource", 8.16},
+                    {"Lentille Naramon", "Ressource", 8.16},
                     {"Endo", "Endo", 17.35, 300},
                     {"Feu Follet de Cetus", "Ressource", 8.16},
                     {"Poursuite du Vigile", "Mod", 8.16},
@@ -3959,22 +3968,22 @@ local DropData = {
                     {"Oxium", "Ressource", 20, 100},
                     {"Cache de Crédits", "Credits", 20, 1500},
                     {"Endo", "Endo", 20, 50},
-                    {"Mytocardia Spore", "Ressource", 20, 5},
-                    {"Training Debt-Bond", "Ressource", 20, 2}
+                    {"Spore Mytocardia", "Ressource", 20, 5},
+                    {"Obligations de dettes Étudiantes", "Ressource", 20, 2}
                 },
                 ["B"] = {
                     {"Cryotique", "Ressource", 20, 100},
                     {"Cache de Crédits", "Credits", 20, 1500},
                     {"Endo", "Endo", 20, 50},
-                    {"Thermal Sludge", "Ressource", 20, 5},
-                    {"Training Debt-Bond", "Ressource", 20, 2}
+                    {"Boue Thermique", "Ressource", 20, 5},
+                    {"Obligations de dettes Étudiantes", "Ressource", 20, 2}
                 },
                 ["C"] = {
                     {"Plastides", "Ressource", 20, 100},
                     {"Cache de Crédits", "Credits", 20, 1500},
                     {"Endo", "Endo", 20, 50},
-                    {"Gorgaricus Spore", "Ressource", 20, 5},
-                    {"Training Debt-Bond", "Ressource", 20, 2}
+                    {"Spore Gorgaricus", "Ressource", 20, 5},
+                    {"Obligations de dettes Étudiantes", "Ressource", 20, 2}
                 }
             }
         }, {
@@ -3989,30 +3998,30 @@ local DropData = {
                     {"Oxium", "Ressource", 15.49, 100},
                     {"Cache de Crédits", "Credits", 15.49, 1500},
                     {"Endo", "Endo", 15.49, 50},
-                    {"Mytocardia Spore", "Ressource", 15.49, 5},
-                    {"Training Debt-Bond", "Ressource", 15.49, 2},
-                    {"Garuda Châssis Blueprint", "Schéma", 7.52},
-                    {"Tepa Nodule", "Ressource", 7.52, 5},
+                    {"Spore Mytocardia", "Ressource", 15.49, 5},
+                    {"Obligations de dettes Étudiantes", "Ressource", 15.49, 2},
+                    {"Garuda Châssis Schéma", "Schéma", 7.52},
+                    {"Nodule Tepa", "Ressource", 7.52, 5},
                     {"Cache de Crédits", "Credits", 7.52, 3000}
                 },
                 ["B"] = {
                     {"Cryotique", "Ressource", 15.49, 100},
                     {"Cache de Crédits", "Credits", 15.49, 1500},
                     {"Endo", "Endo", 15.49, 50},
-                    {"Thermal Sludge", "Ressource", 15.49, 5},
-                    {"Training Debt-Bond", "Ressource", 15.49, 2},
-                    {"Garuda Châssis Blueprint", "Schéma", 7.52},
-                    {"Tepa Nodule", "Ressource", 7.52, 5},
+                    {"Boue Thermique", "Ressource", 15.49, 5},
+                    {"Obligations de dettes Étudiantes", "Ressource", 15.49, 2},
+                    {"Garuda Châssis Schéma", "Schéma", 7.52},
+                    {"Nodule Tepa", "Ressource", 7.52, 5},
                     {"Cache de Crédits", "Credits", 7.52, 3000}
                 },
                 ["C"] = {
                     {"Plastides", "Ressource", 15.49, 100},
                     {"Cache de Crédits", "Credits", 15.49, 1500},
                     {"Endo", "Endo", 15.49, 50},
-                    {"Gorgaricus Spore", "Ressource", 15.49, 5},
-                    {"Training Debt-Bond", "Ressource", 15.49, 2},
-                    {"Garuda Châssis Blueprint", "Schéma", 7.52},
-                    {"Tepa Nodule", "Ressource", 7.52, 5},
+                    {"Spore Gorgaricus", "Ressource", 15.49, 5},
+                    {"Obligations de dettes Étudiantes", "Ressource", 15.49, 2},
+                    {"Garuda Châssis Schéma", "Schéma", 7.52},
+                    {"Nodule Tepa", "Ressource", 7.52, 5},
                     {"Cache de Crédits", "Credits", 7.52, 3000}
                 }
             }
@@ -4028,10 +4037,10 @@ local DropData = {
                     {"Oxium", "Ressource", 15.18, 100},
                     {"Cache de Crédits", "Credits", 15.18, 1500},
                     {"Endo", "Endo", 15.18, 50},
-                    {"Mytocardia Spore", "Ressource", 15.18, 5},
-                    {"Training Debt-Bond", "Ressource", 15.18, 2},
-                    {"Garuda Châssis Blueprint", "Schéma", 7.37},
-                    {"Tepa Nodule", "Ressource", 7.37, 5},
+                    {"Spore Mytocardia", "Ressource", 15.18, 5},
+                    {"Obligations de dettes Étudiantes", "Ressource", 15.18, 2},
+                    {"Garuda Châssis Schéma", "Schéma", 7.37},
+                    {"Nodule Tepa", "Ressource", 7.37, 5},
                     {"Cache de Crédits", "Credits", 7.37, 3000},
                     {"Lith V7", "Relique", 2.01}
                 },
@@ -4039,10 +4048,10 @@ local DropData = {
                     {"Cryotique", "Ressource", 15.18, 100},
                     {"Cache de Crédits", "Credits", 15.18, 1500},
                     {"Endo", "Endo", 15.18, 50},
-                    {"Thermal Sludge", "Ressource", 15.18, 5},
-                    {"Training Debt-Bond", "Ressource", 15.18, 2},
-                    {"Garuda Châssis Blueprint", "Schéma", 7.37},
-                    {"Tepa Nodule", "Ressource", 7.37, 5},
+                    {"Boue Thermique", "Ressource", 15.18, 5},
+                    {"Obligations de dettes Étudiantes", "Ressource", 15.18, 2},
+                    {"Garuda Châssis Schéma", "Schéma", 7.37},
+                    {"Nodule Tepa", "Ressource", 7.37, 5},
                     {"Cache de Crédits", "Credits", 7.37, 3000},
                     {"Lith V8", "Relique", 2.01}
                 },
@@ -4050,10 +4059,10 @@ local DropData = {
                     {"Plastides", "Ressource", 15.18, 100},
                     {"Cache de Crédits", "Credits", 15.18, 1500},
                     {"Endo", "Endo", 15.18, 50},
-                    {"Gorgaricus Spore", "Ressource", 15.18, 5},
-                    {"Training Debt-Bond", "Ressource", 15.18, 2},
-                    {"Garuda Châssis Blueprint", "Schéma", 7.37},
-                    {"Tepa Nodule", "Ressource", 7.37, 5},
+                    {"Spore Gorgaricus", "Ressource", 15.18, 5},
+                    {"Obligations de dettes Étudiantes", "Ressource", 15.18, 2},
+                    {"Garuda Châssis Schéma", "Schéma", 7.37},
+                    {"Nodule Tepa", "Ressource", 7.37, 5},
                     {"Cache de Crédits", "Credits", 7.37, 3000},
                     {"Lith V7", "Relique", 2.01}
                 }
@@ -4067,20 +4076,20 @@ local DropData = {
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Garuda Châssis Blueprint", "Schéma", 30.56},
-                    {"Tepa Nodule", "Ressource", 30.56, 5},
+                    {"Garuda Châssis Schéma", "Schéma", 30.56},
+                    {"Nodule Tepa", "Ressource", 30.56, 5},
                     {"Cache de Crédits", "Credits", 30.56, 3000},
                     {"Lith V7", "Relique", 8.33}
                 },
                 ["B"] = {
-                    {"Garuda Châssis Blueprint", "Schéma", 30.56},
-                    {"Tepa Nodule", "Ressource", 30.56, 5},
+                    {"Garuda Châssis Schéma", "Schéma", 30.56},
+                    {"Nodule Tepa", "Ressource", 30.56, 5},
                     {"Cache de Crédits", "Credits", 30.56, 3000},
                     {"Lith V8", "Relique", 8.33}
                 },
                 ["C"] = {
-                    {"Garuda Châssis Blueprint", "Schéma", 30.56},
-                    {"Tepa Nodule", "Ressource", 30.56, 5},
+                    {"Garuda Châssis Schéma", "Schéma", 30.56},
+                    {"Nodule Tepa", "Ressource", 30.56, 5},
                     {"Cache de Crédits", "Credits", 30.56, 3000},
                     {"Lith V7", "Relique", 8.33}
                 }
@@ -4094,25 +4103,25 @@ local DropData = {
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Mytocardia Spore", "Ressource", 20, 15},
+                    {"Spore Mytocardia", "Ressource", 20, 15},
                     {"Oxium", "Ressource", 20, 200},
                     {"Cache de Crédits", "Credits", 20, 2500},
                     {"Endo", "Endo", 20, 100},
-                    {"Shelter Debt-Bond", "Ressource", 20, 2}
+                    {"Obligations de dettes de Couverture", "Ressource", 20, 2}
                 },
                 ["B"] = {
-                    {"Thermal Sludge", "Ressource", 20, 15},
+                    {"Boue Thermique", "Ressource", 20, 15},
                     {"Cryotique", "Ressource", 20, 200},
                     {"Cache de Crédits", "Credits", 20, 2500},
                     {"Endo", "Endo", 20, 100},
-                    {"Shelter Debt-Bond", "Ressource", 20, 2}
+                    {"Obligations de dettes de Couverture", "Ressource", 20, 2}
                 },
                 ["C"] = {
-                    {"Gorgaricus Spore", "Ressource", 20, 15},
+                    {"Spore Gorgaricus", "Ressource", 20, 15},
                     {"Nano Spores", "Ressource", 20, 200},
                     {"Cache de Crédits", "Credits", 20, 2500},
                     {"Endo", "Endo", 20, 100},
-                    {"Shelter Debt-Bond", "Ressource", 20, 2}
+                    {"Obligations de dettes de Couverture", "Ressource", 20, 2}
                 }
             }
         }, {
@@ -4124,33 +4133,39 @@ local DropData = {
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Mytocardia Spore", "Ressource", 14.81, 15},
+                    {"Spore Mytocardia", "Ressource", 14.81, 15},
                     {"Oxium", "Ressource", 14.81, 200},
                     {"Cache de Crédits", "Credits", 14.81, 2500},
                     {"Endo", "Endo", 14.81, 100},
-                    {"Shelter Debt-Bond", "Ressource", 14.81, 2},
-                    {"Garuda Systèmes Blueprint", "Schéma", 7.41},
-                    {"Tepa Nodule", "Ressource", 7.41, 5},
+                    {
+                        "Obligations de dettes de Couverture", "Ressource",
+                        14.81, 2
+                    }, {"Garuda Systèmes Schéma", "Schéma", 7.41},
+                    {"Nodule Tepa", "Ressource", 7.41, 5},
                     {"Lith V8", "Relique", 11.11}
                 },
                 ["B"] = {
-                    {"Thermal Sludge", "Ressource", 14.81, 15},
+                    {"Boue Thermique", "Ressource", 14.81, 15},
                     {"Cryotique", "Ressource", 14.81, 200},
                     {"Cache de Crédits", "Credits", 14.81, 2500},
                     {"Endo", "Endo", 14.81, 100},
-                    {"Shelter Debt-Bond", "Ressource", 14.81, 2},
-                    {"Garuda Systèmes Blueprint", "Schéma", 7.41},
-                    {"Tepa Nodule", "Ressource", 7.41, 5},
+                    {
+                        "Obligations de dettes de Couverture", "Ressource",
+                        14.81, 2
+                    }, {"Garuda Systèmes Schéma", "Schéma", 7.41},
+                    {"Nodule Tepa", "Ressource", 7.41, 5},
                     {"Lith V7", "Relique", 11.11}
                 },
                 ["C"] = {
-                    {"Gorgaricus Spore", "Ressource", 14.81, 15},
+                    {"Spore Gorgaricus", "Ressource", 14.81, 15},
                     {"Nano Spores", "Ressource", 14.81, 200},
                     {"Cache de Crédits", "Credits", 14.81, 2500},
                     {"Endo", "Endo", 14.81, 100},
-                    {"Shelter Debt-Bond", "Ressource", 14.81, 2},
-                    {"Garuda Systèmes Blueprint", "Schéma", 7.41},
-                    {"Tepa Nodule", "Ressource", 7.41, 5},
+                    {
+                        "Obligations de dettes de Couverture", "Ressource",
+                        14.81, 2
+                    }, {"Garuda Systèmes Schéma", "Schéma", 7.41},
+                    {"Nodule Tepa", "Ressource", 7.41, 5},
                     {"Lith V8", "Relique", 11.11}
                 }
             }
@@ -4163,34 +4178,40 @@ local DropData = {
             Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Mytocardia Spore", "Ressource", 13.79, 15},
+                    {"Spore Mytocardia", "Ressource", 13.79, 15},
                     {"Oxium", "Ressource", 13.79, 200},
                     {"Cache de Crédits", "Credits", 13.79, 2500},
                     {"Endo", "Endo", 13.79, 100},
-                    {"Shelter Debt-Bond", "Ressource", 13.79, 2},
-                    {"Garuda Systèmes Blueprint", "Schéma", 6.9},
-                    {"Tepa Nodule", "Ressource", 6.9, 5},
+                    {
+                        "Obligations de dettes de Couverture", "Ressource",
+                        13.79, 2
+                    }, {"Garuda Systèmes Schéma", "Schéma", 6.9},
+                    {"Nodule Tepa", "Ressource", 6.9, 5},
                     {"Lith V8", "Relique", 10.34}, {"Charge Synth", "Mod", 6.9}
                 },
                 ["B"] = {
-                    {"Thermal Sludge", "Ressource", 13.79, 15},
+                    {"Boue Thermique", "Ressource", 13.79, 15},
                     {"Cryotique", "Ressource", 13.79, 200},
                     {"Cache de Crédits", "Credits", 13.79, 2500},
                     {"Endo", "Endo", 13.79, 100},
-                    {"Shelter Debt-Bond", "Ressource", 13.79, 2},
-                    {"Garuda Systèmes Blueprint", "Schéma", 6.9},
-                    {"Tepa Nodule", "Ressource", 6.9, 5},
+                    {
+                        "Obligations de dettes de Couverture", "Ressource",
+                        13.79, 2
+                    }, {"Garuda Systèmes Schéma", "Schéma", 6.9},
+                    {"Nodule Tepa", "Ressource", 6.9, 5},
                     {"Lith V7", "Relique", 10.34},
                     {"Décharge Mecha", "Mod", 6.9}
                 },
                 ["C"] = {
-                    {"Gorgaricus Spore", "Ressource", 13.79, 15},
+                    {"Spore Gorgaricus", "Ressource", 13.79, 15},
                     {"Nano Spores", "Ressource", 13.79, 200},
                     {"Cache de Crédits", "Credits", 13.79, 2500},
                     {"Endo", "Endo", 13.79, 100},
-                    {"Shelter Debt-Bond", "Ressource", 13.79, 2},
-                    {"Garuda Systèmes Blueprint", "Schéma", 6.9},
-                    {"Tepa Nodule", "Ressource", 6.9, 5},
+                    {
+                        "Obligations de dettes de Couverture", "Ressource",
+                        13.79, 2
+                    }, {"Garuda Systèmes Schéma", "Schéma", 6.9},
+                    {"Nodule Tepa", "Ressource", 6.9, 5},
                     {"Lith V8", "Relique", 10.34}, {"Assaut Tek", "Mod", 6.9}
                 }
             }
@@ -4203,20 +4224,20 @@ local DropData = {
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Garuda Systèmes Blueprint", "Schéma", 22.22},
-                    {"Tepa Nodule", "Ressource", 22.22, 5},
+                    {"Garuda Systèmes Schéma", "Schéma", 22.22},
+                    {"Nodule Tepa", "Ressource", 22.22, 5},
                     {"Lith V8", "Relique", 33.33},
                     {"Charge Synth", "Mod", 22.22}
                 },
                 ["B"] = {
-                    {"Garuda Systèmes Blueprint", "Schéma", 22.22},
-                    {"Tepa Nodule", "Ressource", 22.22, 5},
+                    {"Garuda Systèmes Schéma", "Schéma", 22.22},
+                    {"Nodule Tepa", "Ressource", 22.22, 5},
                     {"Lith V7", "Relique", 33.33},
                     {"Décharge Mecha", "Mod", 22.22}
                 },
                 ["C"] = {
-                    {"Garuda Systèmes Blueprint", "Schéma", 22.22},
-                    {"Tepa Nodule", "Ressource", 22.22, 5},
+                    {"Garuda Systèmes Schéma", "Schéma", 22.22},
+                    {"Nodule Tepa", "Ressource", 22.22, 5},
                     {"Lith V8", "Relique", 33.33}, {"Assaut Tek", "Mod", 22.22}
                 }
             }
@@ -4232,18 +4253,18 @@ local DropData = {
                     {"Lentille Madurai", "Ressource", 20},
                     {"Endo", "Endo", 40, 200},
                     {"Circuits", "Ressource", 20, 300},
-                    {"Medical Debt-Bond", "Ressource", 20, 2}
+                    {"Obligations de dettes Médicales", "Ressource", 20, 2}
                 },
                 ["B"] = {
                     {"Lentille Unairu", "Ressource", 20},
                     {"Endo", "Endo", 40, 200},
                     {"Plastides", "Ressource", 20, 300},
-                    {"Medical Debt-Bond", "Ressource", 20, 2}
+                    {"Obligations de dettes Médicales", "Ressource", 20, 2}
                 },
                 ["C"] = {
-                    {"Naramon Lens", "Ressource", 20},
+                    {"Lentille Naramon", "Ressource", 20},
                     {"Endo", "Endo", 40, 200}, {"Rubedo", "Ressource", 20, 300},
-                    {"Medical Debt-Bond", "Ressource", 20, 2}
+                    {"Obligations de dettes Médicales", "Ressource", 20, 2}
                 }
             }
         }, {
@@ -4258,24 +4279,24 @@ local DropData = {
                     {"Lentille Madurai", "Ressource", 12.5},
                     {"Endo", "Endo", 25, 200},
                     {"Circuits", "Ressource", 12.5, 300},
-                    {"Medical Debt-Bond", "Ressource", 12.5, 2},
-                    {"Garuda Neuroptiques Blueprint", "Schéma", 12.5},
+                    {"Obligations de dettes Médicales", "Ressource", 12.5, 2},
+                    {"Garuda Neuroptiques Schéma", "Schéma", 12.5},
                     {"Meso V6", "Relique", 25}
                 },
                 ["B"] = {
                     {"Lentille Unairu", "Ressource", 12.5},
                     {"Endo", "Endo", 25, 200},
                     {"Plastides", "Ressource", 12.5, 300},
-                    {"Medical Debt-Bond", "Ressource", 12.5, 2},
-                    {"Garuda Neuroptiques Blueprint", "Schéma", 12.5},
+                    {"Obligations de dettes Médicales", "Ressource", 12.5, 2},
+                    {"Garuda Neuroptiques Schéma", "Schéma", 12.5},
                     {"Meso V6", "Relique", 25}
                 },
                 ["C"] = {
-                    {"Naramon Lens", "Ressource", 12.5},
+                    {"Lentille Naramon", "Ressource", 12.5},
                     {"Endo", "Endo", 25, 200},
                     {"Rubedo", "Ressource", 12.5, 300},
-                    {"Medical Debt-Bond", "Ressource", 12.5, 2},
-                    {"Garuda Neuroptiques Blueprint", "Schéma", 12.5},
+                    {"Obligations de dettes Médicales", "Ressource", 12.5, 2},
+                    {"Garuda Neuroptiques Schéma", "Schéma", 12.5},
                     {"Meso V6", "Relique", 25}
                 }
             }
@@ -4291,8 +4312,8 @@ local DropData = {
                     {"Lentille Madurai", "Ressource", 11.11},
                     {"Endo", "Endo", 22.22, 200},
                     {"Circuits", "Ressource", 11.11, 300},
-                    {"Medical Debt-Bond", "Ressource", 11.11, 2},
-                    {"Garuda Neuroptiques Blueprint", "Schéma", 11.11},
+                    {"Obligations de dettes Médicales", "Ressource", 11.11, 2},
+                    {"Garuda Neuroptiques Schéma", "Schéma", 11.11},
                     {"Meso V6", "Relique", 22.22},
                     {"Déconstruction Synth", "Mod", 11.11}
                 },
@@ -4300,17 +4321,17 @@ local DropData = {
                     {"Lentille Unairu", "Ressource", 11.11},
                     {"Endo", "Endo", 22.22, 200},
                     {"Plastides", "Ressource", 11.11, 300},
-                    {"Medical Debt-Bond", "Ressource", 11.11, 2},
-                    {"Garuda Neuroptiques Blueprint", "Schéma", 11.11},
+                    {"Obligations de dettes Médicales", "Ressource", 11.11, 2},
+                    {"Garuda Neuroptiques Schéma", "Schéma", 11.11},
                     {"Meso V6", "Relique", 22.22},
                     {"Recharge Mecha", "Mod", 11.11}
                 },
                 ["C"] = {
-                    {"Naramon Lens", "Ressource", 11.11},
+                    {"Lentille Naramon", "Ressource", 11.11},
                     {"Endo", "Endo", 22.22, 200},
                     {"Rubedo", "Ressource", 11.11, 300},
-                    {"Medical Debt-Bond", "Ressource", 11.11, 2},
-                    {"Garuda Neuroptiques Blueprint", "Schéma", 11.11},
+                    {"Obligations de dettes Médicales", "Ressource", 11.11, 2},
+                    {"Garuda Neuroptiques Schéma", "Schéma", 11.11},
                     {"Meso V6", "Relique", 22.22},
                     {"Amélioration Tek", "Mod", 11.11}
                 }
@@ -4324,16 +4345,16 @@ local DropData = {
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Garuda Neuroptiques Blueprint", "Schéma", 25},
+                    {"Garuda Neuroptiques Schéma", "Schéma", 25},
                     {"Meso V6", "Relique", 50},
                     {"Déconstruction Synth", "Mod", 25}
                 },
                 ["B"] = {
-                    {"Garuda Neuroptiques Blueprint", "Schéma", 25},
+                    {"Garuda Neuroptiques Schéma", "Schéma", 25},
                     {"Meso V6", "Relique", 50}, {"Recharge Mecha", "Mod", 25}
                 },
                 ["C"] = {
-                    {"Garuda Neuroptiques Blueprint", "Schéma", 25},
+                    {"Garuda Neuroptiques Schéma", "Schéma", 25},
                     {"Meso V6", "Relique", 50}, {"Amélioration Tek", "Mod", 25}
                 }
             }
@@ -4346,22 +4367,31 @@ local DropData = {
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Vazarin Lens", "Ressource", 25.81},
+                    {"Lentille Vazarin", "Ressource", 25.81},
                     {"Endo", "Endo", 25.81, 300},
                     {"Fieldron", "Ressource", 29.03, 2},
-                    {"Advances Debt-Bond", "Ressource", 19.35, 2}
+                    {
+                        "Obligations de dettes d'avance de fonds", "Ressource",
+                        19.35, 2
+                    }
                 },
                 ["B"] = {
-                    {"Zenurik Lens", "Ressource", 25.81},
+                    {"Lentille Zenurik", "Ressource", 25.81},
                     {"Endo", "Endo", 25.81, 300},
-                    {"Detonite Injector", "Ressource", 29.03, 2},
-                    {"Advances Debt-Bond", "Ressource", 19.35, 2}
+                    {"Injecteur de Détonite", "Ressource", 29.03, 2},
+                    {
+                        "Obligations de dettes d'avance de fonds", "Ressource",
+                        19.35, 2
+                    }
                 },
                 ["C"] = {
                     {"Kuva", "Ressource", 25.81, 200},
                     {"Endo", "Endo", 25.81, 300},
-                    {"Mutagen Mass", "Ressource", 29.03, 2},
-                    {"Advances Debt-Bond", "Ressource", 19.35, 2}
+                    {"Masse Mutagène", "Ressource", 29.03, 2},
+                    {
+                        "Obligations de dettes d'avance de fonds", "Ressource",
+                        19.35, 2
+                    }
                 }
             }
         }, {
@@ -4373,25 +4403,34 @@ local DropData = {
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Vazarin Lens", "Ressource", 19.75},
+                    {"Lentille Vazarin", "Ressource", 19.75},
                     {"Endo", "Endo", 19.75, 300},
                     {"Fieldron", "Ressource", 22.22, 2},
-                    {"Advances Debt-Bond", "Ressource", 14.81, 2},
-                    {"Neo A4", "Relique", 18.52}, {"Tellure", "Ressource", 4.94}
+                    {
+                        "Obligations de dettes d'avance de fonds", "Ressource",
+                        14.81, 2
+                    }, {"Neo A4", "Relique", 18.52},
+                    {"Tellure", "Ressource", 4.94}
                 },
                 ["B"] = {
-                    {"Zenurik Lens", "Ressource", 19.75},
+                    {"Lentille Zenurik", "Ressource", 19.75},
                     {"Endo", "Endo", 19.75, 300},
-                    {"Detonite Injector", "Ressource", 22.22, 2},
-                    {"Advances Debt-Bond", "Ressource", 14.81, 2},
-                    {"Neo A4", "Relique", 18.52}, {"Tellure", "Ressource", 4.94}
+                    {"Injecteur de Détonite", "Ressource", 22.22, 2},
+                    {
+                        "Obligations de dettes d'avance de fonds", "Ressource",
+                        14.81, 2
+                    }, {"Neo A4", "Relique", 18.52},
+                    {"Tellure", "Ressource", 4.94}
                 },
                 ["C"] = {
                     {"Kuva", "Ressource", 19.75, 200},
                     {"Endo", "Endo", 19.75, 300},
-                    {"Mutagen Mass", "Ressource", 22.22, 2},
-                    {"Advances Debt-Bond", "Ressource", 14.81, 2},
-                    {"Neo A4", "Relique", 18.52}, {"Tellure", "Ressource", 4.94}
+                    {"Masse Mutagène", "Ressource", 22.22, 2},
+                    {
+                        "Obligations de dettes d'avance de fonds", "Ressource",
+                        14.81, 2
+                    }, {"Neo A4", "Relique", 18.52},
+                    {"Tellure", "Ressource", 4.94}
                 }
             }
         }, {
@@ -4402,27 +4441,35 @@ local DropData = {
             ShortName = "30-50",
             Rewards = {
                 ["A"] = {
-                    {"Vazarin Lens", "Ressource", 17.58},
+                    {"Lentille Vazarin", "Ressource", 17.58},
                     {"Endo", "Endo", 17.58, 300},
                     {"Fieldron", "Ressource", 19.78, 2},
-                    {"Advances Debt-Bond", "Ressource", 13.19, 2},
-                    {"Neo A4", "Relique", 16.48}, {"Tellure", "Ressource", 4.4},
-                    {"Fibre Synth", "Mod", 10.99}
+                    {
+                        "Obligations de dettes d'avance de fonds", "Ressource",
+                        13.19, 2
+                    }, {"Neo A4", "Relique", 16.48},
+                    {"Tellure", "Ressource", 4.4}, {"Fibre Synth", "Mod", 10.99}
                 },
                 ["B"] = {
-                    {"Zenurik Lens", "Ressource", 17.58},
+                    {"Lentille Zenurik", "Ressource", 17.58},
                     {"Endo", "Endo", 17.58, 300},
-                    {"Detonite Injector", "Ressource", 19.78, 2},
-                    {"Advances Debt-Bond", "Ressource", 13.19, 2},
-                    {"Neo A4", "Relique", 16.48}, {"Tellure", "Ressource", 4.4},
+                    {"Injecteur de Détonite", "Ressource", 19.78, 2},
+                    {
+                        "Obligations de dettes d'avance de fonds", "Ressource",
+                        13.19, 2
+                    }, {"Neo A4", "Relique", 16.48},
+                    {"Tellure", "Ressource", 4.4},
                     {"Surcharge Mecha", "Mod", 10.99}
                 },
                 ["C"] = {
                     {"Kuva", "Ressource", 17.58, 200},
                     {"Endo", "Endo", 17.58, 300},
-                    {"Mutagen Mass", "Ressource", 19.78, 2},
-                    {"Advances Debt-Bond", "Ressource", 13.19, 2},
-                    {"Neo A4", "Relique", 16.48}, {"Tellure", "Ressource", 4.4},
+                    {"Masse Mutagène", "Ressource", 19.78, 2},
+                    {
+                        "Obligations de dettes d'avance de fonds", "Ressource",
+                        13.19, 2
+                    }, {"Neo A4", "Relique", 16.48},
+                    {"Tellure", "Ressource", 4.4},
                     {"Gravité Tek", "Mod", 10.99}
                 }
             }
@@ -4460,18 +4507,18 @@ local DropData = {
             Rewards = {
                 ["A"] = {
                     {"Endo", "Endo", 50, 400},
-                    {"Familial Debt-Bond", "Ressource", 25, 2},
+                    {"Obligations de dettes Familiales", "Ressource", 25, 2},
                     {"Cache de Crédits", "Credits", 25, 10000}
                 },
                 ["B"] = {
                     {"Endo", "Endo", 50, 400},
-                    {"Familial Debt-Bond", "Ressource", 25, 2},
+                    {"Obligations de dettes Familiales", "Ressource", 25, 2},
                     {"Cache de Crédits", "Credits", 25, 10000}
                 },
                 ["C"] = {
                     {"Endo", "Endo", 50, 400}, {"Neurodes", "Ressource", 12.5},
                     {"Cellule Orokin", "Ressource", 12.5},
-                    {"Familial Debt-Bond", "Ressource", 25, 2}
+                    {"Obligations de dettes Familiales", "Ressource", 25, 2}
                 }
             }
         }, {
@@ -4484,13 +4531,13 @@ local DropData = {
             Rewards = {
                 ["A"] = {
                     {"Endo", "Endo", 33.33, 400},
-                    {"Familial Debt-Bond", "Ressource", 16.67, 2},
+                    {"Obligations de dettes Familiales", "Ressource", 16.67, 2},
                     {"Cache de Crédits", "Credits", 16.67, 10000},
                     {"Axi A7", "Relique", 25}, {"Kuva", "Ressource", 8.33, 500}
                 },
                 ["B"] = {
                     {"Endo", "Endo", 33.33, 400},
-                    {"Familial Debt-Bond", "Ressource", 16.67, 2},
+                    {"Obligations de dettes Familiales", "Ressource", 16.67, 2},
                     {"Cache de Crédits", "Credits", 16.67, 10000},
                     {"Axi A7", "Relique", 25}, {"Kuva", "Ressource", 8.33, 500}
                 },
@@ -4498,7 +4545,7 @@ local DropData = {
                     {"Endo", "Endo", 33.33, 400},
                     {"Neurodes", "Ressource", 8.33},
                     {"Cellule Orokin", "Ressource", 8.33},
-                    {"Familial Debt-Bond", "Ressource", 16.67, 2},
+                    {"Obligations de dettes Familiales", "Ressource", 16.67, 2},
                     {"Axi A7", "Relique", 25}, {"Kuva", "Ressource", 8.33, 500}
                 }
             }
@@ -4511,7 +4558,7 @@ local DropData = {
             Rewards = {
                 ["A"] = {
                     {"Endo", "Endo", 28.57, 400},
-                    {"Familial Debt-Bond", "Ressource", 14.29, 2},
+                    {"Obligations de dettes Familiales", "Ressource", 14.29, 2},
                     {"Cache de Crédits", "Credits", 14.29, 10000},
                     {"Axi A7", "Relique", 21.43},
                     {"Kuva", "Ressource", 7.14, 500},
@@ -4519,7 +4566,7 @@ local DropData = {
                 },
                 ["B"] = {
                     {"Endo", "Endo", 28.57, 400},
-                    {"Familial Debt-Bond", "Ressource", 14.29, 2},
+                    {"Obligations de dettes Familiales", "Ressource", 14.29, 2},
                     {"Cache de Crédits", "Credits", 14.29, 10000},
                     {"Axi A7", "Relique", 21.43},
                     {"Kuva", "Ressource", 7.14, 500},
@@ -4529,7 +4576,7 @@ local DropData = {
                     {"Endo", "Endo", 28.57, 400},
                     {"Neurodes", "Ressource", 7.14},
                     {"Cellule Orokin", "Ressource", 7.14},
-                    {"Familial Debt-Bond", "Ressource", 14.29, 2},
+                    {"Obligations de dettes Familiales", "Ressource", 14.29, 2},
                     {"Axi A7", "Relique", 21.43},
                     {"Kuva", "Ressource", 7.14, 500},
                     {"Garantie Tek", "Mod", 14.29}
@@ -4769,7 +4816,7 @@ local DropData = {
                 },
                 ["C"] = {
                     {"Endo", "Endo", 15.38, 600},
-                    {"Naramon Lens", "Ressource", 8.97},
+                    {"Lentille Naramon", "Ressource", 8.97},
                     {"Lentille Unairu", "Ressource", 8.97},
                     {"Décompte des Morts", "Mod", 6.41},
                     {"Scintillateur", "Ressource", 8.97, 1},
@@ -10058,20 +10105,1503 @@ local DropData = {
                 {"Endo", 25.29, 15}, {"Endo", 25.11, 50}, {"Chercheur", 1.01},
                 {"Endo", 1.01, 80}
             }
+        }, {
+            Name = "Osprey Sapeur Vapos",
+            ModChance = 3,
+            Mods = {
+                {"Mutation de Chargeur", 25.29},
+                {"Dispersion des foules", 25.29}, {"Endo", 25.29, 15},
+                {"Allonge", 11.06}, {"Peau de Diamant", 11.06},
+                {"Chambre Divisée", 0.67}, {"Serre Étincelante", 0.67},
+                {"Endo", 0.67, 80}
+            }
+        }
+    },
+    ["Items"] = {
+        --------------------------------------- WARFRAMES ---------------------------------------
+        ["ASH"] = WFDefault,
+
+        ["ATLAS"] = WFDefault,
+
+        ["EQUINOX"] = {
+            {
+                {Part = "Schéma Aspect Diurne", Chance = 0.1128},
+                {Part = "Schéma Châssis Diurne", Chance = 0.1291},
+                {Part = "Schéma Neuroptiques Diurne", Chance = 0.1291},
+                {Part = "Schéma Systèmes Diurne", Chance = 0.1291},
+                {Part = "Schéma Aspect Nocturne", Chance = 0.1128},
+                {Part = "Schéma Châssis Nocturne", Chance = 0.1291},
+                {Part = "Schéma Neuroptiques Nocturne", Chance = 0.1291},
+                {Part = "Schéma Systèmes Nocturne", Chance = 0.1291}
+            }
         },
-        { Name = "Osprey Sapeur Vapos",
-          ModChance = 3,
-          Mods = {
-            {"Mutation de Chargeur",25.29},
-            {"Dispersion des foules",25.29},
-            {"Endo",25.29,15},
-            {"Allonge",11.06},
-            {"Peau de Diamant",11.06},
-            {"Chambre Divisée",0.67},
-            {"Serre Étincelante",0.67},
-            {"Endo",0.67,80},
-          },
+
+        ["EMBER"] = WFDefault,
+
+        ["EXCALIBUR"] = WFDefault,
+
+        ["FROST"] = WFDefault,
+
+        ["GARAA"] = {
+            {
+                {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0752,
+                    Desc = "Étape 2, niv 5-15",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.3056,
+                    Desc = "Étape 3, niv 5-15",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.0842,
+                    Desc = "Étape 2, niv 20-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.0842,
+                    Desc = "Étape 3, niv 20-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.2051,
+                    Desc = "Étape 4, niv 20-40",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0952,
+                    Desc = "Étape 2, niv 10-30",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.2182,
+                    Desc = "Étape 3, niv 10-30",
+                    Unit = "Mises à Prix"
+                }
+            }
         },
+        ["GARAB"] = {
+            {
+                {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0752,
+                    Desc = "Étape 2, niv 5-15",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.3056,
+                    Desc = "Étape 3, niv 5-15",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.0860,
+                    Desc = "Étape 2, niv 20-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.0860,
+                    Desc = "Étape 3, niv 20-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.1951,
+                    Desc = "Étape 4, niv 20-40",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0952,
+                    Desc = "Étape 2, niv 10-30",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.2182,
+                    Desc = "Étape 3, niv 10-30",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+        ["GARAC"] = {
+            {
+                {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0752,
+                    Desc = "Étape 2, niv 5-15",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.3056,
+                    Desc = "Étape 3, niv 5-15",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.0957,
+                    Desc = "Étape 2, niv 20-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.0957,
+                    Desc = "Étape 3, niv 20-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.2143,
+                    Desc = "Étape 4, niv 20-40",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0952,
+                    Desc = "Étape 2, niv 10-30",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.2182,
+                    Desc = "Étape 3, niv 10-30",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["GARUDAA"] = {
+            {
+                {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0752,
+                    Desc = "Étape 2, niv 5-15",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.3056,
+                    Desc = "Étape 3, niv 5-15",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.1250,
+                    Desc = "Étape 2, niv 20-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.1250,
+                    Desc = "Étape 3, niv 20-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.2500,
+                    Desc = "Étape 4, niv 20-40",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0741,
+                    Desc = "Étape 2, niv 10-30",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.2222,
+                    Desc = "Étape 3, niv 10-30",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+        ["GARUDAB"] = {
+            {
+                {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0752,
+                    Desc = "Étape 2, niv 5-15",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.3056,
+                    Desc = "Étape 3, niv 5-15",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.1250,
+                    Desc = "Étape 2, niv 20-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.1250,
+                    Desc = "Étape 3, niv 20-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.2500,
+                    Desc = "Étape 4, niv 20-40",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0741,
+                    Desc = "Étape 2, niv 10-30",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.2222,
+                    Desc = "Étape 3, niv 10-30",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+        ["GARUDAC"] = {
+            {
+                {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0752,
+                    Desc = "Étape 2, niv 5-15",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.3056,
+                    Desc = "Étape 3, niv 5-15",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.1250,
+                    Desc = "Étape 2, niv 20-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.1250,
+                    Desc = "Étape 3, niv 20-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.2500,
+                    Desc = "Étape 4, niv 20-40",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0741,
+                    Desc = "Étape 2, niv 10-30",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.2222,
+                    Desc = "Étape 3, niv 10-30",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["GAUSS"] = {
+            {
+                {Part = "Schéma Châssis", Chance = 0.0784},
+                {Part = "Schéma Neuroptiques", Chance = 0.0784},
+                {Part = "Schéma Systèmes", Chance = 0.0784}
+            }
+        },
+
+        ["HARROW"] = {
+            {{Part = "Schéma Châssis", Chance = 0.0300, Unit = "tués"}},
+            {
+                {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.1128,
+                    Unit = "Rotation C"
+                }
+            }, {
+                {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0201,
+                    Desc = "Tier I | Rot. B",
+                    Unit = "Rotation C"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0752,
+                    Desc = "Tier I | Rot. C",
+                    Unit = "Rotation C"
+                }
+            }, {
+                {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0201,
+                    Desc = "Tier II & III | Rot. B",
+                    Unit = "Rotation C"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.1128,
+                    Desc = "Tier II & III | Rot. C",
+                    Unit = "Rotation C"
+                }
+            }
+        },
+
+        ["HILDRYN"] = WFDefault,
+
+        ["HYDROID"] = WFDefault,
+
+        ["IVARA"] = {
+            {
+                {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0564,
+                    Desc = "Tier Moyen",
+                    Unit = "Rotation C"
+                }
+            }, {
+                {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0737,
+                    Desc = "Pavlov, [[Lua]]",
+                    Unit = "Rotation C"
+                }
+            }, {
+                {
+                    Part = "Schéma",
+                    Chance = 0.0752,
+                    Desc = "Tier Difficile",
+                    Unit = "Rotation C"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.0752,
+                    Desc = "Tier Difficile",
+                    Unit = "Rotation C"
+                }
+            }, {
+                {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0909,
+                    Desc = "Tier Facile",
+                    Unit = "Rotation C"
+                }
+            }
+        },
+
+        ["KHORA"] = {
+            {{Part = "Schéma Châssis", Chance = 0.0833, Unit = "Rotation A"}},
+            {
+                {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.0909,
+                    Unit = "Rotation B"
+                }
+            }, {
+                {Part = "Schéma", Chance = 0.1128, Unit = "Rotation C"},
+                {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.1128,
+                    Unit = "Rotation C"
+                }
+            }
+        },
+
+        ["LAVOS"] = {
+            {
+                {
+                    Part = "Schéma",
+                    Chance = 0.02,
+                    Desc = "Normal",
+                    Unit = "Rotation C"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.02,
+                    Desc = "Normal",
+                    Unit = "Rotation C"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.02,
+                    Desc = "Normal",
+                    Unit = "Rotation C"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.02,
+                    Desc = "Normal",
+                    Unit = "Rotation C"
+                }
+            }, {
+                {
+                    Part = "Schéma",
+                    Chance = 0.03,
+                    Desc = "Avancé",
+                    Unit = "Rotation C"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.03,
+                    Desc = "Avancé",
+                    Unit = "Rotation C"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.03,
+                    Desc = "Avancé",
+                    Unit = "Rotation C"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.03,
+                    Desc = "Avancé",
+                    Unit = "Rotation C"
+                }
+            }, {
+                {
+                    Part = "Schéma",
+                    Chance = 0.04,
+                    Desc = "Endurance",
+                    Unit = "Rotation A"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.04,
+                    Desc = "Endurance",
+                    Unit = "Rotation A"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.04,
+                    Desc = "Endurance",
+                    Unit = "Rotation A"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.04,
+                    Desc = "Endurance",
+                    Unit = "Rotation A"
+                }
+            }
+        },
+
+        ["LOKI"] = WFDefault,
+
+        ["MAG"] = WFDefault,
+
+        ["MESA"] = WFDefault,
+
+        ["NEKROS"] = {
+            {
+                {Part = "Schéma Châssis", Chance = (1 / 3)},
+                {Part = "Schéma Neuroptiques", Chance = (1 / 3)},
+                {Part = "Schéma Systèmes", Chance = (1 / 3)}
+            }
+        },
+
+        ["NIDUS"] = {
+            {
+                {Part = "Schéma Châssis", Chance = 0.1429},
+                {Part = "Schéma Neuroptiques", Chance = 0.1429},
+                {Part = "Schéma Systèmes", Chance = 0.1429}
+            }
+        },
+
+        ["NOVA"] = WFDefault,
+
+        ["Nyx"] = WFDefault,
+
+        ["OBERON"] = {
+            {
+                {Part = "Schéma Châssis", Chance = 0.003872, Unit = "tués"},
+                {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.003872,
+                    Unit = "tués"
+                },
+                {Part = "Schéma Systèmes", Chance = 0.002256, Unit = "tués"}
+            }
+        },
+
+        ["OCTAVIA"] = {
+            {{Part = "Schéma Châssis", Chance = 1}},
+            {
+                {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.2256,
+                    Unit = "Rotation C"
+                }
+            },
+            {
+                {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.2256,
+                    Unit = "Rotation A Caches"
+                }
+            }
+        },
+
+        ["PROTEA"] = {
+            {
+                {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.1111,
+                    Unit = "Rotation C"
+                }
+            }, {
+                {
+                    Part = "Schéma Châssis",
+                    Chance = 0.1111,
+                    Desc = "Étendu",
+                    Unit = "Rotation C"
+                }
+            }, {
+                {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.1111,
+                    Desc = "Cauchemardesque",
+                    Unit = "Rotation C"
+                }
+            }
+        },
+
+        ["REVENANTA"] = {
+            {
+                {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0851,
+                    Desc = "Étape 2, niv 30-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0851,
+                    Desc = "Étape 3, niv 30-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0833,
+                    Desc = "Étape 4, niv 30-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.1905,
+                    Desc = "Étape 5, niv 30-50",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.0676,
+                    Desc = "Étape 4, niv 40-60",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.1020,
+                    Desc = "Étape 5, niv 40-60",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0842,
+                    Desc = "Étape 2, niv 20-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0842,
+                    Desc = "Étape 3, niv 20-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.2051,
+                    Desc = "Étape 4, niv 20-40",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+        ["REVENANTB"] = {
+            {
+                {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0851,
+                    Desc = "Étape 2, niv 30-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0851,
+                    Desc = "Étape 3, niv 30-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0833,
+                    Desc = "Étape 4, niv 30-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.1905,
+                    Desc = "Étape 5, niv 30-50",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.0676,
+                    Desc = "Étape 4, niv 40-60",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.1020,
+                    Desc = "Étape 5, niv 40-60",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0968,
+                    Desc = "Étape 2, niv 20-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0968,
+                    Desc = "Étape 3, niv 20-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.2195,
+                    Desc = "Étape 4, niv 20-40",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+        ["REVENANTC"] = {
+            {
+                {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0833,
+                    Desc = "Étape 2, niv 30-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0833,
+                    Desc = "Étape 3, niv 30-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0816,
+                    Desc = "Étape 4, niv 30-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.2000,
+                    Desc = "Étape 5, niv 30-50",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.0676,
+                    Desc = "Étape 4, niv 40-60",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.1020,
+                    Desc = "Étape 5, niv 40-60",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0851,
+                    Desc = "Étape 2, niv 20-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0851,
+                    Desc = "Étape 3, niv 20-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.1905,
+                    Desc = "Étape 4, niv 20-40",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["RHINO"] = WFDefault,
+
+        ["SARYN"] = WFDefault,
+
+        ["TRINITY"] = WFDefault,
+
+        ["VALKYR"] = WFDefault,
+
+        ["WISP"] = {
+            {
+                {Part = "Schéma", Chance = 0.2256},
+                {Part = "Schéma Châssis", Chance = 0.2581},
+                {Part = "Schéma Neuroptiques", Chance = 0.2581},
+                {Part = "Schéma Systèmes", Chance = 0.2581}
+            }
+        },
+
+        ["XAKUA"] = {
+            {
+                {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0857,
+                    Desc = "Étape 2 & 3, niv 40-60",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.0667,
+                    Desc = "Étape 4, niv 40-60",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Châssis",
+                    Chance = 0.1304,
+                    Desc = "Étape 5, niv 40-60",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.0750,
+                    Desc = "Étape 2, niv 15-25",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.1000,
+                    Desc = "Étape 3, niv 15-25",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0750,
+                    Desc = "Étape 2 & 3, niv 30-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0600,
+                    Desc = "Étape 4, niv 30-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.1000,
+                    Desc = "Étape 5, niv 30-40",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+        ["XAKUB"] = {
+            {
+                {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.0750,
+                    Desc = "Étape 2, niv 15-25",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.1000,
+                    Desc = "Étape 3, niv 15-25",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0750,
+                    Desc = "Étape 2 & 3, niv 30-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.0600,
+                    Desc = "Étape 4, niv 30-40",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Systèmes",
+                    Chance = 0.1000,
+                    Desc = "Étape 5, niv 30-40",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+        ["XAKUC"] = {
+            {
+                {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.0750,
+                    Desc = "Étape 2, niv 15-25",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma Neuroptiques",
+                    Chance = 0.1000,
+                    Desc = "Étape 3, niv 15-25",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ---------------------------------------- WEAPONS ----------------------------------------
+
+        ["ACCELTRA"] = {{{Part = "Schéma", Chance = 0.0125, Unit = "tués"}}},
+
+        ["AKARIUS"] = {{{Part = "Schéma", Chance = 0.0125, Unit = "tués"}}},
+
+        ["ARUM SPINOSA"] = {
+            {
+                {
+                    Part = "Garde",
+                    Chance = 0.1154,
+                    Desc = "Étape 2, Étape 3, Niv. 40-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Garde",
+                    Chance = 0.0882,
+                    Desc = "Étape 4, Niv. 40-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Garde",
+                    Chance = 0.1364,
+                    Desc = "Étape 5, Niv. 40-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Rivet",
+                    Chance = 0.0795,
+                    Desc = "Étape 4, Niv. 40-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Rivet",
+                    Chance = 0.1227,
+                    Desc = "Étape 5, Niv. 40-50",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["BOAR"] = {{{Part = "Schéma", Chance = 0.005, Unit = "tués"}}},
+
+        ["BRATON VANDAL"] = {
+            {
+                {Part = "Schéma", Chance = 0.0201, Unit = "Rotation C"},
+                {Part = "Crosse", Chance = 0.0201, Unit = "Rotation C"}
+            }, {
+                {Part = "Canon", Chance = 0.0442, Unit = "Rotation B"},
+                {Part = "Culasse", Chance = 0.0442, Unit = "Rotation B"}
+            }
+        },
+
+        ["BRAKK"] = {
+            {
+                {Part = "Schéma", Chance = 0.125, Unit = "tués"},
+                {Part = "Canon", Chance = 0.25, Unit = "tués"},
+                {Part = "Culasse", Chance = 0.25, Unit = "tués"}
+            }
+        },
+
+        ["WAR BRISEE"] = {
+            {{Part = "Schéma", Chance = 0.02765, Unit = "tués"}}, {
+                {Part = "Poignée", Chance = 0.005, Unit = "tués"},
+                {Part = "Lame", Chance = 0.005, Unit = "tués"}
+            }
+        },
+
+        ["CRONUS"] = {{{Part = "Schéma", Chance = 0.05, Unit = "tués"}}},
+
+        ["DESPAIR"] = {{{Part = "Schéma", Chance = 0.0553, Unit = "tués"}}},
+
+        ["DETRON"] = {
+            {
+                {Part = "Schéma", Chance = 0.1765, Unit = "tués"},
+                {Part = "Canon", Chance = 0.3235, Unit = "tués"},
+                {Part = "Culasse", Chance = 0.3235, Unit = "tués"}
+            }
+        },
+
+        ["DREAD"] = {{{Part = "Schéma", Chance = 0.3794, Unit = "tués"}}},
+
+        ["FURAX WRAITH"] = {
+            {
+                {
+                    Part = "Gantelet Gauche",
+                    Chance = 0.0541,
+                    Desc = "Étape 4, niv 40-60",
+                    Unit = "Rotation A Mises à Prix"
+                }, {
+                    Part = "Gantelet Gauche",
+                    Chance = 0.0816,
+                    Desc = "Étape 5, niv 40-60",
+                    Unit = "Rotation A Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Gantelet Droit",
+                    Chance = 0.0541,
+                    Desc = "Étape 4, niv 40-60",
+                    Unit = "Rotation B Mises à Prix"
+                }, {
+                    Part = "Gantelet Droit",
+                    Chance = 0.0816,
+                    Desc = "Étape 5, niv 40-60",
+                    Unit = "Rotation B Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Schéma",
+                    Chance = 0.0541,
+                    Desc = "Étape 4, niv 40-60",
+                    Unit = "Rotation C Mises à Prix"
+                }, {
+                    Part = "Schéma",
+                    Chance = 0.0816,
+                    Desc = "Étape 5, niv 40-60",
+                    Unit = "Rotation C Mises à Prix"
+                }
+            }
+        },
+
+        ["GORGON"] = {{{Part = "Schéma", Chance = 0.01, Unit = "tués"}}},
+
+        ["GORGON WRAITH"] = {
+            {
+                {Part = "Schéma", Chance = 0.1897, Unit = "tués"},
+                {Part = "Canon", Chance = 0.1897, Unit = "tués"},
+                {Part = "Culasse", Chance = 0.1897, Unit = "tués"},
+                {Part = "Crosse", Chance = 0.1897, Unit = "tués"}
+            }
+        },
+
+        ["HATE"] = {{{Part = "Schéma", Chance = 0.0553, Unit = "tués"}}},
+
+        ["IMPERATOR VANDAL"] = {
+            {
+                {Part = "Schéma", Chance = 0.1000, Unit = "tués"},
+                {Part = "Canon", Chance = 0.1000, Unit = "tués"},
+                {Part = "Culasse", Chance = 0.1000, Unit = "tués"}
+            }
+        },
+
+        ["KORRUDO"] = {
+            {
+                {
+                    Part = "Schéma",
+                    Chance = 0.0250,
+                    Desc = "Bull",
+                    Unit = "tués"
+                },
+                {
+                    Part = "Schéma",
+                    Chance = 0.0500,
+                    Desc = "Doma",
+                    Unit = "tués"
+                }
+            }
+        },
+
+        ["LATO VANDAL"] = {
+            {{Part = "Culasse", Chance = 0.0201, Unit = "A Rotation"}},
+            {{Part = "Schéma", Chance = 0.0201, Unit = "B Rotation"}},
+            {{Part = "Canon", Chance = 0.0201, Unit = "C Rotation"}}
+        },
+
+        ["MITER"] = {
+            {
+                {Part = "Schéma", Chance = 0.1667, Unit = "tués"},
+                {Part = "Barillet", Chance = 0.1667, Unit = "tués"},
+                {Part = "Lame", Chance = 0.1667, Unit = "tués"},
+                {Part = "Poignée", Chance = 0.1667, Unit = "tués"},
+                {Part = "Châssis", Chance = 0.1667, Unit = "tués"}
+            }
+        },
+
+        ["PENNANT"] = {{{Part = "Schéma", Chance = 0.0500, Unit = "tués"}}},
+
+        ["QUARTAKK"] = {
+            {{Part = "Schéma", Chance = 0.5000, Unit = "tués"}}, {
+                {
+                    Part = "Schéma",
+                    Chance = 0.0469,
+                    Desc = "Étape 2, niv 40-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma",
+                    Chance = 0.0469,
+                    Desc = "Étape 3, niv 40-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma",
+                    Chance = 0.0412,
+                    Desc = "Étape 4, niv 40-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma",
+                    Chance = 0.0595,
+                    Desc = "Étape 5, niv 40-50",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["QUASSUS"] = {
+            {
+                {
+                    Part = "Schéma",
+                    Chance = 0.2222,
+                    Desc = "Étape 4, niv 40-60",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma",
+                    Chance = 0.4348,
+                    Desc = "Étape 5, niv 40-60",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["QUELLOR"] = {{{Part = "Schéma", Chance = 0.0500, Unit = "tués"}}},
+
+        ["SEER"] = {
+            {
+                {Part = "Schéma", Chance = 0.3872, Unit = "tués"},
+                {Part = "Canon", Chance = 0.3872, Unit = "tués"},
+                {Part = "Culasse", Chance = 0.2256, Unit = "tués"}
+            }
+        },
+
+        ["SHEDU"] = {
+            {
+                {Part = "Canon", Chance = 0.0100, Unit = "tués"},
+                {Part = "Châssis", Chance = 0.0100, Unit = "tués"},
+                {Part = "Poignée", Chance = 0.0100, Unit = "tués"},
+                {Part = "Culasse", Chance = 0.0100, Unit = "tués"}
+            }
+        },
+
+        ["SPOROTHRIX"] = {
+            {
+                {
+                    Part = "Canon",
+                    Chance = 0.0833,
+                    Desc = "Étape 2, Étape 3, Niv. 50-60",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Canon",
+                    Chance = 0.0643,
+                    Desc = "Étape 4, Niv. 50-60",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Canon",
+                    Chance = 0.09,
+                    Desc = "Étape 5, Niv. 50-60",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Culasse",
+                    Chance = 0.0833,
+                    Desc = "Étape 2, Étape 3, Niv. 50-60",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Culasse",
+                    Chance = 0.0643,
+                    Desc = "Étape 4, Niv. 50-60",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Culasse",
+                    Chance = 0.09,
+                    Desc = "Étape 5, Niv. 50-60",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Crosse",
+                    Chance = 0.0714,
+                    Desc = "Étape 4, Niv. 50-60",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Crosse",
+                    Chance = 0.1,
+                    Desc = "Étape 5, Niv. 50-60",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["STAHLTA"] = {
+            {
+                {
+                    Part = "Schéma",
+                    Chance = 0.1500,
+                    Desc = "Jackal",
+                    Unit = "tués"
+                }
+            }, {{Part = "Culasse", Chance = 0.2222, Unit = "Rotation C"}},
+            {
+                {
+                    Part = "Crosse",
+                    Chance = 0.2963,
+                    Desc = "Étendu",
+                    Unit = "Rotation C"
+                }
+            }, {
+                {
+                    Part = "Canon",
+                    Chance = 0.2963,
+                    Desc = "Cauchemardesque",
+                    Unit = "Rotation C"
+                }
+            }
+        },
+
+        ["STROPHA"] = {
+            {
+                {
+                    Part = "Schéma",
+                    Chance = 0.1500,
+                    Desc = "Jackal",
+                    Unit = "tués"
+                }
+            }, {
+                {Part = "Canon", Chance = 0.2222, Unit = "Rotation C"},
+                {Part = "Lame", Chance = 0.2222, Unit = "Rotation C"}
+            },
+            {
+                {
+                    Part = "Culasse",
+                    Chance = 0.2963,
+                    Desc = "Étendu",
+                    Unit = "Rotation C"
+                }
+            }, {
+                {
+                    Part = "Crosse",
+                    Chance = 0.2963,
+                    Desc = "Cauchemardesque",
+                    Unit = "Rotation C"
+                }
+            }
+        },
+
+        ["STUBBA"] = {
+            {{Part = "Schéma", Chance = 0.5000, Unit = "tués"}}, {
+                {
+                    Part = "Schéma",
+                    Chance = 0.0469,
+                    Desc = "Étape 2, niv 15-25",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma",
+                    Chance = 0.0469,
+                    Desc = "Étape 3, niv 15-25",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma",
+                    Chance = 0.0412,
+                    Desc = "Étape 4, niv 15-25",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma",
+                    Chance = 0.0595,
+                    Desc = "Étape 5, niv 15-25",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["GREMLINS JUMEAUX"] = {
+            {{Part = "Schéma", Chance = 0.1667, Unit = "tués"}}
+        },
+
+        ["KOHMAK JUMEAUX"] = {
+            {{Part = "Schéma", Chance = 0.2500, Unit = "tués"}}
+        },
+
+        ["VELOX"] = {
+            {{Part = "Canon", Chance = 0.2222, Unit = "Rotations C"}},
+            {
+                {
+                    Part = "Culasse",
+                    Chance = 0.2963,
+                    Desc = "Étendu",
+                    Unit = "Rotations C"
+                }
+            }
+        },
+
+        ["MARTEAU DU LOUP"] = {
+            {
+                {Part = "Schéma", Chance = 0.0395, Unit = "tués"},
+                {Part = "Poignée", Chance = 0.1355, Unit = "tués"},
+                {Part = "Tête", Chance = 0.1355, Unit = "tués"},
+                {Part = "Moteur", Chance = 0.0395, Unit = "tués"}
+            }
+        },
+
+        ---------------------------------------- ARCANES ----------------------------------------
+
+        ["ARCANE ACCELERATION"] = {
+            {{Part = "Arcane", Chance = 0.1020, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.0925, Unit = "captures"}}
+        },
+
+        ["ARCANE AEGIS"] = {
+            {{Part = "Arcane", Chance = 0.0592, Unit = "captures"}}
+        },
+
+        ["ARCANE AGILITE"] = {
+            {{Part = "Arcane", Chance = 0.1020, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.0925, Unit = "captures"}}
+        },
+
+        ["ARCANE ARACHNE"] = {
+            {{Part = "Arcane", Chance = 0.1376, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.1274, Unit = "captures"}}
+        },
+
+        ["ARCANE AVENGER"] = {
+            {{Part = "Arcane", Chance = 0.1170, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.1124, Unit = "captures"}}
+        },
+
+        ["ARCANE AWAKENING"] = {
+            {{Part = "Arcane", Chance = 0.1825, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.1463, Unit = "captures"}}
+        },
+
+        ["ARCANE BARRIERE"] = {
+            {{Part = "Arcane", Chance = 0.0500, Unit = "captures"}}
+        },
+
+        ["ARCANE CHARGEUR DE LAME"] = {
+            {{Part = "Arcane", Chance = 0.0500, Unit = "Rotation B"}},
+            {{Part = "Arcane", Chance = 0.0500, Unit = "Rotation C"}}
+        },
+
+        ["ARCANE BODYGUARD"] = {
+            {{Part = "Arcane", Chance = 0.0500, Unit = "Rotation A"}},
+            {{Part = "Arcane", Chance = 0.0500, Unit = "Rotation B"}}
+        },
+
+        ["ARCANE CONSEQUENCE"] = {
+            {{Part = "Arcane", Chance = 0.1495, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.1205, Unit = "captures"}}
+        },
+
+        ["ARCANE DEFLECTION"] = {
+            {{Part = "Arcane", Chance = 0.0602, Unit = "captures"}}
+        },
+
+        ["ARCANE ENERGIZE"] = {
+            {{Part = "Arcane", Chance = 0.0500, Unit = "captures"}}
+        },
+
+        ["ARCANE ERUPTION"] = {
+            {{Part = "Arcane", Chance = 0.1020, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.0925, Unit = "captures"}}
+        },
+
+        ["ARCANE FURIE"] = {
+            {{Part = "Arcane", Chance = 0.1376, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.1124, Unit = "captures"}}
+        },
+
+        ["ARCANE GRACE"] = {
+            {{Part = "Arcane", Chance = 0.0500, Unit = "captures"}}
+        },
+
+        ["ARCANE GARDIEN"] = {
+            {{Part = "Arcane", Chance = 0.1568, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.1192, Unit = "captures"}}
+        },
+
+        ["ARCANE HEALING"] = {
+            {{Part = "Arcane", Chance = 0.0602, Unit = "captures"}}
+        },
+
+        ["ARCANE GLACE"] = {
+            {{Part = "Arcane", Chance = 0.1495, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.1205, Unit = "captures"}}
+        },
+
+        ["ARCANE MOMENTUM"] = {
+            {{Part = "Arcane", Chance = 0.1495, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.1205, Unit = "captures"}}
+        },
+
+        ["ARCANE ZERO"] = {
+            {{Part = "Arcane", Chance = 0.1495, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.1205, Unit = "captures"}}
+        },
+
+        ["ARCANE PHANTASM"] = {
+            {{Part = "Arcane", Chance = 0.1020, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.0952, Unit = "captures"}}
+        },
+
+        ["ARCANE PISTOLIER"] = {
+            {{Part = "Arcane", Chance = 0.0500, Unit = "Rotation A"}},
+            {{Part = "Arcane", Chance = 0.0500, Unit = "Rotation C"}}
+        },
+
+        ["ARCANE PRECISION"] = {
+            {{Part = "Arcane", Chance = 0.0702, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.0592, Unit = "captures"}}
+        },
+
+        ["ARCANE PRIMARY CHARGER"] = {
+            {{Part = "Arcane", Chance = 0.0500, Unit = "Rotation B"}},
+            {{Part = "Arcane", Chance = 0.0500, Unit = "Rotation C"}}
+        },
+
+        ["ARCANE PULSE"] = {
+            {{Part = "Arcane", Chance = 0.0529, Unit = "captures"}}
+        },
+
+        ["ARCANE RAGE"] = {
+            {{Part = "Arcane", Chance = 0.1376, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.1274, Unit = "captures"}}
+        },
+
+        ["ARCANE RESISTANCE"] = {
+            {{Part = "Arcane", Chance = 0.0678, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.0602, Unit = "captures"}}
+        },
+
+        ["ARCANE STRIKE"] = {
+            {{Part = "Arcane", Chance = 0.1825, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.1463, Unit = "captures"}}
+        },
+
+        ["ARCANE TANKER"] = {
+            {{Part = "Arcane", Chance = 0.0500, Unit = "Rotation A"}},
+            {{Part = "Arcane", Chance = 0.0500, Unit = "Rotation C"}}
+        },
+
+        ["ARCANE TEMPO"] = {
+            {{Part = "Arcane", Chance = 0.1850, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.1568, Unit = "captures"}}
+        },
+
+        ["ARCANE TRICKERY"] = {
+            {{Part = "Arcane", Chance = 0.2478, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.2024, Unit = "captures"}}
+        },
+
+        ["ARCANE ULTIMATUM"] = {
+            {{Part = "Arcane", Chance = 0.0529, Unit = "captures"}}
+        },
+
+        ["ARCANE VELOCITE"] = {
+            {{Part = "Arcane", Chance = 0.2223, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.1679, Unit = "captures"}}
+        },
+
+        ["ARCANE VICTORE"] = {
+            {{Part = "Arcane", Chance = 0.0602, Unit = "captures"}}
+        },
+
+        ["ARCANE WARMTH"] = {
+            {{Part = "Arcane", Chance = 0.1495, Unit = "tués"}},
+            {{Part = "Arcane", Chance = 0.1205, Unit = "captures"}}
+        },
+
+        ------------------------------------- LANDING CRAFT -------------------------------------
+
+        ["MANTIS"] = {
+            {
+                {
+                    Part = "Schéma du Fuselage",
+                    Chance = 0.3000,
+                    Unit = "conteneurs rares"
+                },
+                {
+                    Part = "Schéma du Moteur",
+                    Chance = 0.3000,
+                    Unit = "conteneurs rares"
+                }
+            },
+            {
+                {
+                    Part = "Schéma des Avioniques",
+                    Chance = 1,
+                    Unit = "conteneurs rares"
+                }
+            }
+        },
+
+        ["SCIMITAR"] = {
+            {
+                {
+                    Part = "Schéma du Fuselage",
+                    Chance = 0.1250,
+                    Unit = "[[Vem Tabook]] tués"
+                }
+            }, {
+                {
+                    Part = "Schéma du Moteur",
+                    Chance = 0.01005,
+                    Unit = "[[Stalker]]s ([[Stalker de l'Ombre|de l'Ombre]]) tués"
+                }
+            },
+            {
+                {
+                    Part = "Schéma des Avioniques",
+                    Chance = 0.1765,
+                    Unit = "[[Zanuka]] tués"
+                }
+            }
+        },
+
+        ["XIPHOS"] = {
+            {
+                {
+                    Part = "Schéma du Fuselage",
+                    Chance = 0.0050,
+                    Desc = "Tier I",
+                    Unit = "Rotation C des Caches"
+                }
+            }, {
+                {
+                    Part = "Schéma du Moteur",
+                    Chance = 0.0050,
+                    Desc = "Tier II",
+                    Unit = "Rotation C des Caches"
+                }
+            }, {
+                {
+                    Part = "Schéma du Moteur",
+                    Chance = 0.0050,
+                    Desc = "Jupiter",
+                    Unit = "Rotation C des Caches"
+                }
+            }, {
+                {
+                    Part = "Schéma du Moteur",
+                    Chance = 0.00129,
+                    Desc = "Lua",
+                    Unit = "Rotation C des Caches"
+                }
+            }, {
+                {
+                    Part = "Schéma des Avioniques",
+                    Chance = 0.0050,
+                    Desc = "Tier III",
+                    Unit = "Rotation C des Caches"
+                }
+            }, {
+                {
+                    Part = "Schéma des Avioniques",
+                    Chance = 0.0050,
+                    Desc = "Void II",
+                    Unit = "Rotation C des Caches"
+                }
+            }, {
+                {
+                    Part = "Schéma des Avioniques",
+                    Chance = 0.0101,
+                    Desc = "Void IV",
+                    Unit = "Rotation C des Caches"
+                }
+            }, {
+                {
+                    Part = "Schéma des Avioniques",
+                    Chance = 0.0050,
+                    Desc = "Kuva Fortress",
+                    Unit = "Rotation C des Caches"
+                }
+            }
+        }
     }
 }
 
