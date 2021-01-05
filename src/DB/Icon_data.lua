@@ -2144,6 +2144,8 @@ local IconData = {
         ["CANON"] = {Icon = "Canon Prime.png", Name = "Canon"},
         ["CROSSE"] = {Icon = "Crosse Prime.png", Name = "Crosse"},
         ["CULASSE"] = {Icon = "Culasse Prime.png", Name = "Culasse"},
+        ["LAME"] = {Icon = "LamePrime.png", Name = "Lame"},
+        ["POIGNEE"] = {Icon = "icon_poigneePrime.png", Name = "Poignée"},
         ["SCHEMA"] = {Icon = "Blueprint2.png", Name = "Schéma"},
         ["SCHEMA CHASSIS"] = {
             Icon = "Châssis Prime.png",
