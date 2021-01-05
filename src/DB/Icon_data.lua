@@ -49,13 +49,17 @@ local IconData = {
             icon = "AnimoNavBeacon.png",
             link = "Balise de Navigation Animo"
         },
+        ["Barrière Arcane"] = {
+            icon = "Arcane_Barrière_160.png",
+            link = "Barrière Arcane"
+        },
         ["Booster d'Affinité"] = {
             icon = "BoosterAffinité.png",
             link = "Booster d'Affinité"
         },
-        ["Barrière Arcane"] = {
-            icon = "Arcane_Barrière_160.png",
-            link = "Barrière Arcane"
+        ["Boîte de Munition Omni"] = {
+            icon = "Ammo Box.png",
+            link = "Boîte de Munition Omni"
         },
         -- C
         ["Canon"] = {icon = "Canon.png"},
@@ -1094,6 +1098,10 @@ local IconData = {
         ["Cellule Orokin"] = {
             icon = "OrokinCell64.png",
             link = "Cellule Orokin"
+        },
+        ["Cellules de Phase"] = {
+            icon = "Cellules de Phase.png",
+            link = "Cellules de Phase"
         },
         ["Oxium"] = {icon = "Oxium64.png", link = "Oxium"},
         ["Plastides"] = {icon = "Plastids64.png", link = "Plastides"},
