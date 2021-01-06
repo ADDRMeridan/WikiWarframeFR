@@ -109,7 +109,7 @@ local function FewMissions(data, Header, properties)
     local tHeader = table.concat {
         '{| class="sortable" style="max-width: ',
         properties('max-width', '700px'),
-        '; margin:auto; width: 100%; text-align: center; color:#ffffff; font-size: 11px;" cellpadding="',
+        '; margin:auto; text-align: center; color:#ffffff; font-size: 11px;" cellpadding="',
         properties('cellpadding', '3'), '" cellspacing="',
         properties('cellspacing', '2'), '" |-'
     }
@@ -199,7 +199,7 @@ function p.getMissions(frame)
         table.insert(data, MissionData.by.Node[missionName][1])
     end
     return FewMissions(data, nil,
-                       {['max-width'] = '400px', ['cellpadding'] = '1'})
+                       {['min-width'] = '400px', ['cellpadding'] = '1'})
 end
 
 -- sorts out missions for general call
@@ -788,7 +788,7 @@ function p.getMissionsOnPlanetX(frame)
 
     local data = MissionData.by.Planet[Planet] -- DropTables.getMissions(function(mission) return (mission.Planet == Planet and mission.IgnoreInList ~= true) end)
     local tHeader =
-        '{| class="sortable" style="width: 100%; text-align: center; color: white; font-size: 11px;" cellpadding="3" cellspacing="2" |-' ..
+        '{| class="sortable" style="text-align: center; color: white; font-size: 11px;" cellpadding="3" cellspacing="2" |-' ..
             '\n! style="width:15%; background-color: rgb(6, 29, 64); font-size:12px; color:#FFFFFF;" | Cible' ..
             '\n! style="width:20%; background-color: rgb(6, 29, 64); font-size:12px; color:#FFFFFF;" | Nom' ..
             '\n! style="width:25%; background-color: rgb(6, 29, 64); font-size:12px; color:#FFFFFF;" | Type' ..
