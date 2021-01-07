@@ -278,6 +278,38 @@ local EnemyData = {
         Weapons = {"Répéteur Plasma"}
     },
     -- E
+    ["Éviscérateur Exo"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 400},
+        Image = "ExoEviscerator.png",
+        Icon = nil,
+        Introduced = "27.0",
+        Link = nil,
+        Name = "Éviscérateur Exo",
+        NameEN = "Exo Eviscerator",
+        Regions = {"Proxima du Voile"},
+        Scans = 5,
+        Weapons = {"Grakatas Jumeaux"}
+    },
+    ["Éviscérateur Kosma"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 400},
+        Image = "KosmaEviscerator.png",
+        Icon = nil,
+        Introduced = "27.0",
+        Link = nil,
+        Name = "Éviscérateur Kosma",
+        NameEN = "Kosma Eviscerator",
+        Regions = {"Proxima de la Terre"},
+        Scans = 5,
+        Weapons = {"Grakatas Jumeaux"}
+    },
     -- F
     -- G
     ["Gardien Grineer"] = {
@@ -723,10 +755,7 @@ local EnemyData = {
         Capacities = nil,
         Faction = "Corpus",
         Family = "Osprey Sapeur",
-        HealthTypes = {
-            ["Bouclier"] = 50,
-            ["Robot"] = 80
-        },
+        HealthTypes = {["Bouclier"] = 50, ["Robot"] = 80},
         Image = "VaposSappingOsprey.png",
         Icon = nil,
         Introduced = "25.0",
@@ -843,6 +872,40 @@ local EnemyData = {
         Regions = {"Toutes"},
         Scans = 3,
         Weapons = {"Dread", "Despair", "Hate"}
+    },
+    ["Suppresseur Exo"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Suppresseur",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 500},
+        Image = "ExoSupressor.png",
+        Icon = nil,
+        Introduced = "27.0",
+        Link = nil,
+        Name = "Suppresseur Exo",
+        NameEN = "Exo Supressor",
+        Regions = {"Proxima du Voile"},
+        Scans = 5,
+        Weapons = {"Lance-glace"}
+    },
+    ["Suppresseur Kosma"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Suppresseur",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 500},
+        Image = "KosmaSupressor.png",
+        Icon = nil,
+        Introduced = "27.0",
+        Link = nil,
+        Name = "Suppresseur Kosma",
+        NameEN = "Kosma Supressor",
+        Regions = {"Proxima de la Terre"},
+        Scans = 5,
+        Weapons = {"Lance-glace"}
     },
     -- T
     -- U
