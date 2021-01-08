@@ -358,9 +358,13 @@ local function buildMissionRewardsTable(missionRewards, frame)
                          '! colspan="2" style="text-align:center;" | Récompenses')
         else
             for rot, loot in Shared.skpairs(missionRewards) do
+                if(Shared.contains({"A", "B", "C"}, rot)) then
                 table.insert(ret,
                              '! colspan="2" style="text-align:center;" | Rotation ' ..
                                  rot)
+                else
+                    table.insert(ret, '! colspan="2" style="text-align:center;" | ' .. rot)
+                end
             end
         end
         -- Lines
@@ -977,8 +981,7 @@ function p.getSingleRelicByLocation(tier, name)
 
     -- Second, build the actual table being sent back
     local result = ''
-    result =
-        "{| cellpadding=\"0\" cellspacing=\"0\" class=\"article-table sortable\" "
+    result = "{| cellpadding=\"0\" cellspacing=\"0\" class=\"article-table sortable\" "
     result = result .. "style=\"width:100%;border:1px solid black;"
     result = result .. "text-align:left;font-size:12px;margin:12px 0 0 0;\""
     result = result .. "\n!Mission"

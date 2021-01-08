@@ -2640,17 +2640,17 @@ local DropData = {
             ShortName = "[[Néant de Granum]]",
             Ignore = true,
             Rewards = {
-                ["A"] = {
+                ["Rang 1"] = {
                     {"Cache de Crédits", "Credits", 50, 2000},
                     {"Vestiges du Néant", "Ressource", 33.33, 5},
                     {"Décoration Couronne Granum", "Item", 16.67}
                 },
-                ["B"] = {
+                ["Rang 2"] = {
                     {"Cache de Crédits", "Credits", 50, 3000},
                     {"Endo", "Endo", 33.33, 200},
                     {"Scène du Pont du Vaisseau Corpus", "Scène", 16.67}
                 },
-                ["C"] = {
+                ["Rang 3"] = {
                     {{"Canon", "Stropha"}, "MorceauArme", 22.22},
                     {{"Lame", "Stropha"}, "MorceauArme", 22.22},
                     {{"Culasse", "Stahlta"}, "MorceauArme", 22.22},
@@ -2666,17 +2666,17 @@ local DropData = {
             ShortName = "[[Néant de Granum Étendu|Néant de Granum]]",
             Ignore = true,
             Rewards = {
-                ["A"] = {
+                ["Rang 1"] = {
                     {"Cache de Crédits", "Credits", 50, 3000},
                     {"Vestiges du Néant", "Ressource", 33.33, 10},
                     {"Décoration Couronne Granum Exemplaire", "Item", 16.67}
                 },
-                ["B"] = {
+                ["Rang 2"] = {
                     {"Cache de Crédits", "Credits", 50, 5000},
                     {"Endo", "Endo", 33.33, 400},
                     {"Scène du Hangar du Vaisseau Corpus", "Scène", 16.67}
                 },
-                ["C"] = {
+                ["Rang 3"] = {
                     {{"Culasse", "Stropha"}, "MorceauArme", 29.63},
                     {{"Crosse", "Stahlta"}, "MorceauArme", 29.63},
                     {{"Culasse", "Velox"}, "MorceauArme", 29.63},
@@ -2691,12 +2691,12 @@ local DropData = {
             ShortName = "[[Néant de Granum Cauchemardesque|Néant de Granum]]",
             Ignore = true,
             Rewards = {
-                ["A"] = {
+                ["Rang 1"] = {
                     {"Cache de Crédits", "Credits", 50, 7500},
                     {"Vestiges du Néant", "Ressource", 33.33, 15},
                     {"Décoration Couronne Granum Zénith", "Item", 16.67}
                 },
-                ["B"] = {
+                ["Rang 2"] = {
                     {"Cache de Crédits", "Credits", 50, 10000},
                     {"Endo", "Endo", 33.33, 600},
                     {
@@ -2704,7 +2704,7 @@ local DropData = {
                         16.67
                     }
                 },
-                ["C"] = {
+                ["Rang 3"] = {
                     {"Épaulières Mortuus", "Item", 29.63},
                     {{"Crosse", "Stropha"}, "MorceauArme", 29.63},
                     {{"Canon", "Stahlta"}, "MorceauArme", 29.63},
@@ -8046,6 +8046,42 @@ local DropData = {
                 {"Manoeuvre de Pistolet", 18.97}, {"Perturbateur", 18.97},
                 {"Supplice Persistant", 18.97}, {"Tresse Scindante", 11.06},
                 {"Endo", 2.01, 80}
+            }
+        }, {
+            Name = "Éviscérateur Exo",
+            ModChance = 5,
+            Mods = {
+                {"Rebord Saignant", 37.94}, {"Placage d'Argon", 37.94},
+                {"Acier Flamboyant", 5.53}, {"Ruée d'Obus", 5.53},
+                {"Canon Plaqué Rubedo", 5.53}, {"Rechargement Rapide", 5.53},
+                {"Transformateur de Morphic", 2.01}
+            }
+        }, {
+            Name = "Suppresseur Exo",
+            ModChance = 5,
+            Mods = {
+                {"Rebord Saignant", 37.94}, {"Placage d'Argon", 37.94},
+                {"Acier Flamboyant", 5.53}, {"Ruée d'Obus", 5.53},
+                {"Canon Plaqué Rubedo", 5.53}, {"Rechargement Rapide", 5.53},
+                {"Transformateur de Morphic", 2.01}
+            }
+        }, {
+            Name = "Éviscérateur Kosma",
+            ModChance = 5,
+            Mods = {
+                {"Rebord Saignant", 37.94}, {"Placage d'Argon", 37.94},
+                {"Acier Flamboyant", 5.53}, {"Ruée d'Obus", 5.53},
+                {"Cartouches à Combustion", 5.53},
+                {"Défenses Supérieures", 5.53}, {"Balles Creuses", 2.01}
+            }
+        }, {
+            Name = "Suppresseur Kosma",
+            ModChance = 5,
+            Mods = {
+                {"Rebord Saignant", 37.94}, {"Placage d'Argon", 37.94},
+                {"Acier Flamboyant", 5.53}, {"Ruée d'Obus", 5.53},
+                {"Cartouches à Combustion", 5.53},
+                {"Défenses Supérieures", 5.53}, {"Balles Creuses", 2.01}
             }
         }, {
             Name = "Lancier Aride",
