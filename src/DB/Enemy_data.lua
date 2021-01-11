@@ -179,6 +179,23 @@ local EnemyData = {
         Scans = 5,
         Weapons = {}
     },
+    ["Bombardier Kuva"] = {
+        Affinity = 500,
+        BaseLevel = 4,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Bombardier",
+        HealthTypes = {["Armure en Alliage"] = 500, ["Chair Clonée"] = 300},
+        Image = "KuvaBombard.png",
+        Icon = nil,
+        Introduced = "19.0",
+        Link = nil,
+        Name = "Bombardier Kuva",
+        NameEN = "Kuva Bombard",
+        Regions = {"Forteresse Kuva"},
+        Scans = 3,
+        Weapons = {"Ogris", "Sheev"}
+    },
     -- C
     ["Comba"] = {
         Affinity = 500,
@@ -619,6 +636,23 @@ local EnemyData = {
         Weapons = {"Gorgon", "Brokk"}
     },
     -- M
+    ["Massacreur Drekar"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Massacreur",
+        HealthTypes = {["Armure en Ferrite"] = 5, ["Chair Clonée"] = 50},
+        Image = "Massacreur Drekar.png",
+        Icon = nil,
+        Introduced = "17.0",
+        Link = nil,
+        Name = "Massacreur Drekar",
+        NameEN = "Drekar Butcher",
+        Regions = {"Uranus"},
+        Scans = 20,
+        Weapons = {"Doubles Hachoir"}
+    },
     ["Massacreur Kosma"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -671,6 +705,23 @@ local EnemyData = {
         },
         Scans = 10,
         Weapons = {"Canon Électrique"}
+    },
+    ["MOA Corrompu"] = {
+        Affinity = 200,
+        BaseLevel = 1,
+        Capacities = {"Déploiement de {{Pet|Drone Corrompu}}"},
+        Faction = "Orokin",
+        Family = "MOA Corrompu",
+        HealthTypes = {["Bouclier"] = 250, ["Robot"] = 250},
+        Image = "OrokinMoaBipedAvatar.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "MOA Corrompu",
+        NameEN = "Corrupted MOA",
+        Regions = {"Le Néant"},
+        Scans = 5,
+        Weapons = {"Rayon à Plasma"}
     },
     ["MOA Mutaliste Essaim"] = {
         Affinity = 150,
@@ -829,6 +880,40 @@ local EnemyData = {
         Weapons = {}
     },
     -- S
+    ["Sauteur Lourdaud"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Sauteur",
+        HealthTypes = {["Chair Infesté"] = 600},
+        Image = "Sauteur Lourdaud.png",
+        Icon = nil,
+        Introduced = "25.7.3.1",
+        Link = nil,
+        Name = "Sauteur Lourdaud",
+        NameEN = "Leaping Thrasher",
+        Regions = {"Deimos"},
+        Scans = 5,
+        Weapons = nil
+    },
+    ["Sauteur Lourdaud Deimos"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Sauteur",
+        HealthTypes = {["Chair Infesté"] = 600},
+        Image = "Sauteur Lourdaud Deimos.png",
+        Icon = nil,
+        Introduced = "29.0",
+        Link = nil,
+        Name = "Sauteur Lourdaud Deimos",
+        NameEN = "Deimos Leaping Thrasher",
+        Regions = {"Deimos"},
+        Scans = 5,
+        Weapons = nil
+    },
     ["Scorpion"] = {
         Affinity = 145.06,
         BaseLevel = 10,

@@ -579,6 +579,8 @@ local function getAugmentTypeArray(augmentType)
         ret = ModData["ArchwingAugments"]
     elseif (augmentType == 'Arme') then
         ret = ModData["WeaponAugments"]
+    elseif (augmentType == 'Compagnon') then
+        ret = ModData["CompagnonAugments"]
     elseif (augmentType == 'Warframe') then
         ret = ModData["WarframeAugments"]
     end
@@ -622,6 +624,11 @@ local function printModUsableOnArchwing(Augment)
     return table.concat(ret, ' &ndash; ')
 end
 
+local function printModUsableOnPet(augment)
+
+    return TT._tooltipText(augment.Compagnon, 'Pet')
+end
+
 local function printModUsableOnWeapon(Augment)
 
     local ret = {}
@@ -656,6 +663,8 @@ function p.printModUsableOn(frame)
         ret = printModUsableOnArchwing(augment)
     elseif (augmentType == 'Arme') then
         ret = printModUsableOnWeapon(augment)
+    elseif (augmentType == 'Compagnon') then
+        ret = printModUsableOnPet(augment)
     elseif (augmentType == 'Warframe') then
         ret = printModUsableOnWarframe(augment)
     else
