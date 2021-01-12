@@ -3670,6 +3670,7 @@ local ModData = {
             NameEN = "Warrior",
             Polarity = "Penjaga",
             Rarity = "Commun",
+            Traits = {"SENTINELLE"},
             Transmutable = false
         },
         ["Guêpe Brûlante"] = {
@@ -6750,7 +6751,8 @@ local ModData = {
             Name = "Reciblage",
             NameEN = "Retarget",
             Polarity = "Penjaga",
-            Rarity = "Commun"
+            Rarity = "Commun",
+            Traits = {"SENTINELLE"}
         },
         ["Ricochet Kinétique"] = {
             AugmentType = 'Arme',
@@ -9826,7 +9828,7 @@ local ModData = {
         {Name = "Récepteur de Ciblage", Compagnon = "Helios"}, -- Oxylus
         {Name = "Botaniste", Compagnon = "Oxylus"},
         {Name = "Détecteur de Matière", Compagnon = "Oxylus"},
-        {Name = "Détecteur Formes de vie Aquatiques", Compagnon = "Oxylus"}, -- Shade
+        {Name = "Détecteur Formes de Vie Aquatiques", Compagnon = "Oxylus"}, -- Shade
         {Name = "Embuscade", Compagnon = "Shade"},
         {Name = "Fantôme", Compagnon = "Shade"},
         {Name = "Vengeance", Compagnon = "Shade"}, -- Taxon
