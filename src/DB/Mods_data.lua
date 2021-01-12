@@ -3664,6 +3664,7 @@ local ModData = {
             Transmutable = false
         },
         ["Guerrier"] = {
+            AugmentType = 'Compagnon',
             Image = "Guerrier.png",
             Name = "Guerrier",
             NameEN = "Warrior",
@@ -6744,6 +6745,7 @@ local ModData = {
             Transmutable = false
         },
         ["Reciblage"] = {
+            AugmentType = 'Compagnon',
             Image = "Reciblage.png",
             Name = "Reciblage",
             NameEN = "Retarget",
