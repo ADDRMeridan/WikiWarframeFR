@@ -579,7 +579,7 @@ local ModData = {
             NameEN = "Fatal Attraction",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON", "DJINN"},
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = true
         },
         ["Aura IEM"] = {
@@ -801,7 +801,7 @@ local ModData = {
             NameEN = "Arc Coil",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"DIRIGA", "SENTINELLE"},
+            Traits = {"SENTINELLE"},
             Transmutable = false
         },
         ["Bobine Réflexe"] = {
@@ -842,7 +842,7 @@ local ModData = {
             NameEN = "Botanist",
             Polarity = "Penjaga",
             Rarity = "Rare",
-            Traits = {"SENTINELLE", "COMPAGNON", "OXYLUS"}
+            Traits = {"SENTINELLE", "COMPAGNON"}
         },
 
         ["Bouclier Déstabilisant"] = {
@@ -947,7 +947,7 @@ local ModData = {
             Rarity = "Commun",
             Traits = {
                 "SENTINELLE", "COMPAGNON", "MUNITIONS", "+%RESERVES",
-                "MUTATION", "CARRIER"
+                "MUTATION"
             },
             Transmutable = false
         },
@@ -1756,7 +1756,7 @@ local ModData = {
             NameEN = "Molecular Conversion",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON", "TAXON"}
+            Traits = {"SENTINELLE", "COMPAGNON"}
         },
         ["Conversion d'Énergie"] = {
             Image = "Mod inconnu.png",
@@ -2080,7 +2080,7 @@ local ModData = {
             NameEN = "Crowd Dispersion",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON", "WYRM"}
+            Traits = {"SENTINELLE", "COMPAGNON"}
         },
         ["Don de Puissance"] = {
             Image = "Don de Puissance.png",
@@ -2328,7 +2328,7 @@ local ModData = {
             NameEN = "Detect Vulnerability",
             Polarity = "Penjaga",
             Rarity = "Rare",
-            Traits = {"SENTINELLE", "COMPAGNON", "HELIOS"},
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Détente Automatique"] = {
@@ -2424,7 +2424,7 @@ local ModData = {
             NameEN = "Ambush",
             Polarity = "Penjaga",
             Rarity = "Rare",
-            Traits = {"SENTINELLE", "COMPAGNON", "SHADE"},
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Encensoir Protecteur"] = {
@@ -2639,7 +2639,7 @@ local ModData = {
             NameEN = "Ghost",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON", "SHADE"}
+            Traits = {"SENTINELLE", "COMPAGNON"}
         },
         ["Fass"] = {
             Image = "Fass.png",
@@ -3687,7 +3687,7 @@ local ModData = {
             NameEN = "Energy Generator",
             Polarity = "Penjaga",
             Rarity = "Rare",
-            Traits = {"DETHCUBE", "SENTINELLE"},
+            Traits = {"SENTINELLE"},
             Transmutable = false
         },
         ["Habile du Canon"] = {
@@ -5252,7 +5252,7 @@ local ModData = {
             NameEN = "Negate",
             Polarity = "Penjaga",
             Rarity = "Rare",
-            Traits = {"SENTINELLE", "COMPAGNON", "WYRM"},
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Obus Corrompu"] = {
@@ -5588,7 +5588,7 @@ local ModData = {
             NameEN = "Looter",
             Polarity = "Penjaga",
             Rarity = "Rare",
-            Traits = {"CARRIER", "SENTINELLE"},
+            Traits = {"SENTINELLE"},
             Transmutable = false
         },
         ["Pilonnage Mecha"] = {
@@ -6145,7 +6145,7 @@ local ModData = {
             NameEN = "Electro Pulse",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"DIRIGA", "SENTINELLE"},
+            Traits = {"SENTINELLE"},
             Transmutable = false
         },
         ["Martèlement"] = {
@@ -6684,7 +6684,7 @@ local ModData = {
             NameEN = "Reawaken",
             Polarity = "Penjaga",
             Rarity = "Rare",
-            Traits = {"SENTINELLE", "COMPAGNON", "DJINN"},
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Renouveau du Phénix"] = {
@@ -7152,7 +7152,7 @@ local ModData = {
             NameEN = "Scan Aquatic Lifeforms",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON", "OXYLUS"},
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Détecteur de Matière"] = {
@@ -7162,7 +7162,7 @@ local ModData = {
             NameEN = "Scan Matter",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON", "OXYLUS"},
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Recherche"] = {
@@ -7904,7 +7904,7 @@ local ModData = {
             NameEN = "Targeting Receptor",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON", "HELIOS"},
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Tas de Gravats"] = {
@@ -8059,7 +8059,7 @@ local ModData = {
             NameEN = "Thumper",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON", "DJINN"},
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Tigre Tourbillonnant"] = {
@@ -8103,7 +8103,7 @@ local ModData = {
             NameEN = "Calculated Shot",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"DIRIGA", "SENTINELLE"},
+            Traits = {"SENTINELLE"},
             Transmutable = false
         },
         ["Tir Chanceux"] = {
@@ -8468,7 +8468,7 @@ local ModData = {
             NameEN = "Vaporize",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"DETHCUBE", "SENTINELLE"},
+            Traits = {"SENTINELLE"},
             Transmutable = false
         },
         ["Vengeance"] = {
@@ -8478,7 +8478,7 @@ local ModData = {
             NameEN = "Revenge",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON", "SHADE"},
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Vengeance Épineuse"] = {
@@ -9808,15 +9808,21 @@ local ModData = {
         }
     },
     ["CompagnonAugments"] = {
-        -- Dethcube
+        -- Carrier
+        {Name = "Caisse à Munitions", Compagnon = "Carrier"},
+        {Name = "Pilleur", Compagnon = "Carrier"}, -- Dethcube
         {Name = "Vaporisation", Compagnon = "Dethcube"}, -- Diriga
         {Name = "Bobine Foudroyante", Compagnon = "Diriga"},
         {Name = "Pulsation Électrique", Compagnon = "Diriga"},
         {Name = "Tir Calculé", Compagnon = "Diriga"}, -- Djinn
         {Name = "Attraction Fatale", Compagnon = "Djinn"}, -- Helios
-        {Name = "Inspecteur", Compagnon = "Helios"}, -- Oxylus
-        {Name = "Détecteur de Matière", Compagnon = "Oxykus"}, -- Shade
-        {Name = "Vengeance", Compagnon = "Shade"}, -- Wyrm
+        {Name = "Détection de Vulnérabilité", Compagnon = "Helios"},
+        {Name = "Inspecteur", Compagnon = "Helios"},
+        {Name = "Récepteur de Ciblage", Compagnon = "Helios"}, -- Oxylus
+        {Name = "Détecteur de Matière", Compagnon = "Oxylus"}, -- Shade
+        {Name = "Fantôme", Compagnon = "Shade"},
+        {Name = "Vengeance", Compagnon = "Shade"}, -- Taxon
+        {Name = "Conversion Moléculaire", Compagnon = "Taxon"}, -- Wyrm
         {Name = "Négation", Compagnon = "Wyrm"},
         {Name = "Dispersion des foules", Compagnon = "Wyrm"}
     },
