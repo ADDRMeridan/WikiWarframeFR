@@ -519,7 +519,7 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Rare",
             Transmutable = false,
-            Traits = {"AURA", "MADURAI"}
+            Traits = {"AURA"}
         },
         ["Astuce du Voleur"] = {
             Image = "Astuce_du_Voleur.png",
@@ -946,8 +946,7 @@ local ModData = {
             Polarity = "Penjaga",
             Rarity = "Commun",
             Traits = {
-                "SENTINELLE", "COMPAGNON", "MUNITIONS", "+%RESERVES",
-                "MUTATION"
+                "SENTINELLE", "COMPAGNON", "MUNITIONS", "+%RESERVES", "MUTATION"
             },
             Transmutable = false
         },
@@ -1276,7 +1275,7 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Inhabituel",
             Transmutable = false,
-            Traits = {"AURA", "MADURAI"}
+            Traits = {"AURA"}
         },
         ["Charge de Chaleur"] = {
             Image = "Charge de Chaleur.png",
@@ -5877,7 +5876,7 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false,
             Introduced = "Le Bosquet d'Argent",
-            Traits = {"AURA", "MADURAI"}
+            Traits = {"AURA"}
         },
         ["Préparation"] = {
             Image = "Préparation.png",
@@ -6769,7 +6768,7 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Inhabituel",
             Transmutable = false,
-            Traits = {"AURA", "MADURAI"}
+            Traits = {"AURA"}
         },
         ["Récupérateur de Fusil"] = {
             Image = "Récupérateur de Fusil.png",
@@ -7369,7 +7368,7 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Inhabituel",
             Transmutable = false,
-            Traits = {"AURA", "MADURAI"}
+            Traits = {"AURA"}
         },
         ["Shrapnel de Fer"] = {
             AugmentType = 'Warframe',
@@ -8185,7 +8184,7 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Inhabituel",
             Transmutable = false,
-            Traits = {"AURA", "MADURAI"}
+            Traits = {"AURA"}
         },
         ["Tirs Crâniens"] = {
             AugmentType = 'Arme',
@@ -9020,7 +9019,7 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Rare",
             Transmutable = false,
-            Traits = {"AURA", "MADURAI"}
+            Traits = {"AURA"}
         },
         ["Énergie Ensanglantée"] = {
             Image = "Énergie Ensanglantée.png",
