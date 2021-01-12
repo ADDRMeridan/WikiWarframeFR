@@ -9810,18 +9810,27 @@ local ModData = {
         -- Carrier
         {Name = "Caisse à Munitions", Compagnon = "Carrier"},
         {Name = "Pilleur", Compagnon = "Carrier"}, -- Dethcube
+        {Name = "Générateur d'Énergie", Compagnon = "Dethcube"},
+        {Name = "Mort brusque", Compagnon = "Dethcube"},
         {Name = "Vaporisation", Compagnon = "Dethcube"}, -- Diriga
         {Name = "Bobine Foudroyante", Compagnon = "Diriga"},
         {Name = "Pulsation Électrique", Compagnon = "Diriga"},
         {Name = "Tir Calculé", Compagnon = "Diriga"}, -- Djinn
-        {Name = "Attraction Fatale", Compagnon = "Djinn"}, -- Helios
+        {Name = "Attraction Fatale", Compagnon = "Djinn"},
+        {Name = "Cogneur", Compagnon = "Djinn"},
+        {Name = "Renaissance", Compagnon = "Djinn"}, -- Helios
         {Name = "Détection de Vulnérabilité", Compagnon = "Helios"},
         {Name = "Inspecteur", Compagnon = "Helios"},
         {Name = "Récepteur de Ciblage", Compagnon = "Helios"}, -- Oxylus
-        {Name = "Détecteur de Matière", Compagnon = "Oxylus"}, -- Shade
+        {Name = "Botaniste", Compagnon = "Oxylus"},
+        {Name = "Détecteur de Matière", Compagnon = "Oxylus"},
+        {Name = "Détecteur Formes de vie Aquatiques", Compagnon = "Oxylus"}, -- Shade
+        {Name = "Embuscade", Compagnon = "Shade"},
         {Name = "Fantôme", Compagnon = "Shade"},
         {Name = "Vengeance", Compagnon = "Shade"}, -- Taxon
-        {Name = "Conversion Moléculaire", Compagnon = "Taxon"}, -- Wyrm
+        {Name = "Conversion Moléculaire", Compagnon = "Taxon"},
+        {Name = "Reciblage", Compagnon = "Taxon"}, -- Wyrm
+        {Name = "Guerrier", Compagnon = "Wyrm"},
         {Name = "Négation", Compagnon = "Wyrm"},
         {Name = "Dispersion des foules", Compagnon = "Wyrm"}
     },

@@ -247,9 +247,79 @@ local function doesModContainTraits(Mod, traitsArray)
     return contains
 end
 
+local function getAugmentTypeArray(augmentType)
+
+    local ret = {}
+
+    if (augmentType == 'Archwing') then
+        ret = ModData["ArchwingAugments"]
+    elseif (augmentType == 'Arme') then
+        ret = ModData["WeaponAugments"]
+    elseif (augmentType == 'Compagnon') then
+        ret = ModData["CompagnonAugments"]
+    elseif (augmentType == 'Warframe') then
+        ret = ModData["WarframeAugments"]
+    end
+
+    return ret
+end
+
+local function getAugment(augmentName, augmentType)
+
+    local ret = nil
+
+    local array2Parse = getAugmentTypeArray(augmentType)
+    local i = 1
+    while (i <= Shared.tableCount(array2Parse) and ret == nil) do
+        local tmp = array2Parse[i]
+        if (tmp.Name == augmentName) then ret = tmp end
+        i = i + 1
+    end
+
+    return ret
+end
+
+local function _isModAnAugment(modName)
+
+    local mod = getMod(modName)
+    return mod ~= nil and mod.AugmentType ~= nil
+end
+
+local function getAugmentUser(augmentName, augmentType)
+
+    local augment = getAugment(augmentName, augmentType)
+    local ret = nil
+    if (augment ~= nil) then
+        if (augmentType == "Archwing") then
+            ret = augment.Archwing
+        elseif (augmentType == "Arme") then
+            ret = augment.Weapons
+        elseif (augmentType == "Compagnon") then
+            ret = augment.Compagnon
+        elseif (augmentType == "Warframe") then
+            ret = augment.Warframe
+        end
+    end
+
+    return ret
+end
+
+local function isModForUser(modName, augmentType, augmentUser)
+
+    local ret = true
+    if (augmentType == 'Arme') then
+        ret = augmentUser == getAugmentUser(modName, augmentType)
+    else
+        ret = Shared.contains(getAugmentUser(modName, augmentType), augmentUser)
+    end
+
+    return ret
+end
+
 -- Struct to store the different filters on mods
 local modFilters = {
     AugmentType = nil,
+    AugmentUser = nil,
     Polarity = nil,
     Rarity = nil,
     Set = nil,
@@ -263,6 +333,8 @@ local function getFiltersFromFrame(frame)
     if (frame.args ~= nil) then
         -- AugmentType
         filter.AugmentType = frame.args['augment'] or nil
+        -- AugmentUser
+        filter.AugmentUser = frame.args['augmentUser'] or nil
         -- Polarite
         filter.Polarity = frame.args['polarity'] or nil
         -- Rarete
@@ -297,6 +369,10 @@ local function filterAllMods(filter)
         local keepMod = (filter.AugmentType == nil or
                             (filter.AugmentType ~= nil and filter.AugmentType ==
                                 Mod.AugmentType)) and
+                            (filter.AugmentUser == nil or
+                                (filter.AugmentUser ~= nil and
+                                    isModForUser(Mod.Name, filter.AugmentType,
+                                                 filter.AugmentUser))) and
                             (filter.Rarity == nil or
                                 (filter.Rarity ~= nil and filter.Rarity ==
                                     Mod.Rarity)) and
@@ -570,44 +646,6 @@ end
 -- AUGMENTS
 ------------------------
 ------------------------
-
-local function getAugmentTypeArray(augmentType)
-
-    local ret = {}
-
-    if (augmentType == 'Archwing') then
-        ret = ModData["ArchwingAugments"]
-    elseif (augmentType == 'Arme') then
-        ret = ModData["WeaponAugments"]
-    elseif (augmentType == 'Compagnon') then
-        ret = ModData["CompagnonAugments"]
-    elseif (augmentType == 'Warframe') then
-        ret = ModData["WarframeAugments"]
-    end
-
-    return ret
-end
-
-local function getAugment(augmentName, augmentType)
-
-    local ret = nil
-
-    local array2Parse = getAugmentTypeArray(augmentType)
-    local i = 1
-    while (i <= Shared.tableCount(array2Parse) and ret == nil) do
-        local tmp = array2Parse[i]
-        if (tmp.Name == augmentName) then ret = tmp end
-        i = i + 1
-    end
-
-    return ret
-end
-
-local function _isModAnAugment(modName)
-
-    local mod = getMod(modName)
-    return mod ~= nil and mod.AugmentType ~= nil
-end
 
 function p.isModAnAugment(frame)
 
