@@ -3684,6 +3684,7 @@ local ModData = {
         ["Générateur d'Énergie"] = {
             AugmentType = 'Compagnon',
             Image = "Générateur d'Énergie.png",
+            Introduced = "23.10",
             Name = "Générateur d'Énergie",
             NameEN = "Energy Generator",
             Polarity = "Penjaga",
