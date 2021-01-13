@@ -148,6 +148,7 @@ local IconData = {
         ["Fonderie"] = {icon = "BuildComplete_w.png", link = "Fonderie"},
         ["Forma"] = {icon = "Forma64.png", link = "Forma"},
         ["Forma Aura"] = {icon = "Forma_Aura.png", link = "Forma Aura"},
+        ["Forma Posture"] = {icon = "Forma Posture.png", link = "Forma Posture"},
         ["Forma Umbra"] = {icon = "Forma_Umbra.png", link = "Forma Umbra"},
         ["Forme Diurne"] = {icon = "AnimusAspect.png", link = "Equinox"},
         ["Forme Nocturne"] = {icon = "AnimaAspect.png", link = "Equinox"},
@@ -223,23 +224,20 @@ local IconData = {
         -- O
         ["Orbe d'Énergie"] = {
             icon = "Orbe_d'énergie.png",
-            link = "Orbes#Énergie|Orbe d'Énergie"
+            link = "Orbes#Énergie"
         },
         ["Orbes d'Énergie"] = {
             icon = "Orbe_d'énergie.png",
-            link = "Orbes#Énergie|Orbes d'Énergie"
+            link = "Orbes#Énergie"
         },
-        ["Orbe de Santé"] = {
-            icon = "Orbe_de_vie.png",
-            link = "Orbes#Santé|Orbe de Santé"
-        },
+        ["Orbe de Santé"] = {icon = "Orbe_de_vie.png", link = "Orbes#Santé"},
         ["Orbe d'Affinité"] = {
             icon = "Orb_affinite.png",
-            link = "Ramassables#Orbes|Orbe d'Affinité"
+            link = "Ramassables#Orbes"
         },
         ["Orbes d'Affinité"] = {
             icon = "Orb_affinite.png",
-            link = "Ramassables#Orbes|Orbes d'Affinité"
+            link = "Ramassables#Orbes"
         },
         -- P
         ["Partie"] = {icon = "Weapon Part 32px.png", link = "Armes"},
@@ -892,6 +890,7 @@ local IconData = {
         -- Autres
         ["Forma"] = {icon = "Forma.png", link = "Forma"},
         ["Forma Aura"] = {icon = "Forma_Aura.png", link = "Forma Aura"},
+        ["Forma Posture"] = {icon = "Forma Posture.png", link = "Forma Posture"},
         ["Forma Umbra"] = {icon = "Forma_Umbra.png", link = "Forma Umbra"}
 
     },
@@ -900,7 +899,6 @@ local IconData = {
         -- A
         -- B
         ["Botte"] = {icon = "GenericWeaponPrimeGuard.png", link = "Botte"},
-
         -- C
         ["Capteurs Neuronaux"] = {
             icon = "NeuralSensor64.png",
@@ -957,6 +955,26 @@ local IconData = {
         -- K
         ["Kuva"] = {icon = "icon_kuva.png", link = "Kuva"},
         -- L
+        ["Lentille Madurai"] = {
+            icon = "FocusLens1.png",
+            link = "Lentille de Focus"
+        },
+        ["Lentille Naramon"] = {
+            icon = "FocusLens1.png",
+            link = "Lentille de Focus"
+        },
+        ["Lentille Unairu"] = {
+            icon = "FocusLens1.png",
+            link = "Lentille de Focus"
+        },
+        ["Lentille Vazarin"] = {
+            icon = "FocusLens1.png",
+            link = "Lentille de Focus"
+        },
+        ["Lentille Zenurik"] = {
+            icon = "FocusLens1.png",
+            link = "Lentille de Focus"
+        },
         -- M
         -- N
         -- O
@@ -1113,6 +1131,7 @@ local IconData = {
         ["Récupération"] = {icon = "Salvage64.png", link = "Récupération"},
         ["Forma"] = {icon = "Forma64.png", link = "Forma"},
         ["Forma Aura"] = {icon = "Forma_Aura.png", link = "Forma Aura"},
+        ["Forma Posture"] = {icon = "Forma Posture.png", link = "Forma Posture"},
         ["Forma Umbra"] = {icon = "Forma_Umbra.png", link = "Forma Umbra"},
         ["Eclat d'Eidolon Brillant"] = {
             icon = "SentientShardBrilliant.png",
