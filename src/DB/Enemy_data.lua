@@ -3,7 +3,7 @@ local EnemyData = {
     ["Alad V"] = {
         Affinity = 1713.75,
         BaseLevel = 1,
-        Capacities = {},
+        Capacities = nil,
         Faction = "Corpus",
         Family = "Alad V",
         HealthTypes = {
@@ -20,7 +20,7 @@ local EnemyData = {
         Regions = {"Jupiter"},
         Scans = 3,
         SpawnLevel = 20,
-        Weapons = {}
+        Weapons = nil
     },
     ["Alad V Mutaliste"] = {
         Affinity = 3998.75,
@@ -46,7 +46,7 @@ local EnemyData = {
     ["Ambulas"] = {
         Affinity = 1.500,
         BaseLevel = 1,
-        Capacities = {},
+        Capacities = nil,
         Faction = "Corpus",
         Family = "Ambulas",
         HealthTypes = {
@@ -63,12 +63,12 @@ local EnemyData = {
         Regions = {"Pluton"},
         Scans = 3,
         SpawnLevel = 45,
-        Weapons = {}
+        Weapons = nil
     },
     ["Ancien Corrompu"] = {
         Affinity = 150,
         BaseLevel = 1,
-        Capacities = {},
+        Capacities = nil,
         Faction = "Orokin",
         Family = "Ancien Corrompu",
         HealthTypes = {["Fossilisé"] = 400},
@@ -81,12 +81,12 @@ local EnemyData = {
         Regions = {"Le Néant"},
         Scans = 5,
         SpawnLevel = nil,
-        Weapons = {}
+        Weapons = nil
     },
     ["Ancien Guérisseur"] = {
         Affinity = 150,
         BaseLevel = 1,
-        Capacities = {},
+        Capacities = nil,
         Faction = "Infesté",
         Family = "Ancien Guérisseur",
         HealthTypes = {["Fossilisé"] = 400},
@@ -103,12 +103,12 @@ local EnemyData = {
         },
         Scans = 5,
         SpawnLevel = nil,
-        Weapons = {}
+        Weapons = nil
     },
     ["Ancien Guérisseur Deimos"] = {
         Affinity = nil,
         BaseLevel = 1,
-        Capacities = {},
+        Capacities = nil,
         Faction = "Infesté",
         Family = "Ancien Guérisseur",
         HealthTypes = {["Fossilisé"] = 400},
@@ -121,7 +121,7 @@ local EnemyData = {
         Regions = {"Deimos"},
         Scans = 5,
         SpawnLevel = nil,
-        Weapons = {}
+        Weapons = nil
     },
     ["Artilleuse Lourde"] = {
         Affinity = 500,
@@ -165,7 +165,7 @@ local EnemyData = {
     ["Baptiste Fanatique"] = {
         Affinity = nil,
         BaseLevel = 1,
-        Capacities = {},
+        Capacities = nil,
         Faction = "Infesté",
         Family = "Fanatique",
         HealthTypes = {["Tendon Infesté"] = 100, ["Chair Infestée"] = 1200},
@@ -175,9 +175,9 @@ local EnemyData = {
         Link = nil,
         Name = "Baptiste Fanatique",
         NameEN = "Zealot Baptizer",
-        Regions = {},
+        Regions = nil,
         Scans = 5,
-        Weapons = {}
+        Weapons = nil
     },
     ["Bombardier Kuva"] = {
         Affinity = 500,
@@ -197,6 +197,23 @@ local EnemyData = {
         Weapons = {"Ogris", "Sheev"}
     },
     -- C
+    ["Carnis Deimos"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Carnis",
+        HealthTypes = {["Chair Fossilisée"] = 600, ["Tendon Infesté"] = 50},
+        Image = "Carnis Deimos.png",
+        Icon = nil,
+        Introduced = "29.0",
+        Link = nil,
+        Name = "Carnis Deimos",
+        NameEN = "Deimos Carnis",
+        Regions = {"Deimos"},
+        Scans = 30,
+        Weapons = nil
+    },
     ["Comba"] = {
         Affinity = 500,
         BaseLevel = 1,
@@ -212,12 +229,28 @@ local EnemyData = {
         Scans = 3,
         Weapons = {"Lecta", "Detron Essaim", "Angstrum Chercheur"}
     },
+    ["Commandante de Reconnaissance"] = {
+        Affinity = nil,
+        BaseLevel = 3,
+        Capacities = {"Onde de Choc Sismique"},
+        Faction = "Grineer",
+        HealthTypes = {["Armure en Alliage"] = 250, ["Chair Clonée"] = 1200},
+        Image = "EidolonVipSniper.png",
+        Introduced = "22.0",
+        Link = nil,
+        Name = "Commandante de Reconnaissance",
+        NameEN = "Recon Commander",
+        Regions = {"Terre"},
+        Scans = 3,
+        Weapons = {"Tonkor", "Manticore"}
+    },
     -- D
     ["Dargyn"] = {
         Affinity = 57.13,
         BaseLevel = 1,
-        Capacities = {},
+        Capacities = nil,
         Faction = "Grineer",
+        Family = "Dargyn",
         HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 200},
         Image = "GrnSkiff.png",
         Icon = nil,
@@ -227,12 +260,98 @@ local EnemyData = {
         NameEN = "Dargyn",
         Regions = {"Espace Libre"},
         Scans = 5,
-        Weapons = {}
+        Weapons = nil
     },
+    ["Dargyn Bouclier"] = {
+        Affinity = 100,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Dargyn Bouclier",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 100},
+        Image = "GrnSkiffShield.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Dargyn Bouclier",
+        NameEN = "Shield Dargyn",
+        Regions = {"Espace Libre"},
+        Scans = 5,
+        Weapons = nil
+    },
+    ["Diploïde Commun"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = nil,
+        HealthTypes = {["Chair Fossilisée"] = 250, ["Tendon Infesté"] = 125},
+        Image = "Diploïde Commun.png",
+        Icon = nil,
+        Introduced = "29.5",
+        Link = nil,
+        Name = "Diploïde Commun",
+        NameEN = "Basal Diploid",
+        Regions = {"Deimos"},
+        Scans = 5,
+        Weapons = nil
+    },
+    ["Diploïde Rex Commun"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = nil,
+        HealthTypes = {["Chair Fossilisée"] = 750},
+        Image = "Diploïde Rex Commun.png",
+        Icon = nil,
+        Introduced = "29.5",
+        Link = nil,
+        Name = "Diploïde Rex Commun",
+        NameEN = "Basal Diploid Rex",
+        Regions = {"Deimos"},
+        Scans = 5,
+        Weapons = nil
+    },
+    ["Diploïde Rex Sauvage"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = nil,
+        HealthTypes = {["Chair Fossilisée"] = 750},
+        Image = "Diploïde Rex Sauvage.png",
+        Icon = nil,
+        Introduced = "29.5",
+        Link = nil,
+        Name = "Diploïde Rex Sauvage",
+        NameEN = "Feral Diploid Rex",
+        Regions = {"Deimos"},
+        Scans = 5,
+        Weapons = nil
+    },
+    ["Diploïde Sauvage"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = nil,
+        HealthTypes = {["Chair Fossilisée"] = 250, ["Tendon Infesté"] = 125},
+        Image = "Diploïde Sauvage.png",
+        Icon = nil,
+        Introduced = "29.5",
+        Link = nil,
+        Name = "Diploïde Sauvage",
+        NameEN = "Feral Diploid",
+        Regions = {"Deimos"},
+        Scans = 5,
+        Weapons = nil
+    },
+
     ["Dreg Temporel"] = {
         Affinity = 57.13,
         BaseLevel = 1,
-        Capacities = {},
+        Capacities = nil,
         Faction = "Grineer",
         Family = "Dreg",
         HealthTypes = {["Armure en Ferrite"] = 150, ["Chair Clonée"] = 100},
@@ -244,12 +363,12 @@ local EnemyData = {
         NameEN = "Temporal Dreg",
         Regions = {"Terre", "Saturne", "Uranus"},
         Scans = 10,
-        Weapons = {}
+        Weapons = nil
     },
     ["Drone d'Attaque"] = {
         Affinity = 200,
         BaseLevel = 1,
-        Capacities = {},
+        Capacities = nil,
         Faction = "Corpus",
         HealthTypes = {["Robot"] = 250, ["Bouclier"] = 75},
         Image = "FusionDroneDE.png",
@@ -265,7 +384,7 @@ local EnemyData = {
     ["Drone d'Attaque (Archwing)"] = {
         Affinity = 57.13,
         BaseLevel = 1,
-        Capacities = {},
+        Capacities = nil,
         Faction = "Corpus",
         HealthTypes = {["Robot"] = 250, ["Bouclier"] = 75},
         Image = "FusionDroneDE.png",
@@ -276,12 +395,12 @@ local EnemyData = {
         NameEN = "Attack Drone (Archwing Enemy)",
         Regions = {"Vénus", "Mars", "Jupiter", "Neptune"},
         Scans = 20,
-        Weapons = {}
+        Weapons = nil
     },
     ["Drone d'Attaque Terra"] = {
         Affinity = 200,
         BaseLevel = 1,
-        Capacities = {},
+        Capacities = nil,
         Faction = "Corpus",
         HealthTypes = {["Robot"] = 250, ["Bouclier"] = 75},
         Image = "Drone d'Attaque Terra.png",
@@ -300,6 +419,7 @@ local EnemyData = {
         BaseLevel = 1,
         Capacities = nil,
         Faction = "Grineer",
+        Family = "Éviscérateur",
         HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 400},
         Image = "ExoEviscerator.png",
         Icon = nil,
@@ -316,6 +436,7 @@ local EnemyData = {
         BaseLevel = 1,
         Capacities = nil,
         Faction = "Grineer",
+        Family = "Éviscérateur",
         HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 400},
         Image = "KosmaEviscerator.png",
         Icon = nil,
@@ -381,6 +502,23 @@ local EnemyData = {
         Regions = {"Eris"},
         Scans = 3,
         SpawnLevel = 34,
+        Weapons = nil
+    },
+    ["Goule Décomposée"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = nil,
+        HealthTypes = {["Chair Clonée"] = 300, ["Armure en Ferrite"] = 150},
+        Image = "GhoulExpired.png",
+        Icon = nil,
+        Introduced = "22.8",
+        Link = nil,
+        Name = "Goule Décomposée",
+        NameEN = "Ghoul Expired",
+        Regions = {"Terre", "Mars"},
+        Scans = 20,
         Weapons = nil
     },
     -- H
@@ -474,6 +612,23 @@ local EnemyData = {
         Regions = {"Vénus"},
         Scans = 3,
         Weapons = {"Mitrailleuses Lourdes"}
+    },
+    ["Jugulus Deimos"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Jugulus",
+        HealthTypes = {["Chair Fossilisée"] = 1600, ["Tendon Infesté"] = 300},
+        Image = "Jugulus Deimos.png",
+        Icon = nil,
+        Introduced = "29.0",
+        Link = nil,
+        Name = "Jugulus Deimos",
+        NameEN = "Deimos Jugulus",
+        Regions = {"Deimos"},
+        Scans = 5,
+        Weapons = nil
     },
     -- K
     -- L
@@ -656,7 +811,7 @@ local EnemyData = {
     ["Massacreur Kosma"] = {
         Affinity = nil,
         BaseLevel = 1,
-        Capacities = {},
+        Capacities = nil,
         Faction = "Grineer",
         Family = "Massacreur",
         HealthTypes = {["Chair Clonée"] = 750, ["Armure en Ferrite"] = 200},
@@ -673,7 +828,7 @@ local EnemyData = {
     ["Messager Fanatique"] = {
         Affinity = nil,
         BaseLevel = 1,
-        Capacities = {},
+        Capacities = nil,
         Faction = "Infesté",
         Family = "Fanatique",
         HealthTypes = {["Tendon Infesté"] = 200, ["Chair Infestée"] = 1000},
@@ -683,7 +838,7 @@ local EnemyData = {
         Link = nil,
         Name = "Messager Fanatique",
         NameEN = "Zealot Proselytizer",
-        Regions = {},
+        Regions = nil,
         Scans = 5,
         Weapons = {"Torid"}
     },
@@ -822,7 +977,7 @@ local EnemyData = {
     ["Prosélyte Fanatique"] = {
         Affinity = nil,
         BaseLevel = 1,
-        Capacities = {},
+        Capacities = nil,
         Faction = "Infesté",
         Family = "Fanatique",
         HealthTypes = {["Tendon Infesté"] = 200, ["Chair Infestée"] = 1200},
@@ -832,7 +987,7 @@ local EnemyData = {
         Link = nil,
         Name = "Prosélyte Fanatique",
         NameEN = "Zealot Proselytizer",
-        Regions = {},
+        Regions = nil,
         Scans = 5,
         Weapons = {"Zymos"}
     },
@@ -852,6 +1007,64 @@ local EnemyData = {
         Name = "Raie du Désert",
         NameEN = "Desert Skate",
         Regions = nil,
+        Scans = 20,
+        Weapons = nil
+    },
+    ["Raknoïde Thermique"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Raknoïde Thermique",
+        HealthTypes = {
+            ["Robot"] = 100,
+            ["Armure en Alliage"] = 250,
+            ["Proto Bouclier"] = 2000
+        },
+        Image = "Raknoïde_Réfrigérant.png",
+        Icon = nil,
+        Introduced = "24.6",
+        Link = nil,
+        Name = "Raknoïde Thermique",
+        NameEN = "Thermic Raknoid",
+        Regions = {"Vallée Orbis"},
+        Scans = 5,
+        Weapons = nil
+    },
+    ["Rampant Nauséeux"] = {
+        Affinity = 57.13,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Rampant Nauséeux",
+        HealthTypes = {["Chair Infesté"] = 50},
+        Image = "Rampant Nauséeux.png",
+        Icon = nil,
+        Introduced = "10.5",
+        Link = nil,
+        Name = "Rampant Nauséeux",
+        NameEN = "Nauseous Crawler",
+        Regions = {"Venus", "Terre", "Mars", "Jupiter", "Saturne", "Eris"},
+        Scans = 20,
+        Weapons = nil
+    },
+    ["Rampant Électrique"] = {
+        Affinity = 57.13,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Rampant Électrique",
+        HealthTypes = {["Chair Infesté"] = 50},
+        Image = "Rampant_Électrique.png",
+        Icon = nil,
+        Introduced = "10.5",
+        Link = nil,
+        Name = "Rampant Électrique",
+        NameEN = "Electric Crawler",
+        Regions = {
+            "Mercure", "Mars", "Deimos", "Phobos", "Jupiter", "Europe",
+            "Saturne", "Uranus", "Neptune", "Pluton", "Eris", "Sedna"
+        },
         Scans = 20,
         Weapons = nil
     },
@@ -877,7 +1090,7 @@ local EnemyData = {
         NameEN = "Ropalolyste",
         Regions = {"Jupiter"},
         Scans = 3,
-        Weapons = {}
+        Weapons = nil
     },
     -- S
     ["Sauteur Lourdaud"] = {
@@ -885,7 +1098,7 @@ local EnemyData = {
         BaseLevel = 1,
         Capacities = nil,
         Faction = "Infesté",
-        Family = "Sauteur",
+        Family = "Sauteur Lourdaud",
         HealthTypes = {["Chair Infesté"] = 600},
         Image = "Sauteur Lourdaud.png",
         Icon = nil,
@@ -902,7 +1115,7 @@ local EnemyData = {
         BaseLevel = 1,
         Capacities = nil,
         Faction = "Infesté",
-        Family = "Sauteur",
+        Family = "Sauteur Lourdaud",
         HealthTypes = {["Chair Infesté"] = 600},
         Image = "Sauteur Lourdaud Deimos.png",
         Icon = nil,
@@ -933,6 +1146,44 @@ local EnemyData = {
         },
         Scans = 10,
         Weapons = {"Machette"}
+    },
+    ["Scorpion Kuva"] = {
+        Affinity = 100.00,
+        BaseLevel = 10,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Scorpion",
+        HealthTypes = {["Chair Clonée"] = 150, ["Armure en Ferrite"] = 150},
+        Image = "Scorpion Kuva.png",
+        Icon = nil,
+        Introduced = "19.0",
+        Link = nil,
+        Name = "Scorpion Kuva",
+        NameEN = "Kuva Scorpion",
+        Regions = {"Forteresse Kuva"},
+        Scans = 10,
+        Weapons = {"Machette"}
+    },
+    ["Sikula"] = {
+        Affinity = 114.25,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = nil,
+        HealthTypes = {
+            ["Machine"] = 100,
+            ["Armure en Ferrite"] = 50,
+            ["Bouclier"] = 50
+        },
+        Image = "Sikula.png",
+        Icon = nil,
+        Introduced = "17.0",
+        Link = nil,
+        Name = "Sikula",
+        NameEN = "Sikula",
+        Regions = {"Uranus"},
+        Scans = 10,
+        Weapons = nil
     },
     ["Stalker"] = {
         Affinity = 1713.75,
@@ -993,6 +1244,23 @@ local EnemyData = {
         Weapons = {"Lance-glace"}
     },
     -- T
+    ["Tourelle Senta"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Tourelle Senta",
+        HealthTypes = {["Armure en Ferrite"] = 100, ["Robot"] = 300},
+        Image = "TourelleCorpus.png",
+        Icon = nil,
+        Introduced = "5.0",
+        Link = "Tourelle",
+        Name = "Tourelle Senta",
+        NameEN = "Senta Turret",
+        Regions = nil,
+        Scans = 20,
+        Weapons = {"Répéteur Plasma"}
+    },
     -- U
     -- V
     -- W

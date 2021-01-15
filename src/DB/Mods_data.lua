@@ -698,12 +698,18 @@ local ModData = {
             Traits = {"+%IMPACT", "SECONDAIRE"}
         },
         ["Balles de Thermite"] = {
+            Archived = false,
+            AugmentType = nil,
+            Family = nil,
             Image = "Balles_de_Thermite.png",
-            Introduced = "13.8.0",
+            Introduced = "13.8",
             Name = "Balles de Thermite",
             NameEN = "Thermite Rounds",
             Polarity = "Madurai",
+            PvP = false,
             Rarity = "Rare",
+            Set = nil,
+            Stance = false,
             Traits = {"+%STATCHANCE", "FUSIL", "BARO"},
             Transmutable = false
         },
@@ -1528,6 +1534,15 @@ local ModData = {
             NameEN = "Vazarin Transmute Core",
             Polarity = "Vazarin",
             Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Coeur Légendaire"] = {
+            Image = "Coeur_Légendaire.png",
+            Introduced = "12.2",
+            Name = "Coeur Légendaire",
+            NameEN = "Legendary Core",
+            Polarity = "Core",
+            Rarity = "Légendaire",
             Transmutable = false
         },
         ["Collier Choc"] = {
@@ -4091,10 +4106,12 @@ local ModData = {
         },
         ["Inversion d'Énergie"] = {
             Image = "Inversion d'Énergie.png",
+            Introduced = "15.1",
             Name = "Inversion d'Énergie",
             NameEN = "Energy Inversion",
             Polarity = "Vazarin",
-            Rarity = "Commun"
+            Rarity = "Commun",
+            Traits = {"+%BOUCLIER", "ARCHWING"}
         },
         ["Inspecteur"] = {
             AugmentType = 'Compagnon',
@@ -4103,7 +4120,7 @@ local ModData = {
             NameEN = "Investigator",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON", "HELIOS"}
+            Traits = {"SENTINELLE", "COMPAGNON"}
         },
         ["Invisibilité Feutrée"] = {
             AugmentType = 'Warframe',
