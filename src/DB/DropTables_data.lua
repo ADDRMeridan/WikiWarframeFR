@@ -6556,7 +6556,7 @@ local DropData = {
             Name = "Sauteur Lourdaud",
             ModChance = 4.5,
             Mods = {
-                {"Lasting Sting", 25.29}, {"Agonie Perpétuelle", 25.29},
+                {"Piqûre Persistante", 25.29}, {"Agonie Perpétuelle", 25.29},
                 {"Endo", 25.29, 15}, {"Va chercher", 11.06},
                 {"Endo", 11.06, 50}, {"Surcharge d'État", 0.5},
                 {"Ire Souillée de Dragon", 0.67}, {"Endo", 0.67, 80}
@@ -6570,6 +6570,16 @@ local DropData = {
                 {"Vent du Nord", 15.28}, {"Toucher Choquant", 15.28},
                 {"Frappe de Fièvre", 15.28}, {"Tempo Royal", 4.17},
                 {"Cible Acquise", 4.17}
+            }
+        }, {
+            Name = "Sauteur Lourdaud Deimos",
+            ModChance = 4.5,
+            Mods = {
+                {"Piqûre Persistante", 25.29}, {"Agonie Perpétuelle", 25.29},
+                {"Endo", 25.29, 15}, {"Va chercher", 7.37},
+                {"Retour Rapide Volatil", 7.37}, {"Endo", 7.37, 50},
+                {"Surcharge d'État", 0.50}, {"Rebond Volatil", 0.50},
+                {"Ire Souillée de Dragon", 0.50}, {"Endo", 0.50, 80}
             }
         }, {
             Name = "Ropalolyste",
@@ -7720,13 +7730,13 @@ local DropData = {
             }
         }, {
             Name = "Raknoïde Thermique",
-            ModChance = 5,
+            ModChance = 5.00,
             Mods = {
                 {"Ignifugé", 75.88}, {"Impact Brûlant", 5.53},
                 {"Charge de Chaleur", 5.53}, {"Feu des Enfers", 5.53},
-                {"Balles Incendiaires", 5.53}, {"Fil Volcanique", 0.5},
-                {"Calcination", 0.5}, {"Balles de Thermite", 0.5},
-                {"Brasier Dispersant", 0.5}
+                {"Balles Incendiaires", 5.53}, {"Fil Volcanique", 0.50},
+                {"Calcination", 0.50}, {"Balles de Thermite", 0.50},
+                {"Brasier Dispersant", 0.50}
             }
         }, {
             Name = "Raknoïde Scyto",
@@ -8066,6 +8076,85 @@ local DropData = {
                 {"Transformateur de Morphic", 2.01}
             }
         }, {
+            Name = "Pillard Exo",
+            ModChance = 5,
+            Mods = {
+                {"Lame Tempérée", 37.94}, {"Inversion d'Énergie", 37.94},
+                {"Lame Galvanisée", 7.37}, {"Concentration Résolue", 7.37},
+                {"Canon Électrifié", 7.37}, {"Efficacité Mortelle", 2.01}
+            }
+        },
+        { Name = "Coutelas Pillard Exo",
+          ModChance = 5,
+          Mods = {
+            {"Lame Tempérée",37.94},
+            {"Inversion d'Énergie",37.94},
+            {"Lame Galvanisée",7.37},
+            {"Concentration Résolue",7.37},
+            {"Canon Électrifié",7.37},
+            {"Efficacité Mortelle",2.01},
+          },
+        },
+        { Name = "Éviscérateur Pillard Exo",
+          ModChance = 5,
+          Mods = {
+            {"Lame Tempérée",37.94},
+            {"Inversion d'Énergie",37.94},
+            {"Lame Galvanisée",7.37},
+            {"Concentration Résolue",7.37},
+            {"Canon Électrifié",7.37},
+            {"Efficacité Mortelle",2.01},
+          },
+        },
+        { Name = "Massacreur Gyre",
+          ModChance = 5,
+          Mods = {
+            {"Inversion d'Énergie",79.82},
+            {"Piqûre Toxique",5.26},
+            {"Chargeur Venimeux",5.26},
+            {"Concentration Résolue",5.26},
+            {"Cible Marquée",1.75},
+            {"Virtuose de l'Arch-Fusil",1.75},
+            {"Débordement",0.88},
+          },
+        },
+        { Name = "Officier Gokstad Kosma",
+          ModChance = 5,
+          Mods = {
+            {"Inversion d'Énergie",75.88},
+            {"Rebord Tranchant",4.42},
+            {"Rebord Glacial",4.42},
+            {"Canon Plaqué Rubedo",4.42},
+            {"Magasin Polaire",4.42},
+            {"Amplificateur d'Énergie",4.42},
+            {"Autopsie Astrale",2.01},
+          },
+        },
+        { Name = "Pilote de Gokstad Kosma",
+          ModChance = 5,
+          Mods = {
+            {"Inversion d'Énergie",75.88},
+            {"Rebord Tranchant",4.42},
+            {"Rebord Glacial",4.42},
+            {"Canon Plaqué Rubedo",4.42},
+            {"Magasin Polaire",4.42},
+            {"Amplificateur d'Énergie",4.42},
+            {"Autopsie Astrale",2.01},
+          },
+        },
+        { Name = "Lancier d'Élite Gyre",
+          ModChance = 5,
+          Mods = {
+            {"Inversion d'Énergie",79.82},
+            {"Piqûre Toxique",5.26},
+            {"Chargeur Venimeux",5.26},
+            {"Concentration Résolue",5.26},
+            {"Cible Marquée",1.75},
+            {"Virtuose de l'Arch-Fusil",1.75},
+            {"Débordement",0.88},
+          },
+        },
+        {
             Name = "Éviscérateur Kosma",
             ModChance = 5,
             Mods = {
@@ -8216,7 +8305,7 @@ local DropData = {
                 {"Endo", 5.53, 50}
             }
         }, {
-            Name = "Shield Dargyn",
+            Name = "Dargyn Bouclier",
             ModChance = 3,
             Mods = {
                 {"Inversion d'Énergie", 38.72}, {"Débordement", 5.64},
@@ -9236,7 +9325,7 @@ local DropData = {
                 {"Dégaine", 25.29}, {"Intensité", 2.01}
             }
         }, {
-            Name = "Tourelle",
+            Name = "Tourelle Senta",
             ModChance = 3,
             Mods = {
                 {"Inversion d'Énergie", 25.81}, {"Rebord Saignant", 25.81},
@@ -9311,7 +9400,7 @@ local DropData = {
                 {"Vulcain d'Atlantis", 3.69}, {"Endo", 3.69}
             }
         }, {
-            Name = "Ghoul Expired",
+            Name = "Goule Décomposée",
             ModChance = 20,
             Mods = {
                 {"Dentelure", 7.37}, {"Paratonnerre", 37.94},
@@ -10022,8 +10111,8 @@ local DropData = {
             Mods = {
                 {"Energy Inversion", 75.88}, {"Cutting Edge", 4.42},
                 {"Glacial Edge", 4.42}, {"Rubedo-Lined Barrel", 4.42},
-                {"Polar Magazine", 4.42}, {"Amplificateur d'Énergie", 4.42},
-                {"Astral Autopsy", 2.01}
+                {"Magasin Polaire", 4.42}, {"Amplificateur d'Énergie", 4.42},
+                {"Autopsie Astrale", 2.01}
             }
         }, {
             Name = "Pilote de Gokstad Kosma",
@@ -10031,8 +10120,8 @@ local DropData = {
             Mods = {
                 {"Energy Inversion", 75.88}, {"Cutting Edge", 4.42},
                 {"Glacial Edge", 4.42}, {"Rubedo-Lined Barrel", 4.42},
-                {"Polar Magazine", 4.42}, {"Amplificateur d'Énergie", 4.42},
-                {"Astral Autopsy", 2.01}
+                {"Magasin Polaire", 4.42}, {"Amplificateur d'Énergie", 4.42},
+                {"Autopsie Astrale", 2.01}
             }
         }, {
             Name = "Machiniste Amalgame",
@@ -10140,6 +10229,62 @@ local DropData = {
                 {"Paratonnerre", 25.29}, {"Ignifugé", 25.29},
                 {"Endo", 25.29, 15}, {"Endo", 25.11, 50}, {"Chercheur", 1.01},
                 {"Endo", 1.01, 80}
+            }
+        }, {
+            Name = "Jugulus Deimos",
+            ModChance = 4.5,
+            Mods = {
+                {"Piqûre Persistante", 25.29}, {"Agonie Perpétuelle", 25.29},
+                {"Endo", 25.29, 15}, {"Va chercher", 7.37},
+                {"Retour Rapide Volatil", 7.37}, {"Endo", 7.37, 50},
+                {"Surcharge d'État", 0.50}, {"Rebond Volatil", 0.50},
+                {"Ire Souillée de Dragon", 0.50}, {"Endo", 0.50, 80}
+            }
+        }, {
+            Name = "Carnis Deimos",
+            ModChance = 4.5,
+            Mods = {
+                {"Piqûre Persistante", 25.29}, {"Agonie Perpétuelle", 25.29},
+                {"Endo", 25.29, 15}, {"Va chercher", 7.37},
+                {"Retour Rapide Volatil", 7.37}, {"Endo", 7.37, 50},
+                {"Surcharge d'État", 0.50}, {"Rebond Volatil", 0.50},
+                {"Ire Souillée de Dragon", 0.50}, {"Endo", 0.50, 80}
+            }
+        }, {
+            Name = "Diploïde Commun",
+            ModChance = 3.50,
+            Mods = {
+                {"Endo", 75.88, 15}, {"Frappe de Fièvre", 5.53},
+                {"Tir de Rasoir", 5.53}, {"Va chercher", 5.53},
+                {"Endo", 5.53, 50}, {"Endo", 0.67, 80},
+                {"Ire Souillée de Dragon", 0.67}, {"Surcharge d'État", 0.67}
+            }
+        }, {
+            Name = "Diploïde Rex Commun",
+            ModChance = 3.50,
+            Mods = {
+                {"Endo", 75.88, 15}, {"Frappe de Fièvre", 5.53},
+                {"Tir de Rasoir", 5.53}, {"Va chercher", 5.53},
+                {"Endo", 5.53, 50}, {"Endo", 0.67, 80},
+                {"Ire Souillée de Dragon", 0.67}, {"Surcharge d'État", 0.67}
+            }
+        }, {
+            Name = "Diploïde Rex Sauvage",
+            ModChance = 3.50,
+            Mods = {
+                {"Endo", 75.88, 15}, {"Frappe de Fièvre", 5.53},
+                {"Tir de Rasoir", 5.53}, {"Va chercher", 5.53},
+                {"Endo", 5.53, 50}, {"Endo", 0.67, 80},
+                {"Ire Souillée de Dragon", 0.67}, {"Surcharge d'État", 0.67}
+            }
+        }, {
+            Name = "Diploïde Sauvage",
+            ModChance = 3.50,
+            Mods = {
+                {"Endo", 75.88, 15}, {"Frappe de Fièvre", 5.53},
+                {"Tir de Rasoir", 5.53}, {"Va chercher", 5.53},
+                {"Endo", 5.53, 50}, {"Endo", 0.67, 80},
+                {"Ire Souillée de Dragon", 0.67}, {"Surcharge d'État", 0.67}
             }
         }, {
             Name = "Osprey Sapeur Vapos",

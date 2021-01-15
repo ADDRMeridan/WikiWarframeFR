@@ -235,6 +235,7 @@ local EnemyData = {
         Capacities = {"Onde de Choc Sismique"},
         Faction = "Grineer",
         HealthTypes = {["Armure en Alliage"] = 250, ["Chair Clonée"] = 1200},
+        Icon = nil,
         Image = "EidolonVipSniper.png",
         Introduced = "22.0",
         Link = nil,
@@ -243,6 +244,23 @@ local EnemyData = {
         Regions = {"Terre"},
         Scans = 3,
         Weapons = {"Tonkor", "Manticore"}
+    },
+    ["Coutelas Pillard Exo"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Coutelas Pillard",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 1000},
+        Icon = nil,
+        Image = "ExoRaiderCarver.png",
+        Introduced = "27.0",
+        Link = nil,
+        Name = "Coutelas Pillard Exo",
+        NameEN = "Exo Raider Carver",
+        Regions = {"Proxima du Voile"},
+        Scans = 5,
+        Weapons = nil
     },
     -- D
     ["Dargyn"] = {
@@ -448,6 +466,26 @@ local EnemyData = {
         Scans = 5,
         Weapons = {"Grakatas Jumeaux"}
     },
+    ["Éviscérateur Pillard Exo"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Éviscérateur Pillard",
+        HealthTypes = {
+            ["Armure en Ferrite"] = 200,
+            ["Chair Clonée"] = 1000
+        },
+        Icon = nil,
+        Image = "ExoRaiderEviscerator.png",
+        Introduced = "27.0",
+        Link = nil,
+        Name = "Éviscérateur Pillard Exo",
+        NameEN = "Exo Raider Eviscerator",
+        Regions = {"Proxima du Voile"},
+        Scans = 5,
+        Weapons = {"Miter"}
+    },
     -- F
     -- G
     ["Gardien Grineer"] = {
@@ -519,6 +557,7 @@ local EnemyData = {
         NameEN = "Ghoul Expired",
         Regions = {"Terre", "Mars"},
         Scans = 20,
+        SpawnLevel = nil,
         Weapons = nil
     },
     -- H
@@ -537,6 +576,7 @@ local EnemyData = {
         NameEN = "Hellion",
         Regions = {"Cérès", "Sedna", "Deimos"},
         Scans = 5,
+        SpawnLevel = nil,
         Weapons = {"Grakata", "Sheev"}
     },
     ["Hellion Aride"] = {
@@ -554,6 +594,7 @@ local EnemyData = {
         NameEN = "Arid Hellion",
         Regions = {"Colonie Grineer"},
         Scans = 5,
+        SpawnLevel = nil,
         Weapons = {"Grakata", "Sheev"}
     },
     ["Homme d'Équipage"] = {
@@ -571,6 +612,7 @@ local EnemyData = {
         NameEN = "Crewman",
         Regions = {"Vénus", "Mars", "Jupiter", "Phobos", "Europe"},
         Scans = 20,
+        SpawnLevel = nil,
         Weapons = {"Dera", "Prova"}
     },
     ["Homme d'Équipage Prod"] = {
@@ -588,6 +630,7 @@ local EnemyData = {
         NameEN = "Prod Crewman",
         Regions = {"Vénus", "Mars", "Deimos"},
         Scans = 20,
+        SpawnLevel = nil,
         Weapons = {"Prova"}
     },
     -- I
@@ -611,6 +654,7 @@ local EnemyData = {
         NameEN = "Jackal",
         Regions = {"Vénus"},
         Scans = 3,
+        SpawnLevel = nil,
         Weapons = {"Mitrailleuses Lourdes"}
     },
     ["Jugulus Deimos"] = {
@@ -628,6 +672,7 @@ local EnemyData = {
         NameEN = "Deimos Jugulus",
         Regions = {"Deimos"},
         Scans = 5,
+        SpawnLevel = nil,
         Weapons = nil
     },
     -- K
@@ -647,6 +692,7 @@ local EnemyData = {
         NameEN = "Lancer",
         Regions = {"Mercure", "Terre", "Mars", "Cérès", "Deimos"},
         Scans = 20,
+        SpawnLevel = nil,
         Weapons = {"Grakata", "Sheev"}
     },
     ["Lancier Aride"] = {
@@ -664,6 +710,7 @@ local EnemyData = {
         NameEN = "Arid Lancer",
         Regions = {"Mars", "Deimos"},
         Scans = 20,
+        SpawnLevel = nil,
         Weapons = {"Grakata", "Sheev"}
     },
     ["Lancier Drekar"] = {
@@ -681,6 +728,7 @@ local EnemyData = {
         NameEN = "Drekar Lancer",
         Regions = {"Terre", "Uranus"},
         Scans = 20,
+        SpawnLevel = nil,
         Weapons = {"Grakata", "Sheev"}
     },
     ["Lancier d'Élite"] = {
@@ -698,7 +746,26 @@ local EnemyData = {
         NameEN = "Elite Lancer",
         Regions = {"Mercure", "Saturne", "Cérès", "Sedna", "Deimos", "Lua"},
         Scans = 5,
+        SpawnLevel = nil,
         Weapons = {"Hind", "Sheev"}
+    },
+    ["Lancier d'Élite Gyre"] = {
+        Affinity = 150,
+        BaseLevel = 15,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Lancier d'Élite",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 1000},
+        Icon = nil,
+        Image = "GyreEliteLancer.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Lancier d'Élite Gyre",
+        NameEN = "Gyre Elite Lancer",
+        Regions = {"Proxima de Saturne"},
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = {"Quartakk"}
     },
     ["Lancier Frontalier"] = {
         Affinity = 50,
@@ -715,6 +782,7 @@ local EnemyData = {
         NameEN = "Frontier Lancer",
         Regions = {"Terre"},
         Scans = 20,
+        SpawnLevel = nil,
         Weapons = {"Grakata", "Sheev"}
     },
     ["Lancier Ivoire"] = {
@@ -732,6 +800,7 @@ local EnemyData = {
         NameEN = "Tusk Lancer",
         Regions = {"Terre"},
         Scans = 20,
+        SpawnLevel = nil,
         Weapons = {"Hind", "Sheev"}
     },
     ["Lancier Kuva"] = {
@@ -749,6 +818,7 @@ local EnemyData = {
         NameEN = "Kuva Lancer",
         Regions = {"Forteresse Kuva"},
         Scans = 20,
+        SpawnLevel = nil,
         Weapons = {"Kohm", "Sheev"}
     },
     ["Lancier Nightwatch"] = {
@@ -766,6 +836,7 @@ local EnemyData = {
         NameEN = "Nightwatch Lancer",
         Regions = {"Alerte Tactique"},
         Scans = 20,
+        SpawnLevel = nil,
         Weapons = {"Grinlok", "Sheev"}
     },
     ["Lieutenant Lech Kril"] = {
@@ -806,7 +877,26 @@ local EnemyData = {
         NameEN = "Drekar Butcher",
         Regions = {"Uranus"},
         Scans = 20,
+        SpawnLevel = nil,
         Weapons = {"Doubles Hachoir"}
+    },
+    ["Massacreur Gyre"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Massacreur",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 750},
+        Icon = nil,
+        Image = "GyreButcher.png",
+        Introduced = "27.0",
+        Link = nil,
+        Name = "Massacreur Gyre",
+        NameEN = "Gyre Butcher",
+        Regions = {"Proxima de Saturne"},
+        Scans = 20,
+        SpawnLevel = nil,
+        Weapons = {"Machette"}
     },
     ["Massacreur Kosma"] = {
         Affinity = nil,
@@ -817,12 +907,13 @@ local EnemyData = {
         HealthTypes = {["Chair Clonée"] = 750, ["Armure en Ferrite"] = 200},
         Image = "Massacreur Kosma.png",
         Icon = nil,
-        Introduced = 27.0,
+        Introduced = "27.0",
         Link = nil,
         Name = "Massacreur Kosma",
         NameEN = "Kosma Butcher",
         Regions = {"Proxima de la Terre"},
         Scans = 20,
+        SpawnLevel = nil,
         Weapons = {"Machette"}
     },
     ["Messager Fanatique"] = {
@@ -840,6 +931,7 @@ local EnemyData = {
         NameEN = "Zealot Proselytizer",
         Regions = nil,
         Scans = 5,
+        SpawnLevel = nil,
         Weapons = {"Torid"}
     },
     ["MOA à Canon Électrique"] = {
@@ -859,6 +951,7 @@ local EnemyData = {
             "Vénus", "Mars", "Neptune", "Pluton", "Europe", "Le Néant", "Lua"
         },
         Scans = 10,
+        SpawnLevel = nil,
         Weapons = {"Canon Électrique"}
     },
     ["MOA Corrompu"] = {
@@ -876,6 +969,7 @@ local EnemyData = {
         NameEN = "Corrupted MOA",
         Regions = {"Le Néant"},
         Scans = 5,
+        SpawnLevel = nil,
         Weapons = {"Rayon à Plasma"}
     },
     ["MOA Mutaliste Essaim"] = {
@@ -897,12 +991,13 @@ local EnemyData = {
             "Europe", "Phobos", "Deimos"
         },
         Scans = 5,
+        SpawnLevel = nil,
         Weapons = {"Spores Infestées"}
     },
     -- N
     -- O
-    ["Officier Gokstad"] = {
-        Affinity = nil,
+    ["Officier Gokstad Kosma"] = {
+        Affinity = 500,
         BaseLevel = 8,
         Capacities = nil,
         Faction = "Grineer",
@@ -974,6 +1069,42 @@ local EnemyData = {
         Weapons = nil
     },
     -- P
+    ["Pillard Exo"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Pillard",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 1000},
+        Icon = nil,
+        Image = "ExoRaider.png",
+        Introduced = "27.0",
+        Link = nil,
+        Name = "Pillard Exo",
+        NameEN = "Exo Raider",
+        Regions = {"Proxima du Voile"},
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = {"Tonkor"}
+    },
+    ["Pilote de Gokstad Kosma"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Pilote de Gokstad",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 600},
+        Icon = nil,
+        Image = "KosmaGokstadPilot.png",
+        Introduced = "27.0",
+        Link = nil,
+        Name = "Pilote de Gokstad Kosma",
+        NameEN = "Kosma Gokstad Pilot",
+        Regions = {"Proxima de la Terre"},
+        Scans = 20,
+        SpawnLevel = nil,
+        Weapons = {"Stubba"}
+    },
     ["Prosélyte Fanatique"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -989,6 +1120,7 @@ local EnemyData = {
         NameEN = "Zealot Proselytizer",
         Regions = nil,
         Scans = 5,
+        SpawnLevel = nil,
         Weapons = {"Zymos"}
     },
     -- Q
