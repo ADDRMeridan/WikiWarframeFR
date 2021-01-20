@@ -4872,7 +4872,10 @@ local ModData = {
             Transmutable = false
         },
         ["Malice"] = {
+            AugmentType = "Compagnon",
             Image = "Malice.png",
+            Introduced = "SotR",
+            Link = "Malice (Mod)",
             Name = "Malice",
             NameEN = "Mischief",
             Polarity = "Penjaga",
@@ -9843,7 +9846,8 @@ local ModData = {
         {Name = "Renaissance", Compagnon = "Djinn"}, -- Helios
         {Name = "Détection de Vulnérabilité", Compagnon = "Helios"},
         {Name = "Inspecteur", Compagnon = "Helios"},
-        {Name = "Récepteur de Ciblage", Compagnon = "Helios"}, -- Oxylus
+        {Name = "Récepteur de Ciblage", Compagnon = "Helios"}, -- Kavat Smeeta
+        {Name = "Malice", Compagnon = "Kavat Smeeta"}, -- Oxylus
         {Name = "Botaniste", Compagnon = "Oxylus"},
         {Name = "Détecteur de Matière", Compagnon = "Oxylus"},
         {Name = "Détecteur Formes de Vie Aquatiques", Compagnon = "Oxylus"}, -- Shade
