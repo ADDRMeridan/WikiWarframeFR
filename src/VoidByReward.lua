@@ -137,14 +137,20 @@ function p.simpleRewardTable(frame)
     end
 
     local function sorter(r1, r2)
-        if (r1.Item == r2.Item) then
+
+        local item1 = r1.Item
+        if (type(item1) == "table") then item1 = item1[1] end
+        local item2 = r2.Item
+        if (type(item2) == "table") then item2 = item2[1] end
+
+        if (item1 == item2) then
             if (r1.Part == r2.Part) then
                 return r1.IsVaulted < r2.IsVaulted
             else
                 return r1.Part < r2.Part
             end
         else
-            return r1.Item < r2.Item
+            return item1 < item2
         end
     end
 
@@ -167,7 +173,9 @@ function p.simpleRewardTable(frame)
                  (col1 .. col2 .. col3 .. col4 .. col5 .. col6 .. col7))
 
     for i, Row in pairs(data) do
-        local ItemName = '[[' .. Void.getItemName(Row.Item) .. ']]'
+        local item = Row.Item
+        if (type(item) == "table") then item = item[1] end
+        local ItemName = '[[' .. Void.getItemName(item) .. ']]'
         local PartName = Void.getPartName(Row.Part)
         local rowStr = '\n|- \n|' .. ItemName .. '||' .. PartName .. '||' ..
                            Row.Tier .. '||' .. ttStart .. Row.Tier .. ' ' ..
@@ -191,7 +199,13 @@ function p.relicsTable(frame)
 
     -- Just hardcoding in the four types
     -- Fine as long as somebody knows how to fix this if DE introduces 5th rarity
-    local data = {["Lith"] = {}, ["Meso"] = {}, ["Neo"] = {}, ["Axi"] = {}}
+    local data = {
+        ["Lith"] = {},
+        ["Meso"] = {},
+        ["Neo"] = {},
+        ["Axi"] = {},
+        ["Requiem"] = {}
+    }
     local filter = frame.args ~= nil and frame.args[1]
 
     -- collect data
@@ -225,12 +239,12 @@ function p.relicsTable(frame)
     local tableStr = {
         "{| class=\"article-table\" cellspacing=\"1\" cellpadding=\"1\" border=\"2\" style=\"margin:auto\""
     }
-    local col1 = '\n! scope="col" style="width:25%;" | Lith'
-    local col2 = '\n! scope="col" style="width:25%;" | Meso'
-    local col3 = '\n! scope="col" style="width:25%;" | Neo'
-    local col4 = '\n! scope="col" style="width:25%;" | Axi'
-    local col5 = '\n|-'
-    table.insert(tableStr, (col1 .. col2 .. col3 .. col4 .. col5))
+    table.insert(tableStr, '\n! scope="col" style="width:20%;" | Lith')
+    table.insert(tableStr, '\n! scope="col" style="width:20%;" | Meso')
+    table.insert(tableStr, '\n! scope="col" style="width:20%;" | Neo')
+    table.insert(tableStr, '\n! scope="col" style="width:20%;" | Axi')
+    table.insert(tableStr, '\n! scope="col" style="width:20%;" | Requiem')
+    table.insert(tableStr, '\n|-')
 
     -- Loop through each tier
     -- And add all the relics for each one
@@ -258,9 +272,9 @@ function p.byRelic(frame)
     local tableStr = {'{| class="article-table sortable"'}
     local col1 = "\n! Tier"
     local col2 = "\n! Type"
-    local col3 = "\n! Common rewards"
-    local col4 = "\n! Uncommon rewards"
-    local col5 = "\n! Rare rewards"
+    local col3 = "\n! Récompenses Commune"
+    local col4 = "\n! Récompenses Inhabituelle"
+    local col5 = "\n! Récompenses Rare"
     table.insert(tableStr, (col1 .. col2 .. col3 .. col4 .. col5))
 
     -- Now the fun part: Building each table row
@@ -276,13 +290,18 @@ function p.byRelic(frame)
         local uncommonStr = "\n| "
         local rareStr = "\n| "
         for j, drop in pairs(relic.Drops) do
-            local itemName = Void.getItemName(drop.Item)
+            local itemName = nil
+            if (type(drop.Item) == "table") then
+                itemName = Void.getItemName(drop.Item[1])
+            else
+                itemName = Void.getItemName(drop.Item)
+            end
             local partName = Void.getPartName(drop.Part)
-            if (drop.Rarity == "Common") then
+            if (drop.Rarity == "Commune") then
                 commonStr =
                     commonStr .. "\n* [[" .. itemName .. "|" .. itemName .. " " ..
                         partName .. "]]"
-            elseif (drop.Rarity == "Uncommon") then
+            elseif (drop.Rarity == "Inhabituelle") then
                 uncommonStr = uncommonStr .. "\n* [[" .. itemName .. "|" ..
                                   itemName .. " " .. partName .. "]]"
             else
@@ -306,7 +325,7 @@ function p.byRarity(frame)
     local platform = frame.args ~= nil and frame.args[1] or "PC"
     local checkTier = frame.args ~= nil and frame.args[2] or "Lith"
 
-    local data = {["Common"] = {}, ["Uncommon"] = {}, ["Rare"] = {}}
+    local data = {}
 
     -- collect data
     for _, relic in pairs(VoidData["Relics"]) do
@@ -316,6 +335,7 @@ function p.byRarity(frame)
         if (tier == checkTier) then
             for _, drop in pairs(relic.Drops) do
                 local rarity = drop.Rarity
+                if (data[rarity] == nil) then data[rarity] = {} end
                 local item = drop.Item
                 local part = drop.Part
 
@@ -336,7 +356,7 @@ function p.byRarity(frame)
     -- Then go through each rarity
     -- Each rarity is the same steps:
     -- 1. Loop through each item in that rarity
-    for itemStr, _ in Shared.skpairs(data["Common"]) do
+    for itemStr, _ in Shared.skpairs(data["Commune"]) do
         -- 2. Get the item & part
         local sp1 = string.find(itemStr, "|")
         local itemName = Void.getItemName(string.sub(itemStr, 1, sp1 - 1))
@@ -347,7 +367,7 @@ function p.byRarity(frame)
                          "]]"))
     end
     table.insert(tableStr, "\n|")
-    for itemStr, _ in Shared.skpairs(data["Uncommon"]) do
+    for itemStr, _ in Shared.skpairs(data["Inhabituelle"]) do
         local sp1 = string.find(itemStr, "|")
         local itemName = Void.getItemName(string.sub(itemStr, 1, sp1 - 1))
         local partName = Void.getPartName(string.sub(itemStr, sp1 + 1))
