@@ -15,18 +15,20 @@ local synRankCol = 4 -- The required Syndicate Rank to purchase the offering
 local p = {}
 
 local DropData = mw.loadData('Module:DropTables/data')
-local MissionData = mw.loadData('Module:Missions/data')
+local Missions = require("Module:Missions")
 local Icon = require("Module:Icon")
 local Shared = require("Module:Shared")
 local Void = require("Module:Void")
 local TT = require("Module:Tooltip")
+
+local RELICSORDER = {"Lith", "Meso", "Neo", "Axi", "Requiem"}
 
 local relicTooltipStart =
     "<span style=\"border-bottom: 1px dotted;\" class=\"relic-tooltip\" data-param=\""
 local relicTooltipCenter = "\">"
 local relicTooltipEnd = "</span>"
 
-function p.getMValue(theMission, ValName)
+function p.getMValue(theMission, ValName, noBreaks)
     if (type(theMission) == "string") then
         theMission = p.getMission(theMission)
     end
@@ -41,7 +43,11 @@ function p.getMValue(theMission, ValName)
         end
     elseif (ValName == 'NAME') then
         if (theMission.Name ~= nil) then
-            return theMission.Name
+            local mName = theMission.Name
+            if noBreaks == true then
+                mName = string.gsub(mName, "<br />", " ")
+            end
+            return mName
         else
             return theMission.Tier
         end
@@ -305,36 +311,6 @@ function p.linkType(MType)
     end
 end
 
-function p.getMissions(compareFunction)
-    local data = {}
-    for _, m in Shared.skpairs(MissionData["MissionDetails"]) do
-        if (compareFunction(m)) then table.insert(data, m) end
-    end
-    return data
-end
-
--- Gets the list of missions that give rewards for a specific Alias (ex Defense1)
-function p.getMissionTable(MissionAlias)
-    local data = {}
-    for _, m in Shared.skpairs(MissionData["MissionDetails"]) do
-        if (m.Tier == MissionAlias) then table.insert(data, m) end
-    end
-    return data
-end
-
--- Gets a list of missions with rewards for a given planet
-function p.getMissionsForPlanet(Planet)
-    local missions = {}
-
-    for _, m in pairs(MissionData["MissionDetails"]) do
-        if (m.Planet == Planet and m.Tier ~= nil) then
-            table.insert(missions, m)
-        end
-    end
-
-    return missions
-end
-
 local function findMaxLines(missionRewards)
 
     local ret = 0
@@ -358,12 +334,14 @@ local function buildMissionRewardsTable(missionRewards, frame)
                          '! colspan="2" style="text-align:center;" | Récompenses')
         else
             for rot, loot in Shared.skpairs(missionRewards) do
-                if(Shared.contains({"A", "B", "C"}, rot)) then
-                table.insert(ret,
-                             '! colspan="2" style="text-align:center;" | Rotation ' ..
-                                 rot)
+                if (Shared.contains({"A", "B", "C"}, rot)) then
+                    table.insert(ret,
+                                 '! colspan="2" style="text-align:center;" | Rotation ' ..
+                                     rot)
                 else
-                    table.insert(ret, '! colspan="2" style="text-align:center;" | ' .. rot)
+                    table.insert(ret,
+                                 '! colspan="2" style="text-align:center;" | ' ..
+                                     rot)
                 end
             end
         end
@@ -624,205 +602,132 @@ local function getDropEnemies(itemName)
     return drops
 end
 
--- Gets the table used on Void Relic/ByMission
--- Unlike getRewardTable, this is just the full table with all formatting
--- This is pretty ugly, but kinda have to do it this way
--- (Unless you have a better solution, in which case by all means go ahead and fix it)
--- (I'm not exactly a Lua expert or a UI expert)
-function p.getRelicTable(frame)
-    -- Okay, so first up, need to know which planet this is for
-    local Planet = nil
-    if (frame ~= nil) then
-        Planet = frame.args ~= nil and frame.args[1] or frame
-    end
-    -- Planet == nil is standing in for 'all planets', so adding option to explicitly call 'all'
-    if (Planet ~= nil and (Planet == "" or Planet == "All")) then
-        Planet = nil
-    end
+-- return format = {["Lith"] = {["A1"] = {["missionAlias"] = {"rotationA", "rotationB"}}}}
+local function getRelicMissionAlias(tableMissionAlias2Include)
 
-    -- I have other functions to get the list of missions for all/planet
-    -- So calling that here
-    local missions
-    if (Planet == nil) then
-        missions = {}
-        for i, m in pairs(DropData["Missions"]) do
-            if (m.Ignore ~= true) then table.insert(missions, m) end
-        end
-    else
-        missions = p.getMissionsForPlanet(Planet)
-    end
-
-    local tableRows = {}
-    local Relics = {["Lith"] = {}, ["Meso"] = {}, ["Neo"] = {}, ["Axi"] = {}}
-
-    -- Now for the 'fun' part: Getting the list
-    for i, m in pairs(missions) do
-        -- For each mission, the first thing we're doing is setting up what it's called
-        -- Or more accurately, what it appears as in the chart
-        local rowName = ""
-        local mAlias, theMission
-
-        if (Planet == nil) then
-            -- When showing all, the format is "Mission Type (Tier Name)" with link to mission type
-            -- For example, "[[Survival]] (Tier 1)" or "Spy (Lua)"
-            if (m.Type == "Bounty" or m.Type == "Ghoul Bounty" or m.Type ==
-                "Onslaught") then
-                rowName = p.linkType(m.Type) .. " (" ..
-                              p.getMValue(m, "SHORTNAME") .. ")"
-            else
-                rowName =
-                    p.linkType(m.Type) .. " (" .. p.getMValue(m, "NAME") .. ")"
-            end
-            theMission = m
-        else
-            local placeName = m.Node
-
-            -- When showing a single planet, format is instead "Mission Name (Type)"
-            -- For example, "Rusalka (Capture)"
-            -- Mission type is still linked
-            -- Dark Sector is also linked if appropriate
-            if (m.IsDarkSector == 1) then
-                rowName = placeName .. " ([[Dark Sector|DS]] " ..
-                              p.linkType(m.Type) .. ")"
-            else
-                rowName = placeName .. " (" .. p.linkType(m.Type) .. ")"
-            end
-            theMission = p.getMission(m.Tier)
-            if (theMission == nil) then
-                return "ERROR: Could not Miss " .. m.Tier
-            end
-        end
-        local thisRow = nil
-        -- This is where we get all the rewards for the mission
-        local drops = getRewardsForMission(theMission)
-
-        -- Need to know if this is a single rotation
-        -- Because if it is, just a checkmark instead of a letter
-        local isSingleRot = Shared.tableCount(drops) == 1
-        -- For each mission, looping each rotation
-        for rot, dropTable in Shared.skpairs(drops) do
-            -- And each drop for each rotation
-            for j, d in pairs(dropTable) do
-                -- We only care if it's a relic
-                if (d.Type == "Relic") then
-                    -- Set up the row if we don't have it yet
-                    -- Mission will not be added to the grid unless it drops at least one relic
-                    -- Avoids adding a row for something like Assassination that never gives relics
-                    if (thisRow == nil) then thisRow = {} end
-
-                    -- Example: "Lith A1"
-                    local RelicText = d.IName
-                    local RadiantRelic = ""
-                    if (string.find(RelicText, "%(Radiant%)") ~= nil) then
-                        RadiantRelic = "*"
-                        RelicText = string.gsub(RelicText, "%s%(Radiant%)", "")
-                    end
-
-                    -- Example: {"Lith", "A1"}
-                    local RelicBits = Shared.splitString(RelicText, " ")
-                    -- Example: "Lith"
-                    local RTier = RelicBits[1]
-                    -- Example: "A1"
-                    local RName = RelicBits[2]
-
-                    -- Make sure the relevant entry exists
-                    if (thisRow[RelicText] == nil) then
-                        thisRow[RelicText] = ""
-                    end
-
-                    -- And then fill it in
-                    if (isSingleRot) then
-                        thisRow[RelicText] = "✔" .. RadiantRelic
-                    else
-                        thisRow[RelicText] =
-                            thisRow[RelicText] .. rot .. RadiantRelic
-                    end
-
-                    -- Adding drop rate info when hovering
-                    -- If the drop rate is under 1% we set it red
-                    -- Under 2%, orangered
-                    local RelicTextColor = "inherit"
-                    if (d.Chance < 1) then
-                        RelicTextColor = "red"
-                    elseif (d.Chance < 2) then
-                        RelicTextColor = "orangered"
-                    end
-                    thisRow[RelicText] =
-                        "<span style=\"color:" .. RelicTextColor ..
-                            ";\" title=\"Drop rate : " .. d.Chance .. "%\">" ..
-                            thisRow[RelicText] .. "</span>"
-
-                    -- Also gotta add the Relic to our list if we don't have it yet
-                    if (Relics[RTier][RName] == nil) then
-                        Relics[RTier][RName] = RelicText
+    local ret = {}
+    for _, mission in ipairs(DropData["Missions"]) do
+        if ((tableMissionAlias2Include == nil or
+            (Shared.contains(tableMissionAlias2Include, mission.Alias))) and
+            mission.Rewards ~= nil) then
+            for rot, rewards in pairs(mission.Rewards) do
+                for _, loot in ipairs(rewards) do
+                    if (loot[2] == "Relique") then
+                        local splitRelic = Shared.splitString(loot[1], ' ')
+                        local relicTier = splitRelic[1]
+                        local relicName = splitRelic[2]
+                        if (ret[relicTier] == nil) then
+                            ret[relicTier] = {}
+                        end
+                        if (ret[relicTier][relicName] == nil) then
+                            ret[relicTier][relicName] = {}
+                        end
+                        if (ret[relicTier][relicName][mission.Alias] == nil) then
+                            ret[relicTier][relicName][mission.Alias] = {}
+                        end
+                        table.insert(ret[relicTier][relicName][mission.Alias],
+                                     rot)
                     end
                 end
             end
         end
-
-        if (thisRow ~= nil) then tableRows[rowName] = thisRow end
     end
 
-    local result = {}
-    local headerRow = {}
-    local headerFirst = true
-    -- So this right here sets up the initial conditions of the table
-    -- If you want to change the styling, you've gotta do it here
-    result = {'{| class="wikitable" '}
-    table.insert(result,
-                 'style="width:100%; border=1px; text-align:center; font-size:11px;"\n|-')
-    -- Slightly different text for all missions VS missions for a planet
-    if (Planet == nil) then
-        table.insert(result, '\n! rowspan="2" |Mission Type (Tier)')
-    else
-        table.insert(result, '\n! rowspan="2" |Node (Type)')
-    end
+    return ret
+end
 
-    -- Looping through each Relic tier
-    -- Doing two things here:
-    -- 1. Setting up the header row with the list of relics
-    -- 2. Setting up the topmost row that has the name of each relic tier
-    for tier in Shared.relicLoop() do
-        local relicCount = Shared.tableCount(Relics[tier])
-        if (relicCount > 0) then
-            table.insert(result,
-                         ('\n! colspan="' .. relicCount .. '" |' .. tier))
-            for rNum, trash in Shared.skpairs(Relics[tier]) do
-                if not headerFirst then
-                    table.insert(headerRow, " || ")
+function p.getRelicByPlanet(frame)
+
+    local ret = {}
+    local planet = frame.args ~= nil and frame.args[1] or nil
+    if (planet ~= nil and planet ~= "") then
+        -- Recover list of mission tiers existing on this planet
+        local missions = Missions.getMissionsForPlanet(planet)
+        local missAliasWanted = {}
+        for _, miss in ipairs(missions) do
+            table.insert(missAliasWanted, Missions.getValue(miss, "TIER"))
+        end
+        -- Search for corresponding missions drops
+        local missionsDrops = getRelicMissionAlias(missAliasWanted)
+        if (Shared.tableCount(missionsDrops) > 0) then
+            local missionsTiersFound = {}
+            -- Build html table header
+            table.insert(ret,
+                         '\n{| class="wikitable"\n! rowspan="2" | Noeud (Type)')
+            for _, relicTier in pairs(RELICSORDER) do
+                if (missionsDrops[relicTier] ~= nil) then
+                    table.insert(ret, '\n! colspan="')
+                    table.insert(ret,
+                                 Shared.tableCount(missionsDrops[relicTier]))
+                    table.insert(ret, '" | ')
+                    table.insert(ret, relicTier)
+                    -- Store which mission tier was found
+                    for _, missionsTiers in pairs(missionsDrops[relicTier]) do
+                        for tierFound, _ in pairs(missionsTiers) do
+                            if (not Shared.contains(missionsTiersFound,
+                                                    tierFound)) then
+                                table.insert(missionsTiersFound, tierFound)
+                            end
+                        end
+                    end
                 end
-                headerFirst = false
-                table.insert(headerRow,
-                             (relicTooltipStart .. tier .. ' ' .. rNum ..
-                                 relicTooltipCenter .. '[[' .. tier .. ' ' ..
-                                 rNum .. '|' .. rNum .. ']]' .. relicTooltipEnd))
             end
+            -- Build relic line
+            table.insert(ret, '\n|-\n| ')
+            local toInsert = {}
+            for _, relicTier in pairs(RELICSORDER) do
+                if (missionsDrops[relicTier] ~= nil) then
+                    for relicName, _ in pairs(missionsDrops[relicTier]) do
+                        local relicFullName = relicTier .. ' ' .. relicName
+                        table.insert(toInsert, TT._tooltipText(relicFullName,
+                                                               "Relic",
+                                                               relicName, nil,
+                                                               true))
+                    end
+                end
+            end
+            table.insert(ret, table.concat(toInsert, ' || '))
+            toInsert = nil
+            -- Filter missions to corresponding found tiers
+            local correctMissions = {}
+            for _, mission in pairs(missions) do
+                if (Shared.contains(missionsTiersFound,
+                                    Missions.getValue(mission, "TIER"))) then
+                    table.insert(correctMissions, mission)
+                end
+            end
+            -- Print missions lines
+            for _, mission in pairs(correctMissions) do
+                table.insert(ret, '\n|-\n| ')
+                table.insert(ret, mission.Node)
+                table.insert(ret, ' ([[')
+                table.insert(ret, mission.Type)
+                table.insert(ret, ']]) || ')
+                local currMissionTier = Missions.getValue(mission, "TIER")
+                toInsert = {}
+                for _, relicTier in pairs(RELICSORDER) do
+                    if (missionsDrops[relicTier] ~= nil) then
+                        for relicName, _ in pairs(missionsDrops[relicTier]) do
+                            if (missionsDrops[relicTier][relicName][currMissionTier] ~=
+                                nil) then
+                                table.sort(
+                                    missionsDrops[relicTier][relicName][currMissionTier])
+                                table.insert(toInsert, table.concat(
+                                                 missionsDrops[relicTier][relicName][currMissionTier]))
+                            else
+                                table.insert(toInsert, '')
+                            end
+                        end
+                    end
+                end
+                table.insert(ret, table.concat(toInsert, ' || '))
+            end
+
+            table.insert(ret, '\n|}')
         end
     end
 
-    -- Then add the second row to the list
-    local headerTemp = table.concat(headerRow)
-    table.insert(result, ("\n|-\n|" .. headerTemp))
-
-    -- And now, at long last, it's time to add all the good stuff
-    for mName, relicRow in Shared.skpairs(tableRows) do
-        table.insert(result, ("\n|-\n|" .. mName))
-        for tier in Shared.relicLoop() do
-            for rNum, rName in Shared.skpairs(Relics[tier]) do
-                if (relicRow[rName] ~= nil) then
-                    table.insert(result, ("||" .. relicRow[rName]))
-                else
-                    table.insert(result, "|| ")
-                end
-            end
-        end
-    end
-
-    -- And the all-important coda
-    table.insert(result, "\n|}")
-
-    -- And then ship it all back
-    return table.concat(result)
+    return table.concat(ret)
 end
 
 -- Function used for building Void Relic/DropLocation table
@@ -981,7 +886,8 @@ function p.getSingleRelicByLocation(tier, name)
 
     -- Second, build the actual table being sent back
     local result = ''
-    result = "{| cellpadding=\"0\" cellspacing=\"0\" class=\"article-table sortable\" "
+    result =
+        "{| cellpadding=\"0\" cellspacing=\"0\" class=\"article-table sortable\" "
     result = result .. "style=\"width:100%;border:1px solid black;"
     result = result .. "text-align:left;font-size:12px;margin:12px 0 0 0;\""
     result = result .. "\n!Mission"

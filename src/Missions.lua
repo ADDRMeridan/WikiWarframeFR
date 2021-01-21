@@ -1,15 +1,49 @@
--- By [[User:Giga Martin|Giga Martin]] ([[User talk:Giga Martin|talk]]) at 23:59, September 16, 2020 (UTC)
--- Use:
--- {{#invoke:Missions|getMissions|missionname1|missionname2|...}} (e.g. {{#i:M|getMissions|Tessera|Oro}} )
--- {{#i:M|Var|Val}} (e.g. {{#i:M|Planet|Venus|expanded=yes}} )
--- {{#i:M||Val}} (e.g. {{#i:M||Venus|expanded=yes}} )
--- {{#i:M|Select|Var=Val|Var2=Val2|expanded=yes|partmatch=yes}} (e.g. {{#i:M|Select|Planet=Venus|Type=Capture|expanded=yes}} )
--- possible variables (case sensitive):
--- p.listVars() or {{#invoke:Missions|listVars}} 
 local p = {}
 
-local MissionData = mw.loadData([[Module:Missions/data]])
-local Shared = require([[Module:Shared]])
+local MissionData = mw.loadData("Module:Missions/data")
+local Shared = require("Module:Shared")
+
+local function getAllMissions() return MissionData["MissionDetails"] end
+
+function p.getValue(mission, value)
+
+    local ret = nil
+    if(mission ~= nil or value ~= nil) then
+        local upVal = string.upper(value)
+        if(upVal == "TIER") then
+            if(mission.Tier ~= nil) then
+                ret = mission.Tier
+            else
+                ret = mission.Type
+            end
+        end
+    end
+
+    return ret
+end
+
+function p.getMissionsForPlanet(planet)
+
+    local ret = {}
+    if (planet ~= nil) then
+        local missions = getAllMissions()
+        if (planet == 'All') then
+            ret = missions
+        else
+            for _, miss in ipairs(missions) do
+                if(miss.Planet == planet) then 
+                    table.insert(ret, miss)
+                end
+            end
+        end
+    end
+
+    return ret
+end
+
+-- ==========
+-- TO CLEANUP
+-- ==========
 local DropTables = {
     linkType = function(Type)
         return ({
