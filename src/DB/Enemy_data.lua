@@ -365,7 +365,40 @@ local EnemyData = {
         Scans = 5,
         Weapons = nil
     },
-
+    ["Drahk"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Drahk",
+        HealthTypes = {["Armure en Ferrite"] = 100, ["Chair"] = 200},
+        Icon = nil,
+        Image = "Drahk.png",
+        Introduced = "15.0",
+        Link = nil,
+        Name = "Drahk",
+        NameEN = "Drahk",
+        Regions = {"Sedna"},
+        Scans = 20,
+        Weapons = nil
+    },
+    ["Drahk Kuva"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Drahk",
+        HealthTypes = {["Armure en Ferrite"] = 100, ["Chair"] = 200},
+        Icon = nil,
+        Image = "KuvaDrahkPH.png",
+        Introduced = "19.0",
+        Link = nil,
+        Name = "Drahk Kuva",
+        NameEN = "Kuva Drahk",
+        Regions = {"Forteresse Kuva"},
+        Scans = 20,
+        Weapons = nil
+    },
     ["Dreg Temporel"] = {
         Affinity = 57.13,
         BaseLevel = 1,
@@ -472,10 +505,7 @@ local EnemyData = {
         Capacities = nil,
         Faction = "Grineer",
         Family = "Éviscérateur Pillard",
-        HealthTypes = {
-            ["Armure en Ferrite"] = 200,
-            ["Chair Clonée"] = 1000
-        },
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 1000},
         Icon = nil,
         Image = "ExoRaiderEviscerator.png",
         Introduced = "27.0",
@@ -676,6 +706,24 @@ local EnemyData = {
         Weapons = nil
     },
     -- K
+    ["Kubrow Sauvage"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Sauvage",
+        Family = "Kubrow Sauvage",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair"] = 300},
+        Icon = nil,
+        Image = "KubrowSauvage.png",
+        Introduced = "13.3",
+        Link = nil,
+        Name = "Kubrow Sauvage",
+        NameEN = "Feral Kubrow",
+        Regions = {"Terre"},
+        Scans = 20,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
     -- L
     ["Lancier"] = {
         Affinity = 50,
