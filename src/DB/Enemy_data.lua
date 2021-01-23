@@ -710,7 +710,7 @@ local EnemyData = {
         Affinity = 50,
         BaseLevel = 1,
         Capacities = nil,
-        Faction = "Sauvage",
+        Faction = "Non-affilié",
         Family = "Kubrow Sauvage",
         HealthTypes = {["Armure en Ferrite"] = 200, ["Chair"] = 300},
         Icon = nil,
