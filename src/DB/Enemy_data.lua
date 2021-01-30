@@ -887,6 +887,26 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = {"Grinlok", "Sheev"}
     },
+    ["Larve"] = {
+        Affinity = 35,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Larve",
+        HealthTypes = {
+            ["Infesté"] = 20
+        },
+        Icon = nil,
+        Image = "250px-Larve.png",
+        Introduced = "15.5",
+        Link = "Larve (Ennemi)",
+        Name = "Larve",
+        NameEN = "Maggot",
+        Regions = {"Eris"},
+        Scans = 30,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
     ["Lieutenant Lech Kril"] = {
         Affinity = nil,
         BaseLevel = 1,
