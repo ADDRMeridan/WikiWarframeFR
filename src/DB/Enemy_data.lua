@@ -365,6 +365,69 @@ local EnemyData = {
         Scans = 5,
         Weapons = nil
     },
+    ["Directeur de Biologie"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Directeur de Biologie",
+        HealthTypes = {
+            ["Armure en Ferrite"] = 100,
+            ["Bouclier"] = 1200,
+            ["Chair"] = 1750
+        },
+        Icon = nil,
+        Image = "VivisectDirector.png",
+        Introduced = "24.2",
+        Link = nil,
+        Name = "Directeur de Biologie",
+        NameEN = "Vivisect Director",
+        Regions = {"Vénus"},
+        Scans = 3,
+        Weapons = {"Plinx"}
+    },
+    ["Directeur de l'Armement"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Directeur de l'Armement",
+        HealthTypes = {
+            ["Armure en Ferrite"] = 100,
+            ["Bouclier"] = 1200,
+            ["Chair"] = 1750
+        },
+        Icon = nil,
+        Image = "ArmamentsDirector.png",
+        Introduced = "24.2",
+        Link = nil,
+        Name = "Directeur de l'Armement",
+        NameEN = "Armaments Director",
+        Regions = {"Vénus"},
+        Scans = 3,
+        Weapons = {"Exergis"}
+    },
+    ["Directeur de Recherche Sentient"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Directeur de Recherche Sentient",
+        HealthTypes = {
+            ["Armure en Ferrite"] = 100,
+            ["Bouclier"] = 1200,
+            ["Chair"] = 1750
+        },
+        Icon = nil,
+        Image = "SentientResearchDirector.png",
+        Introduced = "24.2",
+        Link = nil,
+        Name = "Directeur de Recherche Sentient",
+        NameEN = "Sentient Research Director",
+        Regions = {"Vénus"},
+        Scans = 3,
+        Weapons = {"Supra Vandal"}
+    },
     ["Drahk"] = {
         Affinity = 50,
         BaseLevel = 1,
@@ -893,9 +956,7 @@ local EnemyData = {
         Capacities = nil,
         Faction = "Infesté",
         Family = "Larve",
-        HealthTypes = {
-            ["Infesté"] = 20
-        },
+        HealthTypes = {["Infesté"] = 20},
         Icon = nil,
         Image = "250px-Larve.png",
         Introduced = "15.5",
@@ -1298,7 +1359,7 @@ local EnemyData = {
         Link = nil,
         Name = "Rampant Nauséeux",
         NameEN = "Nauseous Crawler",
-        Regions = {"Venus", "Terre", "Mars", "Jupiter", "Saturne", "Eris"},
+        Regions = {"Vénus", "Terre", "Mars", "Jupiter", "Saturne", "Eris"},
         Scans = 20,
         Weapons = nil
     },
