@@ -987,7 +987,7 @@ local EnemyData = {
             ["Proto-Bouclier"] = 500,
             ["Robot"] = 800
         },
-        Image = "IcemireHyena.png",
+        Image = "RabblebackHyena.png",
         Introduced = "24.0",
         Link = nil,
         Name = "Hyena Rabbleback",
