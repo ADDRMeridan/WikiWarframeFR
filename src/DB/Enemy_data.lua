@@ -123,6 +123,24 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = nil
     },
+    ["Aquila Vapos"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Aquila",
+        HealthTypes = {["Armure en Alliage"] = 500, ["Robot"] = 1000},
+        Image = "VaposAquila.png",
+        Icon = nil,
+        Introduced = "25.0",
+        Link = nil,
+        Name = "Aquila Vapos",
+        NameEN = "Vapos Aquila",
+        Regions = {"Jupiter"},
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = {"Tourelle Laser"}
+    },
     ["Artilleuse Lourde"] = {
         Affinity = 500,
         BaseLevel = 8,
@@ -545,6 +563,23 @@ local EnemyData = {
         Scans = 5,
         Weapons = {"Grakatas Jumeaux"}
     },
+    ["Éviscérateur Gyre"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Éviscérateur",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 400},
+        Image = "GyreEviscerator.png",
+        Icon = nil,
+        Introduced = "27.0",
+        Link = nil,
+        Name = "Éviscérateur Gyre",
+        NameEN = "Gyre Eviscerator",
+        Regions = {"Proxima de Saturne"},
+        Scans = 5,
+        Weapons = {"Grakatas Jumeaux"}
+    },
     ["Éviscérateur Kosma"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -689,6 +724,24 @@ local EnemyData = {
         Scans = 5,
         SpawnLevel = nil,
         Weapons = {"Grakata", "Sheev"}
+    },
+    ["Hellion Dargyn-Blindé"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Hellion Dargyn-Blindé",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 300},
+        Icon = nil,
+        Image = "GrnSkiffMissileShield.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Hellion Dargyn-Blindé",
+        NameEN = "Shield-Hellion Dargyn",
+        Regions = {"Uranus"},
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = nil
     },
     ["Homme d'Équipage"] = {
         Affinity = 57.13,
@@ -1538,6 +1591,23 @@ local EnemyData = {
         Name = "Suppresseur Exo",
         NameEN = "Exo Supressor",
         Regions = {"Proxima du Voile"},
+        Scans = 5,
+        Weapons = {"Lance-glace"}
+    },
+    ["Suppresseur Gyre"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Suppresseur",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 500},
+        Icon = nil,
+        Image = "GyreSupressor.png",
+        Introduced = "27.0",
+        Link = nil,
+        Name = "Suppresseur Gyre",
+        NameEN = "Gyre Supressor",
+        Regions = {"Proxima de Saturne"},
         Scans = 5,
         Weapons = {"Lance-glace"}
     },
