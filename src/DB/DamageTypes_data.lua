@@ -3,7 +3,7 @@ local DamageTypes = {
         -- physical damage types
         ["Impact"] = {
             Positives = {
-                {"Bouclier", 50}, {"Machine", 25}, {"Proto-Bouclier", 25}
+                {"Bouclier", 50}, {"Machines", 25}, {"Proto-Bouclier", 25}
             },
             Negatives = {
                 {"Chair", 25}, {"Chair Clonée", 25}, {"Bouclier Tenno", 25}
@@ -49,7 +49,7 @@ local DamageTypes = {
         ["Électrique"] = {
             ColorBorder = "#5f04b4",
             ColorBackground = "#b8a3cc",
-            Positives = {{"Machine", 50}, {"Robot", 50}},
+            Positives = {{"Machines", 50}, {"Robot", 50}},
             Negatives = {{"Armure en Alliage", 50}, {"Bouclier Tenno", 25}},
             Status = {"Chaine Electrique", "Immobilisation"},
             StatusNotes = {1, 2}
@@ -68,7 +68,7 @@ local DamageTypes = {
             ColorBorder = "#578808",
             ColorBackground = "#bccca3",
             Positives = {{"Chair", 50}, {"Armure en Ferrite", 25}},
-            Negatives = {{"Machine", 25}, {"Robot", 25}, {"Fossilisé", 50}},
+            Negatives = {{"Machines", 25}, {"Robot", 25}, {"Fossilisé", 50}},
             Bypass = {"Bouclier", "Proto-Bouclier", "Bouclier Tenno"},
             BypassNotes = {5},
             Status = {"Empoisonnement"}
@@ -78,7 +78,7 @@ local DamageTypes = {
             ColorBorder = "#b45f04",
             ColorBackground = "#ccb8a3",
             Types = {"Feu", "Glace"},
-            Positives = {{"Machine", 75}, {"Fossilisé", 50}},
+            Positives = {{"Machines", 75}, {"Fossilisé", 50}},
             Negatives = {
                 {"Armure en Ferrite", 25}, {"Tendon Infesté", 50},
                 {"Bouclier Tenno", 25}
@@ -159,7 +159,7 @@ local DamageTypes = {
         ["Balistique"] = {
             Gamemode = "Empyrean",
             Positives = {
-                {"Bouclier", 50}, {"Machine", 25}, {"Proto-Bouclier", 15}
+                {"Bouclier", 50}, {"Machines", 25}, {"Proto-Bouclier", 15}
             },
             Negatives = {
                 {"Chair", 25}, {"Chair Clonée", 25}, {"Bouclier Tenno", 25}
@@ -208,7 +208,7 @@ local DamageTypes = {
             Gamemode = "Empyrean",
             ColorBorder = "#5f04b4",
             ColorBackground = "#b8a3cc",
-            Positives = {{"Machine", 50}, {"Robotique", 50}},
+            Positives = {{"Machines", 50}, {"Robotique", 50}},
             Negatives = {{"Armure en Alliage", 50}, {"Bouclier Tenno", 25}},
             Status = {"Brouillage", "Dangers Électriques"}
         },
@@ -227,7 +227,9 @@ local DamageTypes = {
             ColorBorder = "#578808",
             ColorBackground = "#bccca3",
             Positives = {{"Chair", 50}},
-            Negatives = {{"Machine", 25}, {"Robotique", 25}, {"Fossilisé", 50}},
+            Negatives = {
+                {"Machines", 25}, {"Robotique", 25}, {"Fossilisé", 50}
+            },
             Status = {"Intoxication"}
         }
     },
