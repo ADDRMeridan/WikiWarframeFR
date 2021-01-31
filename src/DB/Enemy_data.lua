@@ -179,6 +179,40 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = {"Gorgon", "Sheev"}
     },
+    ["Artilleuse Lourde Ivoire"] = {
+        Affinity = 500,
+        BaseLevel = 8,
+        Capacities = {"Onde de Choc"},
+        Faction = "Grineer",
+        Family = "Artilleuse Lourde",
+        HealthTypes = {["Armure en Ferrite"] = 500, ["Chair Clonée"] = 300},
+        Image = "EidolonMinigunBombard.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Artilleuse Lourde Ivoire",
+        NameEN = "Tusk Heavy Gunner",
+        Regions = {"Terre"},
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = {"Grattler Ivoire", "Kohmak", "Sheev"}
+    },
+    ["Artilleuse Lourde Kuva"] = {
+        Affinity = 500,
+        BaseLevel = 8,
+        Capacities = {"Onde de Choc"},
+        Faction = "Grineer",
+        Family = "Artilleuse Lourde",
+        HealthTypes = {["Armure en Ferrite"] = 500, ["Chair Clonée"] = 300},
+        Image = "KuvaHeavyGunner.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Artilleuse Lourde Kuva",
+        NameEN = "Kuva Heavy Gunner",
+        Regions = {"Forteresse Kuva"},
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = {"Drakgoon", "Sheev"}
+    },
     -- B
     ["Baptiste Fanatique"] = {
         Affinity = nil,
@@ -197,6 +231,41 @@ local EnemyData = {
         Scans = 5,
         Weapons = nil
     },
+    ["Bombardier"] = {
+        Affinity = 500,
+        BaseLevel = 4,
+        Capacities = {"Onde de Choc"},
+        Faction = "Grineer",
+        Family = "Bombardier",
+        HealthTypes = {["Armure en Alliage"] = 500, ["Chair Clonée"] = 300},
+        Image = "250px-Bombardier.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Bombardier",
+        NameEN = "Bombard",
+        Regions = {
+            "Mercure", "Terre", "Mars", "Saturne", "Uranus", "Cérès", "Sedna",
+            "Lua"
+        },
+        Scans = 3,
+        Weapons = {"Ogris", "Sheev"}
+    },
+    ["Bombardier Ivoire"] = {
+        Affinity = 500,
+        BaseLevel = 1,
+        Capacities = {"Onde de Choc"},
+        Faction = "Grineer",
+        Family = "Bombardier",
+        HealthTypes = {["Armure en Alliage"] = 500, ["Chair Clonée"] = 300},
+        Image = "Tusk Bombard.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Bombardier Ivoire",
+        NameEN = "Tusk Bombard",
+        Regions = {"Terre"},
+        Scans = 3,
+        Weapons = {"Ogris", "Sheev"}
+    },
     ["Bombardier Kuva"] = {
         Affinity = 500,
         BaseLevel = 4,
@@ -213,6 +282,54 @@ local EnemyData = {
         Regions = {"Forteresse Kuva"},
         Scans = 3,
         Weapons = {"Ogris", "Sheev"}
+    },
+    ["Bombardier Maniaque"] = {
+        Affinity = nil,
+        BaseLevel = 4,
+        Capacities = {"Téléportation"},
+        Faction = "Grineer",
+        Family = "Bombardier Maniaque",
+        HealthTypes = {["Armure en Alliage"] = 500, ["Chair Clonée"] = 1500},
+        Image = "BombardierManiaque.png",
+        Introduced = "17.0",
+        Link = nil,
+        Name = "Bombardier Maniaque",
+        NameEN = "Manic Bombard",
+        Regions = {"Uranus"},
+        Scans = 3,
+        Weapons = {"Gorgon", "Sheev"}
+    },
+    ["Bombardier Maniaque Drekar"] = {
+        Affinity = nil,
+        BaseLevel = 4,
+        Capacities = {"Téléportation"},
+        Faction = "Grineer",
+        Family = "Bombardier Maniaque",
+        HealthTypes = {["Armure en Alliage"] = 500, ["Chair Clonée"] = 1750},
+        Image = "ManicBombardDrekar.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Bombardier Maniaque Drekar",
+        NameEN = "Drekar Manic Bombard",
+        Regions = {"Uranus"},
+        Scans = 3,
+        Weapons = {"Gorgon", "Sheev"}
+    },
+    ["Bombardier Mortier Ivoire"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Bombardier Mortier",
+        HealthTypes = {["Armure en Alliage"] = 500, ["Chair Clonée"] = 300},
+        Image = "Bombardier Mortier Ivoire.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Bombardier Mortier Ivoire",
+        NameEN = "Tusk Mortar Bombard",
+        Regions = {"Terre"},
+        Scans = 3,
+        Weapons = {"Kraken", "Mortier", "Sheev"}
     },
     -- C
     ["Carnis Deimos"] = {
@@ -545,6 +662,23 @@ local EnemyData = {
         Scans = 10,
         Weapons = {"Répéteur Plasma"}
     },
+    ["Drone Scavenger"] = {
+        Affinity = 100,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        HealthTypes = {["Bouclier"] = 50, ["Robot"] = 100},
+        Image = "ScavangerOsprey.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Drone Scavenger",
+        NameEN = "Scavenger Drone",
+        Regions = {
+            "Vénus", "Mars", "Jupiter", "Neptune", "Pluton", "Europe", "Lua"
+        },
+        Scans = 10,
+        Weapons = nil
+    },
     -- E
     ["Éviscérateur Exo"] = {
         Affinity = nil,
@@ -778,6 +912,90 @@ local EnemyData = {
         Scans = 20,
         SpawnLevel = nil,
         Weapons = {"Prova"}
+    },
+    ["Hyena Cinderthresh"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Hyena",
+        HealthTypes = {
+            ["Armure en Alliage"] = 50,
+            ["Proto-Bouclier"] = 500,
+            ["Robot"] = 800
+        },
+        Image = "CinderthreshHyena.png",
+        Introduced = "24.0",
+        Link = nil,
+        Name = "Hyena Cinderthresh",
+        NameEN = "Cinderthresh Hyena",
+        Regions = {"Vénus"},
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
+    ["Hyena Gyre"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Hyena",
+        HealthTypes = {
+            ["Armure en Alliage"] = 25,
+            ["Proto-Bouclier"] = 500,
+            ["Robot"] = 800
+        },
+        Image = "GyreHyena.png",
+        Introduced = "24.0",
+        Link = nil,
+        Name = "Hyena Gyre",
+        NameEN = "Gyre Hyena",
+        Regions = {"Vénus"},
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
+    ["Hyena Icemire"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Hyena",
+        HealthTypes = {
+            ["Armure en Alliage"] = 25,
+            ["Proto-Bouclier"] = 500,
+            ["Robot"] = 800
+        },
+        Image = "IcemireHyena.png",
+        Introduced = "24.0",
+        Link = nil,
+        Name = "Hyena Icemire",
+        NameEN = "Icemire Hyena",
+        Regions = {"Vénus"},
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
+    ["Hyena Rabbleback"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Hyena",
+        HealthTypes = {
+            ["Armure en Alliage"] = 25,
+            ["Proto-Bouclier"] = 500,
+            ["Robot"] = 800
+        },
+        Image = "IcemireHyena.png",
+        Introduced = "24.0",
+        Link = nil,
+        Name = "Hyena Rabbleback",
+        NameEN = "Rabbleback Hyena",
+        Regions = {"Vénus"},
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = nil
     },
     -- I
     -- J
@@ -1021,6 +1239,23 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = nil
     },
+    ["Latcher"] = {
+        Affinity = 100,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Latcher",
+        HealthTypes = {["Armure en Ferrite"] = 100, ["Machines"] = 1},
+        Image = "Latcher.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Latcher",
+        NameEN = "Latcher",
+        Regions = nil,
+        Scans = 10,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
     ["Lieutenant Lech Kril"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -1050,7 +1285,7 @@ local EnemyData = {
         Capacities = nil,
         Faction = "Grineer",
         Family = "Marteleur Ivoire",
-        HealthTypes = {["Armure en Alliage"] = 100, ["Machine"] = 3000},
+        HealthTypes = {["Armure en Alliage"] = 100, ["Machines"] = 3000},
         Icon = nil,
         Image = "Marteleur_Ivoire.png",
         Introduced = "24.6",
@@ -1068,7 +1303,7 @@ local EnemyData = {
         Capacities = nil,
         Faction = "Grineer",
         Family = "Marteleur Ivoire",
-        HealthTypes = {["Armure en Alliage"] = 100, ["Machine"] = 4000},
+        HealthTypes = {["Armure en Alliage"] = 100, ["Machines"] = 4000},
         Icon = nil,
         Image = "Marteleur_Taureau_Ivoire.png",
         Introduced = "24.6",
@@ -1086,7 +1321,7 @@ local EnemyData = {
         Capacities = nil,
         Faction = "Grineer",
         Family = "Marteleur Ivoire",
-        HealthTypes = {["Armure en Alliage"] = 100, ["Machine"] = 5000},
+        HealthTypes = {["Armure en Alliage"] = 100, ["Machines"] = 5000},
         Icon = nil,
         Image = "Marteleur_Doma_Ivoire.png",
         Introduced = "24.6",
@@ -1169,6 +1404,28 @@ local EnemyData = {
         Scans = 5,
         SpawnLevel = nil,
         Weapons = {"Torid"}
+    },
+    ["Meute Hyena"] = {
+        Affinity = 1500,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Hyena",
+        HealthTypes = {
+            ["Armure en Alliage"] = 25,
+            ["Proto-Bouclier"] = 1000,
+            ["Robot"] = 800
+        },
+        Icon = "HyenaPack_sigil.png",
+        Image = "HyenaPack.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Meute Hyena",
+        NameEN = "Hyena Pack",
+        Regions = {"Neptune"},
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = nil
     },
     ["MOA à Canon Électrique"] = {
         Affinity = 114.25,
@@ -1436,6 +1693,76 @@ local EnemyData = {
         Scans = 20,
         Weapons = nil
     },
+    ["Roller"] = {
+        Affinity = 100,
+        BaseLevel = 10,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Roller",
+        HealthTypes = {["Armure en Ferrite"] = 100, ["Machines"] = 40},
+        Image = "RollingDroneAvatar.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Roller",
+        NameEN = "Roller",
+        Regions = {
+            "Mars", "Saturne", "Uranus", "Cérès", "Sedna", "Le Néant",
+            "Deimos"
+        },
+        Scans = 10,
+        Weapons = nil
+    },
+    ["Roller Ivoire"] = {
+        Affinity = 100,
+        BaseLevel = 10,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Roller",
+        HealthTypes = {["Armure en Ferrite"] = 100, ["Machines"] = 60},
+        Image = "EidolonRollingDrone.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Roller Ivoire",
+        NameEN = "Tusk Roller",
+        Regions = {"Terre"},
+        Scans = 10,
+        Weapons = nil
+    },
+    ["Roller Kuva"] = {
+        Affinity = 100,
+        BaseLevel = 10,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Roller",
+        HealthTypes = {["Armure en Ferrite"] = 100, ["Machines"] = 40},
+        Image = "KuvaRoller.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Roller Kuva",
+        NameEN = "Kuva Roller",
+        Regions = {"Forteresse Kuva"},
+        Scans = 10,
+        Weapons = nil
+    },
+    ["Roller Sentinelle"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Roller Sentinelle",
+        HealthTypes = {
+            ["Armure en Ferrite"] = 100,
+            ["Machines"] = 200
+        },
+        Image = "RollerTurret.png",
+        Introduced = "18.10",
+        Link = nil,
+        Name = "Roller Sentinelle",
+        NameEN = "Roller Sentry",
+        Regions = nil,
+        Scans = 10,
+        Weapons = nil
+    },
     ["Ropalolyste"] = {
         Affinity = nil,
         BaseLevel = 17,
@@ -1539,7 +1866,7 @@ local EnemyData = {
         Faction = "Grineer",
         Family = nil,
         HealthTypes = {
-            ["Machine"] = 100,
+            ["Machines"] = 100,
             ["Armure en Ferrite"] = 50,
             ["Bouclier"] = 50
         },
@@ -1645,6 +1972,27 @@ local EnemyData = {
         Regions = nil,
         Scans = 20,
         Weapons = {"Répéteur Plasma"}
+    },
+    ["Tyl Regor"] = {
+        Affinity = 1500,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Tyl Regor",
+        HealthTypes = {
+            ["Armure en Alliage"] = 250,
+            ["Bouclier"] = 800,
+            ["Chair Clonée"] = 3000,
+        },
+        Icon = "TylRegor_sigil.png",
+        Image = "NewTylRegor.png",
+        Introduced = "5.0",
+        Link = nil,
+        Name = "Tyl Regor",
+        NameEN = "Tyl Regor",
+        Regions = {"Uranus"},
+        Scans = 3,
+        Weapons = {"Ack & Brunt", "Knux"}
     },
     -- U
     -- V
