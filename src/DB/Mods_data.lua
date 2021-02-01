@@ -18,7 +18,8 @@ local ModData = {
             Transmutable = false
         },
         ["Absorption de Souche"] = {
-            Image = "Absorption_de_Souche.jpg",
+            Image = "Absorption_de_Souche.png",
+            Introduced = "24.2",
             Name = "Absorption de Souche",
             NameEN = "Strain Consume",
             Polarity = "Naramon",
@@ -45,11 +46,12 @@ local ModData = {
             Set = "Augure",
             Transmutable = false
         },
-        ["Accélérant Flash"] = {
+        ["Poudre Flash"] = {
             Archived = true,
             AugmentType = 'Warframe',
-            Image = "Accélérant_Flash.png",
-            Name = "Accélérant Flash",
+            Image = "Poudre_Flash.png",
+            Introduced = "TSG",
+            Name = "Poudre Flash",
             NameEN = "Flash Accelerant",
             Polarity = "Zenurik",
             Rarity = "Rare",
@@ -90,6 +92,7 @@ local ModData = {
         },
         ["Acier Flamboyant"] = {
             Image = "Acier Flamboyant.png",
+            Introduced = "15.0",
             Name = "Acier Flamboyant",
             NameEN = "Blazing Steel",
             Polarity = "Madurai",
@@ -460,6 +463,7 @@ local ModData = {
         },
         ["Virtuose de l'Arch-Fusil"] = {
             Image = "Virtuose de l'Arch-Fusil.png",
+            Introduced = "24.2",
             Name = "Virtuose de l'Arch-Fusil",
             NameEN = "Archgun Ace",
             Polarity = "Madurai",
@@ -1790,7 +1794,7 @@ local ModData = {
             Transmutable = false
         },
         ["Convulsion"] = {
-            Image = "ConvulsionModU145.png",
+            Image = "Convulsion.png",
             Name = "Convulsion",
             NameEN = "Convulsion",
             Polarity = "Naramon",
@@ -2333,7 +2337,7 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Inhabituel",
             Transmutable = false,
-            Traits = {"AURA", "NARAMON"}
+            Traits = {"AURA"}
         },
         ["Détection de Vulnérabilité"] = {
             AugmentType = 'Compagnon',
@@ -3313,7 +3317,7 @@ local ModData = {
             Transmutable = false
         },
         ["Froid Pénétrant"] = {
-            Image = "DeepFreezeModU161.png",
+            Image = "Froid Pénétrant.png",
             Name = "Froid Pénétrant",
             NameEN = "Deep Freeze",
             Polarity = "Vazarin",
@@ -4383,7 +4387,7 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Rare",
             Transmutable = false,
-            Traits = {"AURA", "NARAMON"}
+            Traits = {"AURA"}
         },
         ["Lames de la Vérité"] = {
             AugmentType = 'Arme',
@@ -6055,7 +6059,7 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Inhabituel",
             Transmutable = false,
-            Traits = {"AURA", "NARAMON"}
+            Traits = {"AURA"}
         },
         ["Prolongement"] = {
             Image = "Prolongement.jpg",
@@ -6338,7 +6342,7 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Inhabituel",
             Transmutable = false,
-            Traits = {"AURA", "NARAMON"}
+            Traits = {"AURA"}
         },
         ["Radiance Immolante"] = {
             AugmentType = 'Warframe',
@@ -6801,7 +6805,7 @@ local ModData = {
             NameEN = "Rifle Scavenger",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Traits = {"AURA", "MUNITIONS", "NARAMON"}
+            Traits = {"AURA", "MUNITIONS"}
         },
         ["Vrille Glaciale"] = {
             Image = "Vrille Glaciale.png",
@@ -6915,7 +6919,7 @@ local ModData = {
             NameEN = "Shotgun Scavenger",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Traits = {"AURA", "MUNITIONS", "NARAMON"}
+            Traits = {"AURA", "MUNITIONS"}
         },
         ["Récupérateur de Pistolet"] = {
             Image = "Récupérateur de Pistolet.png",
@@ -6923,7 +6927,7 @@ local ModData = {
             NameEN = "Pistol Scavenger",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Traits = {"AURA", "MUNITIONS", "NARAMON"}
+            Traits = {"AURA", "MUNITIONS"}
         },
         ["Récupération Blindée"] = {
             Image = "ArmoredRecovery.png",
@@ -7190,12 +7194,15 @@ local ModData = {
             Transmutable = false
         },
         ["Recherche"] = {
-            Image = "Recherche.png‎",
+            Image = "Recherche.png",
+            Introduced = "14.0",
             Link = "Recherche (Mod)",
             Name = "Recherche",
             NameEN = "Scavenge",
             Polarity = "Penjaga",
-            Rarity = "Commun"
+            Rarity = "Commun",
+            Traits = {"COMPAGNON", "BETE"},
+            Transmutable = true
         },
         ["Scie à Os"] = {
             AugmentType = 'Arme',
@@ -7360,11 +7367,14 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Inhabituel",
             Transmutable = false,
-            Traits = {"AURA", "NARAMON"}
+            Traits = {"AURA"}
         },
-        ["Shield Transference"] = {
-            Image = "ShieldTransference2.png",
-            Name = "",
+        ["Transfert de Bouclier"] = {
+            Archived = true,
+            AugmentType = 'Warframe',
+            Image = nil,
+            Introduced = "15.6",
+            Name = "Transfert de Bouclier",
             NameEN = "Shield Transference",
             Polarity = "Zenurik",
             Rarity = "Rare",
@@ -7481,7 +7491,7 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Inhabituel",
             Transmutable = false,
-            Traits = {"AURA", "NARAMON"}
+            Traits = {"AURA"}
         },
         ["Planche Tueuse"] = {
             Image = "Planche Tueuse.png",
@@ -7519,7 +7529,7 @@ local ModData = {
             NameEN = "Sniper Scavenger",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Traits = {"AURA", "MUNITIONS", "NARAMON"}
+            Traits = {"AURA", "MUNITIONS"}
         },
         ["Attaque Ascendante"] = {
             Image = "Attaque Ascendante.png",
@@ -7555,6 +7565,7 @@ local ModData = {
         },
         ["Sourcier de l'Augure"] = {
             Image = "Sourcier_de_l'Augure.jpg",
+            Introduced = "22.0",
             Name = "Sourcier de l'Augure",
             NameEN = "Augur Seeker",
             Polarity = "Madurai",
@@ -7632,7 +7643,7 @@ local ModData = {
             NameEN = "Sprint Boost",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Traits = {"AURA", "NARAMON"}
+            Traits = {"AURA"}
         },
         ["Regard Vif"] = {
             Image = "Regard Vif.png",
@@ -8192,9 +8203,9 @@ local ModData = {
             Transmutable = false,
             NameEN = "Energizing Shot"
         },
-        ["Tireur qualifié"] = {
+        ["Tireur Qualifié"] = {
             Image = "Tireur Qualifié.png",
-            Name = "Tireur qualifié",
+            Name = "Tireur Qualifié",
             NameEN = "Sharpshooter",
             Introduced = "23.10",
             Polarity = "Naramon",
@@ -8326,6 +8337,7 @@ local ModData = {
         ["Transfert d'Énergie"] = {
             AugmentType = 'Warframe',
             Image = "Transfert_d'Énergie.png",
+            Introduced = "22.17.3",
             Name = "Transfert d'Énergie",
             NameEN = "Energy Transfer",
             Polarity = "Zenurik",
@@ -8815,12 +8827,12 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Bombe Plongeante Vortex"] = {
+        ["Vortex Plongeant"] = {
             Archived = true,
             AugmentType = 'Warframe',
             Image = nil,
             Introduced = "15.0",
-            Name = "Bombe Plongeante Vortex",
+            Name = "Vortex Plongeant",
             NameEN = "Divebomb Vortex",
             Polarity = "Zenurik",
             Rarity = "Rare",
@@ -9132,7 +9144,7 @@ local ModData = {
             Rarity = "Inhabituel",
             Transmutable = false,
             Introduced = "10",
-            Traits = {"AURA", "NARAMON"}
+            Traits = {"AURA"}
         },
         ["Magnétisme Martial"] = {
             Image = "",
@@ -9577,12 +9589,19 @@ local ModData = {
             Transmutable = false
         },
         ["Pacte des Serfs"] = {
+            Archived = false,
             AugmentType = 'Warframe',
+            Family = nil,
             Image = "Pacte des Serfs.png",
+            Introduced = "29.5",
             Name = "Pacte des Serfs",
             NameEN = "Thrall Pact",
             Polarity = "Zenurik",
+            PvP = false,
             Rarity = "Rare",
+            Set = nil,
+            Stance = false,
+            Traits = {"AUGMENT_WARFRAME"},
             Transmutable = false
         },
         ["Surcharge Critique"] = {
@@ -9721,6 +9740,14 @@ local ModData = {
             NameEN = "Necramech Deflection",
             Polarity = "Vazarin",
             Rarity = "Commun",
+            Transmutable = false
+        },
+        ["Marque de la Bête"] = {
+            Image = "Marque de la Bête.png",
+            Name = "Marque de la Bête",
+            NameEN = "Mark of the Beast",
+            Polarity = "Naramon",
+            Rarity = "Rare",
             Transmutable = false
         }
     },
@@ -9935,8 +9962,7 @@ local ModData = {
             Name = "Feu Frénétique",
             Warframe = "Ember",
             Ability = "Boule de Feu"
-        },
-        {Name = "Accélérant Flash", Warframe = "Ember", Ability = "Poudre"},
+        }, {Name = "Poudre Flash", Warframe = "Ember", Ability = "Poudre"},
         {Name = "Peur du Feu", Warframe = "Ember", Ability = "Souffle de Feu"},
         {Name = "Monde en Fer", Warframe = "Ember", Ability = "Monde en Feu"},
         {
@@ -10152,7 +10178,11 @@ local ModData = {
             Ability = "Polarisation"
         },
         {Name = "Atteinte Épuisante", Warframe = "Mag", Ability = "Attraction"},
-        -- Mesa
+        {
+            Name = "Transfert de Bouclier",
+            Warframe = "Mag",
+            Ability = "Polarisation"
+        }, -- Mesa
         {
             Name = "Cible Balistique",
             Warframe = "Mesa",
@@ -10396,8 +10426,9 @@ local ModData = {
             Warframe = "Zephyr",
             Ability = "Vent Contraire"
         }, {Name = "Courant-Jet", Warframe = "Zephyr", Ability = "Turbulence"},
-        {Name = "Tourbillons", Warframe = "Zephyr", Ability = "Tornades"}, {
-            Name = "Bombe Plongeante Vortex",
+        {Name = "Tourbillons", Warframe = "Zephyr", Ability = "Tornades"},
+        {
+            Name = "Vortex Plongeant",
             Warframe = "Zephyr",
             Ability = "Bombe Plongeante"
         }
