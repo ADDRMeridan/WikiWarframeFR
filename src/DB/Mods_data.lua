@@ -833,9 +833,10 @@ local ModData = {
             Name = "Bond Calculé",
             NameEN = "Calculated Spring",
             Polarity = "Naramon",
+            PvP = true,
             Rarity = "Inhabituel",
             Transmutable = false,
-            Traits = {"CONCLAVE_UTIL"}
+            Traits = {"CONCLAVE_UTIL", "WARFRAME", "+%SANTE"}
         },
         ["Bord Dentelé"] = {
             Image = "Bord_Dentelé.png",
@@ -1832,7 +1833,8 @@ local ModData = {
             Name = "Coup Perforant",
             NameEN = "Piercing Hit",
             Polarity = "Naramon",
-            Rarity = "Commun"
+            Rarity = "Commun",
+            Traits = {"+%PERFORATION", "FUSIL"}
         },
         ["Coup Voltaïque"] = {
             Image = "Coup Voltaïque.png",
@@ -2150,7 +2152,8 @@ local ModData = {
             Name = "Durabilité Améliorée",
             NameEN = "Enhanced Durability",
             Polarity = "Vazarin",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"+%SANTE", "ARCHWING"}
         },
         ["DynaMiter"] = {
             AugmentType = 'Arme',
@@ -2648,6 +2651,7 @@ local ModData = {
             NameEN = "Breach Loader",
             Polarity = "Naramon",
             Rarity = "Rare",
+            Traits = {"+%PERFORATION", "POMPE"},
             Transmutable = false
         },
         ["Fantôme"] = {
@@ -3064,7 +3068,8 @@ local ModData = {
             Name = "Fléchette",
             NameEN = "Flechette",
             Polarity = "Naramon",
-            Rarity = "Commun"
+            Rarity = "Commun",
+            Traits = {"+%PERFORATION", "POMPE"}
         },
         ["Focus Critique"] = {
             Image = "Focus_Critique.jpg",
@@ -3149,6 +3154,7 @@ local ModData = {
             NameEN = "Quasar Drill",
             Polarity = "Naramon",
             Rarity = "Rare",
+            Traits = {"+%PERFORATION", "ARCHFUSIL"},
             Transmutable = false
         },
         ["Forge Ensanglantée"] = {
@@ -3248,14 +3254,15 @@ local ModData = {
             NameEN = "Rending Strike",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"NIGHTMARE", "MELEE"}
+            Traits = {"NIGHTMARE", "MELEE", "+%PERFORATION"}
         },
         ["Frappe Fracassante"] = {
             Image = "SunderingStrikeModU145.png",
             Name = "Frappe Fracassante",
             NameEN = "Sundering Strike",
             Polarity = "Naramon",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"+%PERFORATION", "MELEE"},
         },
         ["Frappe Spoliante"] = {
             AugmentType = 'Warframe',
@@ -3289,6 +3296,7 @@ local ModData = {
             NameEN = "Auger Strike",
             Polarity = "Naramon",
             Rarity = "Rare",
+            Traits = {"+%PERFORATION", "MELEE"},
             Transmutable = false
         },
         ["Frappe de Fièvre"] = {
@@ -3925,7 +3933,9 @@ local ModData = {
             Name = "Munitions Empalantes",
             NameEN = "Impaler Munitions",
             Polarity = "Madurai",
+            PvP = true,
             Rarity = "Inhabituel",
+            Traits = {"+%PERFORATION", "SECONDAIRE"},
             Transmutable = false
         },
         ["Offensive Impénétrable"] = {
@@ -4506,7 +4516,8 @@ local ModData = {
             Name = "Lien de Vie",
             NameEN = "Link Health",
             Polarity = "Vazarin",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"+%SANTE", "COMPAGNON"}
         },
         ["Paratonnerre"] = {
             Image = "Paratonnerre.png",
@@ -5269,7 +5280,8 @@ local ModData = {
             Name = "Nébuleuse Perçante",
             NameEN = "Nebula Bore",
             Polarity = "Naramon",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"+%PERFORATION", "ARCHMELEE"},
         },
         ["Négation"] = {
             AugmentType = 'Compagnon',
@@ -5449,7 +5461,8 @@ local ModData = {
             Name = "Pas Perçant",
             NameEN = "Piercing Step",
             Polarity = "Naramon",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"+%PERFORATION", "WARFRAME"},
         },
         ["Passe-Partout"] = {
             Image = "Passe-Partout.png",
@@ -5525,6 +5538,7 @@ local ModData = {
             NameEN = "Bore",
             Polarity = "Naramon",
             Rarity = "Rare",
+            Traits = {"+%PERFORATION", "SECONDAIRE"},
             Transmutable = false
         },
         ["Perche de Fer"] = {
@@ -5570,7 +5584,7 @@ local ModData = {
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
             Transmutable = false,
-            Traits = {"AURA", "VAZARIN"}
+            Traits = {"AURA", "+%SANTE"}
         },
         ["Phénix de Fer"] = {
             Image = "PhoenixdeFerU14.png",
@@ -5587,6 +5601,7 @@ local ModData = {
             NameEN = "Piercing Caliber",
             Polarity = "Naramon",
             Rarity = "Rare",
+            Traits = {"+%PERFORATION", "FUSIL"},
             Transmutable = false
         },
         ["Pillage Ardent"] = {
@@ -6821,9 +6836,10 @@ local ModData = {
             Name = "Cartouches Déchirantes",
             NameEN = "Ripper Rounds",
             Polarity = "Madurai",
+            PvP = true,
             Rarity = "Inhabituel",
             Transmutable = false,
-            Traits = {"CONCLAVE", "FUSIL"}
+            Traits = {"CONCLAVE", "FUSIL", "+%PERFORATION"}
         },
         ["Ris"] = {
             Image = "Ris.png",
@@ -7032,7 +7048,7 @@ local ModData = {
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
             Transmutable = false,
-            Traits = {"AURA", "VAZARIN"}
+            Traits = {"AURA"}
         },
         ["Résolution du Gladiateur"] = {
             Image = "Résolution_du_Gladiateur.jpg",
@@ -7042,6 +7058,7 @@ local ModData = {
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
             Set = "Gladiateur",
+            Traits = {"WARFRAME", "+%SANTE"},
             Transmutable = false
         },
         ["Résonance"] = {
@@ -7129,7 +7146,8 @@ local ModData = {
             Name = "Sans Retour",
             NameEN = "No Return",
             Polarity = "Naramon",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"+%PERFORATION", "SECONDAIRE"},
         },
         ["Atteinte Épuisante"] = {
             AugmentType = 'Warframe',
@@ -7314,9 +7332,10 @@ local ModData = {
             Name = "Bordures Dentelées",
             NameEN = "Serrated Edges",
             Polarity = "Madurai",
+            PvP = true,
             Rarity = "Inhabituel",
+            Traits = {"CONCLAVE", "MELEE", "+%PERFORATION"},
             Transmutable = false,
-            Traits = {"CONCLAVE", "MELEE"}
         },
         ["Cartouches Dentelées"] = {
             Image = "Cartouches Dentelées.png",
@@ -7420,9 +7439,10 @@ local ModData = {
             Name = "Tir Déchiquetant",
             NameEN = "Shred Shot",
             Polarity = "Madurai",
+            PvP = true,
             Rarity = "Inhabituel",
-            Transmutable = false,
-            Traits = {"CONCLAVE", "POMPE"}
+            Traits = {"CONCLAVE", "POMPE", "+%PERFORATION"},
+            Transmutable = false
         },
         ["Déchiqueteur"] = {
             Image = "Déchiqueteur.png",
@@ -7554,7 +7574,7 @@ local ModData = {
             NameEN = "Accelerated Blast",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"NIGHTMARE", "POMPE"}
+            Traits = {"NIGHTMARE", "POMPE", "+%PERFORATION"}
         },
         ["Souffrances Continues"] = {
             Image = "Souffrances_Continues.jpg",
@@ -8606,21 +8626,24 @@ local ModData = {
             NameEN = "Blood For Life"
         },
         ["Vigueur"] = {
+            Family = "Vigueur",
             Image = "Vigueur.png",
             Name = "Vigueur",
             NameEN = "Vigor",
             Introduced = "9.5",
             Polarity = "Vazarin",
             Rarity = "Rare",
-            Traits = {"NIGHTMARE", "WARFRAME"}
+            Traits = {"NIGHTMARE", "WARFRAME", "+%SANTE"}
         },
         ["Vigueur Accrue"] = {
+            Family = "Vigueur",
             Image = "Vigueur Accrue.jpg",
             Name = "Vigueur Accrue",
             NameEN = "Primed Vigor",
             Introduced = "19.5.6.1",
             Polarity = "Vazarin",
             Rarity = "Légendaire",
+            Traits = {"+%SANTE", "WARFRAME"},
             Transmutable = false
         },
         ["Vigueur du Vigile"] = {
@@ -8709,11 +8732,13 @@ local ModData = {
             Traits = {"CONCLAVE_UTIL"}
         },
         ["Vitalité"] = {
+            Family = "Vitalité",
             Image = "Vitalité.png",
             Name = "Vitalité",
             NameEN = "Vitality",
             Polarity = "Vazarin",
-            Rarity = "Commun"
+            Rarity = "Commun",
+            Traits = {"+%SANTE", "WARFRAME"}
         },
         ["Vitalité Améliorée"] = {
             Image = "VitalitéAméliorée.png",
@@ -8721,15 +8746,17 @@ local ModData = {
             NameEN = "Enhanced Vitality",
             Polarity = "Vazarin",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON"}
+            Traits = {"COMPAGNON", "+%SANTE"}
         },
         ["Vitalité Umbra"] = {
+            Family = "Vitalité",
             Image = "Vitalité Umbra.png",
             Name = "Vitalité Umbra",
             NameEN = "Umbral Vitality",
             Polarity = "Umbra",
             Rarity = "Légendaire",
             Set = "Umbra",
+            Traits = {"+%SANTE", "WARFRAME"},
             Transmutable = false
         },
         ["Vitesse Choquante"] = {
@@ -9308,6 +9335,7 @@ local ModData = {
             NameEN = "Necramech Vitality",
             Polarity = "Vazarin",
             Rarity = "Commun",
+            Traits = {"+%SANTE", "NECRAMECH"},
             Transmutable = false
         },
         ["Atteinte du Necramech"] = {
@@ -9557,6 +9585,7 @@ local ModData = {
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
             Set = "Saxum",
+            Traits = {"WARFRAME", "+%SANTE"},
             Transmutable = false
         },
         ["Synovie Saxum"] = {
@@ -9654,7 +9683,7 @@ local ModData = {
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
             Set = "Jugulus",
-            Traits = {"+%ARMURE", "+%SANTE", "WARFRAME"},
+            Traits = {"+%ARMURE", "+%SANTE", "WARFRAME", "+%PERFORATION"},
             Transmutable = false
         },
         ["Dard Carnis"] = {
