@@ -54,8 +54,8 @@ local EnemyData = {
             ["Bouclier"] = 500,
             ["Armure en Alliage"] = 150
         },
-        Image = "Ambulas3.png",
         Icon = "Ambulas sigil.png",
+        Image = "Ambulas3.png",
         Introduced = "6.0",
         Link = nil,
         Name = "Ambulas",
@@ -63,6 +63,26 @@ local EnemyData = {
         Regions = {"Pluton"},
         Scans = 3,
         SpawnLevel = 45,
+        Weapons = nil
+    },
+    ["Ambulas Terra"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Ambulas",
+        HealthTypes = {
+            ["Armure en Ferrite"] = 150,
+            ["Bouclier"] = 500,
+            ["Robot"] = 1500
+        },
+        Image = "Ambulas_Terra.png",
+        Introduced = "24.2",
+        Link = nil,
+        Name = "Ambulas Terra",
+        NameEN = "Terra Ambulas",
+        Regions = {"Vénus"},
+        Scans = 3,
         Weapons = nil
     },
     ["Ancien Corrompu"] = {
@@ -380,6 +400,59 @@ local EnemyData = {
         Scans = 3,
         Weapons = {"Tonkor", "Manticore"}
     },
+    ["Conseiller Vay Hek"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Family = "Conseiller Vay Hek",
+        Faction = "Grineer",
+        HealthTypes = {["Armure en Ferrite"] = 225, ["Machines"] = 1800},
+        Icon = "VeyHek_sigil.png",
+        Image = "VayHekPortrait.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Conseiller Vay Hek",
+        NameEN = "Councilor Vay Hek",
+        Regions = {"Terre"},
+        Scans = 3,
+        Weapons = nil
+    },
+    ["Conseiller Vay Hek - Armure Terra"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Family = "Conseiller Vay Hek",
+        Faction = "Grineer",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Machines"] = 2000},
+        Image = "VayHek2.png",
+        Introduced = nil,
+        Link = "Conseiller Vay Hek",
+        Name = "Conseiller Vay Hek - Armure Terra",
+        NameEN = "Vay Hek Terra Frame",
+        Regions = {"Terre"},
+        Scans = 3,
+        Weapons = nil
+    },
+    ["Contre-MOA Terra"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Family = "Contre-MOA",
+        Faction = "Corpus",
+        HealthTypes = {
+            ["Armure en Ferrite"] = 0,
+            ["Bouclier"] = 0,
+            ["Robot"] = 0
+        },
+        Image = nil,
+        Introduced = "24.0",
+        Link = nil,
+        Name = "Contre-MOA Terra",
+        NameEN = "Terra Anti MOA",
+        Regions = {"Vénus"},
+        Scans = 5,
+        Weapons = nil
+    },
     ["Coutelas Pillard Exo"] = {
         Affinity = 150,
         BaseLevel = 1,
@@ -619,6 +692,7 @@ local EnemyData = {
         BaseLevel = 1,
         Capacities = nil,
         Faction = "Corpus",
+        Family = "Drone d'Attaque",
         HealthTypes = {["Robot"] = 250, ["Bouclier"] = 75},
         Image = "FusionDroneDE.png",
         Icon = nil,
@@ -651,6 +725,7 @@ local EnemyData = {
         BaseLevel = 1,
         Capacities = nil,
         Faction = "Corpus",
+        Family = "Drone d'Attaque",
         HealthTypes = {["Robot"] = 250, ["Bouclier"] = 75},
         Image = "Drone d'Attaque Terra.png",
         Icon = nil,
@@ -667,6 +742,7 @@ local EnemyData = {
         BaseLevel = 1,
         Capacities = nil,
         Faction = "Corpus",
+        Family = "Drone Scavenger",
         HealthTypes = {["Bouclier"] = 50, ["Robot"] = 100},
         Image = "ScavangerOsprey.png",
         Introduced = nil,
@@ -680,6 +756,22 @@ local EnemyData = {
         Weapons = nil
     },
     -- E
+    ["Embatteur MOA Terra"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Embatteur MOA Terra",
+        HealthTypes = {["Bouclier"] = 600, ["Robot"] = 600},
+        Image = "Embatteur_MOA_Terra.png",
+        Introduced = "24.0",
+        Link = nil,
+        Name = "Embatteur MOA Terra",
+        NameEN = "Terra Embattor MOA",
+        Regions = {"Vénus"},
+        Scans = 3,
+        Weapons = nil
+    },
     ["Éviscérateur Exo"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -1000,7 +1092,7 @@ local EnemyData = {
     -- I
     -- J
     ["Jackal"] = {
-        Affinity = 1713.75,
+        Affinity = 1500,
         BaseLevel = 1,
         Capacities = nil,
         Faction = "Corpus",
@@ -1010,15 +1102,36 @@ local EnemyData = {
             ["Proto-Bouclier"] = 2000,
             ["Robot"] = 1500
         },
-        Image = "Jackal_2020.png",
         Icon = "Jackal sigil.png",
+        Image = "Jackal_2020.png",
         Introduced = "Vanilla",
         Link = nil,
         Name = "Jackal",
         NameEN = "Jackal",
         Regions = {"Vénus"},
         Scans = 3,
-        SpawnLevel = nil,
+        SpawnLevel = 8,
+        Weapons = {"Mitrailleuses Lourdes"}
+    },
+    ["Jackal Terra"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Jackal",
+        HealthTypes = {
+            ["Armure en Alliage"] = 100,
+            ["Proto-Bouclier"] = 3000,
+            ["Robot"] = 3000
+        },
+        Image = nil,
+        Introduced = "24.0",
+        Link = nil,
+        Name = "Jackal Terra",
+        NameEN = "Terra Jackal",
+        Regions = {"Vénus"},
+        Scans = 3,
+        SpawnLevel = 19,
         Weapons = {"Mitrailleuses Lourdes"}
     },
     ["Jugulus Deimos"] = {
@@ -1040,6 +1153,22 @@ local EnemyData = {
         Weapons = nil
     },
     -- K
+    ["Kavat Sauvage"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Non-affilié",
+        Family = "Kavat Sauvage",
+        HealthTypes = {["Armure en Ferrite"] = 175, ["Chair"] = 300},
+        Image = "FeralCatbrow.png",
+        Introduced = "18.5",
+        Link = nil,
+        Name = "Kavat Sauvage",
+        NameEN = "Feral Kavat",
+        Regions = {"Deimos"},
+        Scans = 20,
+        Weapons = nil
+    },
     ["Kubrow Sauvage"] = {
         Affinity = 50,
         BaseLevel = 1,
@@ -1267,8 +1396,8 @@ local EnemyData = {
             ["Bouclier"] = 400,
             ["Chair Clonée"] = 4000
         },
-        Image = "LechKril.png",
         Icon = "LechKril_sigil.png",
+        Image = "LechKril.png",
         Introduced = nil,
         Link = nil,
         Name = "Lieutenant Lech Kril",
@@ -1277,6 +1406,22 @@ local EnemyData = {
         Scans = 3,
         SpawnLevel = 13,
         Weapons = {"Gorgon", "Brokk"}
+    },
+    ["Loup de Saturne Six"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Non-affilié",
+        Family = "Loup de Saturne Six",
+        HealthTypes = {["Armure en Alliage"] = 200, ["Machines"] = 1500},
+        Image = "Loup de Saturne Six Sentient.png",
+        Introduced = "24.3",
+        Link = nil,
+        Name = "Loup de Saturne Six",
+        NameEN = "Wolf of Saturn Six",
+        Regions = nil,
+        Scans = 3,
+        Weapons = {"Marteau du Loup"}
     },
     -- M
     ["Marteleur Ivoire"] = {
@@ -1447,6 +1592,24 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = {"Canon Électrique"}
     },
+    ["MOA à Canon Électrique Terra"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "MOA à Canon Électrique",
+        HealthTypes = {["Bouclier"] = 0, ["Robot"] = 0},
+        Image = nil,
+        Icon = nil,
+        Introduced = "24.0",
+        Link = nil,
+        Name = "MOA à Canon Électrique Terra",
+        NameEN = "Terra Railgun MOA",
+        Regions = {"Vénus"},
+        Scans = 10,
+        SpawnLevel = nil,
+        Weapons = {"Canon Électrique"}
+    },
     ["MOA Corrompu"] = {
         Affinity = 200,
         BaseLevel = 1,
@@ -1487,7 +1650,76 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = {"Spores Infestées"}
     },
+    ["MOA Onde de Choc"] = {
+        Affinity = 200,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "MOA Onde de Choc",
+        HealthTypes = {["Bouclier"] = 150, ["Robot"] = 60},
+        Image = "MoaShockwave.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "MOA Onde de Choc",
+        NameEN = "Shockwave MOA",
+        Regions = {
+            "Vénus", "Mars", "Neptune", "Pluton", "Europe", "Deimos", "Lua"
+        },
+        Scans = 5,
+        Weapons = nil
+    },
+    ["MOA Onde de Choc Terra"] = {
+        Affinity = 200,
+        BaseLevel = 15,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "MOA Onde de Choc",
+        HealthTypes = {["Bouclier"] = 200, ["Robot"] = 200},
+        Image = "TerraShockwaveMOA.png",
+        Introduced = "24.0",
+        Link = nil,
+        Name = "MOA Onde de Choc Terra",
+        NameEN = "Terra Shockwave MOA",
+        Regions = {"Vénus"},
+        Scans = 5,
+        Weapons = nil
+    },
+    ["MOA Terra"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "MOA",
+        HealthTypes = {["Bouclier"] = 150, ["Robot"] = 60},
+        Image = "MOA_Terra.png",
+        Introduced = "24.0",
+        Link = nil,
+        Name = "MOA Terra",
+        NameEN = "Terra MOA",
+        Regions = {"Vénus"},
+        Scans = 10,
+        Weapons = nil
+    },
     -- N
+    ["Nox"] = {
+        Affinity = 500,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Nox",
+        HealthTypes = {["Armure en Alliage"] = 250, ["Chair Clonée"] = 350},
+        Image = "NoxTemp.png",
+        Introduced = "21.0",
+        Link = nil,
+        Name = "Nox",
+        NameEN = "Nox",
+        Regions = {
+            "Mercure", "Terre", "Saturne", "Cérès", "Sedna", "Le Néant",
+            "Deimos"
+        },
+        Scans = 3,
+        Weapons = nil
+    },
     -- O
     ["Officier Gokstad Kosma"] = {
         Affinity = 500,
@@ -1506,6 +1738,42 @@ local EnemyData = {
         Scans = 3,
         SpawnLevel = nil,
         Weapons = {"Karak Wraith"}
+    },
+    ["Osprey Oxium Terra"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Osprey Oxium",
+        HealthTypes = {
+            ["Armure en Ferrite"] = 0,
+            ["Bouclier"] = 0,
+            ["Robot"] = 0
+        },
+        Image = nil,
+        Introduced = "24.0",
+        Link = nil,
+        Name = "Osprey Oxium Terra",
+        NameEN = "Terra Oxium Osprey",
+        Regions = {"Vénus"},
+        Scans = 5,
+        Weapons = nil
+    },
+    ["Osprey Protecteur Terra"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Osprey Protecteur",
+        HealthTypes = {["Bouclier"] = 50, ["Robot"] = 35},
+        Image = "TerraShieldOsprey.png",
+        Introduced = "24.0",
+        Link = nil,
+        Name = "Osprey Protecteur Terra",
+        NameEN = "Terra Shield Osprey",
+        Regions = {"Vénus"},
+        Scans = 5,
+        Weapons = nil
     },
     ["Osprey Sangsue"] = {
         Affinity = 100,
@@ -1562,6 +1830,23 @@ local EnemyData = {
         Weapons = nil
     },
     -- P
+    ["Phorid"] = {
+        Affinity = 3500,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Phorid",
+        HealthTypes = {["Armure en Ferrite"] = 25, ["Fossilisé"] = 5000},
+        Icon = "Phorid_sigil.png",
+        Image = "PhoridDE2.png",
+        Introduced = "6.0",
+        Link = nil,
+        Name = "Phorid",
+        NameEN = "Phorid",
+        Regions = nil,
+        Scans = 3,
+        Weapons = nil
+    },
     ["Pillard Exo"] = {
         Affinity = 150,
         BaseLevel = 1,
@@ -1598,12 +1883,28 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = {"Stubba"}
     },
+    ["Prélat Zéloïde"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Prélat Zéloïde",
+        HealthTypes = {["Infesté"] = 11000},
+        Image = "ZealoidPrelate.png",
+        Introduced = "25.7.7",
+        Link = nil,
+        Name = "Prélat Zéloïde",
+        NameEN = "Zealoid Prelate",
+        Regions = {"Deimos"},
+        Scans = 3,
+        Weapons = {"Pathocyst"}
+    },
     ["Prosélyte Fanatique"] = {
         Affinity = nil,
         BaseLevel = 1,
         Capacities = nil,
         Faction = "Infesté",
-        Family = "Fanatique",
+        Family = "Prosélyte Fanatique",
         HealthTypes = {["Tendon Infesté"] = 200, ["Chair Infestée"] = 1200},
         Image = "Prosélyte_Fanatique.png",
         Icon = nil,
@@ -1635,8 +1936,48 @@ local EnemyData = {
         Scans = 20,
         Weapons = nil
     },
-    ["Raknoïde Thermique"] = {
+    ["Raknoïde Kyta"] = {
+        Affinity = 1500,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Raknoïde Kyta",
+        HealthTypes = {
+            ["Armure en Alliage"] = 150,
+            ["Proto-Bouclier"] = 10000,
+            ["Robot"] = 4000
+        },
+        Image = "Raknoid Kyta.png",
+        Introduced = "24.0",
+        Link = nil,
+        Name = "Raknoïde Kyta",
+        NameEN = "Kyta Raknoid",
+        Regions = {"Vénus"},
+        Scans = 3,
+        Weapons = nil
+    },
+    ["Raknoïde Mite"] = {
         Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Raknoïde Mite",
+        HealthTypes = {
+            ["Armure en Ferrite"] = 0,
+            ["Bouclier"] = 0,
+            ["Robot"] = 0
+        },
+        Image = "MiteRaknoid.png",
+        Introduced = "24.0",
+        Link = nil,
+        Name = "Raknoïde Mite",
+        NameEN = "Mite Raknoid",
+        Regions = {"Vénus"},
+        Scans = 5,
+        Weapons = nil
+    },
+    ["Raknoïde Réfrigérant"] = {
+        Affinity = 300,
         BaseLevel = 1,
         Capacities = nil,
         Faction = "Corpus",
@@ -1644,16 +1985,35 @@ local EnemyData = {
         HealthTypes = {
             ["Robot"] = 100,
             ["Armure en Alliage"] = 250,
-            ["Proto Bouclier"] = 2000
+            ["Proto-Bouclier"] = 2000
         },
-        Image = "Raknoïde_Réfrigérant.png",
         Icon = nil,
-        Introduced = "24.6",
+        Image = "Raknoïde_Réfrigérant.png",
+        Introduced = "24.4",
         Link = nil,
-        Name = "Raknoïde Thermique",
-        NameEN = "Thermic Raknoid",
-        Regions = {"Vallée Orbis"},
+        Name = "Raknoïde Réfrigérant",
+        NameEN = "Coolant Raknoid",
+        Regions = {"Vénus"},
         Scans = 5,
+        SpawnLevel = 50,
+        Weapons = nil
+    },
+    ["Raknoïde Scyto"] = {
+        Affinity = 1000,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Raknoïde Scyto",
+        HealthTypes = {["Robot"] = 5000, ["Armure en Alliage"] = 200},
+        Icon = nil,
+        Image = "Raknoïde_Scyto.png",
+        Introduced = "24.0",
+        Link = nil,
+        Name = "Raknoïde Réfrigérant",
+        NameEN = "Scyto Raknoid",
+        Regions = {"Vénus"},
+        Scans = 3,
+        SpawnLevel = nil,
         Weapons = nil
     },
     ["Rampant Nauséeux"] = {
@@ -1691,6 +2051,26 @@ local EnemyData = {
             "Saturne", "Uranus", "Neptune", "Pluton", "Eris", "Sedna"
         },
         Scans = 20,
+        Weapons = nil
+    },
+    ["Raptor SX Terra"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Raptor SX",
+        HealthTypes = {
+            ["Armure en Ferrite"] = 50,
+            ["Bouclier"] = 1000,
+            ["Robot"] = 750
+        },
+        Image = "Raptor SX Terra.png",
+        Introduced = "24.0",
+        Link = nil,
+        Name = "Raptor SX Terra",
+        NameEN = "Terra Raptor SX",
+        Regions = {"Vénus"},
+        Scans = 3,
         Weapons = nil
     },
     ["Roller"] = {
@@ -1750,10 +2130,7 @@ local EnemyData = {
         Capacities = nil,
         Faction = "Grineer",
         Family = "Roller Sentinelle",
-        HealthTypes = {
-            ["Armure en Ferrite"] = 100,
-            ["Machines"] = 200
-        },
+        HealthTypes = {["Armure en Ferrite"] = 100, ["Machines"] = 200},
         Image = "RollerTurret.png",
         Introduced = "18.10",
         Link = nil,
@@ -1982,7 +2359,7 @@ local EnemyData = {
         HealthTypes = {
             ["Armure en Alliage"] = 250,
             ["Bouclier"] = 800,
-            ["Chair Clonée"] = 3000,
+            ["Chair Clonée"] = 3000
         },
         Icon = "TylRegor_sigil.png",
         Image = "NewTylRegor.png",
@@ -1996,6 +2373,25 @@ local EnemyData = {
     },
     -- U
     -- V
+    ["Voltigeur"] = {
+        Affinity = 35,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Voltigeur",
+        HealthTypes = {["Infesté"] = 100},
+        Image = "Sauteur.png",
+        Introduced = nil,
+        Name = "Voltigeur",
+        NameEN = "Leaper",
+        Regions = {
+            "Mercure", "Vénus", "Terre", "Mars", "Jupiter", "Saturne",
+            "Uranus", "Neptune", "Cérès", "Éris", "Sedna", "Europe",
+            "Phobos", "Deimos"
+        },
+        Scans = 30,
+        Weapons = nil
+    },
     -- W
     -- X
     -- Y
