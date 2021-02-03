@@ -15,7 +15,15 @@ function p.tooltipEnd() return '</div></div>' end
 
 function p.tooltipImageStart(img)
 
-    return '<div class="Tooltip_imgbox">[[File:' .. img .. ']]'
+    local ret = {}
+    table.insert(ret, '<div class="Tooltip_imgbox">[[File:')
+    if (img == nil) then
+        table.insert(ret, 'Panel.png')
+    else
+        table.insert(ret, img)
+    end
+    table.insert(ret, ']]')
+    return table.concat(ret)
 end
 
 function p.tooltipImageEnd() return '</div>' end
