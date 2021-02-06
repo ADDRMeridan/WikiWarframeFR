@@ -46,6 +46,18 @@ local function getAbilityList(Warframe)
     end
 end
 
+local function getCostType(ability)
+
+    local ret = "Energie"
+    if (ability.Cooldown ~= nil) then
+        ret = "Cooldown"
+    elseif (ability.CostType ~= nil) then
+        ret = ability.CostType
+    end
+
+    return ret
+end
+
 function p.getValue(frame)
     local abiName = frame.args ~= nil and frame.args[1] or nil
     local valName = frame.args ~= nil and frame.args[2] or nil
@@ -62,7 +74,14 @@ function p._getValue(abiName, valName, frame)
         if (upVal == 'ARCHIVED') then
             ret = ability.Archived
         elseif (upVal == "COST") then
-            ret = ability.Cost
+            local costType = getCostType(ability)
+            if (costType == "Cooldown") then
+                ret = ability.Cooldown
+            else
+                ret = ability.Cost
+            end
+        elseif (upVal == "COSTTYPE") then
+            ret = getCostType(ability)
         elseif (upVal == "DESCRIPTION") then
             ret = frame:preprocess(ability.Description)
         elseif (upVal == "ICON") then
