@@ -825,6 +825,53 @@ local AbilityData = {
             User = "Khora",
             UserType = "Warframe"
         },
+
+        -- Lavos
+        ["Morsure Ophidienne"] = {
+            Cooldown = 8,
+            Cost = nil,
+            Key = 1,
+            Description = "Frappez avec une attaque serpentine toxique qui consomme la cible pour soigner Lavos. Maintenez pour imprégner de {{Poison|text}} tous les Pouvoirs.",
+            Image = "OphidianBiteModx256.png",
+            Name = "Morsure Ophidienne",
+            Icon = "OphidianBite130xWhite.png",
+            User = "Lavos",
+            UserType = "Warframe"
+        },
+        ["Piège de Cristal"] = {
+            Cooldown = 5,
+            Cost = nil,
+            Key = 2,
+            Description = "Foncez en avant, écrasant les ennemis et laissant une traînée glacée de cristaux brisés. Maintenez pour imprégner de {{Glace|text}} le prochain Pouvoir.<br/><br/>'''Temps de recharge :''' 5 secondes",
+            Image = "VialRushModx256.png",
+            Name = "Piège de Cristal",
+            Icon = "VialRush130xWhite.png",
+            User = "Lavos",
+            UserType = "Warframe"
+        },
+        ["Sonde de Transmutation"] = {
+            Cooldown = 10,
+            Cost = nil,
+            Key = 3,
+            Description = "Lancez une sonde qui convertit les Orbes de Santé et d'Énergie en Orbes Universels qui fournissent les deux et les ramassages de munitions en ramassages universels de munitions. La sonde donne une décharge aux ennemis à proximité. Chaque ennemi électrocuté réduit le temps de recharge d'un autre Pouvoir d'une seconde. Maintenez pour imprégner d'{{Électrique}} Électricité le prochain Pouvoir lancé.<br/><br/>'''Temps de recharge :''' 10 secondes",
+            Image = "TransmutationProbeModx256.png",
+            Name = "Sonde de Transmutation",
+            Icon = "TransmutationProbe130xWhite.png",
+            User = "Lavos",
+            UserType = "Warframe"
+        },
+        ["Catalyseur"] = {
+            Cooldown = 30,
+            Cost = nil,
+            Key = 4,
+            Description = "Des Sondes catalytiques jaillissent de Lavos et aspergent les combattants d'un gel brûlant. Les Dégâts sont doublés pour chaque élément affectant un ennemi. Maintenez pour imprégner de {{Feu|text}} le prochain Pouvoir lancé.<br/><br/>'''Temps de recharge :''' 30 secondes",
+            Image = "CatalyzeModx256.png",
+            Name = "Catalyseur",
+            Icon = "Catalyze130xWhite.png",
+            User = "Lavos",
+            UserType = "Warframe"
+        },
+
         -- Limbo
         ["Exil"] = {
             Cost = 25,
@@ -2320,6 +2367,10 @@ local AbilityData = {
         },
         ["Ivara"] = {"Carquois", "Navigatrice", "Maraude", "Arc d'Artémis"},
         ["Khora"] = {"Fouet Acéré", "Ronce de Fer", "Venari", "Cage de Fer"},
+        ["Lavos"] = {
+            "Morsure Ophidienne", "Piège de Cristal", "Sonde de Transmutation",
+            "Catalyseur"
+        },
         ["Limbo"] = {"Exil", "Stase", "Déferlement Dimensionnel", "Cataclysme"},
         ["Loki"] = {
             "Leurre", "Invisibilité", "Transposition", "Désarmement Radial"
