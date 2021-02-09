@@ -556,13 +556,13 @@ function p._Manuf(manufName, color, text, imagesize)
     end
 end
 
-function p._Void(voidItemName)
+function p._Void(voidItemName, noText)
 
     local ret = {}
     local iconSize = 'x32px'
     local icon = IconData["Void"][voidItemName]
     if (icon ~= nil) then
-        table.insert(ret, icon.Name)
+        if (not noText) then table.insert(ret, icon.Name) end
         table.insert(ret, ' [[File:')
         table.insert(ret, icon.Icon)
         table.insert(ret, '|')

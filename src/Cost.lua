@@ -1,10 +1,10 @@
--- Source initiale: https://warframe.fandom.com/wiki/Module:Cost
--- Entierement transformer par ADDRMeridan
+-- Author: ADDRMeridan
 -- Me contacter en cas d'erreur
 local p = {}
 
 local ResearchData = mw.loadData("Module:Research/data")
 local DropsData = mw.loadData("Module:DropTables/data")
+local PetModule = require('Module:Pet')
 local WeaponModule = require('Module:Weapons')
 local WarframeModule = require('Module:Warframes')
 local Icon = require("Module:Icon")
@@ -13,19 +13,7 @@ local Shared = require("Module:Shared")
 local Void = require("Module:Void")
 local TT = require('Module:Tooltip')
 
--- String constant
-local mainHeader =
-    '{| class="foundrytable" style="float:left;margin:auto"\n!colspan=6|Pré-requis de [[Fonderie|Fabrication]]'
-local primeText =
-    "<span style=\"text-align: justify; display: block; line-height: initial; padding: 10px;\">Lith / Meso / Neo / Axi font référence aux [[Reliques du Néant]]<br><br>'''([[Soute Prime|V]])''' marque les reliques retirées en [[Soute Prime]], mais pouvant toujours être jouées, échangées par ceux qui les possèdent<br><br>'''([[Baro Ki%27Teer|B]])''' marque les reliques exclusives de [[Baro Ki%27Teer]]</span>"
-local componentStart = '\n| rowspan="2" style="height:50px; width:50px;" |'
-local smallPart = '\n| style="text-align:left; padding: 0em 0.25em;" |'
-local lowRow = '\n| colspan="3" |<small>'
-local subHeader = '\n| colspan="6" style="background-color:' ..
-                      Shared.getBgColor() .. '; font-weight: bold;" |'
-local clanLine =
-    '<small>[[File:LeaderBadgeFantômeHolo.png|x26px|link=Clan#Niveaux de Clan|Clan Fantôme]] [[Clan#Multiplicateur de Niveau de Clan|<span title="Multiplicateur de Niveau de Clan">x1</span>]] &nbsp; [[File:LeaderBadgeOmbreHolo.png|x26px|link=Clan#Niveaux de Clan|Clan Ombre]] [[Clan#Multiplicateur de Niveau de Clan|<span title="Multiplicateur de Niveau de Clan">x3</span>]] &nbsp; [[File:LeaderBadgeTempêteHolo.png|x26px|link=Clan#Niveaux de Clan|Clan Tempête]] [[Clan#Multiplicateur de Niveau de Clan|<span title="Multiplicateur de Niveau de Clan">x10</span>]] &nbsp; [[File:LeaderBadgeMontagneHolo.png|x26px|link=Clan#Niveaux de Clan|Clan Montagne]] [[Clan#Multiplicateur de Niveau de Clan|<span title="Multiplicateur de Niveau de Clan">x30</span>]] &nbsp; [[File:LeaderBadgeLuneHolo.png|x26px|link=Clan#Niveaux de Clan|Clan Lune]] [[Clan#Multiplicateur de Niveau de Clan|<span title="Multiplicateur de Niveau de Clan">x100</span>]]</small>'
-
+-- Utilitaire Recherchem a voir pour deplacer dans un nouveau module:Research dans le futur
 function p.getLabLink(factionName, whiteText)
     if (ResearchData["Labs"][factionName] == nil) then
         if (whiteText ~= nil and whiteText) then
@@ -55,374 +43,317 @@ function p.isResearch(itemName)
     return false, nil
 end
 
-local function buildItemText(Item)
-    if (Item == nil) then return " " end
+-- =============================
+--   COSTBOX
+-- =============================
+local function getItemCost(itemType, itemName)
 
-    local lowerLine = nil
-    if (Item.Text == nil) then
-        lowerLine = Shared.formatnum(Item.Count)
-    else
-        lowerLine = Item.Text
-    end
-
-    if (Item.Type == "Ressource" or Item.Type == nil) then
-        return Icon._Ressource(Item.Name, nil, 'x32') .. "<br/>" .. lowerLine
-    elseif (Item.Type == "Objet") then
-        return Icon._Item(Item.Name, nil, 'x32') .. "<br/>" .. lowerLine
-    elseif (Item.Type == "Partie Prime") then
-        return Icon._Prime(Item.Name .. " Prime", nil, 'x32') .. "<br/>" ..
-                   lowerLine
-    elseif (Item.Type == "Arme") then
-        local itemWeapon = WeaponModule.getWeapon(Item.Name)
-        if (itemWeapon.Image ~= nil) then
-            return '[[File:' .. itemWeapon.Image .. '|36px|link=' ..
-                       itemWeapon.Name .. ']]<br/>' .. lowerLine
-        else
-            return "[MISSING IMAGE: " .. Item.Name .. "]<br/>" .. lowerLine
+    local switchArray = {
+        ["Pet"] = function(itemName)
+            local ret = PetModule.getPet(itemName)
+            if (ret ~= nil) then ret = ret.Cost end
+            return ret
+        end,
+        ["Warframe"] = function(itemName)
+            local ret = WarframeModule.getWarframe(itemName)
+            if (ret ~= nil) then ret = ret.Cost end
+            return ret
+        end,
+        ["Weapon"] = function(itemName)
+            local ret = WeaponModule.getWeapon(itemName)
+            if (ret ~= nil) then ret = ret.Cost end
+            return ret
         end
-    end
+    }
+    local ret = switchArray[itemType]
+    if (ret ~= nil) then ret = ret(itemName) end
+
+    return ret
 end
 
-local function buildComponentsLine(creditCost, partsArray, craftTime, rushCost,
-                                   preReq)
+local function buildPartText(part)
+
+    local iconSize = 'x32px'
+    local switchIconArray = {
+        ["Arme"] = function()
+            local tmpWeapon = WeaponModule.getWeapon(part.Name)
+            local tmp = {'[[File:'}
+            if (tmpWeapon.Image ~= nil) then
+                table.insert(tmp, tmpWeapon.Image)
+            else
+                table.insert(tmp, Shared.getDefaultImg())
+            end
+            table.insert(tmp, '|')
+            table.insert(tmp, iconSize)
+            table.insert(tmp, '|link=')
+            table.insert(tmp, part.Name)
+            table.insert(tmp, ']]')
+            return table.concat(tmp)
+        end,
+        ["Objet"] = Icon._Item(part.Name, nil, iconSize),
+        ["Partie Prime"] = Icon._Void(string.upper(
+                                          Shared.removeFRAccent(part.Name)),
+                                      true),
+        ["Ressource"] = Icon._Ressource(part.Name, nil, iconSize)
+    }
+    local ret = {}
+    if (part.Type == nil) then
+        ret = {switchIconArray["Ressource"], Shared.formatnum(part.Count)}
+    else
+        ret = {switchIconArray[part.Type], Shared.formatnum(part.Count)}
+    end
+    return table.concat(ret, '<br/>')
+end
+
+local function buildPartsLine(creditCost, partsArray, craftTime, rushCost,
+                              preReq)
 
     local primeParts = {}
-    -- Adding Credit cost cell
-    local foundryTable = componentStart .. Icon._Item("Crédits") .. "<br/>"
+    local ret = {'\n|-'}
+    local partStart = '\n| rowspan="2" style="height:50px; width:50px;" | '
+    local partsLineEnd = '\n| style="text-align:left; padding: 0em 0.25em;" | '
+
+    -- Credit cell
+    table.insert(ret, partStart)
+    table.insert(ret, Icon._Item("Crédits"))
+    table.insert(ret, '<br/>')
     if (creditCost ~= nil) then
-        foundryTable = foundryTable .. Shared.formatnum(creditCost)
+        table.insert(ret, Shared.formatnum(creditCost))
     else
-        foundryTable = foundryTable .. 'N/A'
+        table.insert(ret, 'N/A')
     end
-    -- Adding parts cell
+    -- Parts cells
     for i = 1, 4 do
-        foundryTable = foundryTable .. componentStart ..
-                           buildItemText(partsArray[i])
-        -- Updating prime list
-        if (partsArray[i] ~= nil and partsArray[i].Type == "Partie Prime") then
-            if (primeParts[partsArray[i].Name] == nil) then
-                primeParts[partsArray[i].Name] = 1
+        table.insert(ret, partStart)
+        local part = partsArray[i]
+        if (part ~= nil) then
+            table.insert(ret, buildPartText(part))
+            -- Update prime parts list
+            if (part.Type == "Partie Prime") then
+                table.insert(primeParts, part)
             end
         end
     end
-    -- Adding craft time
-    foundryTable = foundryTable .. smallPart .. "Temps : "
+    -- Crafting time cell
+    table.insert(ret, partsLineEnd)
+    table.insert(ret, 'Temps: ')
     if (craftTime ~= nil) then
-        foundryTable = foundryTable .. craftTime .. " h"
+        table.insert(ret, craftTime)
+        table.insert(ret, ' h')
     else
-        foundryTable = foundryTable .. 'N/A'
+        table.insert(ret, 'N/A')
     end
-    -- Adding rush cost or preRequesite
-    foundryTable = foundryTable .. '\n|-' .. smallPart
+    -- Rush/preRequesite cell
+    table.insert(ret, '\n|-')
+    table.insert(ret, partsLineEnd)
     if (rushCost ~= nil) then
-        if (rushCost == 0) then
-            foundryTable = foundryTable .. 'Rush: N/A'
+        if (rushCost <= 0) then
+            table.insert(ret, 'Rush: N/A')
         else
-            foundryTable = foundryTable .. 'Rush: ' ..
-                               Icon._Item("Platinum", nil, 20) .. ' ' ..
-                               rushCost
+            table.insert(ret, 'Rush: ')
+            table.insert(ret, rushCost)
+            table.insert(ret, Icon._Item("Platinum"))
         end
-    elseif (preReq ~= nil) then
+    elseif (preReq) then
         if (preReq == "N/A") then
-            foundryTable = foundryTable .. 'Préreq: N/A'
+            table.insert(ret, 'Préreq: N/A')
         else
-            foundryTable = foundryTable .. 'Préreq: [[' .. preReq .. ']]'
+            table.insert(ret, 'Préreq: [[')
+            table.insert(ret, preReq)
+            table.insert(ret, ']]')
         end
-    else
-        foundryTable = foundryTable .. 'N/A'
     end
 
-    return foundryTable, primeParts
+    return table.concat(ret), primeParts
 end
 
 local function buildMarketLine(marketCost, bpCost, bpStanding)
 
-    local foundryTable = lowRow .. Icon._Item("Marché", "text", 22) .. ': '
+    local iconSize = "x22px"
+    local marketRow = '\n| colspan="3" |<small>'
+    local ret = {
+        '\n|-', marketRow, Icon._Item("Marché", "text", iconSize), ': '
+    }
+
+    -- Achat direct Marche
     if (marketCost ~= nil) then
-        foundryTable = foundryTable .. Icon._Item("Platinum", nil, 20) ..
-                           marketCost
+        table.insert(ret, Shared.formatnum(marketCost))
+        table.insert(ret, Icon._Item("Platinum", nil, iconSize))
     else
-        foundryTable = foundryTable .. 'N/A'
+        table.insert(ret, 'N/A')
     end
-    foundryTable = foundryTable .. '</small>'
-    foundryTable = foundryTable .. lowRow .. 'Prix ' ..
-                       Icon._Item("Schéma", "text", 22) .. ': '
+    table.insert(ret, '</small>')
+    -- Cout Schema
+    table.insert(ret, marketRow)
+    table.insert(ret, 'Prix ')
+    table.insert(ret, Icon._Item("Schéma", "text", iconSize))
+    table.insert(ret, ': ')
     if (bpCost ~= nil) then
-        foundryTable = foundryTable .. Icon._Item("Crédits", nil, 22) ..
-                           Shared.formatnum(bpCost)
+        table.insert(ret, Shared.formatnum(bpCost))
+        table.insert(ret, Icon._Item("Crédits", nil, iconSize))
     elseif (bpStanding ~= nil) then
-        foundryTable = foundryTable .. Icon._Item("Réputation", nil, 22) ..
-                           Shared.formatnum(bpStanding)
+        table.insert(ret, Shared.formatnum(bpStanding))
+        table.insert(ret, Icon._Item("Réputation", nil, iconSize))
     else
-        foundryTable = foundryTable .. 'N/A'
+        table.insert(ret, 'N/A')
     end
-    foundryTable = foundryTable .. '</small>'
+    table.insert(ret, '</small>')
 
-    return foundryTable
+    return table.concat(ret)
 end
 
-local function buildResearchTopLine(itemName, clanAff)
+local function buildCostBox(itemType, itemName, itemCost)
 
-    local foundryTable = '\n| colspan="6" |' .. itemName
-    if (clanAff ~= nil) then
-        foundryTable =
-            foundryTable .. ' • ' .. Icon._Affinity("Clan") .. " " ..
-                Shared.formatnum(clanAff)
-    end
-    return foundryTable
-end
-
-local function buildPrimeItems(primePartsArray, baseItemName)
-
-    local foundryTable = ""
-    if (Shared.tableCount(primePartsArray) > 0) then
-        local itemName = string.gsub(baseItemName, " Prime", "")
-        foundryTable = foundryTable .. '\n|-' .. subHeader
-        foundryTable = foundryTable .. 'Lieux d\'Obtention'
-        foundryTable = foundryTable .. '\n|-\n| colspan="6" |'
-        foundryTable = foundryTable ..
-                           '<div class="mw-collapsible mw-collapsed" style="text-align:center;">'
-        foundryTable = foundryTable ..
-                           '<div class="mw-collapsible-content" style="margin: 0 2%;">'
-        foundryTable = foundryTable ..
-                           '\n{| style="width:100%;"\n|-\n|Schéma||' ..
-                           Void.item({args = {"PC", itemName, "SCHEMA"}})
-        for partName, i in Shared.skpairs(primePartsArray, true) do
-            -- Manage Warframe parts
-            if (partName == "Neuroptiques" or partName == "Châssis" or partName ==
-                "Systèmes") then
-                foundryTable = foundryTable .. '\n|-\n| width="40%" |' ..
-                                   Icon._Prime(
-                                       "Schéma " .. partName .. " Prime",
-                                       "Part") .. '|| width="60%" |' ..
-                                   Void.item(
-                                       {
-                            args = {"PC", itemName, "Schéma " .. partName}
-                        })
-            else
-                foundryTable = foundryTable .. '\n|-\n|' ..
-                                   Icon._Prime(partName .. " Prime", "Part") ..
-                                   '||' ..
-                                   Void.item({args = {"PC", itemName, partName}})
+    -- CONSTANTES
+    local SUBHEADER = '\n! colspan="6" | '
+    local STARTCOLLAPSIBLE =
+        '<div class="mw-collapsible mw-collapsed" style="text-align:center;"><div class="mw-collapsible-content" style="margin: 0 2%;">'
+    -- Table Header
+    local ret = {
+        '{| class="foundrytable"\n! colspan="6" | Pré-requis de [[Fonderie|Fabrication]]'
+    }
+    -- Components Line
+    local bpCost = itemCost
+    if (itemType == "Warframe") then bpCost = itemCost.Main end
+    local tmpString, primeParts = buildPartsLine(bpCost.Credits, bpCost.Parts,
+                                                 bpCost.Time, bpCost.Rush)
+    table.insert(ret, tmpString)
+    -- Market Line
+    table.insert(ret, buildMarketLine(bpCost.MarketCost, bpCost.BPCost,
+                                      bpCost.BPStanding))
+    -- Print warframe parts
+    if (itemType == "Warframe") then
+        local switchWFPartsArray = {
+            ["Châssis"] = itemCost.Chassis,
+            ["Neuroptiques"] = itemCost.Neuro,
+            ["Systèmes"] = itemCost.System
+        }
+        for i = 1, 4 do
+            local part = bpCost.Parts[i]
+            if (part ~= nil) then
+                local partCost = switchWFPartsArray[part.Name]
+                if (partCost ~= nil) then
+                    table.insert(ret, '\n|-')
+                    table.insert(ret, SUBHEADER)
+                    table.insert(ret, part.Name)
+                    table.insert(ret, '\n|-')
+                    local tmp = buildPartsLine(partCost.Credits, partCost.Parts,
+                                               partCost.Time, partCost.Rush)
+                    table.insert(ret, tmp)
+                end
             end
         end
-        foundryTable = foundryTable .. '\n|}'
-        foundryTable = foundryTable .. '\n' .. primeText .. '</div></div>'
     end
-    return foundryTable
-end
-
-local function buildResearchLines(itemName)
-
-    local foundryTable = ""
+    -- Print Prime parts
+    if (#primeParts > 0) then
+        local iconSize = 'x32px'
+        local tmpItemName = string.gsub(itemName, " Prime", "")
+        table.insert(ret, '\n|-')
+        table.insert(ret, SUBHEADER)
+        table.insert(ret, 'Lieux d\'Obtention\n|-\n| colspan="6" |')
+        table.insert(ret, STARTCOLLAPSIBLE)
+        table.insert(ret, '\n{| style="width:100%;"\n|-\n|')
+        table.insert(ret, Icon._Item("Schéma", "text", iconSize))
+        table.insert(ret, '||')
+        table.insert(ret, Void._item(tmpItemName, "SCHEMA"))
+        for _, part in ipairs(primeParts) do
+            local upPart = string.upper(Shared.removeFRAccent(part.Name))
+            table.insert(ret, '\n|-\n|')
+            table.insert(ret, Icon._Void(upPart, false))
+            table.insert(ret, '||')
+            table.insert(ret, Void._item(tmpItemName, upPart))
+        end
+        table.insert(ret,
+                     "\n|}\n<span style=\"text-align: justify; display: block; line-height: initial; padding: 10px;\">Lith / Meso / Neo / Axi font référence aux [[Reliques du Néant]]<br><br>'''([[Soute Prime|V]])''' marque les reliques retirées en [[Soute Prime]], mais pouvant toujours être jouées, échangées par ceux qui les possèdent<br><br>'''([[Baro Ki'Teer|B]])''' marque les reliques exclusives de [[Baro Ki'Teer]]</span></div></div>")
+    end
+    -- Print research
     local isResearch, itemRes = p.isResearch(itemName)
     if (isResearch) then
-        foundryTable = foundryTable .. '\n|-' .. subHeader
-        foundryTable = foundryTable .. p.getLabLink(itemRes.Lab, true)
-        foundryTable = foundryTable .. '\n|-\n| colspan="6"|'
-        foundryTable = foundryTable ..
-                           '<div class="mw-collapsible" style="text-align:center;">'
-        foundryTable = foundryTable .. '<div class="mw-collapsible-content">'
-        foundryTable = foundryTable ..
-                           '\n{| style="width:100%;"\n|-\n| colspan="6" style="background-color:#061D40D6"|Schéma ' ..
-                           itemName
+        table.insert(ret, '\n|-')
+        table.insert(ret, SUBHEADER)
+        table.insert(ret, p.getLabLink(itemRes.Lab, true))
+        table.insert(ret, '\n|-\n| colspan="6" |')
+        table.insert(ret, STARTCOLLAPSIBLE)
+        table.insert(ret, '\n{| style="width:100%;"')
+        table.insert(ret, SUBHEADER)
+        table.insert(ret, 'Schéma ')
+        table.insert(ret, itemName)
         if (itemRes.Affinity ~= nil) then
-            foundryTable = foundryTable .. ' • ' .. Icon._Affinity("Clan") ..
-                               " " .. Shared.formatnum(itemRes.Affinity)
+            table.insert(ret, Shared.getListSep())
+            table.insert(ret, Shared.formatnum(itemRes.Affinity))
+            table.insert(ret, ' ')
+            table.insert(ret, Icon._Affinity("Clan"))
         end
-
-        foundryTable = foundryTable .. '\n|-'
-        local tmpString = buildComponentsLine(itemRes.Credits,
-                                              itemRes.Resources, itemRes.Time,
-                                              nil, itemRes.Prereq)
-        foundryTable = foundryTable .. tmpString
-
-        -- Adding differrent warframe parts if required
-        if (itemName == "Banshee" or itemName == "Nehza" or itemName == "Wukong" or
-            itemName == "Zephyr") then
-            local warframeParts = {"Neuroptiques", "Châssis", "Systèmes"}
-            for i, part in ipairs(warframeParts) do
-                local tmpName = part .. " " .. itemName
-                isResearch, itemRes = p.isResearch(tmpName)
-                if (isResearch) then
-                    foundryTable = foundryTable ..
-                                       '\n|- style="background-color:#061D40D6"'
-                    foundryTable = foundryTable ..
-                                       buildResearchTopLine(
-                                           'Schéma ' .. tmpName,
-                                           itemRes.Affinity)
-                    foundryTable = foundryTable .. '\n|-'
-                    tmpString = buildComponentsLine(itemRes.Credits,
-                                                    itemRes.Resources,
-                                                    itemRes.Time, nil,
-                                                    itemRes.Prereq)
-                    foundryTable = foundryTable .. tmpString
-                    foundryTable = foundryTable .. '\n|-'
-                    foundryTable = foundryTable .. '\n| colspan="6"|'
-                    foundryTable = foundryTable .. 'Prix duplication ' ..
-                                       Icon._Item("Schéma", "text", 22) .. ': ' ..
-                                       Icon._Item("Crédits", nil, 22) ..
-                                       Shared.formatnum(15000)
+        table.insert(ret, '\n|-')
+        local tmpResearchLine = buildPartsLine(itemRes.Credits,
+                                               itemRes.Resources, itemRes.Time,
+                                               nil, itemRes.Prereq)
+        table.insert(ret, tmpResearchLine)
+        table.insert(ret, '\n|-\n| colspan="6" |<small>Prix duplication ')
+        table.insert(ret, Icon._Item("Schéma", "text", "x22px"))
+        table.insert(ret, ': ')
+        table.insert(ret, Shared.formatnum(15000))
+        table.insert(ret, Icon._Item("Crédits", nil, "x22px"))
+        table.insert(ret, '</small>')
+        if (itemType == "Warframe") then
+            local wfParts = {"Neuroptiques", "Châssis", "Systèmes"}
+            for _, part in ipairs(wfParts) do
+                local tmpRschName = part .. ' ' .. itemName
+                local tmpIsResearch, tmpItemRes = p.isResearch(tmpRschName)
+                if (tmpIsResearch) then
+                    table.insert(ret, '\n|-')
+                    table.insert(ret, SUBHEADER)
+                    table.insert(ret, tmpRschName)
+                    if (tmpItemRes.Affinity ~= nil) then
+                        table.insert(ret, Shared.getListSep())
+                        table.insert(ret, Shared.formatnum(tmpItemRes.Affinity))
+                        table.insert(ret, ' ')
+                        table.insert(ret, Icon._Affinity("Clan"))
+                    end
+                    table.insert(ret, '\n|-')
+                    tmpResearchLine = buildPartsLine(tmpItemRes.Credits,
+                                                     tmpItemRes.Resources,
+                                                     tmpItemRes.Time, nil,
+                                                     tmpItemRes.Prereq)
+                    table.insert(ret, tmpResearchLine)
+                    table.insert(ret,
+                                 '\n|-\n| colspan="6" |<small>Prix duplication ')
+                    table.insert(ret, Icon._Item("Schéma", "text", "x22px"))
+                    table.insert(ret, ': ')
+                    table.insert(ret, Shared.formatnum(15000))
+                    table.insert(ret, Icon._Item("Crédits", nil, "x22px"))
+                    table.insert(ret, '</small>')
                 end
             end
         end
-        -- Adding notes about clan sizes
-        foundryTable = foundryTable .. '\n|-\n| colspan = 6 |'
-        foundryTable = foundryTable .. clanLine .. '\n|}</div></div>'
+        table.insert(ret,
+                     '\n|-\n| colspan = 6 |<small>[[File:LeaderBadgeFantômeHolo.png|x26px|link=Clan#Niveaux de Clan|Clan Fantôme]] [[Clan#Multiplicateur de Niveau de Clan|<span title="Multiplicateur de Niveau de Clan">x1</span>]] &nbsp; [[File:LeaderBadgeOmbreHolo.png|x26px|link=Clan#Niveaux de Clan|Clan Ombre]] [[Clan#Multiplicateur de Niveau de Clan|<span title="Multiplicateur de Niveau de Clan">x3</span>]] &nbsp; [[File:LeaderBadgeTempêteHolo.png|x26px|link=Clan#Niveaux de Clan|Clan Tempête]] [[Clan#Multiplicateur de Niveau de Clan|<span title="Multiplicateur de Niveau de Clan">x10</span>]] &nbsp; [[File:LeaderBadgeMontagneHolo.png|x26px|link=Clan#Niveaux de Clan|Clan Montagne]] [[Clan#Multiplicateur de Niveau de Clan|<span title="Multiplicateur de Niveau de Clan">x30</span>]] &nbsp; [[File:LeaderBadgeLuneHolo.png|x26px|link=Clan#Niveaux de Clan|Clan Lune]] [[Clan#Multiplicateur de Niveau de Clan|<span title="Multiplicateur de Niveau de Clan">x100</span>]]</small>')
+        table.insert(ret, '\n|}</div></div>')
     end
-    return foundryTable
+
+    table.insert(ret, '\n|}')
+    return table.concat(ret)
 end
 
-function p.buildWeaponCostBox(frame)
-    local WeaponName = frame.args ~= nil and frame.args[1] or frame
-    local Weapon = WeaponModule.getWeapon(WeaponName)
+function p.getCostBox(frame)
 
-    if (Weapon == nil) then
-        return "ERROR: " .. WeaponName .. " not found"
-    elseif (Weapon.Cost == nil) then
-        return "ERROR: " .. WeaponName .. " does not have Cost data"
+    local itemType = frame.args ~= nil and frame.args.type or nil
+    local itemName = frame.args ~= nil and frame.args[1] or nil
+
+    local ret = nil
+    if (itemType ~= nil and itemName ~= nil) then
+        local itemCost = getItemCost(itemType, itemName)
+        if (itemCost == nil) then
+            ret = Shared.printModuleError(
+                      itemName .. " n'a pas de données 'Cost' (type " ..
+                          itemType .. ")", 'Cost.buildCostBox')
+        else
+            ret = buildCostBox(itemType, itemName, itemCost)
+        end
+    else
+        ret = Shared.printModuleError("Appel incorrect.", 'Cost.getCostBox')
     end
-
-    if (Weapon.Cost.Parts ~= nil) then
-        local wpCost = Weapon.Cost
-        local primeParts = {}
-        -- Table style
-        local foundryTable = mainHeader
-        -- Schema cost
-        foundryTable = foundryTable .. '\n|-'
-        local tmpString, primeParts = buildComponentsLine(wpCost.Credits,
-                                                          wpCost.Parts,
-                                                          wpCost.Time,
-                                                          wpCost.Rush)
-        foundryTable = foundryTable .. tmpString
-        -- Adding Market cost
-        foundryTable = foundryTable .. '\n|-'
-        tmpString = buildMarketLine(wpCost.MarketCost, wpCost.BPCost,
-                                    wpCost.BPStanding)
-        foundryTable = foundryTable .. tmpString
-
-        -- Adding Prime drop locations
-        if (Shared.tableCount(primeParts) > 0) then
-            foundryTable = foundryTable ..
-                               buildPrimeItems(primeParts, Weapon.Name)
-        end
-
-        -- Adding Research costs
-        foundryTable = foundryTable .. buildResearchLines(Weapon.Name)
-
-        foundryTable = foundryTable ..
-                           '\n|}<div style="clear:left; margin:0; padding:0;"></div>' --[[Category:Automatic Cost Table]]
-
-        return foundryTable
-    end
-end
-
-function p.getResourceCostRows(frame)
-    local ResName = frame.args ~= nil and frame.args[1] or frame
-    local Weapons = WeaponModule.getWeapons(function() return true end)
-    local result = ""
-
-    for key, weap in Shared.skpairs(Weapons) do
-        -- Adding Research costs if needed
-        local resNum = 0
-        local mainNum = 0
-        if (weap.Cost ~= nil and weap.Cost.Parts ~= nil) then
-            for i, val in pairs(weap.Cost.Parts) do
-                if (val.Name == ResName) then mainNum = val.Count end
-            end
-        end
-        local isResearch, weapRes = p.isResearch(weap.Name)
-        if (isResearch and weapRes.Resources ~= nil) then
-            for i, val in pairs(weapRes.Resources) do
-                if (val.Name == ResName) then resNum = val.Count end
-            end
-        end
-        if (resNum > 0 or mainNum > 0) then
-            result = result .. '\n|-\n| [[' .. weap.Name .. ']] || ' ..
-                         weap.Type .. ' || '
-            if (mainNum > 0) then
-                result = result .. Shared.formatnum(mainNum)
-            end
-            if (resNum > 0) then
-                result = result .. ' (' .. Shared.formatnum(resNum) .. ')'
-            end
-        end
-    end
-
-    return result
-end
-
--- Permet de construire la boite de cout d'une warframe.
-function p.buildWarframeCostBox(frame)
-    -- Recover the Warframe data
-    local WarframeName = frame.args ~= nil and frame.args[1] or frame
-    local Warframe = WarframeModule.getWarframe(WarframeName)
-    -- Check if data recovered successfully
-    if (Warframe == nil) then
-        return "ERROR: " .. WarframeName .. " not found."
-    elseif (Warframe.Cost == nil) then
-        return "ERROR: " .. WarframeName .. " n'a pas de données 'Cost'."
-    end
-    -- Start building table
-    if (Warframe.Cost.Main ~= nil) then
-        local primeParts = {}
-        local bpPart = Warframe.Cost.Main
-        -- Table style
-        local foundryTable = mainHeader
-        -- Main Schema Cost
-        foundryTable = foundryTable .. '\n|-'
-        local tmpString, primeParts = buildComponentsLine(bpPart.Credits,
-                                                          bpPart.Parts,
-                                                          bpPart.Time,
-                                                          bpPart.Rush)
-        foundryTable = foundryTable .. tmpString
-        -- Adding Market cost
-        foundryTable = foundryTable .. '\n|-'
-        tmpString = buildMarketLine(bpPart.MarketCost, bpPart.BPCost,
-                                    bpPart.BPStanding)
-        foundryTable = foundryTable .. tmpString
-        -- Adding Schema parts cost
-        for i = 1, 4 do
-            if (bpPart.Parts[i] ~= nil) then
-                local partName = bpPart.Parts[i].Name
-                local tmpCost = nil
-                if (partName == 'Neuroptiques') then
-                    tmpCost = Warframe.Cost.Neuro
-                elseif (partName == "Châssis") then
-                    tmpCost = Warframe.Cost.Chassis
-                elseif (partName == "Systèmes") then
-                    tmpCost = Warframe.Cost.System
-                end
-                if (tmpCost ~= nil) then
-                    -- Add header for schema part
-                    foundryTable = foundryTable .. '\n|-' .. subHeader
-                    foundryTable = foundryTable .. '[[' .. partName ..
-                                       '|<span style="color:' ..
-                                       Shared.getColor() .. ';">Schéma ' ..
-                                       partName .. '</span>]]'
-                    -- Add schema part cost line
-                    foundryTable = foundryTable .. '\n|-'
-                    tmpString = buildComponentsLine(tmpCost.Credits,
-                                                    tmpCost.Parts, tmpCost.Time,
-                                                    tmpCost.Rush)
-                    foundryTable = foundryTable .. tmpString
-                end
-            end
-        end
-
-        -- Adding Prime Relics
-        if (Shared.tableCount(primeParts) > 0) then
-            foundryTable = foundryTable ..
-                               buildPrimeItems(primeParts, Warframe.Name)
-        end
-
-        -- Adding Research
-        foundryTable = foundryTable .. buildResearchLines(Warframe.Name)
-
-        foundryTable = foundryTable ..
-                           '\n|}<div style="clear:left; margin:0; padding:0;"></div>'
-        return foundryTable
-    end
+    return ret
 end
 
 -- =============================

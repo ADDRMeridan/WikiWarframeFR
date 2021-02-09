@@ -293,4 +293,15 @@ function p.printModuleError(str, functionName)
     return table.concat(ret)
 end
 
+function p.removeFRAccent(str2RemoveFrom)
+
+    local swapArray = {{'è', 'e'}, {'é', 'e'}, {'â', 'a'}}
+    local ret = str2RemoveFrom
+    for _, swapper in ipairs(swapArray) do
+        ret = string.gsub(ret, swapper[1], swapper[2])
+    end
+
+    return ret
+end
+
 return p
