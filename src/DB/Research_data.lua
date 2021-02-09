@@ -642,7 +642,6 @@ local Data = {
             Time = 5,
             Affinity = 3000,
             Prereq = 'Medium Team Energy Restore',
-            Lab = 'Corpus',
             Resources = {
                 {Name = 'Échantillon de Fieldron', Count = 10},
                 {Name = 'Antiserum Injector Fragment', Count = 600},
