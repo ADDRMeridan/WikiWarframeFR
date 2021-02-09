@@ -90,17 +90,22 @@ local function buildPartText(part)
             table.insert(tmp, ']]')
             return table.concat(tmp)
         end,
-        ["Objet"] = Icon._Item(part.Name, nil, iconSize),
-        ["Partie Prime"] = Icon._Void(string.upper(
-                                          Shared.removeFRAccent(part.Name)),
-                                      true),
-        ["Ressource"] = Icon._Ressource(part.Name, nil, iconSize)
+        ["Objet"] = function()
+            return Icon._Item(part.Name, nil, iconSize)
+        end,
+        ["Partie Prime"] = function()
+            return Icon._Void(string.upper(Shared.removeFRAccent(part.Name)),
+                              true)
+        end,
+        ["Ressource"] = function()
+            return Icon._Ressource(part.Name, nil, iconSize)
+        end
     }
     local ret = {}
     if (part.Type == nil) then
-        ret = {switchIconArray["Ressource"], Shared.formatnum(part.Count)}
+        ret = {switchIconArray["Ressource"](), Shared.formatnum(part.Count)}
     else
-        ret = {switchIconArray[part.Type], Shared.formatnum(part.Count)}
+        ret = {switchIconArray[part.Type](), Shared.formatnum(part.Count)}
     end
     return table.concat(ret, '<br/>')
 end
