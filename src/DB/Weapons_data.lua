@@ -5,7 +5,7 @@ local WeaponData = {
         "Chargeur Incandescent", "Dex Pixia", "Pacificateurs", "Diwata",
         "Lame Exaltée", "Bâton de Fer", "Serres Valkyr", "Serres de Garuda",
         "Vents du Désert", "Corvas (Atmosphère)", "Cyngas (Atmosphère)",
-        "Dual Decurion (Atmosphère)", "Fluctus (Atmosphère)",
+        "Doubles Décurion (Atmosphère)", "Doubles Décurion Prisma (Atmosphère)", "Fluctus (Atmosphère)",
         "Grattler (Atmosphère)", "Imperator (Atmosphère)",
         "Imperator Vandal (Atmosphère)", "Ayanga Kuva (Atmosphère)",
         "Larkspur (Atmosphère)", "Phaedra (Atmosphère)",
@@ -408,66 +408,65 @@ local WeaponData = {
             Users = {"[[Arca Heqet Amalgame]]"},
             WallAttack = 360
         },
-
         ["Arum Spinosa"] = {
-            BlockAngle = 55,
-            Class = "Warfan",
-            ComboDur = 5,
-            Conclave = false,
+            Class = "Éventail de Guerre",
+            Conclave = true,
             Cost = {
                 Credits = 5000,
                 Rush = 35,
                 Time = 12,
                 Parts = {
+				    {Name = "Alliage d'Auroxium", Type = "Ressource", Count = 1200},
+                    {Name = "Alliage Hespazym", Type = "Ressource", Count = 100},
                     {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {Name = "Kuva", Type = "Ressource", Count = 1200},
-                    {
-                        Name = "Alliage d'Auroxium",
-                        Type = "Ressource",
-                        Count = 100
-                    },
-                    {Name = "Alliage Hespazym", Type = "Ressource", Count = 100}
+                    {Name = "Kuva", Type = "Ressource", Count = 1200}
                 }
             },
-            Disposition = 0.5,
-            Family = "Arum Spinosa",
-            FollowThrough = 0.7,
-            HeavyAttack = 594 * 2,
-            HeavySlamAttack = 297,
-            HeavyRadialDmg = 297,
-            HeavySlamRadius = 6,
-            Image = "ArumSpinosa.png",
-            Introduced = "[[Update 29#Update 29.5|Update 29.5",
-            Mastery = 11,
-            MeleeRange = 1.7,
             Name = "Arum Spinosa",
+            Family = "Arum Spinosa",
+            Image = "ArumSpinosa.png",
+            Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            Traits = {"Infesté"},
+            Mastery = 11,
+            Type = "Mêlée",
+            Polarities = {"Bar", "V"},
+            StancePolarity = "Bar",
+            Disposition = 0.5,
             NormalAttack = {
                 Damage = {
                     ["Impact"] = 35.6,
                     ["Perforation"] = 59.4,
-                    ["Tranchant"] = 202
+                    ["Tranchant"] = 202.0
                 },
                 CritChance = 0.09,
                 CritMultiplier = 1.9,
                 StatusChance = 0.37,
                 FireRate = 1.08
             },
-            Polarities = {},
-            SlamAttack = 594,
-            SlamElement = "",
-            SlamRadialDmg = 297,
-            SlamRadialElement = "",
-            SlamRadialProc = "",
-            SlamRadius = 5,
+            MeleeSlam = {
+                Damage = 594.0,
+                Element = nil,
+                RadialDamage = 297.0,
+                RadialElement = nil,
+                Radius = 5.0
+            },
+            MeleeHeavy = {
+                Damage = 594.0 * 2,
+                Element = nil,
+                WindUp = 0.5,
+                SlamDamage = 297.0,
+                SlamElement = nil,
+                SlamRadialDamage = 297.0,
+                SlamRadialElement = nil,
+                SlamRadius = 6.0
+            },
             SlideAttack = 297,
-            StancePolarity = "Bar",
-            Traits = {"Infested"},
-            Type = "Melee",
-            WindUp = 0.5
+		    BlockAngle = 55,
+            FollowThrough = 0.7,
+            MeleeComboDur = 5.0,
+            MeleeRange = 1.7
         },
-
         ["Atterax"] = {
-            -- BlockResist = 0.5,
             Class = "Fouet",
             Conclave = true,
             Cost = {
@@ -750,10 +749,8 @@ local WeaponData = {
             WallAttack = 340
         },
         ["Bursite"] = {
-            BlockAngle = 55,
             Class = "Nunchaku",
-            ComboDur = 9,
-            Conclave = false,
+            Conclave = true,
             Cost = {
                 Credits = 15000,
                 BPCost = 50000,
@@ -761,47 +758,54 @@ local WeaponData = {
                 Rush = 35,
                 Time = 12,
                 Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {
-                        Name = "Trompe Parasitaire",
-                        Type = "Ressource",
-                        Count = 24
-                    },
+				    {Name = "Cristal d'Argon", Type = "Ressource", Count =2},
+                    {Name = "Trompe Parasitaire", Type = "Ressource", Count = 24},
                     {Name = "Namalon Dévolu", Type = "Ressource", Count = 60},
                     {Name = "Nano Spores", Type = "Ressource", Count = 24000}
                 }
             },
-            Disposition = 0.5,
+            Name = "Bursite",
             Family = "Bursite",
-            FollowThrough = 0.5,
-            HeavyAttack = 1450,
-            HeavySlamAttack = 1160,
-            HeavyRadialDmg = 1160,
-            HeavySlamRadius = 9,
             Image = "Bursite.png",
             Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            Traits = {"Infesté"},
             Mastery = 11,
-            MeleeRange = 2.51,
-            Name = "Bursite",
+            Type = "Mêlée",
+            Polarities = {"V", "V"},
+            StancePolarity = "D",
+            Disposition = 0.5,
             NormalAttack = {
-                Damage = {["Impact"] = 193, ["Viral"] = 97},
+                Damage = {
+                    ["Impact"] = 193.0,
+                    ["Viral"] = 97.0,
+                },
                 CritChance = 0.19,
                 CritMultiplier = 2.3,
                 StatusChance = 0.33,
                 FireRate = 0.917
             },
-            Polarities = {"V", "V"},
-            SlamAttack = 580,
-            SlamElement = "",
-            SlamRadialDmg = 290,
-            SlamRadialElement = "",
-            SlamRadialProc = "",
-            SlamRadius = 7,
+            MeleeSlam = {
+                Damage = 580.0,
+                Element = nil,
+                RadialDamage = 290.0,
+                RadialElement = nil,
+                Radius = 7.0
+            },
+            MeleeHeavy = {
+                Damage = 1450.0,
+                Element = nil,
+                WindUp = 0.5,
+                SlamDamage = 1160,
+                SlamElement = nil,
+                SlamRadialDamage = 1160.0,
+                SlamRadialElement = nil,
+                SlamRadius = 9.0
+            },
             SlideAttack = 580,
-            StancePolarity = "D",
-            Traits = {"Infesté"},
-            Type = "Mêlée",
-            WindUp = 0.5
+		    BlockAngle = 55,
+            FollowThrough = 0.5,
+            MeleeComboDur = 9.0,
+            MeleeRange = 2.51
         },
         ["Sceptre Brisé"] = {
             -- BlockResist = 0.6,
@@ -12008,12 +12012,8 @@ local WeaponData = {
                 Parts = {
                     {Name = "Scintillateur", Type = "Ressource", Count = 5},
                     {Name = "Racine Oculaire", Type = "Ressource", Count = 4},
-                    {Name = "Masse Mutagène", Type = "Composant", Count = 7},
-                    {
-                        Name = "Nécrathène Stellé",
-                        Type = "Composant",
-                        Count = 10
-                    }
+                    {Name = "Masse Mutagène", Type = "Ressource", Count = 7},
+                    {Name = "Nécrathène Stellé", Type = "Ressource", Count = 10}
                 }
             },
             Disposition = 0.5,
@@ -15221,7 +15221,7 @@ local WeaponData = {
                 Time = 12,
                 Parts = {
                     {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Receiver", Type = "Partie Prime", Count = 1},
+                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
                 }
             },
@@ -15285,7 +15285,7 @@ local WeaponData = {
             Accuracy = 9.8,
             AreaAttack = {
                 AttackName = "Attaque Radial",
-                Damage = {["Toxin"] = 61},
+                Damage = {["Poison"] = 61},
                 Falloff = {StartRange = 0, EndRange = 3.3, Reduction = 0.3},
                 Radius = 3.3
             },
@@ -15303,7 +15303,7 @@ local WeaponData = {
             },
             Disposition = 0.5,
             ExilusPolarity = "Bar",
-            Users = {"[[Zealot Proselytizer]]"},
+            Users = {"[[Prosélyte Fanatique]]"},
             Family = "Zymos",
             Image = "Zymos.png",
             Introduced = "[[Update 29]]",
@@ -15319,7 +15319,7 @@ local WeaponData = {
                 StatusChance = 0.3,
                 FireRate = 1.33,
                 ShotType = "Projectile",
-                ShotSpeed = "?",
+                ShotSpeed = "79",
                 Trigger = "Semi-Auto"
             },
             NoiseLevel = "Bruyant",
@@ -16336,7 +16336,7 @@ local WeaponData = {
                 {Name = "[NAME] (Chargé)", Attacks = {"ChargeAttack"}}
             }
         },
-        ["Proboscis Cernos"] = {
+        ["Cernos Proboscis"] = {
             Accuracy = 16.6,
             AreaAttack = {
                 AttackName = "Uncharged Shot Explosion",
@@ -16347,7 +16347,7 @@ local WeaponData = {
             Class = "Arc",
             Conclave = false,
             ChargeAreaAttack = {
-                Attackame = "Charged Shot Explosion",
+                Attackame = "Tir Chargé Explosif",
                 Damage = {["Viral"] = 1},
                 Radius = 7,
                 ExplosionDelay = 1.7
@@ -16388,7 +16388,7 @@ local WeaponData = {
             Magazine = 1,
             Mastery = 15,
             MaxAmmo = 540,
-            Name = "Proboscis Cernos",
+            Name = "Cernos Proboscis",
             NormalAttack = {
                 AttackName = "Normal",
                 ChargeTime = 0.7,
@@ -19802,21 +19802,21 @@ local WeaponData = {
                 Falloff = {StartRange = 0, EndRange = 1.7, Reduction = 0.1},
                 Radius = 1.7
             },
-            Class = "Fusil Sniper",
+            Class = "Fusil de Sniper",
             Conclave = false,
             Cost = {
                 Credits = 20000,
                 Rush = 35,
                 Time = 12,
                 Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 5},
-                    {Name = "Ferrite", Type = "Ressource", Count = 6200},
-                    {Name = "Hexenon", Type = "Ressource", Count = 300},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
+                    {Name = "Canon", Type = "Objet", Count = 1},
+                    {Name = "Culasse", Type = "Objet", Count = 1},
+                    {Name = "Crosse", Type = "Objet", Count = 1},
+                    {Name = "Support Crânien", Type = "Ressource", Count = 2}
                 }
             },
             Disposition = 0.5,
-            ExilusPolarity = "Bar",
+            ExilusPolarity = "V",
             Image = "Sporothrix.png",
             Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
             Magazine = 9,
@@ -19838,7 +19838,7 @@ local WeaponData = {
                 ShotType = "Hit-Scan",
                 Trigger = "Semi-Auto"
             },
-            Polarities = {},
+            Polarities = {"D"},
             Reload = 2.7,
             SniperComboMin = 5,
             SniperComboReset = 2,
@@ -21374,6 +21374,65 @@ local WeaponData = {
             Trigger = "Auto",
             Type = "Principale"
         },
+        ["Cedo"] = {
+		Accuracy = 20,
+		Class = "Fusil à Pompe",
+		Conclave = false,
+		Cost = {
+			Credits = 20000,
+			MarketCost = 240,
+			Rush = 35,
+			Time = 12,
+			Parts = {
+				{Name = "Canon",Type = "Objet",Count = 1,},
+				{Name = "Crosse",Type = "Objet",Count = 1,},
+				{Name = "Culasse",Type = "Objet",Count = 1,},
+				{Name = "Forma",Type = "Ressource",Count = 1,},},
+		},
+		Disposition = 0.5,
+		ExilusPolarity = "V",
+		Image = "Cedo.png",
+		Introduced = "29.6",
+		Magazine = 40,
+		Mastery = 8,
+		MaxAmmo = 200,
+		Name = "Cedo",
+		NormalAttack = {
+			AttackName = "Normal",
+			Damage = {
+				["Perforation"] = 180,},
+			CritChance = 0.2,
+			CritMultiplier = 2.4,
+			StatusChance = 0.003,
+			FireRate = 3.83,
+			Falloff = {StartRange = 26,EndRange = 52,Reduction = 0.2,},
+			PelletCount = 6,
+			ShotType = "Hit-Scan",
+			Trigger = "Auto"
+		},
+		NoiseLevel = "Bruyant",
+		Polarities = {"V", "V"},
+		Reload = 2.2,
+		SecondaryAreaAttack = {
+			AttackName = "Attaque Radial",
+				Damage = {
+					["Explosif"] = 10,},
+			Falloff = {StartRange = 0,EndRange = 6,MaxReduction = 0},
+			Radius = 6,
+		},
+		SecondaryAttack = {
+			Accuracy = 80,
+			AttackName = "Lancer de Glaive",
+			Damage = {
+				["Tranchant"] = 20,},
+			CritChance = 0.02,
+			CritMultiplier = 1.4,
+			StatusChance = 0.5,
+		},
+		Traits = {"Tenno"},
+		Trigger = "Auto/Semi",
+		Type = "Principale",
+		},
         ["Convectrix"] = {
             Cost = {
                 Credits = 30000,
@@ -23011,7 +23070,7 @@ local WeaponData = {
             Trigger = "Rafale",
             Type = "Arch-Fusil (Atmosphère)"
         },
-        ["Doubles Decurion"] = {
+        ["Doubles Décurion"] = {
             Accuracy = 100,
             Cost = {
                 Credits = 45000,
@@ -23052,7 +23111,7 @@ local WeaponData = {
             Trigger = "Auto",
             Type = "Arch-Fusil"
         },
-        ["Doubles Decurion (Atmosphère)"] = {
+        ["Doubles Décurion (Atmosphère)"] = {
             Accuracy = 100,
             Cost = {
                 Credits = 45000,
@@ -23093,6 +23152,68 @@ local WeaponData = {
             Trigger = "Auto",
             Type = "Arch-Fusil (Atmosphère)"
         },
+        ["Doubles Decurion Prisma"] = {
+		Accuracy = 16,
+		Cost = {
+			BPCost = 35000,
+		},
+		Disposition = 0.5,
+		Family = "Doubles Décurion",
+		Image = "Doubles Decurion Prisma.png",
+		Introduced = "29.5.8",
+		Magazine = 32,
+		Mastery = 10,
+		Name = "Doubles Décurion Prisma",
+		NormalAttack = {
+			Damage = {
+				["Impact"] = 49.5,
+				["Perforation"] = 30.3,
+				["Tranchant"] = 30.2,},
+			CritChance = 0.3,
+			CritMultiplier = 2.2,
+			StatusChance = 0.24,
+			FireRate = 10,
+			ShotType = "Projectile",
+			ShotSpeed = "?",
+			Falloff = {StartRange = 1500,EndRange = 3000,Reduction = 0.8091,},
+		},
+		Polarities = {"V", "V"},
+		Reload = 50,
+		ReloadStyle = "Régénération",
+		Traits = {"Prisma", "Baro"},
+		Trigger = "Auto",
+		Type = "Arch-Fusil",
+	},
+	["Doubles Décurion Prisma (Atmosphère)"] = {
+		Accuracy = 100,
+		Cost = {
+			BPCost = 35000,
+		},
+		Disposition = 0.5,
+		Image = "Doubles Decurion Prisma.png",
+		Introduced = "29.5.8",
+		Link = "Doubles Décurion Prisma",
+		Magazine = 32,
+		Mastery = 10,
+		MaxAmmo = 512,
+		Name = "Doubles Décurion Prisma (Atmosphère)",
+		NormalAttack = {
+			Damage = {
+				["Impact"] = 49.5,
+				["Perforation"] = 30.3,
+				["Tranchant"] = 30.2,},
+			CritChance = 0.3,
+			CritMultiplier = 2.2,
+			StatusChance = 0.24,
+			FireRate = 10,
+			ShotType = "Hit-scan",
+		},
+		Polarities = {"V", "V"},
+		Reload = 1.4,
+		Traits = {"Prisma", "Baro"},
+		Trigger = "Auto",
+		Type = "Arch-Fusil (Atmosphère)",
+	},
         ["Fluctus"] = {
             Cost = {
                 Credits = 25000,
@@ -23596,13 +23717,13 @@ local WeaponData = {
             Trigger = "Auto / Semi",
             Type = "Arch-Fusil (Atmosphère)"
         },
-
         ["Morgha"] = {
             Accuracy = 6.7,
             Conclave = false,
             Cost = {
                 Credits = 20000,
-                Rush = 35,
+                BPStanding = 8000,
+                Rush = 25,
                 Time = 12,
                 Parts = {
                     {Name = "Canon", Type = "Item", Count = 1},
@@ -23613,43 +23734,19 @@ local WeaponData = {
             Disposition = 0.5,
             Image = "Morgha.png",
             Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
-            Magazine = 100,
+            Magazine = 80,
             Mastery = 15,
             Name = "Morgha",
             NormalAttack = {
-                AttackName = "Auto Burst",
+                AttackName = "Auto",
                 BurstCount = 2,
                 Damage = {["Impact"] = 32},
                 CritChance = 0.3,
                 CritMultiplier = 2.2,
-                StatusChance = 0.14,
+                StatusChance = 0.28,
                 FireRate = 6,
-                ShotType = "Projectile"
-            },
-            NoiseLevel = "Bruyant",
-            Polarities = {},
-            Reload = 1,
-            ReloadStyle = "Régénération",
-            SecondaryAreaAttack = {
-                AttackName = "Charged Shot Explosion",
-                Damage = {
-                    ["Impact"] = 600,
-                    ["Perforation"] = 800,
-                    ["Tranchant"] = 1000,
-                    ["Explosif"] = 1200
-                },
-                Falloff = {StartRange = 0, EndRange = 20, Reduction = 0.6}
-            },
-            SecondaryAttack = {
-                Accuracy = 100,
-                AttackName = "Tir Chargé",
-                Damage = {["Impact"] = 100},
-                FireRate = 0.833,
-                CritChance = 0.4,
-                CritMultiplier = 3,
-                StatusChance = 0.5,
-                Radius = 20,
-                Trigger = "Semi"
+                ShotType = "Projectile",
+                ShotSpeed = "60"
             },
             AreaAttack = {
                 AttackName = "Attaque Radiale",
@@ -23657,11 +23754,101 @@ local WeaponData = {
                 Falloff = {StartRange = 0, EndRange = 3, Reduction = 0.3},
                 Radius = 3
             },
+            NoiseLevel = "Bruyant",
+            Polarities = {"V"},
+            Reload = 3,
+            ReloadStyle = "Régénération",
+            SecondaryAttack = {
+                Accuracy = 6.7,
+                AttackName = "Tir Chargé",
+                Damage = {["Impact"] = 100},
+                FireRate = 0.833,
+                CritChance = 0.4,
+                CritMultiplier = 3,
+                StatusChance = 0.5,
+                Trigger = "Semi"
+            },
+            SecondaryAreaAttack = {
+                AttackName = "Attaque radial du Tir Chargé",
+                Damage = {
+                    ["Impact"] = 600,
+                    ["Perforation"] = 800,
+                    ["Tranchant"] = 1000,
+                    ["Explosif"] = 1200
+                },
+                Falloff = {StartRange = 0, EndRange = 20, Reduction = 0.6},
+                Radius = 12,
+            },
             Traits = {"Entrati"},
             Trigger = "Auto Burst",
             Type = "Arch-Fusil"
         },
-
+        ["Morgha (Atmosphère)"] = {
+            Accuracy = 6.7,
+            Conclave = false,
+            Cost = {
+                Credits = 20000,
+                BPStanding = 8000,
+                Rush = 25,
+                Time = 12,
+                Parts = {
+                    {Name = "Canon", Type = "Item", Count = 1},
+                    {Name = "Culasse", Type = "Item", Count = 1},
+                    {Name = "Crosse", Type = "Item", Count = 1}
+                }
+            },
+            Disposition = 0.5,
+            Image = "Morgha.png",
+            Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            Magazine = 80,
+            Mastery = 15,
+            Name = "Morgha (Atmosphère)",
+            NormalAttack = {
+                AttackName = "Auto",
+                BurstCount = 2,
+                Damage = {["Impact"] = 32},
+                CritChance = 0.3,
+                CritMultiplier = 2.2,
+                StatusChance = 0.28,
+                FireRate = 6,
+                ShotType = "Projectile",
+                ShotSpeed = "60"
+            },
+            AreaAttack = {
+                AttackName = "Attaque Radiale",
+                Damage = {["Explosif"] = 164},
+                Falloff = {StartRange = 0, EndRange = 3, Reduction = 0.3},
+                Radius = 3
+            },
+            NoiseLevel = "Bruyant",
+            Polarities = {"V"},
+            Reload = 3,
+            ReloadStyle = "Régénération",
+            SecondaryAttack = {
+                Accuracy = 6.7,
+                AttackName = "Tir Chargé",
+                Damage = {["Impact"] = 100},
+                FireRate = 0.833,
+                CritChance = 0.4,
+                CritMultiplier = 3,
+                StatusChance = 0.5,
+                Trigger = "Semi"
+            },
+            SecondaryAreaAttack = {
+                AttackName = "Attaque radial du Tir Chargé",
+                Damage = {
+                    ["Impact"] = 600,
+                    ["Perforation"] = 800,
+                    ["Tranchant"] = 1000,
+                    ["Explosif"] = 1200
+                },
+                Falloff = {StartRange = 0, EndRange = 20, Reduction = 0.6},
+                Radius = 12,
+            },
+            Traits = {"Entrati"},
+            Trigger = "Auto Burst",
+            Type = "Arch-Fusil"
+        },
         ["Phaedra"] = {
             Accuracy = 11.8,
             Cost = {
@@ -24244,7 +24431,7 @@ local WeaponData = {
             },
             Class = "Arme Exaltée",
             Conclave = false,
-            ExilusPolarity = "Bar",
+            ExilusPolarity = nil,
             Image = "Arquebex.png",
             Introduced = "[[Update 29]]",
             Magazine = 10,
@@ -24367,43 +24554,50 @@ local WeaponData = {
             Type = "Secondaire",
             Users = {"[[Titania]]"}
         },
-
         ["Ironbride"] = {
             BlockAngle = 90,
             Class = "Arme Exaltée",
             ComboDur = 5,
             Conclave = false,
             FollowThrough = 0.7,
-            HeavyAttack = 1500,
-            HeavySlamAttack = 3000,
-            HeavyRadialDmg = 0,
-            HeavySlamRadius = 0,
             Image = "Ironbride.png",
             Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
             MeleeRange = 3,
             Name = "Ironbride",
             NormalAttack = {
                 Damage = {
-                    ["Impact"] = 225,
-                    ["Perforation"] = 225,
-                    ["Tranchant"] = 1050
+                    ["Impact"] = 45,
+                    ["Perforation"] = 45,
+                    ["Tranchant"] = 210
                 },
                 CritChance = 0.45,
                 CritMultiplier = 3,
                 StatusChance = 0.15,
                 FireRate = 0.833
             },
-            Polarities = {},
-            SlamAttack = 3000,
-            SlamRadialDmg = 585,
-            SlamRadius = 10,
-            SlideAttack = 3000,
+            Polarities = {"D"},
+            MeleeSlam = {
+                Damage = 600.0,
+                Element = nil,
+                RadialDamage = 300.0,
+                RadialElement = nil,
+                Radius = 10.0
+            },
+            MeleeHeavy = {
+                Damage = 1500.0,
+                Element = nil,
+                WindUp = 0.7,
+                SlamDamage = 300.0,
+                SlamElement = nil,
+                SlamRadialDamage = 300.0,
+                SlamRadialElement = nil,
+                SlamRadius = 12.0
+            },
+            SlideAttack = 600,
             Traits = {"Entrati"},
             Type = "Arch-Mêlée",
             Users = {"[[Bonewidow]]"},
-            WindUp = 0.7
         },
-
         ["Lame Exaltée"] = {
             Name = "Lame Exaltée",
             -- BlockResist = 0.6,
@@ -24772,6 +24966,7 @@ local WeaponData = {
         ["Fureur Primale"] = {"Bâton de Fer"},
         ["Hystérie"] = {"Serres Valkyr"},
         ["Incandescence"] = {"Chargeur Incandescent"},
+        ["Ironbride Exaltée"] = {"Ironbride"},
         ["Lame Exaltée"] = {"Lame Exaltée"},
         ["Pacificateurs"] = {"Pacificateurs"},
         ["Tempête Reposante"] = {"Vents du Désert"}
