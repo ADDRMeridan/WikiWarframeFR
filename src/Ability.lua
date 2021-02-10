@@ -3,6 +3,7 @@ local p = {}
 local AbilityData = mw.loadData("Module:Ability/data")
 local ConclaveData = mw.loadData("Module:Ability/Conclave/data")
 local WarframeData = mw.loadData('Module:Warframes/data')
+local Icon = require('Module:Icon')
 local Shared = require("Module:Shared")
 
 local function getAbility(abiName, conclave)
@@ -185,10 +186,29 @@ function p.tooltip(frame)
     result = result ..
                  '\n| class="Data" style="line-height:20px; text-align:center; width:64px; padding:2px;"| [[File:' ..
                  ability["Icon"] ..
-                 '|48px]]<br><div style="display:inline-block; margin: 4px 2px 8px 2px;"><div style="display:inline-block; position:relative; top:-2px;">[[File:Orbe d\'énergie.png|18px]]</div> <span style="font-size:14px; font-weight:bold;">' ..
-                 ability["Cost"] ..
-                 '</span></div><br><div style="display:inline-block;">' .. key ..
-                 '</div>'
+                 '|48px]]<br><div style="display:inline-block; margin: 4px 2px 8px 2px;">'
+    local costTypeSwitchArray = {
+        ["Energie"] = function()
+            local ret = {
+                '<div style="display:inline-block; position:relative; top:-2px;">'
+            }
+            table.insert(ret, Icon._Item("Orbe d'Énergie", false, "18px"))
+            table.insert(ret,
+                         '</div> <span style="font-size:14px; font-weight:bold;">')
+            table.insert(ret, ability.Cost)
+            return table.concat(ret)
+        end,
+        ["Cooldown"] = function()
+            local ret = {'<span style="font-size:14px; font-weight:bold;">'}
+            table.insert(ret, ability.Cooldown)
+            table.insert(ret, ' s')
+            return table.concat(ret)
+        end
+    }
+    result = result .. costTypeSwitchArray[getCostType(ability)]()
+    result = result .. '</span></div><br><div style="display:inline-block;">' ..
+                 key .. '</div>'
+
     result = result ..
                  '\n| class="Spacer"|\n| class="Data" style="font-size:13px; line-height:16px; padding:2px 3px 2px 3px; white-space:normal;"|<span style="font-weight:bold; font-size:15px;">'
     local wfName = ability["Warframe"]
