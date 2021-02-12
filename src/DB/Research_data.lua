@@ -792,7 +792,7 @@ local Data = {
             Lab = 'Corpus',
             Time = 72,
             Affinity = 2000,
-            None,
+            Prereq = nil,
             Resources = {
                 {Name = 'Échantillon de Fieldron', Count = 5},
                 {Name = 'Rubedo', Count = 100},
