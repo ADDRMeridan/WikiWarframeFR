@@ -1,4 +1,3 @@
--- Source: https://warframe.fandom.com/wiki/Module:Shared
 local p = {}
 
 -- Constante
@@ -295,7 +294,7 @@ end
 
 function p.removeFRAccent(str2RemoveFrom)
 
-    local swapArray = {{'è', 'e'}, {'é', 'e'}, {'â', 'a'}}
+    local swapArray = {{'è', 'e'}, {'é', 'e'}, {'â', 'a'}, {'ê', 'e'}}
     local ret = str2RemoveFrom
     for _, swapper in ipairs(swapArray) do
         ret = string.gsub(ret, swapper[1], swapper[2])
