@@ -5,7 +5,8 @@ local WeaponData = {
         "Chargeur Incandescent", "Dex Pixia", "Pacificateurs", "Diwata",
         "Lame Exaltée", "Bâton de Fer", "Serres Valkyr", "Serres de Garuda",
         "Vents du Désert", "Corvas (Atmosphère)", "Cyngas (Atmosphère)",
-        "Doubles Décurion (Atmosphère)", "Doubles Décurion Prisma (Atmosphère)", "Fluctus (Atmosphère)",
+        "Doubles Décurion (Atmosphère)",
+        "Doubles Décurion Prisma (Atmosphère)", "Fluctus (Atmosphère)",
         "Grattler (Atmosphère)", "Imperator (Atmosphère)",
         "Imperator Vandal (Atmosphère)", "Ayanga Kuva (Atmosphère)",
         "Larkspur (Atmosphère)", "Phaedra (Atmosphère)",
@@ -416,7 +417,11 @@ local WeaponData = {
                 Rush = 35,
                 Time = 12,
                 Parts = {
-				    {Name = "Alliage d'Auroxium", Type = "Ressource", Count = 1200},
+                    {
+                        Name = "Alliage d'Auroxium",
+                        Type = "Ressource",
+                        Count = 1200
+                    },
                     {Name = "Alliage Hespazym", Type = "Ressource", Count = 100},
                     {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
                     {Name = "Kuva", Type = "Ressource", Count = 1200}
@@ -461,7 +466,7 @@ local WeaponData = {
                 SlamRadius = 6.0
             },
             SlideAttack = 297,
-		    BlockAngle = 55,
+            BlockAngle = 55,
             FollowThrough = 0.7,
             MeleeComboDur = 5.0,
             MeleeRange = 1.7
@@ -758,8 +763,12 @@ local WeaponData = {
                 Rush = 35,
                 Time = 12,
                 Parts = {
-				    {Name = "Cristal d'Argon", Type = "Ressource", Count =2},
-                    {Name = "Trompe Parasitaire", Type = "Ressource", Count = 24},
+                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
+                    {
+                        Name = "Trompe Parasitaire",
+                        Type = "Ressource",
+                        Count = 24
+                    },
                     {Name = "Namalon Dévolu", Type = "Ressource", Count = 60},
                     {Name = "Nano Spores", Type = "Ressource", Count = 24000}
                 }
@@ -775,10 +784,7 @@ local WeaponData = {
             StancePolarity = "D",
             Disposition = 0.5,
             NormalAttack = {
-                Damage = {
-                    ["Impact"] = 193.0,
-                    ["Viral"] = 97.0,
-                },
+                Damage = {["Impact"] = 193.0, ["Viral"] = 97.0},
                 CritChance = 0.19,
                 CritMultiplier = 2.3,
                 StatusChance = 0.33,
@@ -802,7 +808,7 @@ local WeaponData = {
                 SlamRadius = 9.0
             },
             SlideAttack = 580,
-		    BlockAngle = 55,
+            BlockAngle = 55,
             FollowThrough = 0.5,
             MeleeComboDur = 9.0,
             MeleeRange = 2.51
@@ -7718,7 +7724,7 @@ local WeaponData = {
             MeleeHeavy = {
                 Damage = 460 * 2,
                 Element = nil,
-                WindUp =  0.5,
+                WindUp = 0.5,
                 SlamDamage = 230,
                 SlamElement = nil,
                 SlamRadialDamage = 230,
@@ -7731,7 +7737,7 @@ local WeaponData = {
                 Element = nil,
                 RadialDamage = 230,
                 RadialElement = nil,
-                Radius = 5,
+                Radius = 5
             },
             Name = "Quassus",
             NormalAttack = {
@@ -7749,7 +7755,7 @@ local WeaponData = {
             SlideAttack = 230,
             StancePolarity = "Bar",
             Traits = {"Tenno"},
-            Type = "Mêlée",
+            Type = "Mêlée"
         },
         ["Dague Sombre Rakta"] = {
             -- BlockResist = 0.35,
@@ -9785,7 +9791,7 @@ local WeaponData = {
             Cost = {
                 Credits = 20000,
                 BPCost = 15000,
-                MarketCost = "",
+                MarketCost = nil,
                 Rush = 35,
                 Time = 24,
                 Parts = {
@@ -12013,7 +12019,11 @@ local WeaponData = {
                     {Name = "Scintillateur", Type = "Ressource", Count = 5},
                     {Name = "Racine Oculaire", Type = "Ressource", Count = 4},
                     {Name = "Masse Mutagène", Type = "Ressource", Count = 7},
-                    {Name = "Nécrathène Stellé", Type = "Ressource", Count = 10}
+                    {
+                        Name = "Nécrathène Stellé",
+                        Type = "Ressource",
+                        Count = 10
+                    }
                 }
             },
             Disposition = 0.5,
@@ -21375,64 +21385,62 @@ local WeaponData = {
             Type = "Principale"
         },
         ["Cedo"] = {
-		Accuracy = 20,
-		Class = "Fusil à Pompe",
-		Conclave = false,
-		Cost = {
-			Credits = 20000,
-			MarketCost = 240,
-			Rush = 35,
-			Time = 12,
-			Parts = {
-				{Name = "Canon",Type = "Objet",Count = 1,},
-				{Name = "Crosse",Type = "Objet",Count = 1,},
-				{Name = "Culasse",Type = "Objet",Count = 1,},
-				{Name = "Forma",Type = "Ressource",Count = 1,},},
-		},
-		Disposition = 0.5,
-		ExilusPolarity = "V",
-		Image = "Cedo.png",
-		Introduced = "29.6",
-		Magazine = 40,
-		Mastery = 8,
-		MaxAmmo = 200,
-		Name = "Cedo",
-		NormalAttack = {
-			AttackName = "Normal",
-			Damage = {
-				["Perforation"] = 180,},
-			CritChance = 0.2,
-			CritMultiplier = 2.4,
-			StatusChance = 0.003,
-			FireRate = 3.83,
-			Falloff = {StartRange = 26,EndRange = 52,Reduction = 0.2,},
-			PelletCount = 6,
-			ShotType = "Hit-Scan",
-			Trigger = "Auto"
-		},
-		NoiseLevel = "Bruyant",
-		Polarities = {"V", "V"},
-		Reload = 2.2,
-		SecondaryAreaAttack = {
-			AttackName = "Attaque Radial",
-				Damage = {
-					["Explosif"] = 10,},
-			Falloff = {StartRange = 0,EndRange = 6,MaxReduction = 0},
-			Radius = 6,
-		},
-		SecondaryAttack = {
-			Accuracy = 80,
-			AttackName = "Lancer de Glaive",
-			Damage = {
-				["Tranchant"] = 20,},
-			CritChance = 0.02,
-			CritMultiplier = 1.4,
-			StatusChance = 0.5,
-		},
-		Traits = {"Tenno"},
-		Trigger = "Auto/Semi",
-		Type = "Principale",
-		},
+            Accuracy = 20,
+            Class = "Fusil à Pompe",
+            Conclave = false,
+            Cost = {
+                Credits = 20000,
+                MarketCost = 240,
+                Rush = 35,
+                Time = 12,
+                Parts = {
+                    {Name = "Canon", Type = "Objet", Count = 1},
+                    {Name = "Crosse", Type = "Objet", Count = 1},
+                    {Name = "Culasse", Type = "Objet", Count = 1},
+                    {Name = "Forma", Type = "Ressource", Count = 1}
+                }
+            },
+            Disposition = 0.5,
+            ExilusPolarity = "V",
+            Image = "Cedo.png",
+            Introduced = "29.6",
+            Magazine = 40,
+            Mastery = 8,
+            MaxAmmo = 200,
+            Name = "Cedo",
+            NormalAttack = {
+                AttackName = "Normal",
+                Damage = {["Perforation"] = 180},
+                CritChance = 0.2,
+                CritMultiplier = 2.4,
+                StatusChance = 0.003,
+                FireRate = 3.83,
+                Falloff = {StartRange = 26, EndRange = 52, Reduction = 0.2},
+                PelletCount = 6,
+                ShotType = "Hit-Scan",
+                Trigger = "Auto"
+            },
+            NoiseLevel = "Bruyant",
+            Polarities = {"V", "V"},
+            Reload = 2.2,
+            SecondaryAreaAttack = {
+                AttackName = "Attaque Radial",
+                Damage = {["Explosif"] = 10},
+                Falloff = {StartRange = 0, EndRange = 6, MaxReduction = 0},
+                Radius = 6
+            },
+            SecondaryAttack = {
+                Accuracy = 80,
+                AttackName = "Lancer de Glaive",
+                Damage = {["Tranchant"] = 20},
+                CritChance = 0.02,
+                CritMultiplier = 1.4,
+                StatusChance = 0.5
+            },
+            Traits = {"Tenno"},
+            Trigger = "Auto/Semi",
+            Type = "Principale"
+        },
         ["Convectrix"] = {
             Cost = {
                 Credits = 30000,
@@ -23153,67 +23161,69 @@ local WeaponData = {
             Type = "Arch-Fusil (Atmosphère)"
         },
         ["Doubles Decurion Prisma"] = {
-		Accuracy = 16,
-		Cost = {
-			BPCost = 35000,
-		},
-		Disposition = 0.5,
-		Family = "Doubles Décurion",
-		Image = "Doubles Decurion Prisma.png",
-		Introduced = "29.5.8",
-		Magazine = 32,
-		Mastery = 10,
-		Name = "Doubles Décurion Prisma",
-		NormalAttack = {
-			Damage = {
-				["Impact"] = 49.5,
-				["Perforation"] = 30.3,
-				["Tranchant"] = 30.2,},
-			CritChance = 0.3,
-			CritMultiplier = 2.2,
-			StatusChance = 0.24,
-			FireRate = 10,
-			ShotType = "Projectile",
-			ShotSpeed = "?",
-			Falloff = {StartRange = 1500,EndRange = 3000,Reduction = 0.8091,},
-		},
-		Polarities = {"V", "V"},
-		Reload = 50,
-		ReloadStyle = "Régénération",
-		Traits = {"Prisma", "Baro"},
-		Trigger = "Auto",
-		Type = "Arch-Fusil",
-	},
-	["Doubles Décurion Prisma (Atmosphère)"] = {
-		Accuracy = 100,
-		Cost = {
-			BPCost = 35000,
-		},
-		Disposition = 0.5,
-		Image = "Doubles Decurion Prisma.png",
-		Introduced = "29.5.8",
-		Link = "Doubles Décurion Prisma",
-		Magazine = 32,
-		Mastery = 10,
-		MaxAmmo = 512,
-		Name = "Doubles Décurion Prisma (Atmosphère)",
-		NormalAttack = {
-			Damage = {
-				["Impact"] = 49.5,
-				["Perforation"] = 30.3,
-				["Tranchant"] = 30.2,},
-			CritChance = 0.3,
-			CritMultiplier = 2.2,
-			StatusChance = 0.24,
-			FireRate = 10,
-			ShotType = "Hit-scan",
-		},
-		Polarities = {"V", "V"},
-		Reload = 1.4,
-		Traits = {"Prisma", "Baro"},
-		Trigger = "Auto",
-		Type = "Arch-Fusil (Atmosphère)",
-	},
+            Accuracy = 16,
+            Cost = {BPCost = 35000},
+            Disposition = 0.5,
+            Family = "Doubles Décurion",
+            Image = "Doubles Decurion Prisma.png",
+            Introduced = "29.5.8",
+            Magazine = 32,
+            Mastery = 10,
+            Name = "Doubles Décurion Prisma",
+            NormalAttack = {
+                Damage = {
+                    ["Impact"] = 49.5,
+                    ["Perforation"] = 30.3,
+                    ["Tranchant"] = 30.2
+                },
+                CritChance = 0.3,
+                CritMultiplier = 2.2,
+                StatusChance = 0.24,
+                FireRate = 10,
+                ShotType = "Projectile",
+                ShotSpeed = "?",
+                Falloff = {
+                    StartRange = 1500,
+                    EndRange = 3000,
+                    Reduction = 0.8091
+                }
+            },
+            Polarities = {"V", "V"},
+            Reload = 50,
+            ReloadStyle = "Régénération",
+            Traits = {"Prisma", "Baro"},
+            Trigger = "Auto",
+            Type = "Arch-Fusil"
+        },
+        ["Doubles Décurion Prisma (Atmosphère)"] = {
+            Accuracy = 100,
+            Cost = {BPCost = 35000},
+            Disposition = 0.5,
+            Image = "Doubles Decurion Prisma.png",
+            Introduced = "29.5.8",
+            Link = "Doubles Décurion Prisma",
+            Magazine = 32,
+            Mastery = 10,
+            MaxAmmo = 512,
+            Name = "Doubles Décurion Prisma (Atmosphère)",
+            NormalAttack = {
+                Damage = {
+                    ["Impact"] = 49.5,
+                    ["Perforation"] = 30.3,
+                    ["Tranchant"] = 30.2
+                },
+                CritChance = 0.3,
+                CritMultiplier = 2.2,
+                StatusChance = 0.24,
+                FireRate = 10,
+                ShotType = "Hit-scan"
+            },
+            Polarities = {"V", "V"},
+            Reload = 1.4,
+            Traits = {"Prisma", "Baro"},
+            Trigger = "Auto",
+            Type = "Arch-Fusil (Atmosphère)"
+        },
         ["Fluctus"] = {
             Cost = {
                 Credits = 25000,
@@ -23777,7 +23787,7 @@ local WeaponData = {
                     ["Explosif"] = 1200
                 },
                 Falloff = {StartRange = 0, EndRange = 20, Reduction = 0.6},
-                Radius = 12,
+                Radius = 12
             },
             Traits = {"Entrati"},
             Trigger = "Auto Burst",
@@ -23843,7 +23853,7 @@ local WeaponData = {
                     ["Explosif"] = 1200
                 },
                 Falloff = {StartRange = 0, EndRange = 20, Reduction = 0.6},
-                Radius = 12,
+                Radius = 12
             },
             Traits = {"Entrati"},
             Trigger = "Auto Burst",
@@ -24596,7 +24606,7 @@ local WeaponData = {
             SlideAttack = 600,
             Traits = {"Entrati"},
             Type = "Arch-Mêlée",
-            Users = {"[[Bonewidow]]"},
+            Users = {"[[Bonewidow]]"}
         },
         ["Lame Exaltée"] = {
             Name = "Lame Exaltée",
