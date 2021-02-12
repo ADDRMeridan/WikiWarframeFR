@@ -351,7 +351,45 @@ local EnemyData = {
         Scans = 3,
         Weapons = {"Kraken", "Mortier", "Sheev"}
     },
+    ["Bourreau Dhurnam"] = {
+        Affinity = nil,
+        BaseLevel = nil,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Bourreau",
+        HealthTypes = {
+            ["Chair Clonée"] = 600,
+            ["Armure en Alliage"] = 300,
+            ["Bouclier"] = 600
+        },
+        Image = "GrineerHeavy.png",
+        Icon = nil,
+        Introduced = "Lunaro",
+        Link = nil,
+        Name = "Bourreau Dhurnam",
+        NameEN = "Executioner Dhurnam",
+        Regions = {"Sedna"},
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = {"Doubles Hek", "Fragor"}
+    },
     -- C
+    ["Carabus"] = {
+        Affinity = nil,
+        BaseLevel = "5",
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Carabus",
+        HealthTypes = {["Bouclier"] = 150, ["Machines"] = 750},
+        Image = "Carabus.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Carabus",
+        NameEN = "Carabus",
+        Regions = nil,
+        Scans = 5,
+        Weapons = {"Atomos"}
+    },
     ["Carnis Deimos"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -368,6 +406,26 @@ local EnemyData = {
         Regions = {"Deimos"},
         Scans = 30,
         Weapons = nil
+    },
+    ["Cible Corpus Cestra"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Cible Corpus",
+        HealthTypes = {
+            ["Armure en Ferrite"] = 50,
+            ["Bouclier"] = 1200,
+            ["Chair"] = 800
+        },
+        Image = "CorpusCestraTarget.png",
+        Introduced = "24.0",
+        Link = nil,
+        Name = "Cible Corpus Cestra",
+        NameEN = "Corpus Cestra Target",
+        Regions = {"Vénus"},
+        Scans = 3,
+        Weapons = {"Doubles Cestra"}
     },
     ["Comba"] = {
         Affinity = 500,
@@ -399,6 +457,42 @@ local EnemyData = {
         Regions = {"Terre"},
         Scans = 3,
         Weapons = {"Tonkor", "Manticore"}
+    },
+    ["Commandant Lektro"] = {
+        Affinity = nil,
+        BaseLevel = nil,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = nil,
+        HealthTypes = {["Chair Clonée"] = 300, ["Armure en Alliage"] = 750},
+        Image = "Commandant Lektro.png",
+        Icon = nil,
+        Introduced = "27.0",
+        Link = nil,
+        Name = "Commandant Lektro",
+        NameEN = "Lektro Commander",
+        Regions = {"Proxima de Saturne"},
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
+    ["Conculyste"] = {
+        Affinity = 571.25,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Sentient",
+        Family = "Conculyste",
+        HealthTypes = {["Robotique"] = 1300, ["Armure en Ferrite"] = 250},
+        Image = "Conculyste.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Conculyste",
+        NameEN = "Conculyst",
+        Regions = {"Lua", "Uranus", "Proxima du Voile"},
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = nil
     },
     ["Conseiller Vay Hek"] = {
         Affinity = nil,
@@ -451,6 +545,27 @@ local EnemyData = {
         NameEN = "Terra Anti MOA",
         Regions = {"Vénus"},
         Scans = 5,
+        Weapons = nil
+    },
+    ["Coureur Volatile"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Coureur Volatile",
+        HealthTypes = {["Chair Infestée"] = 80},
+        Image = "Coureur volatil.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Coureur Volatile",
+        NameEN = "Volatile Runner",
+        Regions = {
+            "Terre", "Venus", "Mercure", "Mars", "Deimos", "Phobos", "Ceres",
+            "Jupiter", "Saturne", "Uranus", "Neptune", "Pluton", "Sedna", "Eris"
+        },
+        Scans = 20,
+        SpawnLevel = nil,
         Weapons = nil
     },
     ["Coutelas Pillard Exo"] = {
@@ -670,6 +785,22 @@ local EnemyData = {
         Scans = 20,
         Weapons = nil
     },
+    ["Dreg Lancier"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Dreg Lancier",
+        HealthTypes = {["Armure en Ferrite"] = 150, ["Chair Clonée"] = 100},
+        Image = "GrnLaserDrone.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Dreg Lancier",
+        NameEN = "Lancer Dreg",
+        Regions = {"Terre", "Mars", "Saturne", "Uranus"},
+        Scans = 10,
+        Weapons = nil
+    },
     ["Dreg Temporel"] = {
         Affinity = 57.13,
         BaseLevel = 1,
@@ -841,7 +972,40 @@ local EnemyData = {
         Weapons = {"Miter"}
     },
     -- F
+    ["Fomorien Balor"] = {
+        Affinity = nil,
+        BaseLevel = nil,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Fomorien",
+        HealthTypes = nil,
+        Image = "DEGrineerFomorian.png",
+        Icon = nil,
+        Introduced = "9.0",
+        Link = nil,
+        Name = "Fomorien Balor",
+        NameEN = "Balor Fomorian",
+        Regions = nil,
+        Scans = nil,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
     -- G
+    ["Garde"] = {
+        Affinity = 100,
+        BaseLevel = 10,
+        Capacities = nil,
+        Faction = "Grineer",
+        HealthTypes = {["Armure en Ferrite"] = 5, ["Chair Clonée"] = 150},
+        Image = "Garde.png",
+        Introduced = "13.0",
+        Link = nil,
+        Name = "Garde",
+        NameEN = "Guardsman",
+        Regions = {"Cérès", "Sedna", "Deimos"},
+        Scans = 10,
+        Weapons = {"Amphis"}
+    },
     ["Gardien Grineer"] = {
         Affinity = 500,
         BaseLevel = 1,
@@ -901,7 +1065,7 @@ local EnemyData = {
         BaseLevel = 1,
         Capacities = nil,
         Faction = "Grineer",
-        Family = nil,
+        Family = "Goule Décomposée",
         HealthTypes = {["Chair Clonée"] = 300, ["Armure en Ferrite"] = 150},
         Image = "GhoulExpired.png",
         Icon = nil,
@@ -912,6 +1076,22 @@ local EnemyData = {
         Regions = {"Terre", "Mars"},
         Scans = 20,
         SpawnLevel = nil,
+        Weapons = nil
+    },
+    ["Goule Dévoreuse"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Goule Dévoreuse",
+        HealthTypes = {["Armure en Ferrite"] = 250, ["Chair Clonée"] = 600},
+        Image = "GhoulDevourer.png",
+        Introduced = "22.6",
+        Link = nil,
+        Name = "Goule Dévoreuse",
+        NameEN = "Ghoul Devourer",
+        Regions = {"Terre"},
+        Scans = 20,
         Weapons = nil
     },
     -- H
@@ -986,6 +1166,25 @@ local EnemyData = {
         Scans = 20,
         SpawnLevel = nil,
         Weapons = {"Dera", "Prova"}
+    },
+    ["Homme d'Équipage d'Élite Juno"] = {
+        Affinity = nil,
+        BaseLevel = 16,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Homme d'Équipage d'Élite",
+        HealthTypes = {
+            ["Bouclier"] = 200,
+            ["Chair"] = 100
+        },
+        Image = nil,
+        Introduced = "28.0",
+        Link = nil,
+        Name = "Homme d'Équipage d'Élite Juno",
+        NameEN = "Juno Elite Crewman",
+        Regions = nil,
+        Scans = 5,
+        Weapons = {"Supra"}
     },
     ["Homme d'Équipage Prod"] = {
         Affinity = 50,
@@ -1385,6 +1584,25 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = nil
     },
+    ["Leekter"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Leekter",
+        HealthTypes = {
+            ["Armure en Alliage"] = 200,
+            ["Chair Clonée"] = 1700
+        },
+        Image = "DELeekter.png",
+        Introduced = nil,
+        Link = "Le_Trio_Grustrag#Leekter",
+        Name = "Leekter",
+        NameEN = "Leekter",
+        Regions = nil,
+        Scans = 3,
+        Weapons = {"Manticore"}
+    },
     ["Lieutenant Lech Kril"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -1701,6 +1919,24 @@ local EnemyData = {
         Weapons = nil
     },
     -- N
+    ["Napalm"] = {
+        Affinity = 674.53,
+        BaseLevel = 6,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = Napalm,
+        HealthTypes = {["Chair Clonée"] = 600, ["Armure en Alliage"] = 500},
+        Image = "Napalm.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Napalm",
+        NameEN = "Napalm",
+        Regions = {"Mercure", "Mars", "Cérès", "Saturne", "Uranus", "Sedna"},
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = {"Sheev", "Ogris"}
+    },
     ["Nox"] = {
         Affinity = 500,
         BaseLevel = 1,
@@ -1738,6 +1974,28 @@ local EnemyData = {
         Scans = 3,
         SpawnLevel = nil,
         Weapons = {"Karak Wraith"}
+    },
+    ["Orbis Preneur de Profit"] = {
+        Affinity = 0,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = Orbis,
+        HealthTypes = {
+            ["Robotique"] = 372505,
+            ["Armure en Alliage"] = 1092,
+            ["Bouclier"] = 813225
+        },
+        Image = "Orbis_Preneur_de_Profit.png",
+        Icon = nil,
+        Introduced = "24.0",
+        Link = nil,
+        Name = "Orbis Preneur de Profit",
+        NameEN = "Profit-Taker Orb",
+        Regions = {"Vallée Orbis"},
+        Scans = 3,
+        SpawnLevel = 60,
+        Weapons = nil
     },
     ["Osprey Oxium Terra"] = {
         Affinity = nil,
@@ -2257,6 +2515,50 @@ local EnemyData = {
         Scans = 10,
         Weapons = nil
     },
+    ["Spectre Orphid"] = {
+        Affinity = nil,
+        BaseLevel = nil,
+        Capacities = {"{{A|Spores}}", "{{A|Mue}}", "{{A|Miasme}}"},
+        Faction = "Orokin",
+        Family = nil,
+        HealthTypes = {
+            ["Chair"] = 1500,
+            ["Armure en Ferrite"] = 200,
+            ["Bouclier"] = 1000
+        },
+        Image = "Orphid.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Spectre Orphid",
+        NameEN = "Orphid Specter",
+        Regions = {"Terre"},
+        Scans = 1,
+        SpawnLevel = nil,
+        Weapons = {"{{Weapon|Zhuge}}"}
+    },
+    ["Spectre Orphid (mue)"] = {
+        Affinity = nil,
+        BaseLevel = nil,
+        Capacities = nil,
+        Faction = "Orokin",
+        Family = nil,
+        HealthTypes = {
+            ["Chair"] = 1500,
+            ["Armure en Ferrite"] = 200,
+            ["Bouclier"] = 1000
+        },
+        Image = "Orphid.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = "Spectre Orphid",
+        Name = "Spectre Orphid (mue)",
+        NameEN = "Orphid Specter",
+        Regions = {"Terre"},
+        Scans = nil,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
     ["Stalker"] = {
         Affinity = 1713.75,
         BaseLevel = 1,
@@ -2333,6 +2635,28 @@ local EnemyData = {
         Weapons = {"Lance-glace"}
     },
     -- T
+    ["Teralyste Eidolon"] = {
+        Affinity = 1003.81,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Sentient",
+        Family = "Eidolon",
+        HealthTypes = {
+            ["Robotique"] = 333135,
+            ["Armure en Alliage"] = 692.18,
+            ["Bouclier"] = 28511.25
+        },
+        Image = "Teralyst.png",
+        Icon = nil,
+        Introduced = 15.0,
+        Link = nil,
+        Name = "Teralyste Eidolon",
+        NameEN = "Eidolon Teralyst",
+        Regions = {"Terre"},
+        Scans = 3,
+        SpawnLevel = 50,
+        Weapons = nil
+    },
     ["Tourelle Senta"] = {
         Affinity = 50,
         BaseLevel = 1,
@@ -2349,6 +2673,27 @@ local EnemyData = {
         Regions = nil,
         Scans = 20,
         Weapons = {"Répéteur Plasma"}
+    },
+    ["Trio Raptors"] = {
+        Affinity = 1500,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Trio Raptors",
+        HealthTypes = {
+            ["Armure en Alliage"] = 0,
+            ["Proto-Bouclier"] = 0,
+            ["Robot"] = 0
+        },
+        Icon = "Raptor_sigil.png",
+        Image = nil,
+        Introduced = "9.0",
+        Link = nil,
+        Name = "Trio Raptors",
+        NameEN = "Raptors",
+        Regions = {"Europe"},
+        Scans = 3,
+        Weapons = nil
     },
     ["Tyl Regor"] = {
         Affinity = 1500,
@@ -2390,6 +2735,24 @@ local EnemyData = {
             "Phobos", "Deimos"
         },
         Scans = 30,
+        Weapons = nil
+    },
+    ["Voltigeur Deimos"] = {
+        Affinity = nil,
+        BaseLevel = nil,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Voltigeur",
+        HealthTypes = {["Chair Infesté"] = nil},
+        Image = "Voltigeur Deimos.png",
+        Icon = nil,
+        Introduced = 29.0,
+        Link = nil,
+        Name = "Voltigeur Deimos",
+        NameEN = "Deimos Leaper",
+        Regions = {"Deimos"},
+        Scans = 30,
+        SpawnLevel = nil,
         Weapons = nil
     },
     -- W
