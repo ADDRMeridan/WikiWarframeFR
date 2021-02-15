@@ -10830,6 +10830,24 @@ local ModData = {
             Source = "Conclave",
             Weapons = {"Burston", "Burston Prime"}
         }
+    },
+    ["SetsImage"] = {
+        ["Aéro"] = "AeroSetIcon.png",
+        ["Augure"] = "AugurSetIcon.png",
+        ["Carnis"] = "CarnisSetIcon.png",
+        ["Chasseur"] = "ChasseurSetIcon.png",
+        ["Gladiateur"] = "GladiatorSetIcon.png",
+        ["Jugulus"] = "JugulusSetIcon.png",
+        ["Mecha"] = "MechaSetIcon.png",
+        ["Motus"] = "MotusSetIcon.png",
+        ["Proton"] = "ProtonSetIcon.png",
+        ["Sacrificiel"] = "UmbralSetIcon.png",
+        ["Saxum"] = "SaxumSetIcon.png",
+        ["Souche"] = "SoucheSetIcon.png",
+        ["Synth"] = "SynthSetIcon.png",
+        ["Tek"] = "TekSetIcon.png",
+        ["Umbra"] = "UmbralSetIcon.png",
+        ["Vigile"] = "VigileSetIcon.png",
     }
 }
 

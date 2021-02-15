@@ -1069,4 +1069,23 @@ function p.buildAbilityAugmentTab(frame)
     return table.concat(ret)
 end
 
+-- Returns a table of format {["SetName"] = {mod1, mod2}, ...}
+function p.getAllSets()
+
+    local ret = {}
+    for _, mod in pairs(ModData["Mods"]) do
+        if (mod.Set ~= nil) then
+            if (ret[mod.Set] == nil) then ret[mod.Set] = {} end
+            table.insert(ret[mod.Set], mod)
+        end
+    end
+
+    return ret
+end
+
+function p._getSetIcon(setName)
+
+    return ModData.SetsImage[setName] or Shared.getDefaultImg()
+end
+
 return p
