@@ -498,6 +498,11 @@ local function buildModList(modArray, ignoreFamily)
     return ret
 end
 
+function p.buildModList(modArray, ignoreFamily)
+
+    return buildModList(modArray, ignoreFamily)
+end
+
 function p.getModList(frame)
 
     local filter = getFiltersFromFrame(frame)
@@ -1086,6 +1091,16 @@ end
 function p._getSetIcon(setName)
 
     return ModData.SetsImage[setName] or Shared.getDefaultImg()
+end
+
+function p.getAllPostures()
+
+    local ret = {}
+    for _, posture in ipairs(ModData["Postures"]) do
+        if (ret[posture.Class] == nil) then ret[posture.Class] = {} end
+        table.insert(ret[posture.Class], posture.Name)
+    end
+    return ret
 end
 
 return p

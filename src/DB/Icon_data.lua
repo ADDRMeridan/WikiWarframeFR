@@ -203,6 +203,10 @@ local IconData = {
             icon = "Jeton de Cristal.png",
             link = "Jeton de Cristal"
         },
+        ["Jeton d'Interlude III"] = {
+            icon = "Jeton_d'Interlude III.png",
+            link = "Jeton d'Interlude III"
+        },
         -- K
         -- L
         -- M
@@ -243,6 +247,7 @@ local IconData = {
         ["Partie"] = {icon = "Weapon Part 32px.png", link = "Armes"},
         ["Platinum"] = {icon = "Platinum64.png", link = "Platinum"},
         ["Platine"] = {icon = "Platinum64.png", link = "Platine"},
+        ["Posture"] = {icon = "PostureModIcon.png", link = "Posture"},
         ["Pulsation Arcane"] = {
             icon = "Arcane_Pulse_160.png",
             link = "Pulsation Arcane"
@@ -552,6 +557,11 @@ local IconData = {
             icon = {"ReputationSmallBlack.png", "ReputationSmall.png"},
             link = "Syndicats"
         },
+        ["Entrati"] = {icon = {"", ""}, link = "Entrati"},
+        ["Nécraloïde"] = {
+            icon = {"Nécraloïde_N.png", "Nécraloïde_B.png"},
+            link = "Nécraloïde"
+        },
         ["Drapeau"] = {
             icon = {"ReputationLargeBlack.png", "ReputationLarge.png"},
             link = "Syndicats"
@@ -647,6 +657,19 @@ local IconData = {
         },
 
         -- Poissons de la Vallée Orbis
+        ["Eye-Eye"] = {icon = "Eye-Eye.png", link = "Eye-Eye"},
+        ["Scrubber"] = {icon = "Scrubber.png", link = "Scrubber"},
+        ["Echowinder"] = {icon = "Echowinder.png", link = "Echowinder"},
+        ["Mirewinder"] = {icon = "Mirewinder.png", link = "Mirewinder"},
+        ["Longwinder"] = {icon = "Longwinder.png", link = "Longwinder"},
+        ["Brickie"] = {icon = "Brickie.png", link = "Brickie"},
+        ["Tink"] = {icon = "Tink.png", link = "Tink"},
+        ["Sapcaddy"] = {icon = "Sapcaddy.png", link = "Sapcaddy"},
+        ["Kriller"] = {icon = "Kriller.png", link = "Kriller"},
+        ["Recaster"] = {icon = "Recaster.png", link = "Recaster"},
+        ["Tromyzon"] = {icon = "Tromyzon.png", link = "Tromyzon"},
+        ["Charamote"] = {icon = "Charamote.png", link = "Charamote"},
+        ["Synathid"] = {icon = "Synathid.png", link = "Synathid"},
 
         -- Poissons du Puy de Cambion
         ["Duroïde"] = {icon = "Duroïde.png", link = "Duroïde"},
@@ -2168,10 +2191,32 @@ local IconData = {
     },
 
     ["Void"] = {
+        ["BOTTE"] = {Icon = "GenericWeaponPrimeGuard.png", Name = "Botte"},
         ["CANON"] = {Icon = "Canon Prime.png", Name = "Canon"},
+        ["CARAPACE"] = {Icon = "Châssis Prime.png", Name = "Carapace"},
+        ["CERVEAU"] = {Icon = "Neuroptiques Prime.png", Name = "Cerveau"},
+        ["CHAINE"] = {Icon = "Crosse Prime.png", Name = "Chaîne"},
+        ["CORDE"] = {Icon = "Crosse Prime.png", Name = "Corde"},
         ["CROSSE"] = {Icon = "Crosse Prime.png", Name = "Crosse"},
         ["CULASSE"] = {Icon = "Culasse Prime.png", Name = "Culasse"},
+        ["DISQUE"] = {Icon = "LamePrime.png", Name = "Disque"},
+        ["ETOILES"] = {Icon = "LamePrime.png", Name = "Étoiles"},
+        ["GANTELET"] = {Icon = "icon_poigneePrime.png", Name = "Gantelet"},
+        ["GARDE"] = {Icon = "GenericWeaponPrimeGuard.png", Name = "Garde"},
         ["LAME"] = {Icon = "LamePrime.png", Name = "Lame"},
+        ["LAMES"] = {Icon = "LamePrime.png", Name = "Lames"},
+        ["LIEN"] = {Icon = "Icon_genericPrimePlug.png", Name = "Lien"},
+        ["MANCHE"] = {Icon = "icon_poigneePrime.png", Name = "Manche"},
+        ["ORNEMENT"] = {Icon = "Icon_genericPrimePlug.png", Name = "Ornement"},
+        ["PARTIE INFERIEURE"] = {
+            Icon = "LamePrime.png",
+            Name = "Partie Inférieure"
+        },
+        ["PARTIE SUPERIEURE"] = {
+            Icon = "LamePrime.png",
+            Name = "Partie Supérieure"
+        },
+        ["POCHETTE"] = {Icon = "Pochette_Prime.png", Name = "Pochette"},
         ["POIGNEE"] = {Icon = "icon_poigneePrime.png", Name = "Poignée"},
         ["SCHEMA"] = {Icon = "Blueprint2.png", Name = "Schéma"},
         ["SCHEMA CHASSIS"] = {
@@ -2185,7 +2230,9 @@ local IconData = {
         ["SCHEMA SYSTEMES"] = {
             Icon = "Systèmes Prime.png",
             Name = "Schéma Systèmes"
-        }
+        },
+        ["SYSTEMES"] = {Icon = "Systèmes Prime.png", Name = "Systèmes"},
+        ["TETE"] = {Icon = "LamePrime.png", Name = "Tête"}
     }
 }
 return IconData
