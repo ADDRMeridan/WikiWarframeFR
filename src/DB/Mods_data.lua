@@ -1,15 +1,15 @@
 -- Database for Module:Mods --
 local ModData = {
     ["Mods"] = {
+        -- A
         ["Abri"] = {
             Image = "Abri.png",
             Introduced = "16.4",
             Name = "Abri",
             NameEN = "Shelter",
             Polarity = "Vazarin",
-            PvP = false,
             Rarity = "Inhabituel",
-            Traits = {"BETE"},
+            Traits = {"COMPAGNON", "BETE"},
             Transmutable = false
         },
         ["Absorption d'Antimatière"] = {
@@ -19,7 +19,6 @@ local ModData = {
             Name = "Absorption d'Antimatière",
             NameEN = "Antimatter Absorb",
             Polarity = "Zenurik",
-            PvP = false,
             Rarity = "Rare",
             Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
@@ -30,9 +29,9 @@ local ModData = {
             Name = "Absorption de Souche",
             NameEN = "Strain Consume",
             Polarity = "Naramon",
-            PvP = false,
             Rarity = "Rare",
-            Traits = {"WARFRAME", "COMPAGNON", "BETE"},
+            Set = "Souche",
+            Traits = {"WARFRAME", "COMPAGNON", "HELMINTH"},
             Transmutable = false
         },
         ["Accalmie Infinie"] = {
@@ -42,21 +41,8 @@ local ModData = {
             Name = "Accalmie Infinie",
             NameEN = "Endless Lullaby",
             Polarity = "Zenurik",
-            PvP = false,
             Rarity = "Rare",
             Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
-            Transmutable = false
-        },
-        ["Accord de l'Augure"] = {
-            Image = "Accord_de_l'Augure.jpg",
-            Introduced = "22.0",
-            Name = "Accord de l'Augure",
-            NameEN = "Augur Accord",
-            Polarity = "Vazarin",
-            PvP = false,
-            Rarity = "Inhabituel",
-            Set = "Augure",
-            Traits = {"WARFRAME", "+%BOUCLIER"},
             Transmutable = false
         },
         ["Accélération"] = {
@@ -65,7 +51,6 @@ local ModData = {
             Name = "Accélération",
             NameEN = "Quickening",
             Polarity = "Madurai",
-            PvP = false,
             Rarity = "Rare",
             Traits = {"MELEE", "+%ATKSPEED"},
             Transmutable = true
@@ -73,10 +58,10 @@ local ModData = {
         ["Accélération Convergente"] = {
             AugmentType = "Arme",
             Image = "Accélération convergente.png",
+            Introduced = nil,
             Name = "Accélération Convergente",
             NameEN = "Focused Acceleration",
             Polarity = "Madurai",
-            PvP = false,
             Rarity = "Rare",
             Traits = {"FUSIL", "AUGMENT_ARME", "CONCLAVE"},
             Transmutable = false
@@ -87,18 +72,20 @@ local ModData = {
             Name = "Accélération Fatale",
             NameEN = "Fatal Acceleration",
             Polarity = "Madurai",
-            PvP = false,
             Rarity = "Inhabituel",
             Traits = {"POMPE", "EXILUS"},
             Transmutable = true
         },
-        ["Accélération Rapide"] = {
-            Image = "Accélération Rapide.png",
-            Name = "Accélération Rapide",
-            NameEN = "Sprint Boost",
-            Polarity = "Naramon",
+        ["Accord de l'Augure"] = {
+            Image = "Accord_de_l'Augure.jpg",
+            Introduced = "22.0",
+            Name = "Accord de l'Augure",
+            NameEN = "Augur Accord",
+            Polarity = "Vazarin",
             Rarity = "Inhabituel",
-            Traits = {"AURA"}
+            Set = "Augure",
+            Traits = {"WARFRAME", "+%BOUCLIER"},
+            Transmutable = false
         },
         ["Acier Brûlant"] = {
             Image = "Acier_Brûlant.png",
@@ -106,7 +93,6 @@ local ModData = {
             Name = "Acier Brûlant",
             NameEN = "Searing Steel",
             Polarity = "Madurai",
-            PvP = false,
             Rarity = "Rare",
             Traits = {"ARCHMELEE", "+%STATCHANCE", "+%FEU"},
             Transmutable = false
@@ -117,20 +103,20 @@ local ModData = {
             Name = "Acier Flamboyant",
             NameEN = "Blazing Steel",
             Polarity = "Madurai",
-            PvP = false,
             Rarity = "Inhabituel",
             Traits = {"ARCHMELEE", "+%FEU"},
             Transmutable = true
         },
         ["Acier Montant"] = {
             Image = "Acier Montant.png",
-            Introduced = "Les Spectres du Rail",
+            Introduced = "SotR",
             Name = "Acier Montant",
             NameEN = "Rising Steel",
             Polarity = "Unairu",
             PvP = true,
             Rarity = "Inhabituel",
             Stance = true,
+            Traits = {"MELEE", "CONCLAVE"},
             Transmutable = false
         },
         ["Acier Sacrificiel"] = {
@@ -140,7 +126,6 @@ local ModData = {
             Name = "Acier Sacrificiel",
             NameEN = "Sacrificial Steel",
             Polarity = "Umbra",
-            PvP = false,
             Rarity = "Légendaire",
             Set = "Sacrificiel",
             Traits = {"MELEE", "+%CRITCHANCE"},
@@ -153,7 +138,6 @@ local ModData = {
             Name = "Acier Véritable",
             NameEN = "True Steel",
             Polarity = "Madurai",
-            PvP = false,
             Rarity = "Commun",
             Traits = {"MELEE", "+%CRITCHANCE"},
             Transmutable = true
@@ -166,7 +150,6 @@ local ModData = {
             Name = "Acier Véritable Ripkas Amalgame",
             NameEN = "Amalgam Ripkas True Steel",
             Polarity = "Madurai",
-            PvP = false,
             Rarity = "Amalgame",
             Traits = {"MELEE", "+%CRITCHANCE", "AUGMENT_ARME", "RECHARGEMENT"},
             Transmutable = false
@@ -188,7 +171,6 @@ local ModData = {
             Name = "Acrobate Aérien",
             NameEN = "Aerial Ace",
             Polarity = "Naramon",
-            PvP = false,
             Rarity = "Rare",
             Traits = {"WARFRAME", "EXILUS"},
             Transmutable = false
@@ -199,8 +181,8 @@ local ModData = {
             NameEN = "Armored Acrobatics",
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
-            Traits = {"CONCLAVE_UTIL"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
         },
         ["Acte Final"] = {
             Image = "Acte Final.png",
@@ -208,8 +190,8 @@ local ModData = {
             NameEN = "Final Act",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"CONCLAVE_UTIL"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
         },
         ["Adaptation"] = {
             Image = "Adaptation.png",
@@ -217,7 +199,6 @@ local ModData = {
             Name = "Adaptation",
             NameEN = "Adaptation",
             Polarity = "Vazarin",
-            PvP = false,
             Rarity = "Rare",
             Traits = {"WARFRAME"},
             Transmutable = false
@@ -228,10 +209,19 @@ local ModData = {
             Name = "Adrénaline du Chasseur",
             NameEN = "Hunter Adrenaline",
             Polarity = "Madurai",
-            PvP = false,
             Rarity = "Commun",
             Set = "Chasseur",
             Traits = {"WARFRAME"},
+            Transmutable = false
+        },
+        ["Aérodynamique"] = {
+            Image = "Aérodynamique.png",
+            Introduced = "11.9",
+            Name = "Aérodynamique",
+            NameEN = "Aerodynamic",
+            Polarity = "Vazarin",
+            Rarity = "Rare",
+            Traits = {"AURA", "WARFRAME"},
             Transmutable = false
         },
         ["Affliction Persistante"] = {
@@ -240,26 +230,29 @@ local ModData = {
             Name = "Affliction Persistante",
             NameEN = "Enduring Affliction",
             Polarity = "Vazarin",
-            PvP = false,
             Rarity = "Inhabituel",
-            Traits = {"+%STATCHANCE", "MELEE"},
+            Traits = {"MELEE", "+%STATCHANCE"},
             Transmutable = false
         },
         ["Affrontement de la Forêt"] = {
             Image = "Affrontement_de_la_Forêt.png",
+            Introduced = "13.0",
             Name = "Affrontement de la Forêt",
             NameEN = "Clashing Forest",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Stance = true
+            Stance = true,
+            Traits = {"MELEE"},
+            Transmutable = true
         },
         ["Agilité Anémique"] = {
             Image = "Agilité_Anémique.png",
+            Introduced = "15.0",
             Name = "Agilité Anémique",
             NameEN = "Anemic Agility",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"CORROMPU", "SECONDAIRE"},
+            Traits = {"SECONDAIRE", "CORROMPU", "+%CADENCE"},
             Transmutable = false
         },
         ["Agilité Aéro"] = {
@@ -268,7 +261,6 @@ local ModData = {
             Name = "Agilité Aéro",
             NameEN = "Aero Agility",
             Polarity = "Naramon",
-            PvP = false,
             Rarity = "Rare",
             Set = "Aéro",
             Traits = {"SNIPER", "RECHARGEMENT"},
@@ -276,25 +268,33 @@ local ModData = {
         },
         ["Agilité Blindée"] = {
             Image = "Agilité Blindée.png",
+            Introduced = "15.0",
             Name = "Agilité Blindée",
             NameEN = "Armored Agility",
             Polarity = "Vazarin",
             Rarity = "Rare",
-            Traits = {"NIGHTMARE", "WARFRAME", "+%ARMURE", "WARFRAME"}
+            Traits = {"WARFRAME", "CAUCHEMAR", "+%ARMURE", "+%COURSE"},
+            Transmutable = false
         },
         ["Agonie Perpétuelle"] = {
             Image = "Agonie_Perpétuelle.png",
+            Introduced = "15.0",
             Name = "Agonie Perpétuelle",
             NameEN = "Perpetual Agony",
             Polarity = "Madurai",
-            Rarity = "Commun"
+            Rarity = "Commun",
+            Traits = {"SECONDAIRE", "+%STATDUR"},
+            Transmutable = true
         },
         ["Agression Territoriale"] = {
             Image = "Agression Territoriale.png",
+            Introduced = "SotR",
             Name = "Agression Territoriale",
             NameEN = "Territorial Aggression",
             Polarity = "Penjaga",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"COMPAGNON", "KAVAT"},
+            Transmutable = true
         },
         ["Aiguille Tourbillonnante"] = {
             Image = "Aiguille_Tourbillonnante.png",
@@ -303,71 +303,72 @@ local ModData = {
             NameEN = "Spinning Needle",
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
-            Stance = true
+            Traits = {"MELEE"},
+            Stance = true,
+            Transmutable = true
         },
         ["Alacrité Statique"] = {
             AugmentType = "Arme",
-            Image = "Alacrite statique.png",
+            Image = "Alacrité Statique.png",
+            Introduced = nil,
             Name = "Alacrité Statique",
             NameEN = "Static Alacrity",
             Polarity = "Madurai",
             PvP = true,
             Rarity = "Rare",
+            Traits = {"SECONDAIRE", "AUGMENT_ARME", "CONCLAVE"},
             Transmutable = false
         },
         ["Alimentation Auxiliaire"] = {
             Image = "Alimentation Auxiliaire.png",
+            Introduced = "15.0",
             Name = "Alimentation Auxiliaire",
             NameEN = "Auxiliary Power",
             Polarity = "Madurai",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"ARCHWING", "+%ENERGIE"},
+            Transmutable = true
         },
         ["Allonge"] = {
             Image = "Allonge.png",
+            Introduced = "Vanilla",
             Name = "Allonge",
             NameEN = "Stretch",
             Polarity = "Naramon",
-            Rarity = "Inhabituel"
-        },
-        ["Allonge du Necramech"] = {
-            Image = "Allonge du Necramech.png",
-            Name = "Allonge du Necramech",
-            NameEN = "Necramech Stretch",
-            Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Transmutable = false
+            Traits = {"WARFRAME", "+%PORTEE"},
+            Transmutable = true
         },
         ["Allumage"] = {
             Image = "Allumage.png",
+            Introduced = "10.0",
             Name = "Allumage",
             NameEN = "Fired Up",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"SENTINELLE", "COMPAGNON"}
+            Traits = {"COMPAGNON", "SENTINELLE", "+%FEU"},
+            Transmutable = true
         },
         ["Allée de Statues"] = {
             AugmentType = "Warframe",
             Image = "Allée_de_Statues.png",
+            Introduced = "TSG",
             Name = "Allée de Statues",
             NameEN = "Path of Statues",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
         },
-        ["Amortisseurs d'Inertie"] = {
-            Image = "Amortisseurs d'Inertie.png",
-            Name = "Amortisseurs d'Inertie",
-            NameEN = "Inertia Dampeners",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel",
-            Transmutable = false
-        },
-        ["Amplificateur d'Affinité "] = {
+        ["Amplificateur d'Affinité"] = {
+            Archived = true,
             Image = "AffinityAmpMod.png",
+            Introduced = nil,
             Name = "Amplificateur d'Affinité",
             NameEN = "Affinity Amp",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
+            Traits = {"WARFRAME", "AURA"},
             Transmutable = false
         },
         ["Amplificateur d'Énergie"] = {
@@ -377,51 +378,48 @@ local ModData = {
             NameEN = "Energy Amplifier",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Traits = {"CAPACITE", "PORTEE", "ARCHWING"}
+            Traits = {"ARCHWING", "+%PORTEE"},
+            Transmutable = true
         },
         ["Amélioration Tek"] = {
             Image = "Amélioration Tek.png",
+            Introduced = "24.0",
             Name = "Amélioration Tek",
             NameEN = "Tek Enhance",
             Polarity = "Madurai",
             Rarity = "Rare",
             Set = "Tek",
-            Transmutable = false
-        },
-        ["Ancient Fusion Core"] = {
-            Image = "InhabituelAncientFusionCore.png",
-            Name = "",
-            NameEN = "Ancient Fusion Core",
-            Polarity = "Core",
-            Rarity = "Common<br>Uncommon<br>Rare",
+            Traits = {"COMPAGNON", "KAVAT", "VULPAPHYLA", "+%DUREE"},
             Transmutable = false
         },
         ["Anticipation"] = {
-            Image = "Anti.PNG",
+            Image = "Anticipation.png",
+            Introduced = "17.0",
             Name = "Anticipation",
             NameEN = "Anticipation",
             Polarity = "Vazarin",
+            PvP = true,
             Rarity = "Inhabituel",
-            Traits = {"CONCLAVE_UTIL"},
+            Traits = {"WARFRAME", "CONCLAVE", "EXILUS"},
             Transmutable = false
         },
         ["Antitoxine"] = {
-            Image = "Antitoxine.png",
+            Image = nil,
             Introduced = "8.0",
-            Link = "Antitoxine",
             Name = "Antitoxine",
-            NameEN = "Antitoxin",
+            NameEN = "Antitoxin (Mod)",
             Polarity = "Vazarin",
-            Rarity = "Inhabituel",
-            Transmutable = true
+            Rarity = "Inhabituel"
         },
         ["Antre de l'Enfer"] = {
             Image = "Antre_de_l'Enfer.png",
+            Introduced = "Vanilla",
             Name = "Antre de l'Enfer",
             NameEN = "Hell's Chamber",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"POMPE", "+%TIRMULTIPLE"}
+            Traits = {"POMPE", "+%TIRMULTIPLE"},
+            Transmutable = false
         },
         ["Approche Vicieuse"] = {
             Image = "Approche Vicieuse.png",
@@ -432,35 +430,38 @@ local ModData = {
             PvP = true,
             Rarity = "Inhabituel",
             Stance = true,
+            Traits = {"MELEE", "CONCLAVE"},
             Transmutable = false
         },
         ["Aptitude au Fusil"] = {
-            Image = "Aptitude au fusil.png",
-            Introduced = "11.0.0",
+            Image = "Aptitude au Fusil.png",
+            Introduced = "11.0",
             Name = "Aptitude au Fusil",
             NameEN = "Rifle Aptitude",
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
-            Traits = {"+%STATCHANCE", "FUSIL"}
+            Traits = {"FUSIL", "+%STATCHANCE"},
+            Transmutable = true
         },
         ["Armement du Vigile"] = {
-            Image = "Armements_du_Vigile.jpg",
-            Introduced = "22.0.0",
+            Image = "Armement_du_Vigile.png",
+            Introduced = "22.0",
             Name = "Armement du Vigile",
             NameEN = "Vigilante Armaments",
             Polarity = "Naramon",
             Rarity = "Commun",
             Set = "Vigile",
-            Traits = {"FUSIL", "+%TIRMULTIPLE"},
+            Traits = {"PRINCIPAL", "+%TIRMULTIPLE"},
             Transmutable = false
         },
         ["Art de l'Agilité"] = {
             Image = "Agility_Drift.png",
+            Introduced = "18.0",
             Name = "Art de l'Agilité",
             NameEN = "Agility Drift",
             Polarity = "Vazarin",
             Rarity = "Rare",
-            Traits = {"EXILUS", "ART"},
+            Traits = {"WARFRAME", "EXILUS", "ART", "+%ESQUIVE"},
             Transmutable = false
         },
         ["Art de l'Endurance"] = {
@@ -470,56 +471,61 @@ local ModData = {
             NameEN = "Endurance Drift",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"EXILUS", "ART"},
+            Traits = {"WARFRAME", "EXILUS", "ART", "+%ENERGIE"},
             Transmutable = false
         },
         ["Art de la Coaction"] = {
             Image = "Art_de_la_Coaction.png",
+            Introduced = "18.0",
             Name = "Art de la Coaction",
             NameEN = "Coaction Drift",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"EXILUS", "ART"},
+            Traits = {"WARFRAME", "EXILUS", "ART"},
             Transmutable = false
         },
         ["Art de la Furtivité"] = {
-            Image = "",
+            Image = "Art_de_la_Furtivité.png",
+            Introduced = "18.0",
             Name = "Art de la Furtivité",
             NameEN = "Stealth Drift",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"EXILUS", "ART"},
+            Traits = {"WARFRAME", "EXILUS", "ART"},
             Transmutable = false
         },
         ["Art de la Puissance"] = {
             Image = "Art de la Puissance.png",
+            Introduced = "18.0",
             Name = "Art de la Puissance",
             NameEN = "Power Drift",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"EXILUS", "ART"},
+            Traits = {"WARFRAME", "EXILUS", "ART", "+%PUISSANCE"},
             Transmutable = false
         },
         ["Art de la Ruse"] = {
-            Image = "Cunning_drift.png",
+            Image = "Cunning_Drift.png",
+            Introduced = "18.0",
             Name = "Art de la Ruse",
             NameEN = "Cunning Drift",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"EXILUS", "ART"},
+            Traits = {"WARFRAME", "EXILUS", "ART", "+%PORTEE"},
             Transmutable = false
         },
         ["Art de la Vitesse"] = {
             Image = "Art de la Vitesse.png",
+            Introduced = "18.0",
             Name = "Art de la Vitesse",
             NameEN = "Speed Drift",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"EXILUS", "ART"},
+            Traits = {"WARFRAME", "EXILUS", "ART", "+%COURSE"},
             Transmutable = false
         },
         ["Aspect Rusé"] = {
-            Image = "Aspect_Rusé.jpg",
+            Image = "Aspect_Rusé.png",
             Introduced = "SotR",
             Name = "Aspect Rusé",
             NameEN = "Cunning Aspect",
@@ -527,161 +533,124 @@ local ModData = {
             PvP = true,
             Rarity = "Inhabituel",
             Stance = true,
+            Traits = {"MELEE", "CONCLAVE"},
             Transmutable = false
         },
         ["Aspirateur"] = {
             Image = "Aspirateur.png",
+            Introduced = "10.0",
             Name = "Aspirateur",
             NameEN = "Vacuum",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON"},
+            Traits = {"COMPAGNON", "SENTINELLE"},
             Transmutable = false
         },
         ["Assaut Hystérique"] = {
             AugmentType = "Warframe",
             Image = "Assaut_Hystérique.png",
+            Introduced = "TSG",
             Name = "Assaut Hystérique",
             NameEN = "Hysterical Assault",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Assaut Implacable"] = {
-            Image = "Assaut Implacable.png",
-            Name = "Assaut Implacable",
-            NameEN = "Relentless Assault",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Traits = {"CONCLAVE", "MELEE"},
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
         },
         ["Assaut Tek"] = {
             Image = "Assaut Tek.png",
+            Introduced = "24.0",
             Name = "Assaut Tek",
             NameEN = "Tek Assault",
             Polarity = "Madurai",
             Rarity = "Rare",
             Set = "Tek",
-            Transmutable = false
-        },
-        ["Assaut du Necramech"] = {
-            Image = "Assaut du Necramech.png",
-            Name = "Assaut du Necramech",
-            NameEN = "Necramech Blitz",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel",
+            Traits = {"COMPAGNON", "KAVAT", "VULPAPHYLA"},
             Transmutable = false
         },
         ["Assimilation"] = {
             AugmentType = "Warframe",
             Image = "Assimilation.png",
+            Introduced = "TSG",
             Name = "Assimilation",
             NameEN = "Assimilate",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
         },
         ["Assistance en Mêlée"] = {
             Image = "Assistance_en_Mêlée.png",
+            Introduced = "25.7.6",
             Name = "Assistance en Mêlée",
             NameEN = "Melee Guidance",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"AURA"},
+            Traits = {"WARFRAME", "AURA", "COMBODUR"},
             Transmutable = false
         },
         ["Astuce du Voleur"] = {
             Image = "Astuce_du_Voleur.png",
+            Introduced = nil,
             Name = "Astuce du Voleur",
             NameEN = "Thief's Wit",
             Polarity = "Naramon",
             Rarity = "Commun",
+            Traits = {"WARFRAME", "EXILUS"},
             Transmutable = true
         },
-        ["Attaque Ascendante"] = {
-            Image = "Attaque Ascendante.png",
-            Name = "Attaque Ascendante",
-            NameEN = "Soaring Strike",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Traits = {"CONCLAVE", "ARC"},
-            Transmutable = false
-        },
         ["Attaque de faucon"] = {
-            Image = "",
+            Image = "Attaque_de_faucon.png",
+            Introduced = "22.0",
             Name = "Attaque de faucon",
             NameEN = "Swooping Falcon",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Stance = true
+            Stance = true,
+            Traits = {"MELEE"},
+            Transmutable = true
         },
         ["Atteinte"] = {
+            Family = "Atteinte",
             Image = "Atteinte.png",
+            Introduced = "8.0",
             Name = "Atteinte",
             NameEN = "Reach",
             Polarity = "Madurai",
-            Rarity = "Commun"
+            Rarity = "Commun",
+            Traits = {"MELEE", "PORTEE"},
+            Transmutable = true
         },
         ["Atteinte Accrue"] = {
+            Family = "Atteinte",
             Image = "Atteinte_Accrue.png",
+            Introduced = "15.13",
             Name = "Atteinte Accrue",
             NameEN = "Primed Reach",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"MELEE", "BARO"},
-            Transmutable = false
-        },
-        ["Atteinte du Necramech"] = {
-            Image = "Atteinte du Necramech.png",
-            Name = "Atteinte du Necramech",
-            NameEN = "Necramech Reach",
-            Polarity = "Madurai",
-            Rarity = "Commun",
-            Transmutable = false
-        },
-        ["Atteinte Épuisante"] = {
-            AugmentType = "Warframe",
-            Image = "Atteinte Épuisante.png",
-            Name = "Atteinte Épuisante",
-            NameEN = "Sapping Reach",
-            Polarity = "Zenurik",
-            PvP = true,
-            Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
+            Traits = {"MELEE", "BARO", "PORTEE"},
             Transmutable = false
         },
         ["Atterrissage Frigide"] = {
             Image = "Atterrissage Frigide.png",
+            Introduced = "24.2",
             Name = "Atterrissage Frigide",
             NameEN = "Cold Arrival",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Transmutable = false
-        },
-        ["Atterrissage d'Enfer"] = {
-            Image = "Atterrissage d'Enfer.png",
-            Name = "Atterrissage d'Enfer",
-            NameEN = "Thrash Landing",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Atterrissage de Fou"] = {
-            Image = "Atterrissage de Fou.png",
-            Name = "Atterrissage de Fou",
-            NameEN = "Bomb The Landin'",
-            Polarity = "Madurai",
-            Rarity = "Rare",
+            Traits = {"K-DRIVE"},
             Transmutable = false
         },
         ["Attraction Avide"] = {
             AugmentType = "Warframe",
             Image = "Attraction_Avide.png",
+            Introduced = "15.0",
             Name = "Attraction Avide",
             NameEN = "Greedy Pull",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
         },
         ["Attraction Fatale"] = {
@@ -692,41 +661,37 @@ local ModData = {
             NameEN = "Fatal Attraction",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON"},
+            Traits = {"COMPAGNON", "SENTINELLE", "AUGMENT_COMPAGNON"},
             Transmutable = true
-        },
-        ["Augure du Necramech"] = {
-            Image = "Augure du Necramech.png",
-            Introduced = "29.6",
-            Name = "Augure du Necramech",
-            NameEN = "Necramech Augur",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel",
-            Transmutable = false
         },
         ["Aura IEM"] = {
             Image = "Aura IEM.png",
+            Introduced = nil,
             Name = "Aura IEM",
             NameEN = "EMP Aura",
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
-            Traits = {"AURA", "VAZARIN"},
+            Traits = {"WARFRAME", "AURA"},
             Transmutable = false
         },
         ["Autodestruction"] = {
             Image = "SelfDestructModU145.png",
+            Introduced = "10.0",
             Name = "Autodestruction",
             NameEN = "Self Destruct",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"SENTINELLE", "COMPAGNON"}
+            Traits = {"COMPAGNON", "SENTINELLE"},
+            Transmutable = true
         },
         ["Autopsie Astrale"] = {
             Image = "AstralAutopsyMod.png",
+            Introduced = "19.8",
             Name = "Autopsie Astrale",
             NameEN = "Astral Autopsy",
             Polarity = "Vazarin",
             Rarity = "Rare",
+            Traits = {"ARCH-MELEE"},
             Transmutable = false
         },
         ["Avalanche Gelée"] = {
@@ -737,230 +702,184 @@ local ModData = {
             NameEN = "Icy Avalanche",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
         },
         ["Avantage Aéro"] = {
             Image = "Avantage_Aéro.png",
+            Introduced = "25.0",
             Name = "Avantage Aéro",
             NameEN = "Aero Vantage",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
             Set = "Aéro",
+            Traits = {"WARFRAME", "EXILUS"},
             Transmutable = false
         },
         ["Aviateur"] = {
-            Archived = false,
             Image = "Aviateur.png",
             Introduced = "11.9",
             Name = "Aviateur",
             NameEN = "Aviator",
             Polarity = "Vazarin",
-            PvP = false,
             Rarity = "Commun",
-            Stance = false,
             Traits = {"EXILUS", "WARFRAME"},
             Transmutable = false
         },
-        ["Aviateur du Necramech"] = {
-            Image = "Aviateur du Necramech.png",
-            Introduced = "29.6",
-            Name = "Aviateur du Necramech",
-            NameEN = "Necramech Aviator",
-            Polarity = "Vazarin",
-            Rarity = "Commun",
-            Transmutable = false
-        },
-        ["Aérodynamique"] = {
-            Image = "Aérodynamique.png",
-            Introduced = "11.9",
-            Name = "Aérodynamique",
-            NameEN = "Aerodynamic",
-            Polarity = "Vazarin",
-            PvP = false,
-            Rarity = "Rare",
-            Traits = {"Aura", "WARFRAME"},
-            Transmutable = false
-        },
-        ["Balayage"] = {
-            Image = "Balayage.png",
-            Name = "Balayage",
-            NameEN = "Swipe",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel"
-        },
         ["Balles Chargées"] = {
-            Image = "Balles_Chargées.jpg",
+            Image = "Balles_Chargées.png",
+            Introduced = "24.0",
             Name = "Balles Chargées",
             NameEN = "Charged Bullets",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%STATCHANCE", "ARCHFUSIL"}
+            Traits = {"ARCH-FUSIL", "+%ELEC", "+%STATCHANCE"},
+            Transmutable = true
         },
-        ["Balles Comprimées"] = {
-            Image = "Balles_Comprimées.png",
-            Name = "Balles Comprimées",
-            NameEN = "Shell Compression",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel",
-            Traits = {"POMPE", "MUNITIONS", "+%RESERVES"}
+        ["Barrage Corrosif"] = {
+            AugmentType = "Warframe",
+            Image = "Barrage_Corrosif.png",
+            Introduced = "19.2",
+            Name = "Barrage Corrosif",
+            NameEN = "Corroding Barrage",
+            Polarity = "Zenurik",
+            Rarity = "Rare",
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Transmutable = false
         },
         ["Balles Creuses"] = {
             Image = "Balles Creuses.png",
+            Introduced = nil,
             Name = "Balles Creuses",
             NameEN = "Hollowed Bullets",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%CRITMULT", "ARCHFUSIL"}
+            Traits = {"ARCH-FUSIL", "+%CRITMULT"},
+            Transmutable = true
         },
         ["Balles Cryogéniques"] = {
             Image = "Balles Cryogéniques.png",
+            Introduced = nil,
             Name = "Balles Cryogéniques",
             NameEN = "Cryo Rounds",
             Polarity = "Vazarin",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"PRINCIPAL", "+%GLACE"},
+            Transmutable = true
         },
         ["Balles Cryogéniques Accrues"] = {
+            Family = "Balles Cryogéniques",
             Image = "Balles_Cryogéniques_Accrues.png",
+            Introduced = "RD",
             Name = "Balles Cryogéniques Accrues",
             NameEN = "Primed Cryo Rounds",
             Polarity = "Vazarin",
             Rarity = "Légendaire",
-            Traits = {"FUSIL", "BARO"},
+            Traits = {"PRINCIPAL", "BARO", "+%GLACE"},
             Transmutable = false
-        },
-        ["Balles Incendiaires"] = {
-            Image = "Balles_Incendiaires.png",
-            Name = "Balles Incendiaires",
-            NameEN = "Incendiary Coat",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel"
-        },
-        ["Balles Pathogènes"] = {
-            Image = "Balles Pathogènes.png",
-            Name = "Balles Pathogènes",
-            NameEN = "Pathogen Rounds",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel"
         },
         ["Balles de Commotion"] = {
             Image = "Balles de Commotion.png",
+            Introduced = "11.0",
             Name = "Balles de Commotion",
             NameEN = "Concussion Rounds",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Traits = {"+%IMPACT", "SECONDAIRE"}
+            Traits = {"SECONDAIRE", "+%IMPACT"},
+            Transmutable = true
         },
         ["Balles de Thermite"] = {
-            Archived = false,
             Image = "Balles_de_Thermite.png",
             Introduced = "13.8",
             Name = "Balles de Thermite",
             NameEN = "Thermite Rounds",
             Polarity = "Madurai",
-            PvP = false,
             Rarity = "Rare",
-            Stance = false,
-            Traits = {"+%STATCHANCE", "FUSIL", "BARO"},
+            Traits = {"PRINCIPAL", "BARO", "+%STATCHANCE", "+%FEU"},
             Transmutable = false
         },
-        ["Barbillon Jugulus"] = {
-            Image = "Barbillon Jugulus.png",
-            Introduced = "29.0",
-            Name = "Barbillon Jugulus",
-            NameEN = "Jugulus Barbs",
+        ["Balles Incendiaires"] = {
+            Image = "Balles_Incendiaires.png",
+            Introduced = nil,
+            Name = "Balles Incendiaires",
+            NameEN = "Incendiary Coat",
             Polarity = "Naramon",
-            Rarity = "Commun",
-            Set = "Jugulus",
-            Traits = {"+%PERFORATION", "+%STATCHANCE", "MELEE"},
-            Transmutable = false
+            Rarity = "Inhabituel",
+            Traits = {"POMPE", "+%FEU"},
+            Transmutable = true
         },
-        ["Barrage Corrosif"] = {
-            AugmentType = "Warframe",
-            Image = "Barrage_Corrosif.png",
-            Name = "Barrage Corrosif",
-            NameEN = "Corroding Barrage",
-            Polarity = "Zenurik",
-            Rarity = "Rare",
-            Transmutable = false
+        ["Balles Pathogènes"] = {
+            Image = "Balles Pathogènes.png",
+            Introduced = "11.0",
+            Name = "Balles Pathogènes",
+            NameEN = "Pathogen Rounds",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Traits = {"SECONDAIRE", "+%POISON"},
+            Transmutable = true
         },
         ["Barrage Toxique"] = {
             Image = "Barrage_Toxique.png",
+            Introduced = "11.5",
             Name = "Barrage Toxique",
             NameEN = "Toxic Barrage",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%STATCHANCE", "POMPE"},
-            Transmutable = false
-        },
-        ["Barrière de Recharge"] = {
-            Image = "Barrière de Recharge.png",
-            Name = "Barrière de Recharge",
-            NameEN = "Recharge Barrier",
-            Polarity = "Zenurik",
-            Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
+            Traits = {"POMPE", "+%STATCHANCE", "+%POISON"},
             Transmutable = false
         },
         ["Bassin de Vie"] = {
             AugmentType = "Warframe",
             Image = "Bassin_de_Vie.png",
+            Introduced = "15.0",
             Name = "Bassin de Vie",
             NameEN = "Pool of Life",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
         },
         ["Bastille Repoussante"] = {
             AugmentType = "Warframe",
             Image = "Bastille Repoussante.png",
+            Introduced = "15.6",
             Name = "Bastille Repoussante",
             NameEN = "Repelling Bastille",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Batterie Silencieuse"] = {
-            Image = "Batterie_Silencieuse.png",
-            Introduced = "11.9",
-            Name = "Batterie Silencieuse",
-            NameEN = "Silent Battery",
-            Polarity = "Naramon",
-            PvP = false,
-            Rarity = "Inhabituel",
-            Stance = false,
-            Traits = {"EXILUS", "WARFRAME"},
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
         },
         ["Berserk"] = {
             Image = "Berserk.png",
+            Introduced = "10.0",
             Name = "Berserk",
             NameEN = "Berserker",
             Polarity = "Madurai",
-            Rarity = "Rare"
-        },
-        ["Bhisaj-Bal"] = {
-            AugmentType = "Arme",
-            Image = "Bhisaj-Bal.png",
-            Introduced = "29.0",
-            Name = "Bhisaj-Bal",
-            NameEN = "Bhisaj-Bal",
-            Polarity = "Naramon",
             Rarity = "Rare",
-            Transmutable = false
+            Traits = {"MELEE", "+%ATKSPEED"},
+            Transmutable = true
         },
         ["Bien Chaussé"] = {
+            Family = "Bien Chaussé",
             Image = "Bien Chaussé.png",
+            Introduced = "9.0",
             Name = "Bien Chaussé",
             NameEN = "Sure Footed",
             Polarity = "Vazarin",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"WARFRAME", "EXILUS"},
+            Transmutable = true
         },
         ["Bien Chaussé Accru"] = {
-            Image = "",
+            Family = "Bien Chaussé",
+            Image = "Bien_Chaussé_Accru.png",
+            Introduced = "22.20.3",
             Name = "Bien Chaussé Accru",
             NameEN = "Primed Sure Footed",
             Polarity = "Vazarin",
             Rarity = "Légendaire",
+            Traits = {"WARFRAME", "BARO", "EXILUS"},
             Transmutable = false
         },
         ["Blessures Suintantes"] = {
@@ -970,140 +889,135 @@ local ModData = {
             NameEN = "Weeping Wounds",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Traits = {"+%STATCHANCE", "MELEE"},
+            Traits = {"MELEE", "+%STATCHANCE"},
             Transmutable = false
         },
         ["Blindage Anti-Aérien"] = {
             Image = "Anti-FlakPlatingMod.png",
+            Introduced = "18.5",
             Name = "Blindage Anti-Aérien",
             NameEN = "Anti-Flak Plating",
             Polarity = "Vazarin",
+            PvP = true,
             Rarity = "Inhabituel",
-            Traits = {"CONCLAVE_UTIL"},
+            Traits = {"WARFRAME", "CONCLAVE"},
             Transmutable = false
         },
         ["Blitz Vulcain"] = {
             AugmentType = "Arme",
             Image = "Blitz Vulcain.png",
-            Introduced = "18.10.0",
+            Introduced = "18.10",
             Name = "Blitz Vulcain",
             NameEN = "Vulcan Blitz",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
+            Traits = {"MELEE", "AUGMENT_ARME"},
             Transmutable = false
         },
         ["Bobine Foudroyante"] = {
             AugmentType = "Compagnon",
             Image = "Arc Coil 19.6.3.png",
+            Introduced = "17.3",
             Name = "Bobine Foudroyante",
             NameEN = "Arc Coil",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE"},
+            Traits = {"COMPAGNON", "SENTINELLE", "AUGMENT_COMPAGNON"},
             Transmutable = false
         },
         ["Bobine Réflexe"] = {
-            Image = "Bobine Réflexe.jpg",
+            Image = "Bobine Réflexe.png",
+            Introduced = "Vanilla",
             Name = "Bobine Réflexe",
             NameEN = "Reflex Coil",
             Polarity = "Naramon",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"MELEE", "+%COMBOEFF"},
+            Transmutable = true
         },
         ["Bond"] = {
-            Image = "",
+            Image = "Bond.png",
+            Introduced = "SotR",
             Name = "Bond",
             NameEN = "Pounce",
             Polarity = "Madurai",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"COMPAGNON", "KAVAT"},
+            Transmutable = true
         },
         ["Bond Calculé"] = {
             Image = "CalculatedSpring.png",
+            Introduced = "17.8",
             Name = "Bond Calculé",
             NameEN = "Calculated Spring",
             Polarity = "Naramon",
-            PvP = true,
             Rarity = "Inhabituel",
-            Traits = {"CONCLAVE_UTIL", "WARFRAME", "+%SANTE"},
-            Transmutable = false
-        },
-        ["Boost Nitro"] = {
-            Image = "Boost Nitro.png",
-            Name = "Boost Nitro",
-            NameEN = "Nitro Boost",
-            Polarity = "Naramon",
-            Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Boost Sonique"] = {
-            Image = "Boost Sonique.png",
-            Name = "Boost Sonique",
-            NameEN = "Sonic Boost",
-            Polarity = "Madurai",
-            Rarity = "Rare",
+            Traits = {"WARFRAME", "CONCLAVE"},
             Transmutable = false
         },
         ["Bord Dentelé"] = {
             Image = "Bord_Dentelé.png",
+            Introduced = "11.0",
             Name = "Bord Dentelé",
             NameEN = "Jagged Edge",
             Polarity = "Naramon",
-            Rarity = "Rare"
-        },
-        ["Bordures Dentelées"] = {
-            Image = "Bordures Dentelées.png",
-            Name = "Bordures Dentelées",
-            NameEN = "Serrated Edges",
-            Polarity = "Madurai",
-            PvP = true,
-            Rarity = "Inhabituel",
-            Traits = {"CONCLAVE", "MELEE", "+%PERFORATION"},
-            Transmutable = false
+            Rarity = "Rare",
+            Traits = {"MELEE", "+%TRANCHANT"},
+            Transmutable = true
         },
         ["Botaniste"] = {
             AugmentType = "Compagnon",
             Image = "Botaniste.png",
+            Introduced = "29.0",
             Name = "Botaniste",
             NameEN = "Botanist",
             Polarity = "Penjaga",
             Rarity = "Rare",
-            Traits = {"SENTINELLE", "COMPAGNON"}
+            Traits = {"COMPAGNON", "SENTINELLE", "AUGMENT_COMPAGNON"},
+            Transmutable = false
         },
         ["Bouclier Déstabilisant"] = {
             AugmentType = "Warframe",
             Image = "Bouclier_Déstabilisant.png",
+            Introduced = "16.8",
             Name = "Bouclier Déstabilisant",
             NameEN = "Staggering Shield",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
         },
         ["Bouclier Transistor"] = {
             AugmentType = "Warframe",
             Image = "Bouclier Transistor.png",
+            Introduced = "20.7",
             Name = "Bouclier Transistor",
             NameEN = "Transistor Shield",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
         },
         ["Bouclier Électromagnétique"] = {
             AugmentType = "Arme",
-            Image = "Bouclier_Electromagnétique.png",
-            Introduced = "18.10.0",
+            Image = "Bouclier_Électromagnétique.png",
+            Introduced = "18.10",
             Name = "Bouclier Électromagnétique",
-            NameEN = "Electromagnetic Shielding",
+            NameEN = "Electromagnetic Shield",
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
+            Traits = {"WARFRAME", "AUGMENT_ARME"},
             Transmutable = false
         },
         ["Boule de Glas"] = {
             AugmentType = "Warframe",
             Image = "Boule_de_Glas.png",
-            Introduced = "16.0.0",
+            Introduced = "16.0",
             Name = "Boule de Glas",
             NameEN = "Chilling Globe",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
         },
         ["Bouquet Radial"] = {
@@ -1114,89 +1028,82 @@ local ModData = {
             NameEN = "Radiant Finish",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Boursouflure Atypique"] = {
-            Image = "Boursouflure Atypique.png",
-            Name = "Boursouflure Atypique",
-            NameEN = "Peculiar Growth",
-            Polarity = "Naramon",
-            Rarity = "Atypique",
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
         },
         ["Branche Battante"] = {
             Image = "Branche_Battante.png",
+            Introduced = "13.0",
             Name = "Branche Battante",
             NameEN = "Flailing Branch",
             Polarity = "Unairu",
             Rarity = "Rare",
-            Stance = true
+            Stance = true,
+            Traits = {"MELEE"},
+            Transmutable = true
         },
         ["Brasier Dispersant"] = {
             Image = "Brasier_Dispersant.png",
+            Introduced = "13.8",
             Name = "Brasier Dispersant",
             NameEN = "Scattering Inferno",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%STATCHANCE", "POMPE", "BARO"},
+            Traits = {"POMPE", "BARO", "+%STATCHANCE", "+%FEU"},
             Transmutable = false
         },
         ["Brume de Contagion"] = {
             AugmentType = "Warframe",
             Image = "Brume_de_Contagion.png",
+            Introduced = "16.7",
             Name = "Brume de Contagion",
             NameEN = "Contagion Cloud",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
         },
         ["Cadence Habile"] = {
             Image = "DeftTempoMod.png",
+            Introduced = "17.8",
             Name = "Cadence Habile",
             NameEN = "Deft Tempo",
             Polarity = "Naramon",
+            PvP = true,
             Rarity = "Rare",
+            Traits = {"FUSIL", "CONCLAVE"},
             Transmutable = false
         },
         ["Cadence Noble"] = {
             Image = "Cadence_Noble.jpg",
             Introduced = "SotR",
             Name = "Cadence Noble",
-            NameEN = "Cadence Noble",
+            NameEN = "Noble Cadence",
             Polarity = "Madurai",
             PvP = true,
             Rarity = "Inhabituel",
+            Traits = {"MELEE", "CONCLAVE"},
             Stance = true,
             Transmutable = false
         },
         ["Caisse à Munitions"] = {
-            AugmentType = "Compagnon",
             Image = "Caisse_à_Munitions.png",
+            Introduced = "TVW",
             Name = "Caisse à Munitions",
             NameEN = "Ammo Case",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {
-                "SENTINELLE", "COMPAGNON", "MUNITIONS", "+%RESERVES", "MUTATION"
-            },
+            Traits = {"COMPAGNON", "SENTINELLE", "MUNITIONS"},
             Transmutable = false
         },
         ["Calcination"] = {
             Image = "Calcination.png",
+            Introduced = "13.8",
             Name = "Calcination",
             NameEN = "Scorch",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%STATCHANCE", "SECONDAIRE", "BARO"},
-            Transmutable = false
-        },
-        ["Calibre Pénétrant"] = {
-            Image = "Calibre Pénétrant.png",
-            Name = "Calibre Pénétrant",
-            NameEN = "Piercing Caliber",
-            Polarity = "Naramon",
-            Rarity = "Rare",
-            Traits = {"+%PERFORATION", "FUSIL"},
+            Traits = {"SECONDAIRE", "BARO", "+%STATCHANCE", "+%FEU"},
             Transmutable = false
         },
         ["Calme & Frénésie"] = {
@@ -1207,41 +1114,42 @@ local ModData = {
             NameEN = "Calm & Frenzy",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
         },
         ["Canalisation d'Énergie"] = {
             Image = "Canalisation d'Énergie.png",
+            Introduced = "8.0",
             Name = "Canalisation d'Énergie",
             NameEN = "Energy Channel",
             Polarity = "Madurai",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Traits = {"MELEE"},
+            Transmutable = true
         },
         ["Canon Double Amorti"] = {
             Image = "Canon Double Amorti.png",
+            Introduced = "17.0",
             Name = "Canon Double Amorti",
             NameEN = "Double-Barrel Drift",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Canon Hydraulique"] = {
-            Image = "Canon Hydraulique.png",
-            Name = "Canon Hydraulique",
-            NameEN = "Hydraulic Barrel",
-            Polarity = "Naramon",
-            PvP = true,
-            Rarity = "Rare",
-            Traits = {"SECONDAIRE", "MUNITIONS", "-%TAILLE_CHARGEUR"},
+            Traits = {"POMPE", "CONCLAVE"},
             Transmutable = false
         },
         ["Canon Plaqué Rubedo"] = {
+            Family = "Canon Plaqué Rubedo",
             Image = "Canon Plaqué Rubedo.png",
+            Introduced = "15.0",
             Name = "Canon Plaqué Rubedo",
             NameEN = "Rubedo-Lined Barrel",
             Polarity = "Madurai",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"ARCH-FUSIL"},
+            Transmutable = true
         },
         ["Canon Plaqué Rubedo Accru"] = {
+            Family = "Canon Plaqué Rubedo",
             Image = "Canon Plaqué Rubedo Accru.png",
             Introduced = "28.0.5",
             Name = "Canon Plaqué Rubedo Accru",
@@ -1253,32 +1161,39 @@ local ModData = {
         },
         ["Canon Électrifié"] = {
             Image = "Canon Électrifié.png",
+            Introduced = "15.0",
             Name = "Canon Électrifié",
             NameEN = "Electrified Barrel",
             Polarity = "Naramon",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"ARCH-FUSIL", "+%ELEC"},
+            Transmutable = true
         },
         ["Canon Étroit"] = {
             Image = "Canon_Etroit.png",
+            Introduced = "18.4.1",
             Name = "Canon Étroit",
             NameEN = "Narrow Barrel",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"ACOLYTE", "POMPE"},
+            Traits = {"POMPE", "+%PRECI"},
             Transmutable = false
         },
         ["Canon à Diffusion"] = {
             Family = "Canon à Diffusion",
             Image = "Canon à Diffusion.png",
+            Introduced = "Vanilla",
             Name = "Canon à Diffusion",
             NameEN = "Barrel Diffusion",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"SECONDAIRE", "+%TIRMULTIPLE"}
+            Traits = {"SECONDAIRE", "+%TIRMULTIPLE"},
+            Transmutable = true
         },
         ["Canon à Diffusion Amalgame"] = {
             Family = "Canon à Diffusion",
             Image = "AmalgamBarrelDiffusionMod.png",
+            Introduced = "24.4",
             Name = "Canon à Diffusion Amalgame",
             NameEN = "Amalgam Barrel Diffusion",
             Polarity = "Madurai",
@@ -1288,72 +1203,34 @@ local ModData = {
         },
         ["Canonnade"] = {
             Image = "Cannonade.png",
+            Introduced = "18.5",
             Name = "Canonnade",
             NameEN = "Cannonade",
             Polarity = "Madurai",
             Rarity = "Rare",
+            Traits = {"SECONDAIRE"},
             Transmutable = false
         },
         ["Capacité Maximale"] = {
-            Image = "",
+            Image = "Capacité_Maximale.png",
+            Introduced = "16.7",
             Name = "Capacité Maximale",
             NameEN = "Maximum Capacity",
             Polarity = "Naramon",
             PvP = true,
             Rarity = "Commun",
-            Traits = {"FUSIL", "MUNITIONS", "+%TAILLE_CHARGEUR"},
-            Transmutable = false
-        },
-        ["Capacité Supérieure"] = {
-            Image = "Capacité Supérieure.png",
-            Name = "Capacité Supérieure",
-            NameEN = "Loaded Capacity",
-            Polarity = "Naramon",
-            PvP = true,
-            Rarity = "Commun",
-            Traits = {"POMPE", "MUNITIONS", "+%TAILLE_CHARGEUR"},
+            Traits = {"FUSIL", "+%TAILLE_CHARGEUR", "-%RECHARGEMENT"},
             Transmutable = false
         },
         ["Caprice Mental"] = {
             AugmentType = "Warframe",
             Image = "Caprice_Mental.png",
+            Introduced = "15.6",
             Name = "Caprice Mental",
             NameEN = "Mind Freak",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Carapace Carnis"] = {
-            Image = "Carapace Carnis.png",
-            Introduced = "29.0",
-            Name = "Carapace Carnis",
-            NameEN = "Carnis Carapace",
-            Polarity = "Vazarin",
-            Rarity = "Inhatbituel",
-            Set = "Carnis",
-            Traits = {"+%SANTE", "+%ARMURE", "WARFRAME"},
-            Transmutable = false
-        },
-        ["Carapace Jugulus"] = {
-            Image = "Carapace Jugulus.png",
-            Introduced = "29.0",
-            Name = "Carapace Jugulus",
-            NameEN = "Jugulus Carapace",
-            Polarity = "Vazarin",
-            Rarity = "Inhabituel",
-            Set = "Jugulus",
-            Traits = {"+%ARMURE", "+%SANTE", "WARFRAME", "+%PERFORATION"},
-            Transmutable = false
-        },
-        ["Carapace Saxum"] = {
-            Image = "Carapace Saxum.png",
-            Introduced = "29.0",
-            Name = "Carapace Saxum",
-            NameEN = "Saxum Carapace",
-            Polarity = "Vazarin",
-            Rarity = "Inhabituel",
-            Set = "Saxum",
-            Traits = {"WARFRAME", "+%SANTE"},
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
         },
         ["Carquois Surchargé"] = {
@@ -1364,193 +1241,175 @@ local ModData = {
             NameEN = "Empowered Quiver",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"+%CRITMULT", "AUGMENT_WARFRAME", "AUGMENT"},
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME", "+%CRITMULT"},
             Transmutable = false
         },
         ["Carreaux Pacificateurs"] = {
             AugmentType = "Warframe",
             Image = "Carreaux_Pacificateurs.png",
+            Introduced = "15.0",
             Name = "Carreaux Pacificateurs",
             NameEN = "Pacifying Bolts",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
-        },
-        ["Cartouche Chargée"] = {
-            Image = "Cartouche Chargée.png",
-            Name = "Cartouche Chargée",
-            NameEN = "Charged Shell",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel"
-        },
-        ["Cartouche Chargée Accrue"] = {
-            Image = "Cartouche Chargée Accrue.png",
-            Name = "Cartouche Chargée Accrue",
-            NameEN = "Primed Charged Shell",
-            Polarity = "Naramon",
-            Rarity = "Légendaire",
-            Traits = {"POMPE", "BARO"},
-            Transmutable = false
-        },
-        ["Cartouche Hypothermique"] = {
-            Image = "Cartouche_Hypothermique.jpg",
-            Name = "Cartouche Hypothermique",
-            NameEN = "Hypothermic Shell",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Traits = {"+%STATCHANCE", "ARCHFUSIL"}
         },
         ["Cartouches Acides"] = {
             AugmentType = "Arme",
             Image = "Cartouches_Acides.png",
-            Introduced = "18.10.0",
+            Introduced = "18.10",
             Name = "Cartouches Acides",
             NameEN = "Acid Shells",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
+            Traits = {"POMPE", "AUGMENT_ARME"},
             Transmutable = false
+        },
+        ["Cartouche Chargée"] = {
+            Image = "Cartouche Chargée.png",
+            Introduced = nil,
+            Name = "Cartouche Chargée",
+            NameEN = "Charged Shell",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Traits = {"POMPE", "+%ELEC"},
+            Transmutable = true
         },
         ["Cartouches Comètes"] = {
             Image = "Cartouches Comètes.png",
+            Introduced = "17.0",
             Name = "Cartouches Comètes",
             NameEN = "Comet Rounds",
             Polarity = "Madurai",
             PvP = true,
             Rarity = "Inhabituel",
-            Traits = {"+%IMPACT", "FUSIL"},
-            Transmutable = false
-        },
-        ["Cartouches Dentelées"] = {
-            Image = "Cartouches Dentelées.png",
-            Name = "Cartouches Dentelées",
-            NameEN = "Serrated Rounds",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel",
-            Traits = {"CONCLAVE", "FUSIL"},
-            Transmutable = false
-        },
-        ["Cartouches Déchirantes"] = {
-            Image = "Cartouches Déchirantes.png",
-            Name = "Cartouches Déchirantes",
-            NameEN = "Ripper Rounds",
-            Polarity = "Madurai",
-            PvP = true,
-            Rarity = "Inhabituel",
-            Traits = {"CONCLAVE", "FUSIL", "+%PERFORATION"},
+            Traits = {"FUSIL", "CONCLAVE", "+%IMPACT"},
             Transmutable = false
         },
         ["Cartouches Givrées"] = {
             Image = "Cartouches_Givrées.png",
-            Introduced = "14.5.0",
+            Introduced = "14.5",
             Name = "Cartouches Givrées",
             NameEN = "Rime Rounds",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%STATCHANCE", "FUSIL"},
+            Traits = {"FUSIL", "+%STATCHANCE", "+%GLACE"},
             Transmutable = false
+        },
+        ["Cartouche Hypothermique"] = {
+            Image = "Cartouche_Hypothermique.jpg",
+            Introduced = "24.0",
+            Name = "Cartouche Hypothermique",
+            NameEN = "Hypothermic Shell",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Traits = {"ARCH-FUSIL", "+%STATCHANCE", "+%GLACE"},
+            Transmutable = true
         },
         ["Cartouches Thermagnétiques"] = {
             AugmentType = "Arme",
+            Introduced = "TIP",
             Image = "Cartouches_Thermagnétiques.png",
-            Introduced = "SotR",
             Name = "Cartouches Thermagnétiques",
             NameEN = "Thermagnetic Shells",
             Polarity = "Naramon",
             Rarity = "Rare",
+            Traits = {"FUSIL", "AUGMENT_ARME"},
             Transmutable = false
         },
         ["Cartouches à Combustion"] = {
             Image = "Cartouches à Combustion.png",
+            Introduced = "15.0",
             Name = "Cartouches à Combustion",
-            NameEN = "Combustion Rounds",
             Polarity = "Madurai",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            NameEN = "Combustion Rounds",
+            Traits = {"ARCH-FUSIL", "+%FEU"},
+            Transmutable = true
         },
         ["Catalyseur Incorporé"] = {
             Image = "Catalyseur_Incorporé.png",
+            Introduced = "18.4.1",
             Name = "Catalyseur Incorporé",
             NameEN = "Embedded Catalyzer",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Traits = {"ACOLYTE", "+%STATCHANCE", "SECONDAIRE"},
+            Traits = {"SECONDAIRE", "+%STATCHANCE"},
             Transmutable = false
         },
         ["Catapulte"] = {
             AugmentType = "Warframe",
             Image = "Catapulte.png",
+            Introduced = "27.3.14",
             Name = "Catapulte",
             NameEN = "Catapult",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
         },
         ["Chakram Faucheur"] = {
             AugmentType = "Warframe",
             Image = "Chakram Faucheur.png",
+            Introduced = "22.17.3",
             Name = "Chakram Faucheur",
             NameEN = "Reaping Chakram",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
         },
         ["Chambre Accrue"] = {
+            Family = "Chambre Chargée",
             Image = "PrimedChamber.png",
+            Introduced = "8.3.1",
             Name = "Chambre Accrue",
             NameEN = "Primed Chamber",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"BARO", "FUSIL", "SNIPER"},
-            Transmutable = false
-        },
-        ["Chambre Bricolée"] = {
-            Image = "Chambre Bricolée.png",
-            Name = "Chambre Bricolée",
-            NameEN = "Loose Chamber",
-            Polarity = "Naramon",
-            Rarity = "Commun",
+            Traits = {"SNIPER", "BARO"},
             Transmutable = false
         },
         ["Chambre Chargée"] = {
+            Family = "Chambre Chargée",
             Image = "Chambre_Chargée.png",
+            Introduced = "8.0",
             Name = "Chambre Chargée",
             NameEN = "Charged Chamber",
             Polarity = "Madurai",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"SNIPER"},
+            Transmutable = true
         },
         ["Chambre Divisée"] = {
             Image = "Chambre Divisée.png",
+            Introduced = "Vanilla",
             Name = "Chambre Divisée",
             NameEN = "Split Chamber",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"FUSIL", "+%TIRMULTIPLE"}
-        },
-        ["Chambre Hydraulique"] = {
-            Image = "Chambre Hydraulique.png",
-            Name = "Chambre Hydraulique",
-            NameEN = "Hydraulic Chamber",
-            Polarity = "Naramon",
-            PvP = true,
-            Rarity = "Rare",
-            Traits = {"POMPE", "MUNITIONS", "-%TAILLE_CHARGEUR"},
-            Transmutable = false
+            Traits = {"FUSIL", "+%TIRMULTIPLE"},
+            Transmutable = true
         },
         ["Chambre Magmatique"] = {
             Image = "Chambre_Magmatique.png",
+            Introduced = "15.8",
             Name = "Chambre Magmatique",
             NameEN = "Magma Chamber",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%STATCHANCE", "ARCHFUSIL"},
+            Traits = {"ARCHFUSIL", "+%STATCHANCE", "+%FEU"},
             Transmutable = false
         },
         ["Chambre sur Ressorts"] = {
             Image = "Chambre_sur_Ressorts.png",
+            Introduced = "18.4.1",
             Name = "Chambre sur Ressorts",
             NameEN = "Spring-Loaded Chamber",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Traits = {"ACOLYTE", "FUSIL"},
+            Traits = {"FUSIL", "+%CADENCE"},
             Transmutable = false
         },
         ["Champ d'Énergie"] = {
@@ -1560,164 +1419,136 @@ local ModData = {
             Name = "Champ d'Énergie",
             NameEN = "Energy Field",
             Polarity = "Zenurik",
-            Rarity = "Rare"
-        },
-        ["Champ de Stase"] = {
-            Image = "Champ de Stase.png",
-            Name = "Champ de Stase",
-            NameEN = "Stasis Field",
-            Polarity = "Penjaga",
-            Rarity = "Commun",
-            Transmutable = false
-        },
-        ["Charge Ascendante"] = {
-            Image = "Charge Ascendante.png",
-            Name = "Charge Ascendante",
-            NameEN = "Crescent Charge  ",
-            Polarity = "Penjaga",
             Rarity = "Rare",
-            Transmutable = false
+            Traits = {"ARCHWING", "AUGMENT_ARCHWING"},
+            Transmutable = true
         },
         ["Charge Contaminée"] = {
             Image = "Charge_Contaminée.jpg",
+            Introduced = "24.0",
             Name = "Charge Contaminée",
             NameEN = "Contamination Casing",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%STATCHANCE", "ARCHFUSIL"}
+            Traits = {"ARCH-FUSIL", "+%STATCHANCE", "+%POISON"},
+            Transmutable = true
         },
         ["Charge Corrompue"] = {
             Image = "Charge Corrompue.png",
+            Introduced = "10.3",
             Name = "Charge Corrompue",
             NameEN = "Corrupt Charge",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"CORROMPU", "MELEE"},
+            Traits = {"MELEE", "CORROMPU"},
             Transmutable = false
         },
         ["Charge Cuirassée"] = {
             AugmentType = "Warframe",
             Image = "Charge Cuirassée.png",
+            Introduced = "15.0",
             Name = "Charge Cuirassée",
             NameEN = "Ironclad Charge",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Charge Isolante"] = {
-            Image = "Charge Isolante.png",
-            Introduced = "28",
-            Name = "Charge Isolante",
-            NameEN = "Blast Shield",
-            Polarity = "Penjaga",
-            Rarity = "Commun",
-            Transmutable = false
-        },
-        ["Charge Rapide"] = {
-            Image = "Charge Rapide.png",
-            Name = "Charge Rapide",
-            NameEN = "Quick Charge",
-            Polarity = "Vazarin",
-            Rarity = "Rare",
-            Traits = {"CONCLAVE_UTIL"},
-            Transmutable = false
-        },
-        ["Charge Synth"] = {
-            Image = "Charge Synth.png",
-            Introduced = "24",
-            Name = "Charge Synth",
-            NameEN = "Synth Charge",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Set = "Synth",
+            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
             Transmutable = false
         },
         ["Charge d'Acier"] = {
             Image = "Charge_d'Acier.png",
+            Introduced = nil,
             Name = "Charge d'Acier",
             NameEN = "Steel Charge",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Traits = {"AURA"},
+            Traits = {"WARFRAME", "AURA"},
             Transmutable = false
         },
         ["Charge de Chaleur"] = {
             Image = "Charge de Chaleur.png",
+            Introduced = "Vanilla",
             Name = "Charge de Chaleur",
             NameEN = "Heated Charge",
             Polarity = "Naramon",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"SECONDAIRE", "+%FEU"},
+            Transmutable = true
         },
-        ["Charge de Chaleur Accrue"] = {
-            Image = "Charge de Chaleur Accrue.png",
-            Name = "Charge de Chaleur Accrue",
-            NameEN = "Primed Heated Charge",
-            Polarity = "Naramon",
-            Rarity = "Légendaire",
-            Traits = {"SECONDAIRE", "BARO"},
+        ["Charge Isolante"] = {
+            Image = "Charge Isolante.png",
+            Introduced = "28.0",
+            Name = "Charge Isolante",
+            NameEN = "Blast Shield",
+            Polarity = "Penjaga",
+            Rarity = "Commun",
+            Traits = {"COMPAGNON", "MOA"},
             Transmutable = false
         },
-        ["Chargeur Bricolé"] = {
-            Image = "Chargeur Bricolé.png",
-            Name = "Chargeur Bricolé",
-            NameEN = "Loose Magazine",
-            Polarity = "Naramon",
-            Rarity = "Commun",
+        ["Charge Synth"] = {
+            Image = "Charge Synth.png",
+            Introduced = "24.0",
+            Name = "Charge Synth",
+            NameEN = "Synth Charge",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Traits = {"SECONDAIRE"},
+            Set = "Synth",
             Transmutable = false
         },
         ["Chargeur Chargé"] = {
             Image = "Chargeur_Chargé.png",
+            Introduced = "10.3",
             Name = "Chargeur Chargé",
             NameEN = "Burdened Magazine",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"CORROMPU", "POMPE", "MUNITIONS", "+%TAILLE_CHARGEUR"},
+            Traits = {
+                "POMPE", "CORROMPU", "+%TAILLE_CHARGEUR", "-%RECHARGEMENT"
+            },
             Transmutable = false
         },
         ["Chargeur Contaminé"] = {
             Image = "Chargeur_Contaminé.png",
+            Introduced = "Vanilla",
             Name = "Chargeur Contaminé",
             NameEN = "Tainted Clip",
             Polarity = "Naramon",
             Rarity = "Rare",
             Traits = {
-                "CORROMPU", "SECONDAIRE", "MUNITIONS", "+%TAILLE_CHARGEUR"
+                "SECONDAIRE", "CORROMPU", "+%TAILLE_CHARGEUR", "-%RECHARGEMENT"
             },
             Transmutable = false
         },
         ["Chargeur Glissant"] = {
             Family = "Chargeur Glissant",
+            Introduced = "Vanilla",
             Image = "Chargeur_Glissant.png",
             Name = "Chargeur Glissant",
             NameEN = "Slip Magazine",
             Polarity = "Naramon",
             Rarity = "Commun",
-            Traits = {"SECONDAIRE", "MUNITIONS", "+%TAILLE_CHARGEUR"}
-        },
-        ["Chargeur Glissant Accru"] = {
-            Family = "Chargeur Glissant",
-            Image = "Chargeur Glissant Accru.png",
-            Name = "Chargeur Glissant Accru",
-            NameEN = "Primed Slip Magazine",
-            Polarity = "Naramon",
-            Rarity = "Légendaire",
-            Traits = {"SECONDAIRE", "MUNITIONS", "+%TAILLE_CHARGEUR", "BARO"},
-            Transmutable = false
+            Traits = {"SECONDAIRE", "+%TAILLE_CHARGEUR"},
+            Transmutable = true
         },
         ["Chargeur Infecté"] = {
             Image = "Chargeur Infecté.png",
+            Introduced = "11.0",
             Name = "Chargeur Infecté",
             NameEN = "Infected Clip",
             Polarity = "Naramon",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Traits = {"SECONDAIRE", "+%POISON"},
+            Transmutable = true
         },
         ["Chargeur Trafiqué"] = {
             Image = "Chargeur Trafiqué.png",
+            Introduced = "Vanilla",
             Name = "Chargeur Trafiqué",
             NameEN = "Trick Mag",
             Polarity = "Naramon",
             Rarity = "Commun",
-            Traits = {"SECONDAIRE", "MUNITIONS", "+%RESERVES"}
+            Traits = {"SECONDAIRE", "+%MUNMAX"},
+            Transmutable = true
         },
         ["Chargeur Venimeux"] = {
             Image = "Chargeur Venimeux.png",
@@ -1735,13 +1566,6 @@ local ModData = {
             Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
-        ["Chargeur en Dents de Scie"] = {
-            Image = "Chargeur en Dents de Scie.png",
-            Name = "Chargeur en Dents de Scie",
-            NameEN = "Sawtooth Clip",
-            Polarity = "Naramon",
-            Rarity = "Commun"
-        },
         ["Chargeur sous Pression"] = {
             Image = "Chargeur_sous_Pression.png",
             Name = "Chargeur sous Pression",
@@ -1753,12 +1577,12 @@ local ModData = {
         },
         ["Chargeur Éjectable"] = {
             Image = "Chargeur Ejectable.png",
-            Introduced = "16",
             Name = "Chargeur Éjectable",
             NameEN = "Eject Magazine",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Introduced = "16"
         },
         ["Chargeur à Répétition"] = {
             Image = "Chargeur_à_Répétition.png",
@@ -1795,13 +1619,6 @@ local ModData = {
             Traits = {"FUSIL", "+PENETRATION"},
             Transmutable = false
         },
-        ["Chasse"] = {
-            Image = "Chasse.png",
-            Name = "Chasse",
-            NameEN = "Hunt",
-            Polarity = "Penjaga",
-            Rarity = "Rare"
-        },
         ["Chasseur de Prime"] = {
             Image = "BountyHunter.png",
             Name = "Chasseur de Prime",
@@ -1818,7 +1635,7 @@ local ModData = {
             Rarity = "Inhabituel"
         },
         ["Chef d'Orchestre"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Chef d'Orchestre.png",
             Name = "Chef d'Orchestre",
             NameEN = "Conductor",
@@ -1839,40 +1656,8 @@ local ModData = {
             NameEN = "Primed Pack Leader",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"COMPAGNON", "BARO"},
-            Transmutable = false
-        },
-        ["Chercheur"] = {
-            Image = "Chercheur.png",
-            Link = "Chercheur (Mod)",
-            Name = "Chercheur",
-            NameEN = "Seeker",
-            Polarity = "Naramon",
-            Rarity = "Rare",
-            Traits = {"SECONDAIRE", "+PENETRATION"}
-        },
-        ["Chut"] = {
-            Image = "Chut.png",
-            Name = "Chut",
-            NameEN = "Hush",
-            Polarity = "Naramon",
-            Rarity = "Commun"
-        },
-        ["Châtie-Corpus"] = {
-            Image = "Châtie-Corpus.png",
-            Name = "Châtie-Corpus",
-            NameEN = "Smite Corpus",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel"
-        },
-        ["Châtie-Corpus Accru"] = {
-            Image = "Châtie-Corpus Accru.png",
-            Name = "Châtie-Corpus Accru",
-            NameEN = "Primed Smite Corpus",
-            Polarity = "Madurai",
-            Rarity = "Légendaire",
-            Traits = {"MELEE", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"COMPAGNON", "BARO"}
         },
         ["Châtie-Corrompu"] = {
             Image = "Chatie-Corrompu.png",
@@ -1881,46 +1666,12 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Inhabituel"
         },
-        ["Châtie-Corrompu Accru"] = {
-            Image = "Châtie-Corrompu Accru.png",
-            Name = "Châtie-Corrompu Accru",
-            NameEN = "Primed Smite Corrupted",
-            Polarity = "Madurai",
-            Rarity = "Légendaire",
-            Traits = {"MELEE", "BARO"},
-            Transmutable = false
-        },
-        ["Châtie-Grineer"] = {
-            Image = "Châtie-Grineer.png",
-            Name = "Châtie-Grineer",
-            NameEN = "Smite Grineer",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel"
-        },
-        ["Châtie-Grineer Accru"] = {
-            Image = "Châtie-Grineer Accru.png",
-            Name = "Châtie-Grineer Accru",
-            NameEN = "Primed Smite Grineer",
-            Polarity = "Madurai",
-            Rarity = "Légendaire",
-            Traits = {"MELEE", "BARO"},
-            Transmutable = false
-        },
         ["Châtie-Infestés"] = {
             Image = "Châtie-Infestés.png",
             Name = "Châtie-Infestés",
             NameEN = "Smite Infested",
             Polarity = "Madurai",
             Rarity = "Inhabituel"
-        },
-        ["Châtie-Infestés Accru"] = {
-            Image = "Châtie-Infestés Accru.png",
-            Name = "Châtie-Infestés Accru",
-            NameEN = "Primed Smite Infested",
-            Polarity = "Madurai",
-            Rarity = "Légendaire",
-            Traits = {"MELEE", "BARO"},
-            Transmutable = false
         },
         ["Cible Acquise"] = {
             Family = "Cible Acquise",
@@ -1932,7 +1683,7 @@ local ModData = {
             Transmutable = false
         },
         ["Cible Acquise Daikyu Amalgame"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Family = "Cible Acquise",
             Image = "Cible_Acquise_Daikyu_Amalgame.png",
             Introduced = "25.0.0",
@@ -1943,7 +1694,7 @@ local ModData = {
             Transmutable = false
         },
         ["Cible Balistique"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Cible_Balistique.png",
             Name = "Cible Balistique",
             NameEN = "Ballistic Bullseye",
@@ -1970,14 +1721,12 @@ local ModData = {
             Traits = {"+%STATCHANCE", "MELEE"},
             Transmutable = false
         },
-        ["Coeur Légendaire"] = {
-            Image = "Coeur_Légendaire.png",
-            Introduced = "12.2",
-            Name = "Coeur Légendaire",
-            NameEN = "Legendary Core",
+        ["Coeur de fusion"] = {
+            Image = "Coeur de FusionRU145.png",
+            Name = "Coeur de fusion",
+            NameEN = "Fusion Core",
             Polarity = "Core",
-            Rarity = "Légendaire",
-            Transmutable = false
+            Rarity = "Common<br>Uncommon<br>Rare"
         },
         ["Coeur de Transmutation Madurai"] = {
             Image = "CoeurdeTransmutationMadurai.png",
@@ -2003,21 +1752,13 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Coeur de fusion"] = {
-            Image = "Coeur de FusionRU145.png",
-            Name = "Coeur de fusion",
-            NameEN = "Fusion Core",
+        ["Coeur Légendaire"] = {
+            Image = "Coeur_Légendaire.png",
+            Introduced = "12.2",
+            Name = "Coeur Légendaire",
+            NameEN = "Legendary Core",
             Polarity = "Core",
-            Rarity = "Common<br>Uncommon<br>Rare"
-        },
-        ["Cogneur"] = {
-            AugmentType = "Compagnon",
-            Image = "Cogneur.png",
-            Name = "Cogneur",
-            NameEN = "Thumper",
-            Polarity = "Penjaga",
-            Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON"},
+            Rarity = "Légendaire",
             Transmutable = false
         },
         ["Collier Choc"] = {
@@ -2030,26 +1771,26 @@ local ModData = {
             Transmutable = false
         },
         ["Collision & Attraction"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Collision & Attraction.png",
             Name = "Collision & Attraction",
             NameEN = "Push & Pull",
             Polarity = "Zenurik",
             PvP = true,
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Collision Cinétique"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Collision Cinétique.png",
             Name = "Collision Cinétique",
             NameEN = "Kinetic Collision",
             Polarity = "Zenurik",
             PvP = true,
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Collision Imminente"] = {
             Image = "Collision_Imminente.png",
@@ -2066,8 +1807,8 @@ local ModData = {
             NameEN = "Blind Rage",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "CORROMPU"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"WARFRAME", "CORROMPU"}
         },
         ["Combat Rapproché"] = {
             Image = "Combat Rapproché.png",
@@ -2078,13 +1819,6 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Combinaison Incessante"] = {
-            Image = "Combinaison Incessante.png",
-            Name = "Combinaison Incessante",
-            NameEN = "Relentless Combination",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel"
-        },
         ["Combo Furie"] = {
             Image = "Combo Furie.png",
             Introduced = "29.2.3",
@@ -2092,8 +1826,8 @@ local ModData = {
             NameEN = "Combo Fury",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"MELEE", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"MELEE", "BARO"}
         },
         ["Combo Meurtrier"] = {
             Image = "Combo Meurtrier.png",
@@ -2102,8 +1836,8 @@ local ModData = {
             NameEN = "Combo Killer",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Traits = {"MELEE", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"MELEE", "BARO"}
         },
         ["Commande du Chasseur"] = {
             Image = "Commande_du_Chasseur.jpg",
@@ -2138,13 +1872,6 @@ local ModData = {
             Rarity = "Rare",
             Traits = {"+%IMPACT", "ARCHFUSIL"}
         },
-        ["Concentration Résolue"] = {
-            Image = "Concentration Résolue.png",
-            Name = "Concentration Résolue",
-            NameEN = "Resolute Focus",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel"
-        },
         ["Concentration d'énergie"] = {
             Image = "Concentration d'énergie.png",
             Name = "Concentration d'énergie",
@@ -2153,14 +1880,6 @@ local ModData = {
             Rarity = "Rare",
             Traits = {"NIGHTMARE", "MELEE"}
         },
-        ["Conduit Mortel"] = {
-            Image = "Conduit Mortel.png",
-            Name = "Conduit Mortel",
-            NameEN = "Mortal Conduct",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Transmutable = false
-        },
         ["Configuration Motus"] = {
             Image = "Configuration_Motus.png",
             Name = "Configuration Motus",
@@ -2168,8 +1887,8 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Rare",
             Set = "Motus",
-            Traits = {"+%CRITCHANCE", "+%STATCHANCE", "POMPE"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"+%CRITCHANCE", "+%STATCHANCE", "POMPE"}
         },
         ["Connexion Électrique"] = {
             Image = "Connexion Électrique.png",
@@ -2180,12 +1899,12 @@ local ModData = {
         },
         ["Constitution"] = {
             Image = "Constitution.png",
-            Introduced = "9.0",
             Name = "Constitution",
             NameEN = "Constitution",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"NIGHTMARE", "WARFRAME"}
+            Traits = {"NIGHTMARE", "WARFRAME"},
+            Introduced = "9.0"
         },
         ["Conséquence Inattendue"] = {
             Image = "EmergentAftermathMod.png",
@@ -2217,19 +1936,11 @@ local ModData = {
             NameEN = "Primed Continuity",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"WARFRAME", "BARO"},
-            Transmutable = false
-        },
-        ["Continuité du Necramech"] = {
-            Image = "Continuité du Necramech.png",
-            Name = "Continuité du Necramech",
-            NameEN = "Necramech Continuity",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"WARFRAME", "BARO"}
         },
         ["Continuum Cataclysmique"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Continuum_Cataclysmique.png",
             Name = "Continuum Cataclysmique",
             NameEN = "Cataclysmic Continuum",
@@ -2259,7 +1970,7 @@ local ModData = {
             Transmutable = false
         },
         ["Convergence Maîtrisée"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Convergence Maîtrisée.png",
             Name = "Convergence Maîtrisée",
             NameEN = "Directed Convergence",
@@ -2269,7 +1980,7 @@ local ModData = {
             Transmutable = false
         },
         ["Conversion Moléculaire"] = {
-            AugmentType = "Compagnon",
+            AugmentType = 'Compagnon',
             Image = "Molecular Conversion 19.10.png",
             Name = "Conversion Moléculaire",
             NameEN = "Molecular Conversion",
@@ -2283,8 +1994,8 @@ local ModData = {
             NameEN = "Energy Conversion",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"WARFRAME"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"WARFRAME"}
         },
         ["Conversion de Santé"] = {
             Image = "HealthConversion.png",
@@ -2302,7 +2013,7 @@ local ModData = {
             Rarity = "Inhabituel"
         },
         ["Coup Final"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Coup final.png",
             Name = "Coup Final",
             NameEN = "Final Tap",
@@ -2342,8 +2053,8 @@ local ModData = {
             NameEN = "Voltaic Strike",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%STATCHANCE", "MELEE", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"+%STATCHANCE", "MELEE", "BARO"}
         },
         ["Coup de Foudre"] = {
             Image = "Coup de Foudre.png",
@@ -2361,8 +2072,8 @@ local ModData = {
         },
         ["Coup de Grâce"] = {
             Image = "Coup de Grâce.png",
-            Link = "Coup de Grâce (Mod)",
             Name = "Coup de Grâce",
+            Link = "Coup de Grâce (Mod)",
             NameEN = "Finishing Touch",
             Polarity = "Madurai",
             Rarity = "Inhabituel"
@@ -2403,7 +2114,7 @@ local ModData = {
             Transmutable = false
         },
         ["Courant Curatif"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Courant_Curatif.png",
             Name = "Courant Curatif",
             NameEN = "Curative Undertow",
@@ -2412,7 +2123,7 @@ local ModData = {
             Transmutable = false
         },
         ["Courant-Jet"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Courant-Jet.png",
             Name = "Courant-Jet",
             NameEN = "Jet Stream",
@@ -2433,17 +2144,17 @@ local ModData = {
             NameEN = "Brief Respite",
             Polarity = "Zenurik",
             Rarity = "Inhabituel",
-            Traits = {"AURA", "ZENURIK"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"AURA", "ZENURIK"}
         },
         ["Cran de Sûreté"] = {
             Image = "Cran_de_Sûreté.png",
-            Introduced = "16",
             Name = "Cran de Sûreté",
             NameEN = "Lock and Load",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Introduced = "16"
         },
         ["Craque-Cibles"] = {
             Family = "Craque-Cibles",
@@ -2511,28 +2222,9 @@ local ModData = {
             Rarity = "Commun",
             Transmutable = false
         },
-        ["Damzav-Vati"] = {
-            AugmentType = "Arme",
-            Image = "Damzav-Vati.png",
-            Introduced = "29.0",
-            Name = "Damzav-Vati",
-            NameEN = "Damzav-Vati",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Dard Carnis"] = {
-            Image = "Dard Carnis.png",
-            Introduced = "29.0",
-            Name = "Dard Carnis",
-            NameEN = "Carnis Stinger",
-            Polarity = "Naramon",
-            Rarity = "Rare",
-            Set = "Carnis",
-            Traits = {"+%TRANCHANT", "+%STATCHANCE", "SECONDAIRE"},
-            Transmutable = false
-        },
         ["Dentelure"] = {
+            AugmentType = nil,
+            Family = nil,
             Image = "Dentelure.png",
             Introduced = "24.2",
             Name = "Dentelure",
@@ -2540,6 +2232,7 @@ local ModData = {
             Polarity = "Madurai",
             PvP = false,
             Rarity = "Inhabituel",
+            Set = nil,
             Traits = {"FUSIL", "SNIPER", "ARC"},
             Transmutable = false
         },
@@ -2549,15 +2242,6 @@ local ModData = {
             NameEN = "Amalgam Serration",
             Polarity = "Madurai",
             Rarity = "Amalgame",
-            Transmutable = false
-        },
-        ["Dentelure Balayante"] = {
-            Image = "Dentelure Balayante.png",
-            Name = "Dentelure Balayante",
-            NameEN = "Sweeping Serration",
-            Polarity = "Naramon",
-            Rarity = "Rare",
-            Traits = {"POMPE", "BARO"},
             Transmutable = false
         },
         ["Dents Venimeuses"] = {
@@ -2615,8 +2299,8 @@ local ModData = {
             NameEN = "Combat Discipline",
             Polarity = "Vazarin",
             Rarity = "Rare",
-            Traits = {"AURA", "VAZARIN"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"AURA", "VAZARIN"}
         },
         ["Dispersion Vicieuse"] = {
             Image = "Dispersion Vicieuse.png",
@@ -2628,21 +2312,13 @@ local ModData = {
             Transmutable = false
         },
         ["Dispersion des foules"] = {
-            AugmentType = "Compagnon",
+            AugmentType = 'Compagnon',
             Image = "Dispersion_des_foules.png",
             Name = "Dispersion des foules",
             NameEN = "Crowd Dispersion",
             Polarity = "Penjaga",
             Rarity = "Commun",
             Traits = {"SENTINELLE", "COMPAGNON"}
-        },
-        ["Dispositif d'Arrêt d'Urgence"] = {
-            Image = "Dispositif d'Arrêt d'Urgence.png",
-            Name = "Dispositif d'Arrêt d'Urgence",
-            NameEN = "Kill Switch",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Transmutable = false
         },
         ["Don de Puissance"] = {
             Image = "Don de Puissance.png",
@@ -2653,7 +2329,7 @@ local ModData = {
             Transmutable = false
         },
         ["Dose de Venin"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Dose_de_Venin.png",
             Name = "Dose de Venin",
             NameEN = "Venom Dose",
@@ -2662,7 +2338,7 @@ local ModData = {
             Transmutable = false
         },
         ["Double Coup"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Double Coup.png",
             Name = "Double Coup",
             NameEN = "Double Tap",
@@ -2680,16 +2356,8 @@ local ModData = {
             Traits = {"+%ARMURE", "AURA", "VAZARIN"},
             Transmutable = false
         },
-        ["Droit au Coeur"] = {
-            Image = "Droit au Coeur.png",
-            Name = "Droit au Coeur",
-            NameEN = "Heartseeker",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Transmutable = false
-        },
         ["Dualité"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Dualité.png",
             Name = "Dualité",
             NameEN = "Duality",
@@ -2706,7 +2374,7 @@ local ModData = {
             Traits = {"+%SANTE", "ARCHWING"}
         },
         ["DynaMiter"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Dynamiter.png",
             Name = "DynaMiter",
             NameEN = "Thundermiter",
@@ -2723,7 +2391,7 @@ local ModData = {
             Rarity = "Inhabituel"
         },
         ["Décharge Magnétisée"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Décharge Magnétisée.png",
             Name = "Décharge Magnétisée",
             NameEN = "Magnetized Discharge",
@@ -2741,9 +2409,9 @@ local ModData = {
             Transmutable = false
         },
         ["Décharge Statique"] = {
-            AugmentType = "Arme",
-            Image = "Décharge_Statique.png",
+            AugmentType = 'Arme',
             Introduced = "TIP",
+            Image = "Décharge_Statique.png",
             Name = "Décharge Statique",
             NameEN = "Static Discharge",
             Polarity = "Naramon",
@@ -2757,21 +2425,6 @@ local ModData = {
             Polarity = "Penjaga",
             Rarity = "Rare"
         },
-        ["Déchiqueteur"] = {
-            Image = "Déchiqueteur.png",
-            Name = "Déchiqueteur",
-            NameEN = "Shredder",
-            Polarity = "Naramon",
-            Rarity = "Commun"
-        },
-        ["Déclencheur Onde de Choc"] = {
-            Image = "Déclencheur Onde de Choc.png",
-            Name = "Déclencheur Onde de Choc",
-            NameEN = "Shockwave Actuators",
-            Polarity = "Penjaga",
-            Rarity = "Commun",
-            Transmutable = false
-        },
         ["Décompte des Morts"] = {
             Family = "Décompte des Morts",
             Image = "Décompte_des_Morts.png",
@@ -2783,7 +2436,7 @@ local ModData = {
             Transmutable = false
         },
         ["Décompte des Morts Furax Amalgame"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Family = "Décompte des Morts",
             Image = "Décompte_des_Morts_Furax_Amalgame.png",
             Introduced = "25.0.0",
@@ -2838,13 +2491,13 @@ local ModData = {
         },
         ["Dégaine Accrue"] = {
             Image = "Dégaine Accrue.png",
-            Introduced = "23.1.3",
             Name = "Dégaine Accrue",
             NameEN = "Primed Quickdraw",
             Polarity = "Naramon",
             Rarity = "Légendaire",
-            Traits = {"SECONDAIRE", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Introduced = "23.1.3",
+            Traits = {"SECONDAIRE", "BARO"}
         },
         ["Délai Critique"] = {
             Image = "Délai_Critique.png",
@@ -2856,15 +2509,8 @@ local ModData = {
             Traits = {"CORROMPU", "FUSIL", "+%CRITCHANCE"},
             Transmutable = false
         },
-        ["Délit de Fuite"] = {
-            Image = "Délit de Fuite.png",
-            Name = "Délit de Fuite",
-            NameEN = "Hit And Run",
-            Polarity = "Aucune",
-            Rarity = "Inhabituel"
-        },
         ["Déluge Chapardeur"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Déluge Chapardeur.png",
             Name = "Déluge Chapardeur",
             NameEN = "Pilfering Swarm",
@@ -2886,8 +2532,8 @@ local ModData = {
             NameEN = "Hastened Steps",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"CONCLAVE_UTIL"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
         },
         ["Dérision du Gardien"] = {
             Image = "Dérision_du_Gardien.png",
@@ -2896,40 +2542,13 @@ local ModData = {
             Polarity = "Vazarin",
             Rarity = "Rare"
         },
-        ["Désactivation de Sécurité"] = {
-            Image = "Désactivation de Sécurité.png",
-            Name = "Désactivation de Sécurité",
-            NameEN = "Security Override",
-            Polarity = "Penjaga",
-            Rarity = "Commun",
-            Transmutable = false
-        },
         ["Désarmement Irradiant"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Désarmement_Irradiant.png",
             Name = "Désarmement Irradiant",
             NameEN = "Irradiating Disarm",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Détecteur Formes de Vie Aquatiques"] = {
-            AugmentType = "Compagnon",
-            Name = "Détecteur Formes de Vie Aquatiques",
-            NameEN = "Scan Aquatic Lifeforms",
-            Polarity = "Penjaga",
-            Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON"},
-            Transmutable = false
-        },
-        ["Détecteur de Matière"] = {
-            AugmentType = "Compagnon",
-            Image = "Détecteur de Matière.png",
-            Name = "Détecteur de Matière",
-            NameEN = "Scan Matter",
-            Polarity = "Penjaga",
-            Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Détecteur de butin"] = {
@@ -2938,20 +2557,11 @@ local ModData = {
             NameEN = "Loot Detector",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Traits = {"AURA"},
-            Transmutable = false
-        },
-        ["Détecteurs de Surcharge"] = {
-            Image = "Détecteurs de Surcharge.png",
-            Name = "Détecteurs de Surcharge",
-            NameEN = "Overcharge Detectors",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel",
-            Traits = {"CONCLAVE_UTIL"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"AURA"}
         },
         ["Détection de Vulnérabilité"] = {
-            AugmentType = "Compagnon",
+            AugmentType = 'Compagnon',
             Image = "Détection de Vulnérabilité.png",
             Name = "Détection de Vulnérabilité",
             NameEN = "Detect Vulnerability",
@@ -2982,30 +2592,13 @@ local ModData = {
             Rarity = "Rare"
         },
         ["Détonation Entropique"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Détonation Entropique.png",
             Introduced = "20.4.0",
             Name = "Détonation Entropique",
             NameEN = "Entropy Detonation",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Détournement Cinétique"] = {
-            Image = "Détournement Cinétique.png",
-            Name = "Détournement Cinétique",
-            NameEN = "Kinetic Diversion",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Détournement des Systèmes de Survie"] = {
-            Image = "Détournement des Systèmes de Survie.png",
-            Name = "Détournement des Systèmes de Survie",
-            NameEN = "Vital Systems Bypass",
-            Polarity = "Naramon",
-            Rarity = "Rare",
-            Traits = {"CONCLAVE_UTIL"},
             Transmutable = false
         },
         ["Déviation Accélérée"] = {
@@ -3030,17 +2623,8 @@ local ModData = {
             Polarity = "Vazarin",
             Rarity = "Inhabituel"
         },
-        ["Déviation du Necramech"] = {
-            Image = "Déviation du Necramech.png",
-            Introduced = "29.6",
-            Name = "Déviation du Necramech",
-            NameEN = "Necramech Deflection",
-            Polarity = "Vazarin",
-            Rarity = "Commun",
-            Transmutable = false
-        },
         ["Dôme Glouton"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Dôme Glouton.png",
             Name = "Dôme Glouton",
             NameEN = "Pilfering Strangledome",
@@ -3055,16 +2639,8 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Rare"
         },
-        ["Efficacité du Necramech"] = {
-            Image = "Efficacité du Necramech.png",
-            Name = "Efficacité du Necramech",
-            NameEN = "Necramech Efficiency",
-            Polarity = "Vazarin",
-            Rarity = "Inhabituel",
-            Transmutable = false
-        },
         ["Effigie Guidée"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Effigie Guidée.png",
             Name = "Effigie Guidée",
             NameEN = "Guided Effigy",
@@ -3081,7 +2657,7 @@ local ModData = {
             Transmutable = false
         },
         ["Embuscade"] = {
-            AugmentType = "Compagnon",
+            AugmentType = 'Compagnon',
             Image = "Ambush.png",
             Name = "Embuscade",
             NameEN = "Ambush",
@@ -3091,7 +2667,7 @@ local ModData = {
             Transmutable = false
         },
         ["Encensoir Protecteur"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Encensoir Protecteur.png",
             Name = "Encensoir Protecteur",
             NameEN = "Warding Thurible",
@@ -3109,7 +2685,7 @@ local ModData = {
             Transmutable = false
         },
         ["Enragée"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Enragée.png",
             Name = "Enragée",
             NameEN = "Enraged",
@@ -3126,24 +2702,6 @@ local ModData = {
             Rarity = "Rare",
             Stance = true
         },
-        ["Entrave Infestés"] = {
-            Image = "Entrave Infestés.png",
-            Name = "Entrave Infestés",
-            NameEN = "Infested Impedance",
-            Polarity = "Vazarin",
-            Rarity = "Inhabituel",
-            Traits = {"AURA", "VAZARIN"},
-            Transmutable = false
-        },
-        ["Envolée Vénéneuse"] = {
-            Image = "VenomousRiseMod.png",
-            Name = "Envolée Vénéneuse",
-            NameEN = "Venomous Rise",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Traits = {"CONCLAVE_COSME"},
-            Transmutable = false
-        },
         ["Esprit Vengeur"] = {
             Image = "Esprit Vengeur.png",
             Introduced = "18.0.0",
@@ -3154,14 +2712,24 @@ local ModData = {
             Stance = true,
             Transmutable = false
         },
+        ["Étreinte du Guerrier"] = {
+            Archived = true,
+            Image = "EtreinteGuerrierU14.png",
+            Name = "Étreinte du Guerrier",
+            NameEN = "Warrior's Grip",
+            Polarity = "Vazarin",
+            Rarity = "Inhabituel",
+            Traits = {"ENDURANCE"},
+            Transmutable = false
+        },
         ["Evasion Blindée"] = {
             Image = "ArmoredEvade.png",
             Name = "Evasion Blindée",
             NameEN = "Armored Evade",
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
-            Traits = {"CONCLAVE_UTIL"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
         },
         ["Excité du Canon"] = {
             Image = "Excité du Canon.png",
@@ -3179,7 +2747,7 @@ local ModData = {
             Transmutable = false
         },
         ["Exhumation"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Exhumation.png",
             Name = "Exhumation",
             NameEN = "Despoil",
@@ -3188,7 +2756,7 @@ local ModData = {
             Transmutable = false
         },
         ["Exothermique"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Exothermique.png",
             Name = "Exothermique",
             NameEN = "Exothermic",
@@ -3236,8 +2804,8 @@ local ModData = {
             NameEN = "Primed Expel Corpus",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"SECONDAIRE", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"SECONDAIRE", "BARO"}
         },
         ["Expulse-Corrompu"] = {
             Image = "Expulse-Corrompu.png",
@@ -3252,8 +2820,8 @@ local ModData = {
             NameEN = "Primed Expel Corrupted",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"SECONDAIRE", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"SECONDAIRE", "BARO"}
         },
         ["Expulse-Grineer"] = {
             Image = "Expulse-Grineer.png",
@@ -3268,15 +2836,8 @@ local ModData = {
             NameEN = "Primed Expel Grineer",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"SECONDAIRE", "BARO"},
-            Transmutable = false
-        },
-        ["Expulse-Infestés"] = {
-            Image = "Expulse-Infestés.png",
-            Name = "Expulse-Infestés",
-            NameEN = "Expel Infested",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel"
+            Transmutable = false,
+            Traits = {"SECONDAIRE", "BARO"}
         },
         ["Expulse-Infestés Accru"] = {
             Image = "Expulse-Infestés Accru.png",
@@ -3284,8 +2845,15 @@ local ModData = {
             NameEN = "Primed Expel Infested",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"SECONDAIRE", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"SECONDAIRE", "BARO"}
+        },
+        ["Expulse-Infestés"] = {
+            Image = "Expulse-Infestés.png",
+            Name = "Expulse-Infestés",
+            NameEN = "Expel Infested",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel"
         },
         ["Exécution Rapide"] = {
             Image = "Exécution Rapide.png",
@@ -3305,7 +2873,7 @@ local ModData = {
             Transmutable = false
         },
         ["Fantôme"] = {
-            AugmentType = "Compagnon",
+            AugmentType = 'Compagnon',
             Image = "Ghost 19.6.3.png",
             Name = "Fantôme",
             NameEN = "Ghost",
@@ -3316,9 +2884,9 @@ local ModData = {
         ["Fass"] = {
             Image = "Fass.png",
             Name = "Fass",
-            NameEN = "Fass",
             Polarity = "Aucune",
-            Rarity = "Requiem"
+            Rarity = "Requiem",
+            NameEN = "Fass"
         },
         ["Fauchage Tournoyant"] = {
             Image = "Fauchage_Tournoyant.png",
@@ -3358,7 +2926,7 @@ local ModData = {
             Transmutable = false
         },
         ["Feu Frénétique"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Feu Frénétique.png",
             Name = "Feu Frénétique",
             NameEN = "Fireball Frenzy",
@@ -3372,13 +2940,6 @@ local ModData = {
             NameEN = "Hellfire",
             Polarity = "Naramon",
             Rarity = "Inhabituel"
-        },
-        ["Fibre Antichoc"] = {
-            Image = "Fibre Antichoc.png",
-            Name = "Fibre Antichoc",
-            NameEN = "Shock Absorbers",
-            Polarity = "Vazarin",
-            Rarity = "Rare"
         },
         ["Fibre Métallique"] = {
             Image = "MetalFiberMod.png",
@@ -3406,14 +2967,6 @@ local ModData = {
             Rarity = "Commun",
             Traits = {"+%ARMURE", "WARFRAME"}
         },
-        ["Fibre d'Acier du Necramech"] = {
-            Image = "Fibre d'Acier du Necramech.png",
-            Name = "Fibre d'Acier du Necramech",
-            NameEN = "Necramech Steel Fiber",
-            Polarity = "Vazarin",
-            Rarity = "Inhabituel",
-            Transmutable = false
-        },
         ["Fibre d'Umbra"] = {
             Image = "Fibre d'Umbra.png",
             Name = "Fibre d'Umbra",
@@ -3424,23 +2977,14 @@ local ModData = {
             Traits = {"+%ARMURE", "WARFRAME"},
             Transmutable = false
         },
-        ["Fierté Guerrière"] = {
-            Image = "Fierté Guerrière.png",
-            Name = "Fierté Guerrière",
-            NameEN = "Prize Kill",
-            Polarity = "Vazarin",
-            Rarity = "Rare",
-            Traits = {"CONCLAVE", "POMPE"},
-            Transmutable = false
-        },
         ["Fil Volcanique"] = {
             Image = "Fil Volcanique.png",
             Name = "Fil Volcanique",
             NameEN = "Volcanic Edge",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%STATCHANCE", "MELEE", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"+%STATCHANCE", "MELEE", "BARO"}
         },
         ["Fin Explosive"] = {
             Image = "FinExplosive.png",
@@ -3469,7 +3013,7 @@ local ModData = {
             Transmutable = false
         },
         ["Fission Moléculaire"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Fission Moléculaire.png",
             Name = "Fission Moléculaire",
             NameEN = "Molecular Fission",
@@ -3478,7 +3022,7 @@ local ModData = {
             Transmutable = false
         },
         ["Fixation Ciblée"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Fixation Ciblée.png",
             Name = "Fixation Ciblée",
             NameEN = "Target Fixation",
@@ -3487,15 +3031,15 @@ local ModData = {
             Transmutable = false
         },
         ["Fixation Hystérique"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Fixation Hystérique.png",
             Name = "Fixation Hystérique",
             NameEN = "Hysterical Fixation",
             Polarity = "Zenurik",
             PvP = true,
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Fièvre de Souche"] = {
             Image = "Fièvre_de_Souche.jpg",
@@ -3522,7 +3066,7 @@ local ModData = {
             Traits = {"NIGHTMARE", "POMPE"}
         },
         ["Flamme Guérisseuse"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Flamme Guérisseuse.png",
             Name = "Flamme Guérisseuse",
             NameEN = "Healing Flame",
@@ -3531,22 +3075,14 @@ local ModData = {
             Transmutable = false
         },
         ["Flammes Purifiantes"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Flammes Purifiantes.png",
             Name = "Flammes Purifiantes",
             NameEN = "Purifying Flames",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
-        },
-        ["Floraison Atypique"] = {
-            Image = "Floraison Atypique.png",
-            Name = "Floraison Atypique",
-            NameEN = "Peculiar Bloom",
-            Polarity = "Naramon",
-            Rarity = "Atypique",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Flux"] = {
             Image = "Flux.png",
@@ -3561,17 +3097,8 @@ local ModData = {
             NameEN = "Primed Flow",
             Polarity = "Naramon",
             Rarity = "Légendaire",
-            Traits = {"WARFRAME", "BARO"},
-            Transmutable = false
-        },
-        ["Flux Pyroclastique"] = {
-            AugmentType = "Warframe",
-            Image = "Flux Pyroclastique.png",
-            Name = "Flux Pyroclastique",
-            NameEN = "Pyroclastic Flow",
-            Polarity = "Zenurik",
-            Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"WARFRAME", "BARO"}
         },
         ["Flux de Bouclier"] = {
             Archived = true,
@@ -3583,16 +3110,17 @@ local ModData = {
             Traits = {"ENDURANCE"},
             Transmutable = false
         },
-        ["Flux du Necramech"] = {
-            Image = "Flux du Necramech.png",
-            Name = "Flux du Necramech",
-            NameEN = "Necramech Flow",
-            Polarity = "Naramon",
+        ["Flux Pyroclastique"] = {
+            AugmentType = 'Warframe',
+            Image = "Flux Pyroclastique.png",
+            Name = "Flux Pyroclastique",
+            NameEN = "Pyroclastic Flow",
+            Polarity = "Zenurik",
             Rarity = "Rare",
             Transmutable = false
         },
         ["Flèche Concentrée"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Flèche Concentrée.png",
             Introduced = "22.17.3",
             Name = "Flèche Concentrée",
@@ -3617,11 +3145,11 @@ local ModData = {
             Polarity = "Madurai",
             PvP = true,
             Rarity = "Inhabituel",
-            Traits = {"CONCLAVE", "ARC"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE", "ARC"}
         },
         ["Fléau Accumulé"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Fléau_Accumulé.png",
             Introduced = "20.4.0",
             Name = "Fléau Accumulé",
@@ -3631,7 +3159,7 @@ local ModData = {
             Transmutable = false
         },
         ["Fléau Brillant"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Fléau_Brillant.png",
             Introduced = "15.0.0",
             Name = "Fléau Brillant",
@@ -3650,7 +3178,7 @@ local ModData = {
             Stance = true
         },
         ["Fléau Toxique"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Fléau_Toxique.jpg",
             Introduced = "15.0.0",
             Name = "Fléau Toxique",
@@ -3665,8 +3193,8 @@ local ModData = {
             NameEN = "Virulent Scourge",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%STATCHANCE", "MELEE"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"+%STATCHANCE", "MELEE"}
         },
         ["Fléau d'Argent"] = {
             Image = "Fléau_d'Argent.jpg",
@@ -3692,8 +3220,8 @@ local ModData = {
             NameEN = "Primed Bane of Corpus",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"FUSIL", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"FUSIL", "BARO"}
         },
         ["Fléau des Corrompus"] = {
             Image = "Fléau des Corrompus.png",
@@ -3708,8 +3236,8 @@ local ModData = {
             NameEN = "Primed Bane of Corrupted",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"FUSIL", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"FUSIL", "BARO"}
         },
         ["Fléau des Grineer"] = {
             Image = "Fléau des Grineer.png",
@@ -3724,8 +3252,8 @@ local ModData = {
             NameEN = "Primed Bane of Grineer",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"FUSIL", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"FUSIL", "BARO"}
         },
         ["Fléau des Infestés"] = {
             Image = "Fléau des Infestés.png",
@@ -3740,11 +3268,11 @@ local ModData = {
             NameEN = "Primed Bane of Infested",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"FUSIL", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"FUSIL", "BARO"}
         },
         ["Fléau Érodant"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Fléau_Érodant.jpg",
             Introduced = "15.0.0",
             Name = "Fléau Érodant",
@@ -3781,6 +3309,17 @@ local ModData = {
             Traits = {"MELEE", "+%ETOURDISSEMENT"},
             Transmutable = false
         },
+        ["Force d'Arrêt"] = {
+            Archived = true,
+            Image = "Force_d'arrêt.jpg",
+            Introduced = "Vanilla",
+            Name = "Force d'Arrêt",
+            NameEN = "Stopping Power",
+            Polarity = "Vazarin",
+            Rarity = "Commun",
+            Traits = {"SECONDAIRE", "+%ETOURDISSEMENT"},
+            Transmutable = false
+        },
         ["Force Magnum"] = {
             Image = "Force_Magnum-0.jpg",
             Name = "Force Magnum",
@@ -3800,17 +3339,6 @@ local ModData = {
             Traits = {"+%STATCHANCE", "FUSIL"},
             Transmutable = false
         },
-        ["Force d'Arrêt"] = {
-            Archived = true,
-            Image = "Force_d'arrêt.jpg",
-            Introduced = "Vanilla",
-            Name = "Force d'Arrêt",
-            NameEN = "Stopping Power",
-            Polarity = "Vazarin",
-            Rarity = "Commun",
-            Traits = {"SECONDAIRE", "+%ETOURDISSEMENT"},
-            Transmutable = false
-        },
         ["Force de Choc"] = {
             Image = "Force de Choc.png",
             Name = "Force de Choc",
@@ -3821,7 +3349,7 @@ local ModData = {
             Transmutable = false
         },
         ["Force de Gel"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Force_de_Gel.png",
             Introduced = "15",
             Name = "Force de Gel",
@@ -3838,14 +3366,6 @@ local ModData = {
             Rarity = "Rare",
             Traits = {"POMPE", "+PENETRATION"}
         },
-        ["Force du Necramech"] = {
-            Image = "Force du Necramech.png",
-            Name = "Force du Necramech",
-            NameEN = "Necramech Drift",
-            Polarity = "Vazarin",
-            Rarity = "Inhabituel",
-            Transmutable = false
-        },
         ["Foreuse Quasar"] = {
             Image = "Foreuse Quasar.png",
             Name = "Foreuse Quasar",
@@ -3856,7 +3376,7 @@ local ModData = {
             Transmutable = false
         },
         ["Forge Ensanglantée"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Forge Ensanglantée.png",
             Name = "Forge Ensanglantée",
             NameEN = "Blood Forge",
@@ -3873,7 +3393,7 @@ local ModData = {
             Traits = {"NIGHTMARE", "WARFRAME"}
         },
         ["Fouet Acéré Accumulé"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Fouet Acéré Accumulé.png",
             Name = "Fouet Acéré Accumulé",
             NameEN = "Accumulating Whipclaw",
@@ -3903,7 +3423,7 @@ local ModData = {
             Transmutable = false
         },
         ["Fracture Sonique"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Fracture_Sonique.png",
             Name = "Fracture Sonique",
             NameEN = "Sonic Fracture",
@@ -3912,7 +3432,7 @@ local ModData = {
             Transmutable = false
         },
         ["Fracture Tectonique"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Fracture_Tectonique.png",
             Name = "Fracture Tectonique",
             NameEN = "Tectonic Fracture",
@@ -3930,7 +3450,7 @@ local ModData = {
             Transmutable = false
         },
         ["Frappe Dimensionnelle"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Frappe_Dimensionnelle.png",
             Introduced = "18.10.0",
             Name = "Frappe Dimensionnelle",
@@ -3963,15 +3483,15 @@ local ModData = {
             Traits = {"+%PERFORATION", "MELEE"}
         },
         ["Frappe Spoliante"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Frappe Spoliante.png",
             Name = "Frappe Spoliante",
             NameEN = "Discharge Strike",
             Polarity = "Zenurik",
             PvP = true,
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Frappe Tendue"] = {
             Image = "Frappe_Tendue.png",
@@ -4010,32 +3530,16 @@ local ModData = {
             NameEN = "Primed Fever Strike",
             Polarity = "Naramon",
             Rarity = "Légendaire",
-            Traits = {"MELEE", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"MELEE", "BARO"}
         },
         ["Frappe de Précision"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Frappe de Précision.png",
             Name = "Frappe de Précision",
             NameEN = "Precision Strike",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Friction Cinétique"] = {
-            Image = "Friction Cinétique.png",
-            Name = "Friction Cinétique",
-            NameEN = "Kinetic Friction",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel",
-            Transmutable = false
-        },
-        ["Friction du Necramech"] = {
-            Image = "Friction du Necramech.png",
-            Name = "Friction du Necramech",
-            NameEN = "Necramech Friction",
-            Polarity = "Vazarin",
-            Rarity = "Inhabituel",
             Transmutable = false
         },
         ["Froid Pénétrant"] = {
@@ -4044,15 +3548,6 @@ local ModData = {
             NameEN = "Deep Freeze",
             Polarity = "Vazarin",
             Rarity = "Inhabituel"
-        },
-        ["Front Commun"] = {
-            Image = "Front Commun.png",
-            Name = "Front Commun",
-            NameEN = "Stand United",
-            Polarity = "Vazarin",
-            Rarity = "Inhabituel",
-            Traits = {"+%ARMURE", "AURA", "VAZARIN"},
-            Transmutable = false
         },
         ["Frost Insulation"] = {
             Image = "Frost_Insulation.png",
@@ -4063,7 +3558,7 @@ local ModData = {
             Transmutable = false
         },
         ["Frénésie Sauvage"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Frénésie sauvage.png",
             Introduced = "24.3.0",
             Name = "Frénésie Sauvage",
@@ -4074,7 +3569,7 @@ local ModData = {
             Transmutable = false
         },
         ["Frénésie de Gorgone"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Frénesie de Gorgone.png",
             Name = "Frénésie de Gorgone",
             NameEN = "Gorgon Frenzy",
@@ -4102,43 +3597,17 @@ local ModData = {
         },
         ["Fulmination"] = {
             Image = "Fulmination.jpg",
-            Introduced = "20.4",
             Name = "Fulmination",
             NameEN = "Fulmination",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Fulmination Accrue"] = {
-            Image = "Fulmination Accrue.png",
-            Introduced = "29.5.6",
-            Name = "Fulmination Accrue",
-            NameEN = "Primed Fulmination",
-            Polarity = "Madurai",
-            Rarity = "Légendaire",
-            Traits = {"SECONDAIRE", "BARO"},
-            Transmutable = false
-        },
-        ["Fumée dans les yeux"] = {
-            Image = "Fumée dans les yeux.png",
-            Name = "Fumée dans les yeux",
-            NameEN = "Vapor Trail",
-            Polarity = "Naramon",
-            Rarity = "Commun",
-            Transmutable = false
-        },
-        ["Fureur Martiale"] = {
-            Image = "Fureur Martiale.png",
-            Name = "Fureur Martiale",
-            NameEN = "Martial Fury",
-            Polarity = "Madurai",
-            Rarity = "Rare",
+            Introduced = "20.4",
             Transmutable = false
         },
         ["Fureur Primale"] = {
             Image = "",
-            Link = "Fureur Primale (Posture)",
             Name = "Fureur Primale",
+            Link = "Fureur Primale (Posture)",
             NameEN = "Primal Fury (Stance)",
             Polarity = "Aucune",
             Rarity = "Commun",
@@ -4185,53 +3654,25 @@ local ModData = {
             Rarity = "Rare",
             Traits = {"NIGHTMARE", "POMPE", "+PENETRATION"}
         },
-        ["Furie du Necramech"] = {
-            Image = "Furie du Necramech.png",
-            Name = "Furie du Necramech",
-            NameEN = "Necramech Fury",
-            Polarity = "Madurai",
-            Rarity = "Commun",
-            Transmutable = false
-        },
-        ["Fusil amplifié"] = {
-            Image = "Fusil_amplifié.png",
-            Introduced = "0",
-            Name = "Fusil amplifié",
-            NameEN = "Rifle Amp",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel",
-            Traits = {"AURA"},
-            Transmutable = false
-        },
-        ["Fusil à pompe amplifié"] = {
-            Image = "Fusil_à_pompe_amplifié.png",
-            Introduced = "Le Bosquet d'Argent",
-            Name = "Fusil à pompe amplifié",
-            NameEN = "Shotgun Amp",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel",
-            Traits = {"AURA"},
-            Transmutable = false
-        },
         ["Fusillade de Crocs"] = {
             Image = "Fusillade de Crocs.png",
             Name = "Fusillade de Crocs",
             NameEN = "Fanged Fusillade",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"FUSIL", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"FUSIL", "BARO"}
         },
         ["Fusée de Marquage"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Fusée de Marquage.png",
             Name = "Fusée de Marquage",
             NameEN = "Signal Flare",
             Polarity = "Zenurik",
             PvP = true,
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Férocité"] = {
             Image = "Férocité.png",
@@ -4241,7 +3682,7 @@ local ModData = {
             Rarity = "Rare"
         },
         ["Galerie de la Malveillance"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Galerie_de_la_Malveillance.png",
             Name = "Galerie de la Malveillance",
             NameEN = "Hall of Malevolence",
@@ -4261,17 +3702,17 @@ local ModData = {
             Transmutable = false
         },
         ["Garde Prismatique"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Garde Prismatique.png",
             Name = "Garde Prismatique",
             NameEN = "Prism Guard",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Garde du Corps Venari"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Garde du Corps Venari.png",
             Name = "Garde du Corps Venari",
             NameEN = "Venari Bodyguard",
@@ -4289,17 +3730,17 @@ local ModData = {
             Traits = {"SENTINELLE", "COMPAGNON"}
         },
         ["Gargouille"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Gargouille.png",
             Name = "Gargouille",
             NameEN = "Rumbled",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Gaz Lacrymogène"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Gaz Lacrymogène.png",
             Introduced = "16.0.0",
             Name = "Gaz Lacrymogène",
@@ -4307,8 +3748,8 @@ local ModData = {
             Polarity = "Zenurik",
             PvP = true,
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Gel Vicieux"] = {
             Image = "Gel Vicieux.png",
@@ -4316,17 +3757,17 @@ local ModData = {
             NameEN = "Vicious Frost",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%STATCHANCE", "MELEE"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"+%STATCHANCE", "MELEE"}
         },
         ["Geste Réflexe"] = {
             Image = "Geste_Réflexe.png",
-            Introduced = "16",
             Name = "Geste Réflexe",
             NameEN = "Reflex Draw",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Transmutable = false
+            Transmutable = false,
+            Introduced = "16"
         },
         ["Glande Inflammable"] = {
             Image = "Glande_Inflammable.png",
@@ -4338,7 +3779,7 @@ local ModData = {
             Transmutable = false
         },
         ["Glissade Contrôlée"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Glissade Contrôlée.png",
             Name = "Glissade Contrôlée",
             NameEN = "Controlled Slide",
@@ -4347,7 +3788,7 @@ local ModData = {
             Transmutable = false
         },
         ["Golem Titanesque"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Golem Titanesque.png",
             Name = "Golem Titanesque",
             NameEN = "Titanic Rumbler",
@@ -4355,18 +3796,18 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Grand Oeil"] = {
-            Image = "BroadEye.png",
-            Name = "Grand Oeil",
-            NameEN = "Broad Eye",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel",
-            Transmutable = false
-        },
         ["Grand Prédateur"] = {
             Image = "ApexPredatorMod.png",
             Name = "Grand Prédateur",
             NameEN = "Apex Predator",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Grand Oeil"] = {
+            Image = "BroadEye.png",
+            Name = "Grand Oeil",
+            NameEN = "Broad Eye",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
             Transmutable = false
@@ -4397,7 +3838,7 @@ local ModData = {
             Transmutable = false
         },
         ["Grenades Liantes"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Grenades_Liantes.png",
             Introduced = "19.5.0",
             Name = "Grenades Liantes",
@@ -4407,7 +3848,7 @@ local ModData = {
             Transmutable = false
         },
         ["Grenades au Napalm"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Grenades_au_Napalm.jpg",
             Introduced = "24.3.0",
             Name = "Grenades au Napalm",
@@ -4432,7 +3873,7 @@ local ModData = {
             Stance = true
         },
         ["Grinloké"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Grinloke.png",
             Name = "Grinloké",
             NameEN = "Grinloked",
@@ -4458,16 +3899,8 @@ local ModData = {
             Rarity = "Inhabituel",
             Stance = true
         },
-        ["Grâce du Kavat"] = {
-            Image = "Grâce du Kavat.png",
-            Name = "Grâce du Kavat",
-            NameEN = "Kavat's Grace",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Transmutable = false
-        },
         ["Guerre Éternelle"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Guerre_Éternelle.png",
             Name = "Guerre Éternelle",
             NameEN = "Eternal War",
@@ -4476,7 +3909,7 @@ local ModData = {
             Transmutable = false
         },
         ["Guerrier"] = {
-            AugmentType = "Compagnon",
+            AugmentType = 'Compagnon',
             Image = "Guerrier.png",
             Name = "Guerrier",
             NameEN = "Warrior",
@@ -4494,7 +3927,7 @@ local ModData = {
             Stance = true
         },
         ["Générateur d'Énergie"] = {
-            AugmentType = "Compagnon",
+            AugmentType = 'Compagnon',
             Image = "Générateur d'Énergie.png",
             Introduced = "23.10",
             Name = "Générateur d'Énergie",
@@ -4509,20 +3942,11 @@ local ModData = {
             Name = "Habile du Canon",
             NameEN = "Shotgun Savvy",
             Polarity = "Vazarin",
-            Rarity = "Inhabituel",
-            Traits = {"+%STATCHANCE", "POMPE"}
-        },
-        ["Habileté Montante"] = {
-            Image = "Habileté Montante.png",
-            Name = "Habileté Montante",
-            NameEN = "Rising Skill",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel",
-            Traits = {"CONCLAVE_UTIL"},
-            Transmutable = false
+            Traits = {"+%STATCHANCE", "POMPE"},
+            Rarity = "Inhabituel"
         },
         ["Harpon Inquisiteur"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Harpon Inquisiteur.png",
             Introduced = "25.3.0",
             Name = "Harpon Inquisiteur",
@@ -4530,16 +3954,6 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Rare",
             Traits = {"+%CRITCHANCE", "AUGMENT_ARME", "AUGMENT"},
-            Transmutable = false
-        },
-        ["Hata-Satya"] = {
-            AugmentType = "Arme",
-            Image = "Hata-Satya.png",
-            Introduced = "29.0",
-            Name = "Hata-Satya",
-            NameEN = "Hata-Satya",
-            Polarity = "Madurai",
-            Rarity = "Rare",
             Transmutable = false
         },
         ["Haut Zénith"] = {
@@ -4561,7 +3975,7 @@ local ModData = {
             Transmutable = false
         },
         ["Havre de Faille"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Havre de Faille.png",
             Name = "Havre de Faille",
             NameEN = "Rift Haven",
@@ -4572,9 +3986,42 @@ local ModData = {
         ["Hors de Vue"] = {
             Image = "Hors de Vue.png",
             Name = "Hors de Vue",
-            NameEN = "Out Of Sight",
             Polarity = "Aucune",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            NameEN = "Out Of Sight"
+        },
+        ["Droit au Coeur"] = {
+            Image = "Droit au Coeur.png",
+            Name = "Droit au Coeur",
+            NameEN = "Heartseeker",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Traumatisme Lourd"] = {
+            Family = "Traumatisme Lourd",
+            Image = "Traumatisme Lourd.jpg",
+            Name = "Traumatisme Lourd",
+            NameEN = "Heavy Trauma",
+            Polarity = "Naramon",
+            Rarity = "Rare",
+            Traits = {"+%IMPACT", "MELEE"}
+        },
+        ["Réflexes Primaires"] = {
+            Image = "Réflexes Primaires.png",
+            Name = "Réflexes Primaires",
+            NameEN = "Heightened Reflexes",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
+        },
+        ["Délit de Fuite"] = {
+            Image = "Délit de Fuite.png",
+            Name = "Délit de Fuite",
+            Polarity = "Aucune",
+            Rarity = "Inhabituel",
+            NameEN = "Hit And Run"
         },
         ["Hoverdrive Venerdo"] = {
             Image = "Hoverdrive Venerdo.png",
@@ -4584,6 +4031,13 @@ local ModData = {
             Rarity = "Inhabituel",
             Transmutable = false
         },
+        ["Chasse"] = {
+            Image = "Chasse.png",
+            Name = "Chasse",
+            NameEN = "Hunt",
+            Polarity = "Penjaga",
+            Rarity = "Rare"
+        },
         ["Hurlement"] = {
             Image = "Howl 19.6.3.png",
             Name = "Hurlement",
@@ -4591,12 +4045,31 @@ local ModData = {
             Polarity = "Penjaga",
             Rarity = "Rare"
         },
-        ["Hydrauliques du Necramech"] = {
-            Image = "Hydrauliques du Necramech.png",
-            Name = "Hydrauliques du Necramech",
-            NameEN = "Necramech Hydraulics",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel",
+        ["Chut"] = {
+            Image = "Chut.png",
+            Name = "Chut",
+            NameEN = "Hush",
+            Polarity = "Naramon",
+            Rarity = "Commun"
+        },
+        ["Chambre Hydraulique"] = {
+            Image = "Chambre Hydraulique.png",
+            Name = "Chambre Hydraulique",
+            NameEN = "Hydraulic Chamber",
+            Polarity = "Naramon",
+            PvP = true,
+            Rarity = "Rare",
+            Traits = {"POMPE", "MUNITIONS", "-%TAILLE_CHARGEUR"},
+            Transmutable = false
+        },
+        ["Jauge Hydraulique"] = {
+            Image = "Jauge Hydraulique.png",
+            Name = "Jauge Hydraulique",
+            NameEN = "Hydraulic Gauge",
+            Polarity = "Naramon",
+            PvP = true,
+            Rarity = "Rare",
+            Traits = {"FUSIL", "MUNITIONS", "-%TAILLE_CHARGEUR"},
             Transmutable = false
         },
         ["Hydre Entachée"] = {
@@ -4610,10 +4083,17 @@ local ModData = {
             Stance = true,
             Transmutable = false
         },
+        ["Propulseurs Hyperion"] = {
+            Image = "PropulseursHyperion.png",
+            Name = "Propulseurs Hyperion",
+            NameEN = "Hyperion Thrusters",
+            Polarity = "Naramon",
+            Rarity = "Rare"
+        },
         ["Hystérie"] = {
             Image = "Hystérie.jpg",
-            Link = "Hystérie (Posture)",
             Name = "Hystérie",
+            Link = "Hystérie (Posture)",
             NameEN = "Hysteria (Stance)",
             Polarity = "Aucune",
             Rarity = "Commun",
@@ -4641,7 +4121,7 @@ local ModData = {
             Rarity = "Inhabituel"
         },
         ["Impact Céleste"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Impact Céleste.png",
             Name = "Impact Céleste",
             NameEN = "Celestial Stomp",
@@ -4673,6 +4153,24 @@ local ModData = {
             Rarity = "Commun",
             Traits = {"+%STATCHANCE", "ARCHMELEE"}
         },
+        ["Munitions Empalantes"] = {
+            Image = "Munitions_Empalantes.png",
+            Name = "Munitions Empalantes",
+            NameEN = "Impaler Munitions",
+            Polarity = "Madurai",
+            PvP = true,
+            Rarity = "Inhabituel",
+            Traits = {"+%PERFORATION", "SECONDAIRE"},
+            Transmutable = false
+        },
+        ["Offensive Impénétrable"] = {
+            Image = "Offensive Impénétrable.png",
+            Name = "Offensive Impénétrable",
+            NameEN = "Impenetrable Offense",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false
+        },
         ["Impulsion Proton"] = {
             Image = "Impulsion_Proton.jpg",
             Name = "Impulsion Proton",
@@ -4680,6 +4178,14 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Commun",
             Set = "Proton",
+            Transmutable = false
+        },
+        ["Amortisseurs d'Inertie"] = {
+            Image = "Amortisseurs d'Inertie.png",
+            Name = "Amortisseurs d'Inertie",
+            NameEN = "Inertia Dampeners",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
             Transmutable = false
         },
         ["Inertie Létale"] = {
@@ -4699,8 +4205,17 @@ local ModData = {
             Traits = {"+%CRITMULT", "MELEE"},
             Transmutable = false
         },
+        ["Entrave Infestés"] = {
+            Image = "Entrave Infestés.png",
+            Name = "Entrave Infestés",
+            NameEN = "Infested Impedance",
+            Polarity = "Vazarin",
+            Rarity = "Inhabituel",
+            Transmutable = false,
+            Traits = {"AURA", "VAZARIN"}
+        },
         ["Infiltration"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Infiltration.png",
             Name = "Infiltration",
             NameEN = "Infiltrate",
@@ -4727,7 +4242,7 @@ local ModData = {
             Transmutable = false
         },
         ["Infusion de Châtiment"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Infusion_de_Châtiment.png",
             Name = "Infusion de Châtiment",
             NameEN = "Smite Infusion",
@@ -4763,29 +4278,12 @@ local ModData = {
             Transmutable = false
         },
         ["Insatiable"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Insatiable.png",
             Name = "Insatiable",
             NameEN = "Insatiable",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Inspecteur"] = {
-            AugmentType = "Compagnon",
-            Image = "Inspecteur.png",
-            Name = "Inspecteur",
-            NameEN = "Investigator",
-            Polarity = "Penjaga",
-            Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON"}
-        },
-        ["Instantané"] = {
-            Image = "Instantané.png",
-            Name = "Instantané",
-            NameEN = "Snap Shot",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel",
             Transmutable = false
         },
         ["Instinct Animal"] = {
@@ -4807,13 +4305,12 @@ local ModData = {
             Traits = {"COMPAGNON", "BARO", "SENTINELLE"},
             Transmutable = false
         },
-        ["Instinct de Survie"] = {
-            Image = "Instinct de Survie.png",
-            Name = "Instinct de Survie",
-            NameEN = "Survival Instinct",
-            Polarity = "Penjaga",
-            Rarity = "Rare",
-            Transmutable = false
+        ["Isolation"] = {
+            Image = "Isolation.png",
+            Name = "Isolation",
+            NameEN = "Insulation",
+            Polarity = "Vazarin",
+            Rarity = "Commun"
         },
         ["Intensité"] = {
             Image = "Intensité.png",
@@ -4830,14 +4327,6 @@ local ModData = {
             Polarity = "Umbra",
             Rarity = "Légendaire",
             Set = "Umbra",
-            Transmutable = false
-        },
-        ["Intensité du Necramech"] = {
-            Image = "Intensité du Necramech.png",
-            Name = "Intensité du Necramech",
-            NameEN = "Necramech Intensify",
-            Polarity = "Madurai",
-            Rarity = "Rare",
             Transmutable = false
         },
         ["Intraçable"] = {
@@ -4863,8 +4352,17 @@ local ModData = {
             Rarity = "Commun",
             Traits = {"+%BOUCLIER", "ARCHWING"}
         },
+        ["Inspecteur"] = {
+            AugmentType = 'Compagnon',
+            Image = "Inspecteur.png",
+            Name = "Inspecteur",
+            NameEN = "Investigator",
+            Polarity = "Penjaga",
+            Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON"}
+        },
         ["Invisibilité Feutrée"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Invisibilité_Feutrée.png",
             Name = "Invisibilité Feutrée",
             NameEN = "Hushed Invisibility",
@@ -4881,47 +4379,40 @@ local ModData = {
             Stance = true
         },
         ["Ire Spectrale"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Ire Spectrale.png",
             Name = "Ire Spectrale",
             NameEN = "Afterburn",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
-        },
-        ["Isolation"] = {
-            Image = "Isolation.png",
-            Name = "Isolation",
-            NameEN = "Insulation",
-            Polarity = "Vazarin",
-            Rarity = "Commun"
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Jahu"] = {
             Image = "Jahu.png",
             Name = "Jahu",
-            NameEN = "Jahu",
             Polarity = "Aucune",
-            Rarity = "Requiem"
+            Rarity = "Requiem",
+            NameEN = "Jahu"
         },
-        ["Jauge Hydraulique"] = {
-            Image = "Jauge Hydraulique.png",
-            Name = "Jauge Hydraulique",
-            NameEN = "Hydraulic Gauge",
+        ["Canon Hydraulique"] = {
+            Image = "Canon Hydraulique.png",
+            Name = "Canon Hydraulique",
+            NameEN = "Hydraulic Barrel",
             Polarity = "Naramon",
             PvP = true,
             Rarity = "Rare",
-            Traits = {"FUSIL", "MUNITIONS", "-%TAILLE_CHARGEUR"},
+            Traits = {"SECONDAIRE", "MUNITIONS", "-%TAILLE_CHARGEUR"},
             Transmutable = false
         },
         ["Javelot Furieux"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Javelot Furieux.png",
-            Introduced = "15",
             Name = "Javelot Furieux",
             NameEN = "Furious Javelin",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Introduced = "15",
             Transmutable = false
         },
         ["Jet Proton"] = {
@@ -4936,7 +4427,7 @@ local ModData = {
             Transmutable = false
         },
         ["Jugement Béni"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Jugement_Béni.png",
             Name = "Jugement Béni",
             NameEN = "Hallowed Reckoning",
@@ -4955,18 +4446,18 @@ local ModData = {
             Stance = true
         },
         ["Jugement Profané"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Jugement Profané.png",
             Name = "Jugement Profané",
             NameEN = "Defiled Reckoning",
             Polarity = "Zenurik",
             PvP = true,
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Justice Accablante"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Justice_Accablante.png",
             Introduced = "15.0.0",
             Name = "Justice Accablante",
@@ -4985,7 +4476,7 @@ local ModData = {
             Stance = true
         },
         ["Justice Neutralisante"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Justice_Neutralisante.jpg",
             Introduced = "20.4.0",
             Name = "Justice Neutralisante",
@@ -4995,7 +4486,7 @@ local ModData = {
             Transmutable = false
         },
         ["Justice Soudaine"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Justice soudaine.png",
             Name = "Justice Soudaine",
             NameEN = "Sudden Justice",
@@ -5005,7 +4496,7 @@ local ModData = {
             Transmutable = false
         },
         ["Justice Écartée"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Justice_Écartée.png",
             Name = "Justice Écartée",
             NameEN = "Scattered Justice",
@@ -5014,12 +4505,44 @@ local ModData = {
             Traits = {"POMPE", "+%TIRMULTIPLE"},
             Transmutable = false
         },
+        ["Grâce du Kavat"] = {
+            Image = "Grâce du Kavat.png",
+            Name = "Grâce du Kavat",
+            NameEN = "Kavat's Grace",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false
+        },
         ["Khra"] = {
             Image = "Khra.png",
             Name = "Khra",
-            NameEN = "Khra",
             Polarity = "Aucune",
-            Rarity = "Requiem"
+            Rarity = "Requiem",
+            NameEN = "Khra"
+        },
+        ["Dispositif d'Arrêt d'Urgence"] = {
+            Image = "Dispositif d'Arrêt d'Urgence.png",
+            Name = "Dispositif d'Arrêt d'Urgence",
+            NameEN = "Kill Switch",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Détournement Cinétique"] = {
+            Image = "Détournement Cinétique.png",
+            Name = "Détournement Cinétique",
+            NameEN = "Kinetic Diversion",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Friction Cinétique"] = {
+            Image = "Friction Cinétique.png",
+            Name = "Friction Cinétique",
+            NameEN = "Kinetic Friction",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
+            Transmutable = false
         },
         ["Kit Medi-Animal"] = {
             Image = "Kit Medi-Animal.png",
@@ -5037,26 +4560,8 @@ local ModData = {
             Rarity = "Rare",
             Stance = true
         },
-        ["La Voie du Sabre"] = {
-            Image = "La Voie du Sabre.png",
-            Name = "La Voie du Sabre",
-            NameEN = "Sword Alone",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Traits = {"CONCLAVE", "MELEE"},
-            Transmutable = false
-        },
-        ["Lame Aiguisée"] = {
-            Image = "Lame Aiguisée.png",
-            Name = "Lame Aiguisée",
-            NameEN = "Sharpened Blade",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel",
-            Traits = {"CONCLAVE", "MELEE"},
-            Transmutable = false
-        },
         ["Lame Chromatique"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Lame_Chromatique.png",
             Name = "Lame Chromatique",
             NameEN = "Chromatic Blade",
@@ -5090,17 +4595,8 @@ local ModData = {
             Rarity = "Commun",
             Traits = {"+%CRITCHANCE", "ARCHMELEE"}
         },
-        ["Lame à Ressorts"] = {
-            Image = "Lame à Ressorts.png ",
-            Introduced = "22.0",
-            Name = "Lame à Ressorts",
-            NameEN = "Spring-Loaded Blade",
-            Polarity = "Vazarin",
-            Rarity = "Rare",
-            Transmutable = false
-        },
         ["Lames Justicières"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Lames_Justicières.png",
             Introduced = "15.0.0",
             Name = "Lames Justicières",
@@ -5125,26 +4621,17 @@ local ModData = {
             NameEN = "Empowered Blades",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"AURA"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"AURA"}
         },
         ["Lames de la Vérité"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Lames_de_la_Vérité.png",
             Introduced = "15.0.0",
             Name = "Lames de la Vérité",
             NameEN = "Blade of Truth",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Lance Voltaïque"] = {
-            Image = "Lance Voltaïque.png",
-            Name = "Lance Voltaïque",
-            NameEN = "Voltaic Lance",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Traits = {"CONCLAVE_COSME"},
             Transmutable = false
         },
         ["Lancer Puissant"] = {
@@ -5156,7 +4643,7 @@ local ModData = {
             Traits = {"MELEE", "+PENETRATION"}
         },
         ["Lanterne Séduisante"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Lanterne Séduisante.png",
             Name = "Lanterne Séduisante",
             NameEN = "Beguiling Lantern",
@@ -5172,15 +4659,12 @@ local ModData = {
             Rarity = "Inhabituel",
             Transmutable = false
         },
-        ["Le Pouvoir des Trois"] = {
-            AugmentType = "Warframe",
-            Image = "Le Pouvoir des Trois.png",
-            Name = "Le Pouvoir des Trois",
-            NameEN = "Power of Three",
-            Polarity = "Zenurik",
-            Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
+        ["Piqûre Persistante"] = {
+            Image = "Piqûre Persistante.jpg",
+            Name = "Piqûre Persistante",
+            NameEN = "Lasting Sting",
+            Polarity = "Madurai",
+            Rarity = "Commun"
         },
         ["Leurre Protecteur"] = {
             Image = "Leurre_Protecteur.png",
@@ -5188,6 +4672,14 @@ local ModData = {
             NameEN = "Savior Decoy",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Tireur Patient"] = {
+            Image = "Tireur Patient.png",
+            Name = "Tireur Patient",
+            NameEN = "Lie In Wait",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
             Transmutable = false
         },
         ["Lien Catalyseur"] = {
@@ -5201,7 +4693,7 @@ local ModData = {
             Transmutable = false
         },
         ["Lien Dégradant"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Lien Dégradant.png",
             Name = "Lien Dégradant",
             NameEN = "Abating Link",
@@ -5210,14 +4702,14 @@ local ModData = {
             Transmutable = false
         },
         ["Lien Trompeur"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Lien Trompeur.png",
             Name = "Lien Trompeur",
             NameEN = "Deceptive Bond",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Lien d'Armure"] = {
             Image = "Lien d'Armure.png",
@@ -5236,7 +4728,7 @@ local ModData = {
         },
         ["Lien de Tesla"] = {
             Archived = true,
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Lien_de_Tesla.png",
             Name = "Lien de Tesla",
             NameEN = "Tesla Link",
@@ -5252,8 +4744,15 @@ local ModData = {
             Rarity = "Inhabituel",
             Traits = {"+%SANTE", "COMPAGNON"}
         },
+        ["Paratonnerre"] = {
+            Image = "Paratonnerre.png",
+            Name = "Paratonnerre",
+            NameEN = "Lightning Rod",
+            Polarity = "Vazarin",
+            Rarity = "Commun"
+        },
         ["Ligne Pivotante"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Ligne_Pivotante.png",
             Name = "Ligne Pivotante",
             NameEN = "Swing Line",
@@ -5261,21 +4760,54 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
+        ["Supplice Persistant"] = {
+            Image = "Supplice Persistant.png",
+            Name = "Supplice Persistant",
+            NameEN = "Lingering Torment",
+            Polarity = "Madurai",
+            Rarity = "Commun"
+        },
+        ["Capacité Supérieure"] = {
+            Image = "Capacité Supérieure.png",
+            Name = "Capacité Supérieure",
+            NameEN = "Loaded Capacity",
+            Polarity = "Naramon",
+            PvP = true,
+            Rarity = "Commun",
+            Traits = {"POMPE", "MUNITIONS", "+%TAILLE_CHARGEUR"},
+            Transmutable = false
+        },
         ["Lohk"] = {
             Image = "Lohk.png",
             Name = "Lohk",
-            NameEN = "Lohk",
             Polarity = "Aucune",
-            Rarity = "Requiem"
+            Rarity = "Requiem",
+            NameEN = "Lohk"
         },
         ["Longue Tempête"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Longue Tempête.png",
             Introduced = "15.16.0",
             Name = "Longue Tempête",
             NameEN = "Rising Storm",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Chambre Bricolée"] = {
+            Image = "Chambre Bricolée.png",
+            Name = "Chambre Bricolée",
+            NameEN = "Loose Chamber",
+            Polarity = "Naramon",
+            Rarity = "Commun",
+            Transmutable = false
+        },
+        ["Chargeur Bricolé"] = {
+            Image = "Chargeur Bricolé.png",
+            Name = "Chargeur Bricolé",
+            NameEN = "Loose Magazine",
+            Polarity = "Naramon",
+            Rarity = "Commun",
             Transmutable = false
         },
         ["Lunette Parallaxe"] = {
@@ -5293,6 +4825,22 @@ local ModData = {
             NameEN = "Covert Lethality",
             Polarity = "Madurai",
             Rarity = "Rare"
+        },
+        ["Stack de Malade"] = {
+            Image = "Stack de Malade.png",
+            Name = "Stack de Malade",
+            NameEN = "Mad Stack",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Verrouillages Mag"] = {
+            Image = "Verrouillages Mag.png",
+            Name = "Verrouillages Mag",
+            NameEN = "Mag Locks",
+            Polarity = "Naramon",
+            Rarity = "Commun",
+            Transmutable = false
         },
         ["Magasin Contaminé"] = {
             Image = "Magasin_Contaminé.png",
@@ -5324,24 +4872,23 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Inhabituel"
         },
-        ["Magnétisme Martial"] = {
-            Image = "",
-            Introduced = "",
-            Name = "Magnétisme Martial",
-            NameEN = "Martial Magnetism",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Traits = {"CONCLAVE_ARCHIVED"},
-            Transmutable = false
-        },
         ["Maillet Partitionné"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Maillet Partitionné.png",
             Name = "Maillet Partitionné",
             NameEN = "Partitioned Mallet",
             Polarity = "Zenurik",
             Rarity = "Rare",
             Transmutable = false
+        },
+        ["Mutilation"] = {
+            Image = "Mutilation.png",
+            Name = "Mutilation",
+            NameEN = "Maim",
+            Polarity = "Naramon",
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"SECONDAIRE", "BARO"}
         },
         ["Main Traumatique"] = {
             Image = "Main_Traumatique.jpg",
@@ -5356,12 +4903,12 @@ local ModData = {
         },
         ["Mains Légères"] = {
             Image = "Mains_Légères.png",
-            Introduced = "16",
             Name = "Mains Légères",
             NameEN = "Soft Hands",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Transmutable = false
+            Transmutable = false,
+            Introduced = "16"
         },
         ["Mains Rapides"] = {
             Image = "Mains Rapides.png",
@@ -5376,8 +4923,8 @@ local ModData = {
             NameEN = "Primed Fast Hands",
             Polarity = "Naramon",
             Rarity = "Légendaire",
-            Traits = {"FUSIL", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"FUSIL", "BARO"}
         },
         ["Mains Stables"] = {
             Image = "Mains Stables.png",
@@ -5388,40 +4935,19 @@ local ModData = {
         },
         ["Mains sur Ressorts"] = {
             Image = "Mains_sur_Ressorts.png",
-            Introduced = "7.10",
             Name = "Mains sur Ressorts",
             NameEN = "Handspring",
             Polarity = "Naramon",
-            Rarity = "Rare"
-        },
-        ["Malice"] = {
-            AugmentType = "Compagnon",
-            Image = "Malice.png",
-            Introduced = "SotR",
-            Link = "Malice (Mod)",
-            Name = "Malice",
-            NameEN = "Mischief",
-            Polarity = "Penjaga",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            Introduced = "7.10"
         },
         ["Malédiction de la Dessiccation"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Malédiction de la Dessiccation.png",
             Name = "Malédiction de la Dessiccation",
             NameEN = "Desiccation's Curse",
             Polarity = "Ability",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Mandibule Carnis"] = {
-            Image = "Mandibule Carnis.png",
-            Introduced = "29.0",
-            Name = "Mandibule Carnis",
-            NameEN = "Carnis Mandible",
-            Polarity = "Naramon",
-            Rarity = "Commun",
-            Set = "Carnis",
-            Traits = {"+%TRANCHANT", "+%STATCHANCE", "MELEE"},
             Transmutable = false
         },
         ["Manoeuvre Fracassante"] = {
@@ -5453,15 +4979,6 @@ local ModData = {
             Traits = {"+%CRITCHANCE", "SECONDAIRE", "BARO"},
             Transmutable = false
         },
-        ["Manoeuvres Mortelles"] = {
-            AugmentType = "Arme",
-            Image = "Manoeuvre Mortelles.png",
-            Name = "Manoeuvres Mortelles",
-            NameEN = "Deadly Maneuvers",
-            Polarity = "Naramon",
-            Rarity = "Rare",
-            Transmutable = false
-        },
         ["Manteau Chaud"] = {
             Image = "Manteau Chaud.png",
             Name = "Manteau Chaud",
@@ -5469,25 +4986,13 @@ local ModData = {
             Polarity = "Vazarin",
             Rarity = "Commun"
         },
-        ["Marathon"] = {
-            Archived = true,
-            Image = "MarathonU145.png",
-            Name = "Marathon",
-            NameEN = "Marathon",
-            Polarity = "Vazarin",
-            Rarity = "Commun",
-            Traits = {"ENDURANCE"},
-            Transmutable = false
-        },
-        ["Marque de la Bête"] = {
-            Image = "Marque de la Bête.png",
-            Introduced = "22.0",
-            Name = "Marque de la Bête",
-            NameEN = "Mark of the Beast",
+        ["Manoeuvres Mortelles"] = {
+            AugmentType = 'Arme',
+            Image = "Manoeuvre Mortelles.png",
+            Name = "Manoeuvres Mortelles",
+            NameEN = "Deadly Maneuvers",
             Polarity = "Naramon",
-            PvP = false,
             Rarity = "Rare",
-            Traits = {"MELEE", "BARO"},
             Transmutable = false
         },
         ["Marteau-pilon"] = {
@@ -5499,13 +5004,12 @@ local ModData = {
             Rarity = "Rare",
             Traits = {"+%CRITMULT", "FUSIL", "NIGHTMARE", "+%STATCHANCE"}
         },
-        ["Martèlement"] = {
-            Image = "Martèlement.png",
-            Name = "Martèlement",
-            NameEN = "Pummel",
-            Polarity = "Naramon",
+        ["Fureur Martiale"] = {
+            Image = "Fureur Martiale.png",
+            Name = "Fureur Martiale",
+            NameEN = "Martial Fury",
+            Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%IMPACT", "SECONDAIRE", "BARO"},
             Transmutable = false
         },
         ["Marée Brutale"] = {
@@ -5517,7 +5021,7 @@ local ModData = {
             Stance = true
         },
         ["Marée Immunisante"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Marée_Immunisante.png",
             Name = "Marée Immunisante",
             NameEN = "Tidal Impunity",
@@ -5534,7 +5038,7 @@ local ModData = {
             Stance = true
         },
         ["Masse Éclatante"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Masse_éclatante.png",
             Introduced = "24.3.0",
             Name = "Masse Éclatante",
@@ -5551,6 +5055,14 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Rare"
         },
+        ["Tir Réparateur"] = {
+            Image = "Tir Réparateur.png",
+            Name = "Tir Réparateur",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false,
+            NameEN = "Mending Shot"
+        },
         ["Message de l'Augure"] = {
             Image = "Message_de_l'Augure.png",
             Name = "Message de l'Augure",
@@ -5563,29 +5075,31 @@ local ModData = {
         ["Mesure de Baliste"] = {
             Image = "Mesure de Baliste.png",
             Name = "Mesure de Baliste",
-            NameEN = "Ballista Measure",
             Polarity = "Vazarin",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            NameEN = "Ballista Measure"
         },
-        ["Mine Choc"] = {
-            Image = "Mine Choc.png",
-            Name = "Mine Choc",
-            NameEN = "Whiplash Mine",
-            Polarity = "Penjaga",
-            Rarity = "Commun",
+        ["Munitions Météores"] = {
+            Image = "Munitions Météores.png",
+            Name = "Munitions Météores",
+            NameEN = "Meteor Munitions",
+            Polarity = "Madurai",
+            PvP = true,
+            Rarity = "Inhabituel",
+            Traits = {"+%IMPACT", "SECONDAIRE"},
             Transmutable = false
         },
         ["Mine à Antimatière"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Mine à Antimatière.png",
             Name = "Mine à Antimatière",
             NameEN = "Antimatter Mine",
             Polarity = "Zenurik",
             PvP = true,
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Mire Rampante"] = {
             Image = "Mire_Rampante.png",
@@ -5595,6 +5109,26 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Rare",
             Traits = {"+%CRITCHANCE", "SECONDAIRE", "CORROMPU"},
+            Transmutable = false
+        },
+        ["Malice"] = {
+            AugmentType = "Compagnon",
+            Image = "Malice.png",
+            Introduced = "SotR",
+            Link = "Malice (Mod)",
+            Name = "Malice",
+            NameEN = "Mischief",
+            Polarity = "Penjaga",
+            Rarity = "Rare"
+        },
+        ["Marathon"] = {
+            Archived = true,
+            Image = "MarathonU145.png",
+            Name = "Marathon",
+            NameEN = "Marathon",
+            Polarity = "Vazarin",
+            Rarity = "Commun",
+            Traits = {"ENDURANCE"},
             Transmutable = false
         },
         ["Mise en Pièces"] = {
@@ -5611,14 +5145,6 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Rare",
             Traits = {"WARFRAME"}
-        },
-        ["Mitraillage Glissé"] = {
-            Image = "Mitraillage Glissé.png",
-            Name = "Mitraillage Glissé",
-            NameEN = "Strafing Slide",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Transmutable = false
         },
         ["Mobilisation"] = {
             Image = "Mobilisation.png",
@@ -5637,7 +5163,7 @@ local ModData = {
             Transmutable = false
         },
         ["Moisson Enchanteresse"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Moisson Enchanteresse.png",
             Name = "Moisson Enchanteresse",
             NameEN = "Spellbound Harvest",
@@ -5645,21 +5171,22 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
+        ["Pause Momentanée"] = {
+            Image = "Pause Momentanée.png",
+            Name = "Pause Momentanée",
+            NameEN = "Momentary Pause",
+            Polarity = "Vazarin",
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"CONCLAVE", "POMPE"}
+        },
         ["Monde en Fer"] = {
             Archived = true,
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Monde_en_Fer.png",
             Name = "Monde en Fer",
             NameEN = "Firequake",
             Polarity = "Zenurik",
-            Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Mont'en Flèche"] = {
-            Image = "Mont'en Flèche.png",
-            Name = "Mont'en Flèche",
-            NameEN = "Poppin' Vert",
-            Polarity = "Naramon",
             Rarity = "Rare",
             Transmutable = false
         },
@@ -5669,19 +5196,19 @@ local ModData = {
             NameEN = "Adrenaline Boost",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"CONCLAVE_UTIL"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
         },
         ["Morosité Épuisante"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Morosite epuisante.png",
             Name = "Morosité Épuisante",
             NameEN = "Draining Gloom",
             Polarity = "Madurai",
             PvP = true,
             Rarity = "Rare",
-            Traits = {"AUGMENT", "MUNITIONS", "-%TAILLE_CHARGEUR"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"AUGMENT", "MUNITIONS", "-%TAILLE_CHARGEUR"}
         },
         ["Morsure"] = {
             Image = "Morsure.png",
@@ -5691,21 +5218,13 @@ local ModData = {
             Rarity = "Rare",
             Traits = {"+%CRITCHANCE", "COMPAGNON", "+%CRITMULT"}
         },
-        ["Morsure Infectieuse"] = {
-            Image = "Morsure Infectieuse.png",
-            Name = "Morsure Infectieuse",
-            NameEN = "Infectious Bite",
-            Polarity = "Penjaga",
-            Rarity = "Rare",
-            Transmutable = false
-        },
         ["Morsure Vampirique"] = {
             Image = "Morsure Vampirique.png",
             Name = "Morsure Vampirique",
-            NameEN = "Draining Bite",
             Polarity = "Penjaga",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            NameEN = "Draining Bite"
         },
         ["Mort brusque"] = {
             Image = "Mort Brusque.png",
@@ -5715,8 +5234,16 @@ local ModData = {
             Rarity = "Commun",
             Transmutable = false
         },
+        ["Conduit Mortel"] = {
+            Image = "Conduit Mortel.png",
+            Name = "Conduit Mortel",
+            NameEN = "Mortal Conduct",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false
+        },
         ["Mue Régénérante"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Mue Régénérante.png",
             Name = "Mue Régénérante",
             NameEN = "Regenerative Molt",
@@ -5734,29 +5261,12 @@ local ModData = {
             Traits = {"+%CRITMULT", "SECONDAIRE", "ACOLYTE"},
             Transmutable = false
         },
-        ["Munitions Assommantes"] = {
-            Image = "Munitions Assommantes.png",
-            Name = "Munitions Assommantes",
-            NameEN = "Sabot Rounds",
-            Polarity = "Naramon",
-            Rarity = "Rare"
-        },
-        ["Munitions Empalantes"] = {
-            Image = "Munitions_Empalantes.png",
-            Name = "Munitions Empalantes",
-            NameEN = "Impaler Munitions",
-            Polarity = "Madurai",
-            PvP = true,
-            Rarity = "Inhabituel",
-            Traits = {"+%PERFORATION", "SECONDAIRE"},
-            Transmutable = false
-        },
         ["Munitions Ensanglantées"] = {
             Image = "Munitions Ensanglantées.png",
             Name = "Munitions Ensanglantées",
-            NameEN = "Blood For Ammo",
             Polarity = "Aucune",
             Rarity = "Commun",
+            NameEN = "Blood For Ammo",
             Traits = {"MUNITIONS", "PARAZON"}
         },
         ["Munitions Modifiées"] = {
@@ -5767,27 +5277,8 @@ local ModData = {
             Rarity = "Inhabituel",
             Traits = {"+%STATCHANCE", "ARCHFUSIL"}
         },
-        ["Munitions Météores"] = {
-            Image = "Munitions Météores.png",
-            Name = "Munitions Météores",
-            NameEN = "Meteor Munitions",
-            Polarity = "Madurai",
-            PvP = true,
-            Rarity = "Inhabituel",
-            Traits = {"+%IMPACT", "SECONDAIRE"},
-            Transmutable = false
-        },
-        ["Munitions Rasoir"] = {
-            Image = "Munitions Rasoir.png",
-            Name = "Munitions Rasoir",
-            NameEN = "Razor Munitions",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel",
-            Traits = {"CONCLAVE", "SECONDAIRE"},
-            Transmutable = false
-        },
         ["Munitions de Précision"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Munition de precision.png",
             Introduced = "TIP",
             Name = "Munitions de Précision",
@@ -5807,7 +5298,7 @@ local ModData = {
             Transmutable = false
         },
         ["Munitions à Éclats"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Munitions à Éclats.png",
             Name = "Munitions à Éclats",
             NameEN = "Shrapnel Rounds",
@@ -5817,7 +5308,7 @@ local ModData = {
             Transmutable = false
         },
         ["Mutation Abondante"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Mutation Abondante.png",
             Name = "Mutation Abondante",
             NameEN = "Abundant Mutation",
@@ -5835,7 +5326,7 @@ local ModData = {
             Traits = {"FUSIL", "MUNITIONS", "+%TAILLE_CHARGEUR"}
         },
         ["Mutation de Chargeur Javlok Amalgame"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Family = "Mutation de Chargeur",
             Image = "Mutation_de_Chargeur_Javlok_Amalgame.png",
             Introduced = "25.0.0",
@@ -5852,26 +5343,6 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Rare",
             Traits = {"ARC", "MUNITIONS", "MUTATION"}
-        },
-        ["Mutation de Fusil Accrue"] = {
-            Family = "Mutation de Munitions de Fusil",
-            Image = "Mutation de Fusil Accrue.png",
-            Name = "Mutation de Fusil Accrue",
-            NameEN = "Primed Rifle Ammo Mutation",
-            Polarity = "Naramon",
-            Rarity = "Légendaire",
-            Traits = {"FUSIL", "MUNITIONS", "MUTATION", "BARO"},
-            Transmutable = false
-        },
-        ["Mutation de Fusil à Pompe Accrue"] = {
-            Family = "Mutation de Munitions de Fusil à Pompe",
-            Image = "Mutation de Fusil à Pompe Accrue.png",
-            Name = "Mutation de Fusil à Pompe Accrue",
-            NameEN = "Primed Shotgun Ammo Mutation",
-            Polarity = "Naramon",
-            Rarity = "Légendaire",
-            Traits = {"POMPE", "MUNITIONS", "MUTATION", "BARO"},
-            Transmutable = false
         },
         ["Mutation de Munitions de Fusil"] = {
             Family = "Mutation de Munitions de Fusil",
@@ -5918,23 +5389,6 @@ local ModData = {
             Traits = {"SECONDAIRE", "MUNITIONS", "MUTATION", "BARO"},
             Transmutable = false
         },
-        ["Mutilation"] = {
-            Image = "Mutilation.png",
-            Name = "Mutilation",
-            NameEN = "Maim",
-            Polarity = "Naramon",
-            Rarity = "Rare",
-            Traits = {"SECONDAIRE", "BARO"},
-            Transmutable = false
-        },
-        ["Mycélium Latrique"] = {
-            Image = "Mycélium latrique.png",
-            Name = "Mycélium Latrique",
-            NameEN = "Iatric Mycelium",
-            Polarity = "Penjaga",
-            Rarity = "Rare",
-            Transmutable = false
-        },
         ["Mâchoire Gelée"] = {
             Image = "Mâchoire_Gelée.png",
             Name = "Mâchoire Gelée",
@@ -5962,7 +5416,7 @@ local ModData = {
             Transmutable = false
         },
         ["Napalm du Nightwatch"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Napalm_de_Nightwatch.png",
             Introduced = "18.10.0",
             Name = "Napalm du Nightwatch",
@@ -5972,7 +5426,7 @@ local ModData = {
             Transmutable = false
         },
         ["Navigatrice Perçante"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Navigatrice Perçante.png",
             Introduced = "20.2.0",
             Name = "Navigatrice Perçante",
@@ -5985,9 +5439,9 @@ local ModData = {
         ["Netra"] = {
             Image = "Netra.png",
             Name = "Netra",
-            NameEN = "Netra",
             Polarity = "Aucune",
-            Rarity = "Requiem"
+            Rarity = "Requiem",
+            NameEN = "Netra"
         },
         ["Neutralisation"] = {
             Image = "Neutralisation.png",
@@ -5996,8 +5450,33 @@ local ModData = {
             Polarity = "Penjaga",
             Rarity = "Rare"
         },
+        ["Stalker Nocturne"] = {
+            Image = "Stalker Nocturne.png",
+            Name = "Stalker Nocturne",
+            NameEN = "Night Stalker",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Boost Nitro"] = {
+            Image = "Boost Nitro.png",
+            Name = "Boost Nitro",
+            NameEN = "Nitro Boost",
+            Polarity = "Naramon",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Saut Disjoncté"] = {
+            Image = "Saut Disjoncté.png",
+            Name = "Saut Disjoncté",
+            NameEN = "No Current Leap",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
+        },
         ["Nuage Enveloppant"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Nuage_Enveloppant.png",
             Name = "Nuage Enveloppant",
             NameEN = "Enveloping Cloud",
@@ -6006,7 +5485,7 @@ local ModData = {
             Transmutable = false
         },
         ["Nuée Réfléchissante"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Nuée Réfléchissante.png",
             Name = "Nuée Réfléchissante",
             NameEN = "Negation Swarm",
@@ -6030,7 +5509,7 @@ local ModData = {
             Traits = {"+%PERFORATION", "ARCHMELEE"}
         },
         ["Négation"] = {
-            AugmentType = "Compagnon",
+            AugmentType = 'Compagnon',
             Image = "Négation.png",
             Name = "Négation",
             NameEN = "Negate",
@@ -6089,14 +5568,6 @@ local ModData = {
             Set = "Vigile",
             Transmutable = false
         },
-        ["Offensive Impénétrable"] = {
-            Image = "Offensive Impénétrable.png",
-            Name = "Offensive Impénétrable",
-            NameEN = "Impenetrable Offense",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Transmutable = false
-        },
         ["Ogive Lourde"] = {
             Image = "Ogive Lourde.png",
             Name = "Ogive Lourde",
@@ -6107,27 +5578,12 @@ local ModData = {
             Transmutable = false
         },
         ["Ombre de Fumée"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Ombre de Fumée.png",
             Introduced = "15.0.0",
             Name = "Ombre de Fumée",
             NameEN = "Smoke Shadow",
             Polarity = "Zenurik",
-            Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Onde Sismique"] = {
-            Image = "Onde Sismique.png",
-            Name = "Onde Sismique",
-            NameEN = "Seismic Wave",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel"
-        },
-        ["Onde Sismique du Necramech"] = {
-            Image = "Onde Sismique du Necramech.png",
-            Name = "Onde Sismique du Necramech",
-            NameEN = "Necramech Seismic Wave",
-            Polarity = "Madurai",
             Rarity = "Rare",
             Transmutable = false
         },
@@ -6149,8 +5605,45 @@ local ModData = {
             Traits = {"ACOLYTE", "FUSIL"},
             Transmutable = false
         },
+        ["Poudre Flash"] = {
+            Archived = true,
+            AugmentType = 'Warframe',
+            Image = "Poudre_Flash.png",
+            Introduced = "TSG",
+            Name = "Poudre Flash",
+            NameEN = "Flash Accelerant",
+            Polarity = "Zenurik",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Détecteurs de Surcharge"] = {
+            Image = "Détecteurs de Surcharge.png",
+            Name = "Détecteurs de Surcharge",
+            NameEN = "Overcharge Detectors",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
+        },
+        ["Surchargé"] = {
+            Image = "Surchargé.png",
+            Name = "Surchargé",
+            NameEN = "Overcharged",
+            Polarity = "Vazarin",
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
+        },
+        ["Vue d'Ensemble"] = {
+            Image = "Vue d'Ensemble.jpg",
+            Name = "Vue d'Ensemble",
+            NameEN = "Overview",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
         ["Pacte Interminable"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Pacte Interminable.png",
             Name = "Pacte Interminable",
             NameEN = "Lasting Covenant",
@@ -6167,18 +5660,13 @@ local ModData = {
             Set = "Augure",
             Transmutable = false
         },
-        ["Pacte des Serfs"] = {
-            Archived = false,
-            AugmentType = "Warframe",
-            Image = "Pacte des Serfs.png",
-            Introduced = "29.5",
-            Name = "Pacte des Serfs",
-            NameEN = "Thrall Pact",
-            Polarity = "Zenurik",
-            PvP = false,
+        ["Seuil de Douleur"] = {
+            Image = "Seuil de Douleur.png",
+            Introduced = "SotR",
+            Name = "Seuil de Douleur",
+            NameEN = "Pain Threshold",
+            Polarity = "Naramon",
             Rarity = "Rare",
-            Stance = false,
-            Traits = {"AUGMENT_WARFRAME"},
             Transmutable = false
         },
         ["Parade"] = {
@@ -6189,36 +5677,12 @@ local ModData = {
             Rarity = "Commun"
         },
         ["Paralysie Prolongée"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Paralysie Prolongée.png",
             Name = "Paralysie Prolongée",
             NameEN = "Prolonged Paralysis",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Parasite Volatil"] = {
-            Image = "Parasite Volatil.png",
-            Name = "Parasite Volatil",
-            NameEN = "Volatile Parasite",
-            Polarity = "Penjaga",
-            Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Paratonnerre"] = {
-            Image = "Paratonnerre.png",
-            Name = "Paratonnerre",
-            NameEN = "Lightning Rod",
-            Polarity = "Vazarin",
-            Rarity = "Commun"
-        },
-        ["Partiteurs de Surplus"] = {
-            Image = "Partiteurs de Surplus.png",
-            Name = "Partiteurs de Surplus",
-            NameEN = "Surplus Diverters",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Traits = {"CONCLAVE_UTIL"},
             Transmutable = false
         },
         ["Pas Perçant"] = {
@@ -6251,21 +5715,28 @@ local ModData = {
             Rarity = "Rare",
             Stance = true
         },
-        ["Pause Momentanée"] = {
-            Image = "Pause Momentanée.png",
-            Name = "Pause Momentanée",
-            NameEN = "Momentary Pause",
-            Polarity = "Vazarin",
-            Rarity = "Rare",
-            Traits = {"CONCLAVE", "POMPE"},
-            Transmutable = false
-        },
         ["Peau de Diamant"] = {
             Image = "Peau de Diamant.png",
             Name = "Peau de Diamant",
             NameEN = "Diamond Skin",
             Polarity = "Vazarin",
             Rarity = "Inhabituel"
+        },
+        ["Floraison Atypique"] = {
+            Image = "Floraison Atypique.png",
+            Name = "Floraison Atypique",
+            NameEN = "Peculiar Bloom",
+            Polarity = "Naramon",
+            Rarity = "Atypique",
+            Transmutable = false
+        },
+        ["Boursouflure Atypique"] = {
+            Image = "Boursouflure Atypique.png",
+            Name = "Boursouflure Atypique",
+            NameEN = "Peculiar Growth",
+            Polarity = "Naramon",
+            Rarity = "Atypique",
+            Transmutable = false
         },
         ["Pensée Rapide"] = {
             Image = "Pensée Rapide.png",
@@ -6290,15 +5761,6 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Rare"
         },
-        ["Perception des Ennemis du Necramech"] = {
-            Image = "Perception des Ennemis du Necramech.png",
-            Introduced = "29.6",
-            Name = "Perception des Ennemis du Necramech",
-            NameEN = "Necramech Enemy Sense",
-            Polarity = "Naramon",
-            Rarity = "Commun",
-            Transmutable = false
-        },
         ["Perceur"] = {
             Image = "BoreModU145.png",
             Name = "Perceur",
@@ -6310,7 +5772,7 @@ local ModData = {
         },
         ["Perche de Fer"] = {
             Archived = true,
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "IronVault2.png",
             Name = "Perche de Fer",
             NameEN = "Iron Vault",
@@ -6318,12 +5780,12 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Percuteur"] = {
-            Image = "Percuteur.png",
-            Name = "Percuteur",
-            NameEN = "Striker",
-            Polarity = "Penjaga",
-            Rarity = "Commun",
+        ["Équilibre Parfait"] = {
+            Image = "Équilibre Parfait.png",
+            Name = "Équilibre Parfait",
+            NameEN = "Perfect Balance",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
             Transmutable = false
         },
         ["Perturbateur"] = {
@@ -6334,18 +5796,9 @@ local ModData = {
             Rarity = "Commun",
             Traits = {"+%IMPACT", "POMPE"}
         },
-        ["Perturbation du bouclier"] = {
-            Image = "Perturbation du bouclier.png",
-            Name = "Perturbation du bouclier",
-            NameEN = "Shield Disruption",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel",
-            Traits = {"AURA"},
-            Transmutable = false
-        },
         ["Peur du Feu"] = {
             Archived = true,
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Peur_du_Feu.jpg",
             Name = "Peur du Feu",
             NameEN = "Fire Fright",
@@ -6359,8 +5812,8 @@ local ModData = {
             NameEN = "Physique",
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
-            Traits = {"AURA", "+%SANTE"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"AURA", "+%SANTE"}
         },
         ["Phénix de Fer"] = {
             Image = "PhoenixdeFerU14.png",
@@ -6371,8 +5824,17 @@ local ModData = {
             Rarity = "Rare",
             Stance = true
         },
+        ["Calibre Pénétrant"] = {
+            Image = "Calibre Pénétrant.png",
+            Name = "Calibre Pénétrant",
+            NameEN = "Piercing Caliber",
+            Polarity = "Naramon",
+            Rarity = "Rare",
+            Traits = {"+%PERFORATION", "FUSIL"},
+            Transmutable = false
+        },
         ["Pillage Ardent"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Pillage Ardent.png",
             Name = "Pillage Ardent",
             NameEN = "Blazing Pillage",
@@ -6381,7 +5843,7 @@ local ModData = {
             Transmutable = false
         },
         ["Pillage Aveuglant"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Pillage Aveuglant.png",
             Name = "Pillage Aveuglant",
             NameEN = "Blinding Reave",
@@ -6390,7 +5852,7 @@ local ModData = {
             Transmutable = false
         },
         ["Pilleur"] = {
-            AugmentType = "Compagnon",
+            AugmentType = 'Compagnon',
             Image = "Pilleur.jpg",
             Name = "Pilleur",
             NameEN = "Looter",
@@ -6408,21 +5870,6 @@ local ModData = {
             Set = "Mecha",
             Traits = {"+%ARMURE", "WARFRAME"},
             Transmutable = false
-        },
-        ["Piques Virales"] = {
-            Image = "Piques Virales.png",
-            Name = "Piques Virales",
-            NameEN = "Viral Quills ",
-            Polarity = "Penjaga",
-            Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Piqûre Persistante"] = {
-            Image = "Piqûre Persistante.jpg",
-            Name = "Piqûre Persistante",
-            NameEN = "Lasting Sting",
-            Polarity = "Madurai",
-            Rarity = "Commun"
         },
         ["Piqûre Toxique"] = {
             Image = "Piqûre Toxique.png",
@@ -6458,21 +5905,21 @@ local ModData = {
             Set = "Chasseur",
             Transmutable = false
         },
-        ["Pistolero"] = {
-            Image = "Pistolero.png",
-            Name = "Pistolero",
-            NameEN = "Gunslinger",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel"
-        },
         ["Pistolet amplifié"] = {
             Image = "Pistolet amplifié.png",
             Name = "Pistolet amplifié",
             NameEN = "Pistol Amp",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Traits = {"AURA"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"AURA"}
+        },
+        ["Pistolero"] = {
+            Image = "Pistolero.png",
+            Name = "Pistolero",
+            NameEN = "Gunslinger",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel"
         },
         ["Pistolet de Peste"] = {
             Image = "Pistolet_de_Peste.jpg",
@@ -6483,14 +5930,6 @@ local ModData = {
             Traits = {"+%STATCHANCE", "SECONDAIRE"},
             Transmutable = false
         },
-        ["Pièces de Rechange"] = {
-            Image = "Pièces de Rechange.png",
-            Name = "Pièces de Rechange",
-            NameEN = "Spare Parts",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel",
-            Traits = {"COMPAGNON", "SENTINELLE"}
-        },
         ["Piétine"] = {
             Image = "Piétine.jpg",
             Name = "Piétine",
@@ -6499,7 +5938,7 @@ local ModData = {
             Rarity = "Rare"
         },
         ["Piétinement Renforçant"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Piétinement_Renforçant.png",
             Name = "Piétinement Renforçant",
             NameEN = "Reinforcing Stomp",
@@ -6521,19 +5960,11 @@ local ModData = {
             NameEN = "Plan B",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"CONCLAVE", "ARC"},
-            Transmutable = false
-        },
-        ["Planche Tueuse"] = {
-            Image = "Planche Tueuse.png",
-            Name = "Planche Tueuse",
-            NameEN = "Slay Board",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE", "ARC"}
         },
         ["Planeur Ancré"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Planeur Ancré.png",
             Name = "Planeur Ancré",
             NameEN = "Anchored Glide",
@@ -6584,16 +6015,8 @@ local ModData = {
             NameEN = "Primed Pressure Point",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"MELEE", "BARO"},
-            Transmutable = false
-        },
-        ["Point de Pression du Necramech"] = {
-            Image = "Point de Pression du Necramech.png",
-            Name = "Point de Pression du Necramech",
-            NameEN = "Necramech Pressure Point",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"MELEE", "BARO"}
         },
         ["Pointe Creuse"] = {
             Image = "Pointe_Creuse.png",
@@ -6606,7 +6029,7 @@ local ModData = {
             Transmutable = false
         },
         ["Pointe Entropique"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "PointeEntropique.png",
             Introduced = "15.0.0",
             Name = "Pointe Entropique",
@@ -6625,7 +6048,7 @@ local ModData = {
             Traits = {"FUSIL", "+PENETRATION"}
         },
         ["Pointe Métallique Argonak Amalgame"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Family = "Pointe Métallique",
             Image = "Pointe_Métallique_Argonak_Amalgame.png",
             Introduced = "25.0.0",
@@ -6637,7 +6060,7 @@ local ModData = {
             Transmutable = false
         },
         ["Pointe de Flèche à Ressort"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Pointe de Flèche à Ressort.png",
             Introduced = "17.0.0",
             Name = "Pointe de Flèche à Ressort",
@@ -6647,40 +6070,14 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Pointes Jugulus"] = {
-            Image = "Pointes Jugulus.png",
-            Introduced = "29.0",
-            Name = "Pointes Jugulus",
-            NameEN = "Jugulus Spines",
-            Polarity = "Naramon",
-            Rarity = "Rare",
-            Set = "Jugulus",
-            Traits = {"+%PERFORATION", "+%STATCHANCE", "SECONDAIRE"},
-            Transmutable = false
-        },
         ["Polarisation Inversée"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Polarisation Inversée.png",
             Name = "Polarisation Inversée",
             NameEN = "Counter Pulse",
             Polarity = "Zenurik",
             Rarity = "Rare",
             Transmutable = false
-        },
-        ["Pollinisation Anabolique"] = {
-            Image = "Pollinisation Anabolique.png",
-            Name = "Pollinisation Anabolique",
-            NameEN = "Anabolic Pollination",
-            Polarity = "Penjaga",
-            Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Pompe Tactique"] = {
-            Image = "Pompe Tactique.jpg",
-            Name = "Pompe Tactique",
-            NameEN = "Tactical Pump",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel"
         },
         ["Pop Top"] = {
             Image = "Pop Top.png",
@@ -6690,6 +6087,14 @@ local ModData = {
             Rarity = "Inhabituel",
             Transmutable = false
         },
+        ["Mont'en Flèche"] = {
+            Image = "Mont'en Flèche.png",
+            Name = "Mont'en Flèche",
+            NameEN = "Poppin' Vert",
+            Polarity = "Naramon",
+            Rarity = "Rare",
+            Transmutable = false
+        },
         ["Porte-Tempête"] = {
             Image = "Porte Tempête.jpg",
             Name = "Porte-Tempête",
@@ -6697,34 +6102,16 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Inhabituel"
         },
-        ["Portée Sinistre"] = {
-            Image = "Portée Sinistre.png",
-            Name = "Portée Sinistre",
-            NameEN = "Sinister Reach",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel"
-        },
         ["Postcombustion"] = {
-            AugmentType = "Archwing",
+            AugmentType = 'Archwing',
             Image = "Postcombustion.png",
             Name = "Postcombustion",
             NameEN = "Afterburner",
             Polarity = "Zenurik",
             Rarity = "Rare"
         },
-        ["Poudre Flash"] = {
-            Archived = true,
-            AugmentType = "Warframe",
-            Image = "Poudre_Flash.png",
-            Introduced = "TSG",
-            Name = "Poudre Flash",
-            NameEN = "Flash Accelerant",
-            Polarity = "Zenurik",
-            Rarity = "Rare",
-            Transmutable = false
-        },
         ["Poudre Fomorienne"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Poudre_Fomorienne.jpg",
             Introduced = "18.10.0",
             Name = "Poudre Fomorienne",
@@ -6749,18 +6136,26 @@ local ModData = {
             NameEN = "Follow Through",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"CONCLAVE_UTIL"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
         },
         ["Pouvoir Grandissant"] = {
             Image = "Pouvoir Grandissant.png",
-            Introduced = "Le Bosquet d'Argent",
             Name = "Pouvoir Grandissant",
             NameEN = "Growing Power",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"AURA"},
-            Transmutable = false
+            Transmutable = false,
+            Introduced = "Le Bosquet d'Argent",
+            Traits = {"AURA"}
+        },
+        ["Préparation"] = {
+            Image = "Préparation.png",
+            Name = "Préparation",
+            Polarity = "Zenurik",
+            Rarity = "Rare",
+            Transmutable = false,
+            NameEN = "Preparation"
         },
         ["Pression Sacrificielle"] = {
             Image = "Pression Sacrificielle.png",
@@ -6772,7 +6167,7 @@ local ModData = {
             Transmutable = false
         },
         ["Prestidigitation Explosive"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Prestidigitation Explosive.png",
             Name = "Prestidigitation Explosive",
             NameEN = "Explosive Legerdemain",
@@ -6780,14 +6175,118 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Prise de Terre"] = {
-            Image = "Prise de Terre.png",
-            Name = "Prise de Terre",
-            NameEN = "Stand Ground",
+        ["Stock de Balles Accru"] = {
+            Family = "Stock de Balles",
+            Image = nil,
+            Name = "Stock de Balles Accru",
+            NameEN = "Primed Ammo Stock",
+            Polarity = "Naramon",
+            Rarity = "Légendaire",
+            Traits = {"POMPE", "MUNITIONS", "+%TAILLE_CHARGEUR"},
+            Transmutable = false
+        },
+        ["Cartouche Chargée Accrue"] = {
+            Image = "Cartouche Chargée Accrue.png",
+            Name = "Cartouche Chargée Accrue",
+            NameEN = "Primed Charged Shell",
+            Polarity = "Naramon",
+            Rarity = "Légendaire",
+            Transmutable = false,
+            Traits = {"POMPE", "BARO"}
+        },
+        ["Charge de Chaleur Accrue"] = {
+            Image = "Charge de Chaleur Accrue.png",
+            Name = "Charge de Chaleur Accrue",
+            NameEN = "Primed Heated Charge",
+            Polarity = "Naramon",
+            Rarity = "Légendaire",
+            Transmutable = false,
+            Traits = {"SECONDAIRE", "BARO"}
+        },
+        ["Traumatisme Lourd Accru"] = {
+            Family = "Traumatisme Lourd",
+            Image = "Traumatisme Lourd Accru.png",
+            Name = "Traumatisme Lourd Accru",
+            NameEN = "Primed Heavy Trauma",
+            Polarity = "Naramon",
+            Rarity = "Légendaire",
+            Traits = {"+%IMPACT", "MELEE", "BARO"},
+            Transmutable = false
+        },
+        ["Mutation de Fusil Accrue"] = {
+            Family = "Mutation de Munitions de Fusil",
+            Image = "Mutation de Fusil Accrue.png",
+            Name = "Mutation de Fusil Accrue",
+            NameEN = "Primed Rifle Ammo Mutation",
+            Polarity = "Naramon",
+            Rarity = "Légendaire",
+            Traits = {"FUSIL", "MUNITIONS", "MUTATION", "BARO"},
+            Transmutable = false
+        },
+        ["Mutation de Fusil à Pompe Accrue"] = {
+            Family = "Mutation de Munitions de Fusil à Pompe",
+            Image = "Mutation de Fusil à Pompe Accrue.png",
+            Name = "Mutation de Fusil à Pompe Accrue",
+            NameEN = "Primed Shotgun Ammo Mutation",
+            Polarity = "Naramon",
+            Rarity = "Légendaire",
+            Traits = {"POMPE", "MUNITIONS", "MUTATION", "BARO"},
+            Transmutable = false
+        },
+        ["Chargeur Glissant Accru"] = {
+            Family = "Chargeur Glissant",
+            Image = "Chargeur Glissant Accru.png",
+            Name = "Chargeur Glissant Accru",
+            NameEN = "Primed Slip Magazine",
+            Polarity = "Naramon",
+            Rarity = "Légendaire",
+            Transmutable = false,
+            Traits = {"SECONDAIRE", "MUNITIONS", "+%TAILLE_CHARGEUR", "BARO"}
+        },
+        ["Châtie-Corpus Accru"] = {
+            Image = "Châtie-Corpus Accru.png",
+            Name = "Châtie-Corpus Accru",
+            Polarity = "Madurai",
+            Rarity = "Légendaire",
+            Transmutable = false,
+            NameEN = "Primed Smite Corpus",
+            Traits = {"MELEE", "BARO"}
+        },
+        ["Châtie-Corrompu Accru"] = {
+            Image = "Châtie-Corrompu Accru.png",
+            Name = "Châtie-Corrompu Accru",
+            Polarity = "Madurai",
+            Rarity = "Légendaire",
+            Transmutable = false,
+            NameEN = "Primed Smite Corrupted",
+            Traits = {"MELEE", "BARO"}
+        },
+        ["Châtie-Grineer Accru"] = {
+            Image = "Châtie-Grineer Accru.png",
+            Name = "Châtie-Grineer Accru",
+            Polarity = "Madurai",
+            Rarity = "Légendaire",
+            Transmutable = false,
+            NameEN = "Primed Smite Grineer",
+            Traits = {"MELEE", "BARO"}
+        },
+        ["Châtie-Infestés Accru"] = {
+            Image = "Châtie-Infestés Accru.png",
+            Name = "Châtie-Infestés Accru",
+            Polarity = "Madurai",
+            Rarity = "Légendaire",
+            Transmutable = false,
+            NameEN = "Primed Smite Infested",
+            Traits = {"MELEE", "BARO"}
+        },
+        ["Fierté Guerrière"] = {
+            Image = "Fierté Guerrière.png",
+            Name = "Fierté Guerrière",
+            NameEN = "Prize Kill",
             Polarity = "Vazarin",
             Rarity = "Rare",
-            Traits = {"CONCLAVE", "MELEE"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE", "POMPE"}
         },
         ["Proboscis"] = {
             Image = "Proboscis.jpg",
@@ -6797,22 +6296,14 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Proie Abattue"] = {
-            Image = "Proie Abattue.png",
-            Name = "Proie Abattue",
-            NameEN = "Vanquished Prey",
-            Polarity = "Vazarin",
-            Rarity = "Rare",
-            Transmutable = false
-        },
         ["Projection Corrosive"] = {
             Image = "Projection Corrosive.png",
             Name = "Projection Corrosive",
             NameEN = "Corrosive Projection",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Traits = {"AURA"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"AURA"}
         },
         ["Prolongement"] = {
             Image = "Prolongement.jpg",
@@ -6841,23 +6332,8 @@ local ModData = {
             NameEN = "Air Thrusters",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Traits = {"CONCLAVE_UTIL"},
-            Transmutable = false
-        },
-        ["Propulseurs Hyperion"] = {
-            Image = "PropulseursHyperion.png",
-            Name = "Propulseurs Hyperion",
-            NameEN = "Hyperion Thrusters",
-            Polarity = "Naramon",
-            Rarity = "Rare"
-        },
-        ["Propulseurs du Necramech"] = {
-            Image = "Propulseurs du Necramech.png",
-            Name = "Propulseurs du Necramech",
-            NameEN = "Necramech Thrusters",
-            Polarity = "Vazarin",
-            Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
         },
         ["Protection"] = {
             Image = "Protect 19.6.3.png",
@@ -6868,7 +6344,7 @@ local ModData = {
             Transmutable = false
         },
         ["Protection de l'Angoisse"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Protection de l'Angoisse.png",
             Introduced = "24.7",
             Name = "Protection de l'Angoisse",
@@ -6878,20 +6354,12 @@ local ModData = {
             Transmutable = false
         },
         ["Protection Éternelle"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Protection Éternelle.png",
             Name = "Protection Éternelle",
             NameEN = "Everlasting Ward",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Protège Rampes"] = {
-            Image = "Protège Rampes.png",
-            Name = "Protège Rampes",
-            NameEN = "Rail Guards",
-            Polarity = "Naramon",
-            Rarity = "Commun",
             Transmutable = false
         },
         ["Prouesse de Mêlée"] = {
@@ -6911,7 +6379,7 @@ local ModData = {
             Traits = {"WARFRAME"}
         },
         ["Provocation Pacifique"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Provocation_Pacifique.png",
             Name = "Provocation Pacifique",
             NameEN = "Peaceful Provocation",
@@ -6919,13 +6387,15 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Préparation"] = {
-            Image = "Préparation.png",
-            Name = "Préparation",
-            NameEN = "Preparation",
+        ["Le Pouvoir des Trois"] = {
+            AugmentType = 'Warframe',
+            Image = "Le Pouvoir des Trois.png",
+            Name = "Le Pouvoir des Trois",
+            NameEN = "Power of Three",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Puissance du Gladiateur"] = {
             Image = "Puissance_du_Gladiateur.jpg",
@@ -6939,7 +6409,7 @@ local ModData = {
             Transmutable = false
         },
         ["Pulsation Électrique"] = {
-            AugmentType = "Compagnon",
+            AugmentType = 'Compagnon',
             Image = "Electro Pulse 19.6.3.png",
             Name = "Pulsation Électrique",
             NameEN = "Electro Pulse",
@@ -6948,16 +6418,17 @@ local ModData = {
             Traits = {"SENTINELLE"},
             Transmutable = false
         },
-        ["Pur Jus"] = {
-            Image = "Pur Jus.png",
-            Name = "Pur Jus",
-            NameEN = "Juice",
-            Polarity = "Vazarin",
-            Rarity = "Commun",
+        ["Martèlement"] = {
+            Image = "Martèlement.png",
+            Name = "Martèlement",
+            NameEN = "Pummel",
+            Polarity = "Naramon",
+            Rarity = "Rare",
+            Traits = {"+%IMPACT", "SECONDAIRE", "BARO"},
             Transmutable = false
         },
         ["Pureté Désarmante"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Pureté_Désarmante.jpg",
             Introduced = "20.4.0",
             Name = "Pureté Désarmante",
@@ -6967,7 +6438,7 @@ local ModData = {
             Transmutable = false
         },
         ["Pureté Lumineuse"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Pureté_Lumineuse.jpg",
             Introduced = "15.0.0",
             Name = "Pureté Lumineuse",
@@ -6977,7 +6448,7 @@ local ModData = {
             Transmutable = false
         },
         ["Pureté Éternelle"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Pureté_Éternelle.jpg",
             Introduced = "15.0.0",
             Name = "Pureté Éternelle",
@@ -6999,8 +6470,8 @@ local ModData = {
             NameEN = "Primed Cleanse Corpus",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"POMPE", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"POMPE", "BARO"}
         },
         ["Purifie-Corrompu"] = {
             Image = "CleanseCorruptedMod.png",
@@ -7015,8 +6486,8 @@ local ModData = {
             NameEN = "Primed Cleanse Corrupted",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"POMPE", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"POMPE", "BARO"}
         },
         ["Purifie-Grineer"] = {
             Image = "Purifie-GrineersU145.png",
@@ -7031,10 +6502,11 @@ local ModData = {
             NameEN = "Primed Cleanse Grineer",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"POMPE", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"POMPE", "BARO"}
         },
         ["Purifie-Infestés"] = {
+            Image = nil,
             Name = "Purifie-Infestés",
             NameEN = "Cleanse Infested",
             Polarity = "Madurai",
@@ -7046,8 +6518,8 @@ local ModData = {
             NameEN = "Primed Cleanse Infested",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"POMPE", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"POMPE", "BARO"}
         },
         ["Périphérie Aéro"] = {
             Image = "Périphérie_Aéro.png",
@@ -7066,14 +6538,46 @@ local ModData = {
             Rarity = "Rare",
             Stance = true
         },
+        ["Charge Rapide"] = {
+            Image = "Charge Rapide.png",
+            Name = "Charge Rapide",
+            NameEN = "Quick Charge",
+            Polarity = "Vazarin",
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
+        },
+        ["Échappée Belle"] = {
+            Image = "Échappée Belle.png",
+            Name = "Échappée Belle",
+            NameEN = "Quick Escape",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Rechargement Rapide"] = {
+            Image = "Rechargement Rapide.jpg",
+            Name = "Rechargement Rapide",
+            NameEN = "Quick Reload",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Retour Rapide"] = {
+            Image = "Retour Rapide.png",
+            Name = "Retour Rapide",
+            NameEN = "Quick Return",
+            Polarity = "Naramon",
+            Rarity = "Commun"
+        },
         ["Rabat-Joie"] = {
             Image = "Rabat-Joie.png",
             Name = "Rabat-Joie",
             NameEN = "Buzz Kill",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"MELEE", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"MELEE", "BARO"}
         },
         ["Radar ennemi"] = {
             Image = "Radar ennemi.png",
@@ -7081,11 +6585,11 @@ local ModData = {
             NameEN = "Enemy Radar",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Traits = {"AURA"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"AURA"}
         },
         ["Radiance Immolante"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Radiance Immolante.png",
             Name = "Radiance Immolante",
             NameEN = "Immolated Radiance",
@@ -7094,7 +6598,7 @@ local ModData = {
             Transmutable = false
         },
         ["Rafale Contrôlée"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Rafale controlee.png",
             Name = "Rafale Contrôlée",
             NameEN = "Measured Burst",
@@ -7104,7 +6608,7 @@ local ModData = {
             Transmutable = false
         },
         ["Rafale Entropique"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Rafale_Entropique.png",
             Introduced = "15.0.0",
             Name = "Rafale Entropique",
@@ -7123,15 +6627,6 @@ local ModData = {
             Traits = {"+%IMPACT", "WARFRAME"},
             Transmutable = false
         },
-        ["Rafistolage du Necramech"] = {
-            Image = "Rafistolage du Necramech.png",
-            Introduced = "29.6",
-            Name = "Rafistolage du Necramech",
-            NameEN = "Necramech Repair",
-            Polarity = "Vazarin",
-            Rarity = "Inhabituel",
-            Transmutable = false
-        },
         ["Rage"] = {
             Image = "Rage.png",
             Name = "Rage",
@@ -7141,7 +6636,7 @@ local ModData = {
             Traits = {"WARFRAME"}
         },
         ["Rage Primale"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Rage Primale.png",
             Introduced = "18.14.0",
             Name = "Rage Primale",
@@ -7151,13 +6646,12 @@ local ModData = {
             Traits = {"+%CRITCHANCE", "AUGMENT_WARFRAME", "AUGMENT"},
             Transmutable = false
         },
-        ["Rage du Necramech"] = {
-            Image = "Rage du Necramech.png",
-            Introduced = "29.6",
-            Name = "Rage du Necramech",
-            NameEN = "Necramech Rage",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel",
+        ["Protège Rampes"] = {
+            Image = "Protège Rampes.png",
+            Name = "Protège Rampes",
+            NameEN = "Rail Guards",
+            Polarity = "Naramon",
+            Rarity = "Commun",
             Transmutable = false
         },
         ["Rajeunissement"] = {
@@ -7166,8 +6660,8 @@ local ModData = {
             NameEN = "Rejuvenation",
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
-            Traits = {"AURA", "VAZARIN"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"AURA", "VAZARIN"}
         },
         ["Rapace Malicieux"] = {
             Image = "RapaceMalicieux.png",
@@ -7186,7 +6680,7 @@ local ModData = {
             Stance = true
         },
         ["Rasoirs Zélés"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Rasoirs Zélés.png",
             Name = "Rasoirs Zélés",
             NameEN = "Razorwing Blitz",
@@ -7200,14 +6694,6 @@ local ModData = {
             NameEN = "Streamline",
             Polarity = "Naramon",
             Rarity = "Rare"
-        },
-        ["Rationalisation du Necramech"] = {
-            Image = "Rationalisation du Necramech.png",
-            Name = "Rationalisation du Necramech",
-            NameEN = "Necramech Streamline",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel",
-            Transmutable = false
         },
         ["Ravage"] = {
             Family = "Ravage",
@@ -7238,22 +6724,6 @@ local ModData = {
             Stance = true,
             Transmutable = false
         },
-        ["Ravitaillement du Necramech"] = {
-            Image = "Ravitaillement du Necramech.png",
-            Name = "Ravitaillement du Necramech",
-            NameEN = "Necramech Refuel",
-            Polarity = "Vazarin",
-            Rarity = "Commun",
-            Transmutable = false
-        },
-        ["Rayon Tracteur"] = {
-            Image = "Rayon Tracteur.png",
-            Name = "Rayon Tracteur",
-            NameEN = "Tractor Beam",
-            Polarity = "Penjaga",
-            Rarity = "Commun",
-            Transmutable = false
-        },
         ["Rayon à Combustion"] = {
             Image = "Rayon à Combustion.png",
             Name = "Rayon à Combustion",
@@ -7271,7 +6741,7 @@ local ModData = {
             Transmutable = false
         },
         ["Rayons Efficaces"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Rayons_Efficaces.png",
             Introduced = "25.3.0",
             Name = "Rayons Efficaces",
@@ -7281,23 +6751,21 @@ local ModData = {
             Traits = {"+%STATCHANCE", "AUGMENT_ARME", "AUGMENT"},
             Transmutable = false
         },
-        ["Rebond"] = {
-            Family = "Rebond",
-            Image = "Rebond.png",
-            Name = "Rebond",
-            NameEN = "Rebound",
-            Polarity = "Naramon",
-            Rarity = "Commun"
+        ["Munitions Rasoir"] = {
+            Image = "Munitions Rasoir.png",
+            Name = "Munitions Rasoir",
+            NameEN = "Razor Munitions",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
+            Transmutable = false,
+            Traits = {"CONCLAVE", "SECONDAIRE"}
         },
-        ["Rebond Volatil"] = {
-            Family = "Rebond",
-            Image = "Rebond volatil.png",
-            Introduced = "29.5",
-            Name = "Rebond Volatil",
-            NameEN = "Volatile Rebound",
+        ["Tir de Rasoir"] = {
+            Image = "Tir de Rasoir.png",
+            Name = "Tir de Rasoir",
+            NameEN = "Razor Shot",
             Polarity = "Naramon",
-            Rarity = "Rare",
-            Transmutable = true
+            Rarity = "Inhabituel"
         },
         ["Rebord Glacial"] = {
             Image = "Rebord Glacial.png",
@@ -7322,6 +6790,41 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Commun"
         },
+        ["Rebond"] = {
+            Family = "Rebond",
+            Image = "Rebond.png",
+            Name = "Rebond",
+            NameEN = "Rebound",
+            Polarity = "Naramon",
+            Rarity = "Commun"
+        },
+        ["Rebond Volatil"] = {
+            Family = "Rebond",
+            Image = "Rebond volatil.png",
+            Introduced = "29.5",
+            Name = "Rebond Volatil",
+            NameEN = "Volatile Rebound",
+            Polarity = "Naramon",
+            Rarity = "Rare",
+            Transmutable = true
+        },
+        ["Retour Rapide Volatil"] = {
+            Image = "Retour Rapide Volatil.png",
+            Name = "Retour Rapide Volatil",
+            NameEN = "Volatile Quick Return",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Transmutable = true
+        },
+        ["Barrière de Recharge"] = {
+            Image = "Barrière de Recharge.png",
+            Name = "Barrière de Recharge",
+            NameEN = "Recharge Barrier",
+            Polarity = "Zenurik",
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
+        },
         ["Recharge Mecha"] = {
             Image = "Recharge_Mecha.jpg",
             Name = "Recharge Mecha",
@@ -7342,12 +6845,12 @@ local ModData = {
         },
         ["Recharge Tactique"] = {
             Image = "Recharge Tactique.png",
-            Introduced = "16",
             Name = "Recharge Tactique",
             NameEN = "Tactical Reload",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Introduced = "16"
         },
         ["Rechargement Frissonnant"] = {
             Image = "Rechargement_Frissonnant.png",
@@ -7356,34 +6859,6 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Rare",
             Traits = {"NIGHTMARE", "POMPE"}
-        },
-        ["Rechargement Rapide"] = {
-            Image = "Rechargement Rapide.jpg",
-            Name = "Rechargement Rapide",
-            NameEN = "Quick Reload",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel",
-            Transmutable = false
-        },
-        ["Recherche"] = {
-            Image = "Recherche.png",
-            Introduced = "14.0",
-            Link = "Recherche (Mod)",
-            Name = "Recherche",
-            NameEN = "Scavenge",
-            Polarity = "Penjaga",
-            Rarity = "Commun",
-            Traits = {"COMPAGNON", "BETE"},
-            Transmutable = true
-        },
-        ["Reciblage"] = {
-            AugmentType = "Compagnon",
-            Image = "Reciblage.png",
-            Name = "Reciblage",
-            NameEN = "Retarget",
-            Polarity = "Penjaga",
-            Rarity = "Commun",
-            Traits = {"SENTINELLE"}
         },
         ["Reconnaissance Aérienne"] = {
             Image = "AirRecon.png",
@@ -7400,6 +6875,33 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Rare",
             Traits = {"+%STATCHANCE", "ARCHMELEE"}
+        },
+        ["Repos"] = {
+            Image = "Repos.png",
+            Name = "Repos",
+            NameEN = "Recover",
+            Polarity = "Vazarin",
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"CONCLAVE", "FUSIL"}
+        },
+        ["Repos Rapide"] = {
+            Archived = true,
+            Image = "Repos_rapide.jpg",
+            Name = "Repos Rapide",
+            NameEN = "Quick Rest",
+            Polarity = "Vazarin ",
+            Traits = {"ENDURANCE"},
+            Transmutable = false
+        },
+        ["Rétablissement"] = {
+            Image = "Rétablissement.png",
+            Name = "Rétablissement",
+            NameEN = "Recuperate",
+            Polarity = "Vazarin",
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"CONCLAVE", "SECONDAIRE"}
         },
         ["Redirection"] = {
             Image = "Redirection.png",
@@ -7423,14 +6925,6 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Rare"
         },
-        ["Redirection du Necramech"] = {
-            Image = "Redirection du Necramech.png",
-            Name = "Redirection du Necramech",
-            NameEN = "Necramech Deflection",
-            Polarity = "Vazarin",
-            Rarity = "Commun",
-            Transmutable = false
-        },
         ["Reflet"] = {
             Image = "Reflet.png",
             Name = "Reflet",
@@ -7439,7 +6933,7 @@ local ModData = {
             Rarity = "Rare"
         },
         ["Regard Minéral"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Regard Minéral.png",
             Name = "Regard Minéral",
             NameEN = "Ore Gaze",
@@ -7447,16 +6941,24 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Regard Vif"] = {
-            Image = "Regard Vif.png",
-            Name = "Regard Vif",
-            NameEN = "Spry Sights",
+        ["Assaut Implacable"] = {
+            Image = "Assaut Implacable.png",
+            Name = "Assaut Implacable",
+            NameEN = "Relentless Assault",
             Polarity = "Madurai",
-            Rarity = "Inhabituel",
-            Transmutable = false
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"CONCLAVE", "MELEE"}
+        },
+        ["Combinaison Incessante"] = {
+            Image = "Combinaison Incessante.png",
+            Name = "Combinaison Incessante",
+            NameEN = "Relentless Combination",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel"
         },
         ["Rempart d'Ombres"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Rempart d'Ombres.png",
             Name = "Rempart d'Ombres",
             NameEN = "Shield of Shadows",
@@ -7465,7 +6967,7 @@ local ModData = {
             Transmutable = false
         },
         ["Renaissance"] = {
-            AugmentType = "Compagnon",
+            AugmentType = 'Compagnon',
             Image = "Renaissance.jpg",
             Name = "Renaissance",
             NameEN = "Reawaken",
@@ -7475,7 +6977,7 @@ local ModData = {
             Transmutable = false
         },
         ["Renouveau du Phénix"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Renouveau du Phénix.png",
             Name = "Renouveau du Phénix",
             NameEN = "Phoenix Renewal",
@@ -7490,39 +6992,29 @@ local ModData = {
             Polarity = "Vazarin",
             Rarity = "Rare"
         },
-        ["Repos"] = {
-            Image = "Repos.png",
-            Name = "Repos",
-            NameEN = "Recover",
-            Polarity = "Vazarin",
+        ["Trousse de Réparation"] = {
+            Image = "Trousse de Réparation.png",
+            Name = "Trousse de Réparation",
+            NameEN = "Repair Kit",
+            Polarity = "Penjaga",
             Rarity = "Rare",
-            Traits = {"CONCLAVE", "FUSIL"},
-            Transmutable = false
-        },
-        ["Repos Rapide"] = {
-            Archived = true,
-            Image = "Repos_rapide.jpg",
-            Name = "Repos Rapide",
-            NameEN = "Quick Rest",
-            Polarity = "Vazarin ",
-            Traits = {"ENDURANCE"},
-            Transmutable = false
-        },
-        ["Reproche du Necramech"] = {
-            Image = "Reproche du Necramech.png",
-            Introduced = "29.6",
-            Name = "Reproche du Necramech",
-            NameEN = "Necramech Rebuke",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel",
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Resilient Focus"] = {
+            Image = nil,
             Name = "",
             NameEN = "Resilient Focus",
             Polarity = "Vazarin",
             Rarity = "Rare",
             Transmutable = false
+        },
+        ["Concentration Résolue"] = {
+            Image = "Concentration Résolue.png",
+            Name = "Concentration Résolue",
+            NameEN = "Resolute Focus",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel"
         },
         ["Ressort Gelé"] = {
             Image = "Ressort_Gelé.png",
@@ -7541,46 +7033,77 @@ local ModData = {
             Set = "Vigile",
             Transmutable = false
         },
-        ["Retour Rapide"] = {
-            Image = "Retour Rapide.png",
-            Name = "Retour Rapide",
-            NameEN = "Quick Return",
-            Polarity = "Naramon",
-            Rarity = "Commun"
-        },
-        ["Retour Rapide Volatil"] = {
-            Image = "Retour Rapide Volatil.png",
-            Name = "Retour Rapide Volatil",
-            NameEN = "Volatile Quick Return",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel",
-            Transmutable = true
-        },
-        ["Retraite Tactique"] = {
-            Image = "Retraite Tactique.png",
-            Name = "Retraite Tactique",
-            NameEN = "Tactical Retreat",
-            Polarity = "Vazarin",
-            Rarity = "Rare",
-            Traits = {"CONCLAVE_UTIL"},
-            Transmutable = false
+        ["Reciblage"] = {
+            AugmentType = 'Compagnon',
+            Image = "Reciblage.png",
+            Name = "Reciblage",
+            NameEN = "Retarget",
+            Polarity = "Penjaga",
+            Rarity = "Commun",
+            Traits = {"SENTINELLE"}
         },
         ["Ricochet Kinétique"] = {
-            AugmentType = "Arme",
-            Image = "Ricochet_Kinétique.jpg",
+            AugmentType = 'Arme',
             Introduced = "SotR",
+            Image = "Ricochet_Kinétique.jpg",
             Name = "Ricochet Kinétique",
             NameEN = "Kinetic Ricochet",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
             Transmutable = false
         },
+        ["Fusil amplifié"] = {
+            Image = "Fusil_amplifié.png",
+            Name = "Fusil amplifié",
+            Introduced = "0",
+            NameEN = "Rifle Amp",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
+            Transmutable = false,
+            Traits = {"AURA"}
+        },
+        ["Récupérateur de Fusil"] = {
+            Image = "Récupérateur de Fusil.png",
+            Name = "Récupérateur de Fusil",
+            NameEN = "Rifle Scavenger",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Traits = {"AURA", "MUNITIONS"}
+        },
+        ["Vrille Glaciale"] = {
+            Image = "Vrille Glaciale.png",
+            Name = "Vrille Glaciale",
+            NameEN = "Rime Vault",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"CONCLAVE_COSME"}
+        },
+        ["Cartouches Déchirantes"] = {
+            Image = "Cartouches Déchirantes.png",
+            Name = "Cartouches Déchirantes",
+            NameEN = "Ripper Rounds",
+            Polarity = "Madurai",
+            PvP = true,
+            Rarity = "Inhabituel",
+            Transmutable = false,
+            Traits = {"CONCLAVE", "FUSIL", "+%PERFORATION"}
+        },
         ["Ris"] = {
             Image = "Ris.png",
             Name = "Ris",
-            NameEN = "Ris",
             Polarity = "Aucune",
-            Rarity = "Requiem"
+            Rarity = "Requiem",
+            NameEN = "Ris"
+        },
+        ["Habileté Montante"] = {
+            Image = "Habileté Montante.png",
+            Name = "Habileté Montante",
+            NameEN = "Rising Skill",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
         },
         ["Rondin Écrasant"] = {
             Image = "Rondin_Écrasant.png",
@@ -7598,12 +7121,12 @@ local ModData = {
             Name = "Roulade Parade",
             NameEN = "Rolling Guard",
             Polarity = "Vazarin",
-            Polariy = "Vazarin",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Polariy = "Vazarin"
         },
         ["Rugissement Perçant"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Rugissement_Perçant.png",
             Name = "Rugissement Perçant",
             NameEN = "Piercing Roar",
@@ -7633,8 +7156,8 @@ local ModData = {
             NameEN = "Adept Surge",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Traits = {"CONCLAVE_UTIL"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
         },
         ["Ruée d'Obus"] = {
             Image = "Ruée d'Obus.jpg",
@@ -7654,24 +7177,6 @@ local ModData = {
             Set = "Gladiateur",
             Transmutable = false
         },
-        ["Récepteur de Ciblage"] = {
-            AugmentType = "Compagnon",
-            Image = "Récepteur de Ciblage.png",
-            Name = "Récepteur de Ciblage",
-            NameEN = "Targeting Receptor",
-            Polarity = "Penjaga",
-            Rarity = "Commun",
-            Traits = {"SENTINELLE", "COMPAGNON"},
-            Transmutable = false
-        },
-        ["Récupérateur de Fusil"] = {
-            Image = "Récupérateur de Fusil.png",
-            Name = "Récupérateur de Fusil",
-            NameEN = "Rifle Scavenger",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel",
-            Traits = {"AURA", "MUNITIONS"}
-        },
         ["Récupérateur de Fusil à Pompe"] = {
             Image = "Récupérateur de Fusil à pompe.png",
             Name = "Récupérateur de Fusil à Pompe",
@@ -7688,33 +7193,25 @@ local ModData = {
             Rarity = "Inhabituel",
             Traits = {"AURA", "MUNITIONS"}
         },
-        ["Récupérateur de Sniper"] = {
-            Image = "Récupérateur de Sniper.png",
-            Name = "Récupérateur de Sniper",
-            NameEN = "Sniper Scavenger",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel",
-            Traits = {"AURA", "MUNITIONS"}
-        },
         ["Récupération Blindée"] = {
             Image = "ArmoredRecovery.png",
             Name = "Récupération Blindée",
             NameEN = "Armored Recovery",
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
-            Traits = {"CONCLAVE_UTIL"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
         },
         ["Récupération de Protection"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Récupération de Protection.png",
             Name = "Récupération de Protection",
             NameEN = "Ward Recovery",
             Polarity = "Zenurik",
             PvP = true,
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Récupération du Chasseur"] = {
             Image = "Récupération_du_Chasseur.jpg",
@@ -7735,49 +7232,18 @@ local ModData = {
             Transmutable = false
         },
         ["Réflexe de Défense"] = {
+            Image = nil,
             Name = "Réflexe de Défense",
             NameEN = "Reflex Guard",
             Polarity = "Vazarin",
             Rarity = "Rare"
         },
-        ["Réflexes Primaires"] = {
-            Image = "Réflexes Primaires.png",
-            Name = "Réflexes Primaires",
-            NameEN = "Heightened Reflexes",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Traits = {"CONCLAVE_UTIL"},
-            Transmutable = false
-        },
         ["Réflexion"] = {
+            Image = nil,
             Name = "Réflexion",
             NameEN = "Reflection",
             Polarity = "Vazarin",
             Rarity = "Commun"
-        },
-        ["Régression Nocturne"] = {
-            Image = "Régression Nocturne.png",
-            Name = "Régression Nocturne",
-            NameEN = "Crescent Devolution",
-            Polarity = "Penjaga",
-            Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Régression Panzer"] = {
-            Image = "Régression Panzer.png",
-            Name = "Régression Panzer",
-            NameEN = "Panzer Devolution",
-            Polarity = "Penjaga",
-            Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Régression Sournoise"] = {
-            Image = "Régression Sournoise.png",
-            Name = "Régression Sournoise",
-            NameEN = "Sly Devolution",
-            Polarity = "Penjaga",
-            Rarity = "Rare",
-            Transmutable = false
         },
         ["Régénération"] = {
             Family = "Régénération",
@@ -7799,7 +7265,7 @@ local ModData = {
             Transmutable = false
         },
         ["Répétition photonique"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Répétition Photonique.png",
             Name = "Répétition photonique",
             NameEN = "Photon Repeater",
@@ -7829,8 +7295,8 @@ local ModData = {
             NameEN = "Toxin Resistance",
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
-            Traits = {"AURA"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"AURA"}
         },
         ["Résolution du Gladiateur"] = {
             Image = "Résolution_du_Gladiateur.jpg",
@@ -7844,21 +7310,12 @@ local ModData = {
             Transmutable = false
         },
         ["Résonance"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Résonance.png",
             Name = "Résonance",
             NameEN = "Resonance",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Rétablissement"] = {
-            Image = "Rétablissement.png",
-            Name = "Rétablissement",
-            NameEN = "Recuperate",
-            Polarity = "Vazarin",
-            Rarity = "Rare",
-            Traits = {"CONCLAVE", "SECONDAIRE"},
             Transmutable = false
         },
         ["Réticule Hydraulique"] = {
@@ -7878,6 +7335,13 @@ local ModData = {
             Polarity = "Vazarin",
             Rarity = "Rare"
         },
+        ["Munitions Assommantes"] = {
+            Image = "Munitions Assommantes.png",
+            Name = "Munitions Assommantes",
+            NameEN = "Sabot Rounds",
+            Polarity = "Naramon",
+            Rarity = "Rare"
+        },
         ["Sacrifice"] = {
             Image = "Sacrifice.png",
             Name = "Sacrifice",
@@ -7887,24 +7351,24 @@ local ModData = {
             Traits = {"SENTINELLE", "COMPAGNON"}
         },
         ["Saignée d'Urgence"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Saignée d'Urgence.png",
             Name = "Saignée d'Urgence",
             NameEN = "Purging Slash",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Salves Divisées"] = {
             Image = "Salves Divisées.png",
-            Introduced = "25.8.2",
             Name = "Salves Divisées",
             NameEN = "Split Flights",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"BARO", "FUSIL", "ARC"},
-            Transmutable = false
+            Introduced = "25.8.2",
+            Transmutable = false,
+            Traits = {"BARO", "FUSIL", "ARC"}
         },
         ["Salves de Lames"] = {
             Image = "Salves_de_Lames.png",
@@ -7933,6 +7397,17 @@ local ModData = {
             Rarity = "Inhabituel",
             Traits = {"+%PERFORATION", "SECONDAIRE"}
         },
+        ["Atteinte Épuisante"] = {
+            AugmentType = 'Warframe',
+            Image = "Atteinte Épuisante.png",
+            Name = "Atteinte Épuisante",
+            NameEN = "Sapping Reach",
+            Polarity = "Zenurik",
+            PvP = true,
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
+        },
         ["Saule Saignant"] = {
             Image = "SauleSaignantU14.png",
             Name = "Saule Saignant",
@@ -7941,31 +7416,13 @@ local ModData = {
             Rarity = "Rare",
             Stance = true
         },
-        ["Saut Brûlant"] = {
-            Image = "Saut Brûlant.png",
-            Name = "Saut Brûlant",
-            NameEN = "Searing Leap",
-            Polarity = "Madurai",
+        ["Sauvegarde"] = {
+            AugmentType = 'Warframe',
+            Image = "Sauvegarde.png",
+            Name = "Sauvegarde",
+            NameEN = "Safeguard",
+            Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"CONCLAVE_COSME"},
-            Transmutable = false
-        },
-        ["Saut Disjoncté"] = {
-            Image = "Saut Disjoncté.png",
-            Name = "Saut Disjoncté",
-            NameEN = "No Current Leap",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel",
-            Traits = {"CONCLAVE_UTIL"},
-            Transmutable = false
-        },
-        ["Saut Tempéré"] = {
-            Image = "Saut Tempéré.png",
-            Name = "Saut Tempéré",
-            NameEN = "Tempered Bound",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel",
-            Traits = {"CONCLAVE_UTIL"},
             Transmutable = false
         },
         ["Sauvagerie"] = {
@@ -7975,17 +7432,46 @@ local ModData = {
             Polarity = "Penjaga",
             Rarity = "Rare"
         },
-        ["Sauvegarde"] = {
-            AugmentType = "Warframe",
-            Image = "Sauvegarde.png",
-            Name = "Sauvegarde",
-            NameEN = "Safeguard",
-            Polarity = "Zenurik",
-            Rarity = "Rare",
+        ["Chargeur en Dents de Scie"] = {
+            Image = "Chargeur en Dents de Scie.png",
+            Name = "Chargeur en Dents de Scie",
+            NameEN = "Sawtooth Clip",
+            Polarity = "Naramon",
+            Rarity = "Commun"
+        },
+        ["Détecteur Formes de Vie Aquatiques"] = {
+            AugmentType = 'Compagnon',
+            Image = nil,
+            Name = "Détecteur Formes de Vie Aquatiques",
+            NameEN = "Scan Aquatic Lifeforms",
+            Polarity = "Penjaga",
+            Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
+        ["Détecteur de Matière"] = {
+            AugmentType = 'Compagnon',
+            Image = "Détecteur de Matière.png",
+            Name = "Détecteur de Matière",
+            NameEN = "Scan Matter",
+            Polarity = "Penjaga",
+            Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON"},
+            Transmutable = false
+        },
+        ["Recherche"] = {
+            Image = "Recherche.png",
+            Introduced = "14.0",
+            Link = "Recherche (Mod)",
+            Name = "Recherche",
+            NameEN = "Scavenge",
+            Polarity = "Penjaga",
+            Rarity = "Commun",
+            Traits = {"COMPAGNON", "BETE"},
+            Transmutable = true
+        },
         ["Scie à Os"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Scie_à_Os.jpg",
             Introduced = "18.10.0",
             Name = "Scie à Os",
@@ -7995,8 +7481,18 @@ local ModData = {
             Traits = {"+%STATCHANCE", "AUGMENT_ARME", "AUGMENT"},
             Transmutable = false
         },
+        ["Saut Brûlant"] = {
+            Image = "Saut Brûlant.png",
+            Name = "Saut Brûlant",
+            NameEN = "Searing Leap",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"CONCLAVE_COSME"}
+        },
         ["Second Souffle"] = {
             Archived = true,
+            Image = nil,
             Name = "Second Souffle",
             NameEN = "Second Wind",
             Polarity = "Second Wind",
@@ -8010,8 +7506,8 @@ local ModData = {
             NameEN = "Secondary Wind",
             Polarity = "Vazarin",
             Rarity = "Rare",
-            Traits = {"CONCLAVE", "SECONDAIRE"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE", "SECONDAIRE"}
         },
         ["Secousse"] = {
             Image = "Secousse2.png",
@@ -8023,7 +7519,7 @@ local ModData = {
             Transmutable = false
         },
         ["Secousse Résonnante"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Secousse Résonnante.png",
             Name = "Secousse Résonnante",
             NameEN = "Resonating Quake",
@@ -8040,6 +7536,30 @@ local ModData = {
             Set = "Augure",
             Transmutable = false
         },
+        ["Désactivation de Sécurité"] = {
+            Image = "Désactivation de Sécurité.png",
+            Name = "Désactivation de Sécurité",
+            NameEN = "Security Override",
+            Polarity = "Penjaga",
+            Rarity = "Commun",
+            Transmutable = false
+        },
+        ["Chercheur"] = {
+            Image = "Chercheur.png",
+            Link = "Chercheur (Mod)",
+            Name = "Chercheur",
+            NameEN = "Seeker",
+            Polarity = "Naramon",
+            Rarity = "Rare",
+            Traits = {"SECONDAIRE", "+PENETRATION"}
+        },
+        ["Onde Sismique"] = {
+            Image = "Onde Sismique.png",
+            Name = "Onde Sismique",
+            NameEN = "Seismic Wave",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel"
+        },
         ["Sens du Danger"] = {
             Image = "Sens du Danger.png",
             Name = "Sens du Danger",
@@ -8054,6 +7574,25 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Rare",
             Stance = true
+        },
+        ["Bordures Dentelées"] = {
+            Image = "Bordures Dentelées.png",
+            Name = "Bordures Dentelées",
+            NameEN = "Serrated Edges",
+            Polarity = "Madurai",
+            PvP = true,
+            Rarity = "Inhabituel",
+            Traits = {"CONCLAVE", "MELEE", "+%PERFORATION"},
+            Transmutable = false
+        },
+        ["Cartouches Dentelées"] = {
+            Image = "Cartouches Dentelées.png",
+            Name = "Cartouches Dentelées",
+            NameEN = "Serrated Rounds",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
+            Transmutable = false,
+            Traits = {"CONCLAVE", "FUSIL"}
         },
         ["Serre Étincelante"] = {
             Image = "Serre_étincelante.png",
@@ -8071,36 +7610,97 @@ local ModData = {
             Rarity = "Inhabituel",
             Stance = true
         },
-        ["Serres Composées"] = {
-            AugmentType = "Warframe",
-            Image = "Serres Composées.png",
-            Name = "Serres Composées",
-            NameEN = "Bleeding Talons",
+        ["Lame Aiguisée"] = {
+            Image = "Lame Aiguisée.png",
+            Name = "Lame Aiguisée",
+            NameEN = "Sharpened Blade",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
+            Transmutable = false,
+            Traits = {"CONCLAVE", "MELEE"}
+        },
+        ["Balles Comprimées"] = {
+            Image = "Balles_Comprimées.png",
+            Name = "Balles Comprimées",
+            NameEN = "Shell Compression",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Traits = {"POMPE", "MUNITIONS", "+%RESERVES"}
+        },
+        ["Perturbation du bouclier"] = {
+            Image = "Perturbation du bouclier.png",
+            Name = "Perturbation du bouclier",
+            NameEN = "Shield Disruption",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Transmutable = false,
+            Traits = {"AURA"}
+        },
+        ["Transfert de Bouclier"] = {
+            Archived = true,
+            AugmentType = 'Warframe',
+            Image = nil,
+            Introduced = "15.6",
+            Name = "Transfert de Bouclier",
+            NameEN = "Shield Transference",
             Polarity = "Zenurik",
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Seuil de Douleur"] = {
-            Image = "Seuil de Douleur.png",
-            Introduced = "SotR",
-            Name = "Seuil de Douleur",
-            NameEN = "Pain Threshold",
-            Polarity = "Naramon",
-            Rarity = "Rare",
+        ["Fibre Antichoc"] = {
+            Image = "Fibre Antichoc.png",
+            Name = "Fibre Antichoc",
+            NameEN = "Shock Absorbers",
+            Polarity = "Vazarin",
+            Rarity = "Rare"
+        },
+        ["Déclencheur Onde de Choc"] = {
+            Image = "Déclencheur Onde de Choc.png",
+            Name = "Déclencheur Onde de Choc",
+            NameEN = "Shockwave Actuators",
+            Polarity = "Penjaga",
+            Rarity = "Commun",
             Transmutable = false
         },
+        ["Fusil à pompe amplifié"] = {
+            Image = "Fusil_à_pompe_amplifié.png",
+            Name = "Fusil à pompe amplifié",
+            NameEN = "Shotgun Amp",
+            Introduced = "Le Bosquet d'Argent",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
+            Transmutable = false,
+            Traits = {"AURA"}
+        },
         ["Shrapnel de Fer"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Shrapnel de Fer.png",
             Name = "Shrapnel de Fer",
             NameEN = "Iron Shrapnel",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
+        },
+        ["Tir Déchiquetant"] = {
+            Image = "Tir Déchiquetant.png",
+            Name = "Tir Déchiquetant",
+            NameEN = "Shred Shot",
+            Polarity = "Madurai",
+            PvP = true,
+            Rarity = "Inhabituel",
+            Traits = {"CONCLAVE", "POMPE", "+%PERFORATION"},
             Transmutable = false
         },
+        ["Déchiqueteur"] = {
+            Image = "Déchiqueteur.png",
+            Name = "Déchiqueteur",
+            NameEN = "Shredder",
+            Polarity = "Naramon",
+            Rarity = "Commun"
+        },
         ["Shuriken Chercheur"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Shuriken Chercheur.png",
             Introduced = "15.6.0",
             Name = "Shuriken Chercheur",
@@ -8119,7 +7719,7 @@ local ModData = {
             Transmutable = false
         },
         ["Silence Sauvage"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Silence Sauvage.png",
             Name = "Silence Sauvage",
             NameEN = "Savage Silence",
@@ -8127,30 +7727,37 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Silencieux"] = {
-            Image = "Silencieux.png",
-            Name = "Silencieux",
-            NameEN = "Suppress",
+        ["Batterie Silencieuse"] = {
+            AugmentType = nil,
+            Family = nil,
+            Image = "Batterie_Silencieuse.png",
+            Introduced = "11.9",
+            Name = "Batterie Silencieuse",
+            NameEN = "Silent Battery",
             Polarity = "Naramon",
-            Rarity = "Commun"
-        },
-        ["Sillage du Necramech"] = {
-            Image = "Sillage du Necramech.png",
-            Name = "Sillage du Necramech",
-            NameEN = "Necramech Slipstream",
-            Polarity = "Naramon",
-            Rarity = "Commun",
+            PvP = false,
+            Rarity = "Inhabituel",
+            Set = nil,
+            Stance = false,
+            Traits = {"EXILUS", "WARFRAME"},
             Transmutable = false
         },
         ["Singularité"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Singularité.png",
             Name = "Singularité",
             NameEN = "Singularity",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
+        },
+        ["Portée Sinistre"] = {
+            Image = "Portée Sinistre.png",
+            Name = "Portée Sinistre",
+            NameEN = "Sinister Reach",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel"
         },
         ["Siphon d'énergie"] = {
             Image = "Siphon d'énergie.png",
@@ -8158,7 +7765,62 @@ local ModData = {
             NameEN = "Energy Siphon",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Traits = {"AURA"},
+            Transmutable = false,
+            Traits = {"AURA"}
+        },
+        ["Planche Tueuse"] = {
+            Image = "Planche Tueuse.png",
+            Name = "Planche Tueuse",
+            NameEN = "Slay Board",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Châtie-Corpus"] = {
+            Image = "Châtie-Corpus.png",
+            Name = "Châtie-Corpus",
+            NameEN = "Smite Corpus",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel"
+        },
+        ["Châtie-Grineer"] = {
+            Image = "Châtie-Grineer.png",
+            Name = "Châtie-Grineer",
+            NameEN = "Smite Grineer",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel"
+        },
+        ["Instantané"] = {
+            Image = "Instantané.png",
+            Name = "Instantané",
+            NameEN = "Snap Shot",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Récupérateur de Sniper"] = {
+            Image = "Récupérateur de Sniper.png",
+            Name = "Récupérateur de Sniper",
+            NameEN = "Sniper Scavenger",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Traits = {"AURA", "MUNITIONS"}
+        },
+        ["Attaque Ascendante"] = {
+            Image = "Attaque Ascendante.png",
+            Name = "Attaque Ascendante",
+            NameEN = "Soaring Strike",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"CONCLAVE", "ARC"}
+        },
+        ["Boost Sonique"] = {
+            Image = "Boost Sonique.png",
+            Name = "Boost Sonique",
+            NameEN = "Sonic Boost",
+            Polarity = "Madurai",
+            Rarity = "Rare",
             Transmutable = false
         },
         ["Souffle Accéléré"] = {
@@ -8205,8 +7867,16 @@ local ModData = {
             Stance = true,
             Transmutable = false
         },
+        ["Pièces de Rechange"] = {
+            Image = "Pièces de Rechange.png",
+            Name = "Pièces de Rechange",
+            NameEN = "Spare Parts",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Traits = {"COMPAGNON", "SENTINELLE"}
+        },
         ["Spectrosiphon"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Spectrosiphon.png",
             Introduced = "24.2.7",
             Name = "Spectrosiphon",
@@ -8216,7 +7886,7 @@ local ModData = {
             Transmutable = false
         },
         ["Sphère de Chaos"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Sphère de Chaos.png",
             Name = "Sphère de Chaos",
             NameEN = "Chaos Sphere",
@@ -8224,21 +7894,38 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Spores Paralysantes"] = {
-            Image = "Spores Paralysantes.png",
-            Name = "Spores Paralysantes",
-            NameEN = "Paralytic Spores",
-            Polarity = "Penjaga",
-            Rarity = "Rare",
-            Transmutable = false
-        },
         ["Spores Révélatrices"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Spores Révélatrices.png",
             Name = "Spores Révélatrices",
             NameEN = "Revealing Spores",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Lame à Ressorts"] = {
+            Image = "Lame à Ressorts.png ",
+            Introduced = "22.0",
+            Name = "Lame à Ressorts",
+            NameEN = "Spring-Loaded Blade",
+            Polarity = "Vazarin",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Accélération Rapide"] = {
+            Image = "Accélération Rapide.png",
+            Name = "Accélération Rapide",
+            NameEN = "Sprint Boost",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Traits = {"AURA"}
+        },
+        ["Regard Vif"] = {
+            Image = "Regard Vif.png",
+            Name = "Regard Vif",
+            NameEN = "Spry Sights",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
             Transmutable = false
         },
         ["Stabilisateur"] = {
@@ -8248,20 +7935,37 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Rare"
         },
-        ["Stack de Malade"] = {
-            Image = "Stack de Malade.png",
-            Name = "Stack de Malade",
-            NameEN = "Mad Stack",
-            Polarity = "Madurai",
+        ["Traque"] = {
+            Image = "Traque.png",
+            Name = "Traque",
+            NameEN = "Stalk",
+            Polarity = "Penjaga",
+            Rarity = "Rare"
+        },
+        ["Prise de Terre"] = {
+            Image = "Prise de Terre.png",
+            Name = "Prise de Terre",
+            NameEN = "Stand Ground",
+            Polarity = "Vazarin",
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"CONCLAVE", "MELEE"}
+        },
+        ["Front Commun"] = {
+            Image = "Front Commun.png",
+            Name = "Front Commun",
+            NameEN = "Stand United",
+            Polarity = "Vazarin",
             Rarity = "Inhabituel",
+            Traits = {"+%ARMURE", "AURA", "VAZARIN"},
             Transmutable = false
         },
-        ["Stalker Nocturne"] = {
-            Image = "Stalker Nocturne.png",
-            Name = "Stalker Nocturne",
-            NameEN = "Night Stalker",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel",
+        ["Champ de Stase"] = {
+            Image = "Champ de Stase.png",
+            Name = "Champ de Stase",
+            NameEN = "Stasis Field",
+            Polarity = "Penjaga",
+            Rarity = "Commun",
             Transmutable = false
         },
         ["Stock de Balles"] = {
@@ -8273,21 +7977,20 @@ local ModData = {
             Rarity = "Inhabituel",
             Traits = {"POMPE", "MUNITIONS", "+%TAILLE_CHARGEUR"}
         },
-        ["Stock de Balles Accru"] = {
-            Family = "Stock de Balles",
-            Name = "Stock de Balles Accru",
-            NameEN = "Primed Ammo Stock",
-            Polarity = "Naramon",
-            Rarity = "Légendaire",
-            Traits = {"POMPE", "MUNITIONS", "+%TAILLE_CHARGEUR"},
+        ["Mitraillage Glissé"] = {
+            Image = "Mitraillage Glissé.png",
+            Name = "Mitraillage Glissé",
+            NameEN = "Strafing Slide",
+            Polarity = "Madurai",
+            Rarity = "Rare",
             Transmutable = false
         },
-        ["Style Impec'"] = {
-            Image = "Style Impec'.png",
-            Name = "Style Impec'",
-            NameEN = "Primo Flair",
-            Polarity = "Naramon",
-            Rarity = "Rare",
+        ["Percuteur"] = {
+            Image = "Percuteur.png",
+            Name = "Percuteur",
+            NameEN = "Striker",
+            Polarity = "Penjaga",
+            Rarity = "Commun",
             Transmutable = false
         },
         ["Super-étendu"] = {
@@ -8299,30 +8002,12 @@ local ModData = {
             Traits = {"CORROMPU", "WARFRAME"},
             Transmutable = false
         },
-        ["Superbang"] = {
-            AugmentType = "Warframe",
-            Image = "Superbang.png",
-            Name = "Superbang",
-            NameEN = "Mach Crash",
-            Polarity = "Zenurik",
-            Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Supplice Persistant"] = {
-            Image = "Supplice Persistant.png",
-            Name = "Supplice Persistant",
-            NameEN = "Lingering Torment",
-            Polarity = "Madurai",
+        ["Silencieux"] = {
+            Image = "Silencieux.png",
+            Name = "Silencieux",
+            NameEN = "Suppress",
+            Polarity = "Naramon",
             Rarity = "Commun"
-        },
-        ["Surcharge Critique"] = {
-            AugmentType = "Warframe",
-            Image = "Surcharge Critique.png",
-            Name = "Surcharge Critique",
-            NameEN = "Critical Surge",
-            Polarity = "Zenurik",
-            Rarity = "Rare",
-            Transmutable = false
         },
         ["Surcharge Expéditive"] = {
             Image = "DispatchOverdriveMod.png",
@@ -8332,7 +8017,7 @@ local ModData = {
             Rarity = "Inhabituel"
         },
         ["Surcharge Incandescente"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Surcharge Incandescente.png",
             Name = "Surcharge Incandescente",
             NameEN = "Balefire Surge",
@@ -8361,18 +8046,18 @@ local ModData = {
             Transmutable = true
         },
         ["Surcharge de Boucliers"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Surcharge de Boucliers.png",
             Name = "Surcharge de Boucliers",
             NameEN = "Shield Overload",
             Polarity = "Zenurik",
             PvP = true,
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Surcharge de Flux"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Surcharge_de_Flux.jpg",
             Introduced = "19.5.0",
             Name = "Surcharge de Flux",
@@ -8382,17 +8067,17 @@ local ModData = {
             Traits = {"+%STATCHANCE", "AUGMENT_ARME", "AUGMENT"},
             Transmutable = false
         },
-        ["Surchargé"] = {
-            Image = "Surchargé.png",
-            Name = "Surchargé",
-            NameEN = "Overcharged",
-            Polarity = "Vazarin",
+        ["Partiteurs de Surplus"] = {
+            Image = "Partiteurs de Surplus.png",
+            Name = "Partiteurs de Surplus",
+            NameEN = "Surplus Diverters",
+            Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"CONCLAVE_UTIL"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
         },
         ["Surtension"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Surtension.png",
             Name = "Surtension",
             NameEN = "Capacitance",
@@ -8400,13 +8085,30 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Symbiose Martyre"] = {
-            Image = "Symbiose Martyre.png",
-            Name = "Symbiose Martyre",
-            NameEN = "Martyr Symbiosis",
-            Polarity = "Penjaga",
+        ["Dentelure Balayante"] = {
+            Image = "Dentelure Balayante.png",
+            Name = "Dentelure Balayante",
+            NameEN = "Sweeping Serration",
+            Polarity = "Naramon",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"POMPE", "BARO"}
+        },
+        ["Balayage"] = {
+            Image = "Balayage.png",
+            Name = "Balayage",
+            NameEN = "Swipe",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel"
+        },
+        ["La Voie du Sabre"] = {
+            Image = "La Voie du Sabre.png",
+            Name = "La Voie du Sabre",
+            NameEN = "Sword Alone",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"CONCLAVE", "MELEE"}
         },
         ["Synergie du Chasseur"] = {
             Image = "Synergie_du_Chasseur.jpg",
@@ -8418,25 +8120,6 @@ local ModData = {
             Traits = {"+%CRITCHANCE", "COMPAGNON"},
             Transmutable = false
         },
-        ["Synovie Acide"] = {
-            Image = "Synovie Acide.png",
-            Name = "Synovie Acide",
-            NameEN = "Acidic Spittle",
-            Polarity = "Penjaga",
-            Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Synovie Saxum"] = {
-            Image = "Synovie Saxum.png",
-            Introduced = "29.0",
-            Name = "Synovie Saxum",
-            NameEN = "Saxum Spittle",
-            Polarity = "Vazarin",
-            Rarity = "Rare",
-            Set = "Saxum",
-            Traits = {"+%IMPACT", "SECONDAIRE"},
-            Transmutable = false
-        },
         ["Sécurité Intégrée"] = {
             Image = "Sécurité Intégrée.png",
             Name = "Sécurité Intégrée",
@@ -8445,7 +8128,7 @@ local ModData = {
             Rarity = "Rare"
         },
         ["Séquence Brûlante"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Séquence_Brûlante.jpg",
             Introduced = "15.0.0",
             Name = "Séquence Brûlante",
@@ -8455,7 +8138,7 @@ local ModData = {
             Transmutable = false
         },
         ["Séquence Meurtrière"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Séquence_Meurtrière.jpg",
             Introduced = "15.0.0",
             Name = "Séquence Meurtrière",
@@ -8466,7 +8149,7 @@ local ModData = {
             Transmutable = false
         },
         ["Séquence Toxique"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Séquence Toxique.jpg",
             Introduced = "15.0.0",
             Name = "Séquence Toxique",
@@ -8476,7 +8159,7 @@ local ModData = {
             Transmutable = false
         },
         ["Séquence Électrifiée"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Séquence Électrifiée.png",
             Introduced = "20.4.0",
             Name = "Séquence Électrifiée",
@@ -8484,6 +8167,22 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Rare",
             Transmutable = false
+        },
+        ["Pompe Tactique"] = {
+            Image = "Pompe Tactique.jpg",
+            Name = "Pompe Tactique",
+            NameEN = "Tactical Pump",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel"
+        },
+        ["Retraite Tactique"] = {
+            Image = "Retraite Tactique.png",
+            Name = "Retraite Tactique",
+            NameEN = "Tactical Retreat",
+            Polarity = "Vazarin",
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
         },
         ["Taillade de Mante"] = {
             Image = "Taillade de Mante.png",
@@ -8508,6 +8207,16 @@ local ModData = {
             Rarity = "Commun",
             Traits = {"FUSIL", "MUNITIONS", "+%RESERVES"}
         },
+        ["Récepteur de Ciblage"] = {
+            AugmentType = 'Compagnon',
+            Image = "Récepteur de Ciblage.png",
+            Name = "Récepteur de Ciblage",
+            NameEN = "Targeting Receptor",
+            Polarity = "Penjaga",
+            Rarity = "Commun",
+            Traits = {"SENTINELLE", "COMPAGNON"},
+            Transmutable = false
+        },
         ["Tas de Gravats"] = {
             Image = "Tas de Gravats.png",
             Name = "Tas de Gravats",
@@ -8516,6 +8225,15 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false,
             WarframeAugment = false
+        },
+        ["Saut Tempéré"] = {
+            Image = "Saut Tempéré.png",
+            Name = "Saut Tempéré",
+            NameEN = "Tempered Bound",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
         },
         ["Tempo Royal"] = {
             Image = "Tempo_Royal.jpg",
@@ -8536,7 +8254,7 @@ local ModData = {
             Transmutable = false
         },
         ["Tempête Cérébrale"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Tempête Cérébrale.png",
             Name = "Tempête Cérébrale",
             NameEN = "Brain Storm",
@@ -8564,7 +8282,7 @@ local ModData = {
             Transmutable = false
         },
         ["Tempête Réactive"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Tempête Réactive.png",
             Name = "Tempête Réactive",
             NameEN = "Reactive Storm",
@@ -8580,8 +8298,8 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Rare",
             Stance = true,
-            Traits = {"BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"BARO"}
         },
         ["Tempête de Feu"] = {
             Image = "Tempête de Feu.png",
@@ -8589,16 +8307,6 @@ local ModData = {
             NameEN = "Firestorm",
             Polarity = "Madurai",
             Rarity = "Rare"
-        },
-        ["Tempête de Feu Accrue"] = {
-            Image = "Tempête de Feu Accrue.png",
-            Introduced = "29.5.6",
-            Name = "Tempête de Feu Accrue",
-            NameEN = "Primed Firestorm",
-            Polarity = "Madurai",
-            Rarity = "Légendaire",
-            Traits = {"FUSIL", "BARO"},
-            Transmutable = false
         },
         ["Tempête de Glace"] = {
             Image = "Tempête_De_Glace.png",
@@ -8611,7 +8319,7 @@ local ModData = {
             }
         },
         ["Tempête de Sable Élémentaire"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Tempête de Sable Élémentaire.png",
             Name = "Tempête de Sable Élémentaire",
             NameEN = "Elemental Sandstorm",
@@ -8620,7 +8328,7 @@ local ModData = {
             Transmutable = false
         },
         ["Terreur Insidieuse"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Terreur_Insidieuse.png",
             Name = "Terreur Insidieuse",
             NameEN = "Creeping Terrify",
@@ -8629,7 +8337,7 @@ local ModData = {
             Transmutable = false
         },
         ["Terrier de Lapin"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Terrier de Lapin.png",
             Name = "Terrier de Lapin",
             NameEN = "Escape Velocity",
@@ -8638,7 +8346,7 @@ local ModData = {
             Transmutable = false
         },
         ["Tesla Bank"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Tesla Bank.png",
             Name = "Tesla Bank",
             NameEN = "Tesla Bank",
@@ -8646,15 +8354,22 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Thorax Saxum"] = {
-            Image = "Thorax Saxum.png",
-            Introduced = "29.0",
-            Name = "Thorax Saxum",
-            NameEN = "Saxum Thorax",
-            Polarity = "Naramon",
+        ["Atterrissage d'Enfer"] = {
+            Image = "Atterrissage d'Enfer.png",
+            Name = "Atterrissage d'Enfer",
+            NameEN = "Thrash Landing",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Cogneur"] = {
+            AugmentType = 'Compagnon',
+            Image = "Cogneur.png",
+            Name = "Cogneur",
+            NameEN = "Thumper",
+            Polarity = "Penjaga",
             Rarity = "Commun",
-            Set = "Saxum",
-            Traits = {"+%IMPACT", "MELEE"},
+            Traits = {"SENTINELLE", "COMPAGNON"},
             Transmutable = false
         },
         ["Tigre Tourbillonnant"] = {
@@ -8675,14 +8390,15 @@ local ModData = {
         },
         ["Tir Assuré"] = {
             Image = "TirAssuréU14.png",
-            Introduced = "11",
             Name = "Tir Assuré",
             NameEN = "Sure Shot",
+            Introduced = "11",
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
             Traits = {"+%STATCHANCE", "SECONDAIRE"}
         },
         ["Tir Aveugle"] = {
+            Image = nil,
             Name = "Tir Aveugle",
             NameEN = "Blind Shot",
             Polarity = "Madurai",
@@ -8691,7 +8407,7 @@ local ModData = {
             Transmutable = false
         },
         ["Tir Calculé"] = {
-            AugmentType = "Compagnon",
+            AugmentType = 'Compagnon',
             Image = "Calculated Shot 19.6.3.png",
             Name = "Tir Calculé",
             NameEN = "Calculated Shot",
@@ -8701,6 +8417,7 @@ local ModData = {
             Transmutable = false
         },
         ["Tir Chanceux"] = {
+            Image = nil,
             Name = "Tir Chanceux",
             NameEN = "Lucky Shot",
             Polarity = "Madurai",
@@ -8709,6 +8426,7 @@ local ModData = {
             Transmutable = false
         },
         ["Tir Crash"] = {
+            Image = nil,
             Name = "Tir Crash",
             NameEN = "Crash Shot",
             Polarity = "Madurai",
@@ -8717,18 +8435,8 @@ local ModData = {
             Traits = {"+%IMPACT", "POMPE"},
             Transmutable = false
         },
-        ["Tir Déchiquetant"] = {
-            Image = "Tir Déchiquetant.png",
-            Name = "Tir Déchiquetant",
-            NameEN = "Shred Shot",
-            Polarity = "Madurai",
-            PvP = true,
-            Rarity = "Inhabituel",
-            Traits = {"CONCLAVE", "POMPE", "+%PERFORATION"},
-            Transmutable = false
-        },
         ["Tir Flash"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Tir Flash.png",
             Name = "Tir Flash",
             NameEN = "Muzzle Flash",
@@ -8752,21 +8460,6 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Tir Réparateur"] = {
-            Image = "Tir Réparateur.png",
-            Name = "Tir Réparateur",
-            NameEN = "Mending Shot",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Tir de Rasoir"] = {
-            Image = "Tir de Rasoir.png",
-            Name = "Tir de Rasoir",
-            NameEN = "Razor Shot",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel"
-        },
         ["Tir de Shrapnel"] = {
             Image = "TirDeShrapnel.jpg",
             Introduced = "18.4.1",
@@ -8777,53 +8470,35 @@ local ModData = {
             Traits = {"+%CRITMULT", "POMPE", "ACOLYTE"},
             Transmutable = false
         },
-        ["Tir de suivi"] = {
-            Image = "",
-            Introduced = "",
-            Name = "Tir de suivi",
-            NameEN = "Tracking Shot",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel",
-            Traits = {"CONCLAVE_ARCHIVED"},
-            Transmutable = false
-        },
         ["Tir Énergisant"] = {
             Image = "Tir Énergisant.png",
             Name = "Tir Énergisant",
-            NameEN = "Energizing Shot",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Tireur Patient"] = {
-            Image = "Tireur Patient.png",
-            Name = "Tireur Patient",
-            NameEN = "Lie In Wait",
-            Polarity = "Madurai",
-            Rarity = "Inhabituel",
-            Transmutable = false
+            Transmutable = false,
+            NameEN = "Energizing Shot"
         },
         ["Tireur Qualifié"] = {
             Image = "Tireur Qualifié.png",
-            Introduced = "23.10",
             Name = "Tireur Qualifié",
             NameEN = "Sharpshooter",
+            Introduced = "23.10",
             Polarity = "Naramon",
             Rarity = "Rare",
             Transmutable = false
         },
         ["Tireur d'élite"] = {
             Image = "Tireur d'élite.png",
-            Introduced = "12.0",
             Name = "Tireur d'élite",
             NameEN = "Dead Eye",
+            Introduced = "12.0",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Traits = {"AURA"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"AURA"}
         },
         ["Tirs Crâniens"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Tirs Crâniens.png",
             Name = "Tirs Crâniens",
             NameEN = "Skull Shots",
@@ -8834,7 +8509,7 @@ local ModData = {
             Transmutable = false
         },
         ["Tirs Déroutants"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Tirs Déroutants.png",
             Name = "Tirs Déroutants",
             NameEN = "Dizzying Rounds",
@@ -8854,7 +8529,7 @@ local ModData = {
             Transmutable = false
         },
         ["Torrent Dimensionnel"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Torrent Dimensionnel.png",
             Name = "Torrent Dimensionnel",
             NameEN = "Rift Torrent",
@@ -8879,20 +8554,28 @@ local ModData = {
         },
         ["Tourbillon"] = {
             Image = "TourbillonU14.png",
-            Introduced = "10",
             Name = "Tourbillon",
             NameEN = "Whirlwind",
+            Introduced = "10",
             Polarity = "Madurai",
             Rarity = "Rare"
         },
         ["Tourbillons"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Tourbillons.png",
             Introduced = "16.3.3",
             Name = "Tourbillons",
             NameEN = "Funnel Clouds",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Rayon Tracteur"] = {
+            Image = "Rayon Tracteur.png",
+            Name = "Rayon Tracteur",
+            NameEN = "Tractor Beam",
+            Polarity = "Penjaga",
+            Rarity = "Commun",
             Transmutable = false
         },
         ["Tragédie de Gaïa"] = {
@@ -8903,6 +8586,14 @@ local ModData = {
             Polarity = "Vazarin",
             Rarity = "Rare",
             Stance = true
+        },
+        ["Traînée Brûlante"] = {
+            Image = "Trainée Brûlante.png",
+            Name = "Traînée Brûlante",
+            NameEN = "Trail Blazer",
+            Polarity = "Vazarin",
+            Rarity = "Commun",
+            Transmutable = false
         },
         ["Tranchant Astral"] = {
             Image = "Tranchant Astral.jpg",
@@ -8920,21 +8611,11 @@ local ModData = {
             Rarity = "Rare"
         },
         ["Transfert d'Énergie"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Transfert_d'Énergie.png",
             Introduced = "22.17.3",
             Name = "Transfert d'Énergie",
             NameEN = "Energy Transfer",
-            Polarity = "Zenurik",
-            Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Transfert de Bouclier"] = {
-            Archived = true,
-            AugmentType = "Warframe",
-            Introduced = "15.6",
-            Name = "Transfert de Bouclier",
-            NameEN = "Shield Transference",
             Polarity = "Zenurik",
             Rarity = "Rare",
             Transmutable = false
@@ -8952,59 +8633,25 @@ local ModData = {
             NameEN = "Primed Morphic Transformer",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"ARCHWING", "BARO"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"ARCHWING", "BARO"}
         },
         ["Transfusion"] = {
             Image = "Transfusion.png",
-            Introduced = "26",
             Name = "Transfusion",
-            NameEN = "Transfusion",
             Polarity = "Penjaga",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Introduced = "26",
+            NameEN = "Transfusion"
         },
         ["Transposition de Sauvegarde"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Transposition de Sauvegarde.png",
             Name = "Transposition de Sauvegarde",
             NameEN = "Safeguard Switch",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Traque"] = {
-            Image = "Traque.png",
-            Name = "Traque",
-            NameEN = "Stalk",
-            Polarity = "Penjaga",
-            Rarity = "Rare"
-        },
-        ["Traumatisme Lourd"] = {
-            Family = "Traumatisme Lourd",
-            Image = "Traumatisme Lourd.jpg",
-            Name = "Traumatisme Lourd",
-            NameEN = "Heavy Trauma",
-            Polarity = "Naramon",
-            Rarity = "Rare",
-            Traits = {"+%IMPACT", "MELEE"}
-        },
-        ["Traumatisme Lourd Accru"] = {
-            Family = "Traumatisme Lourd",
-            Image = "Traumatisme Lourd Accru.png",
-            Name = "Traumatisme Lourd Accru",
-            NameEN = "Primed Heavy Trauma",
-            Polarity = "Naramon",
-            Rarity = "Légendaire",
-            Traits = {"+%IMPACT", "MELEE", "BARO"},
-            Transmutable = false
-        },
-        ["Traînée Brûlante"] = {
-            Image = "Trainée Brûlante.png",
-            Name = "Traînée Brûlante",
-            NameEN = "Trail Blazer",
-            Polarity = "Vazarin",
-            Rarity = "Commun",
             Transmutable = false
         },
         ["Traînée de Poudre"] = {
@@ -9025,7 +8672,7 @@ local ModData = {
             Stance = true
         },
         ["Tribunal"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Tribunal.png",
             Name = "Tribunal",
             NameEN = "Tribunal",
@@ -9034,7 +8681,7 @@ local ModData = {
             Transmutable = false
         },
         ["Triple Coup"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Triple coup.png",
             Introduced = "17.9.0",
             Name = "Triple Coup",
@@ -9052,17 +8699,8 @@ local ModData = {
             Rarity = "Commun",
             Traits = {"+%CRITCHANCE", "POMPE"}
         },
-        ["Trousse de Réparation"] = {
-            Image = "Trousse de Réparation.png",
-            Name = "Trousse de Réparation",
-            NameEN = "Repair Kit",
-            Polarity = "Penjaga",
-            Rarity = "Rare",
-            Traits = {"SENTINELLE", "COMPAGNON"},
-            Transmutable = false
-        },
         ["Téléportation Fatale"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Téléportation_Fatale.png",
             Introduced = "18.11.0",
             Name = "Téléportation Fatale",
@@ -9072,7 +8710,7 @@ local ModData = {
             Transmutable = false
         },
         ["Unité de Choc"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Unité de Choc.png",
             Name = "Unité de Choc",
             NameEN = "Shock Trooper",
@@ -9082,22 +8720,22 @@ local ModData = {
         },
         ["Va chercher"] = {
             Image = "Va_chercher.jpg",
-            Introduced = "24",
             Name = "Va chercher",
             NameEN = "Fetch",
             Polarity = "Penjaga",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Introduced = "24"
         },
         ["Vague de Glace Persistante"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Vague de Glace Persistante.png",
             Introduced = "15.6",
             Name = "Vague de Glace Persistante",
             NameEN = "Ice Wave Impedance",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Valse de Balles"] = {
             Image = "Valse_de_Balles.jpg",
@@ -9108,27 +8746,35 @@ local ModData = {
             Stance = true
         },
         ["Valse de Mesa"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Valse de Mesa.png",
             Name = "Valse de Mesa",
             NameEN = "Mesa's Waltz",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"CONCLAVE_AUGMENT"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"CONCLAVE_AUGMENT"}
         },
         ["Vampire Insatiable"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Vampire Insatiable.png",
-            Introduced = "16.3",
             Name = "Vampire Insatiable",
             NameEN = "Vampire Leech",
             Polarity = "Zenurik",
             Rarity = "Rare",
+            Introduced = "16.3",
+            Transmutable = false
+        },
+        ["Proie Abattue"] = {
+            Image = "Proie Abattue.png",
+            Name = "Proie Abattue",
+            NameEN = "Vanquished Prey",
+            Polarity = "Vazarin",
+            Rarity = "Rare",
             Transmutable = false
         },
         ["Vaporisation"] = {
-            AugmentType = "Compagnon",
+            AugmentType = 'Compagnon',
             Image = "Vaporisation.png",
             Name = "Vaporisation",
             NameEN = "Vaporize",
@@ -9137,16 +8783,8 @@ local ModData = {
             Traits = {"SENTINELLE"},
             Transmutable = false
         },
-        ["Vecteur Endoparasite"] = {
-            Image = "Vecteur Endoparasite.png",
-            Name = "Vecteur Endoparasite",
-            NameEN = "Endoparasitic Vector",
-            Polarity = "Penjaga",
-            Rarity = "Rare",
-            Transmutable = false
-        },
         ["Vengeance"] = {
-            AugmentType = "Compagnon",
+            AugmentType = 'Compagnon',
             Image = "Vegeance.png",
             Name = "Vengeance",
             NameEN = "Revenge",
@@ -9156,13 +8794,22 @@ local ModData = {
             Transmutable = false
         },
         ["Vengeance Épineuse"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Vengeance Épineuse.png",
             Name = "Vengeance Épineuse",
             NameEN = "Vexing Retaliation",
             Polarity = "Zenurik",
             Rarity = "Rare",
             Transmutable = false
+        },
+        ["Envolée Vénéneuse"] = {
+            Image = "VenomousRiseMod.png",
+            Name = "Envolée Vénéneuse",
+            NameEN = "Venomous Rise",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"CONCLAVE_COSME"}
         },
         ["Vent Fracturant"] = {
             Image = "VentFracturantU14.png",
@@ -9199,21 +8846,13 @@ local ModData = {
             Rarity = "Inhabituel"
         },
         ["Vents Purs"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Vents Purs.jpg",
             Introduced = "15.0.0",
             Name = "Vents Purs",
             NameEN = "Winds of Purity",
             Polarity = "Vazarin",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Verrouillages Mag"] = {
-            Image = "Verrouillages Mag.png",
-            Name = "Verrouillages Mag",
-            NameEN = "Mag Locks",
-            Polarity = "Naramon",
-            Rarity = "Commun",
             Transmutable = false
         },
         ["Vice du Gladiateur"] = {
@@ -9236,18 +8875,18 @@ local ModData = {
         },
         ["Vie Ensanglantée"] = {
             Image = "Vie Ensanglantée.png",
-            Introduced = "26",
             Name = "Vie Ensanglantée",
-            NameEN = "Blood For Life",
             Polarity = "Aucune",
-            Rarity = "Commun"
+            Rarity = "Commun",
+            Introduced = "26",
+            NameEN = "Blood For Life"
         },
         ["Vigueur"] = {
             Family = "Vigueur",
             Image = "Vigueur.png",
-            Introduced = "9.5",
             Name = "Vigueur",
             NameEN = "Vigor",
+            Introduced = "9.5",
             Polarity = "Vazarin",
             Rarity = "Rare",
             Traits = {"NIGHTMARE", "WARFRAME", "+%SANTE"}
@@ -9255,9 +8894,9 @@ local ModData = {
         ["Vigueur Accrue"] = {
             Family = "Vigueur",
             Image = "Vigueur Accrue.jpg",
-            Introduced = "19.5.6.1",
             Name = "Vigueur Accrue",
             NameEN = "Primed Vigor",
+            Introduced = "19.5.6.1",
             Polarity = "Vazarin",
             Rarity = "Légendaire",
             Traits = {"+%SANTE", "WARFRAME"},
@@ -9274,7 +8913,7 @@ local ModData = {
             Transmutable = false
         },
         ["Virtuose de l'Arch-Fusil"] = {
-            Image = "Virtuose de l'Arch-Fusil.png",
+            Image = nil,
             Introduced = "24.2",
             Name = "Virtuose de l'Arch-Fusil",
             NameEN = "Archgun Ace",
@@ -9282,7 +8921,7 @@ local ModData = {
             Rarity = "Rare"
         },
         ["Virulence Grouillante"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Virulence Grouillante.png",
             Introduced = "24.7.0",
             Name = "Virulence Grouillante",
@@ -9301,7 +8940,7 @@ local ModData = {
             Transmutable = false
         },
         ["Viseur d'Embuscade"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Viseur d'embuscade.png",
             Name = "Viseur d'Embuscade",
             NameEN = "Ambush Optics",
@@ -9332,20 +8971,29 @@ local ModData = {
         },
         ["Visée Agile"] = {
             Image = "Visée Agile.jpg",
-            Introduced = "17.2",
             Name = "Visée Agile",
             NameEN = "Agile Aim",
             Polarity = "Madurai",
+            Introduced = "17.2",
             Rarity = "Inhabituel",
             Transmutable = false
         },
         ["Visée Méticuleuse"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Visée Méticuleuse.png",
             Name = "Visée Méticuleuse",
             NameEN = "Meticulous Aim",
             Polarity = "Naramon",
             Rarity = "Rare"
+        },
+        ["Détournement des Systèmes de Survie"] = {
+            Image = "Détournement des Systèmes de Survie.png",
+            Name = "Détournement des Systèmes de Survie",
+            NameEN = "Vital Systems Bypass",
+            Polarity = "Naramon",
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"CONCLAVE_UTIL"}
         },
         ["Vitalité"] = {
             Family = "Vitalité",
@@ -9375,17 +9023,8 @@ local ModData = {
             Traits = {"+%SANTE", "WARFRAME"},
             Transmutable = false
         },
-        ["Vitalité du Necramech"] = {
-            Image = "Vitalité du Necramech.png",
-            Name = "Vitalité du Necramech",
-            NameEN = "Necramech Vitality",
-            Polarity = "Vazarin",
-            Rarity = "Commun",
-            Traits = {"+%SANTE", "NECRAMECH"},
-            Transmutable = false
-        },
         ["Vitesse Choquante"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Vitesse Choquante.png",
             Name = "Vitesse Choquante",
             NameEN = "Shocking Speed",
@@ -9403,14 +9042,14 @@ local ModData = {
         },
         ["Vitesse Terminale"] = {
             Image = "VitesseTerminale.png",
-            Introduced = "15",
             Name = "Vitesse Terminale",
             NameEN = "Terminal Velocity",
             Polarity = "Madurai",
-            Rarity = "Inhabituel"
+            Rarity = "Inhabituel",
+            Introduced = "15"
         },
         ["Vol Blindé"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Vol Blindé.png",
             Name = "Vol Blindé",
             NameEN = "Ironclad Flight",
@@ -9419,7 +9058,7 @@ local ModData = {
             Transmutable = false
         },
         ["Vol Entropique"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Vol_Entropique.png",
             Introduced = "15.0.0",
             Name = "Vol Entropique",
@@ -9442,6 +9081,15 @@ local ModData = {
             Polarity = "Vazarin",
             Rarity = "Rare"
         },
+        ["Lance Voltaïque"] = {
+            Image = "Lance Voltaïque.png",
+            Name = "Lance Voltaïque",
+            NameEN = "Voltaic Lance",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false,
+            Traits = {"CONCLAVE_COSME"}
+        },
         ["Volute Fustigeante"] = {
             Image = "Volute_Fustigeante.jpg",
             Introduced = "SotR",
@@ -9456,13 +9104,13 @@ local ModData = {
         ["Vome"] = {
             Image = "Vome.png",
             Name = "Vome",
-            NameEN = "Vome",
             Polarity = "Aucune",
-            Rarity = "Requiem"
+            Rarity = "Requiem",
+            NameEN = "Vome"
         },
         ["Vortex Perpétuel"] = {
             Archived = true,
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "VortexPerpetuel.png",
             Name = "Vortex Perpétuel",
             NameEN = "Perpetual Vortex",
@@ -9472,29 +9120,13 @@ local ModData = {
         },
         ["Vortex Plongeant"] = {
             Archived = true,
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
+            Image = nil,
             Introduced = "15.0",
             Name = "Vortex Plongeant",
             NameEN = "Divebomb Vortex",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Transmutable = false
-        },
-        ["Vrille Glaciale"] = {
-            Image = "Vrille Glaciale.png",
-            Name = "Vrille Glaciale",
-            NameEN = "Rime Vault",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Traits = {"CONCLAVE_COSME"},
-            Transmutable = false
-        },
-        ["Vue d'Ensemble"] = {
-            Image = "Vue d'Ensemble.jpg",
-            Name = "Vue d'Ensemble",
-            NameEN = "Overview",
-            Polarity = "Naramon",
-            Rarity = "Inhabituel",
             Transmutable = false
         },
         ["Vulcain d'Atlantis"] = {
@@ -9508,11 +9140,11 @@ local ModData = {
         },
         ["Vélocité Extrême"] = {
             Image = "Vélocité Extrême.png",
-            Introduced = "24",
             Name = "Vélocité Extrême",
             NameEN = "Extreme Velocity",
             Polarity = "Vazarin",
             Rarity = "Rare",
+            Introduced = "24",
             Transmutable = false
         },
         ["Véritable Punition"] = {
@@ -9523,7 +9155,7 @@ local ModData = {
             Rarity = "Commun"
         },
         ["Vérité Dorée"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Vérité_dorée.png",
             Introduced = "15.0.0",
             Name = "Vérité Dorée",
@@ -9544,7 +9176,7 @@ local ModData = {
             Transmutable = false
         },
         ["Vérité Piquante"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Vérité_piquante.png",
             Introduced = "15.0.0",
             Name = "Vérité Piquante",
@@ -9554,7 +9186,7 @@ local ModData = {
             Transmutable = false
         },
         ["Vérité Vengeresse"] = {
-            AugmentType = "Arme",
+            AugmentType = 'Arme',
             Image = "Verite_Vengeresse.png",
             Introduced = "20.4.0",
             Name = "Vérité Vengeresse",
@@ -9563,33 +9195,33 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
+        ["Mine Choc"] = {
+            Image = "Mine Choc.png",
+            Name = "Mine Choc",
+            NameEN = "Whiplash Mine",
+            Polarity = "Penjaga",
+            Rarity = "Commun",
+            Transmutable = false
+        },
         ["Xata"] = {
             Image = "Xata.png",
             Name = "Xata",
-            NameEN = "Xata",
             Polarity = "Aucune",
-            Rarity = "Requiem"
-        },
-        ["Zazvat-Kar"] = {
-            AugmentType = "Arme",
-            Image = "Zazvat-Kar.png",
-            Introduced = "29.0",
-            Name = "Zazvat-Kar",
-            NameEN = "Zazvat-Kar",
-            Polarity = "Naramon",
-            Rarity = "Rare",
-            Transmutable = false
+            Rarity = "Requiem",
+            NameEN = "Xata"
         },
         ["Zodiaque Déchirant"] = {
             Image = "Zodiaque_Déchirant.png",
-            Introduced = "Les Spectres du Rail",
             Name = "Zodiaque Déchirant",
             NameEN = "Zodiac Shred",
             Polarity = "Naramon",
             Rarity = "Rare",
+            Introduced = "Les Spectres du Rail",
             Transmutable = false
         },
         ["À Cran"] = {
+            AugmentType = nil,
+            Family = nil,
             Image = "A_Cran.png",
             Introduced = "16.0",
             Name = "À Cran",
@@ -9597,10 +9229,12 @@ local ModData = {
             Polarity = "Naramon",
             PvP = false,
             Rarity = "Inhabituel",
+            Set = nil,
             Traits = {"EXILUS"},
             Transmutable = false
         },
         ["À Portée"] = {
+            AugmentType = nil,
             Family = "À Portée",
             Image = "A Portée.png",
             Introduced = "0.0",
@@ -9609,10 +9243,12 @@ local ModData = {
             Polarity = "Madurai",
             PvP = false,
             Rarity = "Inhabituel",
+            Set = nil,
             Traits = {"POMPE"},
             Transmutable = true
         },
         ["À Portée Accrue"] = {
+            AugmentType = nil,
             Family = "À Portée",
             Image = "A Portée Accrue.png",
             Introduced = "15.8.1",
@@ -9621,11 +9257,12 @@ local ModData = {
             Polarity = "Madurai",
             PvP = false,
             Rarity = "Légendaire",
+            Set = nil,
             Traits = {"POMPE", "BARO"},
             Transmutable = false
         },
         ["Âme Survivante"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Âme Survivante.png",
             Introduced = "15.0.0",
             Name = "Âme Survivante",
@@ -9642,16 +9279,8 @@ local ModData = {
             Rarity = "Rare",
             Transmutable = false
         },
-        ["Échappée Belle"] = {
-            Image = "Échappée Belle.png",
-            Name = "Échappée Belle",
-            NameEN = "Quick Escape",
-            Polarity = "Madurai",
-            Rarity = "Rare",
-            Transmutable = false
-        },
         ["Éclatement de Larve"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Éclatement de Larve.png",
             Name = "Éclatement de Larve",
             NameEN = "Larva Burst",
@@ -9660,7 +9289,7 @@ local ModData = {
             Transmutable = false
         },
         ["Éclats Guérisseurs"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Éclats_Guérisseurs.png",
             Name = "Éclats Guérisseurs",
             NameEN = "Mending Splinters",
@@ -9669,7 +9298,7 @@ local ModData = {
             Transmutable = false
         },
         ["Éclipse Totale"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Éclipse Totale.png",
             Introduced = "15.6",
             Name = "Éclipse Totale",
@@ -9679,14 +9308,14 @@ local ModData = {
             Transmutable = false
         },
         ["Écrasement Fracturant"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Écrasement Fracturant.png",
-            Introduced = "16",
             Name = "Écrasement Fracturant",
             NameEN = "Fracturing Crush",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Introduced = "16"
         },
         ["Égide du Gladiateur"] = {
             Image = "Égide_du_Gladiateur.jpg",
@@ -9700,32 +9329,32 @@ local ModData = {
             Transmutable = false
         },
         ["Élan Déferlant"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Elan_Déferlant.png",
-            Introduced = "15.6",
             Name = "Élan Déferlant",
             NameEN = "Surging Dash",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Introduced = "15.6"
         },
         ["Élan Foudroyant"] = {
             Image = "Elan_Foudroyant.png",
-            Introduced = "17",
             Name = "Élan Foudroyant",
             NameEN = "Lightning Dash",
             Polarity = "Madurai",
             Rarity = "Rare",
+            Introduced = "17",
             Traits = {"WARFRAME"}
         },
         ["Élan Frêle"] = {
             Image = "Elan_Frêle.png",
-            Introduced = "15",
             Name = "Élan Frêle",
             NameEN = "Frail Momentum",
             Polarity = "Madurai",
             Rarity = "Rare",
             Traits = {"CORROMPU", "POMPE"},
+            Introduced = "15",
             Transmutable = false
         },
         ["Élan Rapide"] = {
@@ -9734,15 +9363,15 @@ local ModData = {
             NameEN = "Swift Momentum",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"AURA"},
-            Transmutable = false
+            Transmutable = false,
+            Traits = {"AURA"}
         },
         ["Énergie Ensanglantée"] = {
             Image = "Énergie Ensanglantée.png",
             Name = "Énergie Ensanglantée",
-            NameEN = "Blood For Energy",
             Polarity = "Aucune",
-            Rarity = "Rare"
+            Rarity = "Rare",
+            NameEN = "Blood For Energy"
         },
         ["Épine Cinglante"] = {
             Image = "Épine Cinglante.png",
@@ -9754,49 +9383,41 @@ local ModData = {
         },
         ["Équilibre"] = {
             Image = "Equilibre.png",
-            Introduced = "9.7.2",
             Name = "Équilibre",
             NameEN = "Equilibrium",
             Polarity = "Naramon",
-            Rarity = "Inhabituel"
-        },
-        ["Équilibre Parfait"] = {
-            Image = "Équilibre Parfait.png",
-            Name = "Équilibre Parfait",
-            NameEN = "Perfect Balance",
-            Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Transmutable = false
+            Introduced = "9.7.2"
         },
         ["Éruption Terrestre"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Éruption Terrestre.png",
-            Introduced = "15.6",
             Name = "Éruption Terrestre",
             NameEN = "Hallowed Eruption",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Introduced = "15.6"
         },
         ["Éruption de Souche"] = {
             Image = "Éruption_de_Souche.jpg",
-            Introduced = "24.2",
             Name = "Éruption de Souche",
             NameEN = "Strain Eruption",
             Polarity = "Naramon",
             Rarity = "Rare",
+            Introduced = "24.2",
             Set = "Souche",
             Transmutable = false
         },
         ["Étoile à Neutron"] = {
-            AugmentType = "Warframe",
+            AugmentType = 'Warframe',
             Image = "Etoile_à_Neutrons.png",
-            Introduced = "15",
             Name = "Étoile à Neutron",
             NameEN = "Neutron Star",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Transmutable = false
+            Transmutable = false,
+            Introduced = "15"
         },
         ["Étreinte Glaciale"] = {
             Image = "Etreinte_Glaciale.png",
@@ -9813,35 +9434,45 @@ local ModData = {
             Rarity = "Rare",
             Stance = true
         },
-        ["Étreinte du Guerrier"] = {
-            Archived = true,
-            Image = "EtreinteGuerrierU14.png",
-            Name = "Étreinte du Guerrier",
-            NameEN = "Warrior's Grip",
-            Polarity = "Vazarin",
-            Rarity = "Inhabituel",
-            Traits = {"ENDURANCE"},
-            Transmutable = false
-        },
         ["Étroit d'Esprit"] = {
             Image = "Etroit_d'Esprit.png",
-            Introduced = "10.3",
             Name = "Étroit d'Esprit",
             NameEN = "Narrow Minded",
             Polarity = "Vazarin",
             Rarity = "Rare",
             Traits = {"CORROMPU", "WARFRAME"},
-            Transmutable = false
+            Transmutable = false,
+            Introduced = "10.3"
         },
         ["Étui Rapide"] = {
             Image = "Etui_Rapide.png",
-            Introduced = "10",
             Name = "Étui Rapide",
             NameEN = "Speed Holster",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Traits = {"AURA"},
-            Transmutable = false
+            Transmutable = false,
+            Introduced = "10",
+            Traits = {"AURA"}
+        },
+        ["Magnétisme Martial"] = {
+            Image = "",
+            Name = "Magnétisme Martial",
+            NameEN = "Martial Magnetism",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false,
+            Introduced = "",
+            Traits = {"CONCLAVE_ARCHIVED"}
+        },
+        ["Tir de suivi"] = {
+            Image = "",
+            Name = "Tir de suivi",
+            NameEN = "Tracking Shot",
+            Polarity = "Naramon",
+            Rarity = "Inhabituel",
+            Transmutable = false,
+            Introduced = "",
+            Traits = {"CONCLAVE_ARCHIVED"}
         },
         ["Éventail Harcelant"] = {
             Image = "Eventail_Harcelant.png",
@@ -9850,6 +9481,590 @@ local ModData = {
             Polarity = "Zenurik",
             Rarity = "Rare",
             Stance = true
+        },
+        ["Style Impec'"] = {
+            Image = "Style Impec'.png",
+            Name = "Style Impec'",
+            NameEN = "Primo Flair",
+            Polarity = "Naramon",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Atterrissage de Fou"] = {
+            Image = "Atterrissage de Fou.png",
+            Name = "Atterrissage de Fou",
+            NameEN = "Bomb The Landin'",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Pur Jus"] = {
+            Image = "Pur Jus.png",
+            Name = "Pur Jus",
+            NameEN = "Juice",
+            Polarity = "Vazarin",
+            Rarity = "Commun",
+            Transmutable = false
+        },
+        ["Fumée dans les yeux"] = {
+            Image = "Fumée dans les yeux.png",
+            Name = "Fumée dans les yeux",
+            NameEN = "Vapor Trail",
+            Polarity = "Naramon",
+            Rarity = "Commun",
+            Transmutable = false
+        },
+        ["Efficacité du Necramech"] = {
+            Image = "Efficacité du Necramech.png",
+            Name = "Efficacité du Necramech",
+            NameEN = "Necramech Efficiency",
+            Polarity = "Vazarin",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Force du Necramech"] = {
+            Image = "Force du Necramech.png",
+            Name = "Force du Necramech",
+            NameEN = "Necramech Drift",
+            Polarity = "Vazarin",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Friction du Necramech"] = {
+            Image = "Friction du Necramech.png",
+            Name = "Friction du Necramech",
+            NameEN = "Necramech Friction",
+            Polarity = "Vazarin",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Flux du Necramech"] = {
+            Image = "Flux du Necramech.png",
+            Name = "Flux du Necramech",
+            NameEN = "Necramech Flow",
+            Polarity = "Naramon",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Propulseurs du Necramech"] = {
+            Image = "Propulseurs du Necramech.png",
+            Name = "Propulseurs du Necramech",
+            NameEN = "Necramech Thrusters",
+            Polarity = "Vazarin",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Onde Sismique du Necramech"] = {
+            Image = "Onde Sismique du Necramech.png",
+            Name = "Onde Sismique du Necramech",
+            NameEN = "Necramech Seismic Wave",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Point de Pression du Necramech"] = {
+            Image = "Point de Pression du Necramech.png",
+            Name = "Point de Pression du Necramech",
+            NameEN = "Necramech Pressure Point",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Intensité du Necramech"] = {
+            Image = "Intensité du Necramech.png",
+            Name = "Intensité du Necramech",
+            NameEN = "Necramech Intensify",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Continuité du Necramech"] = {
+            Image = "Continuité du Necramech.png",
+            Name = "Continuité du Necramech",
+            NameEN = "Necramech Continuity",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Fibre d'Acier du Necramech"] = {
+            Image = "Fibre d'Acier du Necramech.png",
+            Name = "Fibre d'Acier du Necramech",
+            NameEN = "Necramech Steel Fiber",
+            Polarity = "Vazarin",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Sillage du Necramech"] = {
+            Image = "Sillage du Necramech.png",
+            Name = "Sillage du Necramech",
+            NameEN = "Necramech Slipstream",
+            Polarity = "Naramon",
+            Rarity = "Commun",
+            Transmutable = false
+        },
+        ["Redirection du Necramech"] = {
+            Image = "Redirection du Necramech.png",
+            Name = "Redirection du Necramech",
+            NameEN = "Necramech Deflection",
+            Polarity = "Vazarin",
+            Rarity = "Commun",
+            Transmutable = false
+        },
+        ["Vitalité du Necramech"] = {
+            Image = "Vitalité du Necramech.png",
+            Name = "Vitalité du Necramech",
+            NameEN = "Necramech Vitality",
+            Polarity = "Vazarin",
+            Rarity = "Commun",
+            Traits = {"+%SANTE", "NECRAMECH"},
+            Transmutable = false
+        },
+        ["Atteinte du Necramech"] = {
+            Image = "Atteinte du Necramech.png",
+            Name = "Atteinte du Necramech",
+            NameEN = "Necramech Reach",
+            Polarity = "Madurai",
+            Rarity = "Commun",
+            Transmutable = false
+        },
+        ["Ravitaillement du Necramech"] = {
+            Image = "Ravitaillement du Necramech.png",
+            Name = "Ravitaillement du Necramech",
+            NameEN = "Necramech Refuel",
+            Polarity = "Vazarin",
+            Rarity = "Commun",
+            Transmutable = false
+        },
+        ["Furie du Necramech"] = {
+            Image = "Furie du Necramech.png",
+            Name = "Furie du Necramech",
+            NameEN = "Necramech Fury",
+            Polarity = "Madurai",
+            Rarity = "Commun",
+            Transmutable = false
+        },
+        ["Allonge du Necramech"] = {
+            Image = "Allonge du Necramech.png",
+            Name = "Allonge du Necramech",
+            NameEN = "Necramech Stretch",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Hydrauliques du Necramech"] = {
+            Image = "Hydrauliques du Necramech.png",
+            Name = "Hydrauliques du Necramech",
+            NameEN = "Necramech Hydraulics",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Rationalisation du Necramech"] = {
+            Image = "Rationalisation du Necramech.png",
+            Name = "Rationalisation du Necramech",
+            NameEN = "Necramech Streamline",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Assaut du Necramech"] = {
+            Image = "Assaut du Necramech.png",
+            Name = "Assaut du Necramech",
+            NameEN = "Necramech Blitz",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Synovie Acide"] = {
+            Image = "Synovie Acide.png",
+            Name = "Synovie Acide",
+            NameEN = "Acidic Spittle",
+            Polarity = "Penjaga",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Mycélium Latrique"] = {
+            Image = "Mycélium latrique.png",
+            Name = "Mycélium Latrique",
+            NameEN = "Iatric Mycelium",
+            Polarity = "Penjaga",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Morsure Infectieuse"] = {
+            Image = "Morsure Infectieuse.png",
+            Name = "Morsure Infectieuse",
+            NameEN = "Infectious Bite",
+            Polarity = "Penjaga",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Spores Paralysantes"] = {
+            Image = "Spores Paralysantes.png",
+            Name = "Spores Paralysantes",
+            NameEN = "Paralytic Spores",
+            Polarity = "Penjaga",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Pollinisation Anabolique"] = {
+            Image = "Pollinisation Anabolique.png",
+            Name = "Pollinisation Anabolique",
+            NameEN = "Anabolic Pollination",
+            Polarity = "Penjaga",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Vecteur Endoparasite"] = {
+            Image = "Vecteur Endoparasite.png",
+            Name = "Vecteur Endoparasite",
+            NameEN = "Endoparasitic Vector",
+            Polarity = "Penjaga",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Régression Panzer"] = {
+            Image = "Régression Panzer.png",
+            Name = "Régression Panzer",
+            NameEN = "Panzer Devolution",
+            Polarity = "Penjaga",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Piques Virales"] = {
+            Image = "Piques Virales.png",
+            Name = "Piques Virales",
+            NameEN = "Viral Quills ",
+            Polarity = "Penjaga",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Régression Sournoise"] = {
+            Image = "Régression Sournoise.png",
+            Name = "Régression Sournoise",
+            NameEN = "Sly Devolution",
+            Polarity = "Penjaga",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Instinct de Survie"] = {
+            Image = "Instinct de Survie.png",
+            Name = "Instinct de Survie",
+            NameEN = "Survival Instinct",
+            Polarity = "Penjaga",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Régression Nocturne"] = {
+            Image = "Régression Nocturne.png",
+            Name = "Régression Nocturne",
+            NameEN = "Crescent Devolution",
+            Polarity = "Penjaga",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Charge Ascendante"] = {
+            Image = "Charge Ascendante.png",
+            Name = "Charge Ascendante",
+            NameEN = "Crescent Charge  ",
+            Polarity = "Penjaga",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Symbiose Martyre"] = {
+            Image = "Symbiose Martyre.png",
+            Name = "Symbiose Martyre",
+            NameEN = "Martyr Symbiosis",
+            Polarity = "Penjaga",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Parasite Volatil"] = {
+            Image = "Parasite Volatil.png",
+            Name = "Parasite Volatil",
+            NameEN = "Volatile Parasite",
+            Polarity = "Penjaga",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Fulmination Accrue"] = {
+            Image = "Fulmination Accrue.png",
+            Name = "Fulmination Accrue",
+            NameEN = "Primed Fulmination",
+            Introduced = "29.5.6",
+            Polarity = "Madurai",
+            Rarity = "Légendaire",
+            Transmutable = false,
+            Traits = {"SECONDAIRE", "BARO"}
+        },
+        ["Tempête de Feu Accrue"] = {
+            Image = "Tempête de Feu Accrue.png",
+            Name = "Tempête de Feu Accrue",
+            NameEN = "Primed Firestorm",
+            Introduced = "29.5.6",
+            Polarity = "Madurai",
+            Rarity = "Légendaire",
+            Transmutable = false,
+            Traits = {"FUSIL", "BARO"}
+        },
+        ["Damzav-Vati"] = {
+            AugmentType = 'Arme',
+            Image = "Damzav-Vati.png",
+            Introduced = "29.0",
+            Name = "Damzav-Vati",
+            NameEN = "Damzav-Vati",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Zazvat-Kar"] = {
+            AugmentType = 'Arme',
+            Image = "Zazvat-Kar.png",
+            Introduced = "29.0",
+            Name = "Zazvat-Kar",
+            NameEN = "Zazvat-Kar",
+            Polarity = "Naramon",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Bhisaj-Bal"] = {
+            AugmentType = 'Arme',
+            Image = "Bhisaj-Bal.png",
+            Introduced = "29.0",
+            Name = "Bhisaj-Bal",
+            NameEN = "Bhisaj-Bal",
+            Polarity = "Naramon",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Hata-Satya"] = {
+            AugmentType = 'Arme',
+            Image = "Hata-Satya.png",
+            Introduced = "29.0",
+            Name = "Hata-Satya",
+            NameEN = "Hata-Satya",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Thorax Saxum"] = {
+            Image = "Thorax Saxum.png",
+            Introduced = "29.0",
+            Name = "Thorax Saxum",
+            NameEN = "Saxum Thorax",
+            Polarity = "Naramon",
+            Rarity = "Commun",
+            Set = "Saxum",
+            Traits = {"+%IMPACT", "MELEE"},
+            Transmutable = false
+        },
+        ["Carapace Saxum"] = {
+            Image = "Carapace Saxum.png",
+            Introduced = "29.0",
+            Name = "Carapace Saxum",
+            NameEN = "Saxum Carapace",
+            Polarity = "Vazarin",
+            Rarity = "Inhabituel",
+            Set = "Saxum",
+            Traits = {"WARFRAME", "+%SANTE"},
+            Transmutable = false
+        },
+        ["Synovie Saxum"] = {
+            Image = "Synovie Saxum.png",
+            Introduced = "29.0",
+            Name = "Synovie Saxum",
+            NameEN = "Saxum Spittle",
+            Polarity = "Vazarin",
+            Rarity = "Rare",
+            Set = "Saxum",
+            Traits = {"+%IMPACT", "SECONDAIRE"},
+            Transmutable = false
+        },
+        ["Superbang"] = {
+            AugmentType = 'Warframe',
+            Image = "Superbang.png",
+            Name = "Superbang",
+            NameEN = "Mach Crash",
+            Polarity = "Zenurik",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Serres Composées"] = {
+            AugmentType = 'Warframe',
+            Image = "Serres Composées.png",
+            Name = "Serres Composées",
+            NameEN = "Bleeding Talons",
+            Polarity = "Zenurik",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Pacte des Serfs"] = {
+            Archived = false,
+            AugmentType = 'Warframe',
+            Family = nil,
+            Image = "Pacte des Serfs.png",
+            Introduced = "29.5",
+            Name = "Pacte des Serfs",
+            NameEN = "Thrall Pact",
+            Polarity = "Zenurik",
+            PvP = false,
+            Rarity = "Rare",
+            Set = nil,
+            Stance = false,
+            Traits = {"AUGMENT_WARFRAME"},
+            Transmutable = false
+        },
+        ["Surcharge Critique"] = {
+            AugmentType = 'Warframe',
+            Image = "Surcharge Critique.png",
+            Name = "Surcharge Critique",
+            NameEN = "Critical Surge",
+            Polarity = "Zenurik",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Barbillon Jugulus"] = {
+            Image = "Barbillon Jugulus.png",
+            Introduced = "29.0",
+            Name = "Barbillon Jugulus",
+            NameEN = "Jugulus Barbs",
+            Polarity = "Naramon",
+            Rarity = "Commun",
+            Set = "Jugulus",
+            Traits = {"+%PERFORATION", "+%STATCHANCE", "MELEE"},
+            Transmutable = false
+        },
+        ["Mandibule Carnis"] = {
+            Image = "Mandibule Carnis.png",
+            Introduced = "29.0",
+            Name = "Mandibule Carnis",
+            NameEN = "Carnis Mandible",
+            Polarity = "Naramon",
+            Rarity = "Commun",
+            Set = "Carnis",
+            Traits = {"+%TRANCHANT", "+%STATCHANCE", "MELEE"},
+            Transmutable = false
+        },
+        ["Carapace Carnis"] = {
+            Image = "Carapace Carnis.png",
+            Introduced = "29.0",
+            Name = "Carapace Carnis",
+            NameEN = "Carnis Carapace",
+            Polarity = "Vazarin",
+            Rarity = "Inhatbituel",
+            Set = "Carnis",
+            Traits = {"+%SANTE", "+%ARMURE", "WARFRAME"},
+            Transmutable = false
+        },
+        ["Carapace Jugulus"] = {
+            Image = "Carapace Jugulus.png",
+            Introduced = "29.0",
+            Name = "Carapace Jugulus",
+            NameEN = "Jugulus Carapace",
+            Polarity = "Vazarin",
+            Rarity = "Inhabituel",
+            Set = "Jugulus",
+            Traits = {"+%ARMURE", "+%SANTE", "WARFRAME", "+%PERFORATION"},
+            Transmutable = false
+        },
+        ["Dard Carnis"] = {
+            Image = "Dard Carnis.png",
+            Introduced = "29.0",
+            Name = "Dard Carnis",
+            NameEN = "Carnis Stinger",
+            Polarity = "Naramon",
+            Rarity = "Rare",
+            Set = "Carnis",
+            Traits = {"+%TRANCHANT", "+%STATCHANCE", "SECONDAIRE"},
+            Transmutable = false
+        },
+        ["Pointes Jugulus"] = {
+            Image = "Pointes Jugulus.png",
+            Introduced = "29.0",
+            Name = "Pointes Jugulus",
+            NameEN = "Jugulus Spines",
+            Polarity = "Naramon",
+            Rarity = "Rare",
+            Set = "Jugulus",
+            Traits = {"+%PERFORATION", "+%STATCHANCE", "SECONDAIRE"},
+            Transmutable = false
+        },
+        ["Rage du Necramech"] = {
+            Image = "Rage du Necramech.png",
+            Introduced = "29.6",
+            Name = "Rage du Necramech",
+            NameEN = "Necramech Rage",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Reproche du Necramech"] = {
+            Image = "Reproche du Necramech.png",
+            Introduced = "29.6",
+            Name = "Reproche du Necramech",
+            NameEN = "Necramech Rebuke",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Rafistolage du Necramech"] = {
+            Image = "Rafistolage du Necramech.png",
+            Introduced = "29.6",
+            Name = "Rafistolage du Necramech",
+            NameEN = "Necramech Repair",
+            Polarity = "Vazarin",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Augure du Necramech"] = {
+            Image = "Augure du Necramech.png",
+            Introduced = "29.6",
+            Name = "Augure du Necramech",
+            NameEN = "Necramech Augur",
+            Polarity = "Madurai",
+            Rarity = "Inhabituel",
+            Transmutable = false
+        },
+        ["Aviateur du Necramech"] = {
+            Image = "Aviateur du Necramech.png",
+            Introduced = "29.6",
+            Name = "Aviateur du Necramech",
+            NameEN = "Necramech Aviator",
+            Polarity = "Vazarin",
+            Rarity = "Commun",
+            Transmutable = false
+        },
+        ["Perception des Ennemis du Necramech"] = {
+            Image = "Perception des Ennemis du Necramech.png",
+            Introduced = "29.6",
+            Name = "Perception des Ennemis du Necramech",
+            NameEN = "Necramech Enemy Sense",
+            Polarity = "Naramon",
+            Rarity = "Commun",
+            Transmutable = false
+        },
+        ["Déviation du Necramech"] = {
+            Image = "Déviation du Necramech.png",
+            Introduced = "29.6",
+            Name = "Déviation du Necramech",
+            NameEN = "Necramech Deflection",
+            Polarity = "Vazarin",
+            Rarity = "Commun",
+            Transmutable = false
+        },
+        ["Marque de la Bête"] = {
+            AugmentType = nil,
+            Family = nil,
+            Image = "Marque de la Bête.png",
+            Introduced = "22.0",
+            Name = "Marque de la Bête",
+            NameEN = "Mark of the Beast",
+            Polarity = "Naramon",
+            PvP = false,
+            Rarity = "Rare",
+            Set = nil,
+            Traits = {"MELEE", "BARO"},
+            Transmutable = false
         }
     },
 
