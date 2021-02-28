@@ -3,7 +3,6 @@ local p = {}
 local ICON = require('Module:Icon')
 local MODS = require('Module:Mods')
 local SHARED = require('Module:Shared')
-local TT = require('Module:Tooltip')
 
 -- #########
 -- UTILITY
@@ -34,6 +33,97 @@ end
 
 -- ###########
 -- NAVTABLES
+
+function p.ModsCritNav(frame)
+
+    local noCat, collapsed = getTableArgs(frame)
+    local ret = {
+        getNavTableHeader(noCat, collapsed, {"Mod de Coup Critique"}),
+        '\n! colspan="3" class="navboxhead" | [[Coup Critique|Mods de Coup Critique]]'
+    }
+    -- Arborescence NavBox
+    local arbo = {
+        {Header = "[[:Category:Fusil|Fusil]]", Trait = "FUSIL"},
+        {
+            Header = "[[:Category:Fusil à Pompe|Fusil à Pompe]]",
+            Trait = "POMPE"
+        },
+        {
+            Header = "[[:Category:Arme Secondaire|Secondaire]]",
+            Trait = "SECONDAIRE"
+        }, {Header = "[[:Category:Arme de Mêlée|Mêlée]]", Trait = "MELEE"},
+        {Header = "[[:Category:Arch-Fusil|Arch-Fusil]]", Trait = "ARCHFUSIL"},
+        {
+            Header = "[[:Category:Arch-Mêlée|Arch-Mêlée]]",
+            Trait = "ARCHMELEE"
+        },
+        {
+            Header = "[[Mod d'Augmentation d'Arme|Augment d'Arme]]",
+            Augment = "Arme"
+        }, {
+            Header = "[[Mod d'Augmentation de Warframe|Augment de Warframe]]",
+            Augment = "Warframe"
+        },
+        {Header = "[[Mod d'Ensemble|Ensemble]]", Set = {"Gladiateur", "Vigile"}}
+    }
+    for _, lineData in ipairs(arbo) do
+        table.insert(ret, '\n|-\n| class="navboxgroup" ')
+        if (lineData.Set == nil) then
+            local modArrays = {["CHANCECRIT"] = nil, ["DGTCRIT"] = nil}
+            if (lineData.Trait ~= nil) then
+                local tmp = "CHANCECRIT"
+                modArrays[tmp] = MODS.getModList({args = {tmp, lineData.Trait}})
+                tmp = "DGTCRIT"
+                modArrays[tmp] = MODS.getModList({args = {tmp, lineData.Trait}})
+            elseif (lineData.Augment ~= nil) then
+                local tmp = "CHANCECRIT"
+                modArrays[tmp] = MODS.getModList(
+                                     {args = {tmp, augment = lineData.Augment}})
+                tmp = "DGTCRIT"
+                modArrays[tmp] = MODS.getModList(
+                                     {args = {tmp, augment = lineData.Augment}})
+            end
+            if (modArrays["CHANCECRIT"] ~= nil and modArrays["DGTCRIT"] ~= nil) then
+                table.insert(ret, 'rowspan="2" | ')
+                table.insert(ret, lineData.Header)
+                table.insert(ret, '\n| class="navboxgroup" | Chance\n| ')
+                table.insert(ret, modArrays["CHANCECRIT"])
+                table.insert(ret,
+                             '\n|-\n| class="navboxgroup" | Multiplicateur\n| ')
+                table.insert(ret, modArrays["DGTCRIT"])
+            else
+                table.insert(ret, '| ')
+                table.insert(ret, lineData.Header)
+                if (modArrays["CHANCECRIT"] ~= nil) then
+                    table.insert(ret, '\n| class="navboxgroup" | Chance\n| ')
+                    table.insert(ret, modArrays["CHANCECRIT"])
+                else
+                    table.insert(ret,
+                                 '\n| class="navboxgroup" | Multiplicateur\n| ')
+                    table.insert(ret, modArrays["DGTCRIT"])
+                end
+            end
+        else
+            local tmpRowspan = #(lineData.Set)
+            table.insert(ret, 'rowspan="')
+            table.insert(ret, tmpRowspan)
+            table.insert(ret, '" | ')
+            table.insert(ret, lineData.Header)
+            local toInsert = {}
+            for _, set in pairs(lineData.Set) do
+                local setBuilder = {}
+                table.insert(setBuilder, '\n| class="navboxgroup" | ')
+                table.insert(setBuilder, set)
+                table.insert(setBuilder, '\n| ')
+                table.insert(setBuilder, MODS.getModList({args = {set = set}}))
+                table.insert(toInsert, table.concat(setBuilder))
+            end
+            table.insert(ret, table.concat(toInsert, '\n|-'))
+        end
+    end
+    table.insert(ret, getNavTableFooter())
+    return table.concat(ret)
+end
 
 function p.ModsSetNav(frame)
 

@@ -316,19 +316,18 @@ local function isModForUser(modName, augmentType, augmentUser)
     return ret
 end
 
--- Struct to store the different filters on mods
-local modFilters = {
-    AugmentType = nil,
-    AugmentUser = nil,
-    Polarity = nil,
-    Rarity = nil,
-    Set = nil,
-    Stance = nil,
-    Traits = {}
-}
-
 local function getFiltersFromFrame(frame)
 
+    -- Struct to store the different filters on mods
+    local modFilters = {
+        AugmentType = nil,
+        AugmentUser = nil,
+        Polarity = nil,
+        Rarity = nil,
+        Set = nil,
+        Stance = nil,
+        Traits = {}
+    }
     local filter = modFilters
     if (frame.args ~= nil) then
         -- AugmentType

@@ -2563,7 +2563,7 @@ local ModData = {
             NameEN = "Critical Deceleration",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%CRITCHANCE", "POMPE", "CORROMPU"},
+            Traits = {"CHANCECRIT", "POMPE", "CORROMPU"},
             Transmutable = false
         },
         ["Défense Focalisée"] = {
@@ -2606,7 +2606,7 @@ local ModData = {
             NameEN = "Critical Delay",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"CORROMPU", "FUSIL", "+%CRITCHANCE"},
+            Traits = {"CORROMPU", "FUSIL", "CHANCECRIT"},
             Transmutable = false
         },
         ["Déluge Chapardeur"] = {
@@ -3227,7 +3227,7 @@ local ModData = {
             NameEN = "Concentrated Arrow",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"+%CRITCHANCE", "AUGMENT_WARFRAME", "AUGMENT"}
+            Traits = {"CHANCECRIT", "AUGMENT_WARFRAME", "AUGMENT"}
         },
         ["Flèche Virevoltante"] = {
             Image = "Flèche_virevoltante.png",
@@ -3396,7 +3396,7 @@ local ModData = {
             NameEN = "Critical Focus",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%CRITCHANCE", "+%CRITMULT", "ARCHFUSIL"}
+            Traits = {"CHANCECRIT", "DGTCRIT", "ARCHFUSIL"}
         },
         ["Force Chancelante"] = {
             Archived = true,
@@ -3509,7 +3509,7 @@ local ModData = {
             NameEN = "Organ Shatter",
             Polarity = "Madurai",
             Rarity = "Commun",
-            Traits = {"+%CRITMULT", "MELEE"}
+            Traits = {"DGTCRIT", "MELEE"}
         },
         ["Fracas d'Organes Amalgame"] = {
             Family = "Fracas d'Organes",
@@ -3519,7 +3519,7 @@ local ModData = {
             NameEN = "Amalgam Organ Shatter",
             Polarity = "Madurai",
             Rarity = "Amalgame",
-            Traits = {"+%CRITMULT", "MELEE"},
+            Traits = {"DGTCRIT", "MELEE"},
             Transmutable = false
         },
         ["Fracture Sonique"] = {
@@ -3599,7 +3599,7 @@ local ModData = {
             NameEN = "Point Strike",
             Polarity = "Madurai",
             Rarity = "Commun",
-            Traits = {"+%CRITCHANCE", "FUSIL"}
+            Traits = {"CHANCECRIT", "FUSIL"}
         },
         ["Frappe Vitale"] = {
             Image = "Frappe_Vitale.png",
@@ -3798,7 +3798,7 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Rare",
             Set = "Tek",
-            Traits = {"+%CRITMULT", "WARFRAME"},
+            Traits = {"DGTCRIT", "WARFRAME"},
             Transmutable = false
         },
         ["Garde Prismatique"] = {
@@ -4053,7 +4053,7 @@ local ModData = {
             NameEN = "Exposing Harpoon",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"+%CRITCHANCE", "AUGMENT_ARME", "AUGMENT"},
+            Traits = {"CHANCECRIT", "AUGMENT_ARME", "AUGMENT"},
             Transmutable = false
         },
         ["Haut Zénith"] = {
@@ -4302,7 +4302,7 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Rare",
             Set = "Souche",
-            Traits = {"+%CRITMULT", "MELEE"},
+            Traits = {"DGTCRIT", "MELEE"},
             Transmutable = false
         },
         ["Entrave Infestés"] = {
@@ -4523,7 +4523,7 @@ local ModData = {
             Polarity = "Naramon",
             Rarity = "Inhabituel",
             Set = "Proton",
-            Traits = {"+%CRITCHANCE", "FUSIL", "+%STATCHANCE"},
+            Traits = {"CHANCECRIT", "FUSIL", "+%STATCHANCE"},
             Transmutable = false
         },
         ["Jugement Béni"] = {
@@ -4693,7 +4693,7 @@ local ModData = {
             NameEN = "Tempered Blade",
             Polarity = "Madurai",
             Rarity = "Commun",
-            Traits = {"+%CRITCHANCE", "ARCHMELEE"}
+            Traits = {"CHANCECRIT", "ARCHMELEE"}
         },
         ["Lames Justicières"] = {
             AugmentType = 'Arme',
@@ -4917,7 +4917,7 @@ local ModData = {
             NameEN = "Parallax Scope",
             Polarity = "Naramon",
             Rarity = "Commun",
-            Traits = {"+%CRITCHANCE", "ARCHFUSIL"}
+            Traits = {"CHANCECRIT", "ARCHFUSIL"}
         },
         ["Létalité Furtive"] = {
             Image = "CovertLethalityNew.png",
@@ -5066,7 +5066,7 @@ local ModData = {
             NameEN = "Pistol Gambit",
             Polarity = "Madurai",
             Rarity = "Commun",
-            Traits = {"+%CRITCHANCE", "SECONDAIRE"}
+            Traits = {"CHANCECRIT", "SECONDAIRE"}
         },
         ["Manoeuvre de Pistolet Accrue"] = {
             Family = "Manoeuvre de Pistolet",
@@ -5076,7 +5076,7 @@ local ModData = {
             NameEN = "Primed Pistol Gambit",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"+%CRITCHANCE", "SECONDAIRE", "BARO"},
+            Traits = {"CHANCECRIT", "SECONDAIRE", "BARO"},
             Transmutable = false
         },
         ["Manteau Chaud"] = {
@@ -5102,7 +5102,7 @@ local ModData = {
             NameEN = "Hammer Shot",
             Polarity = "Vazarin",
             Rarity = "Rare",
-            Traits = {"+%CRITMULT", "FUSIL", "NIGHTMARE", "+%STATCHANCE"}
+            Traits = {"DGTCRIT", "FUSIL", "NIGHTMARE", "+%STATCHANCE"}
         },
         ["Fureur Martiale"] = {
             Image = "Fureur Martiale.png",
@@ -5208,7 +5208,7 @@ local ModData = {
             NameEN = "Creeping Bullseye",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"+%CRITCHANCE", "SECONDAIRE", "CORROMPU"},
+            Traits = {"CHANCECRIT", "SECONDAIRE", "CORROMPU"},
             Transmutable = false
         },
         ["Malice"] = {
@@ -5316,7 +5316,7 @@ local ModData = {
             NameEN = "Bite",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%CRITCHANCE", "COMPAGNON", "+%CRITMULT"}
+            Traits = {"CHANCECRIT", "COMPAGNON", "DGTCRIT"}
         },
         ["Morsure Vampirique"] = {
             Image = "Morsure Vampirique.png",
@@ -5358,7 +5358,7 @@ local ModData = {
             NameEN = "Sharpened Bullets",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Traits = {"+%CRITMULT", "SECONDAIRE", "ACOLYTE"},
+            Traits = {"DGTCRIT", "SECONDAIRE", "ACOLYTE"},
             Transmutable = false
         },
         ["Munitions Ensanglantées"] = {
@@ -5533,7 +5533,7 @@ local ModData = {
             NameEN = "Piercing Navigator",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"+%CRITCHANCE", "AUGMENT_WARFRAME", "AUGMENT"},
+            Traits = {"CHANCECRIT", "AUGMENT_WARFRAME", "AUGMENT"},
             Transmutable = false
         },
         ["Netra"] = {
@@ -5649,7 +5649,7 @@ local ModData = {
             NameEN = "Cat's Eye",
             Polarity = "Penjaga",
             Rarity = "Rare",
-            Traits = {"+%CRITCHANCE", "COMPAGNON"}
+            Traits = {"CHANCECRIT", "COMPAGNON"}
         },
         ["Oeil de Faucon"] = {
             Image = "Oeil de Faucon.png",
@@ -5852,7 +5852,7 @@ local ModData = {
             NameEN = "Vital Sense",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%CRITMULT", "FUSIL"}
+            Traits = {"DGTCRIT", "FUSIL"}
         },
         ["Perception des Ennemis"] = {
             Image = "Perception des Ennemis.png",
@@ -6125,7 +6125,7 @@ local ModData = {
             NameEN = "Hollow Point",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"+%CRITMULT", "SECONDAIRE", "CORROMPU"},
+            Traits = {"DGTCRIT", "SECONDAIRE", "CORROMPU"},
             Transmutable = false
         },
         ["Pointe Entropique"] = {
@@ -6505,7 +6505,7 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Inhabituel",
             Set = "Gladiateur",
-            Traits = {"+%CRITMULT", "MELEE"},
+            Traits = {"DGTCRIT", "MELEE"},
             Transmutable = false
         },
         ["Pulsation Électrique"] = {
@@ -6743,7 +6743,7 @@ local ModData = {
             NameEN = "Primal Rage",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"+%CRITCHANCE", "AUGMENT_WARFRAME", "AUGMENT"},
+            Traits = {"CHANCECRIT", "AUGMENT_WARFRAME", "AUGMENT"},
             Transmutable = false
         },
         ["Protège Rampes"] = {
@@ -6802,7 +6802,7 @@ local ModData = {
             NameEN = "Ravage",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%CRITMULT", "POMPE"}
+            Traits = {"DGTCRIT", "POMPE"}
         },
         ["Ravage Accru"] = {
             Family = "Ravage",
@@ -6811,7 +6811,7 @@ local ModData = {
             NameEN = "Primed Ravage",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"+%CRITMULT", "POMPE", "BARO"},
+            Traits = {"DGTCRIT", "POMPE", "BARO"},
             Transmutable = false
         },
         ["Ravage Tonitruant"] = {
@@ -6881,7 +6881,7 @@ local ModData = {
             NameEN = "Bleeding Edge",
             Polarity = "Madurai",
             Rarity = "Commun",
-            Traits = {"+%CRITMULT", "ARCHMELEE"}
+            Traits = {"DGTCRIT", "ARCHMELEE"}
         },
         ["Rebord Tranchant"] = {
             Image = "Rebord Tranchant.jpg",
@@ -7425,7 +7425,7 @@ local ModData = {
             NameEN = "Hydraulic Crosshairs",
             Polarity = "Madurai",
             Rarity = "Commun",
-            Traits = {"+%CRITCHANCE", "SECONDAIRE", "ACOLYTE"},
+            Traits = {"CHANCECRIT", "SECONDAIRE", "ACOLYTE"},
             Transmutable = false
         },
         ["Rétribution"] = {
@@ -7477,7 +7477,7 @@ local ModData = {
             NameEN = "Bladed Rounds",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Traits = {"+%CRITMULT", "FUSIL", "ACOLYTE"},
+            Traits = {"DGTCRIT", "FUSIL", "ACOLYTE"},
             Transmutable = false
         },
         ["Sanctuaire"] = {
@@ -8217,7 +8217,7 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Inhabituel",
             Set = "Chasseur",
-            Traits = {"+%CRITCHANCE", "COMPAGNON"},
+            Traits = {"CHANCECRIT", "COMPAGNON"},
             Transmutable = false
         },
         ["Sécurité Intégrée"] = {
@@ -8245,7 +8245,7 @@ local ModData = {
             NameEN = "Deadly Sequence",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%CRITCHANCE", "AUGMENT_ARME", "AUGMENT"},
+            Traits = {"CHANCECRIT", "AUGMENT_ARME", "AUGMENT"},
             Transmutable = false
         },
         ["Séquence Toxique"] = {
@@ -8567,7 +8567,7 @@ local ModData = {
             NameEN = "Shrapnel Shot",
             Polarity = "Madurai",
             Rarity = "Commun",
-            Traits = {"+%CRITMULT", "POMPE", "ACOLYTE"},
+            Traits = {"DGTCRIT", "POMPE", "ACOLYTE"},
             Transmutable = false
         },
         ["Tir Énergisant"] = {
@@ -8797,7 +8797,7 @@ local ModData = {
             NameEN = "Blunderbuss",
             Polarity = "Madurai",
             Rarity = "Commun",
-            Traits = {"+%CRITCHANCE", "POMPE"}
+            Traits = {"CHANCECRIT", "POMPE"}
         },
         ["Téléportation Fatale"] = {
             AugmentType = 'Warframe',
@@ -9028,7 +9028,7 @@ local ModData = {
             NameEN = "Teeming Virulence",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"+%CRITCHANCE", "AUGMENT_WARFRAME", "AUGMENT"},
+            Traits = {"CHANCECRIT", "AUGMENT_WARFRAME", "AUGMENT"},
             Transmutable = false
         },
         ["Viseur Harkonar"] = {
@@ -9056,7 +9056,7 @@ local ModData = {
             NameEN = "Argon Scope",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"+%CRITCHANCE", "FUSIL", "ACOLYTE"},
+            Traits = {"CHANCECRIT", "FUSIL", "ACOLYTE"},
             Transmutable = false
         },
         ["Vision Laser"] = {
@@ -9066,7 +9066,7 @@ local ModData = {
             NameEN = "Laser Sight",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Traits = {"+%CRITCHANCE", "POMPE", "ACOLYTE"},
+            Traits = {"CHANCECRIT", "POMPE", "ACOLYTE"},
             Transmutable = false
         },
         ["Visée Agile"] = {
