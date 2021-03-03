@@ -446,8 +446,8 @@ local EnemyData = {
         Affinity = nil,
         BaseLevel = 1,
         Capacities = {
-            "{{A|Hurlement Spectral}}", "{{A|Protection Élémentaire}}",
-            "{{A|Armure d'Épines}}", "{{A|Effigie}}"
+            "Hurlement Spectral", "Protection Élémentaire",
+            "Armure d'Épines", "Effigie"
         },
         Faction = "Infesté",
         Family = nil,
@@ -465,7 +465,7 @@ local EnemyData = {
         Regions = {"Phobos", "Europe"},
         Scans = 3,
         SpawnLevel = nil,
-        Weapons = {"{{Weapon|Dera}}", "{{Weapon|Épée à Plasma}}"}
+        Weapons = {"Dera", "Épée à Plasma"}
     },
     ["Cible Corpus Cestra"] = {
         Affinity = nil,
@@ -507,7 +507,7 @@ local EnemyData = {
         Regions = {"Venus"},
         Scans = 3,
         SpawnLevel = nil,
-        Weapons = {"{{Weapon|Lanka}}", "{{Weapon|Penta}}"}
+        Weapons = {"Lanka", "Penta"}
     },
     ["Cible Corpus Supra"] = {
         Affinity = nil,
@@ -529,7 +529,7 @@ local EnemyData = {
         Regions = {"Venus"},
         Scans = 3,
         SpawnLevel = nil,
-        Weapons = {"{{Weapon|Supra}}"}
+        Weapons = {"Supra"}
     },
     ["Cible Corpus Trencher"] = {
         Affinity = nil,
@@ -551,7 +551,7 @@ local EnemyData = {
         Regions = {"Venus"},
         Scans = 3,
         SpawnLevel = nil,
-        Weapons = {"doubles {{Weapon|Kreska}}"}
+        Weapons = {"Doubles Kreska"}
     },
     ["Comba"] = {
         Affinity = 500,
@@ -577,14 +577,14 @@ local EnemyData = {
         HealthTypes = {["Chair Clonée"] = 800, ["Armure en Alliage"] = 250},
         Image = "Aerial Commander.png",
         Icon = nil,
-        Introduced = 22.0,
+        Introduced = "22.0",
         Link = nil,
         Name = "Commandant Aérien",
         NameEN = "Aerial Commander",
         Regions = {"Terre"},
         Scans = 3,
         SpawnLevel = nil,
-        Weapons = {"{{Weapon|Hind}}", "{{Weapon|Fragor}}"}
+        Weapons = {"Hind", "Fragor"}
     },
     ["Commandante de Reconnaissance"] = {
         Affinity = nil,
@@ -600,7 +600,7 @@ local EnemyData = {
         NameEN = "Recon Commander",
         Regions = {"Terre"},
         Scans = 3,
-        Weapons = {"{{Weapon|Tonkor}}", "{{Weapon|Scindo}}"}
+        Weapons = {"Tonkor", "Scindo"}
     },
     ["Commandant des Plaines"] = {
         Affinity = nil,
@@ -611,14 +611,14 @@ local EnemyData = {
         HealthTypes = {["Chair Clonée"] = 1200, ["Armure en Alliage"] = 250},
         Image = "Commandant des Plaines.png",
         Icon = nil,
-        Introduced = 22.0,
+        Introduced = "22.0",
         Link = nil,
         Name = "Commandant des Plaines",
         NameEN = "Aerial Commander",
         Regions = {"Terre"},
         Scans = 3,
         SpawnLevel = nil,
-        Weapons = {"{{Weapon|Hind}}", "{{Weapon|Fragor}}"}
+        Weapons = {"Hind", "Fragor"}
     },
     ["Commandant Lektro"] = {
         Affinity = nil,
@@ -1065,6 +1065,23 @@ local EnemyData = {
         Scans = 3,
         Weapons = nil
     },
+    ["Embatteur MOA d'Élite Terra"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Embatteur MOA d'Élite",
+        HealthTypes = {["Bouclier"] = 800, ["Robot"] = 1200},
+        Image = "TerraEliteEmbattorMOA.png",
+        Introduced = "24.0.9",
+        Link = nil,
+        Name = "Embatteur MOA d'Élite Terra",
+        NameEN = "Terra Elite Embattor MOA",
+        Regions = {"Vénus"},
+        Scans = 3,
+        SpawnLevel = 30,
+        Weapons = nil
+    },
     ["Éviscérateur Exo"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -1382,7 +1399,7 @@ local EnemyData = {
         Weapons = {"Supra"}
     },
     ["Homme d'Équipage Prod"] = {
-        Affinity = 50,
+        Affinity = 57.13,
         BaseLevel = 1,
         Capacities = nil,
         Faction = "Corpus",
@@ -1795,6 +1812,24 @@ local EnemyData = {
         Scans = 3,
         Weapons = {"Manticore"}
     },
+    ["Lephantis"] = {
+        Affinity = 3998.75,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = nil,
+        HealthTypes = {["Fossilisé"] = 1200},
+        Image = "Lephantis.png",
+        Icon = nil,
+        Introduced = "10.0",
+        Link = nil,
+        Name = "Lephantis",
+        NameEN = "Lephantis",
+        Regions = {"Deimos"},
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
     ["Lieutenant Lech Kril"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -1965,7 +2000,7 @@ local EnemyData = {
         Regions = {"Eris"},
         Scans = 1,
         SpawnLevel = nil,
-        Weapons = {"{{Weapon|Pacificateurs}}", "{{Weapon|Épée à Plasma}}"}
+        Weapons = {"Pacificateurs", "Épée à Plasma"}
     },
     ["Messager Fanatique"] = {
         Affinity = nil,
@@ -2045,6 +2080,23 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = {"Canon Électrique"}
     },
+    ["MOA Cible"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "MOA Cible",
+        HealthTypes = {["Bouclier"] = 0, ["Robot"] = 0},
+        Image = "Popcorn.png",
+        Introduced = "28.0",
+        Link = nil,
+        Name = "MOA Cible",
+        NameEN = "Test MOA",
+        Regions = {"Vénus"},
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
     ["MOA Corrompu"] = {
         Affinity = 200,
         BaseLevel = 1,
@@ -2062,6 +2114,22 @@ local EnemyData = {
         Scans = 5,
         SpawnLevel = nil,
         Weapons = {"Rayon à Plasma"}
+    },
+    ["MOA Geminex Juno"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "MOA Geminex",
+        HealthTypes = {["Bouclier"] = 200, ["Robot"] = 60},
+        Image = "JunoGeminexMOA.png",
+        Introduced = "28.0",
+        Link = nil,
+        Name = "MOA Geminex Juno",
+        NameEN = "Juno Geminex MOA",
+        Regions = {"Vénus", "Jupiter", "Neptune", "Pluton", "Europe", "Phobos"},
+        Scans = 5,
+        Weapons = nil
     },
     ["MOA Mutaliste Essaim"] = {
         Affinity = 150,
@@ -2116,6 +2184,22 @@ local EnemyData = {
         Name = "MOA Onde de Choc Terra",
         NameEN = "Terra Shockwave MOA",
         Regions = {"Vénus"},
+        Scans = 5,
+        Weapons = nil
+    },
+    ["MOA Onde de Choc Vapos"] = {
+        Affinity = nil,
+        BaseLevel = 15,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "MOA Onde de Choc",
+        HealthTypes = {["Bouclier"] = 150, ["Robot"] = 60},
+        Image = "VaposShockwaveMoa.png",
+        Introduced = "25.0",
+        Link = nil,
+        Name = "MOA Onde de Choc Vapos",
+        NameEN = "Vapos Shockwave MOA",
+        Regions = {"Jupiter"},
         Scans = 5,
         Weapons = nil
     },
@@ -2528,6 +2612,23 @@ local EnemyData = {
         Scans = 20,
         Weapons = nil
     },
+    ["Raptor SX d'Élite Terra"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Raptor SX d'Élite",
+        HealthTypes = {["Bouclier"] = 1750, ["Robot"] = 1750},
+        Image = "TerraEliteRaptorSX.png",
+        Introduced = "24.0.9",
+        Link = nil,
+        Name = "Raptor SX d'Élite Terra",
+        NameEN = "Terra Elite Raptor SX",
+        Regions = {"Vénus"},
+        Scans = 3,
+        SpawnLevel = 30,
+        Weapons = nil
+    },
     ["Raptor SX Terra"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -2752,7 +2853,7 @@ local EnemyData = {
         Regions = {"Terre"},
         Scans = 1,
         SpawnLevel = nil,
-        Weapons = {"{{Weapon|Zhuge}}"}
+        Weapons = {"Zhuge"}
     },
     ["Spectre Orphid (mue)"] = {
         Affinity = nil,
@@ -2824,6 +2925,28 @@ local EnemyData = {
         Regions = {"Toutes"},
         Scans = 3,
         Weapons = {"Dread", "Despair", "Hate"}
+    },
+    ["Stalker de l'Ombre"] = {
+        Affinity = 1713.75,
+        BaseLevel = 1,
+        Capacities = {"Charge Rhino", "Lame Exaltée", "Attraction"},
+        Faction = "Stalker",
+        Family = "Stalker",
+        HealthTypes = {
+            ["Chair"] = 750,
+            ["Armure en Alliage"] = 300,
+            ["Proto-Bouclier"] = 200
+        },
+        Image = "SentientStalker.png",
+        Icon = nil,
+        Introduced = "18.0",
+        Link = nil,
+        Name = "Stalker de l'Ombre",
+        NameEN = "Shadow Stalker",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = {"War"}
     },
     ["Suppresseur Exo"] = {
         Affinity = 150,
