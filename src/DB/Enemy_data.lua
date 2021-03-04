@@ -2238,6 +2238,23 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = {"Sheev", "Ogris"}
     },
+    ["Nemes"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = {"Kamikaze"},
+        Faction = "Corpus",
+        Family = "Nemes",
+        HealthTypes = {["Bouclier"] = 150, ["Robot"] = 750},
+        Image = "Nemes.png",
+        Introduced = "18.4.1",
+        Link = nil,
+        Name = "Nemes",
+        NameEN = "Nemes",
+        Regions = nil,
+        Scans = 5,
+        SpawnLevel = 5,
+        Weapons = nil
+    },
     ["Nox"] = {
         Affinity = 500,
         BaseLevel = 1,
@@ -2298,6 +2315,49 @@ local EnemyData = {
         SpawnLevel = 60,
         Weapons = nil
     },
+    ["Osprey Oxium"] = {
+        Affinity = 150,
+        BaseLevel = 5,
+        Capacities = {"Kamikaze"},
+        Faction = "Corpus",
+        Family = "Osprey Oxium",
+        HealthTypes = {
+            ["Armure en Ferrite"] = 40,
+            ["Bouclier"] = 150,
+            ["Robot"] = 750
+        },
+        Image = "OspreySuicide.png",
+        Introduced = "11.9",
+        Link = nil,
+        Name = "Osprey Oxium",
+        NameEN = "Oxium Osprey",
+        Regions = {
+            "Vénus", "Mars", "Jupiter", "Neptune", "Pluton", "Eris", "Europe",
+            "Lua"
+        },
+        Scans = 20,
+        Weapons = nil
+    },
+    ["Osprey Oxium Juno"] = {
+        Affinity = 150,
+        BaseLevel = 5,
+        Capacities = {"Kamikaze"},
+        Faction = "Corpus",
+        Family = "Osprey Oxium",
+        HealthTypes = {
+            ["Armure en Ferrite"] = 40,
+            ["Bouclier"] = 150,
+            ["Robot"] = 750
+        },
+        Image = "JunoOxiumOsprey.png",
+        Introduced = "28.0",
+        Link = nil,
+        Name = "Osprey Oxium Juno",
+        NameEN = "Juno Oxium Osprey",
+        Regions = nil,
+        Scans = 5,
+        Weapons = nil
+    },
     ["Osprey Oxium Terra"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -2315,6 +2375,26 @@ local EnemyData = {
         Name = "Osprey Oxium Terra",
         NameEN = "Terra Oxium Osprey",
         Regions = {"Vénus"},
+        Scans = 5,
+        Weapons = nil
+    },
+    ["Osprey Oxium Vapos"] = {
+        Affinity = 150,
+        BaseLevel = 5,
+        Capacities = {"Kamikaze"},
+        Faction = "Corpus",
+        Family = "Osprey Oxium",
+        HealthTypes = {
+            ["Armure en Ferrite"] = 40,
+            ["Bouclier"] = 150,
+            ["Robot"] = 750
+        },
+        Image = "VaposOxiumOsprey.png",
+        Introduced = "25.0",
+        Link = nil,
+        Name = "Osprey Oxium Vapos",
+        NameEN = "Vapos Oxium Osprey",
+        Regions = nil,
         Scans = 5,
         Weapons = nil
     },
