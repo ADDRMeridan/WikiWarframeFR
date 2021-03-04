@@ -6,7 +6,7 @@ local misCountCol = 4 -- Number of things dropped. If empty, default to 1
 local modNameCol = 1 -- Name of the mod
 local modChanceCol = 2 -- The chance of a mod dropping
 local modCountCol = 3 -- If empty, default to 1. Normally only different for Endo
---    in DropData["Syndicates"].Offerings
+--    in DropData["Syndicats"].Offerings
 local synNameCol = 1 -- Name of the offering
 local synTypeCol = 2 -- Type of offering
 local synCostCol = 3 -- The reputation cost for the offering
@@ -570,7 +570,7 @@ end
 local function getDropSyndicates(itemName)
     local Drops = {}
 
-    for i, theSyndicate in pairs(DropData["Syndicates"]) do
+    for i, theSyndicate in pairs(DropData["Syndicats"]) do
         if (theSyndicate.Offerings ~= nil and theSyndicate.Ignore ~= true) then
             for i, Offering in pairs(theSyndicate.Offerings) do
                 if (Offering[synNameCol] == itemName) then
