@@ -36,10 +36,14 @@ local DropData = {
             ShortName = "[[Néant]]",
             Rewards = {
                 ["A"] = {
-                    {"Lith M6", "Relique", 12.5}, {"Lith P3", "Relique", 12.5},
-                    {"Lith C6", "Relique", 12.5}, {"Lith M5", "Relique", 12.5},
-                    {"Lith S10", "Relique", 12.5}, {"Lith D1", "Relique", 12.5},
-                    {"Lith K4", "Relique", 12.5}, {"Lith D2", "Relique", 12.5}
+                    {"Lith D4", "Relique", 11.11},
+                    {"Lith B8", "Relique", 11.11},
+                    {"Lith G3", "Relique", 11.11},
+                    {"Lith P5", "Relique", 11.11},
+                    {"Lith T5", "Relique", 11.11},
+                    {"Lith I1", "Relique", 11.11},
+                    {"Lith K5", "Relique", 11.11},
+                    {"Lith M7", "Relique", 11.11}, {"Lith T4", "Relique", 11.11}
                 }
             }
         }, {
@@ -49,14 +53,14 @@ local DropData = {
             ShortName = "[[Néant]]",
             Rewards = {
                 ["A"] = {
-                    {"Meso E4", "Relique", 6.25}, {"Meso P3", "Relique", 6.25},
+                    {"Meso P4", "Relique", 6.25}, {"Meso C6", "Relique", 6.25},
                     {"Meso I1", "Relique", 6.25}, {"Meso P2", "Relique", 6.25},
-                    {"Neo T2", "Relique", 6.25}, {"Neo A3", "Relique", 6.25},
-                    {"Neo Z5", "Relique", 6.25}, {"Neo I2", "Relique", 6.25},
-                    {"Meso K3", "Relique", 6.25}, {"Meso N9", "Relique", 6.25},
-                    {"Meso N10", "Relique", 6.25}, {"Neo T3", "Relique", 6.25},
-                    {"Neo M3", "Relique", 6.25}, {"Neo R4", "Relique", 6.25},
-                    {"Meso F2", "Relique", 6.25}, {"Neo S5", "Relique", 6.25}
+                    {"Neo T2", "Relique", 6.25}, {"Neo N14", "Relique", 6.25},
+                    {"Neo N13", "Relique", 6.25}, {"Neo Z7", "Relique", 6.25},
+                    {"Meso K3", "Relique", 6.25}, {"Meso D6", "Relique", 6.25},
+                    {"Meso T4", "Relique", 6.25}, {"Neo P2", "Relique", 6.25},
+                    {"Neo B7", "Relique", 6.25}, {"Neo N15", "Relique", 6.25},
+                    {"Meso E5", "Relique", 6.25}, {"Neo B6", "Relique", 6.25}
                 }
             }
         }, {
@@ -76,30 +80,27 @@ local DropData = {
                     {"Châtie-Corrompu", "Mod", 2.58}
                 },
                 ["B"] = {
-                    {"Lith B7", "Relique", 10.84},
-                    {"Lith D3", "Relique", 10.84},
-                    {"Lith N5", "Relique", 10.84},
-                    {"Lith N6", "Relique", 10.84},
-                    {"Lith P4", "Relique", 10.84},
-                    {"Lith P5", "Relique", 10.84},
-                    {"Lith T4", "Relique", 10.84},
                     {"Expulse-Corrompu", "Mod", 5.53},
+                    {"{{WF|Harrow}} - Systèmes", "Schéma", 2.01},
                     {"Purifie-Corrompu", "Mod", 5.53},
                     {"Fléau des Corrompus", "Mod", 5.53},
-                    {"Intensité", "Mod", 5.53},
-                    {"{{WF|Harrow}} - Systèmes", "Schéma", 2.01}
+                    {"Intensité", "Mod", 5.53}, {"Lith D4", "Relique", 10.84},
+                    {"Lith B8", "Relique", 10.84},
+                    {"Lith G3", "Relique", 10.84},
+                    {"Lith P5", "Relique", 10.84},
+                    {"Lith T5", "Relique", 10.84},
+                    {"Lith I1", "Relique", 10.84}, {"Lith T4", "Relique", 10.84}
                 },
                 ["C"] = {
-                    {"Lith B7", "Relique", 11.06},
-                    {"Lith D3", "Relique", 11.06},
-                    {"Lith N5", "Relique", 11.06},
-                    {"Lith N6", "Relique", 11.06},
-                    {"Lith P4", "Relique", 11.06},
-                    {"Lith P5", "Relique", 11.06},
-                    {"Lith T4", "Relique", 11.06},
                     {"Accélération", "Mod", 7.52},
                     {"Frappe Durable", "Mod", 7.52},
-                    {"{{WF|Harrow}} - Systèmes", "Schéma", 7.52}
+                    {"{{WF|Harrow}} - Systèmes", "Schéma", 7.52},
+                    {"Lith D4", "Relique", 11.06},
+                    {"Lith B8", "Relique", 11.06},
+                    {"Lith G3", "Relique", 11.06},
+                    {"Lith P5", "Relique", 11.06},
+                    {"Lith T5", "Relique", 11.06},
+                    {"Lith I1", "Relique", 11.06}, {"Lith T4", "Relique", 11.06}
                 }
             }
         }, {
@@ -118,25 +119,24 @@ local DropData = {
                     {"Expulse-Corrompu", "Mod", 2.58}
                 },
                 ["B"] = {
-                    {"Meso C6", "Relique", 10.84},
-                    {"Meso E4", "Relique", 10.84},
-                    {"Meso G2", "Relique", 10.84},
-                    {"Meso I1", "Relique", 10.84},
-                    {"Meso K3", "Relique", 10.84},
-                    {"Meso N10", "Relique", 10.84},
-                    {"Meso P2", "Relique", 10.84},
+                    {"{{WF|Harrow}} - Systèmes", "Schéma", 2.01},
                     {"Châtie-Corrompu", "Mod", 7.37},
                     {"Purifie-Corrompu", "Mod", 7.37},
                     {"Fléau des Corrompus", "Mod", 7.37},
-                    {"{{WF|Harrow}} - Systèmes", "Schéma", 2.01}
+                    {"Meso C6", "Relique", 10.84},
+                    {"Meso P2", "Relique", 10.84},
+                    {"Meso K3", "Relique", 10.84},
+                    {"Meso P4", "Relique", 10.84},
+                    {"Meso D6", "Relique", 10.84},
+                    {"Meso I1", "Relique", 10.84}, {"Meso T4", "Relique", 10.84}
                 },
                 ["C"] = {
-                    {"Neo D2", "Relique", 11.06}, {"Neo E2", "Relique", 11.06},
-                    {"Neo I2", "Relique", 11.06}, {"Neo N13", "Relique", 11.06},
-                    {"Neo S14", "Relique", 11.06}, {"Neo T2", "Relique", 11.06},
-                    {"Neo Z6", "Relique", 11.06},
                     {"Frappe Durable", "Mod", 11.28},
-                    {"{{WF|Harrow}} - Systèmes", "Schéma", 11.28}
+                    {"{{WF|Harrow}} - Systèmes", "Schéma", 11.28},
+                    {"Neo T2", "Relique", 11.06}, {"Neo N14", "Relique", 11.06},
+                    {"Neo N13", "Relique", 11.06}, {"Neo Z7", "Relique", 11.06},
+                    {"Neo P2", "Relique", 11.06}, {"Neo B7", "Relique", 11.06},
+                    {"Neo N15", "Relique", 11.06}
                 }
             }
         }, {
@@ -154,22 +154,22 @@ local DropData = {
                     {"Expulse-Corrompu", "Mod", 2.58}
                 },
                 ["B"] = {
-                    {"Neo D2", "Relique", 10.84}, {"Neo E2", "Relique", 10.84},
-                    {"Neo I2", "Relique", 10.84}, {"Neo N13", "Relique", 10.84},
-                    {"Neo S14", "Relique", 10.84}, {"Neo T2", "Relique", 10.84},
-                    {"Neo Z6", "Relique", 10.84},
+                    {"{{WF|Harrow}} - Systèmes", "Schéma", 2.01},
                     {"Châtie-Corrompu", "Mod", 7.37},
                     {"Purifie-Corrompu", "Mod", 7.37},
                     {"Fléau des Corrompus", "Mod", 7.37},
-                    {"{{WF|Harrow}} - Systèmes", "Schéma", 2.01}
+                    {"Neo T2", "Relique", 10.84}, {"Neo N14", "Relique", 10.84},
+                    {"Neo N13", "Relique", 10.84}, {"Neo Z7", "Relique", 10.84},
+                    {"Neo P2", "Relique", 10.84}, {"Neo B7", "Relique", 10.84},
+                    {"Neo N15", "Relique", 10.84}
                 },
                 ["C"] = {
-                    {"Axi A10", "Relique", 11.06},
-                    {"Axi A11", "Relique", 11.06}, {"Axi B3", "Relique", 11.06},
-                    {"Axi C5", "Relique", 11.06}, {"Axi T4", "Relique", 11.06},
-                    {"Axi W1", "Relique", 11.06}, {"Axi Z1", "Relique", 11.06},
                     {"Frappe Vitale", "Mod", 11.28},
-                    {"{{WF|Harrow}} - Systèmes", "Schéma", 11.28}
+                    {"{{WF|Harrow}} - Systèmes", "Schéma", 11.28},
+                    {"Axi A11", "Relique", 11.06}, {"Axi O5", "Relique", 11.06},
+                    {"Axi A13", "Relique", 11.06}, {"Axi W2", "Relique", 11.06},
+                    {"Axi C6", "Relique", 11.06}, {"Axi Z1", "Relique", 11.06},
+                    {"Axi T6", "Relique", 11.06}
                 }
             }
         }, {
@@ -180,30 +180,33 @@ local DropData = {
             ShortName = "[[Récompense de Mission#Tier de Mission|T1]]",
             Rewards = {
                 ["A"] = {
-                    {"Lith M6", "Relique", 12.5}, {"Lith P3", "Relique", 12.5},
-                    {"Lith C6", "Relique", 12.5}, {"Lith M5", "Relique", 12.5},
-                    {"Lith S10", "Relique", 12.5}, {"Lith D1", "Relique", 12.5},
-                    {"Lith K4", "Relique", 12.5}, {"Lith D2", "Relique", 12.5}
+                    {"Mutation de Chargeur", "Mod", 9.09},
+                    {"Chargeur Trafiqué", "Mod", 9.09},
+                    {"Point de Pression", "Mod", 9.09},
+                    {"Tambour de Munitions", "Mod", 9.09},
+                    {"Lith D4", "Relique", 9.09}, {"Lith B8", "Relique", 9.09},
+                    {"Lith G3", "Relique", 9.09}, {"Lith P5", "Relique", 9.09},
+                    {"Lith T5", "Relique", 9.09}, {"Lith I1", "Relique", 9.09},
+                    {"Lith T4", "Relique", 9.09}
                 },
                 ["B"] = {
-                    {"Meso E4", "Relique", 2.82}, {"Meso P3", "Relique", 2.82},
-                    {"Meso I1", "Relique", 2.82}, {"Meso P2", "Relique", 2.82},
-                    {"Lith M6", "Relique", 9.68}, {"Lith P3", "Relique", 9.68},
-                    {"Lith C6", "Relique", 9.68}, {"Lith M5", "Relique", 9.68},
-                    {"Lith S10", "Relique", 9.68}, {"Lith D1", "Relique", 9.68},
-                    {"Meso K3", "Relique", 2.82}, {"Meso N9", "Relique", 2.82},
-                    {"Lith D2", "Relique", 2.82}, {"Lith K4", "Relique", 9.68},
-                    {"Meso D5", "Relique", 2.82}, {"Lith D2", "Relique", 9.68}
+                    {"Bobine Réflexe", "Mod", 8.33},
+                    {"Balles Cryogéniques", "Mod", 8.33},
+                    {"Antre de l'Enfer", "Mod", 8.33},
+                    {"Toucher Choquant", "Mod", 8.33},
+                    {"Endo", "Endo", 8.33, 100}, {"Meso C6", "Relique", 8.33},
+                    {"Meso P2", "Relique", 8.33}, {"Meso K3", "Relique", 8.33},
+                    {"Meso P4", "Relique", 8.33}, {"Meso D6", "Relique", 8.33},
+                    {"Meso I1", "Relique", 8.33}, {"Meso T4", "Relique", 8.33}
                 },
                 ["C"] = {
-                    {"Meso E4", "Relique", 6.25}, {"Meso P3", "Relique", 6.25},
-                    {"Meso I1", "Relique", 6.25}, {"Meso P2", "Relique", 6.25},
-                    {"Lith M6", "Relique", 6.25}, {"Lith P3", "Relique", 6.25},
-                    {"Lith C6", "Relique", 6.25}, {"Lith M5", "Relique", 6.25},
-                    {"Lith S10", "Relique", 6.25}, {"Lith D1", "Relique", 6.25},
-                    {"Meso K3", "Relique", 6.25}, {"Meso N9", "Relique", 6.25},
-                    {"Meso N10", "Relique", 6.25}, {"Lith K4", "Relique", 6.25},
-                    {"Meso D5", "Relique", 6.25}, {"Lith D2", "Relique", 6.25}
+                    {"Pointe Métallique", "Mod", 8.33},
+                    {"Ravage", "Mod", 8.33}, {"Continuité", "Mod", 8.33},
+                    {"Maître Voleur", "Mod", 8.33},
+                    {"Endo", "Endo", 8.33, 200}, {"Meso C6", "Relique", 8.33},
+                    {"Meso P2", "Relique", 8.33}, {"Meso K3", "Relique", 8.33},
+                    {"Meso P4", "Relique", 8.33}, {"Meso D6", "Relique", 8.33},
+                    {"Meso I1", "Relique", 8.33}, {"Meso T4", "Relique", 8.33}
                 }
             }
         }, {
@@ -214,12 +217,12 @@ local DropData = {
             ShortName = "[[Récompense de Mission#Tier de Mission|T2]]",
             Rewards = {
                 ["A"] = {
-                    {"Meso C4", "Relique", 14.29},
-                    {"Meso B4", "Relique", 14.29},
-                    {"Meso D4", "Relique", 14.29},
-                    {"Meso N9", "Relique", 14.29},
-                    {"Meso E4", "Relique", 14.29},
-                    {"Meso R3", "Relique", 14.29}, {"Meso C5", "Relique", 14.29}
+                    {"Meso C6", "Relique", 14.29},
+                    {"Meso P2", "Relique", 14.29},
+                    {"Meso K3", "Relique", 14.29},
+                    {"Meso P4", "Relique", 14.29},
+                    {"Meso D6", "Relique", 14.29},
+                    {"Meso I1", "Relique", 14.29}, {"Meso T4", "Relique", 14.29}
                 },
                 ["B"] = {
                     {"Bobine Réflexe", "Mod", 6.25},
@@ -229,19 +232,20 @@ local DropData = {
                     {"Antre de l'Enfer", "Mod", 6.25},
                     {"Porte-Tempête", "Mod", 6.25},
                     {"À Portée", "Mod", 6.25}, {"Furie", "Mod", 6.25},
-                    {"Endo", "Endo", 6.25, 50}, {"Neo T2", "Relique", 6.25},
-                    {"Neo A3", "Relique", 6.25}, {"Neo Z5", "Relique", 6.25},
-                    {"Neo I2", "Relique", 6.25}, {"Neo T3", "Relique", 6.25},
-                    {"Neo M3", "Relique", 6.25}, {"Neo R4", "Relique", 6.25}
+                    {"Endo", "Endo", 6.25, 150}, {"Neo T2", "Relique", 6.25},
+                    {"Neo N14", "Relique", 6.25}, {"Neo N13", "Relique", 6.25},
+                    {"Neo Z7", "Relique", 6.25}, {"Neo P2", "Relique", 6.25},
+                    {"Neo B7", "Relique", 6.25}, {"Neo N15", "Relique", 6.25}
                 },
                 ["C"] = {
                     {"Perception Vitale", "Mod", 4.51},
                     {"Pointe Métallique", "Mod", 4.51},
                     {"Ravage", "Mod", 4.51}, {"Allonge", "Mod", 4.51},
-                    {"Endo", "Endo", 4.51, 80}, {"Neo T2", "Relique", 11.06},
-                    {"Neo A3", "Relique", 11.06}, {"Neo Z5", "Relique", 11.06},
-                    {"Neo I2", "Relique", 11.06}, {"Neo T3", "Relique", 11.06},
-                    {"Neo M3", "Relique", 11.06}, {"Neo R4", "Relique", 11.06}
+                    {"Endo", "Endo", 4.51, 300}, {"Neo T2", "Relique", 11.06},
+                    {"Neo N14", "Relique", 11.06},
+                    {"Neo N13", "Relique", 11.06}, {"Neo Z7", "Relique", 11.06},
+                    {"Neo P2", "Relique", 11.06}, {"Neo B7", "Relique", 11.06},
+                    {"Neo N15", "Relique", 11.06}
                 }
             }
         }, {
@@ -252,13 +256,13 @@ local DropData = {
             ShortName = "[[Récompense de Mission#Tier de Mission|T3]]",
             Rewards = {
                 ["A"] = {
-                    {"Vitalité", "Mod", 10},
-                    {"Mutation de Chargeur", "Mod", 10},
-                    {"Chargeur Trafiqué", "Mod", 10},
-                    {"Neo T2", "Relique", 10}, {"Neo A3", "Relique", 10},
-                    {"Neo Z5", "Relique", 10}, {"Neo I2", "Relique", 10},
-                    {"Neo T3", "Relique", 10}, {"Neo M3", "Relique", 10},
-                    {"Neo R4", "Relique", 10}
+                    {"Vitalité", "Mod", 10.00},
+                    {"Mutation de Chargeur", "Mod", 10.00},
+                    {"Chargeur Trafiqué", "Mod", 10.00},
+                    {"Neo T2", "Relique", 10.00}, {"Neo N14", "Relique", 10.00},
+                    {"Neo N13", "Relique", 10.00}, {"Neo Z7", "Relique", 10.00},
+                    {"Neo P2", "Relique", 10.00}, {"Neo B7", "Relique", 10.00},
+                    {"Neo N15", "Relique", 10.00}
                 },
                 ["B"] = {
                     {"Nuée de Dards", "Mod", 6.67},
@@ -268,10 +272,10 @@ local DropData = {
                     {"Antre de l'Enfer", "Mod", 6.67},
                     {"Rationalisation", "Mod", 6.67},
                     {"Toucher Choquant", "Mod", 6.67},
-                    {"Endo", "Endo", 6.67, 50}, {"Axi A6", "Relique", 6.67},
-                    {"Axi A9", "Relique", 6.67}, {"Axi B3", "Relique", 6.67},
-                    {"Axi G4", "Relique", 6.67}, {"Axi T4", "Relique", 6.67},
-                    {"Axi T5", "Relique", 6.67}, {"Axi A10", "Relique", 6.67}
+                    {"Endo", "Endo", 6.67, 200}, {"Axi A11", "Relique", 6.67},
+                    {"Axi O5", "Relique", 6.67}, {"Axi A13", "Relique", 6.67},
+                    {"Axi W2", "Relique", 6.67}, {"Axi C6", "Relique", 6.67},
+                    {"Axi Z1", "Relique", 6.67}, {"Axi T6", "Relique", 6.67}
                 },
                 ["C"] = {
                     {"Perception Vitale", "Mod", 2.26},
@@ -281,11 +285,11 @@ local DropData = {
                     {"Convulsion", "Mod", 2.26},
                     {"Chambre Divisée", "Mod", 2.26},
                     {"Continuité", "Mod", 2.26},
-                    {"Maître Voleur", "Mod", 2.26}, {"Endo", "Endo", 2.26, 80},
-                    {"Axi A6", "Relique", 11.06}, {"Axi A9", "Relique", 11.06},
-                    {"Axi B3", "Relique", 11.06}, {"Axi G4", "Relique", 11.06},
-                    {"Axi T4", "Relique", 11.06}, {"Axi T5", "Relique", 11.06},
-                    {"Axi A10", "Relique", 11.06}
+                    {"Maître Voleur", "Mod", 2.26},
+                    {"Endo", "Endo", 2.26, 400}, {"Axi A11", "Relique", 11.06},
+                    {"Axi O5", "Relique", 11.06}, {"Axi A13", "Relique", 11.06},
+                    {"Axi W2", "Relique", 11.06}, {"Axi C6", "Relique", 11.06},
+                    {"Axi Z1", "Relique", 11.06}, {"Axi T6", "Relique", 11.06}
                 }
             }
         }, {
@@ -296,18 +300,18 @@ local DropData = {
             ShortName = "[[Dark Sector|DS]]",
             Rewards = {
                 ["A"] = {
-                    {"Vitalité", "Mod", 7.59},
-                    {"Déviation Rapide", "Mod", 7.59}, {"Course", "Mod", 7.37},
-                    {"Mutation de Chargeur", "Mod", 7.59},
-                    {"Chargeur Trafiqué", "Mod", 7.59},
+                    {"Vitalité", "Mod", 6.90},
+                    {"Déviation Rapide", "Mod", 6.90}, {"Course", "Mod", 7.37},
+                    {"Mutation de Chargeur", "Mod", 6.90},
+                    {"Chargeur Trafiqué", "Mod", 6.90},
                     {"Point de Pression", "Mod", 1.01},
                     {"Tambour de Munitions", "Mod", 7.37},
                     {"Mains Rapides", "Mod", 7.37},
                     {"Véritable Punition", "Mod", 1.01},
-                    {"Lith C4", "Relique", 6.9}, {"Lith S8", "Relique", 6.9},
-                    {"Lith W2", "Relique", 6.9}, {"Lith D1", "Relique", 6.9},
-                    {"Lith C6", "Relique", 6.9}, {"Lith M5", "Relique", 6.9},
-                    {"Lith N4", "Relique", 6.9}
+                    {"Lith D4", "Relique", 6.90}, {"Lith B8", "Relique", 6.90},
+                    {"Lith G3", "Relique", 6.90}, {"Lith P5", "Relique", 6.90},
+                    {"Lith T5", "Relique", 6.90}, {"Lith I1", "Relique", 6.90},
+                    {"Lith T4", "Relique", 6.90}
                 },
                 ["B"] = {
                     {"Détente Rapide", "Mod", 8.43},
@@ -325,10 +329,10 @@ local DropData = {
                     {"Point de Pression", "Mod", 8.43},
                     {"Véritable Punition", "Mod", 0.67},
                     {"Accélération", "Mod", 0.67},
-                    {"Meso C4", "Relique", 1.58}, {"Meso B4", "Relique", 1.58},
-                    {"Meso D4", "Relique", 1.58}, {"Meso N9", "Relique", 1.58},
-                    {"Meso E4", "Relique", 1.58}, {"Meso R3", "Relique", 1.58},
-                    {"Meso C5", "Relique", 1.58}
+                    {"Meso C6", "Relique", 1.58}, {"Meso P2", "Relique", 1.58},
+                    {"Meso K3", "Relique", 1.58}, {"Meso P4", "Relique", 1.58},
+                    {"Meso D6", "Relique", 1.58}, {"Meso I1", "Relique", 1.58},
+                    {"Meso T4", "Relique", 1.58}
                 },
                 ["C"] = {
                     {"Feu des Enfers", "Mod", 7.59},
@@ -336,36 +340,36 @@ local DropData = {
                     {"Impact Brûlant", "Mod", 1.84},
                     {"Canon à Diffusion", "Mod", 1.84},
                     {"Rationalisation", "Mod", 1.84},
-                    {"Intensité", "Mod", 1.84}, {"Coup de Foudre", "Mod", 0.4},
-                    {"Endo", "Endo", 7.59, 50}, {"Endo", "Endo", 1.84, 80},
-                    {"Véritable Punition", "Mod", 0.4},
-                    {"Accélération", "Mod", 0.4},
-                    {"Frappe Durable", "Mod", 0.4},
-                    {"Frappe Vitale", "Mod", 0.4}, {"Meso P3", "Relique", 7.59},
-                    {"Meso P2", "Relique", 7.59}, {"Meso K3", "Relique", 7.59},
-                    {"Meso N9", "Relique", 7.59}, {"Meso E4", "Relique", 7.59},
-                    {"Meso I1", "Relique", 7.59}, {"Meso N10", "Relique", 7.59},
-                    {"Neo T2", "Relique", 1.84}, {"Neo A3", "Relique", 1.84},
-                    {"Neo Z5", "Relique", 1.84}, {"Neo I2", "Relique", 1.84},
-                    {"Neo T3", "Relique", 1.84}, {"Neo M3", "Relique", 1.84},
-                    {"Neo R4", "Relique", 1.84}
+                    {"Intensité", "Mod", 1.84},
+                    {"Coup de Foudre", "Mod", 0.40}, {"Endo", "Endo", 7.59, 80},
+                    {"Endo", "Endo", 1.84, 80},
+                    {"Véritable Punition", "Mod", 0.40},
+                    {"Accélération", "Mod", 0.40},
+                    {"Frappe Durable", "Mod", 0.40},
+                    {"Frappe Vitale", "Mod", 0.40},
+                    {"Meso C6", "Relique", 7.59}, {"Meso P2", "Relique", 7.59},
+                    {"Meso K3", "Relique", 7.59}, {"Meso P4", "Relique", 7.59},
+                    {"Meso D6", "Relique", 7.59}, {"Meso I1", "Relique", 7.59},
+                    {"Meso T4", "Relique", 7.59}, {"Neo T2", "Relique", 1.84},
+                    {"Neo N14", "Relique", 1.84}, {"Neo N13", "Relique", 1.84},
+                    {"Neo Z7", "Relique", 1.84}, {"Neo P2", "Relique", 1.84},
+                    {"Neo B7", "Relique", 1.84}, {"Neo N15", "Relique", 1.84}
                 }
             }
         }, {
             Type = "Défense",
             Tier = "Épave Orokin",
-            Alias = "DeReliquetDéfense",
+            Alias = "DerelictDéfense",
             ShortName = "[[Épave Orokin DeReliquet|Épave]]",
             Rewards = {
                 ["A"] = {
                     {"Endo", "Endo", 11.11, 250}, {"Endo", "Endo", 11.11, 250},
-                    {"Lith C6", "Relique", 11.11},
-                    {"Lith D1", "Relique", 11.11},
-                    {"Lith D2", "Relique", 11.11},
-                    {"Lith M5", "Relique", 11.11},
-                    {"Lith M6", "Relique", 11.11},
-                    {"Lith P3", "Relique", 11.11},
-                    {"Lith S10", "Relique", 11.11}
+                    {"Lith D4", "Relique", 11.11},
+                    {"Lith B8", "Relique", 11.11},
+                    {"Lith G3", "Relique", 11.11},
+                    {"Lith P5", "Relique", 11.11},
+                    {"Lith T5", "Relique", 11.11},
+                    {"Lith I1", "Relique", 11.11}, {"Lith T4", "Relique", 11.11}
                 },
                 ["B"] = {
                     {"Endo", "Endo", 38.72, 250}, {"Endo", "Endo", 38.72, 250},
@@ -373,12 +377,12 @@ local DropData = {
                 },
                 ["C"] = {
                     {"{{Icon|Item|Forma|text}}", "Schéma", 22.56},
-                    {"Meso E4", "Relique", 11.06},
+                    {"Meso P4", "Relique", 11.06},
+                    {"Meso C6", "Relique", 11.06},
                     {"Meso I1", "Relique", 11.06},
+                    {"Meso P2", "Relique", 11.06},
                     {"Meso K3", "Relique", 11.06},
-                    {"Meso N10", "Relique", 11.06},
-                    {"Meso N9", "Relique", 11.06},
-                    {"Meso P2", "Relique", 11.06}, {"Meso P3", "Relique", 11.06}
+                    {"Meso D6", "Relique", 11.06}, {"Meso T4", "Relique", 11.06}
                 }
             }
         }, {
@@ -388,30 +392,36 @@ local DropData = {
             ShortName = "[[Néant]]",
             Rewards = {
                 ["A"] = {
-                    {"Lith C4", "Relique", 12.5}, {"Lith S8", "Relique", 12.5},
-                    {"Lith C6", "Relique", 12.5}, {"Lith M5", "Relique", 12.5},
-                    {"Lith W2", "Relique", 12.5}, {"Lith D1", "Relique", 12.5},
-                    {"Lith K4", "Relique", 12.5}, {"Lith N4", "Relique", 12.5}
+                    {"Lith D4", "Relique", 11.11},
+                    {"Lith B8", "Relique", 11.11},
+                    {"Lith G3", "Relique", 11.11},
+                    {"Lith P5", "Relique", 11.11},
+                    {"Lith T5", "Relique", 11.11},
+                    {"Lith I1", "Relique", 11.11},
+                    {"Lith K5", "Relique", 11.11},
+                    {"Lith M7", "Relique", 11.11}, {"Lith T4", "Relique", 11.11}
                 },
                 ["B"] = {
-                    {"Meso E4", "Relique", 2.82}, {"Meso C4", "Relique", 2.82},
-                    {"Meso R3", "Relique", 2.82}, {"Meso B4", "Relique", 2.82},
-                    {"Lith C4", "Relique", 9.68}, {"Lith S8", "Relique", 9.68},
-                    {"Lith C6", "Relique", 9.68}, {"Lith M5", "Relique", 9.68},
-                    {"Lith W2", "Relique", 9.68}, {"Lith D1", "Relique", 9.68},
-                    {"Meso D4", "Relique", 2.82}, {"Meso N9", "Relique", 2.82},
-                    {"Meso C5", "Relique", 2.82}, {"Lith K4", "Relique", 9.68},
-                    {"Meso D5", "Relique", 2.82}, {"Lith N4", "Relique", 9.68}
+                    {"Meso P4", "Relique", 2.82}, {"Meso C6", "Relique", 2.82},
+                    {"Meso I1", "Relique", 2.82}, {"Meso P2", "Relique", 2.82},
+                    {"Lith D4", "Relique", 8.60}, {"Lith B8", "Relique", 8.60},
+                    {"Lith G3", "Relique", 8.60}, {"Lith P5", "Relique", 8.60},
+                    {"Lith T5", "Relique", 8.60}, {"Lith I1", "Relique", 8.60},
+                    {"Meso K3", "Relique", 2.82}, {"Meso D6", "Relique", 2.82},
+                    {"Meso T4", "Relique", 2.82}, {"Lith T4", "Relique", 8.60},
+                    {"Lith K5", "Relique", 8.60}, {"Lith M7", "Relique", 8.60},
+                    {"Meso E5", "Relique", 2.82}
                 },
                 ["C"] = {
-                    {"Meso E4", "Relique", 6.25}, {"Meso C4", "Relique", 6.25},
-                    {"Meso R3", "Relique", 6.25}, {"Meso B4", "Relique", 6.25},
-                    {"Lith C4", "Relique", 6.25}, {"Lith S8", "Relique", 6.25},
-                    {"Lith C6", "Relique", 6.25}, {"Lith M5", "Relique", 6.25},
-                    {"Lith W2", "Relique", 6.25}, {"Lith D1", "Relique", 6.25},
-                    {"Meso D4", "Relique", 6.25}, {"Meso N9", "Relique", 6.25},
-                    {"Meso C5", "Relique", 6.25}, {"Lith K4", "Relique", 6.25},
-                    {"Meso D5", "Relique", 6.25}, {"Lith N4", "Relique", 6.25}
+                    {"Meso P4", "Relique", 5.88}, {"Meso C6", "Relique", 5.88},
+                    {"Meso I1", "Relique", 5.88}, {"Meso P2", "Relique", 5.88},
+                    {"Lith D4", "Relique", 5.88}, {"Lith B8", "Relique", 5.88},
+                    {"Lith G3", "Relique", 5.88}, {"Lith P5", "Relique", 5.88},
+                    {"Lith T5", "Relique", 5.88}, {"Lith I1", "Relique", 5.88},
+                    {"Meso K3", "Relique", 5.88}, {"Meso D6", "Relique", 5.88},
+                    {"Meso T4", "Relique", 5.88}, {"Lith K5", "Relique", 5.88},
+                    {"Lith M7", "Relique", 5.88}, {"Meso E5", "Relique", 5.88},
+                    {"Lith T4", "Relique", 5.88}
                 }
             }
         }, {
@@ -421,30 +431,31 @@ local DropData = {
             ShortName = "[[Néant]]",
             Rewards = {
                 ["A"] = {
-                    {"Meso E4", "Relique", 6.25}, {"Meso C4", "Relique", 6.25},
-                    {"Meso R3", "Relique", 6.25}, {"Meso B4", "Relique", 6.25},
-                    {"Meso D4", "Relique", 6.25}, {"Meso N9", "Relique", 6.25},
-                    {"Meso C5", "Relique", 6.25}, {"Meso D5", "Relique", 6.25},
-                    {"Neo T2", "Relique", 6.25}, {"Neo A3", "Relique", 6.25},
-                    {"Neo Z5", "Relique", 6.25}, {"Neo I2", "Relique", 6.25},
-                    {"Neo P1", "Relique", 6.25}, {"Neo M3", "Relique", 6.25},
-                    {"Neo R4", "Relique", 6.25}, {"Neo N12", "Relique", 6.25}
+                    {"Meso P4", "Relique", 6.25}, {"Meso C6", "Relique", 6.25},
+                    {"Meso I1", "Relique", 6.25}, {"Meso P2", "Relique", 6.25},
+                    {"Meso K3", "Relique", 6.25}, {"Meso D6", "Relique", 6.25},
+                    {"Meso T4", "Relique", 6.25}, {"Meso E5", "Relique", 6.25},
+                    {"Neo T2", "Relique", 6.25}, {"Neo N14", "Relique", 6.25},
+                    {"Neo N13", "Relique", 6.25}, {"Neo Z7", "Relique", 6.25},
+                    {"Neo P2", "Relique", 6.25}, {"Neo B7", "Relique", 6.25},
+                    {"Neo N15", "Relique", 6.25}, {"Neo B6", "Relique", 6.25}
                 },
                 ["B"] = {
-                    {"Neo T2", "Relique", 12.5}, {"Neo A3", "Relique", 12.5},
-                    {"Neo Z5", "Relique", 12.5}, {"Neo I2", "Relique", 12.5},
-                    {"Neo P1", "Relique", 12.5}, {"Neo M3", "Relique", 12.5},
-                    {"Neo R4", "Relique", 12.5}, {"Neo N12", "Relique", 12.5}
+                    {"Neo T2", "Relique", 12.50}, {"Neo N14", "Relique", 12.50},
+                    {"Neo N13", "Relique", 12.50}, {"Neo Z7", "Relique", 12.50},
+                    {"Neo P2", "Relique", 12.50}, {"Neo B7", "Relique", 12.50},
+                    {"Neo N15", "Relique", 12.50}, {"Neo B6", "Relique", 12.50}
                 },
                 ["C"] = {
-                    {"Neo T2", "Relique", 9.68}, {"Neo A3", "Relique", 9.68},
-                    {"Neo Z5", "Relique", 9.68}, {"Neo I2", "Relique", 9.68},
-                    {"Neo P1", "Relique", 9.68}, {"Neo M3", "Relique", 9.68},
-                    {"Neo R4", "Relique", 9.68}, {"Neo N12", "Relique", 9.68},
-                    {"Axi G4", "Relique", 2.82}, {"Axi T4", "Relique", 2.82},
-                    {"Axi A6", "Relique", 2.82}, {"Axi T5", "Relique", 2.82},
-                    {"Axi A9", "Relique", 2.82}, {"Axi A10", "Relique", 2.82},
-                    {"Axi B3", "Relique", 2.82}, {"Axi S7", "Relique", 2.82}
+                    {"Neo T2", "Relique", 9.68}, {"Neo N14", "Relique", 9.68},
+                    {"Neo N13", "Relique", 9.68}, {"Neo Z7", "Relique", 9.68},
+                    {"Neo P2", "Relique", 9.68}, {"Neo B7", "Relique", 9.68},
+                    {"Neo N15", "Relique", 9.68}, {"Neo B6", "Relique", 9.68},
+                    {"Axi O5", "Relique", 2.51}, {"Axi A13", "Relique", 2.51},
+                    {"Axi A11", "Relique", 2.51}, {"Axi Z1", "Relique", 2.51},
+                    {"Axi W2", "Relique", 2.51}, {"Axi C6", "Relique", 2.51},
+                    {"Axi T6", "Relique", 2.51}, {"Axi H5", "Relique", 2.51},
+                    {"Axi A12", "Relique", 2.51}
                 }
             }
         }, {
@@ -454,28 +465,28 @@ local DropData = {
             ShortName = "[[Mars]]",
             Rewards = {
                 ["A"] = {
-                    {"Lith C4", "Relique", 14.29},
-                    {"Lith S8", "Relique", 14.29},
-                    {"Lith D1", "Relique", 14.29},
-                    {"Lith W2", "Relique", 14.29},
-                    {"Lith C6", "Relique", 14.29},
-                    {"Lith M5", "Relique", 14.29}, {"Lith N4", "Relique", 14.29}
+                    {"Lith D4", "Relique", 14.29},
+                    {"Lith B8", "Relique", 14.29},
+                    {"Lith G3", "Relique", 14.29},
+                    {"Lith P5", "Relique", 14.29},
+                    {"Lith T5", "Relique", 14.29},
+                    {"Lith I1", "Relique", 14.29}, {"Lith T4", "Relique", 14.29}
                 },
                 ["B"] = {
-                    {"Lith C4", "Relique", 14.29},
-                    {"Lith S8", "Relique", 14.29},
-                    {"Lith D1", "Relique", 14.29},
-                    {"Lith W2", "Relique", 14.29},
-                    {"Lith C6", "Relique", 14.29},
-                    {"Lith M5", "Relique", 14.29}, {"Lith N4", "Relique", 14.29}
+                    {"Lith D4", "Relique", 14.29},
+                    {"Lith B8", "Relique", 14.29},
+                    {"Lith G3", "Relique", 14.29},
+                    {"Lith P5", "Relique", 14.29},
+                    {"Lith T5", "Relique", 14.29},
+                    {"Lith I1", "Relique", 14.29}, {"Lith T4", "Relique", 14.29}
                 },
                 ["C"] = {
-                    {"Meso C4", "Relique", 14.29},
-                    {"Meso B4", "Relique", 14.29},
-                    {"Meso D4", "Relique", 14.29},
-                    {"Meso N9", "Relique", 14.29},
-                    {"Meso E4", "Relique", 14.29},
-                    {"Meso R3", "Relique", 14.29}, {"Meso C5", "Relique", 14.29}
+                    {"Meso C6", "Relique", 14.29},
+                    {"Meso P2", "Relique", 14.29},
+                    {"Meso K3", "Relique", 14.29},
+                    {"Meso P4", "Relique", 14.29},
+                    {"Meso D6", "Relique", 14.29},
+                    {"Meso I1", "Relique", 14.29}, {"Meso T4", "Relique", 14.29}
                 }
             }
         }, {
@@ -486,32 +497,33 @@ local DropData = {
             Rewards = {
                 ["A"] = {
                     {"Hexenon", "Ressource", 27.78, 5},
-                    {"Meso R2", "Relique", 5.56}, {"Meso C4", "Relique", 5.56},
-                    {"Meso L1", "Relique", 5.56}, {"Meso B4", "Relique", 5.56},
-                    {"Meso D4", "Relique", 5.56}, {"Meso E3", "Relique", 5.56},
-                    {"Meso N9", "Relique", 5.56},
+                    {"Meso C6", "Relique", 5.56}, {"Meso P2", "Relique", 5.56},
+                    {"Meso K3", "Relique", 5.56}, {"Meso P4", "Relique", 5.56},
                     {"Impulsion Proton", "Mod", 11.11},
                     {"Signal Motus", "Mod", 11.11},
-                    {"Périphérie Aéro", "Mod", 11.11}
+                    {"Périphérie Aéro", "Mod", 11.11},
+                    {"Meso D6", "Relique", 5.56}, {"Meso I1", "Relique", 5.56},
+                    {"Meso T4", "Relique", 5.56}
                 },
                 ["B"] = {
                     {"Hexenon", "Ressource", 27.78, 10},
-                    {"Neo T2", "Relique", 5.56}, {"Neo A3", "Relique", 5.56},
-                    {"Neo Z5", "Relique", 5.56}, {"Neo M2", "Relique", 5.56},
-                    {"Neo I1", "Relique", 5.56}, {"Neo R3", "Relique", 5.56},
-                    {"Neo G2", "Relique", 5.56}, {"Jet Proton", "Mod", 11.11},
+                    {"Neo T2", "Relique", 5.56}, {"Neo N14", "Relique", 5.56},
+                    {"Neo N13", "Relique", 5.56}, {"Jet Proton", "Mod", 11.11},
                     {"Impact Motus", "Mod", 11.11},
-                    {"Avantage Aéro", "Mod", 11.11}
+                    {"Avantage Aéro", "Mod", 11.11},
+                    {"Neo Z7", "Relique", 5.56}, {"Neo P2", "Relique", 5.56},
+                    {"Neo B7", "Relique", 5.56}, {"Neo N15", "Relique", 5.56}
                 },
                 ["C"] = {
-                    {"Hexenon", "Ressource", 30, 15}, {"Axi D2", "Relique", 5},
-                    {"Axi A6", "Relique", 5}, {"Axi A8", "Relique", 5},
-                    {"Axi P3", "Relique", 5}, {"Axi T3", "Relique", 5},
-                    {"Axi B3", "Relique", 5}, {"Axi A9", "Relique", 5},
-                    {"Claquement Proton", "Mod", 10},
-                    {"Configuration Motus", "Mod", 10},
-                    {"Agilité Aéro", "Mod", 10},
-                    {"Universal Medallion", "Ressource", 5}
+                    {"Hexenon", "Ressource", 30.00, 15},
+                    {"Axi A11", "Relique", 5.00}, {"Axi O5", "Relique", 5.00},
+                    {"Axi A13", "Relique", 5.00},
+                    {"Claquement Proton", "Mod", 10.00},
+                    {"Configuration Motus", "Mod", 10.00},
+                    {"Agilité Aéro", "Mod", 10.00},
+                    {"Médaillon Universel", "Ressource", 5.00},
+                    {"Axi W2", "Relique", 5.00}, {"Axi C6", "Relique", 5.00},
+                    {"Axi Z1", "Relique", 5.00}, {"Axi T6", "Relique", 5.00}
                 }
             }
         }, {
@@ -521,25 +533,25 @@ local DropData = {
             ShortName = "[[Uranus]]",
             Rewards = {
                 ["A"] = {
-                    {"Meso R2", "Relique", 14.29},
-                    {"Meso C4", "Relique", 14.29},
-                    {"Meso L1", "Relique", 14.29},
-                    {"Meso B4", "Relique", 14.29},
-                    {"Meso D4", "Relique", 14.29},
-                    {"Meso E3", "Relique", 14.29}, {"Meso N9", "Relique", 14.29}
+                    {"Meso C6", "Relique", 14.29},
+                    {"Meso P2", "Relique", 14.29},
+                    {"Meso K3", "Relique", 14.29},
+                    {"Meso P4", "Relique", 14.29},
+                    {"Meso D6", "Relique", 14.29},
+                    {"Meso I1", "Relique", 14.29}, {"Meso T4", "Relique", 14.29}
                 },
                 ["B"] = {
-                    {"Neo T2", "Relique", 14.29}, {"Neo A3", "Relique", 14.29},
-                    {"Neo Z5", "Relique", 14.29}, {"Neo M2", "Relique", 14.29},
-                    {"Neo I1", "Relique", 14.29}, {"Neo R3", "Relique", 14.29},
-                    {"Neo G2", "Relique", 14.29}
+                    {"Neo T2", "Relique", 14.29}, {"Neo N14", "Relique", 14.29},
+                    {"Neo N13", "Relique", 14.29}, {"Neo Z7", "Relique", 14.29},
+                    {"Neo P2", "Relique", 14.29}, {"Neo B7", "Relique", 14.29},
+                    {"Neo N15", "Relique", 14.29}
                 },
                 ["C"] = {
-                    {"Neo T2", "Relique", 13.56}, {"Neo A3", "Relique", 13.56},
-                    {"Neo Z5", "Relique", 13.56}, {"Neo M2", "Relique", 13.56},
-                    {"Neo I1", "Relique", 13.56}, {"Neo R3", "Relique", 13.56},
-                    {"Neo G2", "Relique", 13.56},
-                    {"Universal Medallion", "Ressource", 5.08}
+                    {"Neo T2", "Relique", 13.56}, {"Neo N14", "Relique", 13.56},
+                    {"Neo N13", "Relique", 13.56},
+                    {"Médaillon Universel", "Ressource", 5.08},
+                    {"Neo Z7", "Relique", 13.56}, {"Neo P2", "Relique", 13.56},
+                    {"Neo B7", "Relique", 13.56}, {"Neo N15", "Relique", 13.56}
                 }
             }
         }, {
@@ -552,7 +564,7 @@ local DropData = {
                 ["B"] = {{"Cache de Crédits", "Credits", 100, 30000}},
                 ["C"] = {
                     {"Cache de Crédits", "Credits", 95, 50000},
-                    {"Universal Medallion", "Ressource", 5}
+                    {"Médaillon Universel", "Ressource", 5}
                 }
             }
         }, {
@@ -562,28 +574,27 @@ local DropData = {
             ShortName = "[[Sedna]]",
             Rewards = {
                 ["A"] = {
-                    {"Meso R2", "Relique", 14.29},
-                    {"Meso C4", "Relique", 14.29},
-                    {"Meso L1", "Relique", 14.29},
-                    {"Meso B4", "Relique", 14.29},
-                    {"Meso D4", "Relique", 14.29},
-                    {"Meso E3", "Relique", 14.29}, {"Meso N9", "Relique", 14.29}
+                    {"Meso C6", "Relique", 14.29},
+                    {"Meso P2", "Relique", 14.29},
+                    {"Meso K3", "Relique", 14.29},
+                    {"Meso P4", "Relique", 14.29}, {"Neo Z7", "Relique", 14.29},
+                    {"Meso I1", "Relique", 14.29}, {"Meso T4", "Relique", 14.29}
                 },
                 ["B"] = {
-                    {"Neo T2", "Relique", 14.29}, {"Neo A3", "Relique", 14.29},
-                    {"Neo Z5", "Relique", 14.29}, {"Neo M2", "Relique", 14.29},
-                    {"Neo I1", "Relique", 14.29}, {"Neo R3", "Relique", 14.29},
-                    {"Neo G2", "Relique", 14.29}
+                    {"Neo T2", "Relique", 14.29}, {"Neo N14", "Relique", 14.29},
+                    {"Neo N13", "Relique", 14.29}, {"Neo Z7", "Relique", 14.29},
+                    {"Neo P2", "Relique", 14.29}, {"Neo B7", "Relique", 14.29},
+                    {"Neo N15", "Relique", 14.29}
                 },
                 ["C"] = {
-                    {"Axi D2", "Relique", 10.2}, {"Axi A6", "Relique", 10.2},
-                    {"Axi A8", "Relique", 10.2}, {"Axi P3", "Relique", 10.2},
-                    {"Axi T3", "Relique", 10.2}, {"Axi B3", "Relique", 10.2},
-                    {"Axi A9", "Relique", 10.2},
-                    {"Gauss Châssis Blueprint", "Schéma", 7.84},
-                    {"Gauss Neuroptiques Blueprint", "Schéma", 7.84},
-                    {"Gauss Systèmes Blueprint", "Schéma", 7.84},
-                    {"Universal Medallion", "Ressource", 5.1}
+                    {"Axi A11", "Relique", 10.20}, {"Axi O5", "Relique", 10.20},
+                    {"Axi A13", "Relique", 10.20},
+                    {"Gauss Châssis Schéma", "Schéma", 7.84},
+                    {"Gauss Neuroptiques Schéma", "Schéma", 7.84},
+                    {"Gauss Systèmes Schéma", "Schéma", 7.84},
+                    {"Médaillon Universel", "Ressource", 5.10},
+                    {"Axi W2", "Relique", 10.20}, {"Axi C6", "Relique", 10.20},
+                    {"Axi Z1", "Relique", 10.20}, {"Axi T6", "Relique", 10.20}
                 }
             }
         }, {
@@ -593,24 +604,24 @@ local DropData = {
             ShortName = "[[Lua]]",
             Rewards = {
                 ["A"] = {
-                    {"Neo T2", "Relique", 14.29}, {"Neo A3", "Relique", 14.29},
-                    {"Neo Z5", "Relique", 14.29}, {"Neo M2", "Relique", 14.29},
-                    {"Neo R3", "Relique", 14.29}, {"Neo I1", "Relique", 14.29},
-                    {"Neo G2", "Relique", 14.29}
+                    {"Neo T2", "Relique", 14.29}, {"Neo N14", "Relique", 14.29},
+                    {"Neo N13", "Relique", 14.29}, {"Neo Z7", "Relique", 14.29},
+                    {"Neo P2", "Relique", 14.29}, {"Neo B7", "Relique", 14.29},
+                    {"Neo N15", "Relique", 14.29}
                 },
                 ["B"] = {
-                    {"Axi D2", "Relique", 14.29}, {"Axi A6", "Relique", 14.29},
-                    {"Axi A8", "Relique", 14.29}, {"Axi P3", "Relique", 14.29},
-                    {"Axi T3", "Relique", 14.29}, {"Axi B3", "Relique", 14.29},
-                    {"Axi A9", "Relique", 14.29}
+                    {"Axi A11", "Relique", 14.29}, {"Axi O5", "Relique", 14.29},
+                    {"Axi A13", "Relique", 14.29}, {"Axi W2", "Relique", 14.29},
+                    {"Axi C6", "Relique", 14.29}, {"Axi Z1", "Relique", 14.29},
+                    {"Axi T6", "Relique", 14.29}
                 },
                 ["C"] = {
-                    {"Axi D2", "Relique", 12.42}, {"Axi A6", "Relique", 12.42},
-                    {"Axi A8", "Relique", 12.42}, {"Axi P3", "Relique", 12.42},
-                    {"Axi T3", "Relique", 12.42}, {"Axi B3", "Relique", 12.42},
-                    {"Axi A9", "Relique", 12.42},
-                    {"Lua Lens Blueprint", "Schéma", 8.05},
-                    {"Universal Medallion", "Ressource", 5.03}
+                    {"Axi A11", "Relique", 12.42}, {"Axi O5", "Relique", 12.42},
+                    {"Axi A13", "Relique", 12.42},
+                    {"Lentille Lua Schéma", "Schéma", 8.05},
+                    {"Médaillon Universel", "Ressource", 5.03},
+                    {"Axi W2", "Relique", 12.42}, {"Axi C6", "Relique", 12.42},
+                    {"Axi Z1", "Relique", 12.42}, {"Axi T6", "Relique", 12.42}
                 }
             }
         }, {
@@ -623,7 +634,7 @@ local DropData = {
                 ["B"] = {{"Kuva", "Ressource", 100, 200}},
                 ["C"] = {
                     {"Kuva", "Ressource", 95, 350},
-                    {"Universal Medallion", "Ressource", 5}
+                    {"Médaillon Universel", "Ressource", 5}
                 }
             }
         }, {
@@ -634,22 +645,22 @@ local DropData = {
             ShortName = "[[Récompense de Mission#Tier de Mission|T1]]",
             Rewards = {
                 ["A"] = {
-                    {"Cache de Crédits", "Credits", 14.29, 500},
-                    {"Cache de Crédits", "Credits", 14.29, 1000},
-                    {"Cache de Crédits", "Credits", 14.29, 1500},
                     {"Cache de Crédits", "Credits", 14.29, 2000},
-                    {"Endo", "Endo", 14.29, 15}, {"Endo", "Endo", 14.29, 50},
-                    {"Endo", "Endo", 14.29, 80}
+                    {"Cache de Crédits", "Credits", 14.29, 2000},
+                    {"Cache de Crédits", "Credits", 14.29, 2000},
+                    {"Cache de Crédits", "Credits", 14.29, 2000},
+                    {"Endo", "Endo", 14.29, 100}, {"Endo", "Endo", 14.29, 100},
+                    {"Endo", "Endo", 14.29, 100}
                 },
                 ["B"] = {
-                    {"Parade", "Mod", 8.33}, {"Fibre d'Acier", "Mod", 8.33},
-                    {"Dentelure", "Mod", 8.33},
-                    {"Balles Incendiaires", "Mod", 8.33},
-                    {"Nuée de Dards", "Mod", 8.33},
-                    {"Intensité", "Mod", 8.33}, {"Lith C4", "Relique", 8.33},
-                    {"Lith S8", "Relique", 8.33}, {"Lith L2", "Relique", 8.33},
-                    {"Lith M4", "Relique", 8.33}, {"Lith W2", "Relique", 8.33},
-                    {"Lith D1", "Relique", 8.33}
+                    {"Parade", "Mod", 7.69}, {"Fibre d'Acier", "Mod", 7.69},
+                    {"Dentelure", "Mod", 7.69},
+                    {"Balles Incendiaires", "Mod", 7.69},
+                    {"Nuée de Dards", "Mod", 7.69},
+                    {"Intensité", "Mod", 7.69}, {"Lith D4", "Relique", 7.69},
+                    {"Lith B8", "Relique", 7.69}, {"Lith G3", "Relique", 7.69},
+                    {"Lith P5", "Relique", 7.69}, {"Lith T5", "Relique", 7.69},
+                    {"Lith I1", "Relique", 7.69}, {"Lith T4", "Relique", 7.69}
                 },
                 ["C"] = {
                     {"Mutation de Flèches", "Mod", 3.76},
@@ -658,11 +669,12 @@ local DropData = {
                     {"Mutation de Munitions de Fusil à Pompe", "Mod", 3.76},
                     {"Mutation de Munitions de Pistolet", "Mod", 3.76},
                     {"Purifie-Grineer", "Mod", 3.76},
-                    {"Lith C4", "Relique", 12.91},
-                    {"Lith S8", "Relique", 12.91},
-                    {"Lith L2", "Relique", 12.91},
-                    {"Lith M4", "Relique", 12.91},
-                    {"Lith W2", "Relique", 12.91}, {"Lith D1", "Relique", 12.91}
+                    {"Lith D4", "Relique", 11.06},
+                    {"Lith B8", "Relique", 11.06},
+                    {"Lith G3", "Relique", 11.06},
+                    {"Lith P5", "Relique", 11.06},
+                    {"Lith T5", "Relique", 11.06},
+                    {"Lith I1", "Relique", 11.06}, {"Lith T4", "Relique", 11.06}
                 }
             }
         }, {
@@ -673,11 +685,11 @@ local DropData = {
             ShortName = "[[Récompense de Mission#Tier de Mission|T2]]",
             Rewards = {
                 ["A"] = {
-                    {"Cache de Crédits", "Credits", 16.67, 1500},
-                    {"Cache de Crédits", "Credits", 16.67, 2000},
                     {"Cache de Crédits", "Credits", 16.67, 2500},
-                    {"Endo", "Endo", 16.67, 15}, {"Endo", "Endo", 16.67, 50},
-                    {"Endo", "Endo", 16.67, 80}
+                    {"Cache de Crédits", "Credits", 16.67, 2500},
+                    {"Cache de Crédits", "Credits", 16.67, 2500},
+                    {"Endo", "Endo", 16.67, 100}, {"Endo", "Endo", 16.67, 100},
+                    {"Endo", "Endo", 16.67, 100}
                 },
                 ["B"] = {
                     {"Provocation", "Mod", 7.14},
@@ -686,10 +698,10 @@ local DropData = {
                     {"Déviation Rapide", "Mod", 7.14},
                     {"Cartouche Chargée", "Mod", 7.14},
                     {"Perception Vitale", "Mod", 7.14},
-                    {"Meso R2", "Relique", 7.14}, {"Meso C4", "Relique", 7.14},
-                    {"Meso L1", "Relique", 7.14}, {"Meso B4", "Relique", 7.14},
-                    {"Meso D4", "Relique", 7.14}, {"Meso N9", "Relique", 7.14},
-                    {"Meso E3", "Relique", 7.14}
+                    {"Meso C6", "Relique", 7.14}, {"Meso P2", "Relique", 7.14},
+                    {"Meso K3", "Relique", 7.14}, {"Meso P4", "Relique", 7.14},
+                    {"Meso D6", "Relique", 7.14}, {"Meso I1", "Relique", 7.14},
+                    {"Meso T4", "Relique", 7.14}
                 },
                 ["C"] = {
                     {"Purifie-Corpus", "Mod", 3.76},
@@ -698,10 +710,10 @@ local DropData = {
                     {"Mutation de Munitions de Fusil", "Mod", 3.76},
                     {"Mutation de Munitions de Sniper", "Mod", 3.76},
                     {"Mutation de Munitions de Fusil à Pompe", "Mod", 3.76},
-                    {"Neo Z5", "Relique", 11.06}, {"Neo M2", "Relique", 11.06},
-                    {"Neo I1", "Relique", 11.06}, {"Neo R3", "Relique", 11.06},
-                    {"Neo G2", "Relique", 11.06}, {"Neo T2", "Relique", 11.06},
-                    {"Neo A3", "Relique", 11.06}
+                    {"Neo N14", "Relique", 11.06}, {"Neo T2", "Relique", 11.06},
+                    {"Neo N13", "Relique", 11.06}, {"Neo Z7", "Relique", 11.06},
+                    {"Neo P2", "Relique", 11.06}, {"Neo B7", "Relique", 11.06},
+                    {"Neo N15", "Relique", 11.06}
                 }
             }
         }, {
@@ -712,10 +724,10 @@ local DropData = {
             ShortName = "[[Récompense de Mission#Tier de Mission|T3]]",
             Rewards = {
                 ["A"] = {
-                    {"Cache de Crédits", "Credits", 25, 2000},
-                    {"Cache de Crédits", "Credits", 25, 2500},
-                    {"Cache de Crédits", "Credits", 25, 3000},
-                    {"Endo", "Endo", 25, 400}
+                    {"Cache de Crédits", "Credits", 25.00, 3000},
+                    {"Cache de Crédits", "Credits", 25.00, 3000},
+                    {"Cache de Crédits", "Credits", 25.00, 3000},
+                    {"Endo", "Endo", 25.00, 400}
                 },
                 ["B"] = {
                     {"Fibre d'Acier", "Mod", 6.67}, {"Allonge", "Mod", 6.67},
@@ -724,9 +736,9 @@ local DropData = {
                     {"Nuée de Dards", "Mod", 6.67}, {"Flux", "Mod", 6.67},
                     {"Chambre Divisée", "Mod", 6.67},
                     {"Stabilisateur", "Mod", 6.67}, {"Neo T2", "Relique", 6.67},
-                    {"Neo A3", "Relique", 6.67}, {"Neo Z5", "Relique", 6.67},
-                    {"Neo M2", "Relique", 6.67}, {"Neo I1", "Relique", 6.67},
-                    {"Neo R3", "Relique", 6.67}, {"Neo G2", "Relique", 6.67}
+                    {"Neo N14", "Relique", 6.67}, {"Neo N13", "Relique", 6.67},
+                    {"Neo Z7", "Relique", 6.67}, {"Neo P2", "Relique", 6.67},
+                    {"Neo B7", "Relique", 6.67}, {"Neo N15", "Relique", 6.67}
                 },
                 ["C"] = {
                     {"Purifie-Infestés", "Mod", 3.76},
@@ -735,10 +747,10 @@ local DropData = {
                     {"Mutation de Munitions de Fusil", "Mod", 3.76},
                     {"Mutation de Munitions de Sniper", "Mod", 3.76},
                     {"Mutation de Munitions de Fusil à Pompe", "Mod", 3.76},
-                    {"Axi P3", "Relique", 11.06}, {"Axi D2", "Relique", 11.06},
-                    {"Axi A6", "Relique", 11.06}, {"Axi T3", "Relique", 11.06},
-                    {"Axi A9", "Relique", 11.06}, {"Axi A8", "Relique", 11.06},
-                    {"Axi B3", "Relique", 11.06}
+                    {"Axi A11", "Relique", 11.06}, {"Axi O5", "Relique", 11.06},
+                    {"Axi A13", "Relique", 11.06}, {"Axi W2", "Relique", 11.06},
+                    {"Axi C6", "Relique", 11.06}, {"Axi Z1", "Relique", 11.06},
+                    {"Axi T6", "Relique", 11.06}
                 }
             }
         }, {
@@ -866,31 +878,35 @@ local DropData = {
         }, {
             Type = "Extermination",
             Tier = "Néant T1",
-            Alias = "NéantExterminate1",
+            Alias = "NeantExtermination1",
             ShortName = "[[Néant]]",
             Rewards = {
                 ["A"] = {
-                    {"Lith M6", "Relique", 12.5}, {"Lith P3", "Relique", 12.5},
-                    {"Lith C6", "Relique", 12.5}, {"Lith M5", "Relique", 12.5},
-                    {"Lith S10", "Relique", 12.5}, {"Lith D1", "Relique", 12.5},
-                    {"Lith K4", "Relique", 12.5}, {"Lith D2", "Relique", 12.5}
+                    {"Lith D4", "Relique", 11.11},
+                    {"Lith B8", "Relique", 11.11},
+                    {"Lith G3", "Relique", 11.11},
+                    {"Lith P5", "Relique", 11.11},
+                    {"Lith T5", "Relique", 11.11},
+                    {"Lith I1", "Relique", 11.11},
+                    {"Lith K5", "Relique", 11.11},
+                    {"Lith M7", "Relique", 11.11}, {"Lith T4", "Relique", 11.11}
                 }
             }
         }, {
             Type = "Extermination",
             Tier = "Néant T3",
-            Alias = "NéantExterminate3",
+            Alias = "NéantExtermination3",
             ShortName = "[[Néant]]",
             Rewards = {
                 ["A"] = {
-                    {"Meso E4", "Relique", 6.25}, {"Meso C4", "Relique", 6.25},
-                    {"Meso R3", "Relique", 6.25}, {"Meso B4", "Relique", 6.25},
-                    {"Neo T2", "Relique", 6.25}, {"Neo A3", "Relique", 6.25},
-                    {"Neo Z5", "Relique", 6.25}, {"Neo I2", "Relique", 6.25},
-                    {"Meso D4", "Relique", 6.25}, {"Meso N9", "Relique", 6.25},
-                    {"Meso C5", "Relique", 6.25}, {"Neo P1", "Relique", 6.25},
-                    {"Neo M3", "Relique", 6.25}, {"Neo R4", "Relique", 6.25},
-                    {"Meso D5", "Relique", 6.25}, {"Neo N12", "Relique", 6.25}
+                    {"Meso P4", "Relique", 6.25}, {"Meso C6", "Relique", 6.25},
+                    {"Meso I1", "Relique", 6.25}, {"Meso P2", "Relique", 6.25},
+                    {"Neo T2", "Relique", 6.25}, {"Neo N14", "Relique", 6.25},
+                    {"Neo N13", "Relique", 6.25}, {"Neo Z7", "Relique", 6.25},
+                    {"Meso K3", "Relique", 6.25}, {"Meso D6", "Relique", 6.25},
+                    {"Meso T4", "Relique", 6.25}, {"Neo P2", "Relique", 6.25},
+                    {"Neo B7", "Relique", 6.25}, {"Neo N15", "Relique", 6.25},
+                    {"Meso E5", "Relique", 6.25}, {"Neo B6", "Relique", 6.25}
                 }
             }
         }, {
@@ -907,25 +923,27 @@ local DropData = {
                     {"Magasin Profond", "Mod", 2.51},
                     {"Munitions Modifiées", "Mod", 2.51},
                     {"Lunette Parallaxe", "Mod", 2.51},
-                    {"Canon Plaqué Rubedo", "Mod", 2.51},
-                    {"Chargeur Venimeux", "Mod", 2.51},
-                    {"Endo", "Endo", 38.72, 150}, {"Endo", "Endo", 38.72, 250}
+                    {"Canon Rubedo Doublé", "Mod", 2.51},
+                    {"Chargeur Vénimeux", "Mod", 2.51},
+                    {"Endo", "Endo", 38.72, 250}, {"Endo", "Endo", 38.72, 250}
                 },
                 ["B"] = {
-                    {"Défenses Supérieures", "Mod", 10},
-                    {"Rebord Saignant", "Mod", 10},
-                    {"Placage d'Argon", "Mod", 10}, {"Débordement", "Mod", 10},
-                    {"Endo", "Endo", 10, 250}, {"Rebord Glacial", "Mod", 10},
-                    {"Canon Électrifié", "Mod", 10},
-                    {"Inversion d'Énergie", "Mod", 10},
-                    {"Endo", "Endo", 10, 50}
+                    {"Défenses Supérieures", "Mod", 10.00},
+                    {"Rebord Saignant", "Mod", 10.00},
+                    {"Défenses Supérieures", "Mod", 10.00},
+                    {"Placage d'Argon", "Mod", 10.00},
+                    {"Débordement", "Mod", 10.00},
+                    {"Rebord Glacial", "Mod", 10.00},
+                    {"Canon Électrifié", "Mod", 10.00},
+                    {"Inversion d'Énergie", "Mod", 10.00},
+                    {"Endo", "Endo", 10.00, 250}, {"Endo", "Endo", 10.00, 250}
                 },
                 ["C"] = {
-                    {"Endo", "Endo", 22.56, 400}, {"Endo", "Endo", 9.68, 250},
-                    {"Axi P3", "Relique", 9.68}, {"Axi D2", "Relique", 9.68},
-                    {"Axi A6", "Relique", 9.68}, {"Axi T3", "Relique", 9.68},
-                    {"Axi A9", "Relique", 9.68}, {"Axi A8", "Relique", 9.68},
-                    {"Axi B3", "Relique", 9.68}
+                    {"Endo", "Endo", 22.56, 400}, {"Endo", "Endo", 9.68, 400},
+                    {"Axi A11", "Relique", 9.68}, {"Axi O5", "Relique", 9.68},
+                    {"Axi A13", "Relique", 9.68}, {"Axi Z1", "Relique", 9.68},
+                    {"Axi W2", "Relique", 9.68}, {"Axi C6", "Relique", 9.68},
+                    {"Axi T6", "Relique", 9.68}
                 }
             }
         }, {
@@ -936,13 +954,14 @@ local DropData = {
             ShortName = "[[Récompense de Mission#Tier de Mission|T1]]",
             Rewards = {
                 ["A"] = {
-                    {"Vitalité", "Mod", 9.09},
-                    {"Mutation de Chargeur", "Mod", 9.09},
-                    {"Chargeur Trafiqué", "Mod", 9.09},
-                    {"Lith C4", "Relique", 9.09}, {"Lith S8", "Relique", 9.09},
-                    {"Lith L2", "Relique", 9.09}, {"Lith D1", "Relique", 9.09},
-                    {"Meso B4", "Relique", 9.09}, {"Meso N9", "Relique", 9.09},
-                    {"Meso D4", "Relique", 9.09}, {"Lith W2", "Relique", 9.09}
+                    {"Vitalité", "Mod", 7.69},
+                    {"Mutation de Chargeur", "Mod", 7.69},
+                    {"Chargeur Trafiqué", "Mod", 7.69},
+                    {"Lith D4", "Relique", 7.69}, {"Lith B8", "Relique", 7.69},
+                    {"Lith G3", "Relique", 7.69}, {"Meso P2", "Relique", 7.69},
+                    {"Meso C6", "Relique", 7.69}, {"Meso K3", "Relique", 7.69},
+                    {"Lith P5", "Relique", 7.69}, {"Lith T5", "Relique", 7.69},
+                    {"Lith I1", "Relique", 7.69}, {"Lith T4", "Relique", 7.69}
                 },
                 ["B"] = {
                     {"Détente Rapide", "Mod", 5.88},
@@ -952,19 +971,19 @@ local DropData = {
                     {"Nuée de Dards", "Mod", 5.88},
                     {"Bobine Réflexe", "Mod", 5.88},
                     {"Froid Pénétrant", "Mod", 5.88},
-                    {"Vent du Nord", "Mod", 5.88}, {"Meso R2", "Relique", 5.88},
-                    {"Meso C4", "Relique", 5.88}, {"Meso L1", "Relique", 5.88},
-                    {"Meso B4", "Relique", 5.88}, {"Meso D4", "Relique", 5.88},
-                    {"Meso N9", "Relique", 5.88}, {"Meso E3", "Relique", 5.88}
+                    {"Vent du Nord", "Mod", 5.88}, {"Meso C6", "Relique", 5.88},
+                    {"Meso P2", "Relique", 5.88}, {"Meso K3", "Relique", 5.88},
+                    {"Meso P4", "Relique", 5.88}, {"Meso D6", "Relique", 5.88},
+                    {"Meso I1", "Relique", 5.88}, {"Meso T4", "Relique", 5.88}
                 },
                 ["C"] = {
                     {"Talent Naturel", "Mod", 2.58},
-                    {"Meso R2", "Relique", 13.92},
-                    {"Meso C4", "Relique", 13.92},
-                    {"Meso L1", "Relique", 13.92},
-                    {"Meso B4", "Relique", 13.92},
-                    {"Meso D4", "Relique", 13.92},
-                    {"Meso N9", "Relique", 13.92}, {"Meso E3", "Relique", 13.92}
+                    {"Meso C6", "Relique", 13.92},
+                    {"Meso P2", "Relique", 13.92},
+                    {"Meso K3", "Relique", 13.92},
+                    {"Meso P4", "Relique", 13.92},
+                    {"Meso D6", "Relique", 13.92},
+                    {"Meso I1", "Relique", 13.92}, {"Meso T4", "Relique", 13.92}
                 }
             }
         }, {
@@ -975,31 +994,33 @@ local DropData = {
             ShortName = "[[Récompense de Mission#Tier de Mission|T2]]",
             Rewards = {
                 ["A"] = {
-                    {"Vitalité", "Mod", 9.09},
-                    {"Mutation de Chargeur", "Mod", 9.09},
-                    {"Chargeur Trafiqué", "Mod", 9.09},
-                    {"Endo", "Endo", 9.09, 15}, {"Meso R2", "Relique", 9.09},
-                    {"Meso C4", "Relique", 9.09}, {"Meso L1", "Relique", 9.09},
-                    {"Meso B4", "Relique", 9.09}, {"Meso D4", "Relique", 9.09},
-                    {"Meso N9", "Relique", 9.09}, {"Meso E3", "Relique", 9.09}
+                    {"Vitalité", "Mod", 10.00},
+                    {"Mutation de Chargeur", "Mod", 10.00},
+                    {"Chargeur Trafiqué", "Mod", 10.00},
+                    {"Meso C6", "Relique", 10.00},
+                    {"Meso P2", "Relique", 10.00},
+                    {"Meso K3", "Relique", 10.00},
+                    {"Meso P4", "Relique", 10.00},
+                    {"Meso D6", "Relique", 10.00},
+                    {"Meso I1", "Relique", 10.00}, {"Meso T4", "Relique", 10.00}
                 },
                 ["B"] = {
-                    {"Craque-Cibles", "Mod", 6.67},
-                    {"Sans Retour", "Mod", 6.67}, {"Dentelure", "Mod", 6.67},
-                    {"Nuée de Dards", "Mod", 6.67},
-                    {"Bobine Réflexe", "Mod", 6.67},
-                    {"Vent du Nord", "Mod", 6.67},
-                    {"Antre de l'Enfer", "Mod", 6.67},
-                    {"Endo", "Endo", 6.67, 50}, {"Neo T2", "Relique", 6.67},
-                    {"Neo A3", "Relique", 6.67}, {"Neo Z5", "Relique", 6.67},
-                    {"Neo M2", "Relique", 6.67}, {"Neo I1", "Relique", 6.67},
-                    {"Neo R3", "Relique", 6.67}, {"Neo G2", "Relique", 6.67}
+                    {"Craque-Cibles", "Mod", 7.14},
+                    {"Sans Retour", "Mod", 7.14}, {"Dentelure", "Mod", 7.14},
+                    {"Nuée de Dards", "Mod", 7.14},
+                    {"Bobine Réflexe", "Mod", 7.14},
+                    {"Vent du Nord", "Mod", 7.14},
+                    {"Antre de l'Enfer", "Mod", 7.14},
+                    {"Neo T2", "Relique", 7.14}, {"Neo N14", "Relique", 7.14},
+                    {"Neo N13", "Relique", 7.14}, {"Neo Z7", "Relique", 7.14},
+                    {"Neo P2", "Relique", 7.14}, {"Neo B7", "Relique", 7.14},
+                    {"Neo N15", "Relique", 7.14}
                 },
                 ["C"] = {
-                    {"Neo T2", "Relique", 14.29}, {"Neo A3", "Relique", 14.29},
-                    {"Neo Z5", "Relique", 14.29}, {"Neo M2", "Relique", 14.29},
-                    {"Neo I1", "Relique", 14.29}, {"Neo R3", "Relique", 14.29},
-                    {"Neo G2", "Relique", 14.29}
+                    {"Neo T2", "Relique", 14.29}, {"Neo N14", "Relique", 14.29},
+                    {"Neo N13", "Relique", 14.29}, {"Neo Z7", "Relique", 14.29},
+                    {"Neo P2", "Relique", 14.29}, {"Neo B7", "Relique", 14.29},
+                    {"Neo N15", "Relique", 14.29}
                 }
             }
         }, {
@@ -1010,25 +1031,25 @@ local DropData = {
             ShortName = "[[Récompense de Mission#Tier de Mission|T3]]",
             Rewards = {
                 ["A"] = {
-                    {"Vitalité", "Mod", 10},
-                    {"Mutation de Chargeur", "Mod", 10},
-                    {"Chargeur Trafiqué", "Mod", 10},
-                    {"Neo T2", "Relique", 10}, {"Neo A3", "Relique", 10},
-                    {"Neo Z5", "Relique", 10}, {"Neo M2", "Relique", 10},
-                    {"Neo I1", "Relique", 10}, {"Neo R3", "Relique", 10},
-                    {"Neo G2", "Relique", 10}
+                    {"Vitalité", "Mod", 10.00},
+                    {"Mutation de Chargeur", "Mod", 10.00},
+                    {"Chargeur Trafiqué", "Mod", 10.00},
+                    {"Neo T2", "Relique", 10.00}, {"Neo N14", "Relique", 10.00},
+                    {"Neo N13", "Relique", 10.00}, {"Neo Z7", "Relique", 10.00},
+                    {"Neo P2", "Relique", 10.00}, {"Neo B7", "Relique", 10.00},
+                    {"Neo N15", "Relique", 10.00}
                 },
                 ["B"] = {
-                    {"Axi P3", "Relique", 14.29}, {"Axi D2", "Relique", 14.29},
-                    {"Axi A6", "Relique", 14.29}, {"Axi T3", "Relique", 14.29},
-                    {"Axi A9", "Relique", 14.29}, {"Axi A8", "Relique", 14.29},
-                    {"Axi B3", "Relique", 14.29}
+                    {"Axi A11", "Relique", 14.29}, {"Axi O5", "Relique", 14.29},
+                    {"Axi A13", "Relique", 14.29}, {"Axi W2", "Relique", 14.29},
+                    {"Axi C6", "Relique", 14.29}, {"Axi Z1", "Relique", 14.29},
+                    {"Axi T6", "Relique", 14.29}
                 },
                 ["C"] = {
-                    {"Axi P3", "Relique", 14.29}, {"Axi D2", "Relique", 14.29},
-                    {"Axi A6", "Relique", 14.29}, {"Axi T3", "Relique", 14.29},
-                    {"Axi A9", "Relique", 14.29}, {"Axi A8", "Relique", 14.29},
-                    {"Axi B3", "Relique", 14.29}
+                    {"Axi A11", "Relique", 14.29}, {"Axi O5", "Relique", 14.29},
+                    {"Axi A13", "Relique", 14.29}, {"Axi W2", "Relique", 14.29},
+                    {"Axi C6", "Relique", 14.29}, {"Axi Z1", "Relique", 14.29},
+                    {"Axi T6", "Relique", 14.29}
                 }
             }
         }, {
@@ -1038,22 +1059,23 @@ local DropData = {
             ShortName = "[[Néant]]",
             Rewards = {
                 ["A"] = {
-                    {"Neo T2", "Relique", 12.5}, {"Neo A3", "Relique", 12.5},
-                    {"Neo Z5", "Relique", 12.5}, {"Neo M2", "Relique", 12.5},
-                    {"Neo I1", "Relique", 12.5}, {"Neo R3", "Relique", 12.5},
-                    {"Neo G2", "Relique", 12.5}, {"Neo A4", "Relique", 12.5}
+                    {"Neo T2", "Relique", 12.50}, {"Neo N14", "Relique", 12.50},
+                    {"Neo N13", "Relique", 12.50}, {"Neo Z7", "Relique", 12.50},
+                    {"Neo P2", "Relique", 12.50}, {"Neo B7", "Relique", 12.50},
+                    {"Neo N15", "Relique", 12.50}, {"Neo B6", "Relique", 12.50}
                 },
                 ["B"] = {
-                    {"Neo T2", "Relique", 12.5}, {"Neo A3", "Relique", 12.5},
-                    {"Neo Z5", "Relique", 12.5}, {"Neo M2", "Relique", 12.5},
-                    {"Neo I1", "Relique", 12.5}, {"Neo R3", "Relique", 12.5},
-                    {"Neo G2", "Relique", 12.5}, {"Neo A4", "Relique", 12.5}
+                    {"Neo T2", "Relique", 12.50}, {"Neo N14", "Relique", 12.50},
+                    {"Neo N13", "Relique", 12.50}, {"Neo Z7", "Relique", 12.50},
+                    {"Neo P2", "Relique", 12.50}, {"Neo B7", "Relique", 12.50},
+                    {"Neo N15", "Relique", 12.50}, {"Neo B6", "Relique", 12.50}
                 },
                 ["C"] = {
-                    {"Axi P3", "Relique", 12.5}, {"Axi D2", "Relique", 12.5},
-                    {"Axi A6", "Relique", 12.5}, {"Axi T3", "Relique", 12.5},
-                    {"Axi A9", "Relique", 12.5}, {"Axi A8", "Relique", 12.5},
-                    {"Axi B3", "Relique", 12.5}, {"Axi A7", "Relique", 12.5}
+                    {"Axi O5", "Relique", 11.11}, {"Axi A13", "Relique", 11.11},
+                    {"Axi A11", "Relique", 11.11}, {"Axi Z1", "Relique", 11.11},
+                    {"Axi W2", "Relique", 11.11}, {"Axi C6", "Relique", 11.11},
+                    {"Axi T6", "Relique", 11.11}, {"Axi H5", "Relique", 11.11},
+                    {"Axi A12", "Relique", 11.11}
                 }
             }
         }, {
@@ -1080,14 +1102,15 @@ local DropData = {
             ShortName = "[[Néant]]",
             Rewards = {
                 ["A"] = {
-                    {"Meso E4", "Relique", 6.25}, {"Meso P3", "Relique", 6.25},
-                    {"Meso I1", "Relique", 6.25}, {"Meso P2", "Relique", 6.25},
-                    {"Lith M6", "Relique", 6.25}, {"Lith P3", "Relique", 6.25},
-                    {"Lith C6", "Relique", 6.25}, {"Lith M5", "Relique", 6.25},
-                    {"Lith S10", "Relique", 6.25}, {"Lith D1", "Relique", 6.25},
-                    {"Meso K3", "Relique", 6.25}, {"Meso N9", "Relique", 6.25},
-                    {"Meso N10", "Relique", 6.25}, {"Lith K4", "Relique", 6.25},
-                    {"Meso D5", "Relique", 6.25}, {"Lith D2", "Relique", 6.25}
+                    {"Meso P4", "Relique", 5.88}, {"Meso C6", "Relique", 5.88},
+                    {"Meso I1", "Relique", 5.88}, {"Meso P2", "Relique", 5.88},
+                    {"Lith D4", "Relique", 5.88}, {"Lith B8", "Relique", 5.88},
+                    {"Lith G3", "Relique", 5.88}, {"Lith P5", "Relique", 5.88},
+                    {"Lith T5", "Relique", 5.88}, {"Lith I1", "Relique", 5.88},
+                    {"Meso K3", "Relique", 5.88}, {"Meso D6", "Relique", 5.88},
+                    {"Meso T4", "Relique", 5.88}, {"Lith K5", "Relique", 5.88},
+                    {"Lith M7", "Relique", 5.88}, {"Meso E5", "Relique", 5.88},
+                    {"Lith T4", "Relique", 5.88}
                 }
             }
         }, {
@@ -1097,20 +1120,21 @@ local DropData = {
             ShortName = "[[Néant]]",
             Rewards = {
                 ["A"] = {
-                    {"Axi P3", "Relique", 6.25}, {"Axi D2", "Relique", 6.25},
-                    {"Neo T2", "Relique", 6.25}, {"Neo A3", "Relique", 6.25},
-                    {"Neo Z5", "Relique", 6.25}, {"Neo M2", "Relique", 6.25},
-                    {"Axi A6", "Relique", 6.25}, {"Axi T3", "Relique", 6.25},
-                    {"Axi A9", "Relique", 6.25}, {"Neo I1", "Relique", 6.25},
-                    {"Neo R3", "Relique", 6.25}, {"Axi A8", "Relique", 6.25},
-                    {"Axi B3", "Relique", 6.25}, {"Neo G2", "Relique", 6.25},
-                    {"Neo A4", "Relique", 6.25}, {"Axi A7", "Relique", 6.25}
+                    {"Axi O5", "Relique", 5.88}, {"Axi A13", "Relique", 5.88},
+                    {"Neo T2", "Relique", 5.88}, {"Neo N14", "Relique", 5.88},
+                    {"Neo N13", "Relique", 5.88}, {"Neo Z7", "Relique", 5.88},
+                    {"Axi A11", "Relique", 5.88}, {"Axi Z1", "Relique", 5.88},
+                    {"Axi W2", "Relique", 5.88}, {"Neo P2", "Relique", 5.88},
+                    {"Neo B7", "Relique", 5.88}, {"Axi C6", "Relique", 5.88},
+                    {"Axi T6", "Relique", 5.88}, {"Neo N15", "Relique", 5.88},
+                    {"Neo B6", "Relique", 5.88}, {"Axi H5", "Relique", 5.88},
+                    {"Axi A12", "Relique", 5.88}
                 }
             }
         }, {
             Type = "Soute Orokin",
             Tier = "Épave Orokin",
-            Alias = "DeReliquetVault",
+            Alias = "DerelictVault",
             Rewards = {
                 ["A"] = {
                     {"Charge Corrompue", "Mod", 4.35},
@@ -1145,24 +1169,25 @@ local DropData = {
             ShortName = "[[Archwing|AW]]",
             Rewards = {
                 ["A"] = {
-                    {"Lame Tempérée", "Mod", 4.74},
-                    {"Impact Soudain", "Mod", 4.74},
-                    {"Piqûre Toxique", "Mod", 4.74},
-                    {"Rebord Glacial", "Mod", 4.74},
-                    {"Lame Galvanisée", "Mod", 4.74},
-                    {"Endo", "Endo", 4.74, 150}, {"Débordement", "Mod", 4.74},
-                    {"Endo", "Endo", 3.16, 50}, {"Endo", "Endo", 2.01, 80},
+                    {"Endo", "Endo", 5.06, 400}, {"Endo", "Endo", 3.16, 400},
+                    {"Endo", "Endo", 1.01, 400}, {"Endo", "Endo", 1.01, 400},
+                    {"Endo", "Endo", 5.06, 400},
+                    {"Lame Tempérée", "Mod", 5.06},
+                    {"Impact Soudain", "Mod", 5.06},
+                    {"Piqûre Toxique", "Mod", 5.06},
+                    {"Rebord Glacial", "Mod", 5.06},
+                    {"Lame Galvanisée", "Mod", 5.06},
+                    {"Débordement", "Mod", 5.06},
                     {"Prolongement", "Mod", 3.16},
                     {"Défenses Supérieures", "Mod", 3.16},
                     {"Rebord Tranchant", "Mod", 3.16},
                     {"Redirection de Système", "Mod", 3.16},
                     {"Transfert Efficace", "Mod", 3.16},
                     {"Acier Flamboyant", "Mod", 3.16},
-                    {"Endo", "Endo", 4.74, 150}, {"Endo", "Endo", 4.74, 400},
-                    {"Meso R2", "Relique", 4.74}, {"Meso C4", "Relique", 4.74},
-                    {"Meso L1", "Relique", 4.74}, {"Meso B4", "Relique", 4.74},
-                    {"Meso D4", "Relique", 4.74}, {"Meso N9", "Relique", 4.74},
-                    {"Meso E3", "Relique", 4.74}
+                    {"Meso P4", "Relique", 5.06}, {"Meso C6", "Relique", 5.06},
+                    {"Meso I1", "Relique", 5.06}, {"Meso P2", "Relique", 5.06},
+                    {"Meso K3", "Relique", 5.06}, {"Meso D6", "Relique", 5.06},
+                    {"Meso T4", "Relique", 5.06}
                 }
             }
         }, {
@@ -1198,36 +1223,36 @@ local DropData = {
                 }
             }
         }, {
-            Type = "Rescue",
+            Type = "Sauvetage",
             Tier = "Facile",
             Name = "Tier 1",
             Alias = "Rescue1",
             ShortName = "[[Récompense de Mission#Tier de Mission|T1]]",
             Rewards = {
-                ["B"] = {{"Vapor Specter Blueprint", "Schéma", 100}},
-                ["C"] = {{"Phase Specter Blueprint", "Schéma", 100}}
+                ["B"] = {{"Spectre de Vapeur Schéma", "Schéma", 100}},
+                ["C"] = {{"Spectre de Phase Schéma", "Schéma", 100}}
             }
         }, {
-            Type = "Rescue",
+            Type = "Sauvetage",
             Tier = "Intermédiaire",
             Name = "Tier 2",
             Alias = "Rescue2",
             ShortName = "[[Récompense de Mission#Tier de Mission|T2]]",
             Rewards = {
-                ["A"] = {{"Vapor Specter Blueprint", "Schéma", 100}},
-                ["B"] = {{"Phase Specter Blueprint", "Schéma", 100}},
-                ["C"] = {{"Force Specter Blueprint", "Schéma", 100}}
+                ["A"] = {{"Spectre de Vapeur Schéma", "Schéma", 100}},
+                ["B"] = {{"Spectre de Phase Schéma", "Schéma", 100}},
+                ["C"] = {{"Spectre de Force Schéma", "Schéma", 100}}
             }
         }, {
-            Type = "Rescue",
+            Type = "Sauvetage",
             Tier = "Difficile",
             Name = "Tier 3",
             Alias = "Rescue3",
             ShortName = "[[Récompense de Mission#Tier de Mission|T3]]",
             Rewards = {
-                ["A"] = {{"Phase Specter Blueprint", "Schéma", 100}},
-                ["B"] = {{"Force Specter Blueprint", "Schéma", 100}},
-                ["C"] = {{"Cosmic Specter Blueprint", "Schéma", 100}}
+                ["A"] = {{"Spectre de Phase Schéma", "Schéma", 100}},
+                ["B"] = {{"Spectre de Force Schéma", "Schéma", 100}},
+                ["C"] = {{"Spectre Cosmique Schéma", "Schéma", 100}}
             }
         }, {
             Type = "Course",
@@ -1236,12 +1261,12 @@ local DropData = {
             ShortName = "[[Archwing|AW]]",
             Rewards = {
                 ["A"] = {
-                    {"Lame Tempérée", "Mod", 14.29},
-                    {"Impact Soudain", "Mod", 14.29},
-                    {"Piqûre Toxique", "Mod", 14.29},
-                    {"Rebord Glacial", "Mod", 14.29},
-                    {"Lame Galvanisée", "Mod", 14.29},
-                    {"Endo", "Endo", 14.29, 150}, {"Débordement", "Mod", 14.29}
+                    {"Lame Tempérée", "Mod", 16.67},
+                    {"Impact Soudain", "Mod", 16.67},
+                    {"Piqûre Toxique", "Mod", 16.67},
+                    {"Rebord Glacial", "Mod", 16.67},
+                    {"Lame Galvanisée", "Mod", 16.67},
+                    {"Débordement", "Mod", 16.67}
                 },
                 ["B"] = {
                     {"Prolongement", "Mod", 3.76},
@@ -1256,11 +1281,10 @@ local DropData = {
                     {"Météore Fracassant", "Mod", 7.52},
                     {"Nébuleuse Perçante", "Mod", 7.52},
                     {"Tranchant Astral", "Mod", 7.52},
-                    {"Endo", "Endo", 11.06, 400}, {"Lith C4", "Relique", 11.06},
-                    {"Lith S8", "Relique", 11.06},
-                    {"Lith L2", "Relique", 11.06},
-                    {"Lith M4", "Relique", 11.06},
-                    {"Lith W2", "Relique", 11.06}, {"Lith D1", "Relique", 11.06}
+                    {"Endo", "Endo", 9.68, 400}, {"Lith D4", "Relique", 9.68},
+                    {"Lith B8", "Relique", 9.68}, {"Lith G3", "Relique", 9.68},
+                    {"Lith P5", "Relique", 9.68}, {"Lith T5", "Relique", 9.68},
+                    {"Lith I1", "Relique", 9.68}, {"Lith T4", "Relique", 9.68}
                 }
             }
         }, {
@@ -1284,7 +1308,7 @@ local DropData = {
         }, {
             Type = "Sabotage",
             Tier = "Épave Orokin",
-            Alias = "DeReliquetCaches",
+            Alias = "DerelictCaches",
             ShortName = "[[Épave Orokin|Épave]]",
             Rewards = {
                 ["A"] = {
@@ -1544,14 +1568,15 @@ local DropData = {
             ShortName = "[[Néant]]",
             Rewards = {
                 ["A"] = {
-                    {"Meso E4", "Relique", 6.25}, {"Meso P3", "Relique", 6.25},
-                    {"Meso I1", "Relique", 6.25}, {"Meso P2", "Relique", 6.25},
-                    {"Lith M6", "Relique", 6.25}, {"Lith P3", "Relique", 6.25},
-                    {"Lith C6", "Relique", 6.25}, {"Lith M5", "Relique", 6.25},
-                    {"Lith S10", "Relique", 6.25}, {"Lith D1", "Relique", 6.25},
-                    {"Meso K3", "Relique", 6.25}, {"Meso N9", "Relique", 6.25},
-                    {"Meso N10", "Relique", 6.25}, {"Lith K4", "Relique", 6.25},
-                    {"Meso D5", "Relique", 6.25}, {"Lith D2", "Relique", 6.25}
+                    {"Meso P4", "Relique", 5.88}, {"Meso C6", "Relique", 5.88},
+                    {"Meso I1", "Relique", 5.88}, {"Meso P2", "Relique", 5.88},
+                    {"Lith D4", "Relique", 5.88}, {"Lith B8", "Relique", 5.88},
+                    {"Lith G3", "Relique", 5.88}, {"Lith P5", "Relique", 5.88},
+                    {"Lith T5", "Relique", 5.88}, {"Lith I1", "Relique", 5.88},
+                    {"Meso K3", "Relique", 5.88}, {"Meso D6", "Relique", 5.88},
+                    {"Meso T4", "Relique", 5.88}, {"Lith K5", "Relique", 5.88},
+                    {"Lith M7", "Relique", 5.88}, {"Meso E5", "Relique", 5.88},
+                    {"Lith T4", "Relique", 5.88}
                 }
             }
         }, {
@@ -1562,14 +1587,15 @@ local DropData = {
             ShortName = "[[Néant]]",
             Rewards = {
                 ["A"] = {
-                    {"Axi G4", "Relique", 6.25}, {"Axi T4", "Relique", 6.25},
-                    {"Neo T2", "Relique", 6.25}, {"Neo A3", "Relique", 6.25},
-                    {"Neo Z5", "Relique", 6.25}, {"Neo I2", "Relique", 6.25},
-                    {"Axi A6", "Relique", 6.25}, {"Axi T5", "Relique", 6.25},
-                    {"Axi A9", "Relique", 6.25}, {"Neo P1", "Relique", 6.25},
-                    {"Neo M3", "Relique", 6.25}, {"Axi A10", "Relique", 6.25},
-                    {"Axi B3", "Relique", 6.25}, {"Neo R4", "Relique", 6.25},
-                    {"Neo N12", "Relique", 6.25}, {"Axi S7", "Relique", 6.25}
+                    {"Axi O5", "Relique", 5.88}, {"Axi A13", "Relique", 5.88},
+                    {"Neo T2", "Relique", 5.88}, {"Neo N14", "Relique", 5.88},
+                    {"Neo N13", "Relique", 5.88}, {"Neo Z7", "Relique", 5.88},
+                    {"Axi A11", "Relique", 5.88}, {"Axi Z1", "Relique", 5.88},
+                    {"Axi W2", "Relique", 5.88}, {"Neo P2", "Relique", 5.88},
+                    {"Neo B7", "Relique", 5.88}, {"Axi C6", "Relique", 5.88},
+                    {"Axi T6", "Relique", 5.88}, {"Neo N15", "Relique", 5.88},
+                    {"Neo B6", "Relique", 5.88}, {"Axi H5", "Relique", 5.88},
+                    {"Axi A12", "Relique", 5.88}
                 }
             }
         }, {
@@ -1643,13 +1669,13 @@ local DropData = {
             Alias = "Récupération Infestée",
             Rewards = {
                 ["A"] = {
-                    {"Vitalité", "Mod", 10},
-                    {"Mutation de Chargeur", "Mod", 10},
-                    {"Chargeur Trafiqué", "Mod", 10},
-                    {"Neo T2", "Relique", 10}, {"Neo A3", "Relique", 10},
-                    {"Neo Z5", "Relique", 10}, {"Neo M2", "Relique", 10},
-                    {"Neo I1", "Relique", 10}, {"Neo R3", "Relique", 10},
-                    {"Neo G2", "Relique", 10}
+                    {"Vitalité", "Mod", 10.00},
+                    {"Mutation de Chargeur", "Mod", 10.00},
+                    {"Chargeur Trafiqué", "Mod", 10.00},
+                    {"Neo T2", "Relique", 10.00}, {"Neo N14", "Relique", 10.00},
+                    {"Neo N13", "Relique", 10.00}, {"Neo Z7", "Relique", 10.00},
+                    {"Neo P2", "Relique", 10.00}, {"Neo B7", "Relique", 10.00},
+                    {"Neo N15", "Relique", 10.00}
                 },
                 ["B"] = {
                     {"Nuée de Dards", "Mod", 6.67},
@@ -1659,18 +1685,18 @@ local DropData = {
                     {"Antre de l'Enfer", "Mod", 6.67},
                     {"Rationalisation", "Mod", 6.67},
                     {"Toucher Choquant", "Mod", 6.67},
-                    {"Endo", "Endo", 6.67, 50}, {"Axi P3", "Relique", 6.67},
-                    {"Axi D2", "Relique", 6.67}, {"Axi A6", "Relique", 6.67},
-                    {"Axi T3", "Relique", 6.67}, {"Axi A9", "Relique", 6.67},
-                    {"Axi A8", "Relique", 6.67}, {"Axi B3", "Relique", 6.67}
+                    {"Endo", "Endo", 6.67, 150}, {"Axi A11", "Relique", 6.67},
+                    {"Axi O5", "Relique", 6.67}, {"Axi A13", "Relique", 6.67},
+                    {"Axi W2", "Relique", 6.67}, {"Axi C6", "Relique", 6.67},
+                    {"Axi Z1", "Relique", 6.67}, {"Axi T6", "Relique", 6.67}
                 },
                 ["C"] = {
-                    {"Nidus Systèmes Blueprint", "Schéma", 14.29},
-                    {"Nidus Neuroptiques Blueprint", "Schéma", 14.29},
-                    {"Nidus Châssis Blueprint", "Schéma", 14.29},
+                    {"Nidus Systèmes Schéma", "Schéma", 14.29},
+                    {"Nidus Neuroptiques Schéma", "Schéma", 14.29},
+                    {"Nidus Châssis Schéma", "Schéma", 14.29},
                     {"Perception Vitale", "Mod", 14.29},
                     {"Pointe Métallique", "Mod", 14.29},
-                    {"Allonge", "Mod", 14.29}, {"Endo", "Endo", 14.29, 80}
+                    {"Allonge", "Mod", 14.29}, {"Endo", "Endo", 14.29, 300}
                 }
             }
         }, {
@@ -1689,20 +1715,22 @@ local DropData = {
                     {"Parade", "Mod", 14.29}
                 },
                 ["B"] = {
-                    {"Lith M6", "Relique", 14.29},
-                    {"Lith P3", "Relique", 14.29},
-                    {"Lith S10", "Relique", 14.29},
-                    {"Lith D1", "Relique", 14.29},
-                    {"Lith C6", "Relique", 14.29},
-                    {"Lith M5", "Relique", 14.29}, {"Lith D2", "Relique", 14.29}
+                    {"Lith D4", "Relique", 14.29},
+                    {"Lith B8", "Relique", 14.29},
+                    {"Lith G3", "Relique", 14.29},
+                    {"Lith P5", "Relique", 14.29},
+                    {"Lith T5", "Relique", 14.29},
+                    {"Lith I1", "Relique", 14.29}, {"Lith T4", "Relique", 14.29}
                 },
                 ["C"] = {
-                    {"Passe-Partout", "Mod", 10}, {"Réflexion", "Mod", 10},
-                    {"Parade", "Mod", 10}, {"Impact Lourd", "Mod", 10},
-                    {"Dentelure", "Mod", 10}, {"Nuée de Dards", "Mod", 10},
-                    {"Pointe Métallique", "Mod", 10},
-                    {"Fil Volcanique", "Mod", 10}, {"Gel Vicieux", "Mod", 10},
-                    {"{{WF|Ivara}} - Systèmes", "Schéma", 10}
+                    {"Passe-Partout", "Mod", 10.00},
+                    {"Réflexion", "Mod", 10.00}, {"Parade", "Mod", 10.00},
+                    {"Impact Lourd", "Mod", 10.00}, {"Dentelure", "Mod", 10.00},
+                    {"Nuée de Dards", "Mod", 10.00},
+                    {"Pointe Métallique", "Mod", 10.00},
+                    {"Fil Volcanique", "Mod", 10.00},
+                    {"Gel Vicieux", "Mod", 10.00},
+                    {"{{WF|Ivara}} - Systèmes", "Schéma", 10.00}
                 }
             }
         }, {
@@ -1747,13 +1775,12 @@ local DropData = {
                     {"Cartouches Givrées", "Mod", 5.64},
                     {"Brasier Dispersant", "Mod", 5.64},
                     {"{{WF|Ivara}} - Châssis", "Schéma", 5.64},
-                    {"Meso P3", "Relique", 11.06},
+                    {"Meso C6", "Relique", 11.06},
                     {"Meso P2", "Relique", 11.06},
                     {"Meso K3", "Relique", 11.06},
-                    {"Meso N9", "Relique", 11.06},
-                    {"Meso E4", "Relique", 11.06},
-                    {"Meso I1", "Relique", 11.06},
-                    {"Meso N10", "Relique", 11.06}
+                    {"Meso P4", "Relique", 11.06},
+                    {"Meso D6", "Relique", 11.06},
+                    {"Meso I1", "Relique", 11.06}, {"Meso T4", "Relique", 11.06}
                 }
             }
         }, {
@@ -1764,7 +1791,7 @@ local DropData = {
             ShortName = "[[Récompense de Mission#Tier de Mission|T3]]",
             Rewards = {
                 ["A"] = {
-                    {"Cache de Crédits", "Credits", 14.29, 2000},
+                    {"Cache de Crédits", "Credits", 14.29, 2500},
                     {"Cache de Crédits", "Credits", 14.29, 2500},
                     {"Endo", "Endo", 14.29, 100}, {"Endo", "Endo", 14.29, 100},
                     {"Mains Stables", "Mod", 14.29},
@@ -1772,16 +1799,16 @@ local DropData = {
                     {"Lancer Puissant", "Mod", 14.29}
                 },
                 ["B"] = {
-                    {"Meso E4", "Relique", 11.06},
-                    {"Meso P3", "Relique", 11.06},
+                    {"Meso P4", "Relique", 11.06},
+                    {"Meso C6", "Relique", 11.06},
                     {"Meso I1", "Relique", 11.06},
                     {"Meso P2", "Relique", 11.06},
                     {"Meso K3", "Relique", 11.06},
-                    {"Meso N9", "Relique", 11.06},
-                    {"Meso N10", "Relique", 11.06}, {"Neo T2", "Relique", 3.22},
-                    {"Neo A3", "Relique", 3.22}, {"Neo Z5", "Relique", 3.22},
-                    {"Neo I2", "Relique", 3.22}, {"Neo T3", "Relique", 3.22},
-                    {"Neo M3", "Relique", 3.22}, {"Neo R4", "Relique", 3.22}
+                    {"Meso D6", "Relique", 11.06},
+                    {"Meso T4", "Relique", 11.06}, {"Neo T2", "Relique", 3.22},
+                    {"Neo N14", "Relique", 3.22}, {"Neo N13", "Relique", 3.22},
+                    {"Neo Z7", "Relique", 3.22}, {"Neo P2", "Relique", 3.22},
+                    {"Neo B7", "Relique", 3.22}, {"Neo N15", "Relique", 3.22}
                 },
                 ["C"] = {
                     {"Piratage Auto", "Mod", 7.04},
@@ -1807,7 +1834,7 @@ local DropData = {
             ShortName = "[[Forteresse Kuva|Kuva]]",
             Rewards = {
                 ["A"] = {
-                    {"Cache de Crédits", "Credits", 14.29, 2000},
+                    {"Cache de Crédits", "Credits", 14.29, 2500},
                     {"Cache de Crédits", "Credits", 14.29, 2500},
                     {"Endo", "Endo", 14.29, 200}, {"Endo", "Endo", 14.29, 200},
                     {"Mains Stables", "Mod", 14.29},
@@ -1815,16 +1842,16 @@ local DropData = {
                     {"Lancer Puissant", "Mod", 14.29}
                 },
                 ["B"] = {
-                    {"Meso E4", "Relique", 11.06},
-                    {"Meso P3", "Relique", 11.06},
+                    {"Meso P4", "Relique", 11.06},
+                    {"Meso C6", "Relique", 11.06},
                     {"Meso I1", "Relique", 11.06},
                     {"Meso P2", "Relique", 11.06},
                     {"Meso K3", "Relique", 11.06},
-                    {"Meso N9", "Relique", 11.06},
-                    {"Meso N10", "Relique", 11.06}, {"Neo T2", "Relique", 3.22},
-                    {"Neo A3", "Relique", 3.22}, {"Neo Z5", "Relique", 3.22},
-                    {"Neo I2", "Relique", 3.22}, {"Neo T3", "Relique", 3.22},
-                    {"Neo M3", "Relique", 3.22}, {"Neo R4", "Relique", 3.22}
+                    {"Meso D6", "Relique", 11.06},
+                    {"Meso T4", "Relique", 11.06}, {"Neo T2", "Relique", 3.22},
+                    {"Neo N14", "Relique", 3.22}, {"Neo N13", "Relique", 3.22},
+                    {"Neo Z7", "Relique", 3.22}, {"Neo P2", "Relique", 3.22},
+                    {"Neo B7", "Relique", 3.22}, {"Neo N15", "Relique", 3.22}
                 },
                 ["C"] = {
                     {"Intraçable", "Mod", 7.04},
@@ -1888,31 +1915,31 @@ local DropData = {
         }, {
             Type = "Survie",
             Tier = "Épave Orokin",
-            Alias = "DeReliquetSurvival",
+            Alias = "DerelictSurvie",
             ShortName = "[[Épave Orokin|Épave]]",
             Rewards = {
                 ["A"] = {
                     {"Endo", "Endo", 11.11, 400}, {"Endo", "Endo", 11.11, 400},
-                    {"Lith M6", "Relique", 11.11},
-                    {"Lith P3", "Relique", 11.11},
-                    {"Lith C6", "Relique", 11.11},
-                    {"Lith M5", "Relique", 11.11},
-                    {"Lith S10", "Relique", 11.11},
-                    {"Lith D1", "Relique", 11.11}, {"Lith D2", "Relique", 11.11}
+                    {"Lith D4", "Relique", 11.11},
+                    {"Lith B8", "Relique", 11.11},
+                    {"Lith G3", "Relique", 11.11},
+                    {"Lith P5", "Relique", 11.11},
+                    {"Lith I1", "Relique", 11.11},
+                    {"Lith P5", "Relique", 11.11}, {"Lith T4", "Relique", 11.11}
                 },
                 ["B"] = {
-                    {"Coord. Nav Alad V Mutaliste", "Ressource", 12.5},
-                    {"Neo T2", "Relique", 12.5}, {"Neo A3", "Relique", 12.5},
-                    {"Neo Z5", "Relique", 12.5}, {"Neo I2", "Relique", 12.5},
-                    {"Neo T3", "Relique", 12.5}, {"Neo M3", "Relique", 12.5},
-                    {"Neo R4", "Relique", 12.5}
+                    {"Coord. Nav Alad V Mutaliste", "Ressource", 12.50},
+                    {"Neo T2", "Relique", 12.50}, {"Neo N14", "Relique", 12.50},
+                    {"Neo N13", "Relique", 12.50}, {"Neo Z7", "Relique", 12.50},
+                    {"Neo P2", "Relique", 12.50}, {"Neo B7", "Relique", 12.50},
+                    {"Neo N15", "Relique", 12.50}
                 },
                 ["C"] = {
                     {"{{WF|Octavia}} - Neuroptiques", "Schéma", 22.56},
-                    {"Axi W1", "Relique", 11.06}, {"Axi T4", "Relique", 11.06},
-                    {"Axi A11", "Relique", 11.06}, {"Axi B4", "Relique", 11.06},
-                    {"Axi W1", "Relique", 11.06}, {"Axi A10", "Relique", 11.06},
-                    {"Axi B3", "Relique", 11.06}
+                    {"Axi O5", "Relique", 11.06}, {"Axi A13", "Relique", 11.06},
+                    {"Axi A11", "Relique", 11.06}, {"Axi Z1", "Relique", 11.06},
+                    {"Axi W2", "Relique", 11.06}, {"Axi C6", "Relique", 11.06},
+                    {"Axi T6", "Relique", 11.06}
                 }
             }
         }, {
@@ -1923,18 +1950,18 @@ local DropData = {
             ShortName = "[[Récompense de Mission#Tier de Mission|T1]]",
             Rewards = {
                 ["A"] = {
-                    {"Cache de Crédits", "Credits", 50, 2000},
-                    {"Endo", "Endo", 50, 100}
+                    {"Cache de Crédits", "Credits", 50.00, 2000},
+                    {"Endo", "Endo", 50.00, 100}
                 },
                 ["B"] = {
                     {"Parade", "Mod", 7.69}, {"Fibre d'Acier", "Mod", 7.69},
                     {"Dentelure", "Mod", 7.69},
                     {"Balles Incendiaires", "Mod", 7.69},
                     {"Nuée de Dards", "Mod", 7.69},
-                    {"Intensité", "Mod", 7.69}, {"Lith M6", "Relique", 7.69},
-                    {"Lith P3", "Relique", 7.69}, {"Lith S10", "Relique", 7.69},
-                    {"Lith D1", "Relique", 7.69}, {"Lith C6", "Relique", 7.69},
-                    {"Lith M5", "Relique", 7.69}, {"Lith D2", "Relique", 7.69}
+                    {"Intensité", "Mod", 7.69}, {"Lith D4", "Relique", 7.69},
+                    {"Lith B8", "Relique", 7.69}, {"Lith G3", "Relique", 7.69},
+                    {"Lith P5", "Relique", 7.69}, {"Lith T5", "Relique", 7.69},
+                    {"Lith I1", "Relique", 7.69}, {"Lith T4", "Relique", 7.69}
                 },
                 ["C"] = {
                     {"Mutation de Flèches", "Mod", 3.76},
@@ -1943,12 +1970,12 @@ local DropData = {
                     {"Mutation de Munitions de Fusil à Pompe", "Mod", 3.76},
                     {"Mutation de Munitions de Pistolet", "Mod", 3.76},
                     {"Purifie-Grineer", "Mod", 3.76},
-                    {"Lith M6", "Relique", 11.06},
-                    {"Lith P3", "Relique", 11.06},
-                    {"Lith S10", "Relique", 11.06},
-                    {"Lith D1", "Relique", 11.06},
-                    {"Lith C6", "Relique", 11.06},
-                    {"Lith M5", "Relique", 11.06}, {"Lith D2", "Relique", 11.06}
+                    {"Lith D4", "Relique", 11.06},
+                    {"Lith B8", "Relique", 11.06},
+                    {"Lith G3", "Relique", 11.06},
+                    {"Lith P5", "Relique", 11.06},
+                    {"Lith T5", "Relique", 11.06},
+                    {"Lith I1", "Relique", 11.06}, {"Lith T4", "Relique", 11.06}
                 }
             }
         }, {
@@ -1959,182 +1986,8 @@ local DropData = {
             ShortName = "[[Récompense de Mission#Tier de Mission|T2]]",
             Rewards = {
                 ["A"] = {
-                    {"Cache de Crédits", "Credits", 16.67, 1500},
-                    {"Cache de Crédits", "Credits", 16.67, 2000},
                     {"Cache de Crédits", "Credits", 16.67, 2500},
-                    {"Endo", "Endo", 16.67, 15}, {"Endo", "Endo", 16.67, 50},
-                    {"Endo", "Endo", 16.67, 80}
-                },
-                ["B"] = {
-                    {"Provocation", "Mod", 7.14},
-                    {"Fibre d'Acier", "Mod", 7.14}, {"Dentelure", "Mod", 7.14},
-                    {"Nuée de Dards", "Mod", 7.14},
-                    {"Déviation Rapide", "Mod", 7.14},
-                    {"Cartouche Chargée", "Mod", 7.14},
-                    {"Perception Vitale", "Mod", 7.14},
-                    {"Meso P3", "Relique", 7.14}, {"Meso P2", "Relique", 7.14},
-                    {"Meso K3", "Relique", 7.14}, {"Meso N9", "Relique", 7.14},
-                    {"Meso E4", "Relique", 7.14}, {"Meso I1", "Relique", 7.14},
-                    {"Meso N10", "Relique", 7.14}
-                },
-                ["C"] = {
-                    {"Purifie-Corpus", "Mod", 3.76},
-                    {"Mutation de Munitions de Pistolet", "Mod", 3.76},
-                    {"Mutation de Flèches", "Mod", 3.76},
-                    {"Mutation de Munitions de Fusil", "Mod", 3.76},
-                    {"Mutation de Munitions de Sniper", "Mod", 3.76},
-                    {"Mutation de Munitions de Fusil à Pompe", "Mod", 3.76},
-                    {"Neo T2", "Relique", 11.06}, {"Neo A3", "Relique", 11.06},
-                    {"Neo Z5", "Relique", 11.06}, {"Neo I2", "Relique", 11.06},
-                    {"Neo T3", "Relique", 11.06}, {"Neo M3", "Relique", 11.06},
-                    {"Neo R4", "Relique", 11.06}
-                }
-            }
-        }, {
-            Type = "Survie",
-            Tier = "Difficile",
-            Name = "Tier 3",
-            Alias = "Survie3",
-            ShortName = "[[Récompense de Mission#Tier de Mission|T3]]",
-            Rewards = {
-                ["A"] = {
-                    {"Cache de Crédits", "Credits", 25, 2000},
-                    {"Cache de Crédits", "Credits", 25, 2500},
-                    {"Cache de Crédits", "Credits", 25, 3000},
-                    {"Endo", "Endo", 25, 400}
-                },
-                ["B"] = {
-                    {"Fibre d'Acier", "Mod", 6.67}, {"Allonge", "Mod", 6.67},
-                    {"Dentelure", "Mod", 6.67},
-                    {"Antre de l'Enfer", "Mod", 6.67},
-                    {"Nuée de Dards", "Mod", 6.67}, {"Flux", "Mod", 6.67},
-                    {"Chambre Divisée", "Mod", 6.67},
-                    {"Stabilisateur", "Mod", 6.67}, {"Neo T2", "Relique", 6.67},
-                    {"Neo A3", "Relique", 6.67}, {"Neo Z5", "Relique", 6.67},
-                    {"Neo I2", "Relique", 6.67}, {"Neo T3", "Relique", 6.67},
-                    {"Neo M3", "Relique", 6.67}, {"Neo R4", "Relique", 6.67}
-                },
-                ["C"] = {
-                    {"Purifie-Infestés", "Mod", 3.76},
-                    {"Mutation de Munitions de Pistolet", "Mod", 3.76},
-                    {"Mutation de Flèches", "Mod", 3.76},
-                    {"Mutation de Munitions de Fusil", "Mod", 3.76},
-                    {"Mutation de Munitions de Sniper", "Mod", 3.76},
-                    {"Mutation de Munitions de Fusil à Pompe", "Mod", 3.76},
-                    {"Axi A11", "Relique", 11.06}, {"Axi C5", "Relique", 11.06},
-                    {"Axi B3", "Relique", 11.06}, {"Axi W1", "Relique", 11.06},
-                    {"Axi T4", "Relique", 11.06}, {"Axi B4", "Relique", 11.06},
-                    {"Axi A10", "Relique", 11.06}
-                }
-            }
-        }, {
-            Type = "Survie",
-            Tier = "Néant T4",
-            Alias = "NéantSurvival4",
-            ShortName = "[[Récompense de Mission#Tier de Mission|T4]]",
-            Rewards = {
-                ["A"] = {
-                    {"Neo T2", "Relique", 12.5}, {"Neo A3", "Relique", 12.5},
-                    {"Neo Z5", "Relique", 12.5}, {"Neo I2", "Relique", 12.5},
-                    {"Neo T3", "Relique", 12.5}, {"Neo M3", "Relique", 12.5},
-                    {"Neo R4", "Relique", 12.5}, {"Neo N12", "Relique", 12.5}
-                },
-                ["B"] = {
-                    {"Neo T2", "Relique", 12.5}, {"Neo A3", "Relique", 12.5},
-                    {"Neo Z5", "Relique", 12.5}, {"Neo I2", "Relique", 12.5},
-                    {"Neo T3", "Relique", 12.5}, {"Neo M3", "Relique", 12.5},
-                    {"Neo R4", "Relique", 12.5}, {"Neo N12", "Relique", 12.5}
-                },
-                ["C"] = {
-                    {"Axi W1", "Relique", 12.5}, {"Axi T4", "Relique", 12.5},
-                    {"Axi A11", "Relique", 12.5}, {"Axi B4", "Relique", 12.5},
-                    {"Axi C5", "Relique", 12.5}, {"Axi A10", "Relique", 12.5},
-                    {"Axi B3", "Relique", 12.5}, {"Axi S7", "Relique", 12.5}
-                }
-            }
-        }, {
-            Type = "Survie",
-            Tier = "Néant T2",
-            Alias = "NéantSurvival2",
-            ShortName = "[[Néant]]",
-            Rewards = {
-                ["A"] = {
-                    {"Meso E4", "Relique", 2.82}, {"Meso P3", "Relique", 2.82},
-                    {"Meso I1", "Relique", 2.82}, {"Meso P2", "Relique", 2.82},
-                    {"Lith M6", "Relique", 9.68}, {"Lith P3", "Relique", 9.68},
-                    {"Lith C6", "Relique", 9.68}, {"Lith M5", "Relique", 9.68},
-                    {"Lith S10", "Relique", 9.68}, {"Lith D1", "Relique", 9.68},
-                    {"Meso K3", "Relique", 2.82}, {"Meso N9", "Relique", 2.82},
-                    {"Meso N10", "Relique", 2.82}, {"Lith K4", "Relique", 9.68},
-                    {"Meso D5", "Relique", 2.82}, {"Lith D2", "Relique", 9.68}
-                },
-                ["B"] = {
-                    {"Meso E4", "Relique", 9.68}, {"Meso P3", "Relique", 9.68},
-                    {"Meso I1", "Relique", 9.68}, {"Meso P2", "Relique", 9.68},
-                    {"Neo T2", "Relique", 2.82}, {"Neo A3", "Relique", 2.82},
-                    {"Neo Z5", "Relique", 2.82}, {"Neo I2", "Relique", 2.82},
-                    {"Meso K3", "Relique", 9.68}, {"Meso N9", "Relique", 9.68},
-                    {"Meso N10", "Relique", 9.68}, {"Neo T3", "Relique", 2.82},
-                    {"Neo M3", "Relique", 2.82}, {"Neo R4", "Relique", 2.82},
-                    {"Meso D5", "Relique", 9.68}, {"Neo N12", "Relique", 2.82}
-                },
-                ["C"] = {
-                    {"Meso E4", "Relique", 6.25}, {"Meso P3", "Relique", 6.25},
-                    {"Meso I1", "Relique", 6.25}, {"Meso P2", "Relique", 6.25},
-                    {"Neo T2", "Relique", 6.25}, {"Neo A3", "Relique", 6.25},
-                    {"Neo Z5", "Relique", 6.25}, {"Neo I2", "Relique", 6.25},
-                    {"Meso N9", "Relique", 6.25}, {"Meso N10", "Relique", 6.25},
-                    {"Meso K3", "Relique", 6.25}, {"Neo T3", "Relique", 6.25},
-                    {"Neo M3", "Relique", 6.25}, {"Neo R4", "Relique", 6.25},
-                    {"Meso D5", "Relique", 6.25}, {"Neo N12", "Relique", 6.25}
-                }
-            }
-        }, {
-            Type = "Survie",
-            Tier = "Facile2",
-            Name = "Dark&nbsp;Sector&nbsp;1",
-            Alias = "DSSurvival1",
-            ShortName = "[[Dark Sector|DS1]]",
-            Rewards = {
-                ["A"] = {
-                    {"Cache de Crédits", "Credits", 14.29, 500},
-                    {"Cache de Crédits", "Credits", 14.29, 1000},
-                    {"Cache de Crédits", "Credits", 14.29, 1500},
-                    {"Cache de Crédits", "Credits", 14.29, 2000},
-                    {"Endo", "Endo", 14.29, 100}, {"Endo", "Endo", 14.29, 100},
-                    {"Endo", "Endo", 14.29, 100}
-                },
-                ["B"] = {
-                    {"Parade", "Mod", 8.33}, {"Fibre d'Acier", "Mod", 8.33},
-                    {"Dentelure", "Mod", 8.33},
-                    {"Balles Incendiaires", "Mod", 8.33},
-                    {"Nuée de Dards", "Mod", 8.33},
-                    {"Intensité", "Mod", 8.33}, {"Lith M6", "Relique", 7.69},
-                    {"Lith P3", "Relique", 7.69}, {"Lith S10", "Relique", 7.69},
-                    {"Lith D1", "Relique", 7.69}, {"Lith C6", "Relique", 7.69},
-                    {"Lith M5", "Relique", 7.69}, {"Lith D2", "Relique", 7.69}
-                },
-                ["C"] = {
-                    {"Véritable Punition", "Mod", 11.28},
-                    {"Accélération", "Mod", 11.28},
-                    {"Lith M6", "Relique", 11.06},
-                    {"Lith P3", "Relique", 11.06},
-                    {"Lith S10", "Relique", 11.06},
-                    {"Lith D1", "Relique", 11.06},
-                    {"Lith C6", "Relique", 11.06},
-                    {"Lith M5", "Relique", 11.06}, {"Lith D2", "Relique", 11.06}
-                }
-            }
-        }, {
-            Type = "Survie",
-            Tier = "Intermédiaire2",
-            Name = "Dark&nbsp;Sector&nbsp;2",
-            Alias = "DSSurvival2",
-            ShortName = "[[Dark Sector|DS2]]",
-            Rewards = {
-                ["A"] = {
-                    {"Cache de Crédits", "Credits", 16.67, 1500},
-                    {"Cache de Crédits", "Credits", 16.67, 2000},
+                    {"Cache de Crédits", "Credits", 16.67, 2500},
                     {"Cache de Crédits", "Credits", 16.67, 2500},
                     {"Endo", "Endo", 16.67, 100}, {"Endo", "Endo", 16.67, 100},
                     {"Endo", "Endo", 16.67, 100}
@@ -2146,32 +1999,36 @@ local DropData = {
                     {"Déviation Rapide", "Mod", 7.14},
                     {"Cartouche Chargée", "Mod", 7.14},
                     {"Perception Vitale", "Mod", 7.14},
-                    {"Meso P3", "Relique", 7.14}, {"Meso P2", "Relique", 7.14},
-                    {"Meso K3", "Relique", 7.14}, {"Meso N9", "Relique", 7.14},
-                    {"Meso E4", "Relique", 7.14}, {"Meso I1", "Relique", 7.14},
-                    {"Meso N10", "Relique", 7.14}
+                    {"Meso C6", "Relique", 7.14}, {"Meso P2", "Relique", 7.14},
+                    {"Meso K3", "Relique", 7.14}, {"Meso P4", "Relique", 7.14},
+                    {"Meso D6", "Relique", 7.14}, {"Meso I1", "Relique", 7.14},
+                    {"Meso T4", "Relique", 7.14}
                 },
                 ["C"] = {
-                    {"Accélération", "Mod", 11.28},
-                    {"Frappe Durable", "Mod", 11.28},
-                    {"Neo T2", "Relique", 11.06}, {"Neo A3", "Relique", 11.06},
-                    {"Neo Z5", "Relique", 11.06}, {"Neo I2", "Relique", 11.06},
-                    {"Neo T3", "Relique", 11.06}, {"Neo M3", "Relique", 11.06},
-                    {"Neo R4", "Relique", 11.06}
+                    {"Purifie-Corpus", "Mod", 3.76},
+                    {"Mutation de Munitions de Pistolet", "Mod", 3.76},
+                    {"Mutation de Flèches", "Mod", 3.76},
+                    {"Mutation de Munitions de Fusil", "Mod", 3.76},
+                    {"Mutation de Munitions de Sniper", "Mod", 3.76},
+                    {"Mutation de Munitions de Fusil à Pompe", "Mod", 3.76},
+                    {"Neo T2", "Relique", 11.06}, {"Neo N14", "Relique", 11.06},
+                    {"Neo N13", "Relique", 11.06}, {"Neo Z7", "Relique", 11.06},
+                    {"Neo P2", "Relique", 11.06}, {"Neo B7", "Relique", 11.06},
+                    {"Neo N15", "Relique", 11.06}
                 }
             }
         }, {
             Type = "Survie",
-            Tier = "Difficile2",
-            Name = "Dark&nbsp;Sector&nbsp;3",
-            Alias = "DSSurvival3",
-            ShortName = "[[Dark Sector|DS3]]",
+            Tier = "Difficile",
+            Name = "Tier 3",
+            Alias = "Survie3",
+            ShortName = "[[Récompense de Mission#Tier de Mission|T3]]",
             Rewards = {
                 ["A"] = {
-                    {"Cache de Crédits", "Credits", 25, 2000},
-                    {"Cache de Crédits", "Credits", 25, 2500},
-                    {"Cache de Crédits", "Credits", 25, 3000},
-                    {"Endo", "Endo", 25, 400}
+                    {"Cache de Crédits", "Credits", 25.00, 3000},
+                    {"Cache de Crédits", "Credits", 25.00, 3000},
+                    {"Cache de Crédits", "Credits", 25.00, 3000},
+                    {"Endo", "Endo", 25.00, 400}
                 },
                 ["B"] = {
                     {"Fibre d'Acier", "Mod", 6.67}, {"Allonge", "Mod", 6.67},
@@ -2180,188 +2037,360 @@ local DropData = {
                     {"Nuée de Dards", "Mod", 6.67}, {"Flux", "Mod", 6.67},
                     {"Chambre Divisée", "Mod", 6.67},
                     {"Stabilisateur", "Mod", 6.67}, {"Neo T2", "Relique", 6.67},
-                    {"Neo A3", "Relique", 6.67}, {"Neo Z5", "Relique", 6.67},
-                    {"Neo I2", "Relique", 6.67}, {"Neo T3", "Relique", 6.67},
-                    {"Neo M3", "Relique", 6.67}, {"Neo R4", "Relique", 6.67}
+                    {"Neo N14", "Relique", 6.67}, {"Neo N13", "Relique", 6.67},
+                    {"Neo Z7", "Relique", 6.67}, {"Neo P2", "Relique", 6.67},
+                    {"Neo B7", "Relique", 6.67}, {"Neo N15", "Relique", 6.67}
+                },
+                ["C"] = {
+                    {"Purifie-Infestés", "Mod", 3.76},
+                    {"Mutation de Munitions de Pistolet", "Mod", 3.76},
+                    {"Mutation de Flèches", "Mod", 3.76},
+                    {"Mutation de Munitions de Fusil", "Mod", 3.76},
+                    {"Mutation de Munitions de Sniper", "Mod", 3.76},
+                    {"Mutation de Munitions de Fusil à Pompe", "Mod", 3.76},
+                    {"Axi A11", "Relique", 11.06}, {"Axi O5", "Relique", 11.06},
+                    {"Axi A13", "Relique", 11.06}, {"Axi W2", "Relique", 11.06},
+                    {"Axi C6", "Relique", 11.06}, {"Axi Z1", "Relique", 11.06},
+                    {"Axi T6", "Relique", 11.06}
+                }
+            }
+        }, {
+            Type = "Survie",
+            Tier = "Néant T4",
+            Alias = "NéantSurvie4",
+            ShortName = "[[Récompense de Mission#Tier de Mission|T4]]",
+            Rewards = {
+                ["A"] = {
+                    {"Neo T2", "Relique", 12.50}, {"Neo N14", "Relique", 12.50},
+                    {"Neo N13", "Relique", 12.50}, {"Neo Z7", "Relique", 12.50},
+                    {"Neo P2", "Relique", 12.50}, {"Neo B7", "Relique", 12.50},
+                    {"Neo N15", "Relique", 12.50}, {"Neo B6", "Relique", 12.50}
+                },
+                ["B"] = {
+                    {"Neo T2", "Relique", 12.50}, {"Neo N14", "Relique", 12.50},
+                    {"Neo N13", "Relique", 12.50}, {"Neo Z7", "Relique", 12.50},
+                    {"Neo P2", "Relique", 12.50}, {"Neo B7", "Relique", 12.50},
+                    {"Neo N15", "Relique", 12.50}, {"Neo B6", "Relique", 12.50}
+                },
+                ["C"] = {
+                    {"Axi O5", "Relique", 11.11}, {"Axi A13", "Relique", 11.11},
+                    {"Axi A11", "Relique", 11.11}, {"Axi Z1", "Relique", 11.11},
+                    {"Axi W2", "Relique", 11.11}, {"Axi C6", "Relique", 11.11},
+                    {"Axi T6", "Relique", 11.11}, {"Axi H5", "Relique", 11.11},
+                    {"Axi A12", "Relique", 11.11}
+                }
+            }
+        }, {
+            Type = "Survie",
+            Tier = "Néant T2",
+            Alias = "NéantSurvie2",
+            ShortName = "[[Néant]]",
+            Rewards = {
+                ["A"] = {
+                    {"Meso P4", "Relique", 2.82}, {"Meso C6", "Relique", 2.82},
+                    {"Meso I1", "Relique", 2.82}, {"Meso P2", "Relique", 2.82},
+                    {"Lith D4", "Relique", 8.60}, {"Lith B8", "Relique", 8.60},
+                    {"Lith G3", "Relique", 8.60}, {"Lith P5", "Relique", 8.60},
+                    {"Lith T5", "Relique", 8.60}, {"Lith I1", "Relique", 8.60},
+                    {"Meso K3", "Relique", 2.82}, {"Meso D6", "Relique", 2.82},
+                    {"Meso T4", "Relique", 2.82}, {"Lith K5", "Relique", 8.60},
+                    {"Lith M7", "Relique", 8.60}, {"Meso E5", "Relique", 2.82},
+                    {"Lith T4", "Relique", 8.60}
+                },
+                ["B"] = {
+                    {"Meso P4", "Relique", 9.68}, {"Meso C6", "Relique", 9.68},
+                    {"Meso I1", "Relique", 9.68}, {"Meso P2", "Relique", 9.68},
+                    {"Neo T2", "Relique", 2.82}, {"Neo N14", "Relique", 2.82},
+                    {"Neo N13", "Relique", 2.82}, {"Neo Z7", "Relique", 2.82},
+                    {"Meso K3", "Relique", 9.68}, {"Meso D6", "Relique", 9.68},
+                    {"Meso T4", "Relique", 9.68}, {"Neo P2", "Relique", 2.82},
+                    {"Neo B7", "Relique", 2.82}, {"Neo N15", "Relique", 2.82},
+                    {"Meso E5", "Relique", 9.68}, {"Neo B6", "Relique", 2.82}
+                },
+                ["C"] = {
+                    {"Meso P4", "Relique", 6.25}, {"Meso C6", "Relique", 6.25},
+                    {"Meso I1", "Relique", 6.25}, {"Meso P2", "Relique", 6.25},
+                    {"Neo T2", "Relique", 6.25}, {"Neo N14", "Relique", 6.25},
+                    {"Neo N13", "Relique", 6.25}, {"Neo Z7", "Relique", 6.25},
+                    {"Meso D6", "Relique", 6.25}, {"Meso T4", "Relique", 6.25},
+                    {"Meso K3", "Relique", 6.25}, {"Neo P2", "Relique", 6.25},
+                    {"Neo B7", "Relique", 6.25}, {"Neo N15", "Relique", 6.25},
+                    {"Meso E5", "Relique", 6.25}, {"Neo B6", "Relique", 6.25}
+                }
+            }
+        }, {
+            Type = "Survie",
+            Tier = "Facile2",
+            Name = "Dark&nbsp;Sector&nbsp;1",
+            Alias = "DSSurvie1",
+            ShortName = "[[Dark Sector|DS1]]",
+            Rewards = {
+                ["A"] = {
+                    {"Cache de Crédits", "Credits", 14.29, 2000},
+                    {"Cache de Crédits", "Credits", 14.29, 2000},
+                    {"Cache de Crédits", "Credits", 14.29, 2000},
+                    {"Cache de Crédits", "Credits", 14.29, 2000},
+                    {"Endo", "Endo", 14.29, 100}, {"Endo", "Endo", 14.29, 100},
+                    {"Endo", "Endo", 14.29, 100}
+                },
+                ["B"] = {
+                    {"Parade", "Mod", 7.69}, {"Fibre d'Acier", "Mod", 7.69},
+                    {"Dentelure", "Mod", 7.69},
+                    {"Balles Incendiaires", "Mod", 7.69},
+                    {"Nuée de Dards", "Mod", 7.69},
+                    {"Intensité", "Mod", 7.69}, {"Lith D4", "Relique", 7.69},
+                    {"Lith B8", "Relique", 7.69}, {"Lith G3", "Relique", 7.69},
+                    {"Lith P5", "Relique", 7.69}, {"Lith T5", "Relique", 7.69},
+                    {"Lith I1", "Relique", 7.69}, {"Lith T4", "Relique", 7.69}
+                },
+                ["C"] = {
+                    {"Véritable Punition", "Mod", 11.28},
+                    {"Accélération", "Mod", 11.28},
+                    {"Lith D4", "Relique", 11.06},
+                    {"Lith B8", "Relique", 11.06},
+                    {"Lith G3", "Relique", 11.06},
+                    {"Lith P5", "Relique", 11.06},
+                    {"Lith T5", "Relique", 11.06},
+                    {"Lith I1", "Relique", 11.06}, {"Lith T4", "Relique", 11.06}
+                }
+            }
+        }, {
+            Type = "Survie",
+            Tier = "Intermédiaire2",
+            Name = "Dark&nbsp;Sector&nbsp;2",
+            Alias = "DSSurvie2",
+            ShortName = "[[Dark Sector|DS2]]",
+            Rewards = {
+                ["A"] = {
+                    {"Cache de Crédits", "Credits", 16.67, 2500},
+                    {"Cache de Crédits", "Credits", 16.67, 2500},
+                    {"Cache de Crédits", "Credits", 16.67, 2500},
+                    {"Endo", "Endo", 16.67, 100}, {"Endo", "Endo", 16.67, 100},
+                    {"Endo", "Endo", 16.67, 100}
+                },
+                ["B"] = {
+                    {"Provocation", "Mod", 7.14},
+                    {"Fibre d'Acier", "Mod", 7.14}, {"Dentelure", "Mod", 7.14},
+                    {"Nuée de Dards", "Mod", 7.14},
+                    {"Déviation Rapide", "Mod", 7.14},
+                    {"Cartouche Chargée", "Mod", 7.14},
+                    {"Perception Vitale", "Mod", 7.14},
+                    {"Meso C6", "Relique", 7.14}, {"Meso P2", "Relique", 7.14},
+                    {"Meso K3", "Relique", 7.14}, {"Meso P4", "Relique", 7.14},
+                    {"Meso D6", "Relique", 7.14}, {"Meso I1", "Relique", 7.14},
+                    {"Meso T4", "Relique", 7.14}
+                },
+                ["C"] = {
+                    {"Accélération", "Mod", 11.28},
+                    {"Frappe Durable", "Mod", 11.28},
+                    {"Neo T2", "Relique", 11.06}, {"Neo N14", "Relique", 11.06},
+                    {"Neo N13", "Relique", 11.06}, {"Neo Z7", "Relique", 11.06},
+                    {"Neo P2", "Relique", 11.06}, {"Neo B7", "Relique", 11.06},
+                    {"Neo N15", "Relique", 11.06}
+                }
+            }
+        }, {
+            Type = "Survie",
+            Tier = "Difficile2",
+            Name = "Dark&nbsp;Sector&nbsp;3",
+            Alias = "DSSurvie3",
+            ShortName = "[[Dark Sector|DS3]]",
+            Rewards = {
+                ["A"] = {
+                    {"Cache de Crédits", "Credits", 25.00, 3000},
+                    {"Cache de Crédits", "Credits", 25.00, 3000},
+                    {"Cache de Crédits", "Credits", 25.00, 3000},
+                    {"Endo", "Endo", 25.00, 400}
+                },
+                ["B"] = {
+                    {"Fibre d'Acier", "Mod", 6.67}, {"Allonge", "Mod", 6.67},
+                    {"Dentelure", "Mod", 6.67},
+                    {"Antre de l'Enfer", "Mod", 6.67},
+                    {"Nuée de Dards", "Mod", 6.67}, {"Flux", "Mod", 6.67},
+                    {"Chambre Divisée", "Mod", 6.67},
+                    {"Stabilisateur", "Mod", 6.67}, {"Neo T2", "Relique", 6.67},
+                    {"Neo N14", "Relique", 6.67}, {"Neo N13", "Relique", 6.67},
+                    {"Neo Z7", "Relique", 6.67}, {"Neo P2", "Relique", 6.67},
+                    {"Neo B7", "Relique", 6.67}, {"Neo N15", "Relique", 6.67}
                 },
                 ["C"] = {
                     {"Frappe Durable", "Mod", 11.28},
                     {"Frappe Vitale", "Mod", 11.28},
-                    {"Axi A11", "Relique", 11.06}, {"Axi C5", "Relique", 11.06},
-                    {"Axi B3", "Relique", 11.06}, {"Axi W1", "Relique", 11.06},
-                    {"Axi T4", "Relique", 11.06}, {"Axi B4", "Relique", 11.06},
-                    {"Axi A10", "Relique", 11.06}
+                    {"Axi A11", "Relique", 11.06}, {"Axi O5", "Relique", 11.06},
+                    {"Axi A13", "Relique", 11.06}, {"Axi W2", "Relique", 11.06},
+                    {"Axi C6", "Relique", 11.06}, {"Axi Z1", "Relique", 11.06},
+                    {"Axi T6", "Relique", 11.06}
                 }
             }
         }, {
             Type = "Survie",
             Tier = "Eris",
             Name = "Dark&nbsp;Sector&nbsp;4",
-            Alias = "DSSurvival4",
+            Alias = "DSSurvie4",
             ShortName = "[[Dark Sector|DS4]]",
             Rewards = {
                 ["A"] = {
-                    {"Cache de Crédits", "Credits", 25, 2000},
-                    {"Cache de Crédits", "Credits", 25, 2500},
-                    {"Cache de Crédits", "Credits", 25, 3000},
-                    {"Endo", "Endo", 25, 400}
+                    {"Cache de Crédits", "Credits", 25.00, 3000},
+                    {"Cache de Crédits", "Credits", 25.00, 3000},
+                    {"Cache de Crédits", "Credits", 25.00, 3000},
+                    {"Endo", "Endo", 25.00, 400}
                 },
                 ["B"] = {
-                    {"Neo T2", "Relique", 14.29}, {"Neo A3", "Relique", 14.29},
-                    {"Neo Z5", "Relique", 14.29}, {"Neo I2", "Relique", 14.29},
-                    {"Neo T3", "Relique", 14.29}, {"Neo M3", "Relique", 14.29},
-                    {"Neo R4", "Relique", 14.29}
+                    {"Neo T2", "Relique", 14.29}, {"Neo N14", "Relique", 14.29},
+                    {"Neo N13", "Relique", 14.29}, {"Neo Z7", "Relique", 14.29},
+                    {"Neo P2", "Relique", 14.29}, {"Neo B7", "Relique", 14.29},
+                    {"Neo N15", "Relique", 14.29}
                 },
                 ["C"] = {
-                    {"Frappe Vitale", "Mod", 12.5},
-                    {"Axi A11", "Relique", 12.5}, {"Axi C5", "Relique", 12.5},
-                    {"Axi B3", "Relique", 12.5}, {"Axi W1", "Relique", 12.5},
-                    {"Axi T4", "Relique", 12.5}, {"Axi B4", "Relique", 12.5},
-                    {"Axi A10", "Relique", 12.5}
+                    {"Frappe Vitale", "Mod", 12.50},
+                    {"Axi A11", "Relique", 12.50}, {"Axi O5", "Relique", 12.50},
+                    {"Axi A13", "Relique", 12.50}, {"Axi W2", "Relique", 12.50},
+                    {"Axi C6", "Relique", 12.50}, {"Axi Z1", "Relique", 12.50},
+                    {"Axi T6", "Relique", 12.50}
                 }
             }
         }, {
-            Type = "Assassinate",
+            Type = "Assassinat",
             Tier = "Alad V",
             Rewards = {
                 ["A"] = {
-                    {"Valkyr Neuroptiques Blueprint", "Schéma", 38.72},
-                    {"Valkyr Châssis Blueprint", "Schéma", 38.72},
-                    {"Valkyr Systèmes Blueprint", "Schéma", 22.56}
+                    {"Valkyr Neuroptiques Schéma", "Schéma", 38.72},
+                    {"Valkyr Châssis Schéma", "Schéma", 38.72},
+                    {"Valkyr Systèmes Schéma", "Schéma", 22.56}
                 }
             }
         }, {
-            Type = "Assassinate",
+            Type = "Assassinat",
             Tier = "Ambulas",
             Rewards = {
                 ["A"] = {
-                    {"Trinity Neuroptiques Blueprint", "Schéma", 38.72},
-                    {"Trinity Châssis Blueprint", "Schéma", 38.72},
-                    {"Trinity Systèmes Blueprint", "Schéma", 22.56}
+                    {"Trinity Neuroptiques Schéma", "Schéma", 38.72},
+                    {"Trinity Châssis Schéma", "Schéma", 38.72},
+                    {"Trinity Systèmes Schéma", "Schéma", 22.56}
 
                 }
             }
         }, {
-            Type = "Assassinate",
+            Type = "Assassinat",
             Tier = "Meute Hyena",
             Rewards = {
                 ["A"] = {
-                    {"Loki Neuroptiques Blueprint", "Schéma", 38.72},
-                    {"Loki Châssis Blueprint", "Schéma", 38.72},
-                    {"Loki Systèmes Blueprint", "Schéma", 22.56}
+                    {"Loki Neuroptiques Schéma", "Schéma", 38.72},
+                    {"Loki Châssis Schéma", "Schéma", 38.72},
+                    {"Loki Systèmes Schéma", "Schéma", 22.56}
                 }
             }
         }, {
-            Type = "Assassinate",
+            Type = "Assassinat",
             Tier = "Jackal",
             Rewards = {
                 ["A"] = {
-                    {"Rhino Neuroptiques Blueprint", "Schéma", 38.72},
-                    {"Rhino Châssis Blueprint", "Schéma", 38.72},
-                    {"Rhino Systèmes Blueprint", "Schéma", 22.56}
+                    {"Rhino Neuroptiques Schéma", "Schéma", 38.72},
+                    {"Rhino Châssis Schéma", "Schéma", 38.72},
+                    {"Rhino Systèmes Schéma", "Schéma", 22.56}
                 }
             }
         }, {
-            Type = "Assassinate",
+            Type = "Assassinat",
             Tier = "Jordas Golem",
             Rewards = {
                 ["A"] = {
-                    {"Atlas Neuroptiques Blueprint", "Schéma", 38.72},
-                    {"Atlas Châssis Blueprint", "Schéma", 38.72},
-                    {"Atlas Systèmes Blueprint", "Schéma", 22.56}
+                    {"Atlas Neuroptiques Schéma", "Schéma", 38.72},
+                    {"Atlas Châssis Schéma", "Schéma", 38.72},
+                    {"Atlas Systèmes Schéma", "Schéma", 22.56}
                 }
             }
         }, {
-            Type = "Assassinate",
+            Type = "Assassinat",
             Tier = "Kela De Thaym",
             Rewards = {
                 ["A"] = {
-                    {"Saryn Neuroptiques Blueprint", "Schéma", 38.72},
-                    {"Saryn Châssis Blueprint", "Schéma", 38.72},
-                    {"Saryn Systèmes Blueprint", "Schéma", 22.56}
+                    {"Saryn Neuroptiques Schéma", "Schéma", 38.72},
+                    {"Saryn Châssis Schéma", "Schéma", 38.72},
+                    {"Saryn Systèmes Schéma", "Schéma", 22.56}
                 }
             }
         }, {
-            Type = "Assassinate",
+            Type = "Assassinat",
             Tier = "Kril and Vor 1",
             Rewards = {
                 ["A"] = {
-                    {"Miter Barrel", "Schéma", 16.67},
-                    {"Miter Blade", "Schéma", 16.67},
-                    {"Miter Handle", "Schéma", 16.67},
-                    {"Miter Châssis", "Schéma", 16.67},
-                    {"Miter Blueprint", "Schéma", 16.67},
-                    {"Twin Gremlins Blueprint", "Schéma", 16.67}
+                    {"Miter Canon", "Schéma", 16.67},
+                    {"Miter Lame", "Schéma", 16.67},
+                    {"Miter Poignée", "Schéma", 16.67},
+                    {"Miter Crosse", "Schéma", 16.67},
+                    {"Miter Schéma", "Schéma", 16.67},
+                    {"Gremlins Jumeaux Schéma", "Schéma", 16.67}
                 }
             }
         }, {
-            Type = "Assassinate",
+            Type = "Assassinat",
             Tier = "Kril and Vor 2",
             Rewards = {
                 ["A"] = {
-                    {"Frost Neuroptiques Blueprint", "Schéma", 38.72},
-                    {"Frost Châssis Blueprint", "Schéma", 38.72},
-                    {"Frost Systèmes Blueprint", "Schéma", 22.56}
+                    {"Frost Neuroptiques Schéma", "Schéma", 38.72},
+                    {"Frost Châssis Schéma", "Schéma", 38.72},
+                    {"Frost Systèmes Schéma", "Schéma", 22.56}
                 }
             }
         }, {
-            Type = "Assassinate",
+            Type = "Assassinat",
             Tier = "Lech Kril",
             Rewards = {
                 ["A"] = {
-                    {"Excalibur Neuroptiques Blueprint", "Schéma", 38.72},
-                    {"Excalibur Châssis Blueprint", "Schéma", 38.72},
-                    {"Excalibur Systèmes Blueprint", "Schéma", 22.56}
+                    {"Excalibur Neuroptiques Schéma", "Schéma", 38.72},
+                    {"Excalibur Châssis Schéma", "Schéma", 38.72},
+                    {"Excalibur Systèmes Schéma", "Schéma", 22.56}
                 }
             }
         }, {
-            Type = "Assassinate",
+            Type = "Assassinat",
             Tier = "Lephantis",
             Rewards = {
                 ["A"] = {
-                    {"Nekros Châssis Blueprint", "Schéma", 33.33},
-                    {"Nekros Neuroptiques Blueprint", "Schéma", 33.33},
-                    {"Nekros Systèmes Blueprint", "Schéma", 33.33}
+                    {"Nekros Châssis Schéma", "Schéma", 33.33},
+                    {"Nekros Neuroptiques Schéma", "Schéma", 33.33},
+                    {"Nekros Systèmes Schéma", "Schéma", 33.33}
                 }
             }
         }, {
-            Type = "Assassinate",
+            Type = "Assassinat",
             Tier = "Alad V Mutaliste",
             Rewards = {
                 ["A"] = {
-                    {"Mesa Châssis Blueprint", "Schéma", 38.72},
-                    {"Mesa Neuroptiques Blueprint", "Schéma", 38.72},
-                    {"Mesa Systèmes Blueprint", "Schéma", 22.56}
+                    {"Mesa Châssis Schéma", "Schéma", 38.72},
+                    {"Mesa Neuroptiques Schéma", "Schéma", 38.72},
+                    {"Mesa Systèmes Schéma", "Schéma", 22.56}
                 }
             }
         }, {
-            Type = "Assassinate",
+            Type = "Assassinat",
             Tier = "Phorid",
             Rewards = {
                 ["A"] = {
-                    {"Nyx Neuroptiques Blueprint", "Schéma", 38.72},
-                    {"Nyx Châssis Blueprint", "Schéma", 38.72},
-                    {"Nyx Systèmes Blueprint", "Schéma", 22.56}
+                    {"Nyx Neuroptiques Schéma", "Schéma", 38.72},
+                    {"Nyx Châssis Schéma", "Schéma", 38.72},
+                    {"Nyx Systèmes Schéma", "Schéma", 22.56}
                 }
             }
         }, {
-            Type = "Assassinate",
+            Type = "Assassinat",
             Tier = "Trio Raptors",
             Rewards = {
                 ["A"] = {
-                    {"Nova Neuroptiques Blueprint", "Schéma", 38.72},
-                    {"Nova Châssis Blueprint", "Schéma", 38.72},
-                    {"Nova Systèmes Blueprint", "Schéma", 22.56}
+                    {"Nova Neuroptiques Schéma", "Schéma", 38.72},
+                    {"Nova Châssis Schéma", "Schéma", 38.72},
+                    {"Nova Systèmes Schéma", "Schéma", 22.56}
                 }
             }
         }, {
-            Type = "Assassinate",
+            Type = "Assassinat",
             Tier = "Sargas Ruk",
             Rewards = {
                 ["A"] = {
-                    {"Ember Neuroptiques Blueprint", "Schéma", 38.72},
-                    {"Ember Châssis Blueprint", "Schéma", 38.72},
-                    {"Ember Systèmes Blueprint", "Schéma", 22.56}
+                    {"Ember Neuroptiques Schéma", "Schéma", 38.72},
+                    {"Ember Châssis Schéma", "Schéma", 38.72},
+                    {"Ember Systèmes Schéma", "Schéma", 22.56}
                 }
             }
         }, {
@@ -2369,137 +2398,144 @@ local DropData = {
             Tier = "Le Sergent",
             Rewards = {
                 ["A"] = {
-                    {"Mag Neuroptiques Blueprint", "Schéma", 38.72},
-                    {"Mag Châssis Blueprint", "Schéma", 38.72},
-                    {"Mag Systèmes Blueprint", "Schéma", 22.56}
+                    {"Mag Neuroptiques Schéma", "Schéma", 38.72},
+                    {"Mag Châssis Schéma", "Schéma", 38.72},
+                    {"Mag Systèmes Schéma", "Schéma", 22.56}
                 }
             }
         }, {
-            Type = "Assassinate",
+            Type = "Assassinat",
             Tier = "Tyl Regor",
             Rewards = {
                 ["A"] = {
-                    {"Equinox Night Aspect Blueprint", "Schéma", 11.28},
-                    {"Equinox Night Châssis Blueprint", "Schéma", 12.91},
-                    {"Equinox Night Neuroptiques Blueprint", "Schéma", 12.91},
-                    {"Equinox Night Systèmes Blueprint", "Schéma", 12.91},
-                    {"Equinox Day Aspect Blueprint", "Schéma", 11.28},
-                    {"Equinox Day Châssis Blueprint", "Schéma", 12.91},
-                    {"Equinox Day Neuroptiques Blueprint", "Schéma", 12.91},
-                    {"Equinox Day Systèmes Blueprint", "Schéma", 12.91}
+                    {"Equinox Forme Nocturne Schéma", "Schéma", 11.28},
+                    {"Equinox Châssis Nocturne Schéma", "Schéma", 12.91},
+                    {"Equinox Neuroptiques Nocturnes Schéma", "Schéma", 12.91},
+                    {"Equinox Systèmes Nocturnes Schéma", "Schéma", 12.91},
+                    {"Equinox Forme Diurne Schéma", "Schéma", 11.28},
+                    {"Equinox Châssis Diurne Schéma", "Schéma", 12.91},
+                    {"Equinox Neuroptiques Diurnes Schéma", "Schéma", 12.91},
+                    {"Equinox Systèmes Diurnes Schéma", "Schéma", 12.91}
                 }
             }
         }, {
-            Type = "Assassinate",
+            Type = "Assassinat",
             Tier = "Vay Hek",
             Rewards = {
                 ["A"] = {
-                    {"Hydroid Neuroptiques Blueprint", "Schéma", 38.72},
-                    {"Hydroid Châssis Blueprint", "Schéma", 38.72},
-                    {"Hydroid Systèmes Blueprint", "Schéma", 22.56}
+                    {"Hydroid Neuroptiques Schéma", "Schéma", 38.72},
+                    {"Hydroid Châssis Schéma", "Schéma", 38.72},
+                    {"Hydroid Systèmes Schéma", "Schéma", 22.56}
                 }
             }
         }, {
-            Type = "Assassinate",
+            Type = "Assassinat",
             Tier = "Vor",
             Rewards = {
                 ["A"] = {
-                    {"Seer Blueprint", "Schéma", 38.72},
-                    {"Seer Barrel", "Schéma", 38.72},
-                    {"Seer Receiver", "Schéma", 22.56}
+                    {"Seer Schéma", "Schéma", 38.72},
+                    {"Seer Canon", "Schéma", 38.72},
+                    {"Seer Culasse", "Schéma", 22.56}
                 }
             }
         }, {
-            Type = "Onslaught",
+            Type = "Assaut du Sanctuaire",
             Tier = "Facile",
-            Name = "Sanctuary Onslaught (Easy)",
+            Name = "Assaut du Sanctuaire (Facile)",
             Alias = "Onslaught",
-            ShortName = "Onslaught",
+            ShortName = "Assaut du Sanctuaire",
             Rewards = {
                 ["A"] = {
-                    {"Khora Châssis Blueprint", "Schéma", 8.33},
-                    {"Endo", "Endo", 10.19, 300},
-                    {"Corpus Ship Freight Scene", "Scene", 10.19},
-                    {"Grineer Sealab Centrifuge Scene", "Scene", 10.19},
-                    {"Lith C4", "Relique", 10.19},
-                    {"Lith S8", "Relique", 10.19},
-                    {"Lith L2", "Relique", 10.19},
-                    {"Lith M4", "Relique", 10.19},
-                    {"Lith W2", "Relique", 10.19}, {"Lith D1", "Relique", 10.19}
+                    {"Khora Châssis Schéma", "Schéma", 8.33},
+                    {"Endo", "Endo", 9.17, 300},
+                    {
+                        "Scène du Vaisseau de Ravitaillement Corpus", "Scène",
+                        9.17
+                    },
+                    {
+                        "Scène Centrifugeuse du Laboratoire Sous-Marin Grineer",
+                        "Scène", 9.17
+                    }, {"Lith D4", "Relique", 9.17},
+                    {"Lith B8", "Relique", 9.17}, {"Lith G3", "Relique", 9.17},
+                    {"Lith P5", "Relique", 9.17}, {"Lith T5", "Relique", 9.17},
+                    {"Lith I1", "Relique", 9.17}, {"Lith T4", "Relique", 9.17}
                 },
                 ["B"] = {
-                    {"Synthetic Eidolon Shard", "Ressource", 9.09},
-                    {"Khora Neuroptiques Blueprint", "Schéma", 9.09},
-                    {"Endo", "Endo", 9.09, 300}, {"Meso R2", "Relique", 9.09},
-                    {"Grineer Settlement Artillery Scene", "Scene", 9.09},
-                    {"Meso C4", "Relique", 9.09}, {"Meso L1", "Relique", 9.09},
-                    {"Meso B4", "Relique", 9.09}, {"Meso D4", "Relique", 9.09},
-                    {"Meso N9", "Relique", 9.09}, {"Meso E3", "Relique", 9.09}
+                    {"Éclat d'Eidolon Synthétique", "Ressource", 9.09},
+                    {"Khora Neuroptiques Schéma", "Schéma", 9.09},
+                    {"Endo", "Endo", 9.09, 300},
+                    {
+                        "Scène de l'Artillerie du Campement Grineer", "Scène",
+                        9.09
+                    }, {"Meso C6", "Relique", 9.09},
+                    {"Meso P2", "Relique", 9.09}, {"Meso K3", "Relique", 9.09},
+                    {"Meso P4", "Relique", 9.09}, {"Meso D6", "Relique", 9.09},
+                    {"Meso I1", "Relique", 9.09}, {"Meso T4", "Relique", 9.09}
                 },
                 ["C"] = {
-                    {"Khora Systèmes Blueprint", "Schéma", 11.28},
-                    {"Khora Blueprint", "Schéma", 11.28},
+                    {"Khora Systèmes Schéma", "Schéma", 11.28},
+                    {"Khora Schéma", "Schéma", 11.28},
                     {"Endo", "Endo", 9.68, 600}, {"Neo T2", "Relique", 9.68},
-                    {"Neo A3", "Relique", 9.68}, {"Neo Z5", "Relique", 9.68},
-                    {"Neo M2", "Relique", 9.68}, {"Neo I1", "Relique", 9.68},
-                    {"Neo R3", "Relique", 9.68}, {"Neo G2", "Relique", 9.68}
+                    {"Neo N14", "Relique", 9.68}, {"Neo N13", "Relique", 9.68},
+                    {"Neo Z7", "Relique", 9.68}, {"Neo P2", "Relique", 9.68},
+                    {"Neo B7", "Relique", 9.68}, {"Neo N15", "Relique", 9.68}
                 }
             }
         }, {
-            Type = "Onslaught",
+            Type = "Assaut du Sanctuaire",
             Tier = "Difficile",
-            Name = "Sanctuary Onslaught (Hard)",
+            Name = "Assaut du Sanctuaire (Difficile)",
             Alias = "Onslaught",
-            ShortName = "Elite Onslaught",
+            ShortName = "Assaut du Sanctuaire Élite",
             Rewards = {
                 ["A"] = {
-                    {"Endo", "Endo", 10.84, 400},
-                    {"Lato Vandal Receiver", "Schéma", 2.01},
-                    {"Kuva Fortress Crevice Scene", "Scene", 5.53},
-                    {"Lua Balcony Scene", "Scene", 5.53},
-                    {"Meso C4 (Radiant)", "Relique", 5.53},
-                    {"Lith C4 (Radiant)", "Relique", 10.84},
-                    {"Lith S8 (Radiant)", "Relique", 10.84},
-                    {"Lith L2 (Radiant)", "Relique", 10.84},
-                    {"Lith M4 (Radiant)", "Relique", 10.84},
-                    {"Lith W2 (Radiant)", "Relique", 10.84},
-                    {"Lith D1 (Radiant)", "Relique", 10.84},
-                    {"Meso D4 (Radiant)", "Relique", 5.53}
+                    {"Endo", "Endo", 9.48, 400},
+                    {"Lato Vandal Culasse", "Schéma", 2.01},
+                    {"Scène Fente Forteresse Kuva", "Scène", 5.53},
+                    {"Scène du Balcon de Lua", "Scène", 5.53},
+                    {"Meso C6 (Éclatante)", "Relique", 5.53},
+                    {"Lith D4 (Éclatante)", "Relique", 9.48},
+                    {"Lith B8 (Éclatante)", "Relique", 9.48},
+                    {"Lith G3 (Éclatante)", "Relique", 9.48},
+                    {"Lith P5 (Éclatante)", "Relique", 9.48},
+                    {"Lith T5 (Éclatante)", "Relique", 9.48},
+                    {"Lith I1 (Éclatante)", "Relique", 9.48},
+                    {"Meso K3 (Éclatante)", "Relique", 5.53},
+                    {"Lith T4 (Éclatante)", "Relique", 9.48}
                 },
                 ["B"] = {
-                    {"Synthetic Eidolon Shard", "Ressource", 10.84},
+                    {"Éclat d'Eidolon Synthétique", "Ressource", 10.84},
                     {"Endo", "Endo", 10.84, 400},
-                    {"Meso R2 (Radiant)", "Relique", 10.84},
-                    {"Braton Vandal Barrel", "Schéma", 4.42},
-                    {"Braton Vandal Receiver", "Schéma", 4.42},
-                    {"Lato Vandal Blueprint", "Schéma", 2.01},
-                    {"Meso L1 (Radiant)", "Relique", 10.84},
-                    {"Meso B4 (Radiant)", "Relique", 10.84},
-                    {"Neo Z5 (Radiant)", "Relique", 4.42},
-                    {"Neo M2 (Radiant)", "Relique", 4.42},
-                    {"Meso N9 (Radiant)", "Relique", 10.84},
-                    {"Meso E3 (Radiant)", "Relique", 10.84},
-                    {"Neo I1 (Radiant)", "Relique", 4.42}
+                    {"Meso P4 (Éclatante)", "Relique", 10.84},
+                    {"Braton Vandal Canon", "Schéma", 4.42},
+                    {"Braton Vandal Culasse", "Schéma", 4.42},
+                    {"Lato Vandal Schéma", "Schéma", 2.01},
+                    {"Meso I1 (Éclatante)", "Relique", 10.84},
+                    {"Meso P2 (Éclatante)", "Relique", 10.84},
+                    {"Neo N14 (Éclatante)", "Relique", 4.42},
+                    {"Neo Z7 (Éclatante)", "Relique", 4.42},
+                    {"Meso D6 (Éclatante)", "Relique", 10.84},
+                    {"Meso T4 (Éclatante)", "Relique", 10.84},
+                    {"Neo N13 (Éclatante)", "Relique", 4.42}
                 },
                 ["C"] = {
                     {"Endo", "Endo", 15.18, 750},
-                    {"Braton Vandal Stock", "Schéma", 2.01},
-                    {"Braton Vandal Blueprint", "Schéma", 1.01},
-                    {"Lato Vandal Barrel", "Schéma", 2.01},
-                    {"Peculiar Bloom", "Mod", 2.01},
-                    {"Peculiar Growth", "Mod", 2.01},
-                    {"Axi P3 (Radiant)", "Relique", 2.01},
-                    {"Axi D2 (Radiant)", "Relique", 2.01},
-                    {"Neo T2 (Radiant)", "Relique", 15.18},
-                    {"Neo A3 (Radiant)", "Relique", 15.18},
-                    {"Axi A6 (Radiant)", "Relique", 2.01},
-                    {"Axi T3 (Radiant)", "Relique", 2.01},
-                    {"Axi A9 (Radiant)", "Relique", 2.01},
-                    {"Blazing Step Ephemera Blueprint", "Schéma", 1.01},
-                    {"Neo R3 (Radiant)", "Relique", 15.18},
-                    {"Axi A8 (Radiant)", "Relique", 2.01},
-                    {"Axi B3 (Radiant)", "Relique", 2.01},
-                    {"Neo G2 (Radiant)", "Relique", 15.18}
+                    {"Braton Vandal Crosse", "Schéma", 2.01},
+                    {"Braton Vandal Schéma", "Schéma", 2.01},
+                    {"Lato Vandal Canon", "Schéma", 2.01},
+                    {"Floraison Atypique", "Mod", 2.01},
+                    {"Boursouflure Atypique", "Mod", 2.01},
+                    {"Axi O5 (Éclatante)", "Relique", 2.01},
+                    {"Axi Z1 (Éclatante)", "Relique", 2.01},
+                    {"Neo T2 (Éclatante)", "Relique", 15.18},
+                    {"Neo P2 (Éclatante)", "Relique", 15.18},
+                    {"Axi A11 (Éclatante)", "Relique", 2.01},
+                    {"Axi A13 (Éclatante)", "Relique", 2.01},
+                    {"Axi W2 (Éclatante)", "Relique", 2.01},
+                    {"Neo B7 (Éclatante)", "Relique", 15.18},
+                    {"Axi C6 (Éclatante)", "Relique", 2.01},
+                    {"Axi T6 (Éclatante)", "Relique", 2.01},
+                    {"Neo N15 (Éclatante)", "Relique", 15.18}
                 }
             }
         }, {
@@ -2547,9 +2583,9 @@ local DropData = {
                 }
             }
         }, {
-            Type = "Tactical Alert",
-            Tier = "Hallowed Flame Missions",
-            Name = "Hallowed Flame Missions",
+            Type = "Alerte Tactique",
+            Tier = "Flamme Hantée Missions",
+            Name = "Flamme Hantée Missions",
             Alias = "Hallowed Flame Missions",
             ShortName = "[[Tactical Alert#Hallowed Flame|Hallowed Flame Missions]]",
             Ignore = true,
@@ -2560,8 +2596,8 @@ local DropData = {
                     {"Cache de Crédits", "Credits", 15.18, 7500},
                     {"Kuva", "Ressource", 15.18, 75},
                     {"Kuva", "Ressource", 7.37, 125},
-                    {"Ancient Healer Specter Blueprint", "Schéma", 7.37},
-                    {"Charger Specter Blueprint", "Schéma", 7.37},
+                    {"Spectre d'Ancien Guérisseur Schéma", "Schéma", 7.37},
+                    {"Spectre De Chargeur Schéma", "Schéma", 7.37},
                     {"Nano Spores", "Ressource", 15.18, 500},
                     {"Norg", "Ressource", 1.01}, {"Boot", "Ressource", 1.01}
                 },
@@ -2573,63 +2609,62 @@ local DropData = {
                     {"Kuva", "Ressource", 12.65, 175},
                     {"Cristal d'Argon", "Ressource", 11.06},
                     {"{{Icon|Item|Forma|text}}", "Schéma", 11.06},
-                    {"Clem Clone Blueprint", "Schéma", 1.01},
-                    {"Universal Medallion", "Ressource", 1.01}
+                    {"Clone de Clem Schéma", "Schéma", 1.01},
+                    {"Médaillon Universel", "Ressource", 1.01}
                 },
                 ["C"] = {
                     {"Kuva", "Ressource", 15.18, 175},
                     {"Kuva", "Ressource", 15.18, 225},
                     {"Endo", "Endo", 15.18, 320}, {"Endo", "Endo", 15.18, 400},
                     {"Cristal d'Argon", "Ressource", 15.18},
-                    {"Day Of The Dead Sigil", "Ressource", 5.53},
-                    {"Kavat Genetic Code", "Ressource", 5.53},
+                    {"Sceau Jour des Morts", "Ressource", 5.53},
+                    {"Code Génétique de Kavat", "Ressource", 5.53},
                     {"Oeuf de Kubrow", "Ressource", 5.53},
                     {"Endo", "Endo", 5.53, 480},
                     {"Extrait de Nitain", "Ressource", 1.01},
-                    {"Universal Medallion", "Ressource", 1.01}
+                    {"Médaillon Universel", "Ressource", 1.01}
                 }
             }
         }, {
-            Type = "Tactical Alert",
-            Tier = "Hallowed Flame Endurance",
-            Name = "Hallowed Flame Endurance",
+            Type = "Alerte Tactique",
+            Tier = "Flamme Hantée Endurance",
+            Name = "Flamme Hantée Endurance",
             Alias = "Hallowed Flame Endurance",
             ShortName = "[[Tactical Alert#Hallowed Flame|Hallowed Flame Endurance]]",
             Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Cache de Crédits", "Credits", 15.18, 5000},
-                    {"Cache de Crédits", "Credits", 15.18, 7500},
                     {"Cache de Crédits", "Credits", 15.18, 10000},
-                    {"Kuva", "Ressource", 15.18, 100},
+                    {"Cache de Crédits", "Credits", 15.18, 10000},
+                    {"Cache de Crédits", "Credits", 15.18, 10000},
                     {"Kuva", "Ressource", 15.18, 150},
-                    {"Ancient Healer Specter Blueprint", "Schéma", 7.37},
-                    {"Charger Specter Blueprint", "Schéma", 7.37},
-                    {"Pherliac Pod", "Ressource", 7.37, 2},
-                    {"Norg", "Ressource", 1.01}, {"Boot", "Ressource", 1.01}
+                    {"Kuva", "Ressource", 15.18, 150},
+                    {"Spectre d'Ancien Guérisseur Schéma", "Schéma", 7.37},
+                    {"Spectre De Chargeur Schéma", "Schéma", 7.37},
+                    {"Cocons Pherliac", "Ressource", 7.37, 2},
+                    {"Norg", "Ressource", 1.01}, {"Botte", "Ressource", 1.01}
                 },
                 ["B"] = {
-                    {"Endo", "Endo", 12.65, 320}, {"Endo", "Endo", 12.65, 400},
+                    {"Endo", "Endo", 12.65, 400}, {"Endo", "Endo", 12.65, 400},
                     {"Cristal d'Argon", "Ressource", 12.65},
                     {"Cellule Orokin", "Ressource", 12.65, 2},
-                    {"Kuva", "Ressource", 12.65, 150},
+                    {"Kuva", "Ressource", 12.65, 200},
                     {"Kuva", "Ressource", 12.65, 200},
                     {"Masse Mutagène", "Ressource", 11.06},
                     {"{{Icon|Item|Forma|text}}", "Schéma", 11.06},
-                    {"Clem Clone Blueprint", "Schéma", 1.01},
-                    {"Universal Medallion", "Ressource", 1.01}
+                    {"Clone de Clem Schéma", "Schéma", 1.01},
+                    {"Médaillon Universel", "Ressource", 1.01}
                 },
                 ["C"] = {
-                    {"Kuva", "Ressource", 12.65, 200},
                     {"Kuva", "Ressource", 12.65, 250},
-                    {"Endo", "Endo", 12.65, 400}, {"Endo", "Endo", 12.65, 640},
+                    {"Kuva", "Ressource", 12.65, 250},
+                    {"Endo", "Endo", 12.65, 600}, {"Endo", "Endo", 12.65, 600},
                     {"Cristal d'Argon", "Ressource", 12.65, 2},
-                    {"Day Of The Dead Sigil", "Item", 12.65},
-                    {"Kavat Genetic Code", "Ressource", 7.37},
-                    {"Oeuf de Kubrow", "Ressource", 7.37},
-                    {"Lith D1", "Relique", 7.37},
+                    {"Sceau Jour des Morts", "Ressource", 12.65},
+                    {"Code Génétique de Kavat", "Ressource", 11.06},
+                    {"Oeuf de Kubrow", "Ressource", 11.06},
                     {"Extrait de Nitain", "Ressource", 1.01},
-                    {"Universal Medallion", "Ressource", 1.01}
+                    {"Médaillon Universel", "Ressource", 1.01}
                 }
             }
         }, {
@@ -2721,16 +2756,16 @@ local DropData = {
                     {"Endo", "Endo", 8.33, 400}, {"Tir Aveugle", "Mod", 2.48},
                     {"Jauge Hydraulique", "Mod", 2.48},
                     {"Tir Chanceux", "Mod", 2.48},
-                    {"Hydraulic Gauge", "Mod", 2.48},
-                    {"Hydraulic Chamber", "Mod", 2.48},
+                    {"Jauge hydraulique", "Mod", 2.48},
+                    {"Chambre Hydraulique", "Mod", 2.48},
                     {"Flèches Empennées", "Mod", 2.48},
-                    {"Heightened Reflexes", "Mod", 2.48},
+                    {"Réflexes Primaires", "Mod", 2.48},
                     {"Démarche Pressée", "Mod", 2.48},
                     {"Montée d'Adrénaline ", "Mod", 2.48},
-                    {"Vital Systèmes Bypass", "Mod", 2.48},
-                    {"Secondary Wind", "Mod", 2.48},
+                    {"Détournement des Systèmes de survie", "Mod", 2.48},
+                    {"Second Souffle", "Mod", 2.48},
                     {"Cadence Habile", "Mod", 2.48}, {"Plan B", "Mod", 2.48},
-                    {"Kill Switch", "Mod", 2.48},
+                    {"Dispositif d'Arrêt d'Urgence", "Mod", 2.48},
                     {"Frénésie de Gorgone", "Mod", 2.48},
                     {"Grinloké", "Mod", 2.48}, {"Double Coup", "Mod", 2.48},
                     {"Triple Coup", "Mod", 2.48}, {"Coup Final", "Mod", 2.48},
@@ -2739,9 +2774,9 @@ local DropData = {
                     {"Accélération Convergente", "Mod", 2.48},
                     {"Rafale Contrôlée", "Mod", 2.48},
                     {"Ogive Lourde", "Mod", 2.48}, {"Acte Final", "Mod", 2.48},
-                    {"Tactical Retreat", "Mod", 2.48},
-                    {"Mortal Conduct", "Mod", 2.48},
-                    {"Soaring Strike", "Mod", 2.48},
+                    {"Retraite Tactique", "Mod", 2.48},
+                    {"Conduit Mortel", "Mod", 2.48},
+                    {"Attaque Ascendante", "Mod", 2.48},
                     {"Conséquence Inattendue", "Mod", 2.48},
                     {"Alacrité Statique", "Mod", 2.48},
                     {"DynaMiter", "Mod", 2.48},
@@ -2758,12 +2793,12 @@ local DropData = {
                     {"Ferrite", "Ressource", 12.65, 400},
                     {"Nano Spores", "Ressource", 12.65, 500},
                     {"Pack Polymère", "Ressource", 12.65, 500},
-                    {"Salvage", "Ressource", 12.65, 600},
+                    {"Récupération", "Ressource", 12.65, 600},
                     {"Circuits", "Ressource", 7.37, 100},
                     {"Plastides", "Ressource", 7.37, 120},
                     {"Rubedo", "Ressource", 7.37, 100},
                     {"Cristal d'Argon", "Ressource", 0.25},
-                    {"Control Module", "Ressource", 0.25},
+                    {"Module de Contrôle", "Ressource", 0.25},
                     {"Gallium", "Ressource", 0.25},
                     {"Morphics", "Ressource", 0.25},
                     {"Capteurs Neuronaux", "Ressource", 0.25},
@@ -2810,11 +2845,12 @@ local DropData = {
             ShortName = "[[Razorback Armada]]",
             Rewards = {
                 ["A"] = {
-                    {"Gorgon Wraith Blueprint", "Schéma", 18.97},
-                    {"Gorgon Wraith Barrel", "Schéma", 18.97},
-                    {"Gorgon Wraith Receiver", "Schéma", 18.97},
-                    {"Gorgon Wraith Stock", "Schéma", 18.97},
-                    {"Perceur", "Mod", 5.53}, {"Piercing Caliber", "Mod", 5.53},
+                    {"Gorgon Wraith Schéma", "Schéma", 18.97},
+                    {"Gorgon Wraith Canon", "Schéma", 18.97},
+                    {"Gorgon Wraith Culasse", "Schéma", 18.97},
+                    {"Gorgon Wraith Crosse", "Schéma", 18.97},
+                    {"Perceur", "Mod", 5.53},
+                    {"Calibre Pénétrant", "Mod", 5.53},
                     {"Faiseur de Brèche", "Mod", 5.53},
                     {"Frappe Vrillée", "Mod", 5.53},
                     {"Chambre Magmatique", "Mod", 1.01},
@@ -2823,16 +2859,16 @@ local DropData = {
             }
         }, {
             Type = "Événement",
-            Tier = "Fomorian",
-            Name = "Fomorian Sabotage",
+            Tier = "Fomorien",
+            Name = "Sabotage Fomorien",
             Alias = "Fomorian",
-            ShortName = "[[Fomorian Sabotage]]",
+            ShortName = "[[Sabotage Fomorien]]",
             Rewards = {
                 ["A"] = {
                     {"Endo", "Endo", 40, 400},
-                    {"Imperator Vandal Barrel", "Schéma", 10},
-                    {"Imperator Vandal Receiver", "Schéma", 10},
-                    {"Imperator Vandal Blueprint", "Schéma", 10},
+                    {"Imperator Vandal Canon", "Schéma", 10},
+                    {"Imperator Vandal Culasse", "Schéma", 10},
+                    {"Imperator Vandal Schéma", "Schéma", 10},
                     {"Cartouche Hypothermique", "Mod", 5},
                     {"Balles Chargées", "Mod", 5},
                     {"Charge Contaminée", "Mod", 5},
@@ -2926,7 +2962,7 @@ local DropData = {
             Rewards = {
                 ["A"] = {
                     {"Fusillade de Crocs", "Mod"},
-                    {"Sweeping Serration", "Mod"}, {"Maim", "Mod"},
+                    {"Dentelure Balayante", "Mod"}, {"Mutilation", "Mod"},
                     {"Rabat-Joie", "Mod"}
                 }
             }
@@ -2938,10 +2974,11 @@ local DropData = {
             ShortName = "[[Opération: Incursion Infestée]]",
             Rewards = {
                 ["A"] = {
-                    {"Piercing Caliber", "Mod"}, {"Faiseur de Brèche", "Mod"},
-                    {"Perceur", "Mod"}, {"Frappe Vrillée", "Mod"},
-                    {"Haute Tension", "Mod"}, {"Commotion", "Mod"},
-                    {"Secousse", "Mod"}, {"Coup Voltaïque", "Mod"}
+                    {"Calibre Pénétrant", "Mod"},
+                    {"Faiseur de Brèche", "Mod"}, {"Perceur", "Mod"},
+                    {"Frappe Vrillée", "Mod"}, {"Haute Tension", "Mod"},
+                    {"Commotion", "Mod"}, {"Secousse", "Mod"},
+                    {"Coup Voltaïque", "Mod"}
                 }
             }
         }, {
@@ -3006,7 +3043,72 @@ local DropData = {
                 }
             }
         }, {
-            Type = "Event",
+            Type = "Événement",
+            Tier = "Incursion Écarlate",
+            Name = "Raid Murex",
+            Alias = "Raid Murex",
+            ShortName = "[[Opération : Incursion Écarlate]]",
+            Ignore = true,
+            Rewards = {
+                ["A"] = {
+                    {"Dirac", "Ressource", 29.03, 300},
+                    {"Lith D4", "Relique", 12.90},
+                    {"Lith B8", "Relique", 12.90},
+                    {"Lith G3", "Relique", 12.90},
+                    {"Lith P5", "Relique", 12.90}, {"Lith T5", "Relique", 6.45},
+                    {"Lith I1", "Relique", 6.45}, {"Lith T4", "Relique", 6.45}
+                },
+                ["B"] = {
+                    {"Dirac", "Ressource", 33.33, 300},
+                    {"Meso C6", "Relique", 12.12},
+                    {"Meso P2", "Relique", 12.12},
+                    {"Meso K3", "Relique", 12.12},
+                    {"Meso P4", "Relique", 12.12}, {"Meso D6", "Relique", 6.06},
+                    {"Meso I1", "Relique", 6.06}, {"Meso T4", "Relique", 6.06}
+                },
+                ["C"] = {
+                    {"Dirac", "Ressource", 39.39, 300},
+                    {"Neo T2", "Relique", 12.12}, {"Neo N14", "Relique", 12.12},
+                    {"Neo N13", "Relique", 12.12}, {"Neo Z7", "Relique", 6.06},
+                    {"Neo P2", "Relique", 6.06}, {"Neo B7", "Relique", 6.06},
+                    {"Neo N15", "Relique", 6.06}
+                }
+            }
+        }, {
+            Type = "Événement",
+            Tier = "Incursion Écarlate",
+            Name = "Assaut Terrestre",
+            Alias = "Assaut Terrestre",
+            ShortName = "[[Opération : Incursion Écarlate]]",
+            Ignore = true,
+            Rewards = {
+                ["A"] = {
+                    {"Lith D4", "Relique", 13.33},
+                    {"Lith B8", "Relique", 13.33},
+                    {"Lith G3", "Relique", 13.33},
+                    {"Lith P5", "Relique", 13.33}, {"Lith T5", "Relique", 6.67},
+                    {"Lith I1", "Relique", 6.67}, {"Endo", "Endo", 26.67, 500},
+                    {"Lith T4", "Relique", 6.67}
+                },
+                ["B"] = {
+                    {"Lith D4", "Relique", 13.33},
+                    {"Lith B8", "Relique", 13.33},
+                    {"Lith G3", "Relique", 13.33},
+                    {"Lith P5", "Relique", 13.33}, {"Lith T5", "Relique", 6.67},
+                    {"Lith I1", "Relique", 6.67}, {"Endo", "Endo", 26.67, 500},
+                    {"Lith T4", "Relique", 6.67}
+                },
+                ["C"] = {
+                    {"Meso C6", "Relique", 12.50},
+                    {"Meso P2", "Relique", 12.50},
+                    {"Meso K3", "Relique", 12.50},
+                    {"Meso P4", "Relique", 12.50}, {"Meso D6", "Relique", 6.25},
+                    {"Meso I1", "Relique", 6.25}, {"Meso T4", "Relique", 6.25},
+                    {"Endo", "Endo", 31.25, 500}
+                }
+            }
+        }, {
+            Type = "Événement",
             Tier = "Normal",
             Name = "Venin Orphix Normal",
             Alias = "Venin Orphix Normal",
@@ -3021,9 +3123,9 @@ local DropData = {
                     {"Reproche du Necramech", "Mod", 2.50},
                     {"Rafistolage du Necramech", "Mod", 2.50},
                     {"Augure du Necramech", "Mod", 2.50},
-                    {"Lith P4", "Relique", 5.00}, {"Lith N5", "Relique", 5.00},
-                    {"Lith D3", "Relique", 5.00}, {"Lith P5", "Relique", 5.00},
-                    {"Lith B7", "Relique", 5.00}, {"Lith N6", "Relique", 5.00},
+                    {"Lith D4", "Relique", 5.00}, {"Lith B8", "Relique", 5.00},
+                    {"Lith G3", "Relique", 5.00}, {"Lith P5", "Relique", 5.00},
+                    {"Lith T5", "Relique", 5.00}, {"Lith I1", "Relique", 5.00},
                     {"Lith T4", "Relique", 5.00}, {"Lith K5", "Relique", 5.00},
                     {"Lith M7", "Relique", 5.00}, {"Endo", "Endo", 37.50, 500}
                 },
@@ -3032,10 +3134,10 @@ local DropData = {
                     {"{{Weapon|Cedo|Cedo - Canon}}", "Schéma", 2.00},
                     {"{{Weapon|Cedo|Cedo - Culasse}}", "Schéma", 2.00},
                     {"{{Weapon|Cedo|Cedo - Crosse}}", "Schéma", 2.00},
-                    {"Meso E4", "Relique", 8.00}, {"Meso C6", "Relique", 8.00},
+                    {"Meso P4", "Relique", 8.00}, {"Meso C6", "Relique", 8.00},
                     {"Meso I1", "Relique", 8.00}, {"Meso P2", "Relique", 8.00},
-                    {"Meso K3", "Relique", 8.00}, {"Meso G2", "Relique", 8.00},
-                    {"Meso N10", "Relique", 8.00}, {"Meso E5", "Relique", 8.00},
+                    {"Meso K3", "Relique", 8.00}, {"Meso D6", "Relique", 8.00},
+                    {"Meso T4", "Relique", 8.00}, {"Meso E5", "Relique", 8.00},
                     {"Endo", "Endo", 28.00, 750}
                 },
                 ["C"] = {
@@ -3043,16 +3145,16 @@ local DropData = {
                     {"{{WF|Lavos|Lavos - Châssis}}", "Schéma", 2.00},
                     {"{{WF|Lavos|Lavos - Neuroptiques}}", "Schéma", 2.00},
                     {"{{WF|Lavos|Lavos - Systèmes}}", "Schéma", 2.00},
-                    {"Casque Lavos Cordatus ", "Schéma", 2.00},
-                    {"Neo T2", "Relique", 8.00}, {"Neo D2", "Relique", 8.00},
-                    {"Neo N13", "Relique", 8.00}, {"Neo I2", "Relique", 8.00},
-                    {"Neo S14", "Relique", 8.00}, {"Neo Z6", "Relique", 8.00},
-                    {"Neo E2", "Relique", 8.00}, {"Neo B6", "Relique", 8.00},
+                    {"Casque Lavos Cordatus", "Schéma", 2.00},
+                    {"Neo T2", "Relique", 8.00}, {"Neo N14", "Relique", 8.00},
+                    {"Neo N13", "Relique", 8.00}, {"Neo Z7", "Relique", 8.00},
+                    {"Neo P2", "Relique", 8.00}, {"Neo B7", "Relique", 8.00},
+                    {"Neo N15", "Relique", 8.00}, {"Neo B6", "Relique", 8.00},
                     {"Endo", "Endo", 26.00, 1000}
                 }
             }
         }, {
-            Type = "Event",
+            Type = "Événement",
             Tier = "Avancé",
             Name = "Venin Orphix Avancé",
             Alias = "Venin Orphix Avancé",
@@ -3067,9 +3169,9 @@ local DropData = {
                     {"Reproche du Necramech", "Mod", 3.00},
                     {"Rafistolage du Necramech", "Mod", 3.00},
                     {"Augure du Necramech", "Mod", 3.00},
-                    {"Lith P4", "Relique", 6.00}, {"Lith N5", "Relique", 6.00},
-                    {"Lith D3", "Relique", 6.00}, {"Lith P5", "Relique", 6.00},
-                    {"Lith B7", "Relique", 6.00}, {"Lith N6", "Relique", 6.00},
+                    {"Lith D4", "Relique", 6.00}, {"Lith B8", "Relique", 6.00},
+                    {"Lith G3", "Relique", 6.00}, {"Lith P5", "Relique", 6.00},
+                    {"Lith T5", "Relique", 6.00}, {"Lith I1", "Relique", 6.00},
                     {"Lith T4", "Relique", 6.00}, {"Lith K5", "Relique", 6.00},
                     {"Lith M7", "Relique", 6.00}, {"Endo", "Endo", 25.00, 750}
                 },
@@ -3078,10 +3180,10 @@ local DropData = {
                     {"{{Weapon|Cedo|Cedo - Canon}}", "Schéma", 3.00},
                     {"{{Weapon|Cedo|Cedo - Culasse}}", "Schéma", 3.00},
                     {"{{Weapon|Cedo|Cedo - Crosse}}", "Schéma", 3.00},
-                    {"Meso E4", "Relique", 6.00}, {"Meso C6", "Relique", 6.00},
+                    {"Meso P4", "Relique", 6.00}, {"Meso C6", "Relique", 6.00},
                     {"Meso I1", "Relique", 6.00}, {"Meso P2", "Relique", 6.00},
-                    {"Meso K3", "Relique", 6.00}, {"Meso G2", "Relique", 6.00},
-                    {"Meso N10", "Relique", 6.00}, {"Meso E5", "Relique", 6.00},
+                    {"Meso K3", "Relique", 6.00}, {"Meso D6", "Relique", 6.00},
+                    {"Meso T4", "Relique", 6.00}, {"Meso E5", "Relique", 6.00},
                     {"Endo", "Endo", 40.00, 1500}
                 },
                 ["C"] = {
@@ -3089,16 +3191,16 @@ local DropData = {
                     {"{{WF|Lavos|Lavos - Châssis}}", "Schéma", 3.00},
                     {"{{WF|Lavos|Lavos - Neuroptiques}}", "Schéma", 3.00},
                     {"{{WF|Lavos|Lavos - Systèmes}}", "Schéma", 3.00},
-                    {"Casque Lavos Cordatus ", "Schéma", 3.00},
-                    {"Neo T2", "Relique", 6.00}, {"Neo D2", "Relique", 6.00},
-                    {"Neo N13", "Relique", 6.00}, {"Neo I2", "Relique", 6.00},
-                    {"Neo S14", "Relique", 6.00}, {"Neo Z6", "Relique", 6.00},
-                    {"Neo E2", "Relique", 6.00}, {"Neo B6", "Relique", 6.00},
+                    {"Casque Lavos Cordatus", "Schéma", 3.00},
+                    {"Neo T2", "Relique", 6.00}, {"Neo N14", "Relique", 6.00},
+                    {"Neo N13", "Relique", 6.00}, {"Neo Z7", "Relique", 6.00},
+                    {"Neo P2", "Relique", 6.00}, {"Neo B7", "Relique", 6.00},
+                    {"Neo N15", "Relique", 6.00}, {"Neo B6", "Relique", 6.00},
                     {"Endo", "Endo", 37.00, 2250}
                 }
             }
         }, {
-            Type = "Event",
+            Type = "Événement",
             Tier = "Endurance",
             Name = "Venin Orphix Endurance",
             Alias = "Venin Orphix Endurance",
@@ -3110,11 +3212,11 @@ local DropData = {
                     {"{{WF|Lavos|Lavos - Châssis}}", "Schéma", 4.00},
                     {"{{WF|Lavos|Lavos - Neuroptiques}}", "Schéma", 4.00},
                     {"{{WF|Lavos|Lavos - Systèmes}}", "Schéma", 4.00},
-                    {"Casque Lavos Cordatus ", "Schéma", 8.00},
-                    {"Neo T2", "Relique", 8.00}, {"Neo D2", "Relique", 8.00},
-                    {"Neo N13", "Relique", 8.00}, {"Neo I2", "Relique", 8.00},
-                    {"Neo S14", "Relique", 8.00}, {"Neo Z6", "Relique", 8.00},
-                    {"Neo E2", "Relique", 8.00}, {"Neo B6", "Relique", 8.00},
+                    {"Casque Lavos Cordatus", "Schéma", 8.00},
+                    {"Neo T2", "Relique", 8.00}, {"Neo N14", "Relique", 8.00},
+                    {"Neo N13", "Relique", 8.00}, {"Neo Z7", "Relique", 8.00},
+                    {"Neo P2", "Relique", 8.00}, {"Neo B7", "Relique", 8.00},
+                    {"Neo N15", "Relique", 8.00}, {"Neo B6", "Relique", 8.00},
                     {"Endo", "Endo", 12.00, 1000}
                 },
                 ["B"] = {
@@ -3122,10 +3224,10 @@ local DropData = {
                     {"{{Weapon|Cedo|Cedo - Canon}}", "Schéma", 4.00},
                     {"{{Weapon|Cedo|Cedo - Culasse}}", "Schéma", 4.00},
                     {"{{Weapon|Cedo|Cedo - Crosse}}", "Schéma", 4.00},
-                    {"Meso E4", "Relique", 8.00}, {"Meso C6", "Relique", 8.00},
+                    {"Meso P4", "Relique", 8.00}, {"Meso C6", "Relique", 8.00},
                     {"Meso I1", "Relique", 8.00}, {"Meso P2", "Relique", 8.00},
-                    {"Meso K3", "Relique", 8.00}, {"Meso G2", "Relique", 8.00},
-                    {"Meso N10", "Relique", 8.00}, {"Meso E5", "Relique", 8.00},
+                    {"Meso K3", "Relique", 8.00}, {"Meso D6", "Relique", 8.00},
+                    {"Meso T4", "Relique", 8.00}, {"Meso E5", "Relique", 8.00},
                     {"Endo", "Endo", 20.00, 2000}
                 },
                 ["C"] = {
@@ -3136,9 +3238,9 @@ local DropData = {
                     {"Reproche du Necramech", "Mod", 4.00},
                     {"Rafistolage du Necramech", "Mod", 4.00},
                     {"Augure du Necramech", "Mod", 4.00},
-                    {"Lith P4", "Relique", 8.00}, {"Lith N5", "Relique", 8.00},
-                    {"Lith D3", "Relique", 8.00}, {"Lith P5", "Relique", 8.00},
-                    {"Lith B7", "Relique", 8.00}, {"Lith N6", "Relique", 8.00},
+                    {"Lith D4", "Relique", 8.00}, {"Lith B8", "Relique", 8.00},
+                    {"Lith G3", "Relique", 8.00}, {"Lith P5", "Relique", 8.00},
+                    {"Lith T5", "Relique", 8.00}, {"Lith I1", "Relique", 8.00},
                     {"Lith T4", "Relique", 8.00}, {"Lith K5", "Relique", 8.00},
                     {"Lith M7", "Relique", 8.00}
                 }
@@ -3146,7 +3248,7 @@ local DropData = {
         }, {
             Type = "Mise à Prix de Cetus",
             Tier = "5-15-1",
-            Name = "Niv&nbsp;5-15 Étapes 1",
+            Name = "Niv&nbsp;5-15 Étape 1",
             Alias = "CetusBounty1-1",
             ShortName = "5-15",
             -- Ignore = true,
@@ -3173,7 +3275,7 @@ local DropData = {
         }, {
             Type = "Mise à Prix de Cetus",
             Tier = "5-15-2",
-            Name = "Niv&nbsp;5-15 Étapes 2",
+            Name = "Niv&nbsp;5-15 Étape 2",
             Alias = "CetusBounty1-2",
             ShortName = "5-15",
             -- Ignore = true,
@@ -3184,7 +3286,7 @@ local DropData = {
                     {"Cache de Crédits", "Credits", 15.49, 1500},
                     {"Endo", "Endo", 15.49, 50},
                     {"Iradite", "Ressource", 15.49, 15},
-                    {"Gara Châssis Blueprint", "Schéma", 7.52},
+                    {"Gara Châssis Schéma", "Schéma", 7.52},
                     {"À Portée", "Mod", 7.52},
                     {"Rationalisation", "Mod", 7.52}
                 },
@@ -3194,7 +3296,7 @@ local DropData = {
                     {"Cache de Crédits", "Credits", 15.49, 1500},
                     {"Endo", "Endo", 15.49, 50},
                     {"Grokdrul", "Ressource", 15.49, 15},
-                    {"Gara Châssis Blueprint", "Schéma", 7.52},
+                    {"Gara Châssis Schéma", "Schéma", 7.52},
                     {"Nuée de Dards", "Mod", 7.52}, {"Allonge", "Mod", 7.52}
                 },
                 ["C"] = {
@@ -3202,15 +3304,15 @@ local DropData = {
                     {"Plastides", "Ressource", 15.49, 200},
                     {"Cache de Crédits", "Credits", 15.49, 1500},
                     {"Endo", "Endo", 15.49, 50},
-                    {"Nistlepod", "Ressource", 15.49, 15},
-                    {"Gara Châssis Blueprint", "Schéma", 7.52},
+                    {"Tégument de Chardon", "Ressource", 15.49, 15},
+                    {"Gara Châssis Schéma", "Schéma", 7.52},
                     {"À Portée", "Mod", 7.52}, {"Intensité", "Mod", 7.52}
                 }
             }
         }, {
             Type = "Mise à Prix de Cetus",
             Tier = "5-15-3",
-            Name = "Niv&nbsp;5-15 Étapes 4 of 5",
+            Name = "Niv&nbsp;5-15 Étape 4 sur 5",
             Alias = "CetusBounty1-3",
             ShortName = "5-15",
             Ignore = true,
@@ -3221,7 +3323,7 @@ local DropData = {
                     {"Cache de Crédits", "Credits", 15.18, 1500},
                     {"Endo", "Endo", 15.18, 50},
                     {"Iradite", "Ressource", 15.18, 15},
-                    {"Gara Châssis Blueprint", "Schéma", 7.37},
+                    {"Gara Châssis Schéma", "Schéma", 7.37},
                     {"À Portée", "Mod", 7.37},
                     {"Rationalisation", "Mod", 7.37},
                     {"Morphics", "Ressource", 2.01, 2}
@@ -3232,7 +3334,7 @@ local DropData = {
                     {"Cache de Crédits", "Credits", 15.18, 1500},
                     {"Endo", "Endo", 15.18, 50},
                     {"Grokdrul", "Ressource", 15.18, 15},
-                    {"Gara Châssis Blueprint", "Schéma", 7.37},
+                    {"Gara Châssis Schéma", "Schéma", 7.37},
                     {"Nuée de Dards", "Mod", 7.37}, {"Allonge", "Mod", 7.37},
                     {"Morphics", "Ressource", 2.01, 2}
                 },
@@ -3241,8 +3343,8 @@ local DropData = {
                     {"Plastides", "Ressource", 15.18, 200},
                     {"Cache de Crédits", "Credits", 15.18, 1500},
                     {"Endo", "Endo", 15.18, 50},
-                    {"Nistlepod", "Ressource", 15.18, 15},
-                    {"Gara Châssis Blueprint", "Schéma", 7.37},
+                    {"Tégument de Chardon", "Ressource", 15.18, 15},
+                    {"Gara Châssis Schéma", "Schéma", 7.37},
                     {"À Portée", "Mod", 7.37}, {"Intensité", "Mod", 7.37},
                     {"Gallium", "Ressource", 2.01, 2}
                 }
@@ -3250,24 +3352,24 @@ local DropData = {
         }, {
             Type = "Mise à Prix de Cetus",
             Tier = "5-15-F",
-            Name = "Niv&nbsp;5-15 Étapes Final",
+            Name = "Niv&nbsp;5-15 Étape Finale",
             Alias = "CetusBounty1-F",
             ShortName = "5-15",
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Gara Châssis Blueprint", "Schéma", 30.56},
+                    {"Gara Châssis Schéma", "Schéma", 30.56},
                     {"À Portée", "Mod", 30.56},
                     {"Rationalisation", "Mod", 30.56},
                     {"Morphics", "Ressource", 8.33, 2}
                 },
                 ["B"] = {
-                    {"Gara Châssis Blueprint", "Schéma", 30.56},
+                    {"Gara Châssis Schéma", "Schéma", 30.56},
                     {"Nuée de Dards", "Mod", 30.56}, {"Allonge", "Mod", 30.56},
                     {"Morphics", "Ressource", 8.33, 2}
                 },
                 ["C"] = {
-                    {"Gara Châssis Blueprint", "Schéma", 30.56},
+                    {"Gara Châssis Schéma", "Schéma", 30.56},
                     {"À Portée", "Mod", 30.56}, {"Intensité", "Mod", 30.56},
                     {"Gallium", "Ressource", 8.33, 2}
                 }
@@ -3275,7 +3377,7 @@ local DropData = {
         }, {
             Type = "Mise à Prix de Cetus",
             Tier = "10-30-1",
-            Name = "Niv&nbsp;10-30 Étapes 1",
+            Name = "Niv&nbsp;10-30 Étape 1",
             Alias = "CetusBounty2-1",
             ShortName = "10-30",
             -- Ignore = true,
@@ -3302,7 +3404,7 @@ local DropData = {
         }, {
             Type = "Mise à Prix de Cetus",
             Tier = "10-30-2",
-            Name = "Niv&nbsp;10-30 Étapes 2",
+            Name = "Niv&nbsp;10-30 Étape 2",
             Alias = "CetusBounty2-2",
             ShortName = "10-30",
             -- Ignore = true,
@@ -3312,108 +3414,108 @@ local DropData = {
                     {"Oxium", "Ressource", 15.08, 200},
                     {"Cache de Crédits", "Credits", 15.08, 2500},
                     {"Endo", "Endo", 15.08, 100},
-                    {"Gara Systèmes Blueprint", "Schéma", 9.52},
+                    {"Gara Systèmes Schéma", "Schéma", 9.52},
                     {"Chambre Chargée", "Mod", 9.52},
                     {"Guêpe Brûlante", "Mod", 9.52},
-                    {"Lith V7", "Relique", 11.11}
+                    {"Lith K5", "Relique", 11.11}
                 },
                 ["B"] = {
                     {"Inversion d'Énergie", "Mod", 15.08},
                     {"Cryotique", "Ressource", 15.08, 200},
                     {"Cache de Crédits", "Credits", 15.08, 2500},
                     {"Endo", "Endo", 15.08, 100},
-                    {"Gara Systèmes Blueprint", "Schéma", 9.52},
+                    {"Gara Systèmes Schéma", "Schéma", 9.52},
                     {"Détente Rapide", "Mod", 9.52},
                     {"Fauchage Tournoyant", "Mod", 9.52},
-                    {"Lith V8", "Relique", 11.11}
+                    {"Lith M7", "Relique", 11.11}
                 },
                 ["C"] = {
                     {"Frappe Tendue", "Mod", 15.08},
                     {"Circuits", "Ressource", 15.08, 300},
                     {"Cache de Crédits", "Credits", 15.08, 2500},
                     {"Endo", "Endo", 15.08, 100},
-                    {"Gara Systèmes Blueprint", "Schéma", 9.52},
+                    {"Gara Systèmes Schéma", "Schéma", 9.52},
                     {"Durabilité Améliorée", "Mod", 9.52},
                     {"Fureur Sombre", "Mod", 9.52},
-                    {"Lith V8", "Relique", 11.11}
+                    {"Lith K5", "Relique", 11.11}
                 }
             }
         }, {
             Type = "Mise à Prix de Cetus",
             Tier = "10-30-3",
-            Name = "Niv&nbsp;10-30 Étapes 4 of 5",
+            Name = "Niv&nbsp;10-30 Étape 4 sur 5",
             Alias = "CetusBounty2-3",
             ShortName = "10-30",
             Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Fibre d'Acier", "Mod", 14.5},
-                    {"Oxium", "Ressource", 14.5, 200},
-                    {"Cache de Crédits", "Credits", 14.5, 2500},
-                    {"Endo", "Endo", 14.5, 100},
-                    {"Gara Systèmes Blueprint", "Schéma", 9.16},
+                    {"Fibre d'Acier", "Mod", 14.50},
+                    {"Oxium", "Ressource", 14.50, 200},
+                    {"Cache de Crédits", "Credits", 14.50, 2500},
+                    {"Endo", "Endo", 14.50, 100},
+                    {"Gara Systèmes Schéma", "Schéma", 9.16},
                     {"Chambre Chargée", "Mod", 9.16},
                     {"Guêpe Brûlante", "Mod", 9.16},
-                    {"Lith V7", "Relique", 10.69},
-                    {"Control Module", "Ressource", 3.82, 2}
+                    {"Lith K5", "Relique", 10.69},
+                    {"Module de Contrôle", "Ressource", 3.82, 2}
                 },
                 ["B"] = {
-                    {"Inversion d'Énergie", "Mod", 14.5},
-                    {"Cryotique", "Ressource", 14.5, 200},
-                    {"Cache de Crédits", "Credits", 14.5, 2500},
-                    {"Endo", "Endo", 14.5, 100},
-                    {"Gara Systèmes Blueprint", "Schéma", 9.16},
+                    {"Inversion d'Énergie", "Mod", 14.50},
+                    {"Cryotique", "Ressource", 14.50, 200},
+                    {"Cache de Crédits", "Credits", 14.50, 2500},
+                    {"Endo", "Endo", 14.50, 100},
+                    {"Gara Systèmes Schéma", "Schéma", 9.16},
                     {"Détente Rapide", "Mod", 9.16},
                     {"Fauchage Tournoyant", "Mod", 9.16},
-                    {"Lith V8", "Relique", 10.69},
+                    {"Lith M7", "Relique", 10.69},
                     {"Capteurs Neuronaux", "Ressource", 3.82, 2}
                 },
                 ["C"] = {
-                    {"Frappe Tendue", "Mod", 14.5},
-                    {"Circuits", "Ressource", 14.5, 300},
-                    {"Cache de Crédits", "Credits", 14.5, 2500},
-                    {"Endo", "Endo", 14.5, 100},
-                    {"Gara Systèmes Blueprint", "Schéma", 9.16},
+                    {"Frappe Tendue", "Mod", 14.50},
+                    {"Circuits", "Ressource", 14.50, 300},
+                    {"Cache de Crédits", "Credits", 14.50, 2500},
+                    {"Endo", "Endo", 14.50, 100},
+                    {"Gara Systèmes Schéma", "Schéma", 9.16},
                     {"Durabilité Améliorée", "Mod", 9.16},
                     {"Fureur Sombre", "Mod", 9.16},
-                    {"Lith V8", "Relique", 10.69},
+                    {"Lith K5", "Relique", 10.69},
                     {"Cellule Orokin", "Ressource", 3.82, 2}
                 }
             }
         }, {
             Type = "Mise à Prix de Cetus",
             Tier = "10-30-F",
-            Name = "Niv&nbsp;10-30 Étapes Final",
+            Name = "Niv&nbsp;10-30 Étape Finale",
             Alias = "CetusBounty2-F",
             ShortName = "10-30",
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Gara Systèmes Blueprint", "Schéma", 21.82},
+                    {"Gara Systèmes Schéma", "Schéma", 21.82},
                     {"Chambre Chargée", "Mod", 21.82},
                     {"Guêpe Brûlante", "Mod", 21.82},
-                    {"Lith V7", "Relique", 25.45},
-                    {"Control Module", "Ressource", 9.09, 2}
+                    {"Lith K5", "Relique", 25.45},
+                    {"Module de Contrôle", "Ressource", 9.09, 2}
                 },
                 ["B"] = {
-                    {"Gara Systèmes Blueprint", "Schéma", 21.82},
+                    {"Gara Systèmes Schéma", "Schéma", 21.82},
                     {"Détente Rapide", "Mod", 21.82},
                     {"Fauchage Tournoyant", "Mod", 21.82},
-                    {"Lith V8", "Relique", 25.45},
+                    {"Lith M7", "Relique", 25.45},
                     {"Capteurs Neuronaux", "Ressource", 9.09, 2}
                 },
                 ["C"] = {
-                    {"Gara Systèmes Blueprint", "Schéma", 21.82},
+                    {"Gara Systèmes Schéma", "Schéma", 21.82},
                     {"Durabilité Améliorée", "Mod", 21.82},
                     {"Fureur Sombre", "Mod", 21.82},
-                    {"Lith V8", "Relique", 25.45},
+                    {"Lith K5", "Relique", 25.45},
                     {"Cellule Orokin", "Ressource", 9.09, 2}
                 }
             }
         }, {
             Type = "Mise à Prix de Cetus",
             Tier = "20-40-1",
-            Name = "Niv&nbsp;20-40 Étapes 1",
+            Name = "Niv&nbsp;20-40 Étape 1",
             Alias = "CetusBounty3-1",
             ShortName = "20-40",
             -- Ignore = true,
@@ -3450,36 +3552,36 @@ local DropData = {
                     {"Lentille Madurai", "Ressource", 8.42},
                     {"Feu Follet de Cetus", "Ressource", 17.89},
                     {"Endo", "Endo", 17.89, 200},
-                    {"Gara Neuroptiques Blueprint", "Schéma", 8.42},
+                    {"Gara Neuroptiques Schéma", "Schéma", 8.42},
                     {"Accord de l'Augure", "Mod", 8.42},
-                    {"Revenant Systèmes Blueprint", "Schéma", 8.42},
-                    {"Meso D5", "Relique", 13.4}
+                    {"Revenant Systèmes Schéma", "Schéma", 8.42},
+                    {"Meso E5", "Relique", 13.68}
                 },
                 ["B"] = {
                     {"Armement du Vigile", "Mod", 20.43},
-                    {"Lentille Vazarin", "Ressource", 8.6},
-                    {"Lentille Unairu", "Ressource", 8.6},
+                    {"Lentille Vazarin", "Ressource", 8.60},
+                    {"Lentille Unairu", "Ressource", 8.60},
                     {"Endo", "Endo", 20.43, 200},
-                    {"Gara Neuroptiques Blueprint", "Schéma", 8.6},
-                    {"Puissance du Gladiateur", "Mod", 8.6},
-                    {"Revenant Systèmes Blueprint", "Schéma", 9.68},
-                    {"Meso D5", "Relique", 13.4}
+                    {"Gara Neuroptiques Schéma", "Schéma", 8.60},
+                    {"Puissance du Gladiateur", "Mod", 8.60},
+                    {"Revenant Systèmes Schéma", "Schéma", 9.68},
+                    {"Meso E5", "Relique", 15.05}
                 },
                 ["C"] = {
                     {"Pacte de l'Augure", "Mod", 20.21},
                     {"Lentille Naramon", "Ressource", 8.51},
                     {"Lentille Zenurik", "Ressource", 8.51},
                     {"Endo", "Endo", 20.21, 200},
-                    {"Gara Neuroptiques Blueprint", "Schéma", 9.57},
+                    {"Gara Neuroptiques Schéma", "Schéma", 9.57},
                     {"Ferveur du Vigile", "Mod", 8.51},
-                    {"Revenant Systèmes Blueprint", "Schéma", 8.51},
-                    {"Meso D5", "Relique", 13.4}
+                    {"Revenant Systèmes Schéma", "Schéma", 8.51},
+                    {"Meso E5", "Relique", 15.96}
                 }
             }
         }, {
             Type = "Mise à Prix de Cetus",
             Tier = "20-40-3",
-            Name = "Niv&nbsp;20-40 Étapes 4 of 5",
+            Name = "Niv&nbsp;20-40 Étape 4 sur 5",
             Alias = "CetusBounty3-3",
             ShortName = "20-40",
             Ignore = true,
@@ -3489,21 +3591,21 @@ local DropData = {
                     {"Lentille Madurai", "Ressource", 8.25},
                     {"Feu Follet de Cetus", "Ressource", 17.53},
                     {"Endo", "Endo", 17.53, 200},
-                    {"Gara Neuroptiques Blueprint", "Schéma", 8.25},
+                    {"Gara Neuroptiques Schéma", "Schéma", 8.25},
                     {"Accord de l'Augure", "Mod", 8.25},
-                    {"Revenant Systèmes Blueprint", "Schéma", 8.25},
-                    {"Meso D5", "Relique", 13.4},
+                    {"Revenant Systèmes Schéma", "Schéma", 8.25},
+                    {"Meso E5", "Relique", 13.40},
                     {"Ressources du Vigile", "Mod", 2.06}
                 },
                 ["B"] = {
-                    {"Armement du Vigile", "Mod", 20},
+                    {"Armement du Vigile", "Mod", 20.00},
                     {"Lentille Vazarin", "Ressource", 8.42},
                     {"Lentille Unairu", "Ressource", 8.42},
-                    {"Endo", "Endo", 20, 200},
-                    {"Gara Neuroptiques Blueprint", "Schéma", 8.42},
+                    {"Endo", "Endo", 20.00, 200},
+                    {"Gara Neuroptiques Schéma", "Schéma", 8.42},
                     {"Puissance du Gladiateur", "Mod", 8.42},
-                    {"Revenant Systèmes Blueprint", "Schéma", 9.47},
-                    {"Meso D5", "Relique", 14.74},
+                    {"Revenant Systèmes Schéma", "Schéma", 9.47},
+                    {"Meso E5", "Relique", 14.74},
                     {"Sourcier de l'Augure", "Mod", 2.11}
                 },
                 ["C"] = {
@@ -3511,47 +3613,47 @@ local DropData = {
                     {"Lentille Naramon", "Ressource", 8.33},
                     {"Lentille Zenurik", "Ressource", 8.33},
                     {"Endo", "Endo", 19.79, 200},
-                    {"Gara Neuroptiques Blueprint", "Schéma", 9.38},
+                    {"Gara Neuroptiques Schéma", "Schéma", 9.38},
                     {"Ferveur du Vigile", "Mod", 8.33},
-                    {"Revenant Systèmes Blueprint", "Schéma", 8.33},
-                    {"Meso D5", "Relique", 15.63},
+                    {"Revenant Systèmes Schéma", "Schéma", 8.33},
+                    {"Meso E5", "Relique", 15.63},
                     {"Vice du Gladiateur", "Mod", 2.08}
                 }
             }
         }, {
             Type = "Mise à Prix de Cetus",
             Tier = "20-40-F",
-            Name = "Niv&nbsp;20-40 Étapes Final",
+            Name = "Niv&nbsp;20-40 Étape Finale",
             Alias = "CetusBounty3-F",
             ShortName = "20-40",
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Gara Neuroptiques Blueprint", "Schéma", 20.51},
+                    {"Gara Neuroptiques Schéma", "Schéma", 20.51},
                     {"Accord de l'Augure", "Mod", 20.51},
-                    {"Revenant Systèmes Blueprint", "Schéma", 20.51},
-                    {"Meso D5", "Relique", 33.33},
+                    {"Revenant Systèmes Schéma", "Schéma", 20.51},
+                    {"Meso E5", "Relique", 33.33},
                     {"Ressources du Vigile", "Mod", 5.13}
                 },
                 ["B"] = {
-                    {"Gara Neuroptiques Blueprint", "Schéma", 19.51},
+                    {"Gara Neuroptiques Schéma", "Schéma", 19.51},
                     {"Puissance du Gladiateur", "Mod", 19.51},
-                    {"Revenant Systèmes Blueprint", "Schéma", 21.95},
-                    {"Meso D5", "Relique", 34.15},
+                    {"Revenant Systèmes Schéma", "Schéma", 21.95},
+                    {"Meso E5", "Relique", 34.15},
                     {"Sourcier de l'Augure", "Mod", 4.88}
                 },
                 ["C"] = {
-                    {"Gara Neuroptiques Blueprint", "Schéma", 21.43},
+                    {"Gara Neuroptiques Schéma", "Schéma", 21.43},
                     {"Ferveur du Vigile", "Mod", 19.05},
-                    {"Revenant Systèmes Blueprint", "Schéma", 19.05},
-                    {"Meso D5", "Relique", 35.71},
+                    {"Revenant Systèmes Schéma", "Schéma", 19.05},
+                    {"Meso E5", "Relique", 35.71},
                     {"Vice du Gladiateur", "Mod", 4.76}
                 }
             }
         }, {
             Type = "Mise à Prix de Cetus",
             Tier = "30-50-1",
-            Name = "Niv&nbsp;30-50 Étapes 1",
+            Name = "Niv&nbsp;30-50 Étape 1",
             Alias = "CetusBounty4-1",
             ShortName = "30-50",
             -- Ignore = true,
@@ -3590,8 +3692,8 @@ local DropData = {
                     {"Endo", "Endo", 20.21, 300},
                     {"Feu Follet de Cetus", "Ressource", 9.57},
                     {"Influence de l'Augure", "Mod", 8.51},
-                    {"Revenant Châssis Blueprint", "Schéma", 8.51},
-                    {"Neo A4", "Relique", 15.96}
+                    {"Revenant Châssis Schéma", "Schéma", 8.51},
+                    {"Neo B6", "Relique", 15.96}
                 },
                 ["B"] = {
                     {"Vigueur du Vigile", "Mod", 20.21},
@@ -3600,8 +3702,8 @@ local DropData = {
                     {"Endo", "Endo", 20.21, 300},
                     {"Feu Follet de Cetus", "Ressource", 9.57},
                     {"Résolution du Gladiateur", "Mod", 8.51},
-                    {"Revenant Châssis Blueprint", "Schéma", 8.51},
-                    {"Neo A4", "Relique", 15.96}
+                    {"Revenant Châssis Schéma", "Schéma", 8.51},
+                    {"Neo B6", "Relique", 15.96}
                 },
                 ["C"] = {
                     {"Message de l'Augure", "Mod", 17.71},
@@ -3610,14 +3712,14 @@ local DropData = {
                     {"Endo", "Endo", 17.71, 300},
                     {"Feu Follet de Cetus", "Ressource", 8.33},
                     {"Poursuite du Vigile", "Mod", 8.33},
-                    {"Revenant Châssis Blueprint", "Schéma", 8.33},
-                    {"Neo A4", "Relique", 14.58}
+                    {"Revenant Châssis Schéma", "Schéma", 8.33},
+                    {"Neo B6", "Relique", 14.58}
                 }
             }
         }, {
             Type = "Mise à Prix de Cetus",
             Tier = "30-50-3",
-            Name = "Niv&nbsp;30-50 Étapes 4",
+            Name = "Niv&nbsp;30-50 Étape 4",
             Alias = "CetusBounty4-3",
             ShortName = "30-50",
             Rewards = {
@@ -3628,8 +3730,8 @@ local DropData = {
                     {"Endo", "Endo", 19.79, 300},
                     {"Feu Follet de Cetus", "Ressource", 9.38},
                     {"Influence de l'Augure", "Mod", 8.33},
-                    {"Revenant Châssis Blueprint", "Schéma", 8.33},
-                    {"Neo A4", "Relique", 15.63},
+                    {"Revenant Châssis Schéma", "Schéma", 8.33},
+                    {"Neo B6", "Relique", 15.63},
                     {"Offense du Vigile", "Mod", 2.08}
                 },
                 ["B"] = {
@@ -3639,8 +3741,8 @@ local DropData = {
                     {"Endo", "Endo", 19.79, 300},
                     {"Feu Follet de Cetus", "Ressource", 9.38},
                     {"Résolution du Gladiateur", "Mod", 8.33},
-                    {"Revenant Châssis Blueprint", "Schéma", 8.33},
-                    {"Neo A4", "Relique", 15.63},
+                    {"Revenant Châssis Schéma", "Schéma", 8.33},
+                    {"Neo B6", "Relique", 15.63},
                     {"Secrets de l'Augure", "Mod", 2.08}
                 },
                 ["C"] = {
@@ -3650,15 +3752,15 @@ local DropData = {
                     {"Endo", "Endo", 17.35, 300},
                     {"Feu Follet de Cetus", "Ressource", 8.16},
                     {"Poursuite du Vigile", "Mod", 8.16},
-                    {"Revenant Châssis Blueprint", "Schéma", 8.16},
-                    {"Neo A4", "Relique", 14.29},
+                    {"Revenant Châssis Schéma", "Schéma", 8.16},
+                    {"Neo B6", "Relique", 14.29},
                     {"Finesse du Gladiateur", "Mod", 2.04}
                 }
             }
         }, {
             Type = "Mise à Prix de Cetus",
             Tier = "30-50-F",
-            Name = "Niv&nbsp;30-50 Étapes Final",
+            Name = "Niv&nbsp;30-50 Étape Finale",
             Alias = "CetusBounty4-F",
             ShortName = "30-50",
             -- Ignore = true,
@@ -3666,43 +3768,43 @@ local DropData = {
                 ["A"] = {
                     {"Feu Follet de Cetus", "Ressource", 21.43},
                     {"Influence de l'Augure", "Mod", 19.05},
-                    {"Revenant Châssis Blueprint", "Schéma", 19.05},
-                    {"Neo A4", "Relique", 35.71},
+                    {"Revenant Châssis Schéma", "Schéma", 19.05},
+                    {"Neo B6", "Relique", 35.71},
                     {"Offense du Vigile", "Mod", 4.76}
                 },
                 ["B"] = {
                     {"Feu Follet de Cetus", "Ressource", 21.43},
                     {"Résolution du Gladiateur", "Mod", 19.05},
-                    {"Revenant Châssis Blueprint", "Schéma", 19.05},
-                    {"Neo A4", "Relique", 35.71},
+                    {"Revenant Châssis Schéma", "Schéma", 19.05},
+                    {"Neo B6", "Relique", 35.71},
                     {"Secrets de l'Augure", "Mod", 4.76}
                 },
                 ["C"] = {
-                    {"Feu Follet de Cetus", "Ressource", 20},
-                    {"Poursuite du Vigile", "Mod", 20},
-                    {"Revenant Châssis Blueprint", "Schéma", 20},
-                    {"Neo A4", "Relique", 35},
-                    {"Finesse du Gladiateur", "Mod", 5}
+                    {"Feu Follet de Cetus", "Ressource", 20.00},
+                    {"Poursuite du Vigile", "Mod", 20.00},
+                    {"Revenant Châssis Schéma", "Schéma", 20.00},
+                    {"Neo B6", "Relique", 35.00},
+                    {"Finesse du Gladiateur", "Mod", 5.00}
                 }
             }
         }, {
             Type = "Mise à Prix de Cetus",
             Tier = "40-60-1",
-            Name = "Niv&nbsp;40-60 Étapes 1",
+            Name = "Niv&nbsp;40-60 Étape 1",
             Alias = "CetusBounty5-1",
             ShortName = "40-60",
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Breath Of The Eidolon", "Ressource", 50, 5},
+                    {"Souffle d'Eidolon", "Ressource", 50, 5},
                     {"Endo", "Endo", 50, 400}
                 },
                 ["B"] = {
-                    {"Breath Of The Eidolon", "Ressource", 50, 5},
+                    {"Souffle d'Eidolon", "Ressource", 50, 5},
                     {"Endo", "Endo", 50, 400}
                 },
                 ["C"] = {
-                    {"Breath Of The Eidolon", "Ressource", 50, 5},
+                    {"Souffle d'Eidolon", "Ressource", 50, 5},
                     {"Endo", "Endo", 50, 400}
                 }
             }
@@ -3715,72 +3817,72 @@ local DropData = {
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Breath Of The Eidolon", "Ressource", 21.74, 5},
+                    {"Souffle d'Eidolon", "Ressource", 21.74, 5},
                     {"Endo", "Endo", 21.74, 400},
                     {"Feu Follet de Cetus", "Ressource", 17.39, 2},
                     {"Kuva", "Ressource", 6.09, 300},
-                    {"Axi A7", "Relique", 33.04}
+                    {"Axi H5", "Relique", 33.04}
                 },
                 ["B"] = {
-                    {"Breath Of The Eidolon", "Ressource", 21.74, 5},
+                    {"Souffle d'Eidolon", "Ressource", 21.74, 5},
                     {"Endo", "Endo", 21.74, 400},
                     {"Feu Follet de Cetus", "Ressource", 17.39, 2},
                     {"Kuva", "Ressource", 6.09, 300},
-                    {"Axi A7", "Relique", 33.04}
+                    {"Axi A12", "Relique", 33.04}
                 },
                 ["C"] = {
-                    {"Breath Of The Eidolon", "Ressource", 21.74, 5},
+                    {"Souffle d'Eidolon", "Ressource", 21.74, 5},
                     {"Endo", "Endo", 21.74, 400},
                     {"Feu Follet de Cetus", "Ressource", 17.39, 2},
                     {"Kuva", "Ressource", 6.09, 300},
-                    {"Axi A7", "Relique", 33.04}
+                    {"Axi H5", "Relique", 33.04}
                 }
             }
         }, {
             Type = "Mise à Prix de Cetus",
             Tier = "40-60-3",
-            Name = "Niv&nbsp;40-60 Étapes 4",
+            Name = "Niv&nbsp;40-60 Étape 4",
             Alias = "CetusBounty5-3",
             ShortName = "40-60",
             Rewards = {
                 ["A"] = {
-                    {"Breath Of The Eidolon", "Ressource", 16.89, 5},
+                    {"Souffle d'Eidolon", "Ressource", 16.89, 5},
                     {"Endo", "Endo", 16.89, 400},
                     {"Feu Follet de Cetus", "Ressource", 13.51, 2},
                     {"Kuva", "Ressource", 4.73, 300},
-                    {"Axi A7", "Relique", 25.68},
-                    {"Furax Wraith Left Gauntlet", "Schéma", 5.41},
+                    {"Axi H5", "Relique", 25.68},
+                    {"Furax Wraith Gantelet Gauche", "Schéma", 5.41},
                     {"Taillade de Mante", "Mod", 5.41},
-                    {"Eidolon Lens Blueprint", "Schéma", 4.73},
-                    {"Revenant Neuroptiques Blueprint", "Schéma", 6.76}
+                    {"Lentille Eidolon Schéma", "Schéma", 4.73},
+                    {"Revenant Neuroptiques Schéma", "Schéma", 6.76}
                 },
                 ["B"] = {
-                    {"Breath Of The Eidolon", "Ressource", 16.89, 5},
+                    {"Souffle d'Eidolon", "Ressource", 16.89, 5},
                     {"Endo", "Endo", 16.89, 400},
                     {"Feu Follet de Cetus", "Ressource", 13.51, 2},
                     {"Kuva", "Ressource", 4.73, 300},
-                    {"Axi A7", "Relique", 25.68},
-                    {"Furax Wraith Right Gauntlet", "Schéma", 5.41},
-                    {"Attaque de faucon", "Mod", 5.41},
-                    {"Eidolon Lens Blueprint", "Schéma", 4.73},
-                    {"Revenant Neuroptiques Blueprint", "Schéma", 6.76}
+                    {"Axi A12", "Relique", 25.68},
+                    {"Furax Wraith Gantelet Droit", "Schéma", 5.41},
+                    {"Attaque de Faucon", "Mod", 5.41},
+                    {"Lentille Eidolon Schéma", "Schéma", 4.73},
+                    {"Revenant Neuroptiques Schéma", "Schéma", 6.76}
                 },
                 ["C"] = {
-                    {"Breath Of The Eidolon", "Ressource", 16.89, 5},
+                    {"Souffle d'Eidolon", "Ressource", 16.89, 5},
                     {"Endo", "Endo", 16.89, 400},
                     {"Feu Follet de Cetus", "Ressource", 13.51, 2},
                     {"Kuva", "Ressource", 4.73, 300},
-                    {"Axi A7", "Relique", 25.68},
-                    {"Furax Wraith Blueprint", "Schéma", 5.41},
+                    {"Axi H5", "Relique", 25.68},
+                    {"Furax Wraith Schéma", "Schéma", 5.41},
                     {"Flèche Virevoltante", "Mod", 5.41},
-                    {"Eidolon Lens Blueprint", "Schéma", 4.73},
-                    {"Revenant Neuroptiques Blueprint", "Schéma", 6.76}
+                    {"Lentille Eidolon Schéma", "Schéma", 4.73},
+                    {"Revenant Neuroptiques Schéma", "Schéma", 6.76}
                 }
             }
         }, {
             Type = "Mise à Prix de Cetus",
             Tier = "40-60-F",
-            Name = "Niv&nbsp;40-60 Étapes Final",
+            Name = "Niv&nbsp;40-60 Étape Finale",
             Alias = "CetusBounty5-F",
             ShortName = "40-60",
             -- Ignore = true,
@@ -3788,46 +3890,178 @@ local DropData = {
                 ["A"] = {
                     {"Feu Follet de Cetus", "Ressource", 20.41, 2},
                     {"Kuva", "Ressource", 7.14, 300},
-                    {"Axi A7", "Relique", 38.78},
-                    {"Furax Wraith Left Gauntlet", "Schéma", 8.16},
+                    {"Axi H5", "Relique", 38.78},
+                    {"Furax Wraith Gantelet Gauche", "Schéma", 8.16},
                     {"Taillade de Mante", "Mod", 8.16},
-                    {"Eidolon Lens Blueprint", "Schéma", 7.14},
-                    {"Revenant Neuroptiques Blueprint", "Schéma", 10.2}
+                    {"Lentille Eidolon Schéma", "Schéma", 7.14},
+                    {"Revenant Neuroptiques Schéma", "Schéma", 10.20}
                 },
                 ["B"] = {
                     {"Feu Follet de Cetus", "Ressource", 20.41, 2},
                     {"Kuva", "Ressource", 7.14, 300},
-                    {"Axi A7", "Relique", 38.78},
-                    {"Furax Wraith Right Gauntlet", "Schéma", 8.16},
-                    {"Attaque de faucon", "Mod", 8.16},
-                    {"Eidolon Lens Blueprint", "Schéma", 7.14},
-                    {"Revenant Neuroptiques Blueprint", "Schéma", 10.2}
+                    {"Axi A12", "Relique", 38.78},
+                    {"Furax Wraith Gantelet Droit", "Schéma", 8.16},
+                    {"Attaque de Faucon", "Mod", 8.16},
+                    {"Lentille Eidolon Schéma", "Schéma", 7.14},
+                    {"Revenant Neuroptiques Schéma", "Schéma", 10.20}
                 },
                 ["C"] = {
                     {"Feu Follet de Cetus", "Ressource", 20.41, 2},
                     {"Kuva", "Ressource", 7.14, 300},
-                    {"Axi A7", "Relique", 38.78},
-                    {"Furax Wraith Blueprint", "Schéma", 8.16},
+                    {"Axi H5", "Relique", 38.78},
+                    {"Furax Wraith Schéma", "Schéma", 8.16},
                     {"Flèche Virevoltante", "Mod", 8.16},
-                    {"Eidolon Lens Blueprint", "Schéma", 7.14},
-                    {"Revenant Neuroptiques Blueprint", "Schéma", 10.2}
+                    {"Lentille Eidolon Schéma", "Schéma", 7.14},
+                    {"Revenant Neuroptiques Schéma", "Schéma", 10.20}
                 }
             }
         }, {
-            Type = "Ghoul Bounty",
+            {
+                Type = "Mise à Prix de Cetus (Route de l'Acier)",
+                Tier = "100-100-1",
+                Name = "Niv 100-100 Étape 1",
+                Alias = "CetusBounty6-1",
+                ShortName = "100-100",
+                -- Ignore = true, 
+                Rewards = {
+                    ["A"] = {
+                        {"Souffle d'Eidolon", "Ressource", 50.00, 5},
+                        {"Endo", "Endo", 50.00, 400}
+                    },
+                    ["B"] = {
+                        {"Souffle d'Eidolon", "Ressource", 50.00, 5},
+                        {"Endo", "Endo", 50.00, 400}
+                    },
+                    ["C"] = {
+                        {"Souffle d'Eidolon", "Ressource", 50.00, 5},
+                        {"Endo", "Endo", 50.00, 400}
+                    }
+                }
+            },
+            {
+                Type = "Mise à Prix de Cetus (Route de l'Acier)",
+                Tier = "100-100-2",
+                Name = "Niv 100-100 Étapess&nbsp;2&nbsp;&&nbsp;3",
+                Alias = "CetusBounty6-2",
+                ShortName = "100-100",
+                -- Ignore = true, 
+                Rewards = {
+                    ["A"] = {
+                        {"Souffle d'Eidolon", "Ressource", 21.74, 5},
+                        {"Endo", "Endo", 21.74, 400},
+                        {"Feu Follet de Cetus", "Ressource", 17.39, 2},
+                        {"Kuva", "Ressource", 6.09, 300},
+                        {"Axi H5", "Relique", 33.04}
+                    },
+                    ["B"] = {
+                        {"Souffle d'Eidolon", "Ressource", 21.74, 5},
+                        {"Endo", "Endo", 21.74, 400},
+                        {"Feu Follet de Cetus", "Ressource", 17.39, 2},
+                        {"Kuva", "Ressource", 6.09, 300},
+                        {"Axi A12", "Relique", 33.04}
+                    },
+                    ["C"] = {
+                        {"Souffle d'Eidolon", "Ressource", 21.74, 5},
+                        {"Endo", "Endo", 21.74, 400},
+                        {"Feu Follet de Cetus", "Ressource", 17.39, 2},
+                        {"Kuva", "Ressource", 6.09, 300},
+                        {"Axi H5", "Relique", 33.04}
+                    }
+                }
+            },
+            {
+                Type = "Mise à Prix de Cetus (Route de l'Acier)",
+                Tier = "100-100-3",
+                Name = "Niv 100-100 Étape 4 sur 5",
+                Alias = "CetusBounty6-3",
+                ShortName = "100-100",
+                Rewards = {
+                    ["A"] = {
+                        {"Souffle d'Eidolon", "Ressource", 16.89, 5},
+                        {"Endo", "Endo", 16.89, 400},
+                        {"Feu Follet de Cetus", "Ressource", 13.51, 2},
+                        {"Kuva", "Ressource", 4.73, 300},
+                        {"Axi H5", "Relique", 25.68},
+                        {"Furax Wraith Gantelet Gauche", "Schéma", 5.41},
+                        {"Taillade de Mante", "Mod", 5.41},
+                        {"Lentille Eidolon Schéma", "Schéma", 4.73},
+                        {"Revenant Neuroptiques Schéma", "Schéma", 6.76}
+                    },
+                    ["B"] = {
+                        {"Souffle d'Eidolon", "Ressource", 16.89, 5},
+                        {"Endo", "Endo", 16.89, 400},
+                        {"Feu Follet de Cetus", "Ressource", 13.51, 2},
+                        {"Kuva", "Ressource", 4.73, 300},
+                        {"Axi A12", "Relique", 25.68},
+                        {"Furax Wraith Gantelet Droit", "Schéma", 5.41},
+                        {"Attaque de Faucon", "Mod", 5.41},
+                        {"Lentille Eidolon Schéma", "Schéma", 4.73},
+                        {"Revenant Neuroptiques Schéma", "Schéma", 6.76}
+                    },
+                    ["C"] = {
+                        {"Souffle d'Eidolon", "Ressource", 16.89, 5},
+                        {"Endo", "Endo", 16.89, 400},
+                        {"Feu Follet de Cetus", "Ressource", 13.51, 2},
+                        {"Kuva", "Ressource", 4.73, 300},
+                        {"Axi H5", "Relique", 25.68},
+                        {"Furax Wraith Schéma", "Schéma", 5.41},
+                        {"Flèche Virevoltante", "Mod", 5.41},
+                        {"Lentille Eidolon Schéma", "Schéma", 4.73},
+                        {"Revenant Neuroptiques Schéma", "Schéma", 6.76}
+                    }
+                }
+            },
+            {
+                Type = "Mise à Prix de Cetus (Route de l'Acier)",
+                Tier = "100-100-F",
+                Name = "Niv 100-100 Étape Finale",
+                Alias = "CetusBounty6-F",
+                ShortName = "100-100",
+                -- Ignore = true, 
+                Rewards = {
+                    ["A"] = {
+                        {"Feu Follet de Cetus", "Ressource", 20.41, 2},
+                        {"Kuva", "Ressource", 7.14, 300},
+                        {"Axi H5", "Relique", 38.78},
+                        {"Furax Wraith Gantelet Gauche", "Schéma", 8.16},
+                        {"Taillade de Mante", "Mod", 8.16},
+                        {"Lentille Eidolon Schéma", "Schéma", 7.14},
+                        {"Revenant Neuroptiques Schéma", "Schéma", 10.20}
+                    },
+                    ["B"] = {
+                        {"Feu Follet de Cetus", "Ressource", 20.41, 2},
+                        {"Kuva", "Ressource", 7.14, 300},
+                        {"Axi A12", "Relique", 38.78},
+                        {"Furax Wraith Gantelet Droit", "Schéma", 8.16},
+                        {"Attaque de Faucon", "Mod", 8.16},
+                        {"Lentille Eidolon Schéma", "Schéma", 7.14},
+                        {"Revenant Neuroptiques Schéma", "Schéma", 10.20}
+                    },
+                    ["C"] = {
+                        {"Feu Follet de Cetus", "Ressource", 20.41, 2},
+                        {"Kuva", "Ressource", 7.14, 300},
+                        {"Axi H5", "Relique", 38.78},
+                        {"Furax Wraith Schéma", "Schéma", 8.16},
+                        {"Flèche Virevoltante", "Mod", 8.16},
+                        {"Lentille Eidolon Schéma", "Schéma", 7.14},
+                        {"Revenant Neuroptiques Schéma", "Schéma", 10.20}
+                    }
+                }
+            },
+            Type = "Mise à Prix de Goules",
             Tier = "15-25-1",
-            Name = "Niv&nbsp;15-25 Étapes 1",
+            Name = "Niv&nbsp;15-25 Étape 1",
             Alias = "GhoulBounty1-1",
             ShortName = "15-25",
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Endo", "Endo", 33.33, 100}, {"Lith V7", "Relique", 33.33},
+                    {"Endo", "Endo", 33.33, 300}, {"Neo B6", "Relique", 33.33},
                     {"Adrénaline du Chasseur", "Mod", 33.33}
                 }
             }
         }, {
-            Type = "Ghoul Bounty",
+            Type = "Mise à Prix de Goules",
             Tier = "15-25-2",
             Name = "Niv&nbsp;15-25 Étapess&nbsp;2&nbsp;&&nbsp;3",
             Alias = "GhoulBounty1-2",
@@ -3835,71 +4069,71 @@ local DropData = {
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Endo", "Endo", 11.74, 100}, {"Lith V7", "Relique", 11.74},
+                    {"Endo", "Endo", 11.74, 300}, {"Neo B6", "Relique", 11.74},
                     {"Adrénaline du Chasseur", "Mod", 11.74},
-                    {"Encrypted Journal Fragment", "Fragments", 18.78},
+                    {"Fragment de Journal Encrypté", "Fragments", 18.78},
                     {"Munitions du Chasseur", "Mod", 9.39},
-                    {"Stubba Blueprint", "Schéma", 4.69},
+                    {"Stubba Schéma", "Schéma", 4.69},
                     {"Feu Follet de Cetus", "Ressource", 9.39},
-                    {"Breath Of The Eidolon", "Ressource", 4.69, 5},
-                    {"Lith L2", "Relique", 17.84}
+                    {"Souffle d'Eidolon", "Ressource", 4.69, 5},
+                    {"Neo N14", "Relique", 17.84}
                 }
             }
         }, {
-            Type = "Ghoul Bounty",
+            Type = "Mise à Prix de Goules",
             Tier = "15-25-3",
-            Name = "Niv&nbsp;15-25 Étapes 4 of 5",
+            Name = "Niv&nbsp;15-25 Étape 4 sur 5",
             Alias = "GhoulBounty1-3",
             ShortName = "15-25",
             Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Endo", "Endo", 10.29, 100}, {"Lith V7", "Relique", 10.29},
+                    {"Endo", "Endo", 10.29, 300}, {"Neo B6", "Relique", 10.29},
                     {"Adrénaline du Chasseur", "Mod", 10.29},
-                    {"Encrypted Journal Fragment", "Fragments", 16.46},
+                    {"Fragment de Journal Encrypté", "Fragments", 16.46},
                     {"Munitions du Chasseur", "Mod", 8.23},
-                    {"Stubba Blueprint", "Schéma", 4.12},
+                    {"Stubba Schéma", "Schéma", 4.12},
                     {"Feu Follet de Cetus", "Ressource", 8.23},
-                    {"Breath Of The Eidolon", "Ressource", 4.12, 5},
-                    {"Lith L2", "Relique", 15.64},
-                    {"PiÉtapes du Chasseur", "Mod", 8.23},
+                    {"Souffle d'Eidolon", "Ressource", 4.12, 5},
+                    {"Neo N14", "Relique", 15.64},
+                    {"Pistage du Chasseur", "Mod", 8.23},
                     {"Extrait de Nitain", "Ressource", 4.12}
                 }
             }
         }, {
-            Type = "Ghoul Bounty",
+            Type = "Mise à Prix de Goules",
             Tier = "15-25-F",
-            Name = "Niv&nbsp;15-25 Étapes Final",
+            Name = "Niv&nbsp;15-25 Étape Finale",
             Alias = "GhoulBounty1-F",
             ShortName = "15-25",
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Encrypted Journal Fragment", "Fragments", 23.81},
-                    {"Munitions du Chasseur", "Mod", 11.9},
-                    {"Stubba Blueprint", "Schéma", 5.95},
-                    {"Feu Follet de Cetus", "Ressource", 11.9},
-                    {"Breath Of The Eidolon", "Ressource", 5.95, 5},
-                    {"Lith L2", "Relique", 22.62},
-                    {"PiÉtapes du Chasseur", "Mod", 11.9},
+                    {"Fragment de Journal Encrypté", "Fragments", 23.81},
+                    {"Munitions du Chasseur", "Mod", 11.90},
+                    {"Stubba Schéma", "Schéma", 5.95},
+                    {"Feu Follet de Cetus", "Ressource", 11.90},
+                    {"Souffle d'Eidolon", "Ressource", 5.95, 5},
+                    {"Neo N14", "Relique", 22.62},
+                    {"Pistage du Chasseur", "Mod", 11.90},
                     {"Extrait de Nitain", "Ressource", 5.95}
                 }
             }
         }, {
-            Type = "Ghoul Bounty",
+            Type = "Mise à Prix de Goules",
             Tier = "40-50-1",
-            Name = "Niv&nbsp;40-50 Étapes 1",
+            Name = "Niv&nbsp;40-50 Étape 1",
             Alias = "GhoulBounty2-1",
             ShortName = "40-50",
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Endo", "Endo", 33.33, 300}, {"Neo A4", "Relique", 33.33},
+                    {"Endo", "Endo", 33.33, 300}, {"Neo B6", "Relique", 33.33},
                     {"Récupération du Chasseur", "Mod", 33.33}
                 }
             }
         }, {
-            Type = "Ghoul Bounty",
+            Type = "Mise à Prix de Goules",
             Tier = "40-50-2",
             Name = "Niv&nbsp;40-50 Étapess&nbsp;2&nbsp;&&nbsp;3",
             Alias = "GhoulBounty2-2",
@@ -3907,90 +4141,90 @@ local DropData = {
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Endo", "Endo", 11.74, 300}, {"Neo A4", "Relique", 11.74},
+                    {"Endo", "Endo", 11.74, 300}, {"Neo B6", "Relique", 11.74},
                     {"Récupération du Chasseur", "Mod", 11.74},
-                    {"Encrypted Journal Fragment", "Fragments", 18.78},
+                    {"Fragment de Journal Encrypté", "Fragments", 18.78},
                     {"Synergie du Chasseur", "Mod", 9.39},
-                    {"Quartakk Blueprint", "Schéma", 4.69},
+                    {"Quartakk Schéma", "Schéma", 4.69},
                     {"Feu Follet de Cetus", "Ressource", 9.39},
-                    {"Breath Of The Eidolon", "Ressource", 4.69, 5},
-                    {"Neo I1", "Relique", 17.84}
+                    {"Souffle d'Eidolon", "Ressource", 4.69, 5},
+                    {"Neo Z7", "Relique", 17.84}
                 }
             }
         }, {
-            Type = "Ghoul Bounty",
+            Type = "Mise à Prix de Goules",
             Tier = "40-50-3",
-            Name = "Niv&nbsp;40-50 Étapes 4",
+            Name = "Niv&nbsp;40-50 Étape 4",
             Alias = "GhoulBounty2-3",
             ShortName = "40-50",
             Rewards = {
                 ["A"] = {
-                    {"Endo", "Endo", 10.29, 300}, {"Neo A4", "Relique", 10.29},
+                    {"Endo", "Endo", 10.29, 300}, {"Neo B6", "Relique", 10.29},
                     {"Récupération du Chasseur", "Mod", 10.29},
-                    {"Encrypted Journal Fragment", "Fragments", 16.46},
+                    {"Fragment de Journal Encrypté", "Fragments", 16.46},
                     {"Synergie du Chasseur", "Mod", 8.23},
-                    {"Quartakk Blueprint", "Schéma", 4.12},
+                    {"Quartakk Schéma", "Schéma", 4.12},
                     {"Feu Follet de Cetus", "Ressource", 8.23},
-                    {"Breath Of The Eidolon", "Ressource", 4.12, 5},
-                    {"Neo I1", "Relique", 15.64},
+                    {"Souffle d'Eidolon", "Ressource", 4.12, 5},
+                    {"Neo Z7", "Relique", 15.64},
                     {"Commande du Chasseur", "Mod", 8.23},
                     {"Extrait de Nitain", "Ressource", 4.12}
                 }
             }
         }, {
-            Type = "Ghoul Bounty",
+            Type = "Mise à Prix de Goules",
             Tier = "40-50-F",
-            Name = "Niv&nbsp;40-50 Étapes Final",
+            Name = "Niv&nbsp;40-50 Étape Finale",
             Alias = "GhoulBounty2-F",
             ShortName = "40-50",
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Encrypted Journal Fragment", "Fragments", 23.81},
-                    {"Synergie du Chasseur", "Mod", 11.9},
-                    {"Quartakk Blueprint", "Schéma", 5.95},
-                    {"Feu Follet de Cetus", "Ressource", 11.9},
-                    {"Breath Of The Eidolon", "Ressource", 5.95, 5},
-                    {"Neo I1", "Relique", 22.62},
-                    {"Commande du Chasseur", "Mod", 11.9},
+                    {"Fragment de Journal Encrypté", "Fragments", 23.81},
+                    {"Synergie du Chasseur", "Mod", 11.90},
+                    {"Quartakk Schéma", "Schéma", 5.95},
+                    {"Feu Follet de Cetus", "Ressource", 11.90},
+                    {"Souffle d'Eidolon", "Ressource", 5.95, 5},
+                    {"Neo Z7", "Relique", 22.62},
+                    {"Commande du Chasseur", "Mod", 11.90},
                     {"Extrait de Nitain", "Ressource", 5.95}
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "5-15-1",
-            Name = "Niv&nbsp;5-15 Étapes 1",
-            Alias = "OrbVallisBounty1-1",
+            Name = "Niv&nbsp;5-15 Étape 1",
+            Alias = "FortunaBounty1-1",
             ShortName = "5-15",
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Oxium", "Ressource", 20, 100},
-                    {"Cache de Crédits", "Credits", 20, 1500},
-                    {"Endo", "Endo", 20, 50},
-                    {"Spore Mytocardia", "Ressource", 20, 5},
-                    {"Obligations de dettes Étudiantes", "Ressource", 20, 2}
+                    {"Oxium", "Ressource", 20.00, 100},
+                    {"Cache de Crédits", "Credits", 20.00, 1500},
+                    {"Endo", "Endo", 20.00, 50},
+                    {"Spore Mytocardia", "Ressource", 20.00, 5},
+                    {"Obligations de dettes Étudiantes", "Ressource", 20.00, 2}
                 },
                 ["B"] = {
-                    {"Cryotique", "Ressource", 20, 100},
-                    {"Cache de Crédits", "Credits", 20, 1500},
-                    {"Endo", "Endo", 20, 50},
-                    {"Boue Thermique", "Ressource", 20, 5},
-                    {"Obligations de dettes Étudiantes", "Ressource", 20, 2}
+                    {"Cryotique", "Ressource", 20.00, 100},
+                    {"Cache de Crédits", "Credits", 20.00, 1500},
+                    {"Endo", "Endo", 20.00, 50},
+                    {"Boue Thermique", "Ressource", 20.00, 5},
+                    {"Obligations de dettes Étudiantes", "Ressource", 20.00, 2}
                 },
                 ["C"] = {
-                    {"Plastides", "Ressource", 20, 100},
-                    {"Cache de Crédits", "Credits", 20, 1500},
-                    {"Endo", "Endo", 20, 50},
-                    {"Spore Gorgaricus", "Ressource", 20, 5},
-                    {"Obligations de dettes Étudiantes", "Ressource", 20, 2}
+                    {"Plastides", "Ressource", 20.00, 100},
+                    {"Cache de Crédits", "Credits", 20.00, 1500},
+                    {"Endo", "Endo", 20.00, 50},
+                    {"Spore Gorgaricus", "Ressource", 20.00, 5},
+                    {"Obligations de dettes Étudiantes", "Ressource", 20.00, 2}
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "5-15-2",
-            Name = "Niv&nbsp;5-15 Étapes 2",
-            Alias = "OrbVallisBounty1-2",
+            Name = "Niv&nbsp;5-15 Étape 2",
+            Alias = "FortunaBounty1-2",
             ShortName = "5-15",
             -- Ignore = true,
             Rewards = {
@@ -4026,10 +4260,10 @@ local DropData = {
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "5-15-3",
-            Name = "Niv&nbsp;5-15 Étapes 4 of 5",
-            Alias = "OrbVallisBounty1-3",
+            Name = "Niv&nbsp;5-15 Étape 4 sur 5",
+            Alias = "FortunaBounty1-3",
             ShortName = "5-15",
             Ignore = true,
             Rewards = {
@@ -4042,7 +4276,7 @@ local DropData = {
                     {"Garuda Châssis Schéma", "Schéma", 7.37},
                     {"Nodule Tepa", "Ressource", 7.37, 5},
                     {"Cache de Crédits", "Credits", 7.37, 3000},
-                    {"Lith V7", "Relique", 2.01}
+                    {"Lith K5", "Relique", 2.01}
                 },
                 ["B"] = {
                     {"Cryotique", "Ressource", 15.18, 100},
@@ -4053,7 +4287,7 @@ local DropData = {
                     {"Garuda Châssis Schéma", "Schéma", 7.37},
                     {"Nodule Tepa", "Ressource", 7.37, 5},
                     {"Cache de Crédits", "Credits", 7.37, 3000},
-                    {"Lith V8", "Relique", 2.01}
+                    {"Lith M7", "Relique", 2.01}
                 },
                 ["C"] = {
                     {"Plastides", "Ressource", 15.18, 100},
@@ -4064,14 +4298,14 @@ local DropData = {
                     {"Garuda Châssis Schéma", "Schéma", 7.37},
                     {"Nodule Tepa", "Ressource", 7.37, 5},
                     {"Cache de Crédits", "Credits", 7.37, 3000},
-                    {"Lith V7", "Relique", 2.01}
+                    {"Lith K5", "Relique", 2.01}
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "5-15-F",
-            Name = "Niv&nbsp;5-15 Étapes Final",
-            Alias = "OrbVallisBounty1-F",
+            Name = "Niv&nbsp;5-15 Étape Finale",
+            Alias = "FortunaBounty1-F",
             ShortName = "5-15",
             -- Ignore = true,
             Rewards = {
@@ -4079,56 +4313,65 @@ local DropData = {
                     {"Garuda Châssis Schéma", "Schéma", 30.56},
                     {"Nodule Tepa", "Ressource", 30.56, 5},
                     {"Cache de Crédits", "Credits", 30.56, 3000},
-                    {"Lith V7", "Relique", 8.33}
+                    {"Lith K5", "Relique", 8.33}
                 },
                 ["B"] = {
                     {"Garuda Châssis Schéma", "Schéma", 30.56},
                     {"Nodule Tepa", "Ressource", 30.56, 5},
                     {"Cache de Crédits", "Credits", 30.56, 3000},
-                    {"Lith V8", "Relique", 8.33}
+                    {"Lith M7", "Relique", 8.33}
                 },
                 ["C"] = {
                     {"Garuda Châssis Schéma", "Schéma", 30.56},
                     {"Nodule Tepa", "Ressource", 30.56, 5},
                     {"Cache de Crédits", "Credits", 30.56, 3000},
-                    {"Lith V7", "Relique", 8.33}
+                    {"Lith K5", "Relique", 8.33}
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "10-30-1",
-            Name = "Niv&nbsp;10-30 Étapes 1",
-            Alias = "OrbVallisBounty2-1",
+            Name = "Niv&nbsp;10-30 Étape 1",
+            Alias = "FortunaBounty2-1",
             ShortName = "10-30",
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Spore Mytocardia", "Ressource", 20, 15},
-                    {"Oxium", "Ressource", 20, 200},
-                    {"Cache de Crédits", "Credits", 20, 2500},
-                    {"Endo", "Endo", 20, 100},
-                    {"Obligations de dettes de Couverture", "Ressource", 20, 2}
+                    {"Spore Mytocardia", "Ressource", 20.00, 15},
+                    {"Oxium", "Ressource", 20.00, 200},
+                    {"Cache de Crédits", "Credits", 20.00, 2500},
+                    {"Endo", "Endo", 20.00, 100},
+                    {
+                        "Obligations de dettes de Couverture", "Ressource",
+                        20.00, 2
+                    }
                 },
                 ["B"] = {
-                    {"Boue Thermique", "Ressource", 20, 15},
-                    {"Cryotique", "Ressource", 20, 200},
-                    {"Cache de Crédits", "Credits", 20, 2500},
-                    {"Endo", "Endo", 20, 100},
-                    {"Obligations de dettes de Couverture", "Ressource", 20, 2}
+                    {"Boue Thermique", "Ressource", 20.00, 15},
+                    {"Cryotique", "Ressource", 20.00, 200},
+                    {"Cache de Crédits", "Credits", 20.00, 2500},
+                    {"Endo", "Endo", 20.00, 100},
+                    {
+                        "Obligations de dettes de Couverture", "Ressource",
+                        20.00, 2
+                    }
                 },
                 ["C"] = {
-                    {"Spore Gorgaricus", "Ressource", 20, 15},
-                    {"Nano Spores", "Ressource", 20, 200},
-                    {"Cache de Crédits", "Credits", 20, 2500},
-                    {"Endo", "Endo", 20, 100},
-                    {"Obligations de dettes de Couverture", "Ressource", 20, 2}
+                    {"Spore Gorgaricus", "Ressource", 20.00, 15},
+                    {"Nano Spores", "Ressource", 20.00, 200},
+                    {"Cache de Crédits", "Credits", 20.00, 2500},
+                    {"Endo", "Endo", 20.00, 100},
+                    {
+                        "Obligations de dettes de Couverture", "Ressource",
+                        20.00, 2
+                    }
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "10-30-2",
-            Name = "Niv&nbsp;10-30 Étapes 2",
-            Alias = "OrbVallisBounty2-2",
+            Name = "Niv&nbsp;10-30 Étape 2",
+            Alias = "FortunaBounty2-2",
             ShortName = "10-30",
             -- Ignore = true,
             Rewards = {
@@ -4142,7 +4385,7 @@ local DropData = {
                         14.81, 2
                     }, {"Garuda Systèmes Schéma", "Schéma", 7.41},
                     {"Nodule Tepa", "Ressource", 7.41, 5},
-                    {"Lith V8", "Relique", 11.11}
+                    {"Lith M7", "Relique", 11.11}
                 },
                 ["B"] = {
                     {"Boue Thermique", "Ressource", 14.81, 15},
@@ -4154,7 +4397,7 @@ local DropData = {
                         14.81, 2
                     }, {"Garuda Systèmes Schéma", "Schéma", 7.41},
                     {"Nodule Tepa", "Ressource", 7.41, 5},
-                    {"Lith V7", "Relique", 11.11}
+                    {"Lith K5", "Relique", 11.11}
                 },
                 ["C"] = {
                     {"Spore Gorgaricus", "Ressource", 14.81, 15},
@@ -4166,14 +4409,14 @@ local DropData = {
                         14.81, 2
                     }, {"Garuda Systèmes Schéma", "Schéma", 7.41},
                     {"Nodule Tepa", "Ressource", 7.41, 5},
-                    {"Lith V8", "Relique", 11.11}
+                    {"Lith M7", "Relique", 11.11}
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "10-30-3",
-            Name = "Niv&nbsp;10-30 Étapes 4 of 5",
-            Alias = "OrbVallisBounty2-3",
+            Name = "Niv&nbsp;10-30 Étape 4 sur 5",
+            Alias = "FortunaBounty2-3",
             ShortName = "10-30",
             Ignore = true,
             Rewards = {
@@ -4185,9 +4428,9 @@ local DropData = {
                     {
                         "Obligations de dettes de Couverture", "Ressource",
                         13.79, 2
-                    }, {"Garuda Systèmes Schéma", "Schéma", 6.9},
-                    {"Nodule Tepa", "Ressource", 6.9, 5},
-                    {"Lith V8", "Relique", 10.34}, {"Charge Synth", "Mod", 6.9}
+                    }, {"Garuda Systèmes Schéma", "Schéma", 6.90},
+                    {"Nodule Tepa", "Ressource", 6.90, 5},
+                    {"Lith M7", "Relique", 10.34}, {"Charge Synth", "Mod", 6.90}
                 },
                 ["B"] = {
                     {"Boue Thermique", "Ressource", 13.79, 15},
@@ -4197,10 +4440,10 @@ local DropData = {
                     {
                         "Obligations de dettes de Couverture", "Ressource",
                         13.79, 2
-                    }, {"Garuda Systèmes Schéma", "Schéma", 6.9},
-                    {"Nodule Tepa", "Ressource", 6.9, 5},
-                    {"Lith V7", "Relique", 10.34},
-                    {"Décharge Mecha", "Mod", 6.9}
+                    }, {"Garuda Systèmes Schéma", "Schéma", 6.90},
+                    {"Nodule Tepa", "Ressource", 6.90, 5},
+                    {"Lith K5", "Relique", 10.34},
+                    {"Décharge Mecha", "Mod", 6.90}
                 },
                 ["C"] = {
                     {"Spore Gorgaricus", "Ressource", 13.79, 15},
@@ -4210,101 +4453,102 @@ local DropData = {
                     {
                         "Obligations de dettes de Couverture", "Ressource",
                         13.79, 2
-                    }, {"Garuda Systèmes Schéma", "Schéma", 6.9},
-                    {"Nodule Tepa", "Ressource", 6.9, 5},
-                    {"Lith V8", "Relique", 10.34}, {"Assaut Tek", "Mod", 6.9}
+                    }, {"Garuda Systèmes Schéma", "Schéma", 6.90},
+                    {"Nodule Tepa", "Ressource", 6.90, 5},
+                    {"Lith M7", "Relique", 10.34}, {"Assaut Tek", "Mod", 6.90}
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "10-30-F",
-            Name = "Niv&nbsp;10-30 Étapes Final",
-            Alias = "OrbVallisBounty2-F",
+            Name = "Niv&nbsp;10-30 Étape Finale",
+            Alias = "FortunaBounty2-F",
             ShortName = "10-30",
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
                     {"Garuda Systèmes Schéma", "Schéma", 22.22},
                     {"Nodule Tepa", "Ressource", 22.22, 5},
-                    {"Lith V8", "Relique", 33.33},
+                    {"Lith M7", "Relique", 33.33},
                     {"Charge Synth", "Mod", 22.22}
                 },
                 ["B"] = {
                     {"Garuda Systèmes Schéma", "Schéma", 22.22},
                     {"Nodule Tepa", "Ressource", 22.22, 5},
-                    {"Lith V7", "Relique", 33.33},
+                    {"Lith K5", "Relique", 33.33},
                     {"Décharge Mecha", "Mod", 22.22}
                 },
                 ["C"] = {
                     {"Garuda Systèmes Schéma", "Schéma", 22.22},
                     {"Nodule Tepa", "Ressource", 22.22, 5},
-                    {"Lith V8", "Relique", 33.33}, {"Assaut Tek", "Mod", 22.22}
+                    {"Lith M7", "Relique", 33.33}, {"Assaut Tek", "Mod", 22.22}
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "20-40-1",
-            Name = "Niv&nbsp;20-40 Étapes 1",
-            Alias = "OrbVallisBounty3-1",
+            Name = "Niv&nbsp;20-40 Étape 1",
+            Alias = "FortunaBounty3-1",
             ShortName = "20-40",
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Lentille Madurai", "Ressource", 20},
-                    {"Endo", "Endo", 40, 200},
-                    {"Circuits", "Ressource", 20, 300},
-                    {"Obligations de dettes Médicales", "Ressource", 20, 2}
+                    {"Lentille Madurai", "Ressource", 20.00},
+                    {"Endo", "Endo", 40.00, 200},
+                    {"Circuits", "Ressource", 20.00, 300},
+                    {"Obligations de dettes Médicales", "Ressource", 20.00, 2}
                 },
                 ["B"] = {
-                    {"Lentille Unairu", "Ressource", 20},
-                    {"Endo", "Endo", 40, 200},
-                    {"Plastides", "Ressource", 20, 300},
-                    {"Obligations de dettes Médicales", "Ressource", 20, 2}
+                    {"Lentille Unairu", "Ressource", 20.00},
+                    {"Endo", "Endo", 40.00, 200},
+                    {"Plastides", "Ressource", 20.00, 300},
+                    {"Obligations de dettes Médicales", "Ressource", 20.00, 2}
                 },
                 ["C"] = {
-                    {"Lentille Naramon", "Ressource", 20},
-                    {"Endo", "Endo", 40, 200}, {"Rubedo", "Ressource", 20, 300},
-                    {"Obligations de dettes Médicales", "Ressource", 20, 2}
+                    {"Lentille Naramon", "Ressource", 20.00},
+                    {"Endo", "Endo", 40.00, 200},
+                    {"Rubedo", "Ressource", 20.00, 300},
+                    {"Obligations de dettes Médicales", "Ressource", 20.00, 2}
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "20-40-2",
             Name = "Niv&nbsp;20-40 Étapess&nbsp;2&nbsp;&&nbsp;3",
-            Alias = "OrbVallisBounty3-2",
+            Alias = "FortunaBounty3-2",
             ShortName = "20-40",
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Lentille Madurai", "Ressource", 12.5},
-                    {"Endo", "Endo", 25, 200},
-                    {"Circuits", "Ressource", 12.5, 300},
-                    {"Obligations de dettes Médicales", "Ressource", 12.5, 2},
-                    {"Garuda Neuroptiques Schéma", "Schéma", 12.5},
-                    {"Meso V6", "Relique", 25}
+                    {"Lentille Madurai", "Ressource", 12.50},
+                    {"Endo", "Endo", 25.00, 200},
+                    {"Circuits", "Ressource", 12.50, 300},
+                    {"Obligations de dettes Médicales", "Ressource", 12.50, 2},
+                    {"Garuda Neuroptiques Schéma", "Schéma", 12.50},
+                    {"Meso E5", "Relique", 25.00}
                 },
                 ["B"] = {
-                    {"Lentille Unairu", "Ressource", 12.5},
-                    {"Endo", "Endo", 25, 200},
-                    {"Plastides", "Ressource", 12.5, 300},
-                    {"Obligations de dettes Médicales", "Ressource", 12.5, 2},
-                    {"Garuda Neuroptiques Schéma", "Schéma", 12.5},
-                    {"Meso V6", "Relique", 25}
+                    {"Lentille Unairu", "Ressource", 12.50},
+                    {"Endo", "Endo", 25.00, 200},
+                    {"Plastides", "Ressource", 12.50, 300},
+                    {"Obligations de dettes Médicales", "Ressource", 12.50, 2},
+                    {"Garuda Neuroptiques Schéma", "Schéma", 12.50},
+                    {"Meso E5", "Relique", 25.00}
                 },
                 ["C"] = {
-                    {"Lentille Naramon", "Ressource", 12.5},
-                    {"Endo", "Endo", 25, 200},
-                    {"Rubedo", "Ressource", 12.5, 300},
-                    {"Obligations de dettes Médicales", "Ressource", 12.5, 2},
-                    {"Garuda Neuroptiques Schéma", "Schéma", 12.5},
-                    {"Meso V6", "Relique", 25}
+                    {"Lentille Naramon", "Ressource", 12.50},
+                    {"Endo", "Endo", 25.00, 200},
+                    {"Rubedo", "Ressource", 12.50, 300},
+                    {"Obligations de dettes Médicales", "Ressource", 12.50, 2},
+                    {"Garuda Neuroptiques Schéma", "Schéma", 12.50},
+                    {"Meso E5", "Relique", 25.00}
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "20-40-3",
-            Name = "Niv&nbsp;20-40 Étapes 4 of 5",
-            Alias = "OrbVallisBounty3-3",
+            Name = "Niv&nbsp;20-40 Étape 4 sur 5",
+            Alias = "FortunaBounty3-3",
             ShortName = "20-40",
             Ignore = true,
             Rewards = {
@@ -4314,7 +4558,7 @@ local DropData = {
                     {"Circuits", "Ressource", 11.11, 300},
                     {"Obligations de dettes Médicales", "Ressource", 11.11, 2},
                     {"Garuda Neuroptiques Schéma", "Schéma", 11.11},
-                    {"Meso V6", "Relique", 22.22},
+                    {"Meso E5", "Relique", 22.22},
                     {"Déconstruction Synth", "Mod", 11.11}
                 },
                 ["B"] = {
@@ -4323,7 +4567,7 @@ local DropData = {
                     {"Plastides", "Ressource", 11.11, 300},
                     {"Obligations de dettes Médicales", "Ressource", 11.11, 2},
                     {"Garuda Neuroptiques Schéma", "Schéma", 11.11},
-                    {"Meso V6", "Relique", 22.22},
+                    {"Meso E5", "Relique", 22.22},
                     {"Recharge Mecha", "Mod", 11.11}
                 },
                 ["C"] = {
@@ -4332,37 +4576,39 @@ local DropData = {
                     {"Rubedo", "Ressource", 11.11, 300},
                     {"Obligations de dettes Médicales", "Ressource", 11.11, 2},
                     {"Garuda Neuroptiques Schéma", "Schéma", 11.11},
-                    {"Meso V6", "Relique", 22.22},
+                    {"Meso E5", "Relique", 22.22},
                     {"Amélioration Tek", "Mod", 11.11}
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "20-40-F",
-            Name = "Niv&nbsp;20-40 Étapes Final",
-            Alias = "OrbVallisBounty3-F",
+            Name = "Niv&nbsp;20-40 Étape Finale",
+            Alias = "FortunaBounty3-F",
             ShortName = "20-40",
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Garuda Neuroptiques Schéma", "Schéma", 25},
-                    {"Meso V6", "Relique", 50},
-                    {"Déconstruction Synth", "Mod", 25}
+                    {"Garuda Neuroptiques Schéma", "Schéma", 25.00},
+                    {"Meso E5", "Relique", 50.00},
+                    {"Déconstruction Synth", "Mod", 25.00}
                 },
                 ["B"] = {
-                    {"Garuda Neuroptiques Schéma", "Schéma", 25},
-                    {"Meso V6", "Relique", 50}, {"Recharge Mecha", "Mod", 25}
+                    {"Garuda Neuroptiques Schéma", "Schéma", 25.00},
+                    {"Meso E5", "Relique", 50.00},
+                    {"Recharge Mecha", "Mod", 25.00}
                 },
                 ["C"] = {
-                    {"Garuda Neuroptiques Schéma", "Schéma", 25},
-                    {"Meso V6", "Relique", 50}, {"Amélioration Tek", "Mod", 25}
+                    {"Garuda Neuroptiques Schéma", "Schéma", 25.00},
+                    {"Meso E5", "Relique", 50.00},
+                    {"Amélioration Tek", "Mod", 25.00}
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "30-50-1",
-            Name = "Niv&nbsp;30-50 Étapes 1",
-            Alias = "OrbVallisBounty4-1",
+            Name = "Niv&nbsp;30-50 Étape 1",
+            Alias = "FortunaBounty4-1",
             ShortName = "30-50",
             -- Ignore = true,
             Rewards = {
@@ -4395,10 +4641,10 @@ local DropData = {
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "30-50-2",
             Name = "Niv&nbsp;30-50 Étapess&nbsp;2&nbsp;&&nbsp;3",
-            Alias = "OrbVallisBounty4-2",
+            Alias = "FortunaBounty4-2",
             ShortName = "30-50",
             -- Ignore = true,
             Rewards = {
@@ -4409,7 +4655,7 @@ local DropData = {
                     {
                         "Obligations de dettes d'avance de fonds", "Ressource",
                         14.81, 2
-                    }, {"Neo A4", "Relique", 18.52},
+                    }, {"Neo B6", "Relique", 18.52},
                     {"Tellure", "Ressource", 4.94}
                 },
                 ["B"] = {
@@ -4419,7 +4665,7 @@ local DropData = {
                     {
                         "Obligations de dettes d'avance de fonds", "Ressource",
                         14.81, 2
-                    }, {"Neo A4", "Relique", 18.52},
+                    }, {"Neo B6", "Relique", 18.52},
                     {"Tellure", "Ressource", 4.94}
                 },
                 ["C"] = {
@@ -4429,15 +4675,15 @@ local DropData = {
                     {
                         "Obligations de dettes d'avance de fonds", "Ressource",
                         14.81, 2
-                    }, {"Neo A4", "Relique", 18.52},
+                    }, {"Neo B6", "Relique", 18.52},
                     {"Tellure", "Ressource", 4.94}
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "30-50-3",
-            Name = "Niv&nbsp;30-50 Étapes 4",
-            Alias = "OrbVallisBounty4-3",
+            Name = "Niv&nbsp;30-50 Étape 4",
+            Alias = "FortunaBounty4-3",
             ShortName = "30-50",
             Rewards = {
                 ["A"] = {
@@ -4447,8 +4693,9 @@ local DropData = {
                     {
                         "Obligations de dettes d'avance de fonds", "Ressource",
                         13.19, 2
-                    }, {"Neo A4", "Relique", 16.48},
-                    {"Tellure", "Ressource", 4.4}, {"Fibre Synth", "Mod", 10.99}
+                    }, {"Neo B6", "Relique", 16.48},
+                    {"Tellure", "Ressource", 4.40},
+                    {"Fibre Synth", "Mod", 10.99}
                 },
                 ["B"] = {
                     {"Lentille Zenurik", "Ressource", 17.58},
@@ -4457,8 +4704,8 @@ local DropData = {
                     {
                         "Obligations de dettes d'avance de fonds", "Ressource",
                         13.19, 2
-                    }, {"Neo A4", "Relique", 16.48},
-                    {"Tellure", "Ressource", 4.4},
+                    }, {"Neo B6", "Relique", 16.48},
+                    {"Tellure", "Ressource", 4.40},
                     {"Surcharge Mecha", "Mod", 10.99}
                 },
                 ["C"] = {
@@ -4468,64 +4715,65 @@ local DropData = {
                     {
                         "Obligations de dettes d'avance de fonds", "Ressource",
                         13.19, 2
-                    }, {"Neo A4", "Relique", 16.48},
-                    {"Tellure", "Ressource", 4.4},
+                    }, {"Neo B6", "Relique", 16.48},
+                    {"Tellure", "Ressource", 4.40},
                     {"Gravité Tek", "Mod", 10.99}
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "30-50-F",
-            Name = "Niv&nbsp;30-50 Étapes Final",
-            Alias = "OrbVallisBounty4-F",
+            Name = "Niv&nbsp;30-50 Étape Finale",
+            Alias = "FortunaBounty4-F",
             ShortName = "30-50",
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Neo A4", "Relique", 51.72},
+                    {"Neo B6", "Relique", 51.72},
                     {"Tellure", "Ressource", 13.79},
                     {"Fibre Synth", "Mod", 34.48}
                 },
                 ["B"] = {
-                    {"Neo A4", "Relique", 51.72},
+                    {"Neo B6", "Relique", 51.72},
                     {"Tellure", "Ressource", 13.79},
                     {"Surcharge Mecha", "Mod", 34.48}
                 },
                 ["C"] = {
-                    {"Neo A4", "Relique", 51.72},
+                    {"Neo B6", "Relique", 51.72},
                     {"Tellure", "Ressource", 13.79},
                     {"Gravité Tek", "Mod", 34.48}
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "40-60-1",
-            Name = "Niv&nbsp;40-60 Étapes 1",
-            Alias = "OrbVallisBounty5-1",
+            Name = "Niv&nbsp;40-60 Étape 1",
+            Alias = "FortunaBounty5-1",
             ShortName = "40-60",
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Endo", "Endo", 50, 400},
-                    {"Obligations de dettes Familiales", "Ressource", 25, 2},
-                    {"Cache de Crédits", "Credits", 25, 10000}
+                    {"Endo", "Endo", 50.00, 400},
+                    {"Obligations de dettes Familiales", "Ressource", 25.00, 2},
+                    {"Cache de Crédits", "Credits", 25.00, 10000}
                 },
                 ["B"] = {
-                    {"Endo", "Endo", 50, 400},
-                    {"Obligations de dettes Familiales", "Ressource", 25, 2},
-                    {"Cache de Crédits", "Credits", 25, 10000}
+                    {"Endo", "Endo", 50.00, 400},
+                    {"Obligations de dettes Familiales", "Ressource", 25.00, 2},
+                    {"Cache de Crédits", "Credits", 25.00, 10000}
                 },
                 ["C"] = {
-                    {"Endo", "Endo", 50, 400}, {"Neurodes", "Ressource", 12.5},
-                    {"Cellule Orokin", "Ressource", 12.5},
-                    {"Obligations de dettes Familiales", "Ressource", 25, 2}
+                    {"Endo", "Endo", 50.00, 400},
+                    {"Neurodes", "Ressource", 12.50},
+                    {"Cellule Orokin", "Ressource", 12.50},
+                    {"Obligations de dettes Familiales", "Ressource", 25.00, 2}
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "40-60-2",
             Name = "Niv&nbsp;40-60 Étapess&nbsp;2&nbsp;&&nbsp;3",
-            Alias = "OrbVallisBounty5-2",
+            Alias = "FortunaBounty5-2",
             ShortName = "40-60",
             -- Ignore = true,
             Rewards = {
@@ -4533,34 +4781,37 @@ local DropData = {
                     {"Endo", "Endo", 33.33, 400},
                     {"Obligations de dettes Familiales", "Ressource", 16.67, 2},
                     {"Cache de Crédits", "Credits", 16.67, 10000},
-                    {"Axi A7", "Relique", 25}, {"Kuva", "Ressource", 8.33, 500}
+                    {"Axi A12", "Relique", 25.00},
+                    {"Kuva", "Ressource", 8.33, 500}
                 },
                 ["B"] = {
                     {"Endo", "Endo", 33.33, 400},
                     {"Obligations de dettes Familiales", "Ressource", 16.67, 2},
                     {"Cache de Crédits", "Credits", 16.67, 10000},
-                    {"Axi A7", "Relique", 25}, {"Kuva", "Ressource", 8.33, 500}
+                    {"Axi H5", "Relique", 25.00},
+                    {"Kuva", "Ressource", 8.33, 500}
                 },
                 ["C"] = {
                     {"Endo", "Endo", 33.33, 400},
                     {"Neurodes", "Ressource", 8.33},
                     {"Cellule Orokin", "Ressource", 8.33},
                     {"Obligations de dettes Familiales", "Ressource", 16.67, 2},
-                    {"Axi A7", "Relique", 25}, {"Kuva", "Ressource", 8.33, 500}
+                    {"Axi A12", "Relique", 25.00},
+                    {"Kuva", "Ressource", 8.33, 500}
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "40-60-3",
-            Name = "Niv&nbsp;40-60 Étapes 4",
-            Alias = "OrbVallisBounty5-3",
+            Name = "Niv&nbsp;40-60 Étape 4",
+            Alias = "FortunaBounty5-3",
             ShortName = "40-60",
             Rewards = {
                 ["A"] = {
                     {"Endo", "Endo", 28.57, 400},
                     {"Obligations de dettes Familiales", "Ressource", 14.29, 2},
                     {"Cache de Crédits", "Credits", 14.29, 10000},
-                    {"Axi A7", "Relique", 21.43},
+                    {"Axi A12", "Relique", 21.43},
                     {"Kuva", "Ressource", 7.14, 500},
                     {"Réflexe Synth", "Mod", 14.29}
                 },
@@ -4568,7 +4819,7 @@ local DropData = {
                     {"Endo", "Endo", 28.57, 400},
                     {"Obligations de dettes Familiales", "Ressource", 14.29, 2},
                     {"Cache de Crédits", "Credits", 14.29, 10000},
-                    {"Axi A7", "Relique", 21.43},
+                    {"Axi H5", "Relique", 21.43},
                     {"Kuva", "Ressource", 7.14, 500},
                     {"Pilonnage Mecha", "Mod", 14.29}
                 },
@@ -4577,36 +4828,172 @@ local DropData = {
                     {"Neurodes", "Ressource", 7.14},
                     {"Cellule Orokin", "Ressource", 7.14},
                     {"Obligations de dettes Familiales", "Ressource", 14.29, 2},
-                    {"Axi A7", "Relique", 21.43},
+                    {"Axi A12", "Relique", 21.43},
                     {"Kuva", "Ressource", 7.14, 500},
                     {"Garantie Tek", "Mod", 14.29}
                 }
             }
         }, {
-            Type = "Mise à Prix Orb Vallis",
+            Type = "Mise à Prix Fortuna",
             Tier = "40-60-F",
-            Name = "Niv&nbsp;40-60 Étapes Final",
-            Alias = "OrbVallisBounty5-F",
+            Name = "Niv&nbsp;40-60 Étape Finale",
+            Alias = "FortunaBounty5-F",
             ShortName = "40-60",
             -- Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Axi A7", "Relique", 50},
+                    {"Axi A12", "Relique", 50.00},
                     {"Kuva", "Ressource", 16.67, 500},
                     {"Réflexe Synth", "Mod", 33.33}
                 },
                 ["B"] = {
-                    {"Axi A7", "Relique", 50},
+                    {"Axi H5", "Relique", 50.00},
                     {"Kuva", "Ressource", 16.67, 500},
                     {"Pilonnage Mecha", "Mod", 33.33}
                 },
                 ["C"] = {
-                    {"Axi A7", "Relique", 50},
+                    {"Axi A12", "Relique", 50.00},
                     {"Kuva", "Ressource", 16.67, 500},
                     {"Garantie Tek", "Mod", 33.33}
                 }
             }
         }, {
+            {
+                Type = "Mise à Prix Fortuna (Route de l'Acier)",
+                Tier = "100-100-1",
+                Name = "Niv 100-100 Étape 1",
+                Alias = "FortunaBounty7-1",
+                ShortName = "100-100",
+                -- Ignore = true, 
+                Rewards = {
+                    ["A"] = {
+                        {"Endo", "Endo", 50.00, 400},
+                        {
+                            "Obligations de dettes Familiales", "Ressource",
+                            25.00, 2
+                        }, {"Cache de Crédits", "Credits", 25.00, 10000}
+                    },
+                    ["B"] = {
+                        {"Endo", "Endo", 50.00, 400},
+                        {
+                            "Obligations de dettes Familiales", "Ressource",
+                            25.00, 2
+                        }, {"Cache de Crédits", "Credits", 25.00, 10000}
+                    },
+                    ["C"] = {
+                        {"Endo", "Endo", 50.00, 400},
+                        {"Neurodes", "Ressource", 12.50},
+                        {"Cellule Orokin", "Ressource", 12.50},
+                        {
+                            "Obligations de dettes Familiales", "Ressource",
+                            25.00, 2
+                        }
+                    }
+                }
+            },
+            {
+                Type = "Mise à Prix Fortuna (Route de l'Acier)",
+                Tier = "100-100-2",
+                Name = "Niv 100-100 Étapess&nbsp;2&nbsp;&&nbsp;3",
+                Alias = "FortunaBounty7-2",
+                ShortName = "100-100",
+                -- Ignore = true, 
+                Rewards = {
+                    ["A"] = {
+                        {"Endo", "Endo", 33.33, 400},
+                        {
+                            "Obligations de dettes Familiales", "Ressource",
+                            16.67, 2
+                        }, {"Cache de Crédits", "Credits", 16.67, 10000},
+                        {"Axi A12", "Relique", 25.00},
+                        {"Kuva", "Ressource", 8.33, 500}
+                    },
+                    ["B"] = {
+                        {"Endo", "Endo", 33.33, 400},
+                        {
+                            "Obligations de dettes Familiales", "Ressource",
+                            16.67, 2
+                        }, {"Cache de Crédits", "Credits", 16.67, 10000},
+                        {"Axi H5", "Relique", 25.00},
+                        {"Kuva", "Ressource", 8.33, 500}
+                    },
+                    ["C"] = {
+                        {"Endo", "Endo", 33.33, 400},
+                        {"Neurodes", "Ressource", 8.33},
+                        {"Cellule Orokin", "Ressource", 8.33},
+                        {
+                            "Obligations de dettes Familiales", "Ressource",
+                            16.67, 2
+                        }, {"Axi A12", "Relique", 25.00},
+                        {"Kuva", "Ressource", 8.33, 500}
+                    }
+                }
+            },
+            {
+                Type = "Mise à Prix Fortuna (Route de l'Acier)",
+                Tier = "100-100-3",
+                Name = "Niv 100-100 Étape 4 sur 5",
+                Alias = "FortunaBounty7-3",
+                ShortName = "100-100",
+                Rewards = {
+                    ["A"] = {
+                        {"Endo", "Endo", 28.57, 400},
+                        {
+                            "Obligations de dettes Familiales", "Ressource",
+                            14.29, 2
+                        }, {"Cache de Crédits", "Credits", 14.29, 10000},
+                        {"Axi A12", "Relique", 21.43},
+                        {"Kuva", "Ressource", 7.14, 500},
+                        {"Réflexe Synth", "Mod", 14.29}
+                    },
+                    ["B"] = {
+                        {"Endo", "Endo", 28.57, 400},
+                        {
+                            "Obligations de dettes Familiales", "Ressource",
+                            14.29, 2
+                        }, {"Cache de Crédits", "Credits", 14.29, 10000},
+                        {"Axi H5", "Relique", 21.43},
+                        {"Kuva", "Ressource", 7.14, 500},
+                        {"Pilonnage Mecha", "Mod", 14.29}
+                    },
+                    ["C"] = {
+                        {"Endo", "Endo", 28.57, 400},
+                        {"Neurodes", "Ressource", 7.14},
+                        {"Cellule Orokin", "Ressource", 7.14},
+                        {
+                            "Obligations de dettes Familiales", "Ressource",
+                            14.29, 2
+                        }, {"Axi A12", "Relique", 21.43},
+                        {"Kuva", "Ressource", 7.14, 500},
+                        {"Garantie Tek", "Mod", 14.29}
+                    }
+                }
+            },
+            {
+                Type = "Mise à Prix Fortuna (Route de l'Acier)",
+                Tier = "100-100-F",
+                Name = "Niv 100-100 Étape Finale",
+                Alias = "FortunaBounty7-F",
+                ShortName = "100-100",
+                -- Ignore = true, 
+                Rewards = {
+                    ["A"] = {
+                        {"Axi A12", "Relique", 50.00},
+                        {"Kuva", "Ressource", 16.67, 500},
+                        {"Réflexe Synth", "Mod", 33.33}
+                    },
+                    ["B"] = {
+                        {"Axi H5", "Relique", 50.00},
+                        {"Kuva", "Ressource", 16.67, 500},
+                        {"Pilonnage Mecha", "Mod", 33.33}
+                    },
+                    ["C"] = {
+                        {"Axi A12", "Relique", 50.00},
+                        {"Kuva", "Ressource", 16.67, 500},
+                        {"Garantie Tek", "Mod", 33.33}
+                    }
+                }
+            },
             Type = "Mise à Prix Preneur de Profit",
             Tier = "Phase-1",
             Name = "Phase 1",
@@ -4614,13 +5001,13 @@ local DropData = {
             ShortName = "Phase 1",
             Rewards = {
                 ["A"] = {
-                    {"Gyromag Systèmes", "Ressource", 25, 5},
-                    {"Lith S8 (Radiant)", "Relique", 15},
-                    {"Rechargement Rapide", "Mod", 15},
-                    {"Atmo Systèmes", "Ressource", 10, 5},
-                    {"Vega Toroid", "Ressource", 12.5, 3},
-                    {"Lith L2 (Radiant)", "Relique", 12.5},
-                    {"Repeller Systèmes", "Ressource", 7.5, 3},
+                    {"Systèmes Gyromag", "Ressource", 25.00, 5},
+                    {"Lith D4 (Éclatante)", "Relique", 15.00},
+                    {"Rechargement Rapide", "Mod", 15.00},
+                    {"Systèmes Atmo", "Ressource", 10.00, 5},
+                    {"Tore Vega", "Ressource", 12.50, 3},
+                    {"Lith B8 (Éclatante)", "Relique", 12.50},
+                    {"Systèmes Répulseurs", "Ressource", 7.50, 3},
                     {"Efficacité Mortelle", "Mod", 1.25},
                     {"Éruption de Souche", "Mod", 1.25}
                 }
@@ -4633,14 +5020,14 @@ local DropData = {
             ShortName = "Phase 2",
             Rewards = {
                 ["A"] = {
-                    {"Gyromag Systèmes", "Ressource", 25, 5},
-                    {"Lith D1 (Radiant)", "Relique", 15},
-                    {"Concentration Résolue", "Mod", 15},
-                    {"Atmo Systèmes", "Ressource", 10, 5},
-                    {"Calda Toroid", "Ressource", 12.5, 3},
-                    {"Meso B4 (Radiant)", "Relique", 12.5},
-                    {"Repeller Systèmes", "Ressource", 7.5, 3},
-                    {"As du Arch-Fusil", "Mod", 1.25},
+                    {"Systèmes Gyromag", "Ressource", 25.00, 5},
+                    {"Lith G3", "Relique", 15.00},
+                    {"Concentration Résolue", "Mod", 15.00},
+                    {"Systèmes Atmo", "Ressource", 10.00, 5},
+                    {"Tore Calda", "Ressource", 12.50, 3},
+                    {"Meso P4 (Éclatante)", "Relique", 12.50},
+                    {"Systèmes Répulseurs", "Ressource", 7.50, 3},
+                    {"Virtuose de l'Arch-fusil", "Mod", 1.25},
                     {"Fièvre de Souche", "Mod", 1.25}
                 }
             }
@@ -4652,13 +5039,13 @@ local DropData = {
             ShortName = "Phase 3",
             Rewards = {
                 ["A"] = {
-                    {"Gyromag Systèmes", "Ressource", 25, 5},
-                    {"Meso D4 (Radiant)", "Relique", 15},
-                    {"Cible Marquée", "Mod", 15},
-                    {"Atmo Systèmes", "Ressource", 10, 5},
-                    {"Sola Toroid", "Ressource", 12.5, 3},
-                    {"Neo T2 (Radiant)", "Relique", 12.5},
-                    {"Repeller Systèmes", "Ressource", 7.5, 3},
+                    {"Systèmes Gyromag", "Ressource", 25.00, 5},
+                    {"Meso I1 (Éclatante)", "Relique", 15.00},
+                    {"Cible Marquée", "Mod", 15.00},
+                    {"Systèmes Atmo", "Ressource", 10.00, 5},
+                    {"Tore Sola", "Ressource", 12.50, 3},
+                    {"Neo N14 (Éclatante)", "Relique", 12.50},
+                    {"Systèmes Répulseurs", "Ressource", 7.50, 3},
                     {"Munitions Assommantes", "Mod", 1.25},
                     {"Infection de Souche", "Mod", 1.25}
                 }
@@ -4671,12 +5058,12 @@ local DropData = {
             ShortName = "Phase 4",
             Rewards = {
                 ["A"] = {
-                    {"Gyromag Systèmes", "Ressource", 28.57, 5},
-                    {"Neo I1 (Radiant)", "Relique", 17.14},
+                    {"Systèmes Gyromag", "Ressource", 28.57, 5},
+                    {"Neo Z7", "Relique", 17.14},
                     {"Chaîne de munitions", "Mod", 17.14},
-                    {"Atmo Systèmes", "Ressource", 11.43, 5},
-                    {"Axi A8 (Radiant)", "Relique", 14.29},
-                    {"Repeller Systèmes", "Ressource", 8.57, 3},
+                    {"Systèmes Atmo", "Ressource", 11.43, 5},
+                    {"Axi O5 (Éclatante)", "Relique", 14.29},
+                    {"Systèmes Répulseurs", "Ressource", 8.57, 3},
                     {"Focus Critique", "Mod", 1.43},
                     {"Absorption de Souche", "Mod", 1.43}
                 }
@@ -4689,17 +5076,17 @@ local DropData = {
             ShortName = "5-15",
             Rewards = {
                 ["A"] = {
-                    {"Credits Cache", "Credits", 33.33, 4500},
+                    {"Cache de Crédits", "Credits", 33.33, 4500},
                     {"Endo", "Endo", 33.33, 150},
                     {"Ganglion", "Ressource", 33.33, 15}
                 },
                 ["B"] = {
-                    {"Credits Cache", "Credits", 33.33, 4500},
+                    {"Cache de Crédits", "Credits", 33.33, 4500},
                     {"Endo", "Endo", 33.33, 150},
                     {"Pustulite", "Ressource", 33.33, 15}
                 },
                 ["C"] = {
-                    {"Credits Cache", "Credits", 33.33, 4500},
+                    {"Cache de Crédits", "Credits", 33.33, 4500},
                     {"Endo", "Endo", 33.33, 150},
                     {"Teroglobe Lumineux", "Ressource", 33.33, 15}
                 }
@@ -4712,25 +5099,25 @@ local DropData = {
             ShortName = "5-15",
             Rewards = {
                 ["A"] = {
-                    {"Credits Cache", "Credits", 25.81, 4500},
+                    {"Cache de Crédits", "Credits", 25.81, 4500},
                     {"Endo", "Endo", 25.81, 150},
                     {"Ganglion", "Ressource", 25.81, 15},
-                    {"Credits Cache", "Credits", 7.52, 6000},
-                    {"Endo", "Endo", 7.52, 250}, {"Lith G1", "Relique", 7.52}
+                    {"Cache de Crédits", "Credits", 7.52, 6000},
+                    {"Endo", "Endo", 7.52, 250}, {"Lith K5", "Relique", 7.52}
                 },
                 ["B"] = {
-                    {"Credits Cache", "Credits", 25.81, 4500},
+                    {"Cache de Crédits", "Credits", 25.81, 4500},
                     {"Endo", "Endo", 25.81, 150},
                     {"Pustulite", "Ressource", 25.81, 15},
-                    {"Credits Cache", "Credits", 7.52, 6000},
-                    {"Endo", "Endo", 7.52, 250}, {"Lith G1", "Relique", 7.52}
+                    {"Cache de Crédits", "Credits", 7.52, 6000},
+                    {"Endo", "Endo", 7.52, 250}, {"Lith M7", "Relique", 7.52}
                 },
                 ["C"] = {
-                    {"Credits Cache", "Credits", 25.81, 4500},
+                    {"Cache de Crédits", "Credits", 25.81, 4500},
                     {"Endo", "Endo", 25.81, 150},
                     {"Teroglobe Lumineux", "Ressource", 25.81, 15},
-                    {"Credits Cache", "Credits", 7.52, 6000},
-                    {"Endo", "Endo", 7.52, 250}, {"Lith G1", "Relique", 7.52}
+                    {"Cache de Crédits", "Credits", 7.52, 6000},
+                    {"Endo", "Endo", 7.52, 250}, {"Lith K5", "Relique", 7.52}
                 }
             }
         }, {
@@ -4741,19 +5128,19 @@ local DropData = {
             ShortName = "5-15",
             Rewards = {
                 ["A"] = {
-                    {"Credits Cache", "Credits", 30.56, 6000},
-                    {"Endo", "Endo", 30.56, 250}, {"Lith G1", "Relique", 30.56},
-                    {"Scintillateur", "Ressource", 8.33, 1}
+                    {"Cache de Crédits", "Credits", 30.56, 6000},
+                    {"Endo", "Endo", 30.56, 250}, {"Lith K5", "Relique", 30.56},
+                    {"Scintillateur", "Ressource", 8.33}
                 },
                 ["B"] = {
-                    {"Credits Cache", "Credits", 30.56, 6000},
-                    {"Endo", "Endo", 30.56, 250}, {"Lith G1", "Relique", 30.56},
-                    {"Scintillateur", "Ressource", 8.33, 1}
+                    {"Cache de Crédits", "Credits", 30.56, 6000},
+                    {"Endo", "Endo", 30.56, 250}, {"Lith M7", "Relique", 30.56},
+                    {"Scintillateur", "Ressource", 8.33}
                 },
                 ["C"] = {
-                    {"Credits Cache", "Credits", 30.56, 6000},
-                    {"Endo", "Endo", 30.56, 250}, {"Lith G1", "Relique", 30.56},
-                    {"Scintillateur", "Ressource", 8.33, 1}
+                    {"Cache de Crédits", "Credits", 30.56, 6000},
+                    {"Endo", "Endo", 30.56, 250}, {"Lith K5", "Relique", 30.56},
+                    {"Scintillateur", "Ressource", 8.33}
                 }
             }
         }, {
@@ -4797,8 +5184,8 @@ local DropData = {
                     {"Lentille Zenurik", "Ressource", 8.97},
                     {"Lentille Madurai", "Ressource", 8.97},
                     {"Lien Catalyseur", "Mod", 6.41},
-                    {"Scintillateur", "Ressource", 8.97, 1},
-                    {"Meso F2", "Relique", 25.64},
+                    {"Scintillateur", "Ressource", 8.97},
+                    {"Meso E5", "Relique", 25.64},
                     {"{{WF|Xaku}} - Neuroptiques", "Schéma", 7.69},
                     {"Blessures Suintantes", "Mod", 8.97},
                     {"Catalyseur Incorporé", "Mod", 8.97}
@@ -4808,8 +5195,8 @@ local DropData = {
                     {"Lentille Vazarin", "Ressource", 8.97},
                     {"Lentille Unairu", "Ressource", 8.97},
                     {"Tir de Shrapnel", "Mod", 6.41},
-                    {"Scintillateur", "Ressource", 8.97, 1},
-                    {"Meso F2", "Relique", 25.64},
+                    {"Scintillateur", "Ressource", 8.97},
+                    {"Meso E5", "Relique", 25.64},
                     {"{{WF|Xaku}} - Neuroptiques", "Schéma", 7.69},
                     {"Munitions Aiguisées", "Mod", 8.97},
                     {"Salves de Lames", "Mod", 8.97}
@@ -4817,10 +5204,10 @@ local DropData = {
                 ["C"] = {
                     {"Endo", "Endo", 15.38, 600},
                     {"Lentille Naramon", "Ressource", 8.97},
-                    {"Lentille Unairu", "Ressource", 8.97},
+                    {"Lentille Zenurik", "Ressource", 8.97},
                     {"Décompte des Morts", "Mod", 6.41},
-                    {"Scintillateur", "Ressource", 8.97, 1},
-                    {"Meso F2", "Relique", 25.64},
+                    {"Scintillateur", "Ressource", 8.97},
+                    {"Meso E5", "Relique", 25.64},
                     {"{{WF|Xaku}} - Neuroptiques", "Schéma", 7.69},
                     {"Chambre sur Ressorts", "Mod", 8.97},
                     {"Chargeur à Répétition", "Mod", 8.97}
@@ -4834,22 +5221,22 @@ local DropData = {
             ShortName = "15-25",
             Rewards = {
                 ["A"] = {
-                    {"Meso F2", "Relique", 33.33},
-                    {"{{WF|Xaku}} - Neuroptiques", "Schéma", 10},
+                    {"Meso E5", "Relique", 33.33},
+                    {"{{WF|Xaku}} - Neuroptiques", "Schéma", 10.00},
                     {"Blessures Suintantes", "Mod", 11.67},
                     {"Catalyseur Incorporé", "Mod", 11.67},
                     {"Nano-Applicateur", "Mod", 33.33}
                 },
                 ["B"] = {
-                    {"Meso F2", "Relique", 33.33},
-                    {"{{WF|Xaku}} - Neuroptiques", "Schéma", 10},
+                    {"Meso E5", "Relique", 33.33},
+                    {"{{WF|Xaku}} - Neuroptiques", "Schéma", 10.00},
                     {"Munitions Aiguisées", "Mod", 11.67},
                     {"Salves de Lames", "Mod", 11.67},
                     {"Coup Mutilant", "Mod", 33.33}
                 },
                 ["C"] = {
-                    {"Meso F2", "Relique", 33.33},
-                    {"{{WF|Xaku}} - Neuroptiques", "Schéma", 10},
+                    {"Meso E5", "Relique", 33.33},
+                    {"{{WF|Xaku}} - Neuroptiques", "Schéma", 10.00},
                     {"Chambre sur Ressorts", "Mod", 11.67},
                     {"Chargeur à Répétition", "Mod", 11.67},
                     {"Chargeur sous Pression", "Mod", 33.33}
@@ -4863,23 +5250,26 @@ local DropData = {
             ShortName = "25-30",
             Rewards = {
                 ["A"] = {
-                    {"Étoile Ayatan Ambre", "Ressource", 50, 1},
-                    {"Endo", "Endo", 25, 250}, {"Lith G1", "Relique", 10},
-                    {"Mandibule Carnis", "Mod", 5},
-                    {"Barbillon Jugulus", "Mod", 5}, {"Thorax Saxum", "Mod", 5}
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 50.00},
+                    {"Endo", "Endo", 25.00, 250}, {"Lith M7", "Relique", 10.00},
+                    {"Mandibule Carnis", "Mod", 5.00},
+                    {"Barbillon Jugulus", "Mod", 5.00},
+                    {"Thorax Saxum", "Mod", 5.00}
                 },
                 ["B"] = {
-                    {"Étoile Ayatan Ambre", "Ressource", 40, 1},
-                    {"Endo", "Endo", 20, 250}, {"Lith G1", "Relique", 12.5},
-                    {"Meso F2", "Relique", 12.5},
-                    {"Mandibule Carnis", "Mod", 5},
-                    {"Barbillon Jugulus", "Mod", 5}, {"Thorax Saxum", "Mod", 5}
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 40.00},
+                    {"Endo", "Endo", 20.00, 250}, {"Lith K5", "Relique", 12.50},
+                    {"Meso E5", "Relique", 12.50},
+                    {"Mandibule Carnis", "Mod", 5.00},
+                    {"Barbillon Jugulus", "Mod", 5.00},
+                    {"Thorax Saxum", "Mod", 5.00}
                 },
                 ["C"] = {
-                    {"Étoile Ayatan Ambre", "Ressource", 50, 1},
-                    {"Endo", "Endo", 25, 250}, {"Lith G1", "Relique", 10},
-                    {"Mandibule Carnis", "Mod", 5},
-                    {"Barbillon Jugulus", "Mod", 5}, {"Thorax Saxum", "Mod", 5}
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 50.00},
+                    {"Endo", "Endo", 25.00, 250}, {"Lith M7", "Relique", 10.00},
+                    {"Mandibule Carnis", "Mod", 5.00},
+                    {"Barbillon Jugulus", "Mod", 5.00},
+                    {"Thorax Saxum", "Mod", 5.00}
                 }
             }
         }, {
@@ -4890,41 +5280,41 @@ local DropData = {
             ShortName = "25-30",
             Rewards = {
                 ["A"] = {
-                    {"Étoile Ayatan Ambre", "Ressource", 25, 1},
-                    {"Endo", "Endo", 12.5, 250}, {"Lith K4", "Relique", 5},
-                    {"Mandibule Carnis", "Mod", 2.5},
-                    {"Barbillon Jugulus", "Mod", 2.5},
-                    {"Thorax Saxum", "Mod", 2.5},
-                    {"Étoile Ayatan Ambre", "Ressource", 25, 1},
-                    {"Endo", "Endo", 12.5, 500}, {"Meso F2", "Relique", 5},
-                    {"Carapace Carnis", "Mod", 2.5},
-                    {"Carapace Jugulus", "Mod", 2.5},
-                    {"Carapace Saxum", "Mod", 2.5}
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 25.00},
+                    {"Endo", "Endo", 12.50, 250}, {"Lith M7", "Relique", 5.00},
+                    {"Mandibule Carnis", "Mod", 2.50},
+                    {"Barbillon Jugulus", "Mod", 2.50},
+                    {"Thorax Saxum", "Mod", 2.50},
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 25.00},
+                    {"Endo", "Endo", 12.50, 500}, {"Meso E5", "Relique", 5.00},
+                    {"Carapace Carnis", "Mod", 2.50},
+                    {"Carapace Jugulus", "Mod", 2.50},
+                    {"Carapace Saxum", "Mod", 2.50}
                 },
                 ["B"] = {
-                    {"Étoile Ayatan Ambre", "Ressource", 22.22, 1},
-                    {"Endo", "Endo", 11.11, 250}, {"Lith G1", "Relique", 6.94},
-                    {"Meso F2", "Relique", 6.94},
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 22.22},
+                    {"Endo", "Endo", 11.11, 250}, {"Lith K5", "Relique", 6.94},
+                    {"Meso E5", "Relique", 6.94},
                     {"Mandibule Carnis", "Mod", 2.78},
                     {"Barbillon Jugulus", "Mod", 2.78},
                     {"Thorax Saxum", "Mod", 2.78},
-                    {"Étoile Ayatan Ambre", "Ressource", 22.22, 1},
-                    {"Endo", "Endo", 11.11, 500}, {"Neo S5", "Relique", 4.44},
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 22.22},
+                    {"Endo", "Endo", 11.11, 500}, {"Neo B6", "Relique", 4.44},
                     {"Carapace Carnis", "Mod", 2.22},
                     {"Carapace Jugulus", "Mod", 2.22},
                     {"Carapace Saxum", "Mod", 2.22}
                 },
                 ["C"] = {
-                    {"Étoile Ayatan Ambre", "Ressource", 25, 1},
-                    {"Endo", "Endo", 12.5, 250}, {"Lith G1", "Relique", 5},
-                    {"Mandibule Carnis", "Mod", 2.5},
-                    {"Barbillon Jugulus", "Mod", 2.5},
-                    {"Thorax Saxum", "Mod", 2.5},
-                    {"Étoile Ayatan Ambre", "Ressource", 25, 1},
-                    {"Endo", "Endo", 12.5, 500}, {"Neo S5", "Relique", 5},
-                    {"Carapace Carnis", "Mod", 2.5},
-                    {"Carapace Jugulus", "Mod", 2.5},
-                    {"Carapace Saxum", "Mod", 2.5}
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 25.00},
+                    {"Endo", "Endo", 12.50, 250}, {"Lith M7", "Relique", 5.00},
+                    {"Mandibule Carnis", "Mod", 2.50},
+                    {"Barbillon Jugulus", "Mod", 2.50},
+                    {"Thorax Saxum", "Mod", 2.50},
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 25.00},
+                    {"Endo", "Endo", 12.50, 500}, {"Neo B6", "Relique", 5.00},
+                    {"Carapace Carnis", "Mod", 2.50},
+                    {"Carapace Jugulus", "Mod", 2.50},
+                    {"Carapace Saxum", "Mod", 2.50}
                 }
             }
         }, {
@@ -4935,40 +5325,40 @@ local DropData = {
             ShortName = "25-30",
             Rewards = {
                 ["A"] = {
-                    {"Étoile Ayatan Ambre", "Ressource", 25, 1},
-                    {"Endo", "Endo", 12.5, 200}, {"Meso F2", "Relique", 5},
-                    {"Carapace Carnis", "Mod", 2.5},
-                    {"Carapace Jugulus", "Mod", 2.5},
-                    {"Carapace Saxum", "Mod", 2.5},
-                    {"Étoile Ayatan Ambre", "Ressource", 25, 1},
-                    {"Endo", "Endo", 12.5, 750}, {"Neo S5", "Relique", 5},
-                    {"Dard Carnis", "Mod", 2.5},
-                    {"Pointes Jugulus", "Mod", 2.5},
-                    {"Synovie Saxum", "Mod", 2.5}
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 25.00},
+                    {"Endo", "Endo", 12.50, 500}, {"Meso E5", "Relique", 5.00},
+                    {"Carapace Carnis", "Mod", 2.50},
+                    {"Carapace Jugulus", "Mod", 2.50},
+                    {"Carapace Saxum", "Mod", 2.50},
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 25.00},
+                    {"Endo", "Endo", 12.50, 750}, {"Neo B6", "Relique", 5.00},
+                    {"Dard Carnis", "Mod", 2.50},
+                    {"Pointes Jugulus", "Mod", 2.50},
+                    {"Synovie Saxum", "Mod", 2.50}
                 },
                 ["B"] = {
-                    {"Étoile Ayatan Ambre", "Ressource", 25, 1},
-                    {"Endo", "Endo", 12.5, 500}, {"Neo S5", "Relique", 5},
-                    {"Carapace Carnis", "Mod", 2.5},
-                    {"Carapace Jugulus", "Mod", 2.5},
-                    {"Carapace Saxum", "Mod", 2.5},
-                    {"Étoile Ayatan Ambre", "Ressource", 25, 1},
-                    {"Endo", "Endo", 12.5, 750}, {"Axi E1", "Relique", 5},
-                    {"Dard Carnis", "Mod", 2.5},
-                    {"Pointes Jugulus", "Mod", 2.5},
-                    {"Synovie Saxum", "Mod", 2.5}
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 25.00},
+                    {"Endo", "Endo", 12.50, 500}, {"Neo B6", "Relique", 5.00},
+                    {"Carapace Carnis", "Mod", 2.50},
+                    {"Carapace Jugulus", "Mod", 2.50},
+                    {"Carapace Saxum", "Mod", 2.50},
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 25.00},
+                    {"Endo", "Endo", 12.50, 750}, {"Axi H5", "Relique", 5.00},
+                    {"Dard Carnis", "Mod", 2.50},
+                    {"Pointes Jugulus", "Mod", 2.50},
+                    {"Synovie Saxum", "Mod", 2.50}
                 },
                 ["C"] = {
-                    {"Étoile Ayatan Ambre", "Ressource", 25, 1},
-                    {"Endo", "Endo", 12.5, 500}, {"Neo S5", "Relique", 5},
-                    {"Carapace Carnis", "Mod", 2.5},
-                    {"Carapace Jugulus", "Mod", 2.5},
-                    {"Carapace Saxum", "Mod", 2.5},
-                    {"Étoile Ayatan Ambre", "Ressource", 25, 1},
-                    {"Endo", "Endo", 12.5, 750}, {"Axi E1", "Relique", 5},
-                    {"Dard Carnis", "Mod", 2.5},
-                    {"Pointes Jugulus", "Mod", 2.5},
-                    {"Synovie Saxum", "Mod", 2.5}
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 25.00},
+                    {"Endo", "Endo", 12.50, 500}, {"Neo B6", "Relique", 5.00},
+                    {"Carapace Carnis", "Mod", 2.50},
+                    {"Carapace Jugulus", "Mod", 2.50},
+                    {"Carapace Saxum", "Mod", 2.50},
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 25.00},
+                    {"Endo", "Endo", 12.50, 750}, {"Axi A12", "Relique", 5.00},
+                    {"Dard Carnis", "Mod", 2.50},
+                    {"Pointes Jugulus", "Mod", 2.50},
+                    {"Synovie Saxum", "Mod", 2.50}
                 }
             }
         },
@@ -5004,23 +5394,23 @@ local DropData = {
             ShortName = "30-40",
             Rewards = {
                 ["A"] = {
-                    {"Endo", "Endo", 22.5, 750},
+                    {"Endo", "Endo", 22.50, 750},
                     {"Lentille Unairu", "Ressource", 8.75},
                     {"Lentille Madurai", "Ressource", 8.75},
                     {"Réticule Hydraulique", "Mod", 6.25},
                     {"Résidu de Fass", "Ressource", 3.75, 5},
-                    {"Neo S5", "Relique", 25},
-                    {"{{WF|Xaku}} - Systèmes", "Schéma", 7.5},
+                    {"Neo B6", "Relique", 25.00},
+                    {"{{WF|Xaku}} - Systèmes", "Schéma", 7.50},
                     {"Vision Laser", "Mod", 8.75}, {"Coup de Sang", "Mod", 8.75}
                 },
                 ["B"] = {
-                    {"Endo", "Endo", 22.5, 750},
+                    {"Endo", "Endo", 22.50, 750},
                     {"Lentille Unairu", "Ressource", 8.75},
                     {"Lentille Madurai", "Ressource", 8.75},
                     {"Défense Focalisée", "Mod", 6.25},
                     {"Résidu de Vome", "Ressource", 3.75, 5},
-                    {"Neo N12", "Relique", 25},
-                    {"{{WF|Xaku}} - Systèmes", "Schéma", 7.5},
+                    {"Neo B6", "Relique", 25.00},
+                    {"{{WF|Xaku}} - Systèmes", "Schéma", 7.50},
                     {"Sous-Système de Ciblage", "Mod", 8.75},
                     {"Ordonnance Guidée", "Mod", 8.75}
                 }
@@ -5033,27 +5423,28 @@ local DropData = {
             ShortName = "30-40",
             Rewards = {
                 ["A"] = {
-                    {"Endo", "Endo", 18, 750},
-                    {"Lentille Unairu", "Ressource", 7},
-                    {"Lentille Madurai", "Ressource", 7},
-                    {"Réticule Hydraulique", "Mod", 5},
-                    {"Résidu de Fass", "Ressource", 3, 5},
-                    {"Neo S5", "Relique", 20},
-                    {"{{WF|Xaku}} - Systèmes", "Schéma", 6},
-                    {"Vision Laser", "Mod", 7}, {"Coup de Sang", "Mod", 7},
-                    {"Viseur à Argon", "Mod", 20}
+                    {"Endo", "Endo", 18.00, 750},
+                    {"Lentille Unairu", "Ressource", 7.00},
+                    {"Lentille Madurai", "Ressource", 7.00},
+                    {"Réticule Hydraulique", "Mod", 5.00},
+                    {"Résidu de Fass", "Ressource", 3.00, 5},
+                    {"Neo B6", "Relique", 20.00},
+                    {"{{WF|Xaku}} - Systèmes", "Schéma", 6.00},
+                    {"Vision Laser", "Mod", 7.00},
+                    {"Coup de Sang", "Mod", 7.00},
+                    {"Viseur à Argon", "Mod", 20.00}
                 },
                 ["B"] = {
-                    {"Endo", "Endo", 18, 750},
-                    {"Lentille Unairu", "Ressource", 7},
-                    {"Lentille Madurai", "Ressource", 7},
-                    {"Défense Focalisée", "Mod", 5},
-                    {"Résidu de Vome", "Ressource", 3, 5},
-                    {"Neo S5", "Relique", 20},
-                    {"{{WF|Xaku}} - Systèmes", "Schéma", 6},
-                    {"Sous-Système de Ciblage", "Mod", 7},
-                    {"Ordonnance Guidée", "Mod", 7},
-                    {"Canon Étroit", "Mod", 20}
+                    {"Endo", "Endo", 18.00, 750},
+                    {"Lentille Unairu", "Ressource", 7.00},
+                    {"Lentille Madurai", "Ressource", 7.00},
+                    {"Défense Focalisée", "Mod", 5.00},
+                    {"Résidu de Vome", "Ressource", 3.00, 5},
+                    {"Neo B6", "Relique", 20.00},
+                    {"{{WF|Xaku}} - Systèmes", "Schéma", 6.00},
+                    {"Sous-Système de Ciblage", "Mod", 7.00},
+                    {"Ordonnance Guidée", "Mod", 7.00},
+                    {"Canon Étroit", "Mod", 20.00}
                 }
             }
         }, {
@@ -5064,15 +5455,15 @@ local DropData = {
             ShortName = "30-40",
             Rewards = {
                 ["A"] = {
-                    {"Neo S5", "Relique", 33.33},
-                    {"{{WF|Xaku}} - Systèmes", "Schéma", 10},
+                    {"Neo B6", "Relique", 33.33},
+                    {"{{WF|Xaku}} - Systèmes", "Schéma", 10.00},
                     {"Vision Laser", "Mod", 11.67},
                     {"Coup de Sang", "Mod", 11.67},
                     {"Viseur à Argon", "Mod", 33.33}
                 },
                 ["B"] = {
-                    {"Neo S5", "Relique", 33.33},
-                    {"{{WF|Xaku}} - Systèmes", "Schéma", 10},
+                    {"Neo B6", "Relique", 33.33},
+                    {"{{WF|Xaku}} - Systèmes", "Schéma", 10.00},
                     {"Sous-Système de Ciblage", "Mod", 11.67},
                     {"Ordonnance Guidée", "Mod", 11.67},
                     {"Canon Étroit", "Mod", 33.33}
@@ -5102,10 +5493,10 @@ local DropData = {
             ShortName = "40-60",
             Rewards = {
                 ["A"] = {
-                    {"Étoile Ayatan Ambre", "Ressource", 28.57, 1},
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 28.57},
                     {"Endo", "Endo", 28.57, 1000},
                     {"Kuva", "Ressource", 5.71, 750},
-                    {"Axi E1", "Relique", 28.57},
+                    {"Axi A12", "Relique", 28.57},
                     {"{{WF|Xaku}} - Châssis", "Schéma", 8.57}
                 }
             }
@@ -5117,10 +5508,10 @@ local DropData = {
             ShortName = "40-60",
             Rewards = {
                 ["A"] = {
-                    {"Étoile Ayatan Ambre", "Ressource", 22.22, 1},
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 22.22},
                     {"Endo", "Endo", 22.22, 1000},
                     {"Kuva", "Ressource", 4.44, 750},
-                    {"Axi E1", "Relique", 22.22},
+                    {"Axi A12", "Relique", 22.22},
                     {"{{WF|Xaku}} - Châssis", "Schéma", 6.67},
                     {"{{Weapon|Quassus}}", "Schéma", 22.22}
                 }
@@ -5133,7 +5524,7 @@ local DropData = {
             ShortName = "40-60",
             Rewards = {
                 ["A"] = {
-                    {"Axi E1", "Relique", 43.48},
+                    {"Axi A12", "Relique", 43.48},
                     {"{{WF|Xaku}} Châssis", "Schéma", 13.04},
                     {"{{Weapon|Quassus}}", "Schéma", 43.48}
                 }
@@ -5159,10 +5550,10 @@ local DropData = {
             ShortName = "100-100",
             Rewards = {
                 ["A"] = {
-                    {"Étoile Ayatan Ambre", "Ressource", 28.57, 1},
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 28.57},
                     {"Endo", "Endo", 28.57, 1000},
                     {"Kuva", "Ressource", 5.71, 750},
-                    {"Axi E1", "Relique", 28.57},
+                    {"Axi A12", "Relique", 28.57},
                     {"{{WF|Xaku}} - Châssis", "Schéma", 8.57}
                 }
             }
@@ -5174,10 +5565,10 @@ local DropData = {
             ShortName = "100-100",
             Rewards = {
                 ["A"] = {
-                    {"Étoile Ayatan Ambre", "Ressource", 22.22, 1},
+                    {"Étoile Ayatan Ambre", "Sculpture Ayatan", 22.22},
                     {"Endo", "Endo", 22.22, 1000},
                     {"Kuva", "Ressource", 4.44, 750},
-                    {"Axi E1", "Relique", 22.22},
+                    {"Axi A12", "Relique", 22.22},
                     {"{{WF|Xaku}} - Châssis", "Schéma", 6.67},
                     {"{{Weapon|Quassus}}", "Schéma", 22.22}
                 }
@@ -5190,7 +5581,7 @@ local DropData = {
             ShortName = "100-100",
             Rewards = {
                 ["A"] = {
-                    {"Axi E1", "Relique", 43.48},
+                    {"Axi A12", "Relique", 43.48},
                     {"{{WF|Xaku}} - Châssis", "Schéma", 13.04},
                     {"{{Weapon|Quassus}}", "Schéma", 43.48}
                 }
@@ -5203,26 +5594,54 @@ local DropData = {
             ShortName = "30-40",
             Rewards = {
                 ["A"] = {
-                    {"Furoncles Résiduels", "Ressource", 50.00},
-                    {"Redirection du Necramech", "Mod", 25.00},
-                    {"Matrice d'Orientation Orokin", "Ressource", 12.50, 2},
-                    {"Meso N10", "Relique", 12.50}
+                    {"Furoncles Résiduels", "Ressource", 25.00},
+                    {"Redirection du Necramech", "Mod", 12.50},
+                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 2},
+                    {"Meso P4", "Relique", 6.25},
+                    {"Choc Résiduel", "Ressource", 15.00},
+                    {"Fibre d'acier du Necramech", "Mod", 7.50},
+                    {"Matrice Balistique Orokin", "Ressource", 3.75, 2},
+                    {"Neo N14", "Relique", 1.88}, {"Neo N13", "Relique", 1.88},
+                    {"Théorème de Contagion", "Ressource", 10.00},
+                    {"Propulseurs du Necramech", "Mod", 4.00},
+                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 3.00},
+                    {"Scintillateur", "Ressource", 2.00, 3},
+                    {"Matrice Animus Orokin", "Ressource", 0.50, 2},
+                    {"Axi B3", "Relique", 0.50}
                 },
                 ["B"] = {
-                    {"Virémie Résiduelle", "Ressource", 50.00},
-                    {"Efficacité du Necramech", "Mod", 25.00},
-                    {"Matrice Balistique Orokin", "Ressource", 12.50, 2},
-                    {"Neo I2", "Relique", 12.50}
+                    {"Brume Résiduelle", "Ressource", 25.00},
+                    {"Redirection du Necramech", "Mod", 12.50},
+                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 2},
+                    {"Meso C6", "Relique", 6.25},
+                    {"Virémie Résiduelle", "Ressource", 15.00},
+                    {"Efficacité du Necramech", "Mod", 7.50},
+                    {"Matrice Balistique Orokin", "Ressource", 3.75, 2},
+                    {"Neo Z7", "Relique", 3.75},
+                    {"Théorème de Contagion", "Ressource", 10.00},
+                    {"Propulseurs du Necramech", "Mod", 4.00},
+                    {
+                        "Culasse d'Arme de Necramech Endommagé", "Ressource",
+                        3.00
+                    }, {"Scintillateur", "Ressource", 2.00, 3},
+                    {"Matrice Animus Orokin", "Ressource", 0.50, 2},
+                    {"Neo Z7", "Relique", 0.50}
                 },
                 ["C"] = {
-                    {"Théorème de Contagion", "Ressource", 50.00},
-                    {"Propulseurs du Necramech", "Mod", 20.00},
-                    {
-                        "Crosse d'Arme de Necramech Endommagé", "Ressource",
-                        15.00
-                    }, {"Scintillateur", "Ressource", 10.00, 3},
-                    {"Matrice Animus Orokin", "Ressource", 2.50, 2},
-                    {"Axi C5", "Relique", 2.50}
+                    {"Théorème Émollient", "Ressource", 25.00},
+                    {"Redirection du Necramech", "Mod", 12.50},
+                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 2},
+                    {"Neo Z7", "Relique", 6.25},
+                    {"Théorème d'Infection", "Ressource", 15.00},
+                    {"Atteinte du Necramech", "Mod", 7.50},
+                    {"Matrice Balistique Orokin", "Ressource", 3.75, 2},
+                    {"Neo N13", "Relique", 3.75},
+                    {"Théorème de Contagion", "Ressource", 10.00},
+                    {"Propulseurs du Necramech", "Mod", 4.00},
+                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 3.00},
+                    {"Scintillateur", "Ressource", 2.00, 3},
+                    {"Matrice Animus Orokin", "Ressource", 0.50, 2},
+                    {"Neo Z7", "Relique", 0.50}
                 }
             }
         }, {
@@ -5233,33 +5652,60 @@ local DropData = {
             ShortName = "40-50",
             Rewards = {
                 ["A"] = {
-                    {"Furoncles Résiduels", "Ressource", 50.00},
-                    {"Assaut du Necramech", "Mod", 25.00},
-                    {"{{Weapon|Arum Spinosa}}", "Schéma", 12.50},
-                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 3},
-                    {"Meso N10", "Relique", 6.25}
+                    {"Furoncles Résiduels", "Ressource", 25.00},
+                    {"Assaut du Necramech", "Mod", 12.50},
+                    {"Arum Spinosa Schéma", "Schéma", 6.25},
+                    {"Matrice d'Orientation Orokin", "Ressource", 3.13, 3},
+                    {"Meso N10", "Relique", 3.13},
+                    {"Choc Résiduel", "Ressource", 15.00},
+                    {"Sillage du Necramech", "Mod", 7.50},
+                    {"Arum Spinosa Garde", "Schéma", 3.75},
+                    {"Matrice Balistique Orokin", "Ressource", 1.88, 3},
+                    {"Neo P2", "Relique", 0.94}, {"Neo N13", "Relique", 0.94},
+                    {"Théorème de Contagion", "Ressource", 10.00},
+                    {"Onde Sismique du Necramech", "Mod", 4.00},
+                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 3.00},
+                    {"Arum Spinosa Rivet", "Schéma", 2.00},
+                    {"Matrice Animus Orokin", "Ressource", 0.50, 3},
+                    {"Neo B7", "Relique", 0.50}
                 },
                 ["B"] = {
-                    {"Virémie Résiduelle", "Ressource", 50.00},
-                    {"Continuité du Necramech", "Mod", 25.00},
+                    {"Brume Résiduelle", "Ressource", 25.00},
+                    {"Assaut du Necramech", "Mod", 12.50},
+                    {"Arum Spinosa Schéma", "Schéma", 6.25},
+                    {"Matrice d'Orientation Orokin", "Ressource", 3.13, 3},
+                    {"Meso C6", "Relique", 3.13},
+                    {"Virémie Résiduelle", "Ressource", 15.00},
+                    {"Continuité du Necramech", "Mod", 7.50},
+                    {"Arum Spinosa Garde", "Schéma", 3.75},
+                    {"Matrice Balistique Orokin", "Ressource", 1.88, 3},
+                    {"Neo B7", "Relique", 1.88},
+                    {"Théorème de Contagion", "Ressource", 10.00},
+                    {"Onde Sismique du Necramech", "Mod", 4.00},
                     {
-                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
-                        "Schéma", 12.50
-                    }, {"Matrice Balistique Orokin", "Ressource", 6.25, 3},
-                    {"Neo I2", "Relique", 6.25}
+                        "Culasse d'Arme de Necramech Endommagé", "Ressource",
+                        3.00
+                    }, {"Arum Spinosa Rivet", "Schéma", 2.00},
+                    {"Matrice Animus Orokin", "Ressource", 0.50, 3},
+                    {"Neo N15", "Relique", 0.50}
                 },
                 ["C"] = {
-                    {"Théorème de Contagion", "Ressource", 50.00},
-                    {"Onde Sismique du Necramech", "Mod", 20.00},
-                    {
-                        "Crosse d'Arme de Necramech Endommagé", "Ressource",
-                        15.00
-                    },
-                    {
-                        "{{Weapon|Arum Spinosa|Arum Spinosa - Rivet}}",
-                        "Schéma", 10.00
-                    }, {"Matrice Animus Orokin", "Ressource", 2.50, 3},
-                    {"Axi C5", "Relique", 2.50}
+                    {"Théorème Émollient", "Ressource", 25.00},
+                    {"Assaut du Necramech", "Mod", 12.50},
+                    {"Arum Spinosa Schéma", "Schéma", 6.25},
+                    {"Matrice d'Orientation Orokin", "Ressource", 3.13, 3},
+                    {"Meso P4", "Relique", 3.13},
+                    {"Théorème d'Infection", "Ressource", 15.00},
+                    {"Force du Necramech", "Mod", 7.50},
+                    {"Arum Spinosa Garde", "Schéma", 3.75},
+                    {"Matrice Balistique Orokin", "Ressource", 1.88, 3},
+                    {"Neo N13", "Relique", 1.88},
+                    {"Théorème de Contagion", "Ressource", 10.00},
+                    {"Onde Sismique du Necramech", "Mod", 4.00},
+                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 3.00},
+                    {"Arum Spinosa Rivet", "Schéma", 2.00},
+                    {"Matrice Animus Orokin", "Ressource", 0.50, 3},
+                    {"Axi O5", "Relique", 0.50}
                 }
             }
         }, {
@@ -5270,30 +5716,57 @@ local DropData = {
             ShortName = "50-60",
             Rewards = {
                 ["A"] = {
-                    {"Furoncles Résiduels", "Ressource", 50.00},
-                    {"Furie du Necramech", "Mod", 25.00},
-                    {"{{Weapon|Sporothrix}}", "Schéma", 12.50},
-                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 4},
-                    {"Meso N10", "Relique", 6.25}
+                    {"Furoncles Résiduels", "Ressource", 25.00},
+                    {"Furie du Necramech", "Mod", 12.50},
+                    {"Sporothrix Schéma", "Schéma", 6.25},
+                    {"Matrice d'Orientation Orokin", "Ressource", 3.13, 4},
+                    {"Meso D6", "Relique", 3.13},
+                    {"Choc Résiduel", "Ressource", 15.00},
+                    {"Allonge du Necramech", "Mod", 7.50},
+                    {"Sporothrix Canon", "Schéma", 3.75},
+                    {"Matrice Balistique Orokin", "Ressource", 1.88, 4},
+                    {"Neo N15", "Relique", 0.94}, {"Neo N13", "Relique", 0.94},
+                    {"Théorème de Contagion", "Ressource", 10.00},
+                    {"Rationalisation du Necramech", "Mod", 4.00},
+                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 3.00},
+                    {"Matrice Animus Orokin", "Ressource", 1.50, 4},
+                    {"Axi A13", "Relique", 1.50}
                 },
                 ["B"] = {
-                    {"Endo", "Endo", 50.00, 2500},
-                    {"Virémie Résiduelle", "Ressource", 25.00},
-                    {"Hydrauliques du Necramech", "Mod", 12.50},
+                    {"Brume Résiduelle", "Ressource", 25.00},
+                    {"Furie du Necramech", "Mod", 12.50},
+                    {"Sporothrix Schéma", "Schéma", 6.25},
+                    {"Matrice d'Orientation Orokin", "Ressource", 3.13, 4},
+                    {"Meso C6", "Relique", 3.13},
+                    {"Virémie Résiduelle", "Ressource", 15.00},
+                    {"Hydrauliques du Necramech", "Mod", 7.50},
+                    {"Sporothrix Culasse", "Schéma", 3.75},
+                    {"Matrice Balistique Orokin", "Ressource", 1.88, 4},
+                    {"Neo N14", "Relique", 1.88},
+                    {"Théorème de Contagion", "Ressource", 10.00},
+                    {"Rationalisation du Necramech", "Mod", 4.00},
                     {
-                        "{{Weapon|Sporothrix|Sporothrix - Culasse}}", "Schéma",
-                        6.25
-                    }, {"Matrice Balistique Orokin", "Ressource", 3.13, 4},
-                    {"Neo I2", "Relique", 3.13}
+                        "Culasse d'Arme de Necramech Endommagé", "Ressource",
+                        3.00
+                    }, {"Matrice Animus Orokin", "Ressource", 1.50, 4},
+                    {"Axi W2", "Relique", 1.50}
                 },
                 ["C"] = {
-                    {"Théorème de Contagion", "Ressource", 50.00},
-                    {"Rationalisation du Necramech", "Mod", 20.00},
-                    {
-                        "Crosse d'Arme de Necramech Endommagé", "Ressource",
-                        15.00
-                    }, {"Matrice Animus Orokin", "Ressource", 7.50, 4},
-                    {"Axi C5", "Relique", 7.50}
+                    {"Théorème Émollient", "Ressource", 25.00},
+                    {"Furie du Necramech", "Mod", 12.50},
+                    {"Sporothrix Schéma", "Schéma", 6.25},
+                    {"Matrice d'Orientation Orokin", "Ressource", 3.13, 4},
+                    {"Meso T4", "Relique", 3.13},
+                    {"Théorème d'Infection", "Ressource", 15.00},
+                    {"Friction du Necramech", "Mod", 7.50},
+                    {"Sporothrix Crosse", "Schéma", 3.75},
+                    {"Matrice Balistique Orokin", "Ressource", 1.88, 4},
+                    {"Neo N13", "Relique", 1.88},
+                    {"Théorème de Contagion", "Ressource", 10.00},
+                    {"Rationalisation du Necramech", "Mod", 4.00},
+                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 3.00},
+                    {"Matrice Animus Orokin", "Ressource", 1.50, 4},
+                    {"Axi C6", "Relique", 1.50}
                 }
             }
         }, {
@@ -5307,7 +5780,7 @@ local DropData = {
                     {"Furoncles Résiduels", "Ressource", 50.00},
                     {"Redirection du Necramech", "Mod", 25.00},
                     {"Matrice d'Orientation Orokin", "Ressource", 12.50, 2},
-                    {"Meso N10", "Relique", 12.50}
+                    {"Meso P4", "Relique", 12.50}
                 },
                 ["B"] = {
                     {"Brume Résiduelle", "Ressource", 50.00},
@@ -5319,7 +5792,7 @@ local DropData = {
                     {"Théorème Émollient", "Ressource", 50.00},
                     {"Redirection du Necramech", "Mod", 25.00},
                     {"Matrice d'Orientation Orokin", "Ressource", 12.50, 2},
-                    {"Meso E4", "Relique", 12.50}
+                    {"Neo Z7", "Relique", 12.50}
                 }
             }
         }, {
@@ -5330,34 +5803,34 @@ local DropData = {
             ShortName = "30-40",
             Rewards = {
                 ["A"] = {
-                    {"Furoncles Résiduels", "Ressource", 25.00},
-                    {"Redirection du Necramech", "Mod", 12.50},
-                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 2},
-                    {"Meso N10", "Relique", 6.25},
-                    {"Choc Résiduel", "Ressource", 25.00},
-                    {"Fibre d'Acier du Necramech", "Mod", 12.50},
-                    {"Matrice Balistique Orokin", "Ressource", 6.25, 2},
-                    {"Neo D2", "Relique", 3.13}, {"Neo N13", "Relique", 3.13}
+                    {"Furoncles Résiduels", "Ressource", 31.25},
+                    {"Redirection du Necramech", "Mod", 15.63},
+                    {"Matrice d'Orientation Orokin", "Ressource", 7.81, 2},
+                    {"Meso P4", "Relique", 7.81},
+                    {"Choc Résiduel", "Ressource", 18.75},
+                    {"Fibre d'acier du Necramech", "Mod", 9.38},
+                    {"Matrice Balistique Orokin", "Ressource", 4.69, 2},
+                    {"Neo N14", "Relique", 2.34}, {"Neo N13", "Relique", 2.34}
                 },
                 ["B"] = {
-                    {"Brume Résiduelle", "Ressource", 25.00},
-                    {"Redirection du Necramech", "Mod", 12.50},
-                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 2},
-                    {"Meso C6", "Relique", 6.25},
-                    {"Virémie Résiduelle", "Ressource", 25.00},
-                    {"Efficacité du Necramech", "Mod", 12.50},
-                    {"Matrice Balistique Orokin", "Ressource", 6.25, 2},
-                    {"Neo I2", "Relique", 6.25}
+                    {"Brume Résiduelle", "Ressource", 31.25},
+                    {"Redirection du Necramech", "Mod", 15.63},
+                    {"Matrice d'Orientation Orokin", "Ressource", 7.81, 2},
+                    {"Meso C6", "Relique", 7.81},
+                    {"Virémie Résiduelle", "Ressource", 18.75},
+                    {"Efficacité du Necramech", "Mod", 9.38},
+                    {"Matrice Balistique Orokin", "Ressource", 4.69, 2},
+                    {"Neo Z7", "Relique", 4.69}
                 },
                 ["C"] = {
-                    {"Théorème Émollient", "Ressource", 25.00},
-                    {"Redirection du Necramech", "Mod", 12.50},
-                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 2},
-                    {"Meso E4", "Relique", 6.25},
-                    {"Théorème d'Infection", "Ressource", 25.00},
-                    {"Atteinte du Necramech", "Mod", 12.50},
-                    {"Matrice Balistique Orokin", "Ressource", 6.25, 2},
-                    {"Neo N13", "Relique", 6.25}
+                    {"Théorème Émollient", "Ressource", 31.25},
+                    {"Redirection du Necramech", "Mod", 15.63},
+                    {"Matrice d'Orientation Orokin", "Ressource", 7.81, 2},
+                    {"Neo Z7", "Relique", 7.81},
+                    {"Théorème d'Infection", "Ressource", 18.75},
+                    {"Atteinte du Necramech", "Mod", 9.38},
+                    {"Matrice Balistique Orokin", "Ressource", 4.69, 2},
+                    {"Neo N13", "Relique", 4.69}
                 }
             }
         }, {
@@ -5369,54 +5842,54 @@ local DropData = {
             Ignore = true,
             Rewards = {
                 ["A"] = {
-                    {"Furoncles Résiduels", "Ressource", 11.11},
-                    {"Redirection du Necramech", "Mod", 5.56},
-                    {"Matrice d'Orientation Orokin", "Ressource", 2.78, 2},
-                    {"Meso N10", "Relique", 2.78},
-                    {"Choc Résiduel", "Ressource", 11.11},
-                    {"Fibre d'Acier du Necramech", "Mod", 5.56},
-                    {"Matrice Balistique Orokin", "Ressource", 2.78, 2},
-                    {"Neo D2", "Relique", 1.39}, {"Neo N13", "Relique", 1.39},
-                    {"Théorème de Contagion", "Ressource", 27.78},
-                    {"Propulseurs du Necramech", "Mod", 11.11},
-                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 8.33},
-                    {"Scintillateur", "Ressource", 5.56, 3},
-                    {"Matrice Animus Orokin", "Ressource", 1.39, 2},
-                    {"Axi B3", "Relique", 1.39}
+                    {"Furoncles Résiduels", "Ressource", 25.00},
+                    {"Redirection du Necramech", "Mod", 12.50},
+                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 2},
+                    {"Meso P4", "Relique", 6.25},
+                    {"Choc Résiduel", "Ressource", 15.00},
+                    {"Fibre d'acier du Necramech", "Mod", 7.50},
+                    {"Matrice Balistique Orokin", "Ressource", 3.75, 2},
+                    {"Neo N14", "Relique", 1.88}, {"Neo N13", "Relique", 1.88},
+                    {"Théorème de Contagion", "Ressource", 10.00},
+                    {"Propulseurs du Necramech", "Mod", 4.00},
+                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 3.00},
+                    {"Scintillateur", "Ressource", 2.00, 3},
+                    {"Matrice Animus Orokin", "Ressource", 0.50, 2},
+                    {"Axi O5", "Relique", 0.50}
                 },
                 ["B"] = {
-                    {"Brume Résiduelle", "Ressource", 11.11},
-                    {"Redirection du Necramech", "Mod", 5.56},
-                    {"Matrice d'Orientation Orokin", "Ressource", 2.78, 2},
-                    {"Meso C6", "Relique", 2.78},
-                    {"Virémie Résiduelle", "Ressource", 11.11},
-                    {"Efficacité du Necramech", "Mod", 5.56},
-                    {"Matrice Balistique Orokin", "Ressource", 2.78, 2},
-                    {"Neo I2", "Relique", 2.78},
-                    {"Théorème de Contagion", "Ressource", 27.78},
-                    {"Propulseurs du Necramech", "Mod", 11.11},
+                    {"Brume Résiduelle", "Ressource", 25.00},
+                    {"Redirection du Necramech", "Mod", 12.50},
+                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 2},
+                    {"Meso C6", "Relique", 6.25},
+                    {"Virémie Résiduelle", "Ressource", 15.00},
+                    {"Efficacité du Necramech", "Mod", 7.50},
+                    {"Matrice Balistique Orokin", "Ressource", 3.75, 2},
+                    {"Neo Z7", "Relique", 3.75},
+                    {"Théorème de Contagion", "Ressource", 10.00},
+                    {"Propulseurs du Necramech", "Mod", 4.00},
                     {
                         "Culasse d'Arme de Necramech Endommagé", "Ressource",
-                        8.33
-                    }, {"Scintillateur", "Ressource", 5.56, 3},
-                    {"Matrice Animus Orokin", "Ressource", 1.39, 2},
-                    {"Axi T4", "Relique", 1.39}
+                        3.00
+                    }, {"Scintillateur", "Ressource", 2.00, 3},
+                    {"Matrice Animus Orokin", "Ressource", 0.50, 2},
+                    {"Neo Z7", "Relique", 0.50}
                 },
                 ["C"] = {
-                    {"Théorème Émollient", "Ressource", 11.11},
-                    {"Redirection du Necramech", "Mod", 5.56},
-                    {"Matrice d'Orientation Orokin", "Ressource", 2.78, 2},
-                    {"Meso E4", "Relique", 2.78},
-                    {"Théorème d'Infection", "Ressource", 11.11},
-                    {"Atteinte du Necramech", "Mod", 5.56},
-                    {"Matrice Balistique Orokin", "Ressource", 2.78, 2},
-                    {"Neo N13", "Relique", 2.78},
-                    {"Théorème de Contagion", "Ressource", 27.78},
-                    {"Propulseurs du Necramech", "Mod", 11.11},
-                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 8.33},
-                    {"Scintillateur", "Ressource", 5.56, 3},
-                    {"Matrice Animus Orokin", "Ressource", 1.39, 2},
-                    {"Axi C5", "Relique", 1.39}
+                    {"Théorème Émollient", "Ressource", 25.00},
+                    {"Redirection du Necramech", "Mod", 12.50},
+                    {"Matrice d'Orientation Orokin", "Ressource", 6.25, 2},
+                    {"Neo Z7", "Relique", 6.25},
+                    {"Théorème d'Infection", "Ressource", 15.00},
+                    {"Atteinte du Necramech", "Mod", 7.50},
+                    {"Matrice Balistique Orokin", "Ressource", 3.75, 2},
+                    {"Neo N13", "Relique", 3.75},
+                    {"Théorème de Contagion", "Ressource", 10.00},
+                    {"Propulseurs du Necramech", "Mod", 4.00},
+                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 3.00},
+                    {"Scintillateur", "Ressource", 2.00, 3},
+                    {"Matrice Animus Orokin", "Ressource", 0.50, 2},
+                    {"Neo P2", "Relique", 0.50}
                 }
             }
         }, {
@@ -5427,44 +5900,42 @@ local DropData = {
             ShortName = "30-40",
             Rewards = {
                 ["A"] = {
-                    {"Choc Résiduel", "Ressource", 14.29},
-                    {"Fibre d'Acier du Necramech", "Mod", 7.14},
-                    {"Matrice Balistique Orokin", "Ressource", 3.57, 2},
-                    {"Neo D2", "Relique", 1.79}, {"Neo N13", "Relique", 1.79},
-                    {"Théorème de Contagion", "Ressource", 35.71},
-                    {"Propulseurs du Necramech", "Mod", 14.29},
-                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 10.71},
-                    {"Scintillateur", "Ressource", 7.14, 3},
-                    {"Matrice Animus Orokin", "Ressource", 1.79, 2},
-                    {"Axi B3", "Relique", 1.79}
+                    {"Choc Résiduel", "Ressource", 30.00},
+                    {"Fibre d'acier du Necramech", "Mod", 15.00},
+                    {"Matrice Balistique Orokin", "Ressource", 7.50, 2},
+                    {"Neo N14", "Relique", 3.75}, {"Neo N13", "Relique", 3.75},
+                    {"Théorème de Contagion", "Ressource", 20.00},
+                    {"Propulseurs du Necramech", "Mod", 8.00},
+                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 6.00},
+                    {"Scintillateur", "Ressource", 4.00, 3},
+                    {"Matrice Animus Orokin", "Ressource", 1.00, 2},
+                    {"Axi O5", "Relique", 1.00}
                 },
                 ["B"] = {
-                    {"Virémie Résiduelle", "Ressource", 14.29},
-                    {"Efficacité du Necramech", "Mod", 7.14},
-                    {"Matrice Balistique Orokin", "Ressource", 3.57, 2},
-                    {"Neo I2", "Relique", 3.57},
-                    {"Théorème de Contagion", "Ressource", 35.71},
-                    {"Propulseurs du Necramech", "Mod", 14.29},
+                    {"Virémie Résiduelle", "Ressource", 30.00},
+                    {"Efficacité du Necramech", "Mod", 15.00},
+                    {"Matrice Balistique Orokin", "Ressource", 7.50, 2},
+                    {"Neo Z7", "Relique", 7.50},
+                    {"Théorème de Contagion", "Ressource", 20.00},
+                    {"Propulseurs du Necramech", "Mod", 8.00},
                     {
                         "Culasse d'Arme de Necramech Endommagé", "Ressource",
-                        10.71
-                    }, {"Scintillateur", "Ressource", 7.14, 3},
-                    {"Matrice Animus Orokin", "Ressource", 1.79, 2},
-                    {"Axi T4", "Relique", 1.79}
+                        6.00
+                    }, {"Scintillateur", "Ressource", 4.00, 3},
+                    {"Matrice Animus Orokin", "Ressource", 1.00, 2},
+                    {"Neo Z7", "Relique", 1.00}
                 },
                 ["C"] = {
-                    {"Théorème d'Infection", "Ressource", 14.29},
-                    {"Atteinte du Necramech", "Mod", 7.14},
-                    {"Matrice Balistique Orokin", "Ressource", 3.57, 2},
-                    {"Neo N13", "Relique", 3.57},
-                    {"Théorème de Contagion", "Ressource", 35.71},
-                    {"Propulseurs du Necramech", "Mod", 14.29},
-                    {
-                        "Crosse d'Arme de Necramech Endommagé", "Ressource",
-                        10.71
-                    }, {"Scintillateur", "Ressource", 7.14, 3},
-                    {"Matrice Animus Orokin", "Ressource", 1.79, 2},
-                    {"Axi C5", "Relique", 1.79}
+                    {"Théorème d'Infection", "Ressource", 30.00},
+                    {"Atteinte du Necramech", "Mod", 15.00},
+                    {"Matrice Balistique Orokin", "Ressource", 7.50, 2},
+                    {"Neo N13", "Relique", 7.50},
+                    {"Théorème de Contagion", "Ressource", 20.00},
+                    {"Propulseurs du Necramech", "Mod", 8.00},
+                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 6.00},
+                    {"Scintillateur", "Ressource", 4.00, 3},
+                    {"Matrice Animus Orokin", "Ressource", 1.00, 2},
+                    {"Neo P2", "Relique", 1.00}
                 }
             }
         }, {
@@ -5479,7 +5950,7 @@ local DropData = {
                     {"Assaut du Necramech", "Mod", 25.00},
                     {"{{Weapon|Arum Spinosa}}", "Schéma", 12.50},
                     {"Matrice d'Orientation Orokin", "Ressource", 6.25, 3},
-                    {"Meso N10", "Relique", 6.25}
+                    {"Neo P2", "Relique", 6.25}
                 },
                 ["B"] = {
                     {"Brume Résiduelle", "Ressource", 50.00},
@@ -5493,7 +5964,7 @@ local DropData = {
                     {"Assaut du Necramech", "Mod", 25.00},
                     {"{{Weapon|Arum Spinosa}}", "Schéma", 12.50},
                     {"Matrice d'Orientation Orokin", "Ressource", 6.25, 3},
-                    {"Meso E4", "Relique", 6.25}
+                    {"Meso P4", "Relique", 6.25}
                 }
             }
         }, {
@@ -5504,46 +5975,40 @@ local DropData = {
             ShortName = "40-50",
             Rewards = {
                 ["A"] = {
-                    {"Furoncles Résiduels", "Ressource", 16.67},
-                    {"Assaut du Necramech", "Mod", 8.33},
-                    {"{{Weapon|Arum Spinosa}}", "Schéma", 4.17},
-                    {"Matrice d'Orientation Orokin", "Ressource", 2.08, 3},
-                    {"Meso N10", "Relique", 2.08},
-                    {"Choc Résiduel", "Ressource", 33.33},
-                    {"Sillage du Necramech", "Mod", 16.67},
-                    {
-                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
-                        "Schéma", 8.33
-                    }, {"Matrice Balistique Orokin", "Ressource", 4.17, 3},
-                    {"Neo D2", "Relique", 2.08}, {"Neo N13", "Relique", 2.08}
+                    {"Furoncles Résiduels", "Ressource", 31.25},
+                    {"Assaut du Necramech", "Mod", 15.63},
+                    {"{{Weapon|Arum Spinosa}}", "Schéma", 7.81},
+                    {"Matrice d'Orientation Orokin", "Ressource", 3.91, 3},
+                    {"Neo P2", "Relique", 3.91},
+                    {"Choc Résiduel", "Ressource", 18.75},
+                    {"Sillage du Necramech", "Mod", 9.38},
+                    {"Arum Spinosa - Garde", "Schéma", 4.69},
+                    {"Matrice Balistique Orokin", "Ressource", 2.34, 3},
+                    {"Neo P2", "Relique", 1.17}, {"Neo N13", "Relique", 1.17}
                 },
                 ["B"] = {
-                    {"Brume Résiduelle", "Ressource", 16.67},
-                    {"Assaut du Necramech", "Mod", 8.33},
-                    {"{{Weapon|Arum Spinosa}}", "Schéma", 4.17},
-                    {"Matrice d'Orientation Orokin", "Ressource", 2.08, 3},
-                    {"Meso C6", "Relique", 2.08},
-                    {"Virémie Résiduelle", "Ressource", 33.33},
-                    {"Continuité du Necramech", "Mod", 16.67},
-                    {
-                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
-                        "Schéma", 8.33
-                    }, {"Matrice Balistique Orokin", "Ressource", 4.17, 3},
-                    {"Neo I2", "Relique", 4.17}
+                    {"Brume Résiduelle", "Ressource", 31.25},
+                    {"Assaut du Necramech", "Mod", 15.63},
+                    {"{{Weapon|Arum Spinosa}}", "Schéma", 7.81},
+                    {"Matrice d'Orientation Orokin", "Ressource", 3.91, 3},
+                    {"Meso C6", "Relique", 3.91},
+                    {"Virémie Résiduelle", "Ressource", 18.75},
+                    {"Continuité du Necramech", "Mod", 9.38},
+                    {"Arum Spinosa - Garde", "Schéma", 4.69},
+                    {"Matrice Balistique Orokin", "Ressource", 2.34, 3},
+                    {"Neo B7", "Relique", 2.34}
                 },
                 ["C"] = {
-                    {"Théorème Émollient", "Ressource", 16.67},
-                    {"Assaut du Necramech", "Mod", 8.33},
-                    {"{{Weapon|Arum Spinosa}}", "Schéma", 4.17},
-                    {"Matrice d'Orientation Orokin", "Ressource", 2.08, 3},
-                    {"Meso E4", "Relique", 2.08},
-                    {"Théorème d'Infection", "Ressource", 33.33},
-                    {"Force du Necramech", "Mod", 16.67},
-                    {
-                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
-                        "Schéma", 8.33
-                    }, {"Matrice Balistique Orokin", "Ressource", 4.17, 3},
-                    {"Neo N13", "Relique", 4.17}
+                    {"Théorème Émollient", "Ressource", 31.25},
+                    {"Assaut du Necramech", "Mod", 15.63},
+                    {"{{Weapon|Arum Spinosa}}", "Schéma", 7.81},
+                    {"Matrice d'Orientation Orokin", "Ressource", 3.91, 3},
+                    {"Meso P4", "Relique", 3.91},
+                    {"Théorème d'Infection", "Ressource", 18.75},
+                    {"Force du Necramech", "Mod", 9.38},
+                    {"Arum Spinosa - Garde", "Schéma", 4.69},
+                    {"Matrice Balistique Orokin", "Ressource", 2.34, 3},
+                    {"Neo N13", "Relique", 2.34}
                 }
             }
         }, {
@@ -5554,73 +6019,60 @@ local DropData = {
             ShortName = "40-50",
             Rewards = {
                 ["A"] = {
-                    {"Furoncles Résiduels", "Ressource", 9.09},
-                    {"Assaut du Necramech", "Mod", 4.55},
-                    {"{{Weapon|Arum Spinosa}}", "Schéma", 2.27},
-                    {"Matrice d'Orientation Orokin", "Ressource", 1.14, 3},
-                    {"Meso N10", "Relique", 1.14},
-                    {"Choc Résiduel", "Ressource", 18.18},
-                    {"Sillage du Necramech", "Mod", 9.09},
-                    {
-                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
-                        "Schéma", 4.55
-                    }, {"Matrice Balistique Orokin", "Ressource", 2.27, 3},
-                    {"Neo D2", "Relique", 1.14}, {"Neo N13", "Relique", 1.14},
-                    {"Théorème de Contagion", "Ressource", 22.73},
-                    {"Onde Sismique du Necramech", "Mod", 9.09},
-                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 6.82},
-                    {
-                        "{{Weapon|Arum Spinosa|Arum Spinosa - Rivet}}",
-                        "Schéma", 4.55
-                    }, {"Matrice Animus Orokin", "Ressource", 1.14, 3},
-                    {"Axi B3", "Relique", 1.14}
+                    {"Furoncles Résiduels", "Ressource", 25.00},
+                    {"Assaut du Necramech", "Mod", 12.50},
+                    {"{{Weapon|Arum Spinosa}}", "Schéma", 6.25},
+                    {"Matrice d'Orientation Orokin", "Ressource", 3.13, 3},
+                    {"Neo P2", "Relique", 3.13},
+                    {"Choc Résiduel", "Ressource", 15.00},
+                    {"Sillage du Necramech", "Mod", 7.50},
+                    {"Arum Spinosa - Garde", "Schéma", 3.75},
+                    {"Matrice Balistique Orokin", "Ressource", 1.88, 3},
+                    {"Neo P2", "Relique", 0.94}, {"Neo N13", "Relique", 0.94},
+                    {"Théorème de Contagion", "Ressource", 10.00},
+                    {"Onde Sismique du Necramech", "Mod", 4.00},
+                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 3.00},
+                    {"Arum Spinosa - Rivet", "Schéma", 2.00},
+                    {"Matrice Animus Orokin", "Ressource", 0.50, 3},
+                    {"Neo B7", "Relique", 0.50}
                 },
                 ["B"] = {
-                    {"Brume Résiduelle", "Ressource", 9.09},
-                    {"Assaut du Necramech", "Mod", 4.55},
-                    {"{{Weapon|Arum Spinosa}}", "Schéma", 2.27},
-                    {"Matrice d'Orientation Orokin", "Ressource", 1.14, 3},
-                    {"Meso C6", "Relique", 1.14},
-                    {"Virémie Résiduelle", "Ressource", 18.18},
-                    {"Continuité du Necramech", "Mod", 9.09},
-                    {
-                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
-                        "Schéma", 4.55
-                    }, {"Matrice Balistique Orokin", "Ressource", 2.27, 3},
-                    {"Neo I2", "Relique", 2.27},
-                    {"Théorème de Contagion", "Ressource", 22.73},
-                    {"Onde Sismique du Necramech", "Mod", 9.09},
+                    {"Brume Résiduelle", "Ressource", 25.00},
+                    {"Assaut du Necramech", "Mod", 12.50},
+                    {"{{Weapon|Arum Spinosa}}", "Schéma", 6.25},
+                    {"Matrice d'Orientation Orokin", "Ressource", 3.13, 3},
+                    {"Meso C6", "Relique", 3.13},
+                    {"Virémie Résiduelle", "Ressource", 15.00},
+                    {"Continuité du Necramech", "Mod", 7.50},
+                    {"Arum Spinosa - Garde", "Schéma", 3.75},
+                    {"Matrice Balistique Orokin", "Ressource", 1.88, 3},
+                    {"Neo B7", "Relique", 1.88},
+                    {"Théorème de Contagion", "Ressource", 10.00},
+                    {"Onde Sismique du Necramech", "Mod", 4.00},
                     {
                         "Culasse d'Arme de Necramech Endommagé", "Ressource",
-                        6.82
-                    },
-                    {
-                        "{{Weapon|Arum Spinosa|Arum Spinosa - Rivet}}",
-                        "Schéma", 4.55
-                    }, {"Matrice Animus Orokin", "Ressource", 1.14, 3},
-                    {"Axi T4", "Relique", 1.14}
+                        3.00
+                    }, {"Arum Spinosa - Rivet", "Schéma", 2.00},
+                    {"Matrice Animus Orokin", "Ressource", 0.50, 3},
+                    {"Neo N15", "Relique", 0.50}
                 },
                 ["C"] = {
-                    {"Théorème Émollient", "Ressource", 9.09},
-                    {"Assaut du Necramech", "Mod", 4.55},
-                    {"{{Weapon|Arum Spinosa|Arum Spinosa}}", "Schéma", 2.27},
-                    {"Matrice d'Orientation Orokin", "Ressource", 1.14, 3},
-                    {"Meso E4", "Relique", 1.14},
-                    {"Théorème d'Infection", "Ressource", 18.18},
-                    {"Force du Necramech", "Mod", 9.09},
-                    {
-                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
-                        "Schéma", 4.55
-                    }, {"Matrice Balistique Orokin", "Ressource", 2.27, 3},
-                    {"Neo N13", "Relique", 2.27},
-                    {"Théorème de Contagion", "Ressource", 22.73},
-                    {"Onde Sismique du Necramech", "Mod", 9.09},
-                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 6.82},
-                    {
-                        "{{Weapon|Arum Spinosa|Arum Spinosa - Rivet}}",
-                        "Schéma", 4.55
-                    }, {"Matrice Animus Orokin", "Ressource", 1.14, 3},
-                    {"Axi C5", "Relique", 1.14}
+                    {"Théorème Émollient", "Ressource", 25.00},
+                    {"Assaut du Necramech", "Mod", 12.50},
+                    {"{{Weapon|Arum Spinosa}}", "Schéma", 6.25},
+                    {"Matrice d'Orientation Orokin", "Ressource", 3.13, 3},
+                    {"Meso P4", "Relique", 3.13},
+                    {"Théorème d'Infection", "Ressource", 15.00},
+                    {"Force du Necramech", "Mod", 7.50},
+                    {"Arum Spinosa - Garde", "Schéma", 3.75},
+                    {"Matrice Balistique Orokin", "Ressource", 1.88, 3},
+                    {"Neo N13", "Relique", 1.88},
+                    {"Théorème de Contagion", "Ressource", 10.00},
+                    {"Onde Sismique du Necramech", "Mod", 4.00},
+                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 3.00},
+                    {"Arum Spinosa - Rivet", "Schéma", 2.00},
+                    {"Matrice Animus Orokin", "Ressource", 0.50, 3},
+                    {"Axi O5", "Relique", 0.50}
                 }
             }
         }, {
@@ -5631,58 +6083,45 @@ local DropData = {
             ShortName = "40-50",
             Rewards = {
                 ["A"] = {
-                    {"Choc Résiduel", "Ressource", 22.22},
-                    {"Sillage du Necramech", "Mod", 11.11},
-                    {
-                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
-                        "Schéma", 5.56
-                    }, {"Matrice Balistique Orokin", "Ressource", 2.78, 3},
-                    {"Neo D2", "Relique", 1.39}, {"Neo N13", "Relique", 1.39},
-                    {"Théorème de Contagion", "Ressource", 27.78},
-                    {"Onde Sismique du Necramech", "Mod", 11.11},
-                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 8.33},
-                    {
-                        "{{Weapon|Arum Spinosa|Arum Spinosa - Rivet}}",
-                        "Schéma", 5.56
-                    }, {"Matrice Animus Orokin", "Ressource", 1.39, 3},
-                    {"Axi B3", "Relique", 1.39}
+                    {"Choc Résiduel", "Ressource", 30.00},
+                    {"Sillage du Necramech", "Mod", 15.00},
+                    {"Arum Spinosa - Garde", "Schéma", 7.50},
+                    {"Matrice Balistique Orokin", "Ressource", 3.75, 3},
+                    {"Neo P2", "Relique", 1.88}, {"Neo N13", "Relique", 1.88},
+                    {"Théorème de Contagion", "Ressource", 20.00},
+                    {"Onde Sismique du Necramech", "Mod", 8.00},
+                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 6.00},
+                    {"Arum Spinosa - Rivet", "Schéma", 4.00},
+                    {"Matrice Animus Orokin", "Ressource", 1.00, 3},
+                    {"Neo B7", "Relique", 1.00}
                 },
                 ["B"] = {
-                    {"Virémie Résiduelle", "Ressource", 22.22},
-                    {"Continuité du Necramech", "Mod", 11.11},
-                    {
-                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
-                        "Schéma", 5.56
-                    }, {"Matrice Balistique Orokin", "Ressource", 2.78, 3},
-                    {"Neo I2", "Relique", 2.78},
-                    {"Théorème de Contagion", "Ressource", 27.78},
-                    {"Onde Sismique du Necramech", "Mod", 11.11},
+                    {"Virémie Résiduelle", "Ressource", 30.00},
+                    {"Continuité du Necramech", "Mod", 15.00},
+                    {"Arum Spinosa - Garde", "Schéma", 7.50},
+                    {"Matrice Balistique Orokin", "Ressource", 3.75, 3},
+                    {"Neo B7", "Relique", 3.75},
+                    {"Théorème de Contagion", "Ressource", 20.00},
+                    {"Onde Sismique du Necramech", "Mod", 8.00},
                     {
                         "Culasse d'Arme de Necramech Endommagé", "Ressource",
-                        8.33
-                    },
-                    {
-                        "{{Weapon|Arum Spinosa|Arum Spinosa - Rivet}}",
-                        "Schéma", 5.56
-                    }, {"Matrice Animus Orokin", "Ressource", 1.39, 3},
-                    {"Axi T4", "Relique", 1.39}
+                        6.00
+                    }, {"Arum Spinosa - Rivet", "Schéma", 4.00},
+                    {"Matrice Animus Orokin", "Ressource", 1.00, 3},
+                    {"Neo N15", "Relique", 1.00}
                 },
                 ["C"] = {
-                    {"Théorème d'Infection", "Ressource", 22.22},
-                    {"Force du Necramech", "Mod", 11.11},
-                    {
-                        "{{Weapon|Arum Spinosa|Arum Spinosa - Garde}}",
-                        "Schéma", 5.56
-                    }, {"Matrice Balistique Orokin", "Ressource", 2.78, 3},
-                    {"Neo N13", "Relique", 2.78},
-                    {"Théorème de Contagion", "Ressource", 27.78},
-                    {"Onde Sismique du Necramech", "Mod", 11.11},
-                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 8.33},
-                    {
-                        "{{Weapon|Arum Spinosa|Arum Spinosa - Rivet}}",
-                        "Schéma", 5.56
-                    }, {"Matrice Animus Orokin", "Ressource", 1.39, 3},
-                    {"Axi C5", "Relique", 1.39}
+                    {"Théorème d'Infection", "Ressource", 30.00},
+                    {"Force du Necramech", "Mod", 15.00},
+                    {"Arum Spinosa - Garde", "Schéma", 7.50},
+                    {"Matrice Balistique Orokin", "Ressource", 3.75, 3},
+                    {"Neo N13", "Relique", 3.75},
+                    {"Théorème de Contagion", "Ressource", 20.00},
+                    {"Onde Sismique du Necramech", "Mod", 8.00},
+                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 6.00},
+                    {"Arum Spinosa - Rivet", "Schéma", 4.00},
+                    {"Matrice Animus Orokin", "Ressource", 1.00, 3},
+                    {"Axi O5", "Relique", 1.00}
                 }
             }
         }, {
@@ -5697,7 +6136,7 @@ local DropData = {
                     {"Furie du Necramech", "Mod", 25.00},
                     {"{{Weapon|Sporothrix}}", "Schéma", 12.50},
                     {"Matrice d'Orientation Orokin", "Ressource", 6.25, 4},
-                    {"Meso N10", "Relique", 6.25}
+                    {"Meso D6", "Relique", 6.25}
                 },
                 ["B"] = {
                     {"Brume Résiduelle", "Ressource", 50.00},
@@ -5711,7 +6150,7 @@ local DropData = {
                     {"Furie du Necramech", "Mod", 25.00},
                     {"{{Weapon|Sporothrix}}", "Schéma", 12.50},
                     {"Matrice d'Orientation Orokin", "Ressource", 6.25, 4},
-                    {"Meso E4", "Relique", 6.25}
+                    {"Meso T4", "Relique", 6.25}
                 }
             }
         }, {
@@ -5722,46 +6161,40 @@ local DropData = {
             ShortName = "50-60",
             Rewards = {
                 ["A"] = {
-                    {"Furoncles Résiduels", "Ressource", 16.67},
-                    {"Furie du Necramech", "Mod", 8.33},
-                    {"{{Weapon|Sporothrix}}", "Schéma", 4.17},
-                    {"Matrice d'Orientation Orokin", "Ressource", 2.08, 4},
-                    {"Meso N10", "Relique", 2.08},
-                    {"Choc Résiduel", "Ressource", 33.33},
-                    {"Allonge du Necramech", "Mod", 16.67},
-                    {
-                        "{{Weapon|Sporothrix|Sporothrix - Canon}}", "Schéma",
-                        8.33
-                    }, {"Matrice Balistique Orokin", "Ressource", 4.17, 4},
-                    {"Neo D2", "Relique", 2.08}, {"Neo N13", "Relique", 2.08}
+                    {"Furoncles Résiduels", "Ressource", 31.25},
+                    {"Furie du Necramech", "Mod", 15.63},
+                    {"{{Weapon|Sporothrix}}", "Schéma", 7.81},
+                    {"Matrice d'Orientation Orokin", "Ressource", 3.91, 4},
+                    {"Meso D6", "Relique", 3.91},
+                    {"Choc Résiduel", "Ressource", 18.75},
+                    {"Allonge du Necramech", "Mod", 9.38},
+                    {"Sporothrix - Canon", "Schéma", 4.69},
+                    {"Matrice Balistique Orokin", "Ressource", 2.34, 4},
+                    {"Neo N15", "Relique", 1.17}, {"Neo N13", "Relique", 1.17}
                 },
                 ["B"] = {
-                    {"Brume Résiduelle", "Ressource", 16.67},
-                    {"Furie du Necramech", "Mod", 8.33},
-                    {"{{Weapon|Sporothrix}}", "Schéma", 4.17},
-                    {"Matrice d'Orientation Orokin", "Ressource", 2.08, 4},
-                    {"Meso C6", "Relique", 2.08}, {"Endo", "Endo", 33.33, 2500},
-                    {"Virémie Résiduelle", "Ressource", 16.67},
-                    {"Hydrauliques du Necramech", "Mod", 8.33},
-                    {
-                        "{{Weapon|Sporothrix|Sporothrix - Culasse}}", "Schéma",
-                        4.17
-                    }, {"Matrice Balistique Orokin", "Ressource", 2.08, 4},
-                    {"Neo I2", "Relique", 2.08}
+                    {"Brume Résiduelle", "Ressource", 31.25},
+                    {"Furie du Necramech", "Mod", 15.63},
+                    {"{{Weapon|Sporothrix}}", "Schéma", 7.81},
+                    {"Matrice d'Orientation Orokin", "Ressource", 3.91, 4},
+                    {"Meso C6", "Relique", 3.91},
+                    {"Virémie Résiduelle", "Ressource", 18.75},
+                    {"Hydrauliques du Necramech", "Mod", 9.38},
+                    {"Sporothrix - Culasse", "Schéma", 4.69},
+                    {"Matrice Balistique Orokin", "Ressource", 2.34, 4},
+                    {"Neo N14", "Relique", 2.34}
                 },
                 ["C"] = {
-                    {"Théorème Émollient", "Ressource", 16.67},
-                    {"Furie du Necramech", "Mod", 8.33},
-                    {"{{Weapon|Sporothrix}}", "Schéma", 4.17},
-                    {"Matrice d'Orientation Orokin", "Ressource", 2.08, 4},
-                    {"Meso E4", "Relique", 2.08},
-                    {"Théorème d'Infection", "Ressource", 33.33},
-                    {"Friction du Necramech", "Mod", 16.67},
-                    {
-                        "{{Weapon|Sporothrix|Sporothrix - Crosse}}", "Schéma",
-                        8.33
-                    }, {"Matrice Balistique Orokin", "Ressource", 4.17, 4},
-                    {"Neo N13", "Relique", 4.17}
+                    {"Théorème Émollient", "Ressource", 31.25},
+                    {"Furie du Necramech", "Mod", 15.63},
+                    {"{{Weapon|Sporothrix}}", "Schéma", 7.81},
+                    {"Matrice d'Orientation Orokin", "Ressource", 3.91, 4},
+                    {"Meso T4", "Relique", 3.91},
+                    {"Théorème d'Infection", "Ressource", 18.75},
+                    {"Friction du Necramech", "Mod", 9.38},
+                    {"Sporothrix - Crosse", "Schéma", 4.69},
+                    {"Matrice Balistique Orokin", "Ressource", 2.34, 4},
+                    {"Neo N13", "Relique", 2.34}
                 }
             }
         }, {
@@ -5772,63 +6205,57 @@ local DropData = {
             ShortName = "50-60",
             Rewards = {
                 ["A"] = {
-                    {"Furoncles Résiduels", "Ressource", 9.09},
-                    {"Furie du Necramech", "Mod", 4.55},
-                    {"{{Weapon|Sporothrix}}", "Schéma", 2.27},
-                    {"Matrice d'Orientation Orokin", "Ressource", 1.14, 4},
-                    {"Meso N10", "Relique", 1.14},
-                    {"Choc Résiduel", "Ressource", 18.18},
-                    {"Allonge du Necramech", "Mod", 9.09},
-                    {
-                        "{{Weapon|Sporothrix|Sporothrix - Canon}}", "Schéma",
-                        4.55
-                    }, {"Matrice Balistique Orokin", "Ressource", 2.27, 4},
-                    {"Neo D2", "Relique", 1.14}, {"Neo N13", "Relique", 1.14},
-                    {"Théorème de Contagion", "Ressource", 22.73},
-                    {"Rationalisation du Necramech", "Mod", 9.09},
-                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 6.82},
-                    {"Matrice Animus Orokin", "Ressource", 3.41, 4},
-                    {"Axi B3", "Relique", 3.41}
+                    {"Furoncles Résiduels", "Ressource", 25.00},
+                    {"Furie du Necramech", "Mod", 12.50},
+                    {"{{Weapon|Sporothrix}}", "Schéma", 6.25},
+                    {"Matrice d'Orientation Orokin", "Ressource", 3.13, 4},
+                    {"Meso D6", "Relique", 3.13},
+                    {"Choc Résiduel", "Ressource", 15.00},
+                    {"Allonge du Necramech", "Mod", 7.50},
+                    {"Sporothrix - Canon", "Schéma", 3.75},
+                    {"Matrice Balistique Orokin", "Ressource", 1.88, 4},
+                    {"Neo N15", "Relique", 0.94}, {"Neo N13", "Relique", 0.94},
+                    {"Théorème de Contagion", "Ressource", 10.00},
+                    {"Rationalisation du Necramech", "Mod", 4.00},
+                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 3.00},
+                    {"Matrice Animus Orokin", "Ressource", 1.50, 4},
+                    {"Axi A13", "Relique", 1.50}
                 },
                 ["B"] = {
-                    {"Brume Résiduelle", "Ressource", 9.09},
-                    {"Furie du Necramech", "Mod", 4.55},
-                    {"{{Weapon|Sporothrix}}", "Schéma", 2.27},
-                    {"Matrice d'Orientation Orokin", "Ressource", 1.14, 4},
-                    {"Meso C6", "Relique", 1.14}, {"Endo", "Endo", 18.18, 2500},
-                    {"Virémie Résiduelle", "Ressource", 9.09},
-                    {"Hydrauliques du Necramech", "Mod", 4.55},
-                    {
-                        "{{Weapon|Sporothrix|Sporothrix - Culasse}}", "Schéma",
-                        2.27
-                    }, {"Matrice Balistique Orokin", "Ressource", 1.14, 4},
-                    {"Neo I2", "Relique", 1.14},
-                    {"Théorème de Contagion", "Ressource", 22.73},
-                    {"Rationalisation du Necramech", "Mod", 9.09},
+                    {"Brume Résiduelle", "Ressource", 25.00},
+                    {"Furie du Necramech", "Mod", 12.50},
+                    {"{{Weapon|Sporothrix}}", "Schéma", 6.25},
+                    {"Matrice d'Orientation Orokin", "Ressource", 3.13, 4},
+                    {"Meso C6", "Relique", 3.13},
+                    {"Virémie Résiduelle", "Ressource", 15.00},
+                    {"Hydrauliques du Necramech", "Mod", 7.50},
+                    {"Sporothrix - Culasse", "Schéma", 3.75},
+                    {"Matrice Balistique Orokin", "Ressource", 1.88, 4},
+                    {"Neo N14", "Relique", 1.88},
+                    {"Théorème de Contagion", "Ressource", 10.00},
+                    {"Rationalisation du Necramech", "Mod", 4.00},
                     {
                         "Culasse d'Arme de Necramech Endommagé", "Ressource",
-                        6.82
-                    }, {"Matrice Animus Orokin", "Ressource", 3.41, 4},
-                    {"Axi T4", "Relique", 3.41}
+                        3.00
+                    }, {"Matrice Animus Orokin", "Ressource", 1.50, 4},
+                    {"Axi W2", "Relique", 1.50}
                 },
                 ["C"] = {
-                    {"Théorème Émollient", "Ressource", 9.09},
-                    {"Furie du Necramech", "Mod", 4.55},
-                    {"{{Weapon|Sporothrix}}", "Schéma", 2.27},
-                    {"Matrice d'Orientation Orokin", "Ressource", 1.14, 4},
-                    {"Meso E4", "Relique", 1.14},
-                    {"Théorème d'Infection", "Ressource", 18.18},
-                    {"Friction du Necramech", "Mod", 9.09},
-                    {
-                        "{{Weapon|Sporothrix|Sporothrix - Crosse}}", "Schéma",
-                        4.55
-                    }, {"Matrice Balistique Orokin", "Ressource", 2.27, 4},
-                    {"Neo N13", "Relique", 2.27},
-                    {"Théorème de Contagion", "Ressource", 22.73},
-                    {"Rationalisation du Necramech", "Mod", 9.09},
-                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 6.82},
-                    {"Matrice Animus Orokin", "Ressource", 3.41, 4},
-                    {"Axi C5", "Relique", 3.41}
+                    {"Théorème Émollient", "Ressource", 25.00},
+                    {"Furie du Necramech", "Mod", 12.50},
+                    {"{{Weapon|Sporothrix}}", "Schéma", 6.25},
+                    {"Matrice d'Orientation Orokin", "Ressource", 3.13, 4},
+                    {"Meso T4", "Relique", 3.13},
+                    {"Théorème d'Infection", "Ressource", 15.00},
+                    {"Friction du Necramech", "Mod", 7.50},
+                    {"Sporothrix - Crosse", "Schéma", 3.75},
+                    {"Matrice Balistique Orokin", "Ressource", 1.88, 4},
+                    {"Neo N13", "Relique", 1.88},
+                    {"Théorème de Contagion", "Ressource", 10.00},
+                    {"Rationalisation du Necramech", "Mod", 4.00},
+                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 3.00},
+                    {"Matrice Animus Orokin", "Ressource", 1.50, 4},
+                    {"Axi C6", "Relique", 1.50}
                 }
             }
         }, {
@@ -5839,49 +6266,42 @@ local DropData = {
             ShortName = "50-60",
             Rewards = {
                 ["A"] = {
-                    {"Choc Résiduel", "Ressource", 22.22},
-                    {"Allonge du Necramech", "Mod", 11.11},
-                    {
-                        "{{Weapon|Sporothrix|Sporothrix - Canon}}", "Schéma",
-                        5.56
-                    }, {"Matrice Balistique Orokin", "Ressource", 2.78, 4},
-                    {"Neo D2", "Relique", 1.39}, {"Neo N13", "Relique", 1.39},
-                    {"Théorème de Contagion", "Ressource", 27.78},
-                    {"Rationalisation du Necramech", "Mod", 11.11},
-                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 8.33},
-                    {"Matrice Animus Orokin", "Ressource", 4.17, 4},
-                    {"Axi B3", "Relique", 4.17}
+                    {"Choc Résiduel", "Ressource", 30.00},
+                    {"Allonge du Necramech", "Mod", 15.00},
+                    {"Sporothrix - Canon", "Schéma", 7.50},
+                    {"Matrice Balistique Orokin", "Ressource", 3.75, 4},
+                    {"Neo N15", "Relique", 1.88}, {"Neo N13", "Relique", 1.88},
+                    {"Théorème de Contagion", "Ressource", 20.00},
+                    {"Rationalisation du Necramech", "Mod", 8.00},
+                    {"Canon d'Arme de Necramech Endommagé", "Ressource", 6.00},
+                    {"Matrice Animus Orokin", "Ressource", 3.00, 4},
+                    {"Axi A13", "Relique", 3.00}
                 },
                 ["B"] = {
-                    {"Endo", "Endo", 22.22, 2500},
-                    {"Virémie Résiduelle", "Ressource", 11.11},
-                    {"Hydrauliques du Necramech", "Mod", 5.56},
-                    {
-                        "{{Weapon|Sporothrix|Sporothrix - Culasse}}", "Schéma",
-                        2.78
-                    }, {"Matrice Balistique Orokin", "Ressource", 1.39, 4},
-                    {"Neo I2", "Relique", 1.39},
-                    {"Théorème de Contagion", "Ressource", 27.78},
-                    {"Rationalisation du Necramech", "Mod", 11.11},
+                    {"Virémie Résiduelle", "Ressource", 30.00},
+                    {"Hydrauliques du Necramech", "Mod", 15.00},
+                    {"Sporothrix - Culasse", "Schéma", 7.50},
+                    {"Matrice Balistique Orokin", "Ressource", 3.75, 4},
+                    {"Neo N14", "Relique", 3.75},
+                    {"Théorème de Contagion", "Ressource", 20.00},
+                    {"Rationalisation du Necramech", "Mod", 8.00},
                     {
                         "Culasse d'Arme de Necramech Endommagé", "Ressource",
-                        8.33
-                    }, {"Matrice Animus Orokin", "Ressource", 4.17, 4},
-                    {"Axi T4", "Relique", 4.17}
+                        6.00
+                    }, {"Matrice Animus Orokin", "Ressource", 3.00, 4},
+                    {"Axi W2", "Relique", 3.00}
                 },
                 ["C"] = {
-                    {"Théorème d'Infection", "Ressource", 22.22},
-                    {"Friction du Necramech", "Mod", 11.11},
-                    {
-                        "{{Weapon|Sporothrix|Sporothrix - Crosse}}", "Schéma",
-                        5.56
-                    }, {"Matrice Balistique Orokin", "Ressource", 2.78, 4},
-                    {"Neo N13", "Relique", 2.78},
-                    {"Théorème de Contagion", "Ressource", 27.78},
-                    {"Rationalisation du Necramech", "Mod", 11.11},
-                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 8.33},
-                    {"Matrice Animus Orokin", "Ressource", 4.17, 4},
-                    {"Axi C5", "Relique", 4.17}
+                    {"Théorème d'Infection", "Ressource", 30.00},
+                    {"Friction du Necramech", "Mod", 15.00},
+                    {"Sporothrix - Crosse", "Schéma", 7.50},
+                    {"Matrice Balistique Orokin", "Ressource", 3.75, 4},
+                    {"Neo N13", "Relique", 3.75},
+                    {"Théorème de Contagion", "Ressource", 20.00},
+                    {"Rationalisation du Necramech", "Mod", 8.00},
+                    {"Crosse d'Arme de Necramech Endommagé", "Ressource", 6.00},
+                    {"Matrice Animus Orokin", "Ressource", 3.00, 4},
+                    {"Axi C6", "Relique", 3.00}
                 }
             }
         }, {
@@ -5914,8 +6334,8 @@ local DropData = {
                     {"Tempo Royal", "Mod", 100},
                     {"Transformateur de Morphic Accru", "Mod", 100},
                     {"Craque-Cibles Accru", "Mod", 100},
-                    {"Primed Rifle Ammo Mutation", "Mod", 100},
-                    {"Primed Shotgun Ammo Mutation", "Mod", 100},
+                    {"Mutation de Fusil Accrue", "Mod", 100},
+                    {"Mutation de Fusil à Pompe Accrue", "Mod", 100},
                     {"Fléau des Infestés Accru", "Mod", 100},
                     {"Fléau des Corpus Accru", "Mod", 100},
                     {"Fléau des Grineer Accru", "Mod", 100},
@@ -5923,7 +6343,8 @@ local DropData = {
                     {"Collision Imminente", "Mod", 100},
                     {"Full-Contact", "Mod", 100}, {"Force de Choc", "Mod", 100},
                     {"Rabat-Joie", "Mod", 100},
-                    {"Sweeping Serration", "Mod", 100}, {"Maim", "Mod", 100},
+                    {"Dentelure Balayante", "Mod", 100},
+                    {"Mutilation", "Mod", 100},
                     {"Point de Pression Accru", "Mod", 100},
                     {"Balles Cryogéniques Accrues", "Mod", 100},
                     {"Régénération Accrue", "Mod", 100},
@@ -5939,7 +6360,8 @@ local DropData = {
                     {"Châtie-Corpus Accru", "Mod", 100},
                     {"Châtie-Corrompu Accru", "Mod", 100},
                     {"Châtie-Grineer Accru", "Mod", 100},
-                    {"Châtie-Infestés Accru", "Mod", 100}
+                    {"Châtie-Infestés Accru", "Mod", 100},
+                    {"Marque de la Bête", "Mod", 100}
                 }
             }
         }, {
@@ -5967,71 +6389,73 @@ local DropData = {
             ShortName = "900 jours",
             Rewards = {[""] = {{"Bien Chaussé Accru", "Mod", 100}}}
         }, {
-            Type = "Empyrean",
+            Type = "Empyrée",
             Tier = "Terre",
             Alias = "EarthProxima",
             Rewards = {
                 ["A"] = {
-                    {"Dirac", "Ressource", 20, 100},
-                    {"Dirac", "Ressource", 10, 200},
-                    {"Moteur Lavan MK I", "Schéma", 4},
-                    {"Réacteur Lavan MK I", "Schéma", 4},
-                    {"Réseau de Boucliers Lavan MK I", "Schéma", 4},
-                    {"Moteur Vidar MK I", "Schéma", 4},
-                    {"Réacteur Vidar MK I", "Schéma", 4},
-                    {"Réseau de Boucliers Vidar MK I", "Schéma", 4},
-                    {"Lith C4", "Relique", 7.75}, {"Lith S8", "Relique", 7.75},
-                    {"Lith L2", "Relique", 7.75}, {"Lith M4", "Relique", 7.75},
-                    {"Lith W2", "Relique", 7.75}, {"Lith D1", "Relique", 7.25}
+                    {"Dirac", "Ressource", 20.00, 100},
+                    {"Dirac", "Ressource", 10.00, 200},
+                    {"Brisure Riven", "Ressource", 1.00, 2},
+                    {"Moteur Lavan MK I", "Schéma", 8.00},
+                    {"Réacteur Lavan MK I", "Schéma", 8.00},
+                    {"Réseau de Boucliers Lavan MK I", "Schéma", 8.00},
+                    {"Moteur Vidar MK I", "Schéma", 8.00},
+                    {"Réacteur Vidar MK I", "Schéma", 8.00},
+                    {"Réseau de Boucliers Vidar MK I", "Schéma", 8.00},
+                    {"Lith D4", "Relique", 3.00}, {"Lith B8", "Relique", 3.00},
+                    {"Lith G3", "Relique", 3.00}, {"Lith P5", "Relique", 3.00},
+                    {"Lith T5", "Relique", 3.00}, {"Lith I1", "Relique", 3.00},
+                    {"Lith T4", "Relique", 3.00}
                 }
             }
         }, {
-            Type = "Empyrean",
+            Type = "Empyrée",
             Tier = "Saturne",
             Alias = "SaturnProxima",
             Rewards = {
                 ["A"] = {
-                    {"Dirac", "Ressource", 20, 150},
-                    {"Dirac", "Ressource", 10, 300},
-                    {"Brisure Riven", "Ressource", 5, 2},
-                    {"Forma (Schéma)", "Schéma", 2.5},
-                    {"Moteur Lavan MK II", "Schéma", 4},
-                    {"Réacteur Lavan MK II", "Schéma", 4},
-                    {"Réseau de Boucliers Lavan MK II", "Schéma", 4},
-                    {"Moteur Vidar MK II", "Schéma", 4},
-                    {"Réacteur Vidar MK II", "Schéma", 4},
-                    {"Réseau de Boucliers Vidar MK II", "Schéma", 4},
-                    {"Meso R2", "Relique", 5.75}, {"Meso C4", "Relique", 5.75},
-                    {"Meso L1", "Relique", 5.75}, {"Meso B4", "Relique", 5.75},
-                    {"Meso D4", "Relique", 5.75}, {"Meso E3", "Relique", 5.75},
-                    {"Meso N9", "Relique", 6.00}
+                    {"Dirac", "Ressource", 20.00, 150},
+                    {"Dirac", "Ressource", 10.00, 300},
+                    {"Brisure Riven", "Ressource", 5.50, 2},
+                    {"Forma (Schéma)", "Schéma", 2.50},
+                    {"Moteur Lavan MK II", "Schéma", 8.00},
+                    {"Réacteur Lavan MK II", "Schéma", 8.00},
+                    {"Réseau de Boucliers Lavan MK II", "Schéma", 8.00},
+                    {"Moteur Vidar MK II", "Schéma", 8.00},
+                    {"Réacteur Vidar MK II", "Schéma", 8.00},
+                    {"Réseau de Boucliers Vidar MK II", "Schéma", 8.00},
+                    {"Meso C6", "Relique", 2.00}, {"Meso P2", "Relique", 2.00},
+                    {"Meso K3", "Relique", 2.00}, {"Meso P4", "Relique", 2.00},
+                    {"Meso D6", "Relique", 2.00}, {"Meso I1", "Relique", 2.00},
+                    {"Meso T4", "Relique", 2.00}
                 }
             }
         }, {
-            Type = "Empyrean",
+            Type = "Empyrée",
             Tier = "Voile",
             Alias = "VeilProxima",
             Rewards = {
                 ["A"] = {
-                    {"Drone de Réparation Accélérée", "Ressource", 0.25},
-                    {"Dirac", "Ressource", 20, 400},
-                    {"Dirac", "Ressource", 10, 1000},
-                    {"Brisure Riven", "Ressource", 5, 3},
-                    {"Forma (Schéma)", "Schéma", 2.5},
-                    {"Moteur Lavan MK III", "Schéma", 4},
-                    {"Réacteur Lavan MK III", "Schéma", 4},
-                    {"Réseau de Boucliers Lavan MK III", "Schéma", 4},
-                    {"Moteur Vidar MK III", "Schéma", 4},
-                    {"Réacteur Vidar MK III", "Schéma", 4},
-                    {"Réseau de Boucliers Vidar MK III", "Schéma", 4},
-                    {"Neo T2", "Relique", 5.50}, {"Neo A3", "Relique", 5.50},
-                    {"Neo Z5", "Relique", 5.50}, {"Neo M2", "Relique", 5.50},
-                    {"Neo I1", "Relique", 5.50}, {"Neo R3", "Relique", 5.50},
-                    {"Neo G2", "Relique", 5.25}
+                    {"Drone de Réparation Accélérée", "Ressource", 0.50},
+                    {"Dirac", "Ressource", 20.00, 400},
+                    {"Dirac", "Ressource", 10.00, 1000},
+                    {"Brisure Riven", "Ressource", 5.00, 3},
+                    {"Forma (Schéma)", "Schéma", 2.50},
+                    {"Moteur Lavan MK III", "Schéma", 8.00},
+                    {"Réacteur Lavan MK III", "Schéma", 8.00},
+                    {"Réseau de Boucliers Lavan MK III", "Schéma", 8.00},
+                    {"Moteur Vidar MK III", "Schéma", 8.00},
+                    {"Réacteur Vidar MK III", "Schéma", 8.00},
+                    {"Réseau de Boucliers Vidar MK III", "Schéma", 8.00},
+                    {"Neo T2", "Relique", 2.00}, {"Neo N14", "Relique", 2.00},
+                    {"Neo N13", "Relique", 2.00}, {"Neo Z7", "Relique", 2.00},
+                    {"Neo P2", "Relique", 2.00}, {"Neo B7", "Relique", 2.00},
+                    {"Neo N15", "Relique", 2.00}
                 }
             }
         }, {
-            Type = "Empyrean",
+            Type = "Empyrée",
             Tier = "VeilCaches",
             Alias = "VeilProximaCaches",
             Rewards = {
@@ -6080,7 +6504,7 @@ local DropData = {
             }
         }
     },
-    ["Syndicates"] = {
+    ["Syndicats"] = {
         {
             Name = "Arbitres d'Hexis",
             Offerings = {
@@ -6218,7 +6642,7 @@ local DropData = {
                 {"Guerre Éternelle", "Mod", 25000},
                 {"Paralysie Prolongée", "Mod", 25000},
                 {"Assaut Hystérique", "Mod", 25000},
-                {"Target Fixation", "Mod", 25000},
+                {"Fixation Ciblée", "Mod", 25000},
                 {"Courant-Jet", "Mod", 25000}, {"Tourbillons", "Mod", 25000},
                 {"Impact Céleste", "Mod", 25000},
                 {"Nuage Enveloppant", "Mod", 25000},
@@ -6317,7 +6741,8 @@ local DropData = {
                 {"Unité de Choc", "Mod", 25000},
                 {"Vitesse Choquante", "Mod", 25000},
                 {"Bouclier Transistor", "Mod", 25000},
-                {"Surtension", "Mod", 25000}, {"Target Fixation", "Mod", 25000},
+                {"Surtension", "Mod", 25000},
+                {"Fixation Ciblée", "Mod", 25000},
                 {"Courant-Jet", "Mod", 25000}, {"Tourbillons", "Mod", 25000},
                 {"Forge Ensanglantée", "Mod", 25000},
                 {"Protection de l'Angoisse", "Mod", 25000}
@@ -6388,7 +6813,7 @@ local DropData = {
                 {"Vague de Glace Persistante", "Mod", 25000},
                 {"Puissance Trois", "Mod", 25000},
                 {"Lien Trompeur", "Mod", 25000},
-                {"Sapping Reach", "Mod", 25000},
+                {"Atteinte Épuisante", "Mod", 25000},
                 {"Surcharge de Boucliers", "Mod", 25000},
                 {"Valse de Mesa", "Mod", 25000},
                 {"Garde Prismatique", "Mod", 25000},
@@ -6401,16 +6826,17 @@ local DropData = {
                 {"Fixation Hystérique", "Mod", 25000},
                 {"Recharge Barrier", "Mod", 25000},
                 {"Collision Cinétique", "Mod", 25000},
-                {"Loose Magazine", "Mod", 1000}, -- rank 1 Mistral
+                {"Chargeur Bricolé", "Mod", 1000}, -- rank 1 Mistral
                 {"Pleine Capacité", "Mod", 1000},
                 {"Culasse Bricolée", "Mod", 1000},
                 {"Capacité Maximale", "Mod", 1000},
-                {"Loose Chamber", "Mod", 1000},
-                {"Loaded Capacity", "Mod", 1000},
+                {"Chambre Bricolée", "Mod", 1000},
+                {"Capacité Supérieure", "Mod", 1000},
                 {"Propulseurs Aériens", "Mod", 5000},
-                {"Ruée d'Adepte", "Mod", 5000}, {"Rising Skill", "Mod", 5000},
-                {"Bond Calculé", "Mod", 5000}, {"Tempered Bound", "Mod", 5000},
-                {"No Current Leap", "Mod", 5000},
+                {"Ruée d'Adepte", "Mod", 5000},
+                {"Habileté Montante", "Mod", 5000},
+                {"Bond Calculé", "Mod", 5000}, {"Saut Tempéré", "Mod", 5000},
+                {"Saut Disjoncté", "Mod", 5000},
                 {"Anticipation", "Mod", 10000},
                 {"Tornade Écarlate", "Mod", 2000},
                 {"Furie Perforante", "Mod", 2000},
@@ -6432,21 +6858,24 @@ local DropData = {
                 {"Hydre Entachée", "Mod", 2000},
                 {"Dichotomie Stellaire", "Mod", 2000},
                 {"Volute Fustigeante", "Mod", 2000},
-                {"Night Stalker", "Mod", 10000},
+                {"Stalker Nocturne", "Mod", 10000},
                 {"Grand Prédateur", "Mod", 10000},
                 {"Chasseur de Prime", "Mod", 10000},
                 {"Geste Réflexe", "Mod", 10000}, {"À Cran", "Mod", 10000},
                 {"Mains Légères", "Mod", 10000},
-                {"Overcharge Detectors", "Mod", 10000},
-                {"Meteor Munitions", "Mod", 10000},
-                {"Impaler Munitions", "Mod", 10000},
-                {"Razor Munitions", "Mod", 10000},
+                {"Détecteurs de Surcharge", "Mod", 10000},
+                {"Munitions Météores", "Mod", 10000},
+                {"Munitions Empalantes", "Mod", 10000},
+                {"Munitions Rasoirs", "Mod", 10000},
                 {"Cartouches Comètes", "Mod", 10000},
-                {"Ripper Rounds", "Mod", 10000},
-                {"Serrated Rounds", "Mod", 10000}, {"Tir Crash", "Mod", 10000},
-                {"Shred Shot", "Mod", 10000}, {"Tir Antiaérien", "Mod", 10000},
-                {"Contrepoids", "Mod", 10000}, {"Serrated Edges", "Mod", 10000},
-                {"Sharpened Blade", "Mod", 10000}, {"Regard Vif", "Mod", 10000},
+                {"Cartouches Déchirantes", "Mod", 10000},
+                {"Cartouches Dentelées", "Mod", 10000},
+                {"Tir Crash", "Mod", 10000},
+                {"Tir Déchiquetant", "Mod", 10000},
+                {"Tir Antiaérien", "Mod", 10000},
+                {"Contrepoids", "Mod", 10000},
+                {"Bordures Dentelées", "Mod", 10000},
+                {"Lame Aiguisée", "Mod", 10000}, {"Regard Vif", "Mod", 10000},
                 {"Visée Agile", "Mod", 10000}, {"Instantané", "Mod", 10000},
                 {"Reconnaissance Aérienne", "Mod", 10000},
                 {"Vue d'Ensemble", "Mod", 10000}, {"Grand Oeil", "Mod", 10000},
@@ -6463,20 +6892,23 @@ local DropData = {
                 {"Tir Glissé", "Mod", 15000},
                 {"Canon Double Amorti", "Mod", 15000},
                 {"Mitraillage Glissé", "Mod", 15000},
-                {"Martial Fury", "Mod", 15000},
-                {"Relentless Assault", "Mod", 15000},
-                {"Heartseeker", "Mod", 15000},
-                {"Impenetrable Offense", "Mod", 15000},
-                {"Sword Alone", "Mod", 15000}, {"Lie In Wait", "Mod", 15000},
-                {"Recuperate", "Mod", 25000}, -- rank 4 Hurricane
-                {"Victoire Calculée", "Mod", 25000}, {"Recover", "Mod", 30000},
-                {"Vanquished Prey", "Mod", 30000},
-                {"Momentary Pause", "Mod", 25000}, {"Prize Kill", "Mod", 25000},
-                {"Stand Ground", "Mod", 25000}, {"Quick Charge", "Mod", 25000},
-                {"Overcharged", "Mod", 25000},
+                {"Fureur Martiale", "Mod", 15000},
+                {"Assaut Implacable", "Mod", 15000},
+                {"Droit au Coeur", "Mod", 15000},
+                {"Offensive Impénétrable", "Mod", 15000},
+                {"La Voie du Sabre", "Mod", 15000},
+                {"Tireur Patient", "Mod", 15000},
+                {"Rétablissement", "Mod", 25000}, -- rank 4 Hurricane
+                {"Victoire Calculée", "Mod", 25000}, {"Repos", "Mod", 30000},
+                {"Proie Abattue", "Mod", 30000},
+                {"Pause Momentanée", "Mod", 25000},
+                {"Fierté Guerrière", "Mod", 25000},
+                {"Prise de terre", "Mod", 25000},
+                {"Charge Rapide", "Mod", 25000}, {"Surchargé", "Mod", 25000},
                 {"Pointe de Flèche à Ressort", "Mod", 30000},
-                {"Voltaic Lance", "Mod", 30000}, {"Searing Leap", "Mod", 30000},
-                {"Rime Vault", "Mod", 30000},
+                {"Lance Voltaique", "Mod", 30000},
+                {"Saut Brûlant", "Mod", 30000},
+                {"Vrille Glaciale", "Mod", 30000},
                 {"Envolée Vénéneuse", "Mod", 30000}
             }
         }, {
@@ -6515,9 +6947,27 @@ local DropData = {
                 {"Boost Nitro", "Mod", 20000},
                 {"Atterissage d'Enfer", "Mod", 20000}
             }
+        }, {
+            Name = "Entrati",
+            Offerings = {
+                {"Damzav-Vati", "Mod", 20000}, {"Zazvat-Kar", "Mod", 20000},
+                {"Bhisaj-Bal", "Mod", 20000}, {"Hata-Satya", "Mod", 20000}
+            }
+        }, {
+            Name = "Nécraloïde",
+            Offerings = {
+                {"Vitalité du Necramech", "Mod", 10000},
+                {"Ravitaillement du Necramech", "Mod", 10000},
+                {"Intensité du Necramech", "Mod", 25000},
+                {"Point de Pression du Necramech", "Mod", 25000},
+                {"Efficacité du Necramech", "Mod", 25000},
+                {"Force du Necramech", "Mod", 25000},
+                {"Friction du Necramech", "Mod", 25000},
+                {"Flux du Necramech", "Mod", 25000}
+            }
         }
     },
-    ["Enemies"] = {
+    ["Ennemis"] = {
         {
             Name = "Zealot Baptizer",
             ModChance = 20,
@@ -6616,10 +7066,10 @@ local DropData = {
                 {"Offense du Vigile", 12.5}, {"Ressources du Vigile", 12.5},
                 {"Vice du Gladiateur", 12.5}, {"Finesse du Gladiateur", 12.5},
                 {"Secrets de l'Augure", 12.5}, {"Sourcier de l'Augure", 12.5},
-                {"Kinetic Diversion", 12.5}, {"Spring-Loaded Blade", 12.5}
+                {"Détournement Cinétique", 12.5}, {"Lame à Ressorts", 12.5}
             }
         }, {
-            Name = "Balor Fomorian",
+            Name = "Fomorien Balor",
             ModChance = 100,
             Mods = {
                 {"Endo", 40, 400}, {"Cartouche Hypothermique", 5},
@@ -6641,8 +7091,8 @@ local DropData = {
             ModChance = 3,
             Mods = {
                 {"Fléchette", 25.29}, {"Redirection", 25.29},
-                {"Expulse-Infestés", 11.06}, {"Lasting Sting", 25.29},
-                {"Entaille Tornade", 1.01}, {"Relentless Combination", 11.06},
+                {"Expulse-Infestés", 11.06}, {"Piqûre Persistante", 25.29},
+                {"Entaille Tornade", 1.01}, {"Combinaison Incessante", 11.06},
                 {"Grenade Adhésive", 1.01}
             }
         }, {
@@ -6655,7 +7105,7 @@ local DropData = {
                 {"Phénix de Fer", 0.5}, {"Endo", 0.5, 80}
             }
         }, {
-            Name = "Orokin Spectator",
+            Name = "Spectateur Orokin",
             ModChance = 3,
             Mods = {
                 {"Gardien", 25.29}, {"Fuite de Réfrigérant", 0.67},
@@ -6680,7 +7130,7 @@ local DropData = {
                 {"Endo", 1.01, 80}
             }
         }, {
-            Name = "Conseiller Vay Hek Armure Terra",
+            Name = "Conseiller Vay Hek - Armure Terra",
             ModChance = 100,
             Mods = {
                 {"Vie Ensanglantée", 37.94}, {"Balles Cryogéniques", 4.42},
@@ -6693,7 +7143,7 @@ local DropData = {
             ModChance = 3,
             Mods = {
                 {"Vent du Nord", 11.06}, {"Point de Pression", 75.88},
-                {"Flux", 1.01}, {"Seismic Wave", 11.06}, {"Endo", 1.01, 80}
+                {"Flux", 1.01}, {"Onde Sismique", 11.06}, {"Endo", 1.01, 80}
             }
         }, {
             Name = "MOA",
@@ -6703,15 +7153,6 @@ local DropData = {
                 {"Canalisation d'Énergie", 1.01},
                 {"Tambour de Munitions", 25.29}, {"Vengeance", 25.29},
                 {"Endo", 25.29, 15}, {"Endo", 1.01, 80}
-            }
-        }, {
-            Name = "MOA Vapos",
-            ModChance = 3,
-            Mods = {
-                {"Tambour de Munitions", 0.75}, {"Vengeance", 0.75},
-                {"Châtie-Grineer", 0.75}, {"Vent du Nord", 0.75},
-                {"Canalisation d'Énergie", 0.03}, {"Endo", 0.75, 15},
-                {"Endo", 0.03, 80}
             }
         }, {
             Name = "Osprey Protecteur",
@@ -6725,12 +7166,12 @@ local DropData = {
             Name = "Kubrow Sauvage",
             ModChance = 3,
             Mods = {
-                {"Hunt", 0.22}, {"Stalk", 0.22}, {"Déterrement", 0.22},
-                {"Hurlement", 0.22}, {"Protection", 0.22}, {"Scavenge", 25.29},
+                {"Chasse", 0.22}, {"Traque", 0.22}, {"Déterrement", 0.22},
+                {"Hurlement", 0.22}, {"Protection", 0.22}, {"Recherche", 25.29},
                 {"Déchaînement", 0.22}, {"Férocité", 0.22},
                 {"Lien d'Armure", 3.69}, {"Lien de Vie", 3.69},
                 {"Lien de Boucliers", 3.69}, {"Compagnon Loyal", 25.29},
-                {"Déviation Précipitée", 3.69}, {"Savagery", 0.22},
+                {"Déviation Précipitée", 3.69}, {"Sauvagerie", 0.22},
                 {"Chef de Meute", 25.29}, {"Mise en Pièces", 3.69},
                 {"Morsure", 0.22}, {"Abri", 3.69}
             }
@@ -6913,7 +7354,7 @@ local DropData = {
             Mods = {
                 {"Balles Cryogéniques", 22.92}, {"Allonge", 22.92},
                 {"Impact Brûlant", 22.92}, {"Coup Mortel", 22.92},
-                {"Out Of Sight", 8.33}
+                {"Hors de Vue", 8.33}
             }
         }, {
             Name = "Kela De Thaym",
@@ -7030,7 +7471,7 @@ local DropData = {
                 }
             }
         }, {
-            Name = "Railgun MOA",
+            Name = "MOA à Canon Électrique",
             ModChance = 3,
             Mods = {
                 {"Chargeur Trafiqué", 38.72}, {"Chambre Chargée", 11.28},
@@ -7049,7 +7490,7 @@ local DropData = {
             ModChance = 3,
             Mods = {
                 {"Fléchette", 25.29}, {"Redirection", 25.29},
-                {"Expulse-Infestés", 22.11}, {"Lasting Sting", 25.29},
+                {"Expulse-Infestés", 22.11}, {"Piqûre Persistante", 25.29},
                 {"Haut Zénith", 1.01}, {"Endo", 1.01, 80}
             }
         }, {
@@ -7106,7 +7547,7 @@ local DropData = {
                 {"Endo", 2.01, 80}
             }
         }, {
-            Name = "Remech Osprey",
+            Name = "Osprey Remech",
             ModChance = 3,
             Ignore = true,
             Mods = {
@@ -7152,7 +7593,7 @@ local DropData = {
                 {"Endo", 0.67, 80}
             }
         }, {
-            Name = "Lancier Drekar",
+            Name = "Soldat Drekar",
             ModChance = 3,
             Mods = {
                 {"Prouesse de Mêlée", 18.97}, {"Toucher Choquant", 11.06},
@@ -7281,7 +7722,7 @@ local DropData = {
                 {"Endo", 37.94, 15}, {"Endo", 11.06, 50}, {"Endo", 0.67, 80}
             }
         }, {
-            Name = "Néant Shade",
+            Name = "Rejeton du Néant",
             ModChance = 3,
             Ignore = true,
             Mods = {
@@ -7290,7 +7731,7 @@ local DropData = {
                 {"Endo", 2.01, 80}
             }
         }, {
-            Name = "Néant Shade (Nauseous)",
+            Name = "Rejeton du Néant Nauséeux",
             ModChance = 3,
             Ignore = true,
             Mods = {
@@ -7432,12 +7873,12 @@ local DropData = {
             Name = "Drahk",
             ModChance = 3,
             Mods = {
-                {"Hunt", 0.22}, {"Stalk", 0.22}, {"Déterrement", 0.22},
-                {"Hurlement", 0.22}, {"Protection", 0.22}, {"Scavenge", 25.29},
+                {"Chasse", 0.22}, {"Traque", 0.22}, {"Déterrement", 0.22},
+                {"Hurlement", 0.22}, {"Protection", 0.22}, {"Recherche", 25.29},
                 {"Déchaînement", 0.22}, {"Férocité", 0.22},
                 {"Lien d'Armure", 3.69}, {"Lien de Vie", 3.69},
                 {"Lien de Boucliers", 3.69}, {"Compagnon Loyal", 25.29},
-                {"Déviation Précipitée", 3.69}, {"Savagery", 0.22},
+                {"Déviation Précipitée", 3.69}, {"Sauvagerie", 0.22},
                 {"Chef de Meute", 25.29}, {"Mise en Pièces", 3.69},
                 {"Morsure", 0.22}, {"Abri", 3.69}
             }
@@ -7494,7 +7935,7 @@ local DropData = {
                 {"Armement du Vigile", 37.94}, {"Ferveur du Vigile", 11.06},
                 {"Offense du Vigile", 0.5}, {"Ressources du Vigile", 0.5},
                 {"Poursuite du Vigile", 11.06}, {"Vigueur du Vigile", 37.94},
-                {"Taillade de Mante", 0.5}, {"Spring-Loaded Blade", 0.5}
+                {"Taillade de Mante", 0.5}, {"Lame à Ressorts", 0.5}
             }
         }, {
             Name = "Commandant Aérien",
@@ -7504,7 +7945,7 @@ local DropData = {
                 {"Ruée du Gladiateur", 37.94}, {"Vice du Gladiateur", 0.5},
                 {"Égide du Gladiateur", 37.94}, {"Finesse du Gladiateur", 0.5},
                 {"Résolution du Gladiateur", 11.06},
-                {"Attaque de faucon", 0.5}, {"Kinetic Diversion", 0.5}
+                {"Attaque de faucon", 0.5}, {"Détournement Cinétique", 0.5}
             }
         }, {
             Name = "Commandante de Reconnaissance",
@@ -7516,7 +7957,7 @@ local DropData = {
                 {"Flèche Virevoltante", 0.5}, {"Cible Acquise", 0.5}
             }
         }, {
-            Name = "Tusk Command Dargyn",
+            Name = "Commandant Dargyn Ivoire",
             ModChance = 12.5,
             Mods = {
                 {"Redirection de Système", 2.01},
@@ -7620,16 +8061,6 @@ local DropData = {
                 {"Vitalité Améliorée", 18.97}, {"Vaporisation", 18.97},
                 {"Autodestruction", 1.01}, {"Endo", 18.97, 15},
                 {"Endo", 5.53, 50}, {"Endo", 1.01, 80}
-            }
-        }, {
-            Name = "Vapos Fusion Moa",
-            ModChance = 3,
-            Mods = {
-                {"Vaporisation", 18.97}, {"Vitalité Améliorée", 18.97},
-                {"Astuce du Voleur", 18.97}, {"Endo", 18.97, 15},
-                {"Course", 5.53}, {"Châtie-Corpus", 5.53},
-                {"Antitoxine", 5.53}, {"Endo", 5.53, 50}, {"Endo", 1.01, 80},
-                {"Autodestruction", 1.01}
             }
         }, {
             Name = "Technicien Corpus",
@@ -7777,7 +8208,7 @@ local DropData = {
                 {"Endo", 25.29, 15}, {"Endo", 1.01, 80}
             }
         }, {
-            Name = "Teralyst Eidolon",
+            Name = "Teralyste Eidolon",
             ModChance = 100,
             Mods = {
                 {"Inertie Létale", 22.22}, {"Accélération Fatale", 22.22},
@@ -7786,22 +8217,22 @@ local DropData = {
                 {"Full-Contact", 8.33}
             }
         }, {
-            Name = "Gantulyst Eidolon",
+            Name = "Gantulyste Eidolon",
             ModChance = 100,
             Mods = {
                 {"Agonie Perpétuelle", 32.21}, {"Supplice Persistant", 32.21},
                 {"Souffrances Continues", 32.21}, {"Frappe Vrillée", 0.84},
-                {"Perceur", 0.84}, {"Piercing Caliber", 0.84},
+                {"Perceur", 0.84}, {"Calibre Pénétrant", 0.84},
                 {"Faiseur de Brèche", 0.84}
             }
         }, {
-            Name = "Hydrolyst Eidolon",
+            Name = "Hydrolyste Eidolon",
             ModChance = 100,
             Mods = {
                 {"Excité du Canon", 22.22}, {"Pistolero", 22.22},
                 {"Détente Rapide", 22.22}, {"Rabat-Joie", 8.33},
-                {"Maim", 8.33}, {"Fusillade de Crocs", 8.33},
-                {"Sweeping Serration", 8.33}
+                {"Mutilation", 8.33}, {"Fusillade de Crocs", 8.33},
+                {"Dentelure Balayante", 8.33}
             }
         }, {
             Name = "Bourreau Harkonar",
@@ -7810,7 +8241,7 @@ local DropData = {
                 {"Endo", 75.88, 15}, {"Endo", 22.11, 50}, {"Endo", 2.01, 80}
             }
         }, {
-            Name = "Battalyst (Decaying)",
+            Name = "Battalyste (Pourrissant)",
             ModChance = 25,
             Ignore = true,
             Mods = {
@@ -7820,7 +8251,7 @@ local DropData = {
                 {"Mitraillage Glissé", 1.67}, {"Tir Glissé", 1.67}
             }
         }, {
-            Name = "Conculyst (Decaying)",
+            Name = "Conculyste (Pourrissant)",
             ModChance = 15,
             Ignore = true,
             Mods = {
@@ -7858,12 +8289,12 @@ local DropData = {
             Name = "Artilleuse Lourde Corrompue",
             ModChance = 3,
             Mods = {
-                {"Pièces de Rechange", 11.06}, {"Intruder", 75.88},
+                {"Pièces de Rechange", 11.06}, {"Intrus", 75.88},
                 {"Tourbillon", 0.67}, {"Branche Battante", 0.67},
                 {"Endo", 11.73, 50}, {"Endo", 0.67, 80}
             }
         }, {
-            Name = "Orokin Drone",
+            Name = "Drone Orokin",
             ModChance = 3,
             Mods = {
                 {"Gardien", 25.29}, {"Fuite de Réfrigérant", 0.67},
@@ -7941,12 +8372,12 @@ local DropData = {
                 {"Endo", 2.01, 80}
             }
         }, {
-            Name = "MOA-Mutaliste Gluant",
+            Name = "MOA Mutaliste Gluant",
             ModChance = 3,
             Mods = {
                 {"Fléchette", 25.29}, {"Redirection", 25.29},
-                {"Expulse-Infestés", 11.06}, {"Lasting Sting", 25.29},
-                {"Entaille Tornade", 1.01}, {"Relentless Combination", 11.06},
+                {"Expulse-Infestés", 11.06}, {"Piqûre Persistante", 25.29},
+                {"Entaille Tornade", 1.01}, {"Combinaison Incessante", 11.06},
                 {"Grenade Adhésive", 1.01}
             }
         }, {
@@ -7976,7 +8407,7 @@ local DropData = {
                 {"Endo", 15.18, 15}, {"Endo", 7.37, 50}
             }
         }, {
-            Name = "Jordas Golem",
+            Name = "Golem Jordas",
             ModChance = 100,
             Mods = {
                 {"Point de Pression", 37.94}, {"Rationalisation", 2.01},
@@ -8045,8 +8476,8 @@ local DropData = {
             Name = "Hyekka",
             ModChance = 20,
             Mods = {
-                {"Griffes Aiguisées", 45.83}, {"Swipe", 45.83},
-                {"Charme", 4.17}, {"Reflect", 4.17}
+                {"Griffes Aiguisées", 45.83}, {"Balayage", 45.83},
+                {"Charme", 4.17}, {"Reflet", 4.17}
             }
         }, {
             Name = "Éviscérateur",
@@ -8067,6 +8498,24 @@ local DropData = {
                 {"Transformateur de Morphic", 2.01}
             }
         }, {
+            Name = "Éviscérateur Gyre",
+            ModChance = 5,
+            Mods = {
+                {"Impact Soudain", 25.29}, {"Magasin Profond", 25.29},
+                {"Placage d'Argon", 25.29}, {"Acier Flamboyant", 7.37},
+                {"Cartouches à Combustion", 7.37},
+                {"Défenses Supérieures", 7.37}, {"Mesure de Baliste", 2.01}
+            }
+        }, {
+            Name = "Suppresseur Gyre",
+            ModChance = 5,
+            Mods = {
+                {"Impact Soudain", 25.29}, {"Magasin Profond", 25.29},
+                {"Placage d'Argon", 25.29}, {"Acier Flamboyant", 7.37},
+                {"Cartouches à Combustion", 7.37},
+                {"Défenses Supérieures", 7.37}, {"Mesure de Baliste", 2.01}
+            }
+        }, {
             Name = "Suppresseur Exo",
             ModChance = 5,
             Mods = {
@@ -8083,78 +8532,59 @@ local DropData = {
                 {"Lame Galvanisée", 7.37}, {"Concentration Résolue", 7.37},
                 {"Canon Électrifié", 7.37}, {"Efficacité Mortelle", 2.01}
             }
-        },
-        { Name = "Coutelas Pillard Exo",
-          ModChance = 5,
-          Mods = {
-            {"Lame Tempérée",37.94},
-            {"Inversion d'Énergie",37.94},
-            {"Lame Galvanisée",7.37},
-            {"Concentration Résolue",7.37},
-            {"Canon Électrifié",7.37},
-            {"Efficacité Mortelle",2.01},
-          },
-        },
-        { Name = "Éviscérateur Pillard Exo",
-          ModChance = 5,
-          Mods = {
-            {"Lame Tempérée",37.94},
-            {"Inversion d'Énergie",37.94},
-            {"Lame Galvanisée",7.37},
-            {"Concentration Résolue",7.37},
-            {"Canon Électrifié",7.37},
-            {"Efficacité Mortelle",2.01},
-          },
-        },
-        { Name = "Massacreur Gyre",
-          ModChance = 5,
-          Mods = {
-            {"Inversion d'Énergie",79.82},
-            {"Piqûre Toxique",5.26},
-            {"Chargeur Venimeux",5.26},
-            {"Concentration Résolue",5.26},
-            {"Cible Marquée",1.75},
-            {"Virtuose de l'Arch-Fusil",1.75},
-            {"Débordement",0.88},
-          },
-        },
-        { Name = "Officier Gokstad Kosma",
-          ModChance = 5,
-          Mods = {
-            {"Inversion d'Énergie",75.88},
-            {"Rebord Tranchant",4.42},
-            {"Rebord Glacial",4.42},
-            {"Canon Plaqué Rubedo",4.42},
-            {"Magasin Polaire",4.42},
-            {"Amplificateur d'Énergie",4.42},
-            {"Autopsie Astrale",2.01},
-          },
-        },
-        { Name = "Pilote de Gokstad Kosma",
-          ModChance = 5,
-          Mods = {
-            {"Inversion d'Énergie",75.88},
-            {"Rebord Tranchant",4.42},
-            {"Rebord Glacial",4.42},
-            {"Canon Plaqué Rubedo",4.42},
-            {"Magasin Polaire",4.42},
-            {"Amplificateur d'Énergie",4.42},
-            {"Autopsie Astrale",2.01},
-          },
-        },
-        { Name = "Lancier d'Élite Gyre",
-          ModChance = 5,
-          Mods = {
-            {"Inversion d'Énergie",79.82},
-            {"Piqûre Toxique",5.26},
-            {"Chargeur Venimeux",5.26},
-            {"Concentration Résolue",5.26},
-            {"Cible Marquée",1.75},
-            {"Virtuose de l'Arch-Fusil",1.75},
-            {"Débordement",0.88},
-          },
-        },
-        {
+        }, {
+            Name = "Coutelas Pillard Exo",
+            ModChance = 5,
+            Mods = {
+                {"Lame Tempérée", 37.94}, {"Inversion d'Énergie", 37.94},
+                {"Lame Galvanisée", 7.37}, {"Concentration Résolue", 7.37},
+                {"Canon Électrifié", 7.37}, {"Efficacité Mortelle", 2.01}
+            }
+        }, {
+            Name = "Éviscérateur Pillard Exo",
+            ModChance = 5,
+            Mods = {
+                {"Lame Tempérée", 37.94}, {"Inversion d'Énergie", 37.94},
+                {"Lame Galvanisée", 7.37}, {"Concentration Résolue", 7.37},
+                {"Canon Électrifié", 7.37}, {"Efficacité Mortelle", 2.01}
+            }
+        }, {
+            Name = "Massacreur Gyre",
+            ModChance = 5,
+            Mods = {
+                {"Inversion d'Énergie", 79.82}, {"Piqûre Toxique", 5.26},
+                {"Chargeur Venimeux", 5.26}, {"Concentration Résolue", 5.26},
+                {"Cible Marquée", 1.75}, {"Virtuose de l'Arch-Fusil", 1.75},
+                {"Débordement", 0.88}
+            }
+        }, {
+            Name = "Officier Gokstad Kosma",
+            ModChance = 5,
+            Mods = {
+                {"Inversion d'Énergie", 75.88}, {"Rebord Tranchant", 4.42},
+                {"Rebord Glacial", 4.42}, {"Canon Plaqué Rubedo", 4.42},
+                {"Magasin Polaire", 4.42}, {"Amplificateur d'Énergie", 4.42},
+                {"Autopsie Astrale", 2.01}
+            }
+        }, {
+            Name = "Pilote de Gokstad Kosma",
+            ModChance = 5,
+            Mods = {
+                {"Inversion d'Énergie", 75.88}, {"Rebord Tranchant", 4.42},
+                {"Rebord Glacial", 4.42}, {"Canon Plaqué Rubedo", 4.42},
+                {"Magasin Polaire", 4.42}, {"Amplificateur d'Énergie", 4.42},
+                {"Autopsie Astrale", 2.01}
+            }
+        }, {
+            Name = "Lancier d'Élite Gyre",
+            ModChance = 5,
+            Mods = {
+                {"Inversion d'Énergie", 79.82}, {"Piqûre Toxique", 5.26},
+                {"Chargeur Venimeux", 5.26}, {"Concentration Résolue", 5.26},
+                {"Cible Marquée", 1.75}, {"Virtuose de l'Arch-Fusil", 1.75},
+                {"Débordement", 0.88}
+            }
+        }, {
             Name = "Éviscérateur Kosma",
             ModChance = 5,
             Mods = {
@@ -8313,7 +8743,7 @@ local DropData = {
                 {"Endo", 38.72, 15}, {"Endo", 5.64, 50}
             }
         }, {
-            Name = "Tusk Shield Dargyn",
+            Name = "Dargyn Bastion Ivoire",
             ModChance = 12.5,
             Mods = {
                 {"Impact Soudain", 25.29}, {"Canon Plaqué Rubedo", 11.06},
@@ -8321,7 +8751,7 @@ local DropData = {
                 {"Endo", 25.29, 15}, {"Endo", 11.06, 50}
             }
         }, {
-            Name = "Tusk Dargyn",
+            Name = "Dargyn Ivoire",
             ModChance = 12.5,
             Mods = {
                 {"Impact Soudain", 25.29}, {"Canon Plaqué Rubedo", 11.06},
@@ -8329,7 +8759,7 @@ local DropData = {
                 {"Endo", 25.29, 15}, {"Endo", 11.06, 50}
             }
         }, {
-            Name = "Pilot Dargyn",
+            Name = "Pilote Dargyn",
             ModChance = 3,
             Mods = {
                 {"Redirection", 25.29}, {"Vengeance", 25.29},
@@ -8341,7 +8771,7 @@ local DropData = {
             Name = "Bombardier Corrompu",
             ModChance = 3,
             Mods = {
-                {"Pièces de Rechange", 11.06}, {"Intruder", 75.88},
+                {"Pièces de Rechange", 11.06}, {"Intrus", 75.88},
                 {"Tourbillon", 0.67}, {"Branche Battante", 0.67},
                 {"Endo", 11.73, 50}, {"Endo", 0.67, 80}
             }
@@ -8349,9 +8779,9 @@ local DropData = {
             Name = "Kavat Sauvage",
             ModChance = 20,
             Mods = {
-                {"Oeil de Chat", 4.17}, {"Mischief", 4.17},
+                {"Oeil de Chat", 4.17}, {"Malice", 4.17},
                 {"Agression Territoriale", 30.56}, {"Bond", 30.56},
-                {"Sense Danger", 30.56}
+                {"Sens du Danger", 30.56}
             }
         }, {
             Name = "Éclabousseur Arcane",
@@ -8401,7 +8831,7 @@ local DropData = {
                 {"Front Commun", 29.82}, {"Court Répit", 38.6}
             }
         }, {
-            Name = "Orphid Specter (Husk)",
+            Name = "Spectre Orphid (mue)",
             ModChance = 3,
             Mods = {
                 {"Frappe Fracassante", 1.01}, {"Atteinte", 25.29},
@@ -8418,7 +8848,7 @@ local DropData = {
                 {"Lames Surchargées", 6.06}
             }
         }, {
-            Name = "Cannon Battery",
+            Name = "Batterie de Canon",
             ModChance = 3,
             Ignore = true,
             Mods = {
@@ -8511,7 +8941,7 @@ local DropData = {
                 {"Endo", 5.53, 50}
             }
         }, {
-            Name = "Kuva Shield Lancer",
+            Name = "Lancier à Bouclier Kuva",
             ModChance = 3,
             Mods = {
                 {"Fléchette", 25.29}, {"Astuce du Voleur", 25.29},
@@ -8519,7 +8949,7 @@ local DropData = {
                 {"Endo", 25.29, 15}, {"Endo", 11.06, 50}, {"Endo", 1.01, 80}
             }
         }, {
-            Name = "Tusk Shield Lancer",
+            Name = "Lancier à Bouclier Ivoire",
             ModChance = 3,
             Mods = {
                 {"Fléchette", 25.29}, {"Astuce du Voleur", 25.29},
@@ -8586,12 +9016,12 @@ local DropData = {
             Name = "Drahk Kuva",
             ModChance = 3,
             Mods = {
-                {"Hunt", 0.22}, {"Stalk", 0.22}, {"Déterrement", 0.22},
-                {"Hurlement", 0.22}, {"Protection", 0.22}, {"Scavenge", 25.29},
+                {"Chasse", 0.22}, {"Traque", 0.22}, {"Déterrement", 0.22},
+                {"Hurlement", 0.22}, {"Protection", 0.22}, {"Recherche", 25.29},
                 {"Déchaînement", 0.22}, {"Férocité", 0.22},
                 {"Lien d'Armure", 3.69}, {"Lien de Vie", 3.69},
                 {"Lien de Boucliers", 3.69}, {"Compagnon Loyal", 25.29},
-                {"Déviation Précipitée", 3.69}, {"Savagery", 0.22},
+                {"Déviation Précipitée", 3.69}, {"Sauvagerie", 0.22},
                 {"Chef de Meute", 25.29}, {"Mise en Pièces", 3.69},
                 {"Morsure", 0.22}, {"Abri", 3.69}
             }
@@ -8756,7 +9186,7 @@ local DropData = {
                 {"Surcharge de Flux", 12.5}
             }
         }, {
-            Name = "Rathuum Broadcaster",
+            Name = "Radiodiffuseur Rathuum",
             ModChance = 3,
             Ignore = true,
             Mods = {
@@ -8796,7 +9226,7 @@ local DropData = {
                 {"Endo", 75.88, 15}, {"Endo", 22.11, 50}, {"Endo", 2.01, 80}
             }
         }, {
-            Name = "Elite Lancer (2)",
+            Name = "Lancier d'Élite (2)",
             ModChance = 20,
             Ignore = true,
             Mods = {{"Endo", 75.88, 15}, {"Endo", 22.11, 50}, {"Endo", 2, 80}}
@@ -8874,7 +9304,7 @@ local DropData = {
                 {"Endo", 11.06, 50}
             }
         }, {
-            Name = "Mutalist Cannon Battery",
+            Name = "Batterie de Canon Mutaliste",
             ModChance = 3,
             Ignore = true,
             Mods = {
@@ -8886,7 +9316,7 @@ local DropData = {
             Name = "Zéro Corrompu",
             ModChance = 3,
             Mods = {
-                {"Pièces de Rechange", 11.06}, {"Intruder", 75.88},
+                {"Pièces de Rechange", 11.06}, {"Intrus", 75.88},
                 {"Tourbillon", 0.67}, {"Branche Battante", 0.67},
                 {"Endo", 11.06, 50}, {"Endo", 0.67, 80}
             }
@@ -8971,10 +9401,10 @@ local DropData = {
             ModChance = 3,
             Mods = {
                 {"Vent du Nord", 11.06}, {"Point de Pression", 75.88},
-                {"Flux", 1.01}, {"Seismic Wave", 11.06}, {"Endo", 1.01, 80}
+                {"Flux", 1.01}, {"Onde Sismique", 11.06}, {"Endo", 1.01, 80}
             }
         }, {
-            Name = "Venin Mutalist",
+            Name = "Venin Mutaliste",
             ModChance = 3,
             Ignore = true,
             Mods = {
@@ -9073,7 +9503,7 @@ local DropData = {
                 {"Endo", 5.64, 50}
             }
         }, {
-            Name = "Cannon Battery (2)",
+            Name = "Batterie de Canon (2)",
             ModChance = 3,
             Ignore = true,
             Mods = {
@@ -9089,7 +9519,7 @@ local DropData = {
                 {"Régénération", 18.97}, {"Redirection Calculée", 18.97},
                 {"Rupture", 18.97}, {"Vent Fracturant", 7.37},
                 {"Endo", 18.97, 15}, {"Endo", 2.01, 80},
-                {"Pherliac Pods Blueprint", 100}
+                {"Cocons Pherliac Schéma", 100}
             }
         }, {
             Name = "Maniaque Grineer (2)",
@@ -9127,7 +9557,7 @@ local DropData = {
                 {"Maître Voleur", 20}, {"Jugement Décisif", 20}
             }
         }, {
-            Name = "Kuva Dargyn",
+            Name = "Dargyn Kuva",
             ModChance = 12.5,
             Mods = {
                 {"Impact Soudain", 25.29}, {"Canon Plaqué Rubedo", 11.06},
@@ -9150,7 +9580,7 @@ local DropData = {
                 {"Vitalité", 37.94}, {"Point de Pression", 37.94},
                 {"Traumatisme Lourd", 0.5}, {"Charge de Chaleur", 11.06},
                 {"Rationalisation", 0.5}, {"Phénix de Fer", 0.5},
-                {"Seismic Wave", 11.06}, {"Endo", 0.5, 80}
+                {"Onde Sismique", 11.06}, {"Endo", 0.5, 80}
             }
         }, {
             Name = "Roller Sentinelle",
@@ -9251,7 +9681,7 @@ local DropData = {
                 {"Endo", 5.53, 50}, {"Endo", 1.01, 80}
             }
         }, {
-            Name = "Hellion-Bouclier Dargyn",
+            Name = "Hellion Dargyn-Blindé",
             ModChance = 20,
             Mods = {
                 {"Amplificateur d'Énergie", 7.37}, {"Rebord Saignant", 37.94},
@@ -9259,12 +9689,22 @@ local DropData = {
                 {"Endo", 37.94, 15}, {"Endo", 7.37, 50}
             }
         }, {
-            Name = "Sauteur",
+            Name = "Voltigeur",
             ModChance = 3,
             Mods = {
                 {"Purifie-Infestés", 7.37}, {"Mode Assaut", 37.94},
-                {"Paume Sismique", 2.01}, {"Accélération Fatale", 7.37},
+                {"Paume Sismique", 2.01}, {"Accélération Fatale", 11.06},
                 {"Aiguille Tourbillonnante", 7.37}, {"Endo", 37.94, 15}
+            }
+        }, {
+            Name = "Voltigeur Deimos",
+            ModChance = 3,
+            Mods = {
+                {"Accélération Fatale", 11.06},
+                {"Aiguille Tourbillonnante", 1.01}, {"Mode Assaut", 37.94},
+                {"Paume Sismique", 1.01}, {"Purifie-Infestés", 11.06},
+                {"Endo", 37.94, 15}
+
             }
         }, {
             Name = "Zeplen",
@@ -9317,6 +9757,14 @@ local DropData = {
                 {"Rebond", 37.94}, {"Retour Rapide", 37.94}
             }
         }, {
+            Name = "Capitaine Pyr",
+            ModChance = 15,
+            Mods = {
+                {"Acier Brûlant", 20.00}, {"Chambre Magmatique", 20.00},
+                {"Météore Fracassant", 20.00}, {"Foreuse Quasar", 20.00},
+                {"Zodiaque Déchirant", 20.00}
+            }
+        }, {
             Name = "Capitaine Vor",
             ModChance = 100,
             Mods = {
@@ -9353,15 +9801,13 @@ local DropData = {
                 {"Endo", 37.94, 15}, {"Endo", 11.06, 50}
             }
         }, {
-            Name = "Zanuka Hunter",
+            Name = "Chasseur Zanuka",
             ModChance = 50,
-            Mods = {
-                {"Scimitar Avionics Blueprint", 50}, {"Detron Blueprint", 50}
-            }
+            Mods = {{"Scimitar Avioniques Schéma", 50}, {"Detron Schéma", 50}}
         }, {
             Name = "Fissure Corrupted Enemy",
             ModChance = 3,
-            Mods = {{"Harrow Châssis Blueprint", 100}}
+            Mods = {{"Harrow Châssis Schéma", 100}}
         }, {
             Name = "Hemocyte",
             ModChance = 100,
@@ -9370,8 +9816,7 @@ local DropData = {
                 {"Récupération du Chasseur", 28.95},
                 {"Synergie du Chasseur", 10.53},
                 {"Munitions du Chasseur", 10.53},
-                {"Commande du Chasseur", 10.53},
-                {"PiÉtapes du Chasseur", 10.53}
+                {"Commande du Chasseur", 10.53}, {"Pistage du Chasseur", 10.53}
             }
         }, {
             Name = "Goule Foreuse",
@@ -9382,7 +9827,7 @@ local DropData = {
                 {"Plumes Tranchantes", 2.01}, {"Endo", 43.47}
             }
         }, {
-            Name = "Ghoul Auger Alpha",
+            Name = "Goule Foreuse Alpha",
             ModChance = 50,
             Mods = {
                 {"Commande du Chasseur", 1.01},
@@ -9421,7 +9866,7 @@ local DropData = {
             ModChance = 50,
             Mods = {
                 {"Plumes Tranchantes", 1.01}, {"Munitions du Chasseur", 22.11},
-                {"PiÉtapes du Chasseur", 1.01},
+                {"Pistage du Chasseur", 1.01},
                 {"Adrénaline du Chasseur", 75.88}
             }
         }, {
@@ -9468,7 +9913,7 @@ local DropData = {
                 {"Fibre Antichoc", 1.01}, {"Endo", 84.25}
             }
         }, {
-            Name = "Vallis Surveillance Drone",
+            Name = "Drone de Surveillance de la Vallée",
             ModChance = 3,
             Mods = {
                 {"Oeil de Faucon", 7.37}, {"Excité du Canon", 7.37},
@@ -9485,7 +9930,7 @@ local DropData = {
                 {"Frappe de Fièvre", 3.69}, {"Frappe Vitale", 1.01}
             }
         }, {
-            Name = "Terra Anti MOA (2)",
+            Name = "Contre-MOA Terra (2)",
             ModChance = 20,
             Ignore = true,
             Mods = {
@@ -9496,7 +9941,7 @@ local DropData = {
                 {"Frappe de Fièvre", 3.69}, {"Frappe Vitale", 1.01}
             }
         }, {
-            Name = "Special Duty Coildrive",
+            Name = "Cyclomobile à Affectation Spéciale",
             ModChance = 3,
             Ignore = true,
             Mods = {
@@ -9550,7 +9995,7 @@ local DropData = {
                 {"Résilience Rapide", 0.5}
             }
         }, {
-            Name = "Terra Plasmor Crewman (2)",
+            Name = "Homme d'Équipage Plasmor Terra (2)",
             ModChance = 20,
             Ignore = true,
             Mods = {
@@ -9638,7 +10083,7 @@ local DropData = {
                 {"Résilience Rapide", 0.5}
             }
         }, {
-            Name = "Terra Sniper Crewman (2)",
+            Name = "Homme d'Équipage Sniper Terra (2)",
             ModChance = 20,
             Ignore = true,
             Mods = {
@@ -9757,6 +10202,16 @@ local DropData = {
                 {"Frappe de Fièvre", 3.69}, {"Frappe Vitale", 1.01}
             }
         }, {
+            Name = "Embatteur MOA d'Élite Terra",
+            ModChance = 20,
+            Mods = {
+                {"Atteinte", 37.94}, {"Fracas d'Organes", 37.94},
+                {"Allonge", 3.69}, {"Bobine Réflexe", 3.69},
+                {"Toucher Choquant", 3.69}, {"Vent du Nord", 3.69},
+                {"Impact Brûlant", 3.69}, {"Frappe de Fièvre", 3.69},
+                {"Chambre Divisée", 1.01}, {"Frappe Vitale", 1.01}
+            }
+        }, {
             Name = "Raptor SX Terra",
             ModChance = 20,
             Mods = {
@@ -9765,6 +10220,16 @@ local DropData = {
                 {"Toucher Choquant", 3.69}, {"Atteinte", 37.94},
                 {"Impact Brûlant", 3.69}, {"Chambre Divisée", 1.01},
                 {"Frappe de Fièvre", 3.69}, {"Frappe Vitale", 1.01}
+            }
+        }, {
+            Name = "Raptor SX d'Élite Terra",
+            ModChance = 20,
+            Mods = {
+                {"Atteinte", 37.94}, {"Fracas d'Organes", 37.94},
+                {"Allonge", 3.69}, {"Bobine Réflexe", 3.69},
+                {"Toucher Choquant", 3.69}, {"Vent du Nord", 3.69},
+                {"Impact Brûlant", 3.69}, {"Frappe de Fièvre", 3.69},
+                {"Chambre Divisée", 1.01}, {"Frappe Vitale", 1.01}
             }
         }, {
             Name = "Jackal Terra",
@@ -9809,7 +10274,7 @@ local DropData = {
                 {"Fibre Synth", 25}, {"Réflexe Synth", 25}
             }
         }, {
-            Name = "Corpus Sniper Target",
+            Name = "Cible Sniper Corpus",
             ModChance = 20,
             Mods = {
                 {"Charge Synth", 25}, {"Déconstruction Synth", 25},
@@ -9848,7 +10313,7 @@ local DropData = {
                 {"Frappe de Fièvre", 3.69}, {"Frappe Vitale", 1.01}
             }
         }, {
-            Name = "Observation Drone",
+            Name = "Drone d'Observation",
             ModChance = 3,
             Ignore = true,
             Mods = {
@@ -9886,22 +10351,159 @@ local DropData = {
                 {"Explosifs Dissimulés", 0.67}
             }
         }, {
+            Name = "MOA Minima",
+            ModChance = 3,
+            Mods = {
+                {"Vengeance", 25.29}, {"Tambour de Munitions", 25.29},
+                {"Endo", 25.29, 15}, {"Vent du Nord", 11.06},
+                {"Châtie-Grineer", 11.06}, {"Canalisation d'énergie", 1.01},
+                {"Endo", 1.01, 80}
+            }
+        }, {
+            Name = "MOA Cible",
+            ModChance = 3,
+            Mods = {
+                {"Chargeur Trafiqué", 25.29}, {"Coup Perforant", 25.29},
+                {"Endo", 25.29, 15}, {"Balles Cryogéniques", 11.06},
+                {"Allonge", 11.06}, {"Vent Tranchant", 1.01}, {"Endo", 1.01, 80}
+            }
+        }, {
+            Name = "Osprey Bouclier Juno",
+            ModChance = 3,
+            Mods = {
+                {"Endo", 75.88, 15}, {"Oeil de faucon", 7.37},
+                {"Excité du Canon", 7.37}, {"Endo", 7.37, 50},
+                {"Fibre Antichoc", 1.01}, {"Endo", 1.01, 80}
+            }
+        }, {
+            Name = "Homme d'Équipage Juno",
+            ModChance = 3,
+            Mods = {
+                {"Tambour de Munitions", 25.29}, {"Redirection", 25.29},
+                {"Endo", 25.29, 15}, {"Sans Retour", 7.37},
+                {"Craque-Cibles", 7.37}, {"Détente Rapide", 7.37},
+                {"Endo", 2.01, 80}
+            }
+        }, {
             Name = "Homme d'Équipage d'Élite Juno",
             ModChance = 3,
             Mods = {
-                {"Ammo Drum", 25.29}, {"Thief's Wit", 25.29},
-                {"Endo", 25.29, 15}, {"No Return", 11.06},
-                {"Reaping Spiral", 11.06}, {"Antre de l'Enfer", 1.01},
+                {"Tambour de Munitions", 25.29}, {"Astuce du Voleur", 25.29},
+                {"Endo", 25.29, 15}, {"Sans Retour", 11.06},
+                {"Fauchage Tournoyant", 11.06}, {"Antre de l'Enfer", 1.01},
+                {"Endo", 1.01, 80}
+            }
+        }, {
+            Name = "MOA Disque Juno",
+            ModChance = 3,
+            Mods = {
+                {"Vengeance", 25.29}, {"Tambour de Munitions", 25.29},
+                {"Endo", 25.29, 15}, {"Châtie-Grineer", 11.06},
+                {"Feu des Enfers", 11.06}, {"Rationalisation", 1.01},
                 {"Endo", 1.01, 80}
             }
         }, {
             Name = "Osprey Oxium Juno",
             ModChance = 3,
             Mods = {
-                {"Melee Prowess", 25.29}, {"Vitality", 25.29},
-                {"Endo", 25.29, 15}, {"Fury", 7.37}, {"Convulsion", 7.37},
+                {"Prouesse de Mêlée", 25.29}, {"Vitalité", 25.29},
+                {"Endo", 25.29, 15}, {"Furie", 7.37}, {"Convulsion", 7.37},
                 {"Endo", 7.37, 50}, {"Antre de l'Enfer", 1.01},
                 {"Endo", 1.01, 80}
+            }
+        }, {
+            Name = "Homme d'Équipage Zéro Juno",
+            ModChance = 4,
+            Mods = {
+                {"Rayon à Combustion", 25.00}, {"Tragédie de Gaïa", 25.00},
+                {"Masque Vulpin", 25.00}, {"Endo", 25.00, 80}
+            }
+        }, {
+            Name = "Homme d'Équipage Sniper Juno",
+            ModChance = 4,
+            Mods = {
+                {"Rayon à Combustion", 25.00}, {"Tragédie de Gaïa", 25.00},
+                {"Masque Vulpin", 25.00}, {"Endo", 25.00, 80}
+            }
+        }, {
+            Name = "MOA Geminex Juno",
+            ModChance = 3,
+            Mods = {
+                {"Vengeance", 25.29}, {"Tambour de Munitions", 25.29},
+                {"Endo", 25.29, 15}, {"Châtie-Grineer", 7.37},
+                {"Feu des Enfers", 7.37}, {"Allonge", 7.37}, {"Endo", 2.01, 80}
+            }
+        }, {
+            Name = "Technicien Juno",
+            ModChance = 3,
+            Mods = {
+                {"Tambour de Munitions", 25.29}, {"Astuce du Voleur", 25.29},
+                {"Endo", 25.29, 15}, {"Sans Retour", 11.06},
+                {"Fauchage Tournoyant", 11.06}, {"Canon à Diffusion", 1.01},
+                {"Endo", 1.01, 80}
+            }
+        }, {
+            Name = "Machiniste Malleus Juno",
+            ModChance = 3,
+            Mods = {
+                {"Manoeuvre de Pistolet", 37.94}, {"Fibre Métallique", 37.94},
+                {"Étreinte Frissonnante", 11.06}, {"Habile du Canon", 11.06},
+                {"Dérision du Gardien", 0.50}, {"Perception Vitale", 0.50},
+                {"Ténacité Rapide", 0.50}, {"Endo", 0.50, 80}
+            }
+        }, {
+            Name = "Comba Brouil. Juno",
+            ModChance = 4,
+            Mods = {
+                {"Rayon à Combustion", 25.00}, {"Tragédie de Gaïa", 25.00},
+                {"Masque Vulpin", 25.00}, {"Endo", 25.00, 80}
+            }
+        }, {
+            Name = "Comba Sab. Juno",
+            ModChance = 4,
+            Mods = {
+                {"Rayon à Combustion", 25.00}, {"Tragédie de Gaïa", 25.00},
+                {"Masque Vulpin", 25.00}, {"Endo", 25.00, 80}
+            }
+        }, {
+            Name = "Comba Neutr. Juno",
+            ModChance = 4,
+            Mods = {
+                {"Rayon à Combustion", 25.00}, {"Tragédie de Gaïa", 25.00},
+                {"Masque Vulpin", 25.00}, {"Endo", 25.00, 80}
+            }
+        }, {
+            Name = "Comba Obst. Juno",
+            ModChance = 4,
+            Mods = {
+                {"Rayon à Combustion", 25.00}, {"Tragédie de Gaïa", 25.00},
+                {"Masque Vulpin", 25.00}, {"Endo", 25.00, 80}
+            }
+        }, {
+            Name = "MOA Glaxion Juno",
+            ModChance = 3,
+            Mods = {
+                {"Vengeance", 25.29}, {"Tambour de Munitions", 25.29},
+                {"Endo", 25.29, 15}, {"Châtie-Grineer", 11.06},
+                {"Balles Cryogéniques", 11.06}, {"Continuité", 1.01},
+                {"Endo", 1.01, 80}
+            }
+        }, {
+            Name = "Osprey Jactus Juno",
+            ModChance = 3,
+            Mods = {
+                {"Point de Pression", 37.94}, {"Endo", 37.94, 15},
+                {"Portée Sinistre", 11.06}, {"Endo", 11.06, 50},
+                {"Explosifs Dissimulés", 0.67}, {"Pointe Métallique", 0.67},
+                {"Endo", 0.67, 80}
+            }
+        }, {
+            Name = "MOA Dera Juno",
+            ModChance = 3,
+            Mods = {
+                {"Vengeance", 25.29}, {"Tambour de Munitions", 25.29},
+                {"Endo", 25.29, 15}, {"Châtie-Grineer", 11.06},
+                {"Porte-Tempête", 11.06}, {"Flux", 1.01}, {"Endo", 1.01, 80}
             }
         }, {
             Name = "Osprey Oxium Terra",
@@ -9944,7 +10546,7 @@ local DropData = {
                 {"Déchiqueteur", 25.29}
             }
         }, {
-            Name = "Terra Manker (2)",
+            Name = "Mutilateur Terra (2)",
             ModChance = 20,
             Ignore = true,
             Mods = {
@@ -10006,7 +10608,15 @@ local DropData = {
                 {"Crépuscule Astral", 7.14}, {"Taillade de Mante", 7.14}
             }
         }, {
-            Name = "Saturn Six Fugitive",
+            Name = "Commandant Lektro",
+            ModChance = 15,
+            Mods = {
+                {"Balles Chargées", 20.00}, {"Comète Explosive", 20.00},
+                {"Foreuse Quasar", 20.00}, {"Infusion Ionique", 20.00},
+                {"Zodiaque Déchirant", 20.0}
+            }
+        }, {
+            Name = "Fugitif de Saturne Six",
             ModChance = 20,
             Mods = {
                 {"Charge de Chaleur", 22.92}, {"Froid Pénétrant", 22.92},
@@ -10043,12 +10653,205 @@ local DropData = {
                 {"Rasoir Lucide", 3.22}
             }
         }, {
-            Name = "Aquila Vapos",
-            ModChance = 5,
+            Name = "Contre-MOA Vapos",
+            ModChance = 3,
             Mods = {
-                {"Endo", 7.58, 15}, {"Rebord Saignant", 7.58},
-                {"Endo", 1.47, 50}, {"Amplificateur d'Énergie", 1.47},
-                {"Coups Doubles", 0.40}, {"Acier Flamboyant", 1.47}
+                {"Vitalité Améliorée", 38.72}, {"Astuce du Voleur", 38.72},
+                {"Habile du Canon", 7.52}, {"Balles Pathogènes", 7.52},
+                {"Tigre Tourbillonnant", 7.52}
+            }
+        }, {
+            Name = "Aquila Vapos",
+            ModChance = 20,
+            Mods = {
+                {"Endo", 37.94, 15}, {"Rebord Saignant", 37.94},
+                {"Endo", 7.37, 50}, {"Amplificateur d'Énergie", 7.37},
+                {"Acier Flamboyant", 7.37}, {"Coups Doubles", 2.01}
+            }
+        }, {
+            Name = "Bioingénieur Vapos",
+            ModChance = 4,
+            Mods = {
+                {"Rayon à Combustion", 25.00}, {"Tragédie de Gaïa", 25.00},
+                {"Masque Vulpin", 25.00}, {"Endo", 25.00, 80}
+            }
+        }, {
+            Name = "Homme d'Équipage Vapos",
+            ModChance = 3,
+            Mods = {
+                {"Atteinte", 25.29}, {"Tambour de Munitions", 25.29},
+                {"Endo", 25.29, 15}, {"Sans Retour", 7.37}, {"Furie", 7.37},
+                {"Fauchage Tournoyant", 7.37}, {"Endo", 2.01, 80}
+            }
+        }, {
+            Name = "Homme d'Équipage Detron Vapos",
+            ModChance = 3,
+            Mods = {
+                {"Prouesse de Mêlée", 25.81}, {"Déchiqueteur", 25.81},
+                {"Endo", 25.81, 15}, {"Chargeur Infecté", 5.64},
+                {"Balles de Commotion", 5.64}, {"Endo", 5.64, 50},
+                {"Serres Acérées", 5.64}
+            }
+        }, {
+            Name = "Garde Detron Vapos",
+            ModChance = 10,
+            Mods = {
+                {"Frappe Tendue", 25.29}, {"Prouesse de Mêlée", 25.29},
+                {"Déchiqueteur", 25.29}, {"Cartouche Chargée", 4.42},
+                {"Purifie-Grineer", 4.42}, {"Balles Incendiaires", 4.42},
+                {"Chargeur Infecté", 4.42}, {"Balles de Commotion", 4.42},
+                {"Mains sur Ressorts", 0.67}, {"Ravage", 0.67},
+                {"Rayon à Combustion", 0.67}
+            }
+        }, {
+            Name = "Homme d'Équipage d'Élite Vapos",
+            ModChance = 3,
+            Mods = {
+                {"Endo", 75.88, 15}, {"Chargeur Infecté", 5.53},
+                {"Sans Retour", 5.53}, {"Furie", 5.53}, {"Endo", 5.53, 50},
+                {"Bord Dentelé", 0.67}, {"Endo", 0.67, 80},
+                {"Grincement du Payara", 0.67}
+            }
+        }, {
+            Name = "Garde Élite Vapos",
+            ModChance = 10,
+            Mods = {
+                {"Frappe Tendue", 25.29}, {"Prouesse de Mêlée", 25.29},
+                {"Déchiqueteur", 25.29}, {"Cartouche Chargée", 4.42},
+                {"Purifie-Grineer", 4.42}, {"Balles Incendiaires", 4.42},
+                {"Chargeur Infecté", 4.42}, {"Balles de Commotion", 4.42},
+                {"Mains sur Ressorts", 0.67}, {"Ravage", 0.67},
+                {"Rayon à Combustion", 0.67}
+            }
+        }, {
+            Name = "MOA Fusion Vapos",
+            ModChance = 3,
+            Mods = {
+                {"Vaporisation", 18.97}, {"Vitalité Améliorée", 18.97},
+                {"Astuce du Voleur", 18.97}, {"Endo", 18.97, 15},
+                {"Course", 5.53}, {"Châtie-Corpus", 5.53},
+                {"Antitoxine", 5.53}, {"Endo", 5.53, 50}, {"Endo", 1.01, 80},
+                {"Autodestruction", 1.01}
+            }
+        }, {
+            Name = "MOA Vapos",
+            ModChance = 3,
+            Mods = {
+                {"Tambour de Munitions", 25.29}, {"Vengeance", 25.29},
+                {"Endo", 25.29, 15}, {"Vent du Nord", 11.06},
+                {"Châtie-Grineer", 11.06}, {"Canalisation d'énergie", 1.01},
+                {"Endo", 1.01, 80}
+            }
+        }, {
+            Name = "Zéro Vapos",
+            ModChance = 3,
+            Mods = {
+                {"Mode Assaut", 75.88}, {"Balles Incendiaires", 11.06},
+                {"Endo", 11.06, 50}, {"Ravage", 0.50},
+                {"Éventail Harcelant", 0.50}, {"Endo", 0.50, 80},
+                {"Rayon à Combustion", 0.50}
+            }
+        }, {
+            Name = "Garde Zéro Vapos",
+            ModChance = 10,
+            Mods = {
+                {"Frappe Tendue", 25.29}, {"Prouesse de Mêlée", 25.29},
+                {"Déchiqueteur", 25.29}, {"Cartouche Chargée", 4.42},
+                {"Purifie-Grineer", 4.42}, {"Balles Incendiaires", 4.42},
+                {"Chargeur Infecté", 4.42}, {"Balles de Commotion", 4.42},
+                {"Mains sur Ressorts", 0.67}, {"Ravage", 0.67},
+                {"Rayon à Combustion", 0.67}
+            }
+        }, {
+            Name = "Osprey Oxium Vapos",
+            ModChance = 3,
+            Mods = {
+                {"Vitalité", 25.29}, {"Prouesse de Mêlée", 25.29},
+                {"Endo", 25.29, 15}, {"Furie", 7.37}, {"Convulsion", 7.37},
+                {"Endo", 7.37, 50}, {"Antre de l'Enfer", 1.01},
+                {"Endo", 1.01, 80}
+            }
+        }, {
+            Name = "Homme d'Équipage Prod Vapos",
+            ModChance = 3,
+            Mods = {
+                {"Manoeuvre de Pistolet", 37.94}, {"Fibre Métallique", 37.94},
+                {"Étreinte Frissonnante", 11.06}, {"Habile du Canon", 11.06},
+                {"Perception Vitale", 0.50}, {"Dérision du Gardien", 0.50},
+                {"Ténacité Rapide", 0.50}, {"Endo", 0.50, 80}
+            }
+        }, {
+            Name = "MOA à Canon Électrique Vapos",
+            ModChance = 3,
+            Mods = {
+                {"Endo", 38.72, 15}, {"Chargeur Trafiqué", 38.72},
+                {"Chambre Chargée", 11.28}, {"Endo", 11.28, 50}
+            }
+        }, {
+            Name = "Osprey Sapeur Vapos",
+            ModChance = 3,
+            Mods = {
+                {"Mutation de Chargeur", 25.29},
+                {"Dispersion des foules", 25.29}, {"Endo", 25.29, 15},
+                {"Allonge", 11.06}, {"Peau de Diamant", 11.06},
+                {"Chambre Divisée", 0.67}, {"Serre Étincelante", 0.67},
+                {"Endo", 0.67, 80}
+            }
+        }, {
+            Name = "Osprey Protecteur Vapos",
+            ModChance = 3,
+            Mods = {
+                {"Endo", 75.88, 15}, {"Excité du Canon", 7.37},
+                {"Oeil de Faucon", 7.37}, {"Endo", 7.37, 50},
+                {"Fibre Antichoc", 1.01}, {"Endo", 1.01, 80}
+            }
+        }, {
+            Name = "MOA Onde de Choc Vapos",
+            ModChance = 3,
+            Mods = {
+                {"Chargeur Trafiqué", 25.29}, {"Coup Perforant", 25.29},
+                {"Endo", 25.29, 15}, {"Balles Cryogéniques", 11.06},
+                {"Allonge", 11.06}, {"Vent Tranchant", 1.01}, {"Endo", 1.01, 80}
+            }
+        }, {
+            Name = "Homme d'Équipage Sniper Vapos",
+            ModChance = 3,
+            Mods = {
+                {"Mode Assaut", 75.88}, {"Balles Incendiaires", 11.06},
+                {"Endo", 11.06, 50}, {"Ravage", 0.50},
+                {"Éventail Harcelant", 0.50}, {"Endo", 0.50, 80},
+                {"Rayon à Combustion", 0.50}
+            }
+        }, {
+            Name = "Garde Tireur d'Élite Vapos",
+            ModChance = 10,
+            Mods = {
+                {"Frappe Tendue", 25.29}, {"Prouesse de Mêlée", 25.29},
+                {"Déchiqueteur", 25.29}, {"Cartouche Chargée", 4.42},
+                {"Purifie-Grineer", 4.42}, {"Balles Incendiaires", 4.42},
+                {"Chargeur Infecté", 4.42}, {"Balles de Commotion", 4.42},
+                {"Mains sur Ressorts", 0.67}, {"Ravage", 0.67},
+                {"Rayon à Combustion", 0.67}
+            }
+        }, {
+            Name = "Technicien Vapos",
+            ModChance = 3,
+            Mods = {
+                {"Frappe Tendue", 37.94}, {"Endo", 37.94, 15},
+                {"Cartouche Chargée", 5.53}, {"Purifie-Grineer", 5.53},
+                {"Endo", 5.53, 50}, {"Tigre Tourbillonnant", 5.53},
+                {"Mains sur Ressorts", 2.01}
+            }
+        }, {
+            Name = "Garde Technicien Vapos",
+            ModChance = 10,
+            Mods = {
+                {"Frappe Tendue", 25.29}, {"Prouesse de Mêlée", 25.29},
+                {"Déchiqueteur", 25.29}, {"Cartouche Chargée", 4.42},
+                {"Purifie-Grineer", 4.42}, {"Balles Incendiaires", 4.42},
+                {"Chargeur Infecté", 4.42}, {"Balles de Commotion", 4.42},
+                {"Mains sur Ressorts", 0.67}, {"Ravage", 0.67},
+                {"Rayon à Combustion", 0.67}
             }
         }, {
             Name = "Alkonost Amalgame",
@@ -10076,7 +10879,7 @@ local DropData = {
                 {"Impulsion Proton", 22.03}, {"Avantage Aéro", 5.81},
                 {"Impact Motus", 5.81}, {"Jet Proton", 5.81},
                 {"Configuration Motus", 0.97}, {"Claquement Proton", 0.97},
-                {"Kavat's Grace", 0.5}
+                {"Grâce du Kavat", 0.5}
             }
         }, {
             Name = "Machiniste Incinérant Amalgame",
@@ -10109,8 +10912,8 @@ local DropData = {
             Name = "Officier Gokstad Kosma",
             ModChance = 5,
             Mods = {
-                {"Energy Inversion", 75.88}, {"Cutting Edge", 4.42},
-                {"Glacial Edge", 4.42}, {"Rubedo-Lined Barrel", 4.42},
+                {"Inversion d'Énergie", 75.88}, {"Rebord Tranchant", 4.42},
+                {"Rebord Glacial", 4.42}, {"Canon Rubedo Doublé", 4.42},
                 {"Magasin Polaire", 4.42}, {"Amplificateur d'Énergie", 4.42},
                 {"Autopsie Astrale", 2.01}
             }
@@ -10118,8 +10921,8 @@ local DropData = {
             Name = "Pilote de Gokstad Kosma",
             ModChance = 5,
             Mods = {
-                {"Energy Inversion", 75.88}, {"Cutting Edge", 4.42},
-                {"Glacial Edge", 4.42}, {"Rubedo-Lined Barrel", 4.42},
+                {"Inversion d'Énergie", 75.88}, {"Rebord Tranchant", 4.42},
+                {"Rebord Glacial", 4.42}, {"Canon Rubedo Doublé", 4.42},
                 {"Magasin Polaire", 4.42}, {"Amplificateur d'Énergie", 4.42},
                 {"Autopsie Astrale", 2.01}
             }
@@ -10285,16 +11088,6 @@ local DropData = {
                 {"Tir de Rasoir", 5.53}, {"Va chercher", 5.53},
                 {"Endo", 5.53, 50}, {"Endo", 0.67, 80},
                 {"Ire Souillée de Dragon", 0.67}, {"Surcharge d'État", 0.67}
-            }
-        }, {
-            Name = "Osprey Sapeur Vapos",
-            ModChance = 3,
-            Mods = {
-                {"Mutation de Chargeur", 25.29},
-                {"Dispersion des foules", 25.29}, {"Endo", 25.29, 15},
-                {"Allonge", 11.06}, {"Peau de Diamant", 11.06},
-                {"Chambre Divisée", 0.67}, {"Serre Étincelante", 0.67},
-                {"Endo", 0.67, 80}
             }
         }
     },
@@ -11124,31 +11917,67 @@ local DropData = {
 
         ["AKARIUS"] = {{{Part = "Schéma", Chance = 0.0125, Unit = "tués"}}},
 
-        ["ARUM SPINOSA"] = {
+        ["ARUM SPINOSA A"] = {
             {
                 {
+                    Part = "Schéma",
+                    Chance = 0.0625,
+                    Desc = "Lvl&nbsp;40-50",
+                    Unit = "Mises à Prix"
+                }, {
                     Part = "Garde",
-                    Chance = 0.1154,
+                    Chance = 0.0375,
+                    Desc = "Lvl&nbsp;40-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Rivet",
+                    Chance = 0.0200,
+                    Desc = "Lvl&nbsp;40-50",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["ARUM SPINOSA B"] = {
+            {
+                {
+                    Part = "Schéma",
+                    Chance = 0.1250,
+                    Desc = "Étape 1, Niv. 40-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma",
+                    Chance = 0.0781,
+                    Desc = "Étape 2, Étape 3, Niv. 40-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Schéma",
+                    Chance = 0.0625,
+                    Desc = "Étape 4, Niv. 40-50",
+                    Unit = "Mises à Prix"
+                }, {
+                    Part = "Garde",
+                    Chance = 0.0469,
                     Desc = "Étape 2, Étape 3, Niv. 40-50",
                     Unit = "Mises à Prix"
                 }, {
                     Part = "Garde",
-                    Chance = 0.0882,
+                    Chance = 0.0375,
                     Desc = "Étape 4, Niv. 40-50",
                     Unit = "Mises à Prix"
                 }, {
                     Part = "Garde",
-                    Chance = 0.1364,
+                    Chance = 0.0750,
                     Desc = "Étape 5, Niv. 40-50",
                     Unit = "Mises à Prix"
                 }, {
                     Part = "Rivet",
-                    Chance = 0.0795,
+                    Chance = 0.0200,
                     Desc = "Étape 4, Niv. 40-50",
                     Unit = "Mises à Prix"
                 }, {
                     Part = "Rivet",
-                    Chance = 0.1227,
+                    Chance = 0.0400,
                     Desc = "Étape 5, Niv. 40-50",
                     Unit = "Mises à Prix"
                 }
@@ -11183,6 +12012,85 @@ local DropData = {
         },
 
         ["CRONUS"] = {{{Part = "Schéma", Chance = 0.05, Unit = "tués"}}},
+
+        ["CEDO"] = {
+            {
+                {
+                    Part = "Schéma",
+                    Chance = 0.02,
+                    Desc = "Normal",
+                    Unit = "Rotation B"
+                },
+                {
+                    Part = "Canon",
+                    Chance = 0.02,
+                    Desc = "Normal",
+                    Unit = "Rotation B"
+                },
+                {
+                    Part = "Culasse",
+                    Chance = 0.02,
+                    Desc = "Normal",
+                    Unit = "Rotation B"
+                },
+                {
+                    Part = "Crosse",
+                    Chance = 0.02,
+                    Desc = "Normal",
+                    Unit = "Rotation B"
+                }
+            }, {
+                {
+                    Part = "Schéma",
+                    Chance = 0.03,
+                    Desc = "Avancé",
+                    Unit = "Rotation B"
+                },
+                {
+                    Part = "Canon",
+                    Chance = 0.03,
+                    Desc = "Avancé",
+                    Unit = "Rotation B"
+                },
+                {
+                    Part = "Culasse",
+                    Chance = 0.03,
+                    Desc = "Avancé",
+                    Unit = "Rotation B"
+                },
+                {
+                    Part = "Crosse",
+                    Chance = 0.03,
+                    Desc = "Avancé",
+                    Unit = "Rotation B"
+                }
+            }, {
+                {
+                    Part = "Schéma",
+                    Chance = 0.04,
+                    Desc = "Endurance",
+                    Unit = "Rotation B"
+                },
+                {
+                    Part = "Canon",
+                    Chance = 0.04,
+                    Desc = "Endurance",
+                    Unit = "Rotation B"
+                },
+                {
+                    Part = "Culasse",
+                    Chance = 0.04,
+                    Desc = "Endurance",
+                    Unit = "Rotation B"
+                },
+                {
+                    Part = "Crosse",
+                    Chance = 0.04,
+                    Desc = "Endurance",
+                    Unit = "Rotation B"
+                }
+            }
+        },
 
         ["DESPAIR"] = {{{Part = "Schéma", Chance = 0.0553, Unit = "tués"}}},
 
@@ -11356,6 +12264,11 @@ local DropData = {
         ["SPOROTHRIX"] = {
             {
                 {
+                    Part = "Schéma",
+                    Chance = 0.21,
+                    Desc = "Étape 1, Niv.50-60",
+                    Unit = "Mises à Prix"
+                }, {
                     Part = "Canon",
                     Chance = 0.0833,
                     Desc = "Étape 2, Étape 3, Niv. 50-60",
@@ -11511,16 +12424,16 @@ local DropData = {
 
         ---------------------------------------- ARCANES ----------------------------------------
 
-        ["ARCANE ACCELERATION"] = {
+        ["ARCANE ACCÉLÉRATION"] = {
             {{Part = "Arcane", Chance = 0.1020, Unit = "tués"}},
             {{Part = "Arcane", Chance = 0.0925, Unit = "captures"}}
         },
 
-        ["ARCANE AEGIS"] = {
+        ["ARCANE ÉGIDE"] = {
             {{Part = "Arcane", Chance = 0.0592, Unit = "captures"}}
         },
 
-        ["ARCANE AGILITE"] = {
+        ["ARCANE AGILITÉ"] = {
             {{Part = "Arcane", Chance = 0.1020, Unit = "tués"}},
             {{Part = "Arcane", Chance = 0.0925, Unit = "captures"}}
         },
@@ -11530,17 +12443,17 @@ local DropData = {
             {{Part = "Arcane", Chance = 0.1274, Unit = "captures"}}
         },
 
-        ["ARCANE AVENGER"] = {
+        ["ARCANE VENGEANCE"] = {
             {{Part = "Arcane", Chance = 0.1170, Unit = "tués"}},
             {{Part = "Arcane", Chance = 0.1124, Unit = "captures"}}
         },
 
-        ["ARCANE AWAKENING"] = {
+        ["ARCANE ÉVEIL"] = {
             {{Part = "Arcane", Chance = 0.1825, Unit = "tués"}},
             {{Part = "Arcane", Chance = 0.1463, Unit = "captures"}}
         },
 
-        ["ARCANE BARRIERE"] = {
+        ["ARCANE BARRIÈRE"] = {
             {{Part = "Arcane", Chance = 0.0500, Unit = "captures"}}
         },
 
@@ -11549,25 +12462,25 @@ local DropData = {
             {{Part = "Arcane", Chance = 0.0500, Unit = "Rotation C"}}
         },
 
-        ["ARCANE BODYGUARD"] = {
+        ["ARCANE GARDE DU CORPS"] = {
             {{Part = "Arcane", Chance = 0.0500, Unit = "Rotation A"}},
             {{Part = "Arcane", Chance = 0.0500, Unit = "Rotation B"}}
         },
 
-        ["ARCANE CONSEQUENCE"] = {
+        ["ARCANE CONSÉQUENCE"] = {
             {{Part = "Arcane", Chance = 0.1495, Unit = "tués"}},
             {{Part = "Arcane", Chance = 0.1205, Unit = "captures"}}
         },
 
-        ["ARCANE DEFLECTION"] = {
+        ["ARCANE DÉVIATION"] = {
             {{Part = "Arcane", Chance = 0.0602, Unit = "captures"}}
         },
 
-        ["ARCANE ENERGIZE"] = {
+        ["ARCANE ÉNERGÉTIQUE"] = {
             {{Part = "Arcane", Chance = 0.0500, Unit = "captures"}}
         },
 
-        ["ARCANE ERUPTION"] = {
+        ["ARCANE ÉRUPTION"] = {
             {{Part = "Arcane", Chance = 0.1020, Unit = "tués"}},
             {{Part = "Arcane", Chance = 0.0925, Unit = "captures"}}
         },
@@ -11577,7 +12490,7 @@ local DropData = {
             {{Part = "Arcane", Chance = 0.1124, Unit = "captures"}}
         },
 
-        ["ARCANE GRACE"] = {
+        ["ARCANE GRÂCE"] = {
             {{Part = "Arcane", Chance = 0.0500, Unit = "captures"}}
         },
 
@@ -11586,7 +12499,7 @@ local DropData = {
             {{Part = "Arcane", Chance = 0.1192, Unit = "captures"}}
         },
 
-        ["ARCANE HEALING"] = {
+        ["ARCANE GUÉRISON"] = {
             {{Part = "Arcane", Chance = 0.0602, Unit = "captures"}}
         },
 
@@ -11595,17 +12508,17 @@ local DropData = {
             {{Part = "Arcane", Chance = 0.1205, Unit = "captures"}}
         },
 
-        ["ARCANE MOMENTUM"] = {
+        ["ARCANE ÉLAN"] = {
             {{Part = "Arcane", Chance = 0.1495, Unit = "tués"}},
             {{Part = "Arcane", Chance = 0.1205, Unit = "captures"}}
         },
 
-        ["ARCANE ZERO"] = {
+        ["ARCANE ZÉRO"] = {
             {{Part = "Arcane", Chance = 0.1495, Unit = "tués"}},
             {{Part = "Arcane", Chance = 0.1205, Unit = "captures"}}
         },
 
-        ["ARCANE PHANTASM"] = {
+        ["ARCANE FANTASME"] = {
             {{Part = "Arcane", Chance = 0.1020, Unit = "tués"}},
             {{Part = "Arcane", Chance = 0.0952, Unit = "captures"}}
         },
@@ -11615,17 +12528,17 @@ local DropData = {
             {{Part = "Arcane", Chance = 0.0500, Unit = "Rotation C"}}
         },
 
-        ["ARCANE PRECISION"] = {
+        ["ARCANE PRÉCISION"] = {
             {{Part = "Arcane", Chance = 0.0702, Unit = "tués"}},
             {{Part = "Arcane", Chance = 0.0592, Unit = "captures"}}
         },
 
-        ["ARCANE PRIMARY CHARGER"] = {
+        ["ARCANE CHARGEUR PRINCIPAL"] = {
             {{Part = "Arcane", Chance = 0.0500, Unit = "Rotation B"}},
             {{Part = "Arcane", Chance = 0.0500, Unit = "Rotation C"}}
         },
 
-        ["ARCANE PULSE"] = {
+        ["ARCANE PULSATION"] = {
             {{Part = "Arcane", Chance = 0.0529, Unit = "captures"}}
         },
 
@@ -11634,17 +12547,17 @@ local DropData = {
             {{Part = "Arcane", Chance = 0.1274, Unit = "captures"}}
         },
 
-        ["ARCANE RESISTANCE"] = {
+        ["ARCANE RÉSISTANCE"] = {
             {{Part = "Arcane", Chance = 0.0678, Unit = "tués"}},
             {{Part = "Arcane", Chance = 0.0602, Unit = "captures"}}
         },
 
-        ["ARCANE STRIKE"] = {
+        ["ARCANE ATTAQUE"] = {
             {{Part = "Arcane", Chance = 0.1825, Unit = "tués"}},
             {{Part = "Arcane", Chance = 0.1463, Unit = "captures"}}
         },
 
-        ["ARCANE TANKER"] = {
+        ["ARCANE TANKISTE"] = {
             {{Part = "Arcane", Chance = 0.0500, Unit = "Rotation A"}},
             {{Part = "Arcane", Chance = 0.0500, Unit = "Rotation C"}}
         },
@@ -11654,7 +12567,7 @@ local DropData = {
             {{Part = "Arcane", Chance = 0.1568, Unit = "captures"}}
         },
 
-        ["ARCANE TRICKERY"] = {
+        ["ARCANE TROMPERIE"] = {
             {{Part = "Arcane", Chance = 0.2478, Unit = "tués"}},
             {{Part = "Arcane", Chance = 0.2024, Unit = "captures"}}
         },
@@ -11663,18 +12576,263 @@ local DropData = {
             {{Part = "Arcane", Chance = 0.0529, Unit = "captures"}}
         },
 
-        ["ARCANE VELOCITE"] = {
+        ["ARCANE VÉLOCITÉ"] = {
             {{Part = "Arcane", Chance = 0.2223, Unit = "tués"}},
             {{Part = "Arcane", Chance = 0.1679, Unit = "captures"}}
         },
 
-        ["ARCANE VICTORE"] = {
+        ["ARCANE VICTOIRE"] = {
             {{Part = "Arcane", Chance = 0.0602, Unit = "captures"}}
         },
 
-        ["ARCANE WARMTH"] = {
+        ["ARCANE CHALEUR"] = {
             {{Part = "Arcane", Chance = 0.1495, Unit = "tués"}},
             {{Part = "Arcane", Chance = 0.1205, Unit = "captures"}}
+        },
+
+        ["BRUME RÉSIDUELLE A"] = {
+            {
+                {
+                    Part = "Arcane",
+                    Chance = 0.2500,
+                    Desc = "Lvl&nbsp;30-40<br />Lvl&nbsp;40-50<br />Lvl&nbsp;50-60",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["BRUME RÉSIDUELLE B"] = {
+            {
+                {
+                    Part = "Arcane",
+                    Chance = 0.5000,
+                    Desc = "Niv 30-40 Étape 1<br />Niv 40-50 Étape 1<br />Niv 50-60 Étape 1",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Arcane",
+                    Chance = 0.3125,
+                    Desc = "Niv 30-40 Étape 2 & 3<br />Niv 40-50 Étape 2 & 3<br />Niv 50-60 Étape 2 & 3",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Arcane",
+                    Chance = 0.2500,
+                    Desc = "Niv 30-40 Étape 4 sur 5<br />Niv 40-50 Étape 4 sur 5<br />Niv 50-60 Étape 4 sur 5",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["CHOC RÉSIDUEL A"] = {
+            {
+                {
+                    Part = "Arcane",
+                    Chance = 0.1500,
+                    Desc = "Lvl&nbsp;30-40<br />Lvl&nbsp;40-50<br />Lvl&nbsp;50-60",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["CHOC RÉSIDUEL B"] = {
+            {
+                {
+                    Part = "Arcane",
+                    Chance = 0.1875,
+                    Desc = "Niv 30-40 Étape 2 & 3<br />Niv 40-50 Étape 2 & 3<br />Niv 50-60 Étape 2 & 3",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Arcane",
+                    Chance = 0.1500,
+                    Desc = "Niv 30-40 Étape 4 sur 5<br />Niv 40-50 Étape 4 sur 5<br />Niv 50-60 Étape 4 sur 5",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Arcane",
+                    Chance = 0.3000,
+                    Desc = "Niv 30-40 Étape Finale<br />Niv 40-50 Étape Finale<br />Niv 50-60 Étape Finale",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["FURONCLES RÉSIDUELS A"] = {
+            {
+                {
+                    Part = "Arcane",
+                    Chance = 0.2500,
+                    Desc = "Lvl&nbsp;30-40<br />Lvl&nbsp;40-50<br />Lvl&nbsp;50-60",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["FURONCLES RÉSIDUELS B"] = {
+            {
+                {
+                    Part = "Arcane",
+                    Chance = 0.5000,
+                    Desc = "Niv 30-40 Étape 1<br />Niv 40-50 Étape 1<br />Niv 50-60 Étape 1",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Arcane",
+                    Chance = 0.3125,
+                    Desc = "Niv 30-40 Étape 2 & 3<br />Niv 40-50 Étape 2 & 3<br />Niv 50-60 Étape 2 & 3",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Arcane",
+                    Chance = 0.2500,
+                    Desc = "Niv 30-40 Étape 4 sur 5<br />Niv 40-50 Étape 4 sur 5<br />Niv 50-60 Étape 4 sur 5",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["VIRÉMIE RÉSIDUELLE A"] = {
+            {
+                {
+                    Part = "Arcane",
+                    Chance = 0.1500,
+                    Desc = "Lvl&nbsp;30-40<br />Lvl&nbsp;40-50<br />Lvl&nbsp;50-60",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["VIRÉMIE RÉSIDUELLE B"] = {
+            {
+                {
+                    Part = "Arcane",
+                    Chance = 0.1875,
+                    Desc = "Niv 30-40 Étape 2 & 3<br />Niv 40-50 Étape 2 & 3<br />Niv 50-60 Étape 2 & 3",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Arcane",
+                    Chance = 0.1500,
+                    Desc = "Niv 30-40 Étape 4 sur 5<br />Niv 40-50 Étape 4 sur 5<br />Niv 50-60 Étape 4 sur 5",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Arcane",
+                    Chance = 0.3000,
+                    Desc = "Niv 30-40 Étape Finale<br />Niv 40-50 Étape Finale<br />Niv 50-60 Étape Finale",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["THÉORÈME DE CONTAGION A"] = {
+            {
+                {
+                    Part = "Arcane",
+                    Chance = 0.1000,
+                    Desc = "Lvl&nbsp;30-40<br />Lvl&nbsp;40-50<br />Lvl&nbsp;50-60",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["THÉORÈME DE CONTAGION B"] = {
+            {
+                {
+                    Part = "Arcane",
+                    Chance = 0.1000,
+                    Desc = "Niv 30-40 Étape 4 sur 5<br />Niv 40-50 Étape 4 sur 5<br />Niv 50-60 Étape 4 sur 5,",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Arcane",
+                    Chance = 0.2000,
+                    Desc = "Niv 30-40 Étape Finale<br />Niv 40-50 Étape Finale<br />Niv 50-60 Étape Finale,",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["THÉORÈME D'INFECTION A"] = {
+            {
+                {
+                    Part = "Arcane",
+                    Chance = 0.1500,
+                    Desc = "Lvl&nbsp;30-40<br />Lvl&nbsp;40-50<br />Lvl&nbsp;50-60",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["THÉORÈME D'INFECTION B"] = {
+            {
+                {
+                    Part = "Arcane",
+                    Chance = 0.1875,
+                    Desc = "Niv 30-40 Étape 2 sur 5<br />Niv 40-50 Étape 2 sur 5<br />Niv 50-60 Étape 2 sur 5,",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Arcane",
+                    Chance = 0.1500,
+                    Desc = "Niv 30-40 Étape 4 sur 5<br />Niv 40-50 Étape 4 sur 5<br />Niv 50-60 Étape 4 sur 5,",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Arcane",
+                    Chance = 0.1500,
+                    Desc = "Niv 30-40 Étape Finale<br />Niv 40-50 Étape Finale<br />Niv 50-60 Étape Finale,",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["THÉORÈME ÉMOLLIENT A"] = {
+            {
+                {
+                    Part = "Arcane",
+                    Chance = 0.2500,
+                    Desc = "Lvl&nbsp;30-40<br />Lvl&nbsp;40-50<br />Lvl&nbsp;50-60",
+                    Unit = "Mises à Prix"
+                }
+            }
+        },
+
+        ["THÉORÈME ÉMOLLIENT B"] = {
+            {
+                {
+                    Part = "Arcane",
+                    Chance = 0.5000,
+                    Desc = "Niv 30-40 Étape 1 sur 5<br />Niv 40-50 Étape 1 sur 5<br />Niv 50-60 Étape 1 sur 5,",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Arcane",
+                    Chance = 0.3125,
+                    Desc = "Niv 30-40 Étape 2 sur 5<br />Niv 40-50 Étape 2 sur 5<br /><br /><br /><br />Niv 50-60 Étape 2 sur 5,",
+                    Unit = "Mises à Prix"
+                }
+            }, {
+                {
+                    Part = "Arcane",
+                    Chance = 0.2500,
+                    Desc = "Niv 30-40 Étape 4 sur 5<br /><br />Niv 40-50 Étape 4 sur 5<br /><br /><br />Niv 50-60 Étape 4 sur 5,",
+                    Unit = "Mises à Prix"
+                }
+            }
         },
 
         ------------------------------------- LANDING CRAFT -------------------------------------
