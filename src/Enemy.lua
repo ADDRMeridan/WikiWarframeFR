@@ -1,11 +1,25 @@
 local p = {}
 
+-- ===========
+-- IMPORT
+-- ===========
+
 local EnemyData = mw.loadData('Module:Enemy/data')
 local DmgTypes = require('Module:DamageTypes')
 local Icon = require('Module:Icon')
 local Shared = require('Module:Shared')
 local TT = require('Module:Tooltip')
 local Version = require("Module:Version")
+
+-- ===========
+-- CONSTANTES
+-- ===========
+
+local DIV_CODEXCONTAINER = '<div class="codex_page_container">'
+
+-- ===========
+-- FONCTIONS
+-- ===========
 
 local function getEnemy(name)
 
@@ -313,7 +327,7 @@ local function buildCodexAll()
     return table.concat(ret)
 end
 
-local function buildCodexFaction(factionName)
+local function _buildCodexFaction(factionName)
 
     local ret = {}
     if (factionName ~= nil) then
@@ -331,13 +345,40 @@ function p.buildCodex(frame)
     local faction = (frame.args ~= nil and frame.args[1]) or nil
 
     local ret = {}
-    table.insert(ret, '<div class="codex_page_container">')
+    table.insert(ret, DIV_CODEXCONTAINER)
     if (faction == nil) then
         table.insert(ret, buildCodexAll())
     else
-        table.insert(ret, buildCodexFaction(faction))
+        table.insert(ret, _buildCodexFaction(faction))
     end
     table.insert(ret, '</div>')
+
+    return table.concat(ret)
+end
+
+local function _buildCodexPlanet(planetName)
+
+    local ret = {}
+    if (planetName ~= nil) then
+        for _, mob in Shared.skpairs(EnemyData) do
+            if (mob.Regions ~= nil and Shared.contains(mob.Regions, planetName)) then
+                table.insert(ret, buildCodexCell(mob))
+            end
+        end
+    end
+    return table.concat(ret)
+end
+
+function p.buildCodexPlanet(frame)
+
+    local planetName = (frame.args ~= nil and frame.args[1]) or nil
+    local ret = {}
+
+    if (planetName ~= nil) then
+        table.insert(ret, DIV_CODEXCONTAINER)
+        table.insert(ret, _buildCodexPlanet(planetName))
+        table.insert(ret, '</div>')
+    end
 
     return table.concat(ret)
 end
