@@ -6,6 +6,7 @@ local Icon = require("Module:Icon")
 local Shared = require("Module:Shared")
 local Mod = require('Module:Mods')
 local Tooltip = require("Module:Tooltip")
+local VERSION = require('Module:Version')
 
 local Elements = {
     "Impact", "Perforation", "Tranchant", "Feu", "Glace", "Poison",
@@ -1643,7 +1644,7 @@ local function getValue(Weapon, ValName, giveDefault, asString, forTable)
         end
     elseif (ValName == "INTRODUCED") then
         if (Weapon.Introduced ~= nil) then
-            return Weapon.Introduced
+            return VERSION._getVersionLink(Weapon.Introduced)
         elseif giveDefault then
             return ""
         else
@@ -3771,7 +3772,7 @@ local function BuildCompTable(Head, Weapons, UseCompDisplay)
         return tHeader .. tRows .. "\n|}"
     else
         return Shared.printModuleError('Pas d\'armes trouvees.',
-                                         'BuildCompTable')
+                                       'BuildCompTable')
     end
 end
 
