@@ -2,7 +2,7 @@ local misNameCol = 1 -- Name of the drop
 local misTypeCol = 2 -- Type of thing dropped (IE Mod, Endo, Credits)
 local misChanceCol = 3 -- Chance for the thing to drop
 local misCountCol = 4 -- Number of things dropped. If empty, default to 1
---    in DropData["Enemies"].Mods
+--    in DropData["Ennemis"].Mods
 local modNameCol = 1 -- Name of the mod
 local modChanceCol = 2 -- The chance of a mod dropping
 local modCountCol = 3 -- If empty, default to 1. Normally only different for Endo
@@ -139,7 +139,7 @@ local function linkSyndicate(SName) return '[[' .. SName .. ']]' end
 
 local function getAllModDrops(enemyName)
     local drops = {}
-    for i, Enemy in pairs(DropData["Enemies"]) do
+    for i, Enemy in pairs(DropData["Ennemis"]) do
         if (Enemy.Name == enemyName and Enemy.Mods ~= nil) then
             for j, Mod in pairs(Enemy.Mods) do
                 local drop = buildEnemyDrop(Enemy, Mod)
@@ -588,7 +588,7 @@ end
 local function getDropEnemies(itemName)
     local drops = {}
 
-    for i, Enemy in pairs(DropData["Enemies"]) do
+    for i, Enemy in pairs(DropData["Ennemis"]) do
         if (Enemy.Mods ~= nil and Enemy.Ignore ~= true) then
             for j, Mod in pairs(Enemy.Mods) do
                 if (Mod[modNameCol] == itemName) then
@@ -1146,7 +1146,7 @@ end
 function p.getFullEnemyList(frame)
     local result = "Tous les Ennemis : "
     local ENames = {}
-    for i, Enemy in pairs(DropData["Enemies"]) do
+    for i, Enemy in pairs(DropData["Ennemis"]) do
         if (Enemy.Name ~= nil) then table.insert(ENames, Enemy.Name) end
     end
 
@@ -1157,8 +1157,8 @@ function p.getFullEnemyList(frame)
     return result
 end
 
-function p.getEnemyModDrops(frame)
-    local EnemyName = frame.args ~= nil and frame.args[1] or frame
+function p._getEnemyModDrops(EnemyName)
+
     local Drops = getAllModDrops(EnemyName)
 
     if (Shared.tableCount(Drops) == 0) then return; end
@@ -1182,20 +1182,10 @@ function p.getEnemyModDrops(frame)
     return result
 end
 
-function p.TestFrame(frame)
-    local txt = "VALUES:\n\n"
-    for key, val in Shared.skpairs(p) do
-        if (val ~= nil) then
-            if (type(val) == "string" or type(val) == "number") then
-                txt = txt .. '\n* ' .. key .. ' = ' .. val
-            else
-                txt = txt .. '\n* ' .. key .. ' is a ' .. type(val)
-            end
-        else
-            txt = txt .. '\n* ' .. key .. ' is nil'
-        end
-    end
-    return txt
+function p.getEnemyModDrops(frame)
+    local EnemyName = frame.args ~= nil and frame.args[1] or frame
+
+    return p._getEnemyModDrops(EnemyName)
 end
 
 return p

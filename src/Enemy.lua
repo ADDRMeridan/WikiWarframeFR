@@ -6,6 +6,8 @@ local p = {}
 
 local EnemyData = mw.loadData('Module:Enemy/data')
 local DmgTypes = require('Module:DamageTypes')
+local DT = require('Module:DropTables')
+local HealthTypes = require('Module:HealthTypes')
 local Icon = require('Module:Icon')
 local Shared = require('Module:Shared')
 local TT = require('Module:Tooltip')
@@ -283,6 +285,132 @@ function p._getValue(enemyName, valName)
     end
 
     return ret, errorMess
+end
+
+-- ===================
+--  INFOBOX-HORIZ
+-- ===================
+
+local function buildHorizIB(mobStruct)
+
+    local ret = {}
+    if (mobStruct ~= nil) then
+        ret = {
+            '\n{| class="infobox-hori" cellspacing="2"\n! class="name" style="width:200px;" | '
+        }
+        local enemyName = mobStruct.Name
+        table.insert(ret, enemyName)
+        table.insert(ret,
+                     '\n! colspan="2" class="category" | \'\'\'Général\'\'\'\n! colspan="2" class="category" | \'\'\'Divers\'\'\'\n|-\n| rowspan="15" class="image" | [[File:')
+        local enemyImg = mobStruct.Image or Shared.getDefaultImg()
+        table.insert(ret, enemyImg)
+        table.insert(ret,
+                     '|200x200px]]\n| class="left" | \'\'\'Régions\'\'\'\n| class="right" | ')
+        -- Regions
+        if (mobStruct.Regions ~= nil) then
+            local rgBuilder = {}
+            for _, region in ipairs(mobStruct.Regions) do
+                table.insert(rgBuilder, '[[' .. region .. ']]')
+            end
+            table.insert(ret, table.concat(rgBuilder, Shared.getListSep()))
+        else
+            table.insert(ret, 'Inconnu')
+        end
+        -- Scans
+        table.insert(ret,
+                     '\n| class="left" | \'\'\'[[Codex|Scans]]\'\'\'\n| class="right" | ')
+        if (mobStruct.Scans ~= nil) then
+            table.insert(ret, mobStruct.Scans)
+        else
+            table.insert(ret, '???')
+        end
+        -- Armes
+        table.insert(ret,
+                     '\n|-\n| class="left" | \'\'\'Armes\'\'\'\n| class="right" | ')
+        if (mobStruct.Weapons ~= nil) then
+            local wpBuilder = {}
+            for _, weapon in pairs(mobStruct.Weapons) do
+                -- Add weapon tooltip if weapon exist in DB
+                if (TT.checkItemExist(weapon, 'Weapon', false)) then
+                    table.insert(wpBuilder, TT._tooltipText(weapon, 'Weapon'))
+                else
+                    table.insert(wpBuilder, weapon)
+                end
+            end
+            table.insert(ret, table.concat(wpBuilder, Shared.getListSep()))
+        else
+            table.insert(ret, 'Aucune')
+        end
+        -- Capacites
+        table.insert(ret,
+                     '\n| class="left" | \'\'\'Capacités\'\'\'\n| class="right" | ')
+        if (mobStruct.Capacities ~= nil) then
+            local capaBuilder = {}
+            for _, capa in ipairs(mobStruct.Capacities) do
+                -- Add ability tooltip if ability exist in DB
+                if (TT.checkItemExist(capa, 'Ability', false)) then
+                    table.insert(capaBuilder, TT._tooltipText(capa, 'Ability'))
+                else
+                    table.insert(capaBuilder, capa)
+                end
+            end
+            table.insert(ret, table.concat(capaBuilder, '<br/>'))
+        else
+            table.insert(ret, 'Aucune')
+        end
+        -- Mod Drops + stats
+        table.insert(ret,
+                     '\n|-\n! colspan="2" class="category" | \'\'\'Statistiques\'\'\'\n| rowspan="12" class="left" | \'\'\'[[Mod]]s\'\'\'\n| rowspan="12" class="right" | ')
+        table.insert(ret, DT._getEnemyModDrops(enemyName))
+        -- HealthTypes
+        if (mobStruct.HealthTypes ~= nil) then
+            for k, v in Shared.skpairs(mobStruct.HealthTypes) do
+                table.insert(ret, '\n|-\n| class="left" | \'\'\'')
+                table.insert(ret, HealthTypes._getLink(k))
+                table.insert(ret, '\'\'\'\n| class="right" | ')
+                table.insert(ret, v)
+                table.insert(ret, '\n|-\n! colspan="2" | ')
+                table.insert(ret, DmgTypes._getHealthTypeVsDamageType(k))
+            end
+        end
+        -- Affinité
+        if (mobStruct.Affinity ~= nil) then
+            table.insert(ret,
+                         '\n|-\n| class="left" | \'\'\'[[Affinité]]\'\'\'\n| class="right" | ')
+            table.insert(ret, mobStruct.Affinity)
+        end
+        -- Niveau de Base
+        if (mobStruct.BaseLevel ~= nil) then
+            table.insert(ret,
+                         '\n|-\n| class="left" | \'\'\'[[Evolution du Niveau Ennemi|Niveau de Base]]\'\'\'\n| class="right" | ')
+            table.insert(ret, mobStruct.BaseLevel)
+        end
+        table.insert(ret, '\n|}')
+    end
+
+    return table.concat(ret)
+end
+
+function p.buildEnemyFamily(frame)
+
+    local ret = {}
+
+    local enemyName = (frame.args ~= nil and frame.args[1]) or nil
+    local enemy = getEnemy(enemyName)
+    if (enemy ~= nil and enemy.Family ~= nil) then
+        local familyArray = getVariants(enemy)
+        if (#familyArray > 0) then
+            table.insert(ret, '<tabber>')
+            for _, enemyVar in ipairs(familyArray) do
+                table.insert(ret, '\n|-|')
+                table.insert(ret, enemyVar.Name)
+                table.insert(ret, '=')
+                table.insert(ret, buildHorizIB(enemyVar))
+            end
+            table.insert(ret, '</tabber>')
+        end
+    end
+    return frame:preprocess(table.concat(ret))
 end
 
 -- ===================
