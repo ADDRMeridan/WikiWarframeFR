@@ -5,7 +5,7 @@ local ConclaveData = mw.loadData('Module:Weapons/Conclave/data')
 local Icon = require("Module:Icon")
 local Shared = require("Module:Shared")
 local Mod = require('Module:Mods')
-local Tooltip = require("Module:Tooltip")
+local TT = require("Module:Tooltip")
 local VERSION = require('Module:Version')
 
 local Elements = {
@@ -97,7 +97,7 @@ function p.shortLinkList(Weapons)
         if (Shared.contains(variants, "Base")) then
             table.sort(variants)
             -- First, get the basic version
-            local thisRow = Tooltip._tooltipText(baseName, 'Weapon')
+            local thisRow = TT._tooltipText(baseName, 'Weapon')
             -- then, if there are variants...
             if (Shared.tableCount(variants) > 1) then
                 -- List them in parentheses one at a time
@@ -109,7 +109,7 @@ function p.shortLinkList(Weapons)
                             thisRow = thisRow .. ', '
                         end
                         thisRow = thisRow ..
-                                      Tooltip._tooltipText(
+                                      TT._tooltipText(
                                           p.buildName(baseName, varName),
                                           'Weapon', varName)
                         count = count + 1
@@ -120,7 +120,7 @@ function p.shortLinkList(Weapons)
             table.insert(result, thisRow)
         else
             for i, varName in pairs(variants) do
-                table.insert(result, Tooltip._tooltipText(
+                table.insert(result, TT._tooltipText(
                                  p.buildName(baseName, varName), 'Weapon'))
             end
         end
@@ -657,7 +657,7 @@ local function getWeaponStanceList(Weapon)
         local link = ''
 
         if Weapon.Class ~= "Arme Exaltée" or Weapon.Name == "Serres de Garuda" then
-            result = result .. Tooltip._tooltipText(stance.Name, 'Mod')
+            result = result .. TT._tooltipText(stance.Name, 'Mod')
         end
 
         result = result .. polarity
@@ -1347,10 +1347,9 @@ local function getValue(Weapon, ValName, giveDefault, asString, forTable)
         local ret = {}
         for i, Aug in pairs(augments) do
             if (Aug.PvP) then
-                table.insert(ret,
-                             Tooltip._tooltipText(Aug.Name, 'Mod') .. ' (PvP)')
+                table.insert(ret, TT._tooltipText(Aug.Name, 'Mod') .. ' (PvP)')
             else
-                table.insert(ret, Tooltip._tooltipText(Aug.Name, 'Mod'))
+                table.insert(ret, TT._tooltipText(Aug.Name, 'Mod'))
             end
         end
         return table.concat(ret, '\n')
@@ -1499,7 +1498,7 @@ local function getValue(Weapon, ValName, giveDefault, asString, forTable)
                             end
                             FamilyString =
                                 FamilyString ..
-                                    Tooltip._tooltipText(Weap.Name, 'Weapon')
+                                    TT._tooltipText(Weap.Name, 'Weapon')
                         end
                     end
                     return FamilyString
@@ -2382,8 +2381,7 @@ function p.getStanceWeaponList(frame)
     for i, weap in Shared.skpairs(weaps) do
         if (weap.Name ~= 'Désarmé') then
             result = result .. '\n*' ..
-                         Tooltip._tooltipText(weap.Name, 'Weapon', nil,
-                                              stancePvP)
+                         TT._tooltipText(weap.Name, 'Weapon', nil, stancePvP)
             if (weap.StancePolarity ~= nil) then
                 local weapStancePolIcon = Icon._Pol(weap.StancePolarity)
                 local modPolIcon = Icon._Pol(
@@ -3313,10 +3311,9 @@ function p.buildDamageTypeTable(frame)
     local tRows = ""
     for i, Weapon in pairs(WeapArray) do
         local thisRow = '\n|-\n|'
-        thisRow =
-            thisRow .. "|" .. Tooltip._tooltipText(Weapon.Name, 'Weapon') ..
-                "||" .. Weapon.Type .. "|| " ..
-                getValue(Weapon, "Class", true, true)
+        thisRow = thisRow .. "|" .. TT._tooltipText(Weapon.Name, 'Weapon') ..
+                      "||" .. Weapon.Type .. "|| " ..
+                      getValue(Weapon, "Class", true, true)
         if (hasAttack(Weapon, "Normal")) then
             local tempBias = getValue(Weapon, {"Normal", "DamageBias"}, true)
             local tempBiasStripped = string.match(tempBias, "(%d*)%%")
@@ -4450,8 +4447,7 @@ local function printFamily(familyName, familyValues, conclave)
     local ret = {}
     local ttType = 'Weapon'
 
-    table.insert(ret,
-                 Tooltip._tooltipText(familyName, ttType, nil, conclave, nil))
+    table.insert(ret, TT._tooltipText(familyName, ttType, nil, conclave, nil))
 
     local famString = {}
     if (#familyValues > 1) then
@@ -4465,9 +4461,8 @@ local function printFamily(familyName, familyValues, conclave)
                     newName = "Dex"
                 end
 
-                table.insert(famString, Tooltip._tooltipText(wpName, ttType,
-                                                             newName, conclave,
-                                                             nil))
+                table.insert(famString, TT._tooltipText(wpName, ttType, newName,
+                                                        conclave, nil))
             end
         end
 
@@ -4517,8 +4512,8 @@ function p._getWeaponsList(mainCat, subCat, triggerType, conclave)
             table.insert(ret, printFamily(family, wpList, conclave))
         else
             for _, tmpName in pairs(wpList) do
-                table.insert(ret, Tooltip._tooltipText(tmpName, 'Weapon', nil,
-                                                       conclave, nil))
+                table.insert(ret, TT._tooltipText(tmpName, 'Weapon', nil,
+                                                  conclave, nil))
             end
         end
     end
