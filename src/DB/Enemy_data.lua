@@ -2729,6 +2729,57 @@ local EnemyData = {
         Scans = 3,
         Weapons = nil
     },
+    ["Régulateur"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = {"Booster de Moral", "Brouilleur de Radar"},
+        Faction = "Grineer",
+        Family = "Régulateur",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Machines"] = 120},
+        Image = "Regulateur.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Régulateur",
+        NameEN = "Regulator",
+        Regions = {"Mars"},
+        Scans = 20,
+        Weapons = nil
+    },
+    ["Régulateur de Capteur"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = {"Camera de Surveillance"},
+        Faction = "Grineer",
+        Family = "Régulateur",
+        HealthTypes = {["Armure en Ferrite"] = 300, ["Machines"] = 100},
+        Image = "Regulateur.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Régulateur de Capteur",
+        NameEN = "Sensor Regulator",
+        Regions = {
+            "Mercure", "Terre", "Mars", "Saturne", "Uranus", "Cérès", "Sedna",
+            "Phobos"
+        },
+        Scans = 20,
+        Weapons = nil
+    },
+    ["Régulateur Frontalier"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = {"Booster de Moral", "Brouilleur de Radar"},
+        Faction = "Grineer",
+        Family = "Régulateur",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Machines"] = 120},
+        Image = "Regulateur.png",
+        Introduced = "11.5",
+        Link = nil,
+        Name = "Régulateur Frontalier",
+        NameEN = "Frontier Regulator",
+        Regions = {"Terre"},
+        Scans = 20,
+        Weapons = nil
+    },
     ["Roller"] = {
         Affinity = 100,
         BaseLevel = 10,
@@ -2891,6 +2942,22 @@ local EnemyData = {
         Regions = {"Forteresse Kuva"},
         Scans = 10,
         Weapons = {"Machette"}
+    },
+    ["Shik Tal"] = {
+        Affinity = 1500,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Shik Tal",
+        HealthTypes = {["Armure en Alliage"] = 200, ["Chair Clonée"] = 1700},
+        Image = "DEShik.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Shik Tal",
+        NameEN = "Shik Tal",
+        Regions = nil,
+        Scans = 3,
+        Weapons = {"Marelok", "Bouclier Antiémeute"}
     },
     ["Sikula"] = {
         Affinity = 114.25,
@@ -3119,6 +3186,22 @@ local EnemyData = {
         Scans = 20,
         Weapons = {"Répéteur Plasma"}
     },
+    ["Tourelle Osprey Terra"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Tourelle Osprey",
+        HealthTypes = {["Bouclier"] = 0, ["Robot"] = 0},
+        Image = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Tourelle Osprey Terra",
+        NameEN = "Terra Turret Osprey",
+        Regions = nil,
+        Scans = nil,
+        Weapons = nil
+    },
     ["Trio Raptors"] = {
         Affinity = 1500,
         BaseLevel = 1,
@@ -3163,6 +3246,22 @@ local EnemyData = {
     },
     -- U
     -- V
+    ["Vem Tabook"] = {
+        Affinity = 1500,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Vem Tabook",
+        HealthTypes = {["Armure en Alliage"] = 200, ["Chair Clonée"] = 1700},
+        Image = "Vem Tabook",
+        Introduced = nil,
+        Link = nil,
+        Name = "Vem Tabook",
+        NameEN = "Vem Tabook",
+        Regions = nil,
+        Scans = 3,
+        Weapons = {"Hek"}
+    },
     ["Voltigeur"] = {
         Affinity = 35,
         BaseLevel = 1,
