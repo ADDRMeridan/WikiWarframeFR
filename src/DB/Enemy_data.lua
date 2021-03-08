@@ -209,6 +209,26 @@ local EnemyData = {
         Scans = 3,
         Weapons = {"Arca Plasmor"}
     },
+    ["Armis Ulta"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Armis Ulta",
+        HealthTypes = {
+            ["Armure en Alliage"] = 50,
+            ["Bouclier"] = 2500,
+            ["Chair"] = 1000
+        },
+        Image = "Armis Ulta.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Armis Ulta",
+        NameEN = "Armis Ulta",
+        Regions = nil,
+        Scans = 3,
+        Weapons = {"Glaxion"}
+    },
     ["Artilleuse Lourde"] = {
         Affinity = 500,
         BaseLevel = 8,
@@ -298,6 +318,48 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = {"Drakgoon", "Sheev"}
     },
+    ["Auditeur"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Auditeur",
+        HealthTypes = {
+            ["Armure en Alliage"] = 50,
+            ["Bouclier"] = 2500,
+            ["Robot"] = 1000
+        },
+        Image = "Auditeur.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Auditeur",
+        NameEN = "Auditor",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
+    ["Azoth"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Azoth",
+        HealthTypes = {
+            ["Armure en Alliage"] = 50,
+            ["Proto-Bouclier"] = 2500,
+            ["Robot"] = 1000
+        },
+        Image = "Azoth.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Azoth",
+        NameEN = "Azoth",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
     -- B
     ["Balor Fomorien"] = {
         Affinity = nil,
@@ -329,6 +391,22 @@ local EnemyData = {
         Link = nil,
         Name = "Baptiste Fanatique",
         NameEN = "Zealot Baptizer",
+        Regions = nil,
+        Scans = 5,
+        Weapons = nil
+    },
+    ["Battalyste"] = {
+        Affinity = 500,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Sentient",
+        Family = "Battalyste",
+        HealthTypes = {["Armure en Ferrite"] = 250, ["Robot"] = 1150},
+        Image = "Battalyste.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Battalyste",
+        NameEN = "Battalyst",
         Regions = nil,
         Scans = 5,
         Weapons = nil
@@ -471,6 +549,23 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = {"Doubles Hek", "Fragor"}
     },
+    ["Brachiolyste"] = {
+        Affinity = nil,
+        BaseLevel = 10,
+        Capacities = nil,
+        Faction = "Sentient",
+        Family = "Brachiolyste",
+        HealthTypes = {["Bouclier"] = 450, ["Chair"] = 300},
+        Image = "Brachiolyst.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Brachiolyste",
+        NameEN = "Brachiolyst",
+        Regions = {"Proxima du Voile"},
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
     ["Brachiolyste Anu"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -479,7 +574,7 @@ local EnemyData = {
         Family = "Brachiolyste",
         HealthTypes = {["Bouclier"] = 450, ["Chair"] = 300},
         Image = nil,
-        Introduced = nil,
+        Introduced = "27.0",
         Link = nil,
         Name = "Brachiolyste Anu",
         NameEN = "Anu Brachiolyst",
@@ -557,6 +652,38 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = nil
     },
+    ["Chargeur"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Chargeur",
+        HealthTypes = {["Infesté"] = 80},
+        Image = "QuadrupedAvatar.png",
+        Introduced = "6.0",
+        Link = nil,
+        Name = "Chargeur",
+        NameEN = "Charger",
+        Regions = nil,
+        Scans = 20,
+        Weapons = nil
+    },
+    ["Chargeur Charognard"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Chargeur",
+        HealthTypes = {["Infesté"] = 80},
+        Image = "CarrionCharger.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Chargeur Charognard",
+        NameEN = "Carrion Charger",
+        Regions = nil,
+        Scans = 3,
+        Weapons = nil
+    },
     ["Chroma Infesté"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -602,7 +729,7 @@ local EnemyData = {
         Scans = 3,
         Weapons = {"{{Wepon|Doubles Cestra}}"}
     },
-    ["Cible Corpus Sniper"] = {
+    ["Cible Sniper Corpus"] = {
         Affinity = nil,
         BaseLevel = 1,
         Capacities = nil,
@@ -617,7 +744,7 @@ local EnemyData = {
         Icon = nil,
         Introduced = 24.0,
         Link = nil,
-        Name = "Cible Corpus Sniper",
+        Name = "Cible Sniper Corpus",
         NameEN = "Corpus Sniper Target",
         Regions = {"Venus"},
         Scans = 3,
@@ -897,6 +1024,27 @@ local EnemyData = {
         Scans = 5,
         Weapons = nil
     },
+    ["Derim Zahn"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Derim Zahn",
+        HealthTypes = {
+            ["Armure en Alliage"] = 50,
+            ["Bouclier"] = 2500,
+            ["Chair"] = 1000
+        },
+        Image = "Derim Zahn.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Derim Zahn",
+        NameEN = "Derim Zahn",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
     ["Diploïde Commun"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -1163,6 +1311,27 @@ local EnemyData = {
         Scans = 10,
         Weapons = nil
     },
+    ["Dru Pesfor"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Dru Pesfor",
+        HealthTypes = {
+            ["Armure en Alliage"] = 50,
+            ["Bouclier"] = 2500,
+            ["Chair"] = 1000
+        },
+        Image = "Dru Pesfor.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Dru Pesfor",
+        NameEN = "Dru Pesfor",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
     -- E
     ["Embatteur MOA Terra"] = {
         Affinity = nil,
@@ -1320,6 +1489,23 @@ local EnemyData = {
         Scans = 10,
         SpawnLevel = nil,
         Weapons = nil
+    },
+    ["Fugitif de Saturne Six"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Non-affilié",
+        Family = "Fugitif de Saturne Six",
+        HealthTypes = {["Armure en Ferrite"] = 300, ["Chair Clonée"] = 800},
+        Image = "Fugitif de Saturne Six.png",
+        Introduced = "24.3",
+        Link = nil,
+        Name = "Fugitif de Saturne Six",
+        NameEN = "Saturn Six Fugitive",
+        Regions = nil,
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = {"Karak", "Sheev"}
     },
     -- G
     ["Garde"] = {
@@ -1730,6 +1916,65 @@ local EnemyData = {
         Scans = 3,
         SpawnLevel = 19,
         Weapons = {"Mitrailleuses Lourdes"}
+    },
+    ["Jack O'Naut"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Mastodonte",
+        HealthTypes = {["Armure en Ferrite"] = 0, ["Infesté"] = 0},
+        Image = "Jack O' Naut.png",
+        Introduced = "RN",
+        Link = nil,
+        Name = "Jack O'Naut",
+        NameEN = "Jack O'Naut",
+        Regions = nil,
+        Scans = 0,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
+    ["Jad Teran"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Jad Teran",
+        HealthTypes = {
+            ["Armure en Alliage"] = 50,
+            ["Bouclier"] = 2500,
+            ["Chair"] = 1000
+        },
+        Image = "Jad Teran.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Jad Teran",
+        NameEN = "Jad Teran",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = {"Staticor", "Lecta"}
+    },
+    ["Jen Dro"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Jen Dro",
+        HealthTypes = {
+            ["Armure en Alliage"] = 50,
+            ["Bouclier"] = 2500,
+            ["Chair"] = 1000
+        },
+        Image = "Jen Dro.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Jen Dro",
+        NameEN = "Jen Dro",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = {"Doubles Cestra", "Obex"}
     },
     ["Jugulus Deimos"] = {
         Affinity = nil,
@@ -2148,6 +2393,27 @@ local EnemyData = {
         SpawnLevel = 13,
         Weapons = {"Gorgon", "Brokk"}
     },
+    ["Lockjaw & Sol"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Lockjaw & Sol",
+        HealthTypes = {
+            ["Armure en Alliage"] = 50,
+            ["Bouclier"] = 2500,
+            ["Robot"] = 1000
+        },
+        Image = "Lockjaw et Sol.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Lockjaw & Sol",
+        NameEN = "Lockjaw & Sol",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
     ["Loup de Saturne Six"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -2376,12 +2642,63 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = {"Machette"}
     },
+    ["Mastodonte"] = {
+        Affinity = 1500,
+        BaseLevel = 15,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Mastodonte",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Infesté"] = 3500},
+        Image = "Juggernaut.png",
+        Introduced = "16.7",
+        Link = nil,
+        Name = "Mastodonte",
+        NameEN = "Juggernaut",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
+    ["Mastodonte Behemoth"] = {
+        Affinity = 3500,
+        BaseLevel = 15,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Mastodonte",
+        HealthTypes = {["Armure en Ferrite"] = 300, ["Infesté"] = 4500},
+        Image = "JuggernautBoss.png",
+        Introduced = "16.7.1",
+        Link = nil,
+        Name = "Mastodonte Behemoth",
+        NameEN = "Juggernaut Behemoth",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
+    ["Mastodonte Deimos"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Mastodonte",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Infesté"] = 2000},
+        Image = "JuggernautMicroPlanetCasualAvatar.png",
+        Introduced = "29.0",
+        Link = nil,
+        Name = "Mastodonte Deimos",
+        NameEN = "Deimos Juggernaut",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
     ["Mesa Infestée"] = {
         Affinity = 1713.75,
         BaseLevel = 1,
         Capacities = {
-            "{{A|Batterie Balistique}}", "{{A|Salle de tir}}",
-            "{{A|Bouclier Scélérat}}", "{{A|Pacificateurs}}"
+            "Batterie Balistique", "Salle de tir", "Bouclier Scélérat",
+            "Pacificateurs"
         },
         Faction = "Infesté",
         Family = nil,
@@ -2459,7 +2776,7 @@ local EnemyData = {
         Weapons = nil
     },
     ["MOA à Canon Électrique"] = {
-        Affinity = 114.25,
+        Affinity = 100,
         BaseLevel = 1,
         Capacities = nil,
         Faction = "Corpus",
@@ -2493,6 +2810,23 @@ local EnemyData = {
         NameEN = "Terra Railgun MOA",
         Regions = {"Vénus"},
         Scans = 10,
+        SpawnLevel = nil,
+        Weapons = {"Canon Électrique"}
+    },
+    ["MOA à Canon Électrique Vapos"] = {
+        Affinity = 100,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "MOA à Canon Électrique",
+        HealthTypes = {["Bouclier"] = 150, ["Robot"] = 60},
+        Image = "VaposRailgunMoa.png",
+        Introduced = "25.0",
+        Link = nil,
+        Name = "MOA à Canon Électrique Vapos",
+        NameEN = "Vapos Railgun MOA",
+        Regions = nil,
+        Scans = 5,
         SpawnLevel = nil,
         Weapons = {"Canon Électrique"}
     },
@@ -2668,7 +3002,49 @@ local EnemyData = {
         Scans = 10,
         Weapons = nil
     },
+    ["M-W.A.M."] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "M-W.A.M.",
+        HealthTypes = {
+            ["Armure en Alliage"] = 50,
+            ["Bouclier"] = 2500,
+            ["Robot"] = 1000
+        },
+        Image = "M-W.A.M..png",
+        Introduced = nil,
+        Link = nil,
+        Name = "M-W.A.M.",
+        NameEN = "M-W.A.M.",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = {"Amprex", "Glaxion", "Supra", "Penta"}
+    },
     -- N
+    ["Nako Xol"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Nako Xol",
+        HealthTypes = {
+            ["Armure en Alliage"] = 50,
+            ["Bouclier"] = 2500,
+            ["Chair"] = 1000
+        },
+        Image = "Nako Xol.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Nako Xol",
+        NameEN = "Nako Xol",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = {"Tetra", "Prova"}
+    },
     ["Napalm"] = {
         Affinity = 674.53,
         BaseLevel = 6,
@@ -2741,6 +3117,23 @@ local EnemyData = {
         Scans = 3,
         SpawnLevel = nil,
         Weapons = {"Karak Wraith"}
+    },
+    ["Orbis Exploiteur"] = {
+        Affinity = 1500,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Orbis Exploiteur",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Robot"] = 12000},
+        Image = "OrbisExploiteur.png",
+        Introduced = "24.0",
+        Link = nil,
+        Name = "Orbis Exploiteur",
+        NameEN = "Exploiter Orb",
+        Regions = {"Vénus"},
+        Scans = 3,
+        SpawnLevel = 50,
+        Weapons = nil
     },
     ["Orbis Preneur de Profit"] = {
         Affinity = nil,
@@ -2952,6 +3345,27 @@ local EnemyData = {
         Weapons = nil
     },
     -- P
+    ["Pelna Cade"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Pelna Cade",
+        HealthTypes = {
+            ["Armure en Alliage"] = 50,
+            ["Bouclier"] = 2500,
+            ["Chair"] = 1000
+        },
+        Image = "Pelna Cade.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Pelna Cade",
+        NameEN = "Pelna Cade",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
     ["Phorid"] = {
         Affinity = 3500,
         BaseLevel = 1,
@@ -3230,6 +3644,27 @@ local EnemyData = {
         Scans = 20,
         Weapons = nil
     },
+    ["Rana Del"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Rana Del",
+        HealthTypes = {
+            ["Armure en Alliage"] = 50,
+            ["Bouclier"] = 2500,
+            ["Chair"] = 1000
+        },
+        Image = "Rana Del.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Rana Del",
+        NameEN = "Rana Del",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = {"Glaxion"}
+    },
     ["Ranger"] = {
         Affinity = 200,
         BaseLevel = 1,
@@ -3280,6 +3715,27 @@ local EnemyData = {
         Scans = 5,
         SpawnLevel = nil,
         Weapons = {"Quanta"}
+    },
+    ["Raptor RX"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Raptor RX",
+        HealthTypes = {
+            ["Armure en Alliage"] = 50,
+            ["Bouclier"] = 2500,
+            ["Robot"] = 1000
+        },
+        Image = "Raptor RX.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Raptor RX",
+        NameEN = "Raptor RX",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = nil
     },
     ["Raptor SX d'Élite Terra"] = {
         Affinity = nil,
@@ -3527,6 +3983,22 @@ local EnemyData = {
         Scans = 5,
         Weapons = nil
     },
+    ["Saxum Rex Deimos"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Saxum Deimos",
+        HealthTypes = {["Fossilisé"] = 1200, ["Tendon Infesté"] = 200},
+        Image = "FemurAssassinateTargetAvatar.png",
+        Introduced = "29.0",
+        Link = nil,
+        Name = "Saxum Rex Deimos",
+        NameEN = "Deimos Saxum Rex",
+        Regions = {"Deimos"},
+        Scans = 3,
+        Weapons = nil
+    },
     ["Scorpion"] = {
         Affinity = 145.06,
         BaseLevel = 10,
@@ -3667,6 +4139,22 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = nil
     },
+    ["Symbilyste"] = {
+        Affinity = nil,
+        BaseLevel = 10,
+        Capacities = nil,
+        Faction = "Sentient",
+        Family = "Symbilyste",
+        HealthTypes = {["Armure en Ferrite"] = 300, ["Robot"] = 1000},
+        Image = "Symbilyst.png",
+        Introduced = "27.0",
+        Link = nil,
+        Name = "Symbilyste",
+        NameEN = "Symbilyst",
+        Regions = {"Proxima du Voile"},
+        Scans = 5,
+        Weapons = nil
+    },
     ["Symbilyste Anu"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -3803,6 +4291,27 @@ local EnemyData = {
         SpawnLevel = 50,
         Weapons = nil
     },
+    ["Tia Mayn"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Tia Mayn",
+        HealthTypes = {
+            ["Armure en Alliage"] = 50,
+            ["Bouclier"] = 2500,
+            ["Chair"] = 1000
+        },
+        Image = "Tia Mayn.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Tia Mayn",
+        NameEN = "Tia Mayn",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = {"Ohma"}
+    },
     ["Tourelle Senta"] = {
         Affinity = 50,
         BaseLevel = 1,
@@ -3859,6 +4368,27 @@ local EnemyData = {
     },
     -- U
     -- V
+    ["Ved Xol"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Ved Xol",
+        HealthTypes = {
+            ["Armure en Alliage"] = 50,
+            ["Bouclier"] = 2500,
+            ["Chair"] = 1000
+        },
+        Image = "Ved Xol.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Ved Xol",
+        NameEN = "Ved Xol",
+        Regions = nil,
+        Scans = 3,
+        SpawnLevel = nil,
+        Weapons = {"Opticor", "Prova"}
+    },
     ["Vem Tabook"] = {
         Affinity = 1500,
         BaseLevel = 1,
@@ -3948,6 +4478,27 @@ local EnemyData = {
         Regions = {"Néant"},
         Scans = 5,
         Weapons = {"Lanka"}
+    },
+    -- #
+    ["002-ER"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "002-ER",
+        HealthTypes = {
+            ["Armure en Alliage"] = 50,
+            ["Bouclier"] = 2500,
+            ["Robot"] = 1000
+        },
+        Image = "002-ER.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "002-ER",
+        NameEN = "002-ER",
+        Regions = nil,
+        Scans = 5,
+        Weapons = nil
     }
 }
 
