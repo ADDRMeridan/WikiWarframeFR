@@ -527,6 +527,22 @@ local EnemyData = {
         Scans = 3,
         Weapons = {"Kraken", "Mortier", "Sheev"}
     },
+    ["Bouffon Kuva"] = {
+        Affinity = nil,
+        BaseLevel = 10,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Bouffon",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 350},
+        Image = "Jester.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Bouffon Kuva",
+        NameEN = "Kuva Jester",
+        Regions = nil,
+        Scans = 20,
+        Weapons = nil
+    },
     ["Bourreau Dhurnam"] = {
         Affinity = nil,
         BaseLevel = nil,
@@ -548,6 +564,26 @@ local EnemyData = {
         Scans = 5,
         SpawnLevel = nil,
         Weapons = {"Doubles Hek", "Fragor"}
+    },
+    ["Boursier Redresseur"] = {
+        Affinity = 500,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Boursier Redresseur",
+        HealthTypes = {
+            ["Armure en Alliage"] = 200,
+            ["Bouclier"] = 700,
+            ["Robot"] = 1200
+        },
+        Image = "RiotMoaPrevention.png",
+        Introduced = "16.4",
+        Link = nil,
+        Name = "Boursier Redresseur",
+        NameEN = "Denial Bursa",
+        Regions = {"Vénus", "Neptune", "Pluton", "Europe", "Phobos", "Lua"},
+        Scans = 3,
+        Weapons = nil
     },
     ["Brachiolyste"] = {
         Affinity = nil,
@@ -600,6 +636,28 @@ local EnemyData = {
         Scans = 3,
         SpawnLevel = 1,
         Weapons = nil
+    },
+    ["Capitaine Vor"] = {
+        Affinity = 1500,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Capitaine Vor",
+        HealthTypes = {
+            ["Armure en Alliage"] = 250,
+            ["Bouclier"] = 900,
+            ["Chair Clonée"] = 900
+        },
+        Icon = "CaptainVor_sigil.png",
+        Image = "Captain VorIcon.png",
+        Introduced = "Vanilla",
+        Link = nil,
+        Name = "Capitaine Vor",
+        NameEN = "Captain Vor",
+        Regions = {"Mercure", "Cérès"},
+        Scans = 3,
+        SpawnLevel = 10,
+        Weapons = {"Seer", "Cronus"}
     },
     ["Carabus"] = {
         Affinity = nil,
@@ -683,6 +741,118 @@ local EnemyData = {
         Regions = nil,
         Scans = 3,
         Weapons = nil
+    },
+    ["Chercheur"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Chercheur",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 100},
+        Image = "SeekerDE.png",
+        Introduced = "6.3",
+        Link = nil,
+        Name = "Chercheur",
+        NameEN = "Seeker",
+        Regions = nil,
+        Scans = 5,
+        Weapons = {"Kraken", "Sheev"}
+    },
+    ["Chercheur Aride"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Chercheur",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 100},
+        Image = "DesertGrineerMarinePistolAvatar.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Chercheur Aride",
+        NameEN = "Arid Seeker",
+        Regions = nil,
+        Scans = 5,
+        Weapons = {"Viper", "Sheev"}
+    },
+    ["Chercheur Drekar"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Chercheur",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 100},
+        Image = "SeaLabHeavySeeker.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Chercheur Drekar",
+        NameEN = "Drekar Seeker",
+        Regions = nil,
+        Scans = 5,
+        Weapons = {"Viper", "Sheev"}
+    },
+    ["Chercheur Frontalier"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Chercheur",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 100},
+        Image = "ForestSeeker.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Chercheur Frontalier",
+        NameEN = "Frontier Seeker",
+        Regions = {"Terre"},
+        Scans = 5,
+        Weapons = {"Viper", "Sheev"}
+    },
+    ["Chercheur Ivoire"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Chercheur",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 100},
+        Image = "EidolonGrineerMarinePistol.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Chercheur Ivoire",
+        NameEN = "Tusk Seeker",
+        Regions = {"Terre"},
+        Scans = 5,
+        Weapons = {"Kraken", "Sheev"}
+    },
+    ["Chercheur Kuva"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Chercheur",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 100},
+        Image = "KuvaSeeker.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Chercheur Kuva",
+        NameEN = "Kuva Seeker",
+        Regions = {"Forteresse Kuva"},
+        Scans = 5,
+        Weapons = {"Kraken", "Sheev"}
+    },
+    ["Chercheur Nightwatch"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Chercheur",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 100},
+        Image = "Chercheur Nightwatch.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Chercheur Nightwatch",
+        NameEN = "Nightwatch Seeker",
+        Regions = nil,
+        Scans = 5,
+        Weapons = {"Marelok", "Sheev"}
     },
     ["Chroma Infesté"] = {
         Affinity = nil,
@@ -951,6 +1121,26 @@ local EnemyData = {
         Scans = 5,
         Weapons = nil
     },
+    ["Corvette"] = {
+        Affinity = "100",
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Corvette",
+        HealthTypes = {
+            ["Armure en Ferrite"] = 75,
+            ["Bouclier"] = 100,
+            ["Robot"] = 100
+        },
+        Image = "CrpShipFlak2.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Corvette",
+        NameEN = "Corvette",
+        Regions = {"Vénus", "Mars", "Jupiter", "Neptune"},
+        Scans = 10,
+        Weapons = nil
+    },
     ["Coureur Volatile"] = {
         Affinity = 50,
         BaseLevel = 1,
@@ -1044,6 +1234,23 @@ local EnemyData = {
         Scans = 3,
         SpawnLevel = nil,
         Weapons = nil
+    },
+    ["Déchiqueteur Kuva"] = {
+        Affinity = 100,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Gantelet Énergétique",
+        HealthTypes = {["Armure en Ferrite"] = 5, ["Chair Clonée"] = 100},
+        Image = "KuvaPowerClaw.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Déchiqueteur Kuva",
+        NameEN = "Kuva Powerclaw",
+        Regions = {"Forteresse Kuva"},
+        Scans = 10,
+        SpawnLevel = nil,
+        Weapons = {"Ripkas"}
     },
     ["Diploïde Commun"] = {
         Affinity = nil,
@@ -1175,6 +1382,54 @@ local EnemyData = {
         Regions = {"Vénus"},
         Scans = 3,
         Weapons = {"Supra Vandal"}
+    },
+    ["Draga"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Draga",
+        HealthTypes = {["Armure en Ferrite"] = 10, ["Chair Clonée"] = 120},
+        Image = "FrogLancer.png",
+        Introduced = "17.0",
+        Link = nil,
+        Name = "Draga",
+        NameEN = "Draga",
+        Regions = {"Uranus"},
+        Scans = 20,
+        Weapons = {"Harpak"}
+    },
+    ["Draga Choc"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Draga Choc",
+        HealthTypes = {["Armure en Ferrite"] = 10, ["Chair Clonée"] = 150},
+        Image = "DragaShock.png",
+        Introduced = "17.0",
+        Link = nil,
+        Name = "Draga Choc",
+        NameEN = "Shock Draga",
+        Regions = {"Uranus"},
+        Scans = 20,
+        Weapons = {"Sydon"}
+    },
+    ["Draga Darek"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Draga Darek",
+        HealthTypes = {["Armure en Ferrite"] = 10, ["Chair Clonée"] = 130},
+        Image = "DragaDarek.png",
+        Introduced = "17.0",
+        Link = nil,
+        Name = "Draga Darek",
+        NameEN = "Darek Draga",
+        Regions = {"Uranus"},
+        Scans = 20,
+        Weapons = {"Kulstar"}
     },
     ["Drahk"] = {
         Affinity = 50,
@@ -1508,6 +1763,22 @@ local EnemyData = {
         Weapons = {"Karak", "Sheev"}
     },
     -- G
+    ["Gantelet Énergétique"] = {
+        Affinity = 100,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Gantelet Énergétique",
+        HealthTypes = {["Armure en Ferrite"] = 5, ["Chair Clonée"] = 100},
+        Image = "PowerfistDE.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Gantelet Énergétique",
+        NameEN = "Powerfist",
+        Regions = nil,
+        Scans = 10,
+        Weapons = {"Furax"}
+    },
     ["Garde"] = {
         Affinity = 100,
         BaseLevel = 10,
@@ -1629,6 +1900,26 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = nil
     },
+    ["Gox"] = {
+        Affinity = 250,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Gox",
+        HealthTypes = {
+            ["Armure en Ferrite"] = 500,
+            ["Bouclier"] = 250,
+            ["Robot"] = 350
+        },
+        Image = "Gox.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Gox",
+        NameEN = "Gox",
+        Regions = {"Neptune"},
+        Scans = 3,
+        Weapons = nil
+    },
     -- H
     ["Hellion"] = {
         Affinity = 250,
@@ -1737,7 +2028,7 @@ local EnemyData = {
         Weapons = {"Komorex"}
     },
     ["Homme d'Équipage"] = {
-        Affinity = 57.13,
+        Affinity = 50,
         BaseLevel = 1,
         Capacities = nil,
         Faction = "Corpus",
@@ -1770,6 +2061,23 @@ local EnemyData = {
         Scans = 5,
         Weapons = {"Supra"}
     },
+    ["Homme d'Équipage Juno"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Corpus",
+        Family = "Homme d'Équipage",
+        HealthTypes = {["Chair"] = 60, ["Bouclier"] = 150},
+        Image = "Homme d'Équipage Juno.png",
+        Introduced = "28.0",
+        Link = nil,
+        Name = "Homme d'Équipage Juno",
+        NameEN = "Juno Crewman",
+        Regions = nil,
+        Scans = 20,
+        SpawnLevel = nil,
+        Weapons = nil
+    },
     ["Homme d'Équipage Prod"] = {
         Affinity = 57.13,
         BaseLevel = 1,
@@ -1787,6 +2095,27 @@ local EnemyData = {
         Scans = 20,
         SpawnLevel = nil,
         Weapons = {"Prova"}
+    },
+    ["Hydrolyste Eidolon"] = {
+        Affinity = 500,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Sentient",
+        Family = "Hydrolyste Eidolon",
+        HealthTypes = {
+            ["Armure en Alliage"] = 150,
+            ["Bouclier"] = 2000,
+            ["Robot"] = 12000
+        },
+        Image = "Hydrolyst.png",
+        Introduced = "22.12",
+        Link = nil,
+        Name = "Hydrolyste Eidolon",
+        NameEN = "Eidolon Hydrolyst",
+        Regions = {"Terre"},
+        Scans = 3,
+        SpawnLevel = 60,
+        Weapons = nil
     },
     ["Hyena Cinderthresh"] = {
         Affinity = nil,
@@ -2155,6 +2484,23 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = {"Grakata", "Sheev"}
     },
+    ["Lancier Corrompu"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Orokin",
+        Family = "Lancier Corrompu",
+        HealthTypes = {["Armure en Alliage"] = 200, ["Chair Clonée"] = 60},
+        Image = "OrokinRifleLancerAvatar.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Lancier Corrompu",
+        NameEN = "Corrupted Lancer",
+        Regions = {"Néant"},
+        Scans = 20,
+        SpawnLevel = nil,
+        Weapons = {"Dera", "Sheev"}
+    },
     ["Lancier Drekar"] = {
         Affinity = 50,
         BaseLevel = 1,
@@ -2191,6 +2537,42 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = {"Hind", "Sheev"}
     },
+    ["Lancier d'Élite Aride"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = {"Grenade à Plasma"},
+        Faction = "Grineer",
+        Family = "Lancier d'Élite",
+        HealthTypes = {["Armure en Alliage"] = 200, ["Chair Clonée"] = 150},
+        Image = "DesertEliteRifleLancerAvatar.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Lancier d'Élite Aride",
+        NameEN = "Elite Arid Lancer",
+        Regions = nil,
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = {"Hind", "Sheev"}
+    },
+    ["Lancier d'Élite Frontalier"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = {"Grenade à Plasma"},
+        Faction = "Grineer",
+        Family = "Lancier d'Élite",
+        HealthTypes = {["Armure en Alliage"] = 200, ["Chair Clonée"] = 150},
+        Image = "ForestEliteLancer.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Lancier d'Élite Frontalier",
+        NameEN = "Elite Frontier Lancer",
+        Regions = {"Terre"},
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = {"Karak", "Sheev"}
+    },
     ["Lancier d'Élite Gyre"] = {
         Affinity = 150,
         BaseLevel = 15,
@@ -2208,6 +2590,60 @@ local EnemyData = {
         Scans = 5,
         SpawnLevel = nil,
         Weapons = {"Quartakk"}
+    },
+    ["Lancier d'Élite Ivoire"] = {
+        Affinity = 150,
+        BaseLevel = 1,
+        Capacities = {"Grenade de Glace"},
+        Faction = "Grineer",
+        Family = "Lancier d'Élite",
+        HealthTypes = {["Armure en Alliage"] = 200, ["Chair Clonée"] = 150},
+        Image = "EidolonEliteRifleLancer.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Lancier d'Élite Ivoire",
+        NameEN = "Tusk Elite Lancer",
+        Regions = {"Terre"},
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = {"Grinlok", "Sheev"}
+    },
+    ["Lancier d'Élite Kosma"] = {
+        Affinity = 150,
+        BaseLevel = 15,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Lancier d'Élite",
+        HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 1000},
+        Icon = nil,
+        Image = "KosmaEliteLancer.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Lancier d'Élite Kosma",
+        NameEN = "Kosma Elite Lancer",
+        Regions = {"Proxima de la Terre"},
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = {"Quartakk"}
+    },
+    ["Lancier d'Élite Kuva"] = {
+        Affinity = 150,
+        BaseLevel = 15,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Lancier d'Élite",
+        HealthTypes = {["Armure en Alliage"] = 200, ["Chair Clonée"] = 150},
+        Image = "FortressEliteRifleLancer.png",
+        Icon = nil,
+        Introduced = nil,
+        Link = nil,
+        Name = "Lancier d'Élite Kuva",
+        NameEN = "Kuva Elite Lancer",
+        Regions = {"Forteresse Kuva"},
+        Scans = 5,
+        SpawnLevel = nil,
+        Weapons = {"Grinlok", "Sheev"}
     },
     ["Lancier Frontalier"] = {
         Affinity = 50,
@@ -2479,6 +2915,38 @@ local EnemyData = {
         Scans = 3,
         Weapons = {"Lance-flammes Corpus"}
     },
+    ["Maniaque"] = {
+        Affinity = 500,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Maniaque",
+        HealthTypes = {["Armure en Ferrite"] = 25, ["Chair Clonée"] = 350},
+        Image = "GrineerManic.png",
+        Introduced = "16.0",
+        Link = nil,
+        Name = "Maniaque",
+        NameEN = "Manic",
+        Regions = nil,
+        Scans = 3,
+        Weapons = nil
+    },
+    ["Maniaque Drekar"] = {
+        Affinity = 500,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Maniaque",
+        HealthTypes = {["Armure en Ferrite"] = 25, ["Chair Clonée"] = 450},
+        Image = "SeaLabManic.png",
+        Introduced = "17.0",
+        Link = nil,
+        Name = "Maniaque Drekar",
+        NameEN = "Drekar Manic",
+        Regions = {"Uranus"},
+        Scans = 3,
+        Weapons = nil
+    },
     ["Mantalyste Anu"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -2566,6 +3034,23 @@ local EnemyData = {
         Name = "Massacreur Aride",
         NameEN = "Arid Butcher",
         Regions = nil,
+        Scans = 20,
+        SpawnLevel = nil,
+        Weapons = {"Hachoir"}
+    },
+    ["Massacreur Corrompu"] = {
+        Affinity = 50,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Orokin",
+        Family = "Massacreur Corrompu",
+        HealthTypes = {["Armure en Ferrite"] = 5, ["Chair Clonée"] = 100},
+        Image = "MassacreurCorrompu.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Massacreur Corrompu",
+        NameEN = "Corrupted Butcher",
+        Regions = {"Néant"},
         Scans = 20,
         SpawnLevel = nil,
         Weapons = {"Hachoir"}
@@ -2756,6 +3241,22 @@ local EnemyData = {
         Regions = {"Neptune"},
         Scans = 3,
         SpawnLevel = nil,
+        Weapons = nil
+    },
+    ["Mimique"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Sentient",
+        Family = "Mimique",
+        HealthTypes = {["Armure en Ferrite"] = 125, ["Robot"] = 800},
+        Image = "MimicSentient.png",
+        Introduced = "23.0",
+        Link = nil,
+        Name = "Mimique",
+        NameEN = "Mimic",
+        Regions = nil,
+        Scans = 5,
         Weapons = nil
     },
     ["MOA Amalgame"] = {
@@ -3401,6 +3902,23 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = {"Tonkor"}
     },
+    ["Pilote Dargyn"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Pilote Dargyn",
+        HealthTypes = {["Armure en Ferrite"] = 100, ["Chair Clonée"] = 120},
+        Image = "Pilote Dargyn.png",
+        Introduced = "22.0",
+        Link = nil,
+        Name = "Pilote Dargyn",
+        NameEN = "Dargyn Pilot",
+        Regions = {"Terre"},
+        Scans = 10,
+        SpawnLevel = nil,
+        Weapons = {"Kraken"}
+    },
     ["Pilote de Gokstad Kosma"] = {
         Affinity = 50,
         BaseLevel = 1,
@@ -3607,6 +4125,26 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = nil
     },
+    ["Rampant"] = {
+        Affinity = 35,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Infesté",
+        Family = "Rampant",
+        HealthTypes = {["Chair Infestée"] = 50},
+        Image = "Rampant.png",
+        Introduced = nil,
+        Link = nil,
+        Name = "Rampant",
+        NameEN = "Crawler",
+        Regions = {
+            "Mercure", "Vénus", "Terre", "Mars", "Jupiter", "Saturne",
+            "Uranus", "Neptune", "Cérès", "Eris", "Sedna", "Europe", "Phobos",
+            "Deimos"
+        },
+        Scans = 30,
+        Weapons = nil
+    },
     ["Rampant Nauséeux"] = {
         Affinity = 57.13,
         BaseLevel = 1,
@@ -3765,7 +4303,7 @@ local EnemyData = {
             ["Bouclier"] = 1000,
             ["Robot"] = 750
         },
-        Image = "Raptor SX Terra.png",
+        Image = "Raptor_SX_Terra.png",
         Introduced = "24.0",
         Link = nil,
         Name = "Raptor SX Terra",
@@ -3890,6 +4428,22 @@ local EnemyData = {
         NameEN = "Roller Sentry",
         Regions = nil,
         Scans = 10,
+        Weapons = nil
+    },
+    ["Roller Sentinelle Kosma"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = "Roller Sentinelle",
+        HealthTypes = {["Armure en Ferrite"] = 100, ["Machines"] = 200},
+        Image = "KosmaRoller.png",
+        Introduced = "27.0",
+        Link = nil,
+        Name = "Roller Sentinelle Kosma",
+        NameEN = "Kosma Roller Sentry",
+        Regions = nil,
+        Scans = 20,
         Weapons = nil
     },
     ["Ropalolyste"] = {
@@ -4095,6 +4649,28 @@ local EnemyData = {
         SpawnLevel = nil,
         Weapons = nil
     },
+    ["Spectre Feyarch"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = {
+            "Châtiment", "Bénédiction Terrestre", "Renouveau", "Jugement"
+        },
+        Faction = "Orokin",
+        Family = "Spectre Feyarch",
+        HealthTypes = {
+            ["Armure en Ferrite"] = 200,
+            ["Bouclier"] = 1000,
+            ["Chair"] = 2250
+        },
+        Image = "FeyarchOberon.png",
+        Introduced = "TSG",
+        Link = nil,
+        Name = "Spectre Feyarch",
+        NameEN = "Feyarch Specter",
+        Regions = {"Terre"},
+        Scans = 1,
+        Weapons = nil
+    },
     ["Spectre Orphid"] = {
         Affinity = nil,
         BaseLevel = 1,
@@ -4108,7 +4684,7 @@ local EnemyData = {
         },
         Image = "Orphid.png",
         Icon = nil,
-        Introduced = nil,
+        Introduced = "TSG",
         Link = nil,
         Name = "Spectre Orphid",
         NameEN = "Orphid Specter",
@@ -4130,13 +4706,35 @@ local EnemyData = {
         },
         Image = "Orphid.png",
         Icon = nil,
-        Introduced = nil,
+        Introduced = "TSG",
         Link = "Spectre Orphid",
         Name = "Spectre Orphid (mue)",
         NameEN = "Orphid Specter",
         Regions = {"Terre"},
         Scans = nil,
         SpawnLevel = nil,
+        Weapons = nil
+    },
+    ["Spectre Valet"] = {
+        Affinity = nil,
+        BaseLevel = 25,
+        Capacities = {
+            "Leurre", "Invisibilité", "Transposition", "ésarmement Radial"
+        },
+        Faction = "Orokin",
+        Family = "Spectre Valet",
+        HealthTypes = {
+            ["Armure en Ferrite"] = 200,
+            ["Bouclier"] = 1000,
+            ["Chair"] = 1250
+        },
+        Image = "Valet.png",
+        Introduced = "TSG",
+        Link = nil,
+        Name = "Spectre Valet",
+        NameEN = "Knave Specter",
+        Regions = {"Terre"},
+        Scans = 1,
         Weapons = nil
     },
     ["Symbilyste"] = {
