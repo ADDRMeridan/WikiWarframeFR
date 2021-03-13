@@ -2376,24 +2376,26 @@ function p.getStanceWeaponList(frame)
 
     local stancePvP = Mod._getValue(Stance.Name, "PVP")
     local weaps = getMeleeWeapons(Stance.Class, stancePvP)
-    local result = ''
+    local ret = {}
 
-    for i, weap in Shared.skpairs(weaps) do
-        if (weap.Name ~= 'Désarmé') then
-            result = result .. '\n*' ..
-                         TT._tooltipText(weap.Name, 'Weapon', nil, stancePvP)
-            if (weap.StancePolarity ~= nil) then
-                local weapStancePolIcon = Icon._Pol(weap.StancePolarity)
-                local modPolIcon = Icon._Pol(
-                                       Mod._getValue(Stance.Name, "POLARITY"))
-                if (weapStancePolIcon == modPolIcon) then
-                    result = result .. " ✓"
+    for _, weap in ipairs(weaps) do
+        if(weap.Name ~= 'Désarmé') then
+            if(TT.checkItemExist(weap.Name, 'Weapon', stancePvP)) then
+                table.insert(ret, '\n* ')
+                table.insert(ret, TT._tooltipText(weap.Name, 'Weapon', nil, stancePvP))
+                if (weap.StancePolarity ~= nil) then
+                    local weapStancePolIcon = Icon._Pol(weap.StancePolarity)
+                    local modPolIcon = Icon._Pol(
+                                           Mod._getValue(Stance.Name, "POLARITY"))
+                    if (weapStancePolIcon == modPolIcon) then
+                        table.insert(ret, " ✓")
+                    end
                 end
             end
         end
     end
 
-    return result
+    return table.concat(ret)
 end
 
 -- Returns a list of stances for a weapon
