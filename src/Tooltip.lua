@@ -1,7 +1,7 @@
 -- Module de centralisation des tooltipText, les tooltip en eux meme sont dans leur module respectif
 local p = {}
 
-local Shared = require('Module:Shared')
+local SHARED = require('Module:Shared')
 
 -- =============================================================================
 -- Outils tooltip
@@ -68,90 +68,105 @@ end
 -- local function to build an object link
 local function getObjLink(obj, newName, namespace)
 
-    local ret = '[['
-    if (namespace ~= nil) then ret = ret .. namespace .. ':' end
+    local ret = {'[['}
+    if (namespace ~= nil) then
+        table.insert(ret, namespace)
+        table.insert(ret, ':')
+    end
     if (obj.Link ~= nil) then
-        ret = ret .. obj.Link .. '|'
+        table.insert(ret, obj.Link)
     else
-        ret = ret .. obj.Name .. '|'
+        table.insert(ret, obj.Name)
     end
+    table.insert(ret, '|')
     if (newName ~= nil) then
-        ret = ret .. newName
+        table.insert(ret, newName)
     else
-        ret = ret .. obj.Name
+        table.insert(ret, obj.Name)
     end
-    ret = ret .. ']]'
+    table.insert(ret, ']]')
 
-    return ret
+    return table.concat(ret)
 end
 
 -- Returns the table containing the asked type of objects, the module name, the tooltip class and the image size
 local function getObjDB(objType, conclave)
 
+    local objDB = nil
     local retTable = nil
     local retDBName = nil
     local retTooltipClass = nil
 
-    local objDB = nil
-    if (objType == 'Ability') then
-        if (conclave) then
-            retDBName = 'Module:Ability/Conclave/data'
-        else
-            retDBName = 'Module:Ability/data'
+    local objDBSwitch = {
+        ["Ability"] = function()
+            if (conclave) then
+                retDBName = 'Module:Ability/Conclave/data'
+            else
+                retDBName = 'Module:Ability/data'
+            end
+            objDB = mw.loadData(retDBName)
+            retTable = objDB['Ability']
+            retTooltipClass = 'ability-tooltip'
+        end,
+        ["Arcane"] = function()
+            retDBName = 'Module:Arcane/data'
+            objDB = mw.loadData(retDBName)
+            retTable = objDB['Arcanes']
+            retTooltipClass = 'arcane-tooltip'
+        end,
+        ["Avionic"] = function()
+            retDBName = 'Module:Avionics/data'
+            objDB = mw.loadData(retDBName)
+            retTable = objDB
+            retTooltipClass = 'avionic-tooltip'
+        end,
+        ["Enemy"] = function()
+            retDBName = 'Module:Enemy/data'
+            objDB = mw.loadData(retDBName)
+            retTable = objDB
+            retTooltipClass = 'enemy-tooltip'
+        end,
+        ["Mod"] = function()
+            retDBName = 'Module:Mods/data'
+            objDB = mw.loadData(retDBName)
+            retTable = objDB['Mods']
+            retTooltipClass = 'mod-tooltip'
+        end,
+        ["Pet"] = function()
+            retDBName = 'Module:Pet/data'
+            objDB = mw.loadData(retDBName)
+            retTable = objDB
+            retTooltipClass = 'pet-tooltip'
+        end,
+        ["Relic"] = function()
+            retDBName = 'Module:Void/data'
+            objDB = mw.loadData(retDBName)
+            retTable = objDB['Relics']
+            retTooltipClass = 'relic-tooltip'
+        end,
+        ["Warframe"] = function()
+            if (conclave) then
+                retDBName = 'Module:Warframes/Conclave/data'
+            else
+                retDBName = 'Module:Warframes/data'
+            end
+            objDB = mw.loadData(retDBName)
+            retTable = objDB['Warframes']
+            retTooltipClass = 'warframe-tooltip'
+        end,
+        ["Weapon"] = function()
+            if (conclave) then
+                retDBName = 'Module:Weapons/Conclave/data'
+            else
+                retDBName = 'Module:Weapons/data'
+            end
+            objDB = mw.loadData(retDBName)
+            retTable = objDB['Weapons']
+            retTooltipClass = 'weapon-tooltip'
         end
-        objDB = mw.loadData(retDBName)
-        retTable = objDB['Ability']
-        retTooltipClass = 'ability-tooltip'
-    elseif (objType == 'Arcane') then
-        retDBName = 'Module:Arcane/data'
-        objDB = mw.loadData(retDBName)
-        retTable = objDB['Arcanes']
-        retTooltipClass = 'arcane-tooltip'
-    elseif (objType == 'Avionic') then
-        retDBName = 'Module:Avionics/data'
-        objDB = mw.loadData(retDBName)
-        retTable = objDB
-        retTooltipClass = 'avionic-tooltip'
-    elseif (objType == 'Enemy') then
-        retDBName = 'Module:Enemy/data'
-        objDB = mw.loadData(retDBName)
-        retTable = objDB
-        retTooltipClass = 'enemy-tooltip'
-    elseif (objType == 'Mod') then
-        retDBName = 'Module:Mods/data'
-        objDB = mw.loadData(retDBName)
-        retTable = objDB['Mods']
-        retTooltipClass = 'mod-tooltip'
-    elseif (objType == 'Pet') then
-        retDBName = 'Module:Pet/data'
-        objDB = mw.loadData(retDBName)
-        retTable = objDB
-        retTooltipClass = 'pet-tooltip'
-    elseif (objType == 'Relic') then
-        retDBName = 'Module:Void/data'
-        objDB = mw.loadData(retDBName)
-        retTable = objDB['Relics']
-        retTooltipClass = 'relic-tooltip'
-    elseif (objType == 'Warframe') then
-        if (conclave) then
-            retDBName = 'Module:Warframes/Conclave/data'
-        else
-            retDBName = 'Module:Warframes/data'
-        end
-        objDB = mw.loadData(retDBName)
-        retTable = objDB['Warframes']
-        retTooltipClass = 'warframe-tooltip'
-    elseif (objType == 'Weapon') then
-        if (conclave) then
-            retDBName = 'Module:Weapons/Conclave/data'
-        else
-            retDBName = 'Module:Weapons/data'
-        end
-        objDB = mw.loadData(retDBName)
-        retTable = objDB['Weapons']
-        retTooltipClass = 'weapon-tooltip'
-    end
-    -- Add the other object database
+    }
+    local getData = objDBSwitch[objType]
+    if (getData ~= nil) then getData() end
 
     return retTable, retDBName, retTooltipClass
 end
@@ -160,25 +175,30 @@ end
 local function getObjIcon(obj, objType, conclave, imgSize)
     -- Recover image
     local image = nil
-    if (objType == 'Ability') then
-        image = obj.Icon
-    elseif (objType == 'Enemy') then
-        image = obj.Icon or obj.Image
-    elseif (objType == 'Mod') then
-        image = 'Icon Mods.png'
-    elseif (objType == 'Pet') then
-        image = obj.Icon or obj.Image
-    elseif (objType == 'Relic') then
-        image =
-            mw.loadData('Module:Icon/data')["Objets"]["Relique " .. obj.Tier]
-                .icon
-    elseif (objType == 'Warframe') then
-        image = obj.Portrait
-    else
+
+    local imageSwitch = {
+        ["Ability"] = function() return obj.Icon end,
+        ["Enemy"] = function()
+            return obj.Icon or obj.Image or "Unknown Boss.png"
+        end,
+        ["Mod"] = function() return 'Icon Mods.png' end,
+        ["Pet"] = function() return obj.Icon or obj.Image end,
+        ["Relic"] = function()
+            return mw.loadData('Module:Icon/data')["Objets"]["Relique " ..
+                       obj.Tier].icon
+        end,
+        ["Warframe"] = function() return obj.Portrait end
+    }
+
+    local getData = imageSwitch[objType]
+    if (getData == nil) then
         image = obj.Image
+    else
+        image = getData()
     end
+
     -- Set a default image if nul
-    if (image == nil) then image = 'Panel.png' end
+    if (image == nil) then image = SHARED.getDefaultImg() end
     -- Check imgSize
     if (imgSize == nil) then imgSize = 'x19px' end
     local ret = {}
@@ -188,7 +208,9 @@ local function getObjIcon(obj, objType, conclave, imgSize)
     table.insert(ret, imgSize)
     table.insert(ret, '|link=')
     if (objType == 'Relic') then
-        table.insert(ret, obj.Tier .. " " .. obj.Name)
+        table.insert(ret, obj.Tier)
+        table.insert(ret, " ")
+        table.insert(ret, obj.Name)
     else
         if (conclave) then table.insert(ret, 'Conclave:') end
         if (obj.Link ~= nil) then
@@ -206,30 +228,26 @@ local function getObjImage(obj, objType, conclave, imgSize)
 
     -- Recover image
     local image = nil
-    if (objType == 'Ability') then
-        image = obj.Icon
-    elseif (objType == 'Relic') then
-        image =
-            mw.loadData('Module:Icon/data')["Objets"]["Relique " .. obj.Tier]
-                .icon
-    elseif (objType == 'Warframe') then
-        image = obj.Portrait
-    else
-        image = obj.Image
-    end
+    local imageSwitch = {
+        ["Ability"] = obj.Icon,
+        ["Relics"] = mw.loadData('Module:Icon/data')["Objets"]["Relique " ..
+            obj.Tier].icon,
+        ["Warframe"] = obj.Portrait
+    }
+
+    image = imageSwitch[objType] or obj.Image
 
     -- Set a default image if nul
     if (image == nil) then
-        if (objType == 'Mod') then
-            image = 'Mod_inconnu.png'
-        else
-            image = 'Panel.png'
-        end
+        local defaultImageSwitch = {
+            ["Enemy"] = 'Unknown Boss.png',
+            ["Mod"] = 'Mod_inconnu.png'
+        }
+        image = defaultImageSwitch[objType] or SHARED.getDefaultImg()
     end
     -- Check imgSize
     if (imgSize == nil) then imgSize = 'x19px' end
-    local ret = {}
-    table.insert(ret, '[[File:')
+    local ret = {'[[File:'}
     table.insert(ret, image)
     table.insert(ret, '|')
     table.insert(ret, imgSize)
@@ -255,7 +273,7 @@ local function getObj(objDB, objName, objType)
     local obj = objDB[objName]
     -- If object wasn't found, try again with the object.Name
     if (obj == nil) then
-        local keySet = Shared.getKeySet(objDB)
+        local keySet = SHARED.getKeySet(objDB)
         local nbObjects = #keySet
         local i = 1
         if (objType ~= 'Relic') then
@@ -267,8 +285,9 @@ local function getObj(objDB, objName, objType)
             end
         else
             -- Specific management for Relics
-            local relicTier = Shared.splitString(objName, " ")[1]
-            local relicName = Shared.splitString(objName, " ")[2]
+            local tmp = SHARED.splitString(objName, " ")
+            local relicTier = tmp[1]
+            local relicName = tmp[2]
             while (i <= nbObjects and obj == nil) do
                 local tmp = objDB[keySet[i]]
                 if (tmp.Name == relicName and tmp.Tier == relicTier) then
@@ -302,13 +321,13 @@ function p._tooltipText(objName, objType, newName, conclave, iconless, imgOnly,
         -- Print Error message
         return
             '<span style="color:red;">Error:</span> Please enter an object name.[[' ..
-                'Category:Template Error]]'
+                'Category:Tooltip Error]]'
     end
     if (objType == nil or objType == '') then
         -- Print Error message
         return
             '<span style="color:red;">Error:</span> Please enter an object type.[[' ..
-                'Category:Template Error]]'
+                'Category:Tooltip Error]]'
     end
     -- Format input parameters
     if (newName == '') then newName = nil end
@@ -320,7 +339,7 @@ function p._tooltipText(objName, objType, newName, conclave, iconless, imgOnly,
     -- Check if data has been found
     if (objDB == nil) then
         return '<span style="color:red;">Error:</span> Unknow object type.[[' ..
-                   'Category:Template Error]]'
+                   'Category:Tooltip Error]]'
     end
 
     -- Search object
@@ -330,13 +349,14 @@ function p._tooltipText(objName, objType, newName, conclave, iconless, imgOnly,
         -- Print Error message
         return '<span style="color:red;">Error:</span> The object named "' ..
                    objName .. '" couldn\'t be found in [[' .. objDBName ..
-                   ']].[[' .. 'Category:Template Error]]'
+                   ']].[[' .. 'Category:Tooltip Error]]'
     end
     -- Build tooltip span caller
-    local ret = '<span class="' .. objTooltipClass .. '" data-param="' ..
-                    objName .. '"'
-    if (conclave) then ret = ret .. ' data-param2="true"' end
-    ret = ret .. ' style="white-space:pre;">'
+    local ret = {
+        '<span class="', objTooltipClass, '" data-param="', objName, '"'
+    }
+    if (conclave) then table.insert(ret, ' data-param2="true"') end
+    table.insert(ret, ' style="white-space:pre;">')
     if (not imgOnly) then
         -- Build link text
         local textLink = nil
@@ -345,29 +365,31 @@ function p._tooltipText(objName, objType, newName, conclave, iconless, imgOnly,
         else
             if (objType ~= 'Relic') then
                 -- Classic management
-                textLink = getObjLink(obj, newName, nil)
+                table.insert(ret, getObjLink(obj, newName, nil))
             else
                 -- Specific management for Relics
-                textLink = '[[' .. objName
+                table.insert(ret, '[[')
+                table.insert(ret, objName)
                 if (newName ~= nil) then
-                    textLink = textLink .. '|' .. newName
+                    table.insert(ret, '|')
+                    table.insert(ret, newName)
                 end
-                textLink = textLink .. ']]'
+                table.insert(ret, ']]')
             end
         end
-        ret = ret .. textLink
     end
     -- Add image
     if (not iconless) then
         if (not imgOnly) then
-            ret = ret .. ' ' .. getObjIcon(obj, objType, conclave, imgSize)
+            table.insert(ret, ' ')
+            table.insert(ret, getObjIcon(obj, objType, conclave, imgSize))
         else
-            ret = ret .. getObjImage(obj, objType, conclave, imgSize)
+            table.insert(ret, getObjImage(obj, objType, conclave, imgSize))
         end
     end
-    ret = ret .. '</span>'
+    table.insert(ret, '</span>')
 
-    return ret
+    return table.concat(ret)
 end
 
 function p._tooltipIcon(objName, objType, iconSize)
@@ -384,7 +406,7 @@ function p.checkItemExist(itemName, itemType, conclave)
     local objDB, objDBName, objTooltipClass = getObjDB(itemType, conclave)
     -- Check if data has been found
     if (objDB == nil) then
-        return Shared.printModuleError('Unknow object type.', 'checkItemExists')
+        return SHARED.printModuleError('Unknow object type.', 'checkItemExists')
     end
 
     -- Search object
