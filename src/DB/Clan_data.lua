@@ -27,6 +27,17 @@ local clanData = {
             Recruting = true,
             Size = "Ombre"
         },
+        ["ALLIANCE EUROCAN"] = {
+            LastUpdate = "2021-01-23",
+            Leaders = {"Anubis-3707", "Mbylou", "Red_rab"},
+            Logo = "EUROCAN.png",
+            Members = 19,
+            Name = "ALLIANCE EUROCAN",
+            Plateform = "PC",
+            Rank = 10,
+            Recruting = true,
+            Size = "Ombre"
+        },
         -- Clan - B
         ["Battaillons discret"] = {
             LastUpdate = "2019-11-19",
@@ -51,17 +62,6 @@ local clanData = {
             Size = "Ombre"
         },
         -- Clan - C
-        ["ORIGINE"] = {
-            LastUpdate = "2020-10-24",
-            Leaders = {"ChojinLegend", "oOStepTHOo"},
-            Logo = "Logo Clan ORIGINE.png",
-            Members = 26,
-            Name = "ORIGINE",
-            Plateform = "PS4",
-            Rank = 11,
-            Recruting = true,
-            Size = "Ombre"
-        },
         -- Clan - D
         -- Clan - E
         ["EAGLES LIGHT"] = {
@@ -116,10 +116,10 @@ local clanData = {
         -- Clan - K
         -- Clan - L
         ["La Confrérie"] = {
-            LastUpdate = "2020-10-05",
+            LastUpdate = "2021-03-16",
             Leaders = {"Messkoo", "chris325000"},
             Logo = "Yoq1aKX-lanczos3.png",
-            Members = 72,
+            Members = 60,
             Name = "La Confrérie",
             Plateform = "PC",
             Rank = nil,
@@ -182,7 +182,7 @@ local clanData = {
             Size = "Ombre"
         },
         ["LZass"] = {
-            LastUpdate = "2020-07-13",
+            LastUpdate = "2021-01-14",
             Leaders = {"Protideus"},
             Logo = "LZASS.png",
             Members = 950,
@@ -207,9 +207,9 @@ local clanData = {
         },
         -- Clan - O
         ["Olympus III"] = {
-            LastUpdate = "2020-10-06",
+            LastUpdate = "2021-02-08",
             Leaders = {"Lumi-Fury"},
-            Logo = "Olympus3.png",
+            Logo = "Olympus3-240px.png",
             Members = 8,
             Name = "Olympus III",
             Plateform = "PC",
@@ -217,14 +217,36 @@ local clanData = {
             Recruting = true,
             Size = "Fantôme"
         },
+        ["ORIGINE"] = {
+            LastUpdate = "2020-10-24",
+            Leaders = {"ChojinLegend", "oOStepTHOo"},
+            Logo = "Logo Clan ORIGINE.png",
+            Members = 75,
+            Name = "ORIGINE",
+            Plateform = "PS4",
+            Rank = 11,
+            Recruting = true,
+            Size = "Tempête"
+        },
         -- Clan - P
+        ["PatrouilleAlpha"] = {
+            LastUpdate = "2021-02-20",
+            Leaders = {"DjoomanDjee"},
+            Logo = "Alpha.png",
+            Members = 10,
+            Name = "PatrouilleAlpha",
+            Plateform = "PC",
+            Rank = 10,
+            Recruting = true,
+            Size = "Fantôme"
+        },
         -- Clan - Q
         -- Clan - R
         ["Ryunegades"] = {
-            LastUpdate = "2020-04-27",
-            Leaders = {"Jinritsu", "TREEREX248", "Nightmare200278"},
+            LastUpdate = "2021-01-30",
+            Leaders = {"Jinritsu"},
             Logo = "Logo_Ryunegades_MK5.png",
-            Members = 11,
+            Members = 8,
             Name = "Ryunegades",
             Plateform = "PC",
             Rank = 10,
@@ -235,10 +257,10 @@ local clanData = {
         -- Clan - T
         -- Clan - U
         ["Ultimate Union"] = {
-            LastUpdate = "2020-10-12",
+            LastUpdate = "2021-01-12",
             Leaders = {"SOHPredateur"},
             Logo = "Ultimate Union.jpg",
-            Members = 216,
+            Members = 202,
             Name = "Ultimate Union",
             Plateform = "PC",
             Rank = 10,
@@ -262,10 +284,30 @@ local clanData = {
         },
         -- Clan - V
         -- Clan - W
+        ["WINGED FORCE"] = {
+            LastUpdate = "2021-03-02",
+            Leaders = {"Ledjil"},
+            Logo = "Discord GIF - 1.gif",
+            Members = 30,
+            Name = "Winged Force",
+            Plateform = "PC",
+            Rank = 10,
+            Recruting = true,
+            Size = "Tempête"
+        },
+        ["WolfFamily_Gang"] = {
+            LastUpdate = "2020-12-10",
+            Leaders = {"Shisui9153, Laazy_gt"},
+            Logo = nil,
+            Members = 6,
+            Name = "WolfFamily_Gang",
+            Plateform = "PS4",
+            Rank = 3,
+            Recruting = true,
+            Size = "Fantôme"
+        },
         -- Clan - X
         -- Clan - Y
-        -- Clan - Z
-        -- Clan - #
         ["0pUs"] = {
             LastUpdate = "2019-02-17",
             Leaders = {"alexay68"},
@@ -274,6 +316,19 @@ local clanData = {
             Name = "0pUs",
             Plateform = "PC",
             Rank = 6,
+            Recruting = true,
+            Size = "Ombre"
+        },
+        -- Clan - Z
+        -- Clan - #
+        ["Kings of the fairies"] = {
+            LastUpdate = "13-12-2020",
+            Leaders = {"Speachcraft"},
+            Logo = "KingsFairies_by_paul.png",
+            Members = 20,
+            Name = "Kings of the fairies",
+            Plateform = "PC",
+            Rank = 10,
             Recruting = true,
             Size = "Ombre"
         }
