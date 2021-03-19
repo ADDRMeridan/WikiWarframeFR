@@ -20,7 +20,7 @@ local ModData = {
             NameEN = "Antimatter Absorb",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Absorption de Souche"] = {
@@ -42,7 +42,7 @@ local ModData = {
             NameEN = "Endless Lullaby",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Accélération"] = {
@@ -63,7 +63,7 @@ local ModData = {
             NameEN = "Focused Acceleration",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"FUSIL", "AUGMENT_ARME", "CONCLAVE"},
+            Traits = {"FUSIL", "CONCLAVE"},
             Transmutable = false
         },
         ["Accélération Fatale"] = {
@@ -151,7 +151,7 @@ local ModData = {
             NameEN = "Amalgam Ripkas True Steel",
             Polarity = "Madurai",
             Rarity = "Amalgame",
-            Traits = {"MELEE", "CHANCECRIT", "AUGMENT_ARME", "RECHARGEMENT"},
+            Traits = {"MELEE", "CHANCECRIT", "RECHARGEMENT"},
             Transmutable = false
         },
         ["Acrobate"] = {
@@ -316,7 +316,7 @@ local ModData = {
             Polarity = "Madurai",
             PvP = true,
             Rarity = "Rare",
-            Traits = {"SECONDAIRE", "AUGMENT_ARME", "CONCLAVE"},
+            Traits = {"SECONDAIRE", "CONCLAVE"},
             Transmutable = false
         },
         ["Alimentation Auxiliaire"] = {
@@ -357,7 +357,7 @@ local ModData = {
             NameEN = "Path of Statues",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Amplificateur d'Affinité"] = {
@@ -390,6 +390,16 @@ local ModData = {
             Rarity = "Rare",
             Set = "Tek",
             Traits = {"KAVAT", "VULPAPHYLA", "DUREE"},
+            Transmutable = false
+        },
+        ["Ancient Coeur de Fusion"] = {
+            Archived = true,
+            Image = "InhabituelAncientFusionCore.png",
+            Introduced = "14.0.9",
+            Name = "Ancient Coeur de Fusion",
+            NameEN = "Ancient Fusion Core",
+            Polarity = "Core",
+            Rarity = "Commun<br>Inhabituel<br>Rare",
             Transmutable = false
         },
         ["Anticipation"] = {
@@ -556,7 +566,7 @@ local ModData = {
             NameEN = "Hysterical Assault",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Assaut Tek"] = {
@@ -578,7 +588,7 @@ local ModData = {
             NameEN = "Assimilate",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Assistance en Mêlée"] = {
@@ -652,7 +662,7 @@ local ModData = {
             NameEN = "Greedy Pull",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Attraction Fatale"] = {
@@ -663,7 +673,7 @@ local ModData = {
             NameEN = "Fatal Attraction",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "AUGMENT_COMPAGNON"},
+            Traits = {"SENTINELLE"},
             Transmutable = true
         },
         ["Aura IEM"] = {
@@ -693,7 +703,7 @@ local ModData = {
             NameEN = "Astral Autopsy",
             Polarity = "Vazarin",
             Rarity = "Rare",
-            Traits = {"ARCH-MELEE"},
+            Traits = {"ARCHMELEE"},
             Transmutable = false
         },
         ["Avalanche Gelée"] = {
@@ -704,7 +714,7 @@ local ModData = {
             NameEN = "Icy Avalanche",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Avantage Aéro"] = {
@@ -729,7 +739,7 @@ local ModData = {
             Transmutable = false
         },
         ["Balles Chargées"] = {
-            Image = "Balles_Chargées.png",
+            Image = nil,
             Introduced = "24.0",
             Name = "Balles Chargées",
             NameEN = "Charged Bullets",
@@ -746,7 +756,7 @@ local ModData = {
             NameEN = "Corroding Barrage",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Balles Creuses"] = {
@@ -838,7 +848,7 @@ local ModData = {
             NameEN = "Pool of Life",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Bastille Repoussante"] = {
@@ -849,7 +859,7 @@ local ModData = {
             NameEN = "Repelling Bastille",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Berserk"] = {
@@ -913,7 +923,7 @@ local ModData = {
             NameEN = "Vulcan Blitz",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Traits = {"MELEE", "AUGMENT_ARME"},
+            Traits = {"MELEE"},
             Transmutable = false
         },
         ["Bobine Foudroyante"] = {
@@ -924,7 +934,7 @@ local ModData = {
             NameEN = "Arc Coil",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "AUGMENT_COMPAGNON"},
+            Traits = {"SENTINELLE"},
             Transmutable = false
         },
         ["Bobine Réflexe"] = {
@@ -975,7 +985,7 @@ local ModData = {
             NameEN = "Botanist",
             Polarity = "Penjaga",
             Rarity = "Rare",
-            Traits = {"SENTINELLE", "AUGMENT_COMPAGNON"},
+            Traits = {"SENTINELLE"},
             Transmutable = false
         },
         ["Bouclier Déstabilisant"] = {
@@ -986,7 +996,7 @@ local ModData = {
             NameEN = "Staggering Shield",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Bouclier Transistor"] = {
@@ -997,18 +1007,18 @@ local ModData = {
             NameEN = "Transistor Shield",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Bouclier Électromagnétique"] = {
             AugmentType = "Arme",
-            Image = "Bouclier_Électromagnétique.png",
+            Image = nil,
             Introduced = "18.10",
             Name = "Bouclier Électromagnétique",
             NameEN = "Electromagnetic Shield",
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
-            Traits = {"WARFRAME", "AUGMENT_ARME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Boule de Glas"] = {
@@ -1019,7 +1029,7 @@ local ModData = {
             NameEN = "Chilling Globe",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Bouquet Radial"] = {
@@ -1030,7 +1040,7 @@ local ModData = {
             NameEN = "Radiant Finish",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Branche Battante"] = {
@@ -1062,7 +1072,7 @@ local ModData = {
             NameEN = "Contagion Cloud",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Cadence Habile"] = {
@@ -1096,7 +1106,7 @@ local ModData = {
             NameEN = "Ammo Case",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "AUGMENT_COMPAGNON", "MUNITIONS"},
+            Traits = {"SENTINELLE", "MUNITIONS"},
             Transmutable = false
         },
         ["Calcination"] = {
@@ -1117,7 +1127,7 @@ local ModData = {
             NameEN = "Calm & Frenzy",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Canalisation d'Énergie"] = {
@@ -1148,7 +1158,7 @@ local ModData = {
             NameEN = "Rubedo-Lined Barrel",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Traits = {"ARCH-FUSIL"},
+            Traits = {"ARCHFUSIL"},
             Transmutable = true
         },
         ["Canon Plaqué Rubedo Accru"] = {
@@ -1159,7 +1169,7 @@ local ModData = {
             NameEN = "Primed Rubedo-Lined Barrel",
             Polarity = "Madurai",
             Rarity = "Légendaire",
-            Traits = {"ARCH-FUSIL", "BARO"},
+            Traits = {"ARCHFUSIL", "BARO"},
             Transmutable = false
         },
         ["Canon Électrifié"] = {
@@ -1169,7 +1179,7 @@ local ModData = {
             NameEN = "Electrified Barrel",
             Polarity = "Naramon",
             Rarity = "Inhabituel",
-            Traits = {"ARCH-FUSIL", "ELEC"},
+            Traits = {"ARCHFUSIL", "ELEC"},
             Transmutable = true
         },
         ["Canon Étroit"] = {
@@ -1222,7 +1232,7 @@ local ModData = {
             Polarity = "Naramon",
             PvP = true,
             Rarity = "Commun",
-            Traits = {"FUSIL", "TAILLE_CHARGEUR", "RECHARGEMENT"},
+            Traits = {"FUSIL", "CHARGEUR", "RECHARGEMENT"},
             Transmutable = false
         },
         ["Caprice Mental"] = {
@@ -1233,7 +1243,7 @@ local ModData = {
             NameEN = "Mind Freak",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Carquois Surchargé"] = {
@@ -1244,7 +1254,7 @@ local ModData = {
             NameEN = "Empowered Quiver",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME", "DGTCRIT"},
+            Traits = {"WARFRAME", "DGTCRIT"},
             Transmutable = false
         },
         ["Carreaux Pacificateurs"] = {
@@ -1255,7 +1265,7 @@ local ModData = {
             NameEN = "Pacifying Bolts",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Cartouches Acides"] = {
@@ -1266,7 +1276,7 @@ local ModData = {
             NameEN = "Acid Shells",
             Polarity = "Madurai",
             Rarity = "Inhabituel",
-            Traits = {"POMPE", "CORRO", "AUGMENT_ARME"},
+            Traits = {"POMPE", "CORRO"},
             Transmutable = false
         },
         ["Cartouche Chargée"] = {
@@ -1307,7 +1317,7 @@ local ModData = {
             NameEN = "Hypothermic Shell",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"ARCH-FUSIL", "STATCHANCE", "GLACE"},
+            Traits = {"ARCHFUSIL", "STATCHANCE", "GLACE"},
             Transmutable = true
         },
         ["Cartouches Thermagnétiques"] = {
@@ -1318,7 +1328,7 @@ local ModData = {
             NameEN = "Thermagnetic Shells",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"FUSIL", "AUGMENT_ARME"},
+            Traits = {"FUSIL"},
             Transmutable = false
         },
         ["Cartouches à Combustion"] = {
@@ -1328,7 +1338,7 @@ local ModData = {
             Polarity = "Madurai",
             Rarity = "Inhabituel",
             NameEN = "Combustion Rounds",
-            Traits = {"ARCH-FUSIL", "FEU"},
+            Traits = {"ARCHFUSIL", "FEU"},
             Transmutable = true
         },
         ["Catalyseur Incorporé"] = {
@@ -1349,7 +1359,7 @@ local ModData = {
             NameEN = "Catapult",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Chakram Faucheur"] = {
@@ -1360,7 +1370,7 @@ local ModData = {
             NameEN = "Reaping Chakram",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Chambre Accrue"] = {
@@ -1423,7 +1433,7 @@ local ModData = {
             NameEN = "Energy Field",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"ARCHWING", "AUGMENT_ARCHWING"},
+            Traits = {"ARCHWING"},
             Transmutable = true
         },
         ["Charge Contaminée"] = {
@@ -1433,7 +1443,7 @@ local ModData = {
             NameEN = "Contamination Casing",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"ARCH-FUSIL", "STATCHANCE", "POISON"},
+            Traits = {"ARCHFUSIL", "STATCHANCE", "POISON"},
             Transmutable = true
         },
         ["Charge Corrompue"] = {
@@ -1454,7 +1464,7 @@ local ModData = {
             NameEN = "Ironclad Charge",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Charge d'Acier"] = {
@@ -1515,7 +1525,7 @@ local ModData = {
             NameEN = "Burdened Magazine",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"POMPE", "CORROMPU", "TAILLE_CHARGEUR", "RECHARGEMENT"},
+            Traits = {"POMPE", "CORROMPU", "CHARGEUR", "RECHARGEMENT"},
             Transmutable = false
         },
         ["Chargeur Contaminé"] = {
@@ -1525,9 +1535,7 @@ local ModData = {
             NameEN = "Tainted Clip",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {
-                "SECONDAIRE", "CORROMPU", "TAILLE_CHARGEUR", "RECHARGEMENT"
-            },
+            Traits = {"SECONDAIRE", "CORROMPU", "CHARGEUR", "RECHARGEMENT"},
             Transmutable = false
         },
         ["Chargeur de Bouclier"] = {
@@ -1557,7 +1565,7 @@ local ModData = {
             NameEN = "Slip Magazine",
             Polarity = "Naramon",
             Rarity = "Commun",
-            Traits = {"SECONDAIRE", "TAILLE_CHARGEUR"},
+            Traits = {"SECONDAIRE", "CHARGEUR"},
             Transmutable = true
         },
         ["Chargeur Infecté"] = {
@@ -1597,7 +1605,7 @@ local ModData = {
             NameEN = "Venomous Clip",
             Polarity = "Vazarin",
             Rarity = "Inhabituel",
-            Traits = {"ARCH-FUSIL", "POISON"},
+            Traits = {"ARCHFUSIL", "POISON"},
             Transmutable = true
         },
         ["Charme"] = {
@@ -1608,7 +1616,7 @@ local ModData = {
             NameEN = "Charm",
             Polarity = "Penjaga",
             Rarity = "Rare",
-            Traits = {"KAVAT", "AUGMENT_COMPAGNON"},
+            Traits = {"KAVAT"},
             Transmutable = true
         },
         ["Charpie"] = {
@@ -1684,7 +1692,7 @@ local ModData = {
             NameEN = "Conductor",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Chef de Meute"] = {
@@ -1729,7 +1737,7 @@ local ModData = {
             NameEN = "Amalgam Daikyu Target Acquired",
             Polarity = "Madurai",
             Rarity = "Amalgame",
-            Traits = {"PRINCIPAL", "AUGMENT_ARME", "MUNITIONS", "VOLDEVIE"},
+            Traits = {"PRINCIPAL", "MUNITIONS", "VOLDEVIE"},
             Transmutable = false
         },
         ["Cible Balistique"] = {
@@ -1740,7 +1748,7 @@ local ModData = {
             NameEN = "Ballistic Bullseye",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Cible Marquée"] = {
@@ -1750,7 +1758,7 @@ local ModData = {
             NameEN = "Marked Target",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"ARCH-FUSIL", "STATCHANCE"},
+            Traits = {"ARCHFUSIL", "STATCHANCE"},
             Transmutable = true
         },
         ["Claquement Proton"] = {
@@ -1762,6 +1770,52 @@ local ModData = {
             Rarity = "Rare",
             Set = "Proton",
             Traits = {"MELEE", "STATCHANCE", "POISON"},
+            Transmutable = false
+        },
+        ["Coeur de fusion"] = {
+            Archived = true,
+            Image = "Coeur de FusionRU145.png",
+            Introduced = "Vanilla",
+            Name = "Coeur de fusion",
+            NameEN = "Fusion Core",
+            Polarity = "Core",
+            Rarity = "Commun<br>Inhabituel<br>Rare",
+            Transmutable = true
+        },
+        ["Coeur de Transmutation Madurai"] = {
+            Image = "CoeurdeTransmutationMadurai.png",
+            Introduced = "16.0",
+            Name = "Coeur de Transmutation Madurai",
+            NameEN = "Madurai Transmute Core",
+            Polarity = "Madurai",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Coeur de Transmutation Naramon"] = {
+            Image = "CoeurdeTransmutationNaramon.png",
+            Introduced = "16.0",
+            Name = "Coeur de Transmutation Naramon",
+            NameEN = "Naramon Transmute Core",
+            Polarity = "Naramon",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Coeur de Transmutation Vazarin"] = {
+            Image = "CoeurdeTransmutationVazarin.png",
+            Introduced = "16.0",
+            Name = "Coeur de Transmutation Vazarin",
+            NameEN = "Vazarin Transmute Core",
+            Polarity = "Vazarin",
+            Rarity = "Rare",
+            Transmutable = false
+        },
+        ["Coeur Légendaire"] = {
+            Image = "Coeur_Légendaire.png",
+            Introduced = "12.2",
+            Name = "Coeur Légendaire",
+            NameEN = "Legendary Core",
+            Polarity = "Core",
+            Rarity = "Légendaire",
             Transmutable = false
         },
         ["Colère Aveugle"] = {
@@ -1855,7 +1909,7 @@ local ModData = {
             NameEN = "Comet Blast",
             Polarity = "Naramon",
             Rarity = "Rare",
-            Traits = {"ARCH-FUSIL", "IMPACT"},
+            Traits = {"ARCHFUSIL", "IMPACT"},
             Transmutable = false
         },
         ["Commande du Chasseur"] = {
@@ -1979,7 +2033,7 @@ local ModData = {
             NameEN = "Cataclysmic Continuum",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Contrepoids"] = {
@@ -2012,7 +2066,7 @@ local ModData = {
             NameEN = "Directed Convergence",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {"AUGMENT_ARME", "CONCLAVE", "PRECI"},
+            Traits = {"CONCLAVE", "PRECI"},
             Transmutable = false
         },
         ["Conversion d'Énergie"] = {
@@ -2043,7 +2097,7 @@ local ModData = {
             NameEN = "Molecular Conversion",
             Polarity = "Penjaga",
             Rarity = "Commun",
-            Traits = {"SENTINELLE", "AUGMENT_COMPAGNON"},
+            Traits = {"SENTINELLE"},
             Transmutable = false
         },
         ["Convulsion"] = {
@@ -2074,7 +2128,7 @@ local ModData = {
             NameEN = "Cold Snap",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"ARCHWING", "AUGMENT_ARCHWING"},
+            Traits = {"ARCHWING"},
             Transmutable = true
         },
         ["Coup de Grâce"] = {
@@ -2200,7 +2254,7 @@ local ModData = {
             NameEN = "Curative Undertow",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Courant-Jet"] = {
@@ -2211,7 +2265,7 @@ local ModData = {
             NameEN = "Jet Stream",
             Polarity = "Zenurik",
             Rarity = "Rare",
-            Traits = {"WARFRAME", "AUGMENT_WARFRAME"},
+            Traits = {"WARFRAME"},
             Transmutable = false
         },
         ["Course"] = {
@@ -2323,17 +2377,13 @@ local ModData = {
             Transmutable = false
         },
         ["Dentelure"] = {
-            AugmentType = nil,
-            Family = nil,
             Image = "Dentelure.png",
             Introduced = "24.2",
             Name = "Dentelure",
             NameEN = "Serration",
             Polarity = "Madurai",
-            PvP = false,
             Rarity = "Inhabituel",
-            Set = nil,
-            Traits = {"FUSIL", "SNIPER", "ARC"},
+            Traits = {"PRINCIPAL"},
             Transmutable = false
         },
         ["Dentelure Amalgame"] = {
@@ -3390,7 +3440,7 @@ local ModData = {
             Traits = {"+%PERFORATION", "POMPE"}
         },
         ["Focus Critique"] = {
-            Image = "Focus_Critique.jpg",
+            Image = nil,
             Introduced = "24.2.0",
             Name = "Focus Critique",
             NameEN = "Critical Focus",
@@ -6140,7 +6190,7 @@ local ModData = {
         },
         ["Pointe Métallique"] = {
             Family = "Pointe Métallique",
-            Image = "Pointe_Métallique.jpg",
+            Image = "Pointe_Métallique.png",
             Name = "Pointe Métallique",
             NameEN = "Metal Auger",
             Polarity = "Naramon",
@@ -6909,7 +6959,7 @@ local ModData = {
             Transmutable = true
         },
         ["Retour Rapide Volatil"] = {
-            Image = "Retour Rapide Volatil.png",
+            Image = nil,
             Name = "Retour Rapide Volatil",
             NameEN = "Volatile Quick Return",
             Polarity = "Naramon",
@@ -10151,6 +10201,14 @@ local ModData = {
             Polarity = "Vazarin",
             Rarity = "Commun",
             Transmutable = false
+        },
+        ["Étreinte Glaciale Accrue"] = {
+            Image = "Étreinte Glaciale Accrue.png",
+            Name = "Étreinte Glaciale Accrue",
+            NameEN = "Primed Chilling Grasp",
+            Polarity = "Vazarin",
+            Rarity = "Légendaire",
+            Traits = {"POMPE", "BARO"}
         },
         ["Marque de la Bête"] = {
             AugmentType = nil,
