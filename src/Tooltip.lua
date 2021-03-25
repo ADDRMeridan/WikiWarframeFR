@@ -229,13 +229,20 @@ local function getObjImage(obj, objType, conclave, imgSize)
     -- Recover image
     local image = nil
     local imageSwitch = {
-        ["Ability"] = obj.Icon,
-        ["Relics"] = mw.loadData('Module:Icon/data')["Objets"]["Relique " ..
-            obj.Tier].icon,
-        ["Warframe"] = obj.Portrait
+        ["Ability"] = function() return obj.Icon end,
+        ["Relics"] = function()
+            return mw.loadData('Module:Icon/data')["Objets"]["Relique " ..
+                       obj.Tier].icon
+        end,
+        ["Warframe"] = function() return obj.Portrait end
     }
 
-    image = imageSwitch[objType] or obj.Image
+    local getData = imageSwitch[objType]
+    if (getData == nil) then
+        image = obj.Image
+    else
+        image = getData()
+    end
 
     -- Set a default image if nul
     if (image == nil) then
