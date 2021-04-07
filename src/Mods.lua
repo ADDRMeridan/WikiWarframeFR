@@ -1102,4 +1102,52 @@ function p.getAllPostures()
     return ret
 end
 
+------------------------
+------------------------
+-- Trieur mod (utilisation manuelle uniquement)
+------------------------
+------------------------
+function p.sortMods()
+
+    local ret = {'{'}
+    local prevLetter = nil
+    for name, mod in Shared.skpairs(ModData["Mods"]) do
+        local tmpLetter = name:sub(1, 1)
+        if (prevLetter ~= tmpLetter) then
+            prevLetter = tmpLetter
+            table.insert(ret, '\n\t-- ')
+            table.insert(ret, tmpLetter)
+        end
+        table.insert(ret, '\n\t["')
+        table.insert(ret, name)
+        table.insert(ret, '"] = {')
+        for valName, valV in Shared.skpairs(mod) do
+            table.insert(ret, '\n\t\t')
+            table.insert(ret, valName)
+            table.insert(ret, ' = ')
+            if (valV == nil) then
+                table.insert(ret, 'nil')
+            elseif (type(valV) == "table") then
+                table.insert(ret, '{"')
+                local tmpArray = {}
+                for _, txt in ipairs(valV) do
+                    table.insert(tmpArray, txt)
+                end
+                table.insert(ret, table.concat(tmpArray, '", "'))
+                table.insert(ret, '"}')
+            elseif (type(valV) == "boolean") then
+                table.insert(ret, tostring(valV))
+            else
+                table.insert(ret, '"')
+                table.insert(ret, tostring(valV))
+                table.insert(ret, '"')
+            end
+            table.insert(ret, ',')
+        end
+        table.insert(ret, "\n\t},")
+    end
+    table.insert(ret, '\n}')
+    return table.concat(ret)
+end
+
 return p

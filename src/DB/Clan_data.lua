@@ -61,6 +61,17 @@ local clanData = {
             Recruting = true,
             Size = "Ombre"
         },
+        ["Bûcherons.ca"] = {
+            LastUpdate = "2021-03-30",
+            Leaders = {"Illunir"},
+            Logo = "Bucherons.png",
+            Members = 13,
+            Name = "Bûcherons.ca",
+            Plateform = "PC",
+            Rank = 10,
+            Recruting = true,
+            Size = "Ombre"
+        },
         -- Clan - C
         -- Clan - D
         -- Clan - E
@@ -127,7 +138,7 @@ local clanData = {
             Size = "Tempête"
         },
         ["Legion de la mort"] = {
-            LastUpdate = "2020-08-30",
+            LastUpdate = "2021-03-21",
             Leaders = {"goliate_gunz", "julpy973"},
             Logo = "legion-de-la-mort.jpg",
             Members = 9,
@@ -230,7 +241,7 @@ local clanData = {
         },
         -- Clan - P
         ["PatrouilleAlpha"] = {
-            LastUpdate = "2021-02-20",
+            LastUpdate = "2021-03-24",
             Leaders = {"DjoomanDjee"},
             Logo = "Alpha.png",
             Members = 10,

@@ -1,10 +1,11 @@
 local p = {}
 
 local VoidData = mw.loadData('Module:Void/data')
-local Icon = require("Module:Icon")
+local ICON = require("Module:Icon")
 local Shared = require("Module:Shared")
 local TT = require('Module:Tooltip')
 
+local DROPS_RARITY_ORDER = {"Commune", "Inhabituelle", "Rare"}
 local TxtColors = {
     Commune = '#9C7344',
     Inhabituelle = '#D3D3D3',
@@ -204,11 +205,11 @@ function p.getPartIconForDrop(drop)
 
     local icon = ''
     if (pName == 'Schéma') then
-        icon = Icon._Prime(Shared.titleCase(drop.Item), nil, iconSize)
+        icon = ICON._Prime(Shared.titleCase(drop.Item), nil, iconSize)
     elseif iName == 'Kavasa Prime' then
-        icon = Icon._Prime('Kavasa', nil, iconSize)
+        icon = ICON._Prime('Kavasa', nil, iconSize)
     else
-        icon = Icon._Prime(pName .. primeToggle, nil, iconSize)
+        icon = ICON._Prime(pName .. primeToggle, nil, iconSize)
     end
 
     return icon
@@ -225,7 +226,7 @@ function p.getItemIconForDrop(drop)
     if (TT.checkItemExist(iName, 'Warframe', false)) then
         icon = TT._tooltipIcon(iName, 'Warframe', iconSize)
     else
-        icon = Icon._Prime(Shared.titleCase(drop.Item), nil, iconSize)
+        icon = ICON._Prime(Shared.titleCase(drop.Item), nil, iconSize)
     end
 
     return icon
@@ -314,7 +315,7 @@ function p.relicTooltip(frame)
                 if (pName == "ITEM") then
                     local dbName = string.gsub(iName, "(%a)([%w_']*)",
                                                Shared.titleCase)
-                    icon = Icon._Item(dbName, nil, "32px")
+                    icon = ICON._Item(dbName, nil, "32px")
                 elseif (pName == "MOD") then
                     local dbName = string.gsub(iName, "(%a)([%w_']*)",
                                                Shared.titleCase)
@@ -329,7 +330,7 @@ function p.relicTooltip(frame)
                         dbName = string.gsub(iName, "(%a)([%w_']*)",
                                              Shared.titleCase)
                     end
-                    icon = Icon._Ressource(dbName, nil, "32px")
+                    icon = ICON._Ressource(dbName, nil, "32px")
                 end
                 pName = ""
             end
@@ -598,30 +599,30 @@ function p.getTotalDucats(frame)
     end
 
     if tierName then
-        result = "'''Average Ducats Value'''&#58; " .. Icon._Item('Ducats') ..
+        result = "'''Average Ducats Value'''&#58; " .. ICON._Item('Ducats') ..
                      "'''" .. Shared.round((totalDucats / totalItemCount), 2) ..
                      "''' (" .. totalItemCount .. ' rewards with ' ..
                      withoutFormaCount .. ' parts)'
         result =
-            result .. "<br>'''Available'''&#58; " .. Icon._Item('Ducats') ..
+            result .. "<br>'''Available'''&#58; " .. ICON._Item('Ducats') ..
                 "'''" .. Shared.round((availableDucats / availableItems), 2) ..
                 "''' (" .. availableItems .. ' rewards with ' ..
                 availableItemsEF .. ' parts)'
-        result = result .. " | '''Vaulted'''&#58; " .. Icon._Item('Ducats') ..
+        result = result .. " | '''Vaulted'''&#58; " .. ICON._Item('Ducats') ..
                      "'''" .. Shared.round((vaultedDucats / vaultedItems), 2) ..
                      "''' (" .. vaultedItems .. ' rewards with ' ..
                      vaultedItemsEF .. ' parts)'
     else
-        result = "'''Total Ducats Value'''&#58; " .. Icon._Item('Ducats') ..
+        result = "'''Total Ducats Value'''&#58; " .. ICON._Item('Ducats') ..
                      "'''" .. Shared.formatnum(totalDucats) .. "''' (" ..
                      totalItemCount .. ' rewards with ' .. withoutFormaCount ..
                      ' parts)'
         result =
-            result .. "<br>'''Available'''&#58; " .. Icon._Item('Ducats') ..
+            result .. "<br>'''Available'''&#58; " .. ICON._Item('Ducats') ..
                 "'''" .. Shared.formatnum(availableDucats) .. "''' (" ..
                 availableItems .. ' rewards with ' .. availableItemsEF ..
                 ' parts)'
-        result = result .. " | '''Vaulted'''&#58; " .. Icon._Item('Ducats') ..
+        result = result .. " | '''Vaulted'''&#58; " .. ICON._Item('Ducats') ..
                      "'''" .. Shared.formatnum(vaultedDucats) .. "''' (" ..
                      vaultedItems .. ' rewards with ' .. vaultedItemsEF ..
                      ' parts)'
@@ -679,10 +680,10 @@ local function ducatPriceRow(itemName, partName, tierName, data)
         sortValue = itemName .. ' ' .. partName
     end
     local cell1 = '\n|data-sort-value="' .. sortValue .. '"|' ..
-                      Icon._Prime(itemName, partName)
+                      ICON._Prime(itemName, partName)
     local cell2 = '\n|' .. createRelicText(itemName, partName, tierName, data)
     local cell3 = '\n|data-sort-value="' .. ducatValue .. '"|' ..
-                      Icon._Item('Ducats') .. "'''" .. ducatValue .. "'''\n|-"
+                      ICON._Item('Ducats') .. "'''" .. ducatValue .. "'''\n|-"
 
     return cell1 .. cell2 .. cell3
 end
@@ -789,6 +790,112 @@ function p.getItemRelics(itemName)
         end
     end
 
+    return ret
+end
+
+local function groupDropsByRarity(relicDrops)
+
+    local ret = {}
+    if (relicDrops ~= nil) then
+        for _, drop in ipairs(relicDrops) do
+            if (ret[drop.Rarity] == nil) then ret[drop.Rarity] = {} end
+            table.insert(ret[drop.Rarity], drop)
+        end
+    end
+    return ret
+end
+
+local function getDropDucatCost(drop)
+
+    local ret = nil
+    local raritySwitch = {
+        ["Commune"] = 15,
+        ["Inhabituelle"] = 45,
+        ["Rare"] = 100
+    }
+    -- TODO insert cas specifique
+    ret = raritySwitch[drop.Rarity]
+    return ret
+end
+
+local function buildDropLoot(drop)
+
+    local ret = {}
+    if (drop ~= nil) then
+        local itemName = p.getItemName(drop.Item)
+        if (TT.checkItemExist(itemName, "Weapon", false)) then
+            table.insert(ret, TT._tooltipText(itemName, "Weapon"))
+        elseif (TT.checkItemExist(itemName, "Warframe", false)) then
+            table.insert(ret, TT._tooltipText(itemName, "Warframe"))
+        elseif (TT.checkItemExist(itemName, "Pet", false)) then
+            table.insert(ret, TT._tooltipText(itemName, "Pet"))
+        else
+            table.insert(ret, ICON._Item(itemName, true))
+        end
+        table.insert(ret, ' &ndash; ')
+        table.insert(ret, ICON._Void(drop.Part))
+    end
+    return table.concat(ret)
+end
+
+local function _buildRelicDrops(relicFullName)
+
+    local ret = {}
+    local relic = p.getRelic(relicFullName)
+    if (relic ~= nil) then
+        ret = {
+            '\n{| class="article-table"\n! Composant\n! Valeur en<br/>',
+            ICON._Item("Ducats", true), '\n!Rareté<br/>(Chance)\n'
+        }
+        local dropsArray = groupDropsByRarity(relic.Drops)
+        local tmpRarity = nil
+        local raritySpanSwitch = {
+            ["Commune"] = function()
+                return
+                    '<span id="relic-common-percentage">Commune<br/>(25.33%)</span><div style="position: float; margin: 14px 0 0 0; background-color:#2d2d2d; padding: 0; height:5px; vertical-align: bottom;">\n{| id="relic-common-bar" style="border-collapse:collapse; width:76%; transition: .5s;"\n|style="background-color:#61d4d4; height:5px; margin:0; padding:0; border: 0px;"|\n|}</div>'
+            end,
+            ["Inhabituelle"] = function()
+                return
+                    '<span id="relic-uncommon-percentage">Inhabituelle<br/>(11%)</span><div style="position: float; margin: 14px 0 0 0; background-color:#2d2d2d; padding: 0; height:5px; vertical-align: bottom;">\n{| id="relic-uncommon-bar" style="border-collapse:collapse; width:22%; transition: .5s;"\n|style="background-color:#61d4d4; height:5px; margin:0; padding:0; border: 0px;"|\n|}</div>'
+            end,
+            ["Rare"] = function()
+                return
+                    '<span id="relic-rare-percentage">Rare<br/>(2%)</span><div style="position: float; margin: 14px 0 0 0; background-color:#2d2d2d; padding: 0; height:5px; vertical-align: bottom;">\n{| id="relic-rare-bar" style="border-collapse:collapse; width:2%; transition: .5s;"\n|style="background-color:#61d4d4; height:5px; margin:0; padding:0; border: 0px;"|\n|}</div>'
+            end
+        }
+        local ducatsIcon = ICON._Item("Ducats", false)
+        for _, rarity in ipairs(DROPS_RARITY_ORDER) do
+            if (dropsArray[rarity] ~= nil) then
+                for _, drop in ipairs(dropsArray[rarity]) do
+                    table.insert(ret, '\n|-\n| ')
+                    table.insert(ret, buildDropLoot(drop))
+                    table.insert(ret, '\n| \'\'\'')
+                    table.insert(ret, getDropDucatCost(drop))
+                    table.insert(ret, '\'\'\' ')
+                    table.insert(ret, ducatsIcon)
+                    if (tmpRarity ~= rarity) then
+                        tmpRarity = rarity
+                        table.insert(ret, '\n| rowspan="')
+                        local tmpRowSpan = #(dropsArray[tmpRarity])
+                        table.insert(ret, tmpRowSpan)
+                        table.insert(ret, '" | ')
+                        table.insert(ret, raritySpanSwitch[tmpRarity]())
+                    end
+                end
+            end
+        end
+        table.insert(ret,
+                     '\n|-\n| colspan="3" | <span class="button" id="relic-intact-button">Intacte</span> <span class="button" id="relic-exceptional-button">Exceptionnelle</span> <span class="button" id="relic-flawless-button">Parfaite</span> <span class="button" id="relic-radiant-button">Éclatante</span>')
+        table.insert(ret, '\n|}')
+    end
+    return table.concat(ret)
+end
+
+function p.buildRelicDrops(frame)
+
+    local ret = nil
+    local relicFullName = frame.args ~= nil and frame.args[1] or nil
+    if (relicFullName ~= nil) then ret = _buildRelicDrops(relicFullName) end
     return ret
 end
 
