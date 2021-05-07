@@ -576,4 +576,48 @@ function p._Void(voidItemName, noText)
     return table.concat(ret)
 end
 
+function p.Melee(frame)
+    local AttackType = frame.args[1]
+    local ProcType = frame.args[2]
+    local imagesize = frame.args.imgsize
+    return p._Melee(AttackType, ProcType, imagesize)
+end
+
+function p._Melee(AttackType, ProcType, imagesize)
+    if (AttackType == nil or AttackType == '') then
+        AttackType = "DEFAULT"
+    else
+        AttackType = string.upper(AttackType)
+    end
+    if (ProcType == nil or ProcType == '') then
+        ProcType = "DEFAULT"
+    else
+        ProcType = string.upper(ProcType)
+    end
+    if (imagesize == nil or imagesize == '') then imagesize = 'x22' end
+
+    if (IconData["Melee"][ProcType] == nil or
+        IconData["Melee"][ProcType][AttackType] == nil) then
+        return (iconname or '') .. " <span style=\"color:red;\">Invalid</span>"
+    end
+
+    local icon = IconData["Melee"][ProcType][AttackType].icon
+    local link = IconData["Melee"][ProcType][AttackType].link
+    local title = IconData["Melee"][ProcType][AttackType].title
+    local tooltip = IconData["Melee"][ProcType][AttackType].tooltip
+    if (icon == nil or icon == '') then
+        return (iconname or '') .. " <span style=\"color:red;\">Invalid</span>"
+    end
+
+    local result = '[[File:' .. icon
+    if (tooltip ~= nil and tooltip ~= '') then
+        result = result .. '|' .. tooltip
+    end
+    result = result .. '|' .. imagesize .. 'px'
+    if link ~= nil then result = result .. '|link=' .. link end
+    if title ~= nil then result = result .. '|' .. title end
+    result = result .. ']]'
+    return result
+end
+
 return p

@@ -2233,6 +2233,131 @@ local IconData = {
         },
         ["SYSTEMES"] = {Icon = "Systèmes Prime.png", Name = "Systèmes"},
         ["TETE"] = {Icon = "LamePrime.png", Name = "Tête"}
+    },
+
+    ["Melee"] = {
+        ["DEFAULT"] = {
+            ["DEFAULT"] = {
+                icon = "BlackBasex64.png",
+                link = "Melee#Normal Attack",
+                title = "Default Melee Attack"
+            },
+            ["BLOCK"] = {
+                icon = "BlackBlockx64.png",
+                link = "Melee#Blocking",
+                title = "Block"
+            },
+            ["PAUSE"] = {
+                icon = "BlackPausex64.png",
+                link = "Maneuvers",
+                title = "Pause"
+            },
+            ["CHARGE"] = {
+                icon = "BlackChargex64.png",
+                link = "Melee#Heavy Attacks",
+                title = "Charge"
+            },
+            ["HEAVY"] = {
+                icon = "BlackChargex64.png",
+                link = "Melee#Heavy Attacks",
+                title = "Heavy Attack"
+            },
+            ["UP"] = {icon = "BlackUpx64.png", link = "Maneuvers", title = "Up"},
+            ["DOWN"] = {
+                icon = "BlackDownx64.png",
+                link = "Maneuvers",
+                title = "Down"
+            },
+            ["LEFT"] = {
+                icon = "BlackLeftx64.png",
+                link = "Maneuvers",
+                title = "Left"
+            },
+            ["RIGHT"] = {
+                icon = "BlackRightx64.png",
+                link = "Maneuvers",
+                title = "Right"
+            }
+        },
+        ["SLAM"] = {
+            ["DEFAULT"] = {
+                icon = "RedBasex64.png",
+                link = "Melee#Normal Attack",
+                title = "Slam"
+            },
+            ["BLOCK"] = {
+                icon = "RedBlockx64.png",
+                link = "Melee#Blocking",
+                title = "Block"
+            },
+            ["PAUSE"] = {
+                icon = "RedPausex64.png",
+                link = "Maneuvers",
+                title = "Pause"
+            },
+            ["CHARGE"] = {
+                icon = "RedChargex64.png",
+                link = "Melee#Charge Attacks",
+                title = "Charge"
+            },
+            ["HEAVY"] = {
+                icon = "RedChargex64.png",
+                link = "Melee#Heavy Attacks",
+                title = "Heavy Attack"
+            },
+            ["UP"] = {icon = "RedUpx64.png", link = "Maneuvers", title = "Up"},
+            ["DOWN"] = {
+                icon = "RedDownx64.png",
+                link = "Maneuvers",
+                title = "Down"
+            }
+        },
+        ["360"] = {
+            ["DEFAULT"] = {
+                icon = "BlueBasex64.png",
+                link = "Melee#Normal Attack",
+                title = "360° Attack"
+            },
+            ["BLOCK"] = {
+                icon = "BlueBlockx64.png",
+                link = "Melee#Blocking",
+                title = "Block"
+            },
+            ["PAUSE"] = {
+                icon = "BluePausex64.png",
+                link = "Maneuvers",
+                title = "Pause"
+            },
+            ["CHARGE"] = {
+                icon = "BlueChargex64.png",
+                link = "Melee#Charge Attacks",
+                title = "Charge"
+            },
+            ["HEAVY"] = {
+                icon = "BlueChargex64.png",
+                link = "Maneuvers",
+                title = "Heavy Attack"
+            },
+            ["UP"] = {icon = "BlueUpx64.png", link = "Maneuvers", title = "Up"},
+            ["DOWN"] = {
+                icon = "BlueDownx64.png",
+                link = "Maneuvers",
+                title = "Down"
+            }
+        },
+        ["RANGED"] = {
+            ["DEFAULT"] = {icon = "GunbladeShot.svg", title = "Ranged"},
+            ["CHARGE"] = {
+                icon = "HeavyGunbladeShot.svg",
+                title = "Ranged",
+                link = "Melee#Charge Attacks"
+            },
+            ["HEAVY"] = {
+                icon = "HeavyGunbladeShot.svg",
+                title = "Ranged",
+                link = "Melee#Heavy Attacks"
+            }
+        }
     }
 }
 return IconData

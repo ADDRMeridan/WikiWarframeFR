@@ -45,6 +45,21 @@ function p.skpairs(t, noSort, revert)
     return iterator
 end
 
+--- Returns the number of indexed elements in a table.
+--  @function		p.indexCount
+--  @param			{table} t A table with no explicit nil values
+--  @return         {number} The number of indexed elements in a table; 
+--  						 if table is not of type 'table' then return nil
+function p.indexCount(t)
+    if (type(t) == 'table') then
+        local count = 0
+        for _ in ipairs(t) do count = count + 1 end
+        return count
+    else
+        return nil
+    end
+end
+
 -- Loops through all the Relic types
 -- Comes up a surprising amount
 function p.relicLoop()
@@ -294,7 +309,9 @@ end
 
 function p.removeFRAccent(str2RemoveFrom)
 
-    local swapArray = {{'è', 'e'}, {'é', 'e'}, {'â', 'a'}, {'ê', 'e'}}
+    local swapArray = {
+        {'è', 'e'}, {'é', 'e'}, {'â', 'a'}, {'ê', 'e'}, {'î', 'i'}
+    }
     local ret = str2RemoveFrom
     for _, swapper in ipairs(swapArray) do
         ret = string.gsub(ret, swapper[1], swapper[2])
