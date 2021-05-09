@@ -1,31 +1,31 @@
 -- in alphabetical order
 local StanceData = {
 
-    ["Argent Scourge"] = {
-        WeaponType = "Polearm",
+    ["Fléau d'Argent"] = {
+        WeaponType = "Arme d'Hast",
         ConclaveOnly = true,
-        ["Neutral"] = {
+        ["Neutre"] = {
             Name = "Roaring Whirlwind",
             {Hits = {1, 1}, Dmg = {100, 100}},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Cutting Tempest",
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Shrieking Wind",
             {Hits = {1, 1}, Dmg = {100, 100}},
             {Hits = {1, 1, 1}, Dmg = {100, 100, 100}}
         }
     },
 
-    ["Astral Twilight"] = {
+    ["Crépuscule Astral"] = {
         WeaponType = "Glaive",
-        ["Neutral"] = {
-            Name = "Morning Sun",
+        ["Neutre"] = {
+            Name = "Soleil Matinal",
             Duration = 4.25,
             {Hits = {1, 1}, Dmg = {300, 200}},
             {Hits = 2, Dmg = 300},
@@ -34,49 +34,53 @@ local StanceData = {
                 Type = "Spin",
                 Hits = {1, 1, 1},
                 Dmg = {200, 100, 200},
-                Procs = {"", "", "Knockdown"}
+                Procs = {"", "", "Renversement"}
             }
         },
-        ["Forward"] = {
-            Name = "Midnight Cloud",
+        ["Avancer"] = {
+            Name = "Nuage de Minuit",
             Duration = 3.4,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 2, Dmg = 100},
-            {Hits = 1, Dmg = 200, Procs = {"Lifted"}}
+            {Hits = 1, Dmg = 200, Procs = {"Suspendu"}}
         },
-        ["Forward Block"] = {
-            Name = "Falling Star",
+        ["Avancer + Parade"] = {
+            Name = "Étoile Filante",
             Duration = 3.2,
             {Hits = 4, Dmg = 100, Procs = {"Impact"}},
             {Hits = 2, Dmg = 200},
             {Hits = 2, Dmg = 200, Procs = {"Impact"}}
         },
-        ["Block"] = {
-            Name = "Rising Moon",
+        ["Parade"] = {
+            Name = "Lune Montante",
             Duration = 3.5,
             {
                 Hits = {1, 1, 1},
                 Dmg = {200, 200, 300},
-                Procs = {"", "Lifted", "Slash"}
+                Procs = {"", "Suspendu", "Tranchant"}
             },
-            {Hits = {1, 1, 1}, Dmg = {100, 200, 200}, Procs = {"", "", "Slash"}},
-            {Hits = 1, Dmg = 400, Procs = {"Knockdown"}}
+            {
+                Hits = {1, 1, 1},
+                Dmg = {100, 200, 200},
+                Procs = {"", "", "Tranchant"}
+            },
+            {Hits = 1, Dmg = 400, Procs = {"Renversement"}}
         }
     },
 
-    ["Atlantis Vulcan"] = {
+    ["Vulcain d'Atlantis"] = {
         WeaponType = "Nunchaku",
-        ["Neutral"] = {
-            Name = "Molten Whirlpool",
+        ["Neutre"] = {
+            Name = "Tourbillon Ardent",
             Duration = 3.45,
             {Type = "Spin", Hits = 5, Dmg = 50},
             {Type = "Spin", Hits = 3, Dmg = 100},
             {Hits = 6, Dmg = 50},
             {Hits = 2, Dmg = 100}
         },
-        ["Forward"] = {
-            Name = "Searing Undertow",
+        ["Avancer"] = {
+            Name = "Contre-Courant Bouillonnant",
             Duration = 3.25,
             {Type = "Spin", Hits = 2, Dmg = 50},
             {Hits = 1, Dmg = 100},
@@ -84,14 +88,14 @@ local StanceData = {
             {Hits = 1, Dmg = 200},
             {Type = "Spin", Hits = 5, Dmg = 50}
         },
-        ["Forward Block"] = {
-            Name = "Blazing Vortex",
+        ["Avancer + Parade"] = {
+            Name = "Vortex Brûlant",
             Duration = 4.1,
             {Type = "Spin", Hits = 5, Dmg = 50},
             {Hits = 13, Dmg = 150}
         },
-        ["Block"] = {
-            Name = "Infernal Maelstrom",
+        ["Parade"] = {
+            Name = "Maelström Infernal",
             Duration = 3.35,
             {Type = "Spin", Hits = 7, Dmg = 50},
             {Type = "Spin", Hits = 4, Dmg = 100},
@@ -100,41 +104,41 @@ local StanceData = {
                 Type = "Spin",
                 Hits = {3, 1},
                 Dmg = {100, 200},
-                Procs = {"", "Knockdown"}
+                Procs = {"", "Renversement"}
             }
         }
     },
 
-    ["Biting Piranha"] = {
-        WeaponType = "Dual Daggers",
+    ["Piranha Mordant"] = {
+        WeaponType = "Doubles Dagues",
         ConclaveOnly = true,
-        ["Neutral"] = {
+        ["Neutre"] = {
             Name = "Rushing Cuts",
-            {Hits = 2, Dmg = 100, Procs = {"Impair"}},
+            {Hits = 2, Dmg = 100, Procs = {"Diminuer"}},
             {Hits = 2, Dmg = 100}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Flasing Razor",
             {Hits = 1, Dmg = 100},
             {Hits = 2, Dmg = 100}
         },
-        ["Forward Block"] = {
-            Name = "Leaping Slash",
+        ["Avancer + Parade"] = {
+            Name = "Leaping Tranchant",
             {Hits = 2, Dmg = 100},
             {Hits = 2, Dmg = 100}
         }
     },
 
-    ["Bleeding Willow"] = {
-        WeaponType = "Polearm",
-        ["Forward"] = {
-            Name = "Lethal Gust",
+    ["Saule Saignant"] = {
+        WeaponType = "Arme d'Hast",
+        ["Avancer"] = {
+            Name = "Rafale Mortelle",
             Duration = 0.95,
             {Hits = 1, Dmg = 100},
             {Hits = {2, 1}, Dmg = {100, 200}}
         },
-        ["Forward Block"] = {
-            Name = "Drifting Steel",
+        ["Avancer + Parade"] = {
+            Name = "Rafale d'Acier",
             Duration = 3.5,
             {Hits = {1, 1}, Dmg = {100, 300}, Procs = {"Impact", "Impact"}},
             {Hits = 1, Dmg = 200},
@@ -143,24 +147,28 @@ local StanceData = {
                 Type = "Spin",
                 Hits = {1, 1},
                 Dmg = {200, 400},
-                Procs = {"Slash", "Knockdown"}
+                Procs = {"Tranchant", "Renversement"}
             }
         }
     },
 
-    ["Blind Justice"] = {
+    ["Justice Aveugle"] = {
         WeaponType = "Nikana",
-        ["Neutral"] = {
-            Name = "Guiding Light",
+        ["Neutre"] = {
+            Name = "Lumière Guidante",
             Duration = 2.6,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {Hits = 1, Dmg = 200},
             {Hits = 2, Dmg = 200},
             {Hits = 2, Dmg = 200},
-            {Hits = {1, 1}, Dmg = {200, 400}, Procs = {"Slash", "Knockdown"}}
+            {
+                Hits = {1, 1},
+                Dmg = {200, 400},
+                Procs = {"Tranchant", "Renversement"}
+            }
         },
-        ["Forward"] = {
-            Name = "Zatōs Creed",
+        ["Avancer"] = {
+            Name = "Crédo de Zatōs",
             Duration = 3.05,
             {Hits = 1, Dmg = 100},
             {Type = "Spin", Hits = {1, 1}, Dmg = {100, 200}},
@@ -168,12 +176,12 @@ local StanceData = {
                 Type = "Spin",
                 Hits = {1, 1, 1},
                 Dmg = {100, 200, 300},
-                Procs = {"", "", "Lifted"}
+                Procs = {"", "", "Suspendu"}
             },
             {Hits = 1, Dmg = 300}
         },
-        ["Forward Block"] = {
-            Name = "Heeding Call",
+        ["Avancer + Parade"] = {
+            Name = "Appel d'Attention",
             Duration = 2.45,
             {
                 Hits = {1, 1, 1, 2},
@@ -182,38 +190,38 @@ local StanceData = {
             },
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {1, 1},
                 Dmg = {200, 400},
-                Procs = {"", "Knockdown"}
+                Procs = {"", "Renversement"}
             }
         },
-        ["Block"] = {
-            Name = "Destined Path",
+        ["Parade"] = {
+            Name = "Chemin Destiné",
             Duration = 1.7,
             {Hits = {1, 1}, Dmg = {100, 200}},
             {
                 Hits = {1, 1, 1},
                 Dmg = {100, 200, 200},
-                Procs = {"", "", {"Impact", "Slash"}}
+                Procs = {"", "", {"Impact", "Tranchant"}}
             },
-            {Hits = 1, Dmg = 400, Procs = {"Ragdoll"}}
+            {Hits = 1, Dmg = 400, Procs = {"Étourdi"}}
         },
-        ["Slide"] = {
-            Name = "Parting Knee",
+        ["Glissade"] = {
+            Name = "Genou Séparateur",
             Duration = 0.91,
             {
                 Type = "Spin",
                 Hits = {1, 3},
                 Dmg = {100, 100},
-                Procs = {"Impact", "Lifted"}
+                Procs = {"Impact", "Suspendu"}
             }
         }
     },
 
-    ["Brutal Tide"] = {
-        WeaponType = "Sparring",
-        ["Forward"] = {
+    ["Marée Brutale"] = {
+        WeaponType = "Mains et Pieds",
+        ["Avancer"] = {
             Name = "Inferno",
             Duration = 2.15,
             {Hits = 2, Dmg = 100},
@@ -221,8 +229,8 @@ local StanceData = {
             {Hits = {2, 1}, Dmg = {100, 200}},
             {Hits = 2, Dmg = 300}
         },
-        ["Forward Block"] = {
-            Name = "Rushing Fire",
+        ["Avancer + Parade"] = {
+            Name = "Feu Précipitant",
             Duration = 3.85,
             {Hits = 2, Dmg = 200, Procs = {"Impact"}},
             {
@@ -233,56 +241,61 @@ local StanceData = {
             {
                 Hits = {1, 1, 1},
                 Dmg = {200, 300, 100},
-                Procs = {"", "", "Knockdown"}
+                Procs = {"", "", "Renversement"}
             }
         }
     },
 
-    ["Bullet Dance"] = {
-        WeaponType = "Gunblade",
-        ["Neutral"] = {
-            Name = "Automatic Rhumba",
+    ["Valse de Balles"] = {
+        WeaponType = "Pistolame",
+        ["Neutre"] = {
+            Name = "Rumba Automatique",
             Duration = 4.5,
-            {Type = "Ranged", Hits = 1, Dmg = 125},
-            {Type = "Ranged", Hits = 1, Dmg = 125},
-            {Type = "Ranged", Hits = 1, Dmg = 150},
-            {Type = "Ranged", Hits = 1, Dmg = 200},
+            {Type = "Distance", Hits = 1, Dmg = 125},
+            {Type = "Distance", Hits = 1, Dmg = 125},
+            {Type = "Distance", Hits = 1, Dmg = 150},
+            {Type = "Distance", Hits = 1, Dmg = 200},
             {Hits = 3, Dmg = 300, Procs = {"Impact"}}
         },
-        ["Forward"] = {
-            Name = "Magnum Mambo",
+        ["Avancer"] = {
+            Name = "Mambo Magnum",
             Duration = 3,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 300},
-            {Type = "Ranged", Hits = 1, Dmg = 200}
+            {Type = "Distance", Hits = 1, Dmg = 200}
         },
-        ["Forward Block"] = {
-            Name = "Lead Tango",
+        ["Avancer + Parade"] = {
+            Name = "Tango de Plomb",
             Duration = 2.8,
-            {Type = "Ranged", Hits = 1, Dmg = 300},
-            {Type = "Ranged", Hits = 2, Dmg = 200, Procs = {"Impact"}},
+            {Type = "Distance", Hits = 1, Dmg = 300},
+            {Type = "Distance", Hits = 2, Dmg = 200, Procs = {"Impact"}},
             {Hits = 1, Dmg = 300}
         },
-        ["Block"] = {
-            Name = "Samba Slash",
+        ["Parade"] = {
+            Name = "Samba Lacérante",
             Duration = 3,
-            {Type = "Ranged", Hits = 1, Dmg = 100},
-            {Type = "Ranged", Hits = 1, Dmg = 200},
-            {Type = "Ranged", Hits = 1, Dmg = 200}
+            {Type = "Distance", Hits = 1, Dmg = 100},
+            {Type = "Distance", Hits = 1, Dmg = 200},
+            {Type = "Distance", Hits = 1, Dmg = 200}
         }
     },
 
-    ["Burning Wasp"] = {
-        WeaponType = "Whip",
-        ["Neutral"] = {
-            Name = "Sparking Torture",
+    ["Guêpe Brûlante"] = {
+        WeaponType = "Fouet",
+        ["Neutre"] = {
+            Name = "Torture Étincelante",
             Duration = 1.9,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
-            {Type = "Spin", Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 300,
+                Procs = {"Renversement"}
+            }
         },
-        ["Forward"] = {
-            Name = "Buzzing Sting",
+        ["Avancer"] = {
+            Name = "Piqûre Bourdonnante",
             Duration = 3,
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 200},
@@ -290,31 +303,31 @@ local StanceData = {
                 Type = "Spin",
                 Hits = {1, 1},
                 Dmg = {200, 300},
-                Procs = {"", "Lifted"}
+                Procs = {"", "Suspendu"}
             }
         },
-        ["Forward Block"] = {
-            Name = "Guided Claw",
+        ["Avancer + Parade"] = {
+            Name = "Griffe Guidée",
             Duration = 1.8,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {Type = "Spin", Hits = 1, Dmg = 300}
         }
     },
 
-    ["Carving Mantis"] = {
-        WeaponType = "Dual Swords",
-        ["Neutral"] = {
-            Name = "Rapid Incisions",
+    ["Taillade de Mante"] = {
+        WeaponType = "Doubles Épées",
+        ["Neutre"] = {
+            Name = "Incisions Rapide",
             Duration = 3.9,
-            {Hits = {1, 1}, Dmg = {200, 100}, Procs = {"", "Slash"}},
-            {Hits = 1, Dmg = 300, Procs = {"Lifted"}},
+            {Hits = {1, 1}, Dmg = {200, 100}, Procs = {"", "Tranchant"}},
+            {Hits = 1, Dmg = 300, Procs = {"Suspendu"}},
             {Hits = 1, Dmg = 300},
-            {Hits = 1, Dmg = 300, Procs = {"Slash"}},
+            {Hits = 1, Dmg = 300, Procs = {"Tranchant"}},
             {Hits = 1, Dmg = 200},
-            {Hits = 1, Dmg = 200, Procs = {{"Slash", "Knockdown"}}}
+            {Hits = 1, Dmg = 200, Procs = {{"Tranchant", "Renversement"}}}
         },
-        ["Forward"] = {
-            Name = "Ambush Predator",
+        ["Avancer"] = {
+            Name = "Prédateur Embusqué",
             Duration = 2.35,
             {Hits = 1, Dmg = 100},
             {Hits = 3, Dmg = 100},
@@ -322,171 +335,181 @@ local StanceData = {
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 300}
         },
-        ["Forward Block"] = {
-            Name = "Dire Courtship",
+        ["Avancer + Parade"] = {
+            Name = "Mauvaise Fréquentation",
             Duration = 1.2,
             {Hits = 2, Dmg = 200},
             {Hits = 2, Dmg = 200, Procs = {"Impact"}}
         },
-        ["Block"] = {
-            Name = "Biting Mandibles",
+        ["Parade"] = {
+            Name = "Mâchoires Mordantes",
             Duration = 2.45,
             {Hits = 4, Dmg = 100},
-            {Hits = {1, 1}, Dmg = {200, 200}, Procs = {"", "Slash"}},
-            {Hits = 1, Dmg = 400, Procs = {"Ragdoll"}}
+            {Hits = {1, 1}, Dmg = {200, 200}, Procs = {"", "Tranchant"}},
+            {Hits = 1, Dmg = 400, Procs = {"Étourdi"}}
         }
     },
 
-    ["Celestial Nightfall"] = {
+    ["Crépuscule Céleste"] = {
         WeaponType = "Glaive",
         ConclaveOnly = true,
-        ["Neutral"] = {
+        ["Neutre"] = {
             Name = "Expanding Spiral",
-            {Hits = 1, Dmg = 100, Procs = {"Impair"}},
+            {Hits = 1, Dmg = 100, Procs = {"Diminuer"}},
             {Hits = 2, Dmg = 100}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Whirling Touch",
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Radial Wounding",
             {Hits = 2, Dmg = 100},
             {Hits = 2, Dmg = 100}
         }
     },
 
-    ["Clashing Forest"] = {
-        WeaponType = "Staff",
-        ["Neutral"] = {
-            Name = "Resolute Flurry",
+    ["Affrontement de la Forêt"] = {
+        WeaponType = "Bâton",
+        ["Neutre"] = {
+            Name = "Rafale Résolue",
             Duration = 1.95,
-            {Hits = {4, 1}, Dmg = {100, 50}, Procs = {"Lifted", ""}},
+            {Hits = {4, 1}, Dmg = {100, 50}, Procs = {"Suspendu", ""}},
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
-            {Hits = {1, 1}, Dmg = {100, 400}, Procs = {"", "Knockdown"}}
+            {Hits = {1, 1}, Dmg = {100, 400}, Procs = {"", "Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Skyward Limb",
+        ["Avancer"] = {
+            Name = "Membres vers les Cieux",
             Duration = 2.05,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = {1, 1}, Dmg = {100, 200}, Procs = {"", "Impact"}}
         },
-        ["Forward Block"] = {
-            Name = "Battering Roots",
+        ["Avancer + Parade"] = {
+            Name = "Racines Violentes",
             Duration = 2.1,
             {Hits = 2, Dmg = 200},
-            {Hits = 2, Dmg = 300, Procs = {"Ragdoll"}}
+            {Hits = 2, Dmg = 300, Procs = {"Étourdi"}}
         }
     },
 
-    ["Cleaving Whirlwind"] = {
-        WeaponType = "Heavy Blade",
-        ["Neutral"] = {
-            Name = "Crowd Fall",
+    ["Entaille Tornade"] = {
+        WeaponType = "Lame Lourde",
+        ["Neutre"] = {
+            Name = "Chute de Foule",
             Duration = 2.25,
             {Hits = 1, Dmg = 300},
-            {Hits = 1, Dmg = 400, Procs = {"Lifted"}},
-            {Type = "Slam", Hits = 1, Dmg = 500, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 400, Procs = {"Suspendu"}},
+            {
+                Type = "Frappe au Sol",
+                Hits = 1,
+                Dmg = 500,
+                Procs = {"Renversement"}
+            }
         },
-        ["Forward"] = {
-            Name = "Broken Bull",
+        ["Avancer"] = {
+            Name = "Taureau Détraqué",
             Duration = 5.7,
             {Type = "Spin", Hits = 2, Dmg = 100},
             {Type = "Spin", Hits = 2, Dmg = 100},
             {Type = "Spin", Hits = {1, 1}, Dmg = {100, 200}},
             {Type = "Spin", Hits = 2, Dmg = 200},
-            {Type = "Spin", Hits = 2, Dmg = 300, Procs = {"Knockdown"}}
-        },
-        ["Forward Block"] = {
-            Name = "Sundered Tusk",
-            Duration = 2.7,
-            {Type = "Slam", Hits = 1, Dmg = 500},
             {
-                Type = "Slam",
-                Hits = {1, 1, 1, 1},
-                Dmg = {300, 100, 200, 400},
-                Procs = {"", "", "", "Lifted"}
+                Type = "Spin",
+                Hits = 2,
+                Dmg = 300,
+                Procs = {"Renversement"}
             }
         },
-        ["Block"] = {
-            Name = "Drifting Stampede",
+        ["Avancer + Parade"] = {
+            Name = "Défense Scindée",
+            Duration = 2.7,
+            {Type = "Frappe au Sol", Hits = 1, Dmg = 500},
+            {
+                Type = "Frappe au Sol",
+                Hits = {1, 1, 1, 1},
+                Dmg = {300, 100, 200, 400},
+                Procs = {"", "", "", "Suspendu"}
+            }
+        },
+        ["Parade"] = {
+            Name = "Débandade Dérivante",
             Duration = 1.9,
-            {Type = "Slam", Hits = 1, Dmg = 400, Procs = {"Impact"}},
-            {Hits = 1, Dmg = 500, Procs = {"Ragdoll"}}
+            {Type = "Frappe au Sol", Hits = 1, Dmg = 400, Procs = {"Impact"}},
+            {Hits = 1, Dmg = 500, Procs = {"Étourdi"}}
         }
     },
 
-    ["Coiling Viper"] = {
-        WeaponType = "Whip",
-        ["Forward"] = {
-            Name = "Whistling Wind",
+    ["Étreinte de la Vipère"] = {
+        WeaponType = "Fouet",
+        ["Avancer"] = {
+            Name = "Vent Sifflant",
             Duration = 2.7,
             {Hits = 1, Dmg = 200},
-            {Hits = {1, 1}, Dmg = {200, 200}, Procs = {"", "Lifted"}},
+            {Hits = {1, 1}, Dmg = {200, 200}, Procs = {"", "Suspendu"}},
             {Hits = 2, Dmg = 400, Procs = {"Impact"}}
         },
-        ["Forward Block"] = {
-            Name = "Tumbling King",
+        ["Avancer + Parade"] = {
+            Name = "Roi de la Culbute",
             Duration = 2.3,
             {Hits = 1, Dmg = 200},
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         }
     },
 
-    ["Crashing Havoc"] = {
-        WeaponType = "Hammer",
+    ["Ravage Tonitruant"] = {
+        WeaponType = "Marteau",
         ConclaveOnly = true,
-        ["Neutral"] = {
-            Name = "Fist And Hammer",
+        ["Neutre"] = {
+            Name = "Poings And Marteau",
             {Hits = {1, 1}, Dmg = {100, 100}},
             {Hits = 2, Dmg = 100}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Rising Thunder",
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Falling Rock",
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 100}
         }
     },
 
-    ["Crashing Timber"] = {
-        WeaponType = "Staff",
+    ["Rondin Écrasant"] = {
+        WeaponType = "Bâton",
         ConclaveOnly = true,
-        ["Neutral"] = {
+        ["Neutre"] = {
             Name = "Falling Leaves",
             {Hits = {1, 1}, Dmg = {100, 100}},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Sweeping Limb",
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Bending Branch",
-            {Hits = 1, Dmg = 100, Procs = {"Knockdown"}},
+            {Hits = 1, Dmg = 100, Procs = {"Renversement"}},
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {1, 1},
                 Dmg = {100, 100},
-                Procs = {"", "Knockdown"}
+                Procs = {"", "Renversement"}
             }
         }
     },
 
-    ["Crimson Dervish"] = {
-        WeaponType = "Sword",
-        ["Neutral"] = {
-            Name = "Crimson Orbit",
+    ["Derviche Cramoisi"] = {
+        WeaponType = "Épée",
+        ["Neutre"] = {
+            Name = "Rafale en Torsion",
             Duration = 2,
             {Hits = 1, Dmg = 300},
             {Hits = 1, Dmg = 300},
@@ -494,48 +517,48 @@ local StanceData = {
                 Type = "Spin",
                 Hits = {1, 1, 1},
                 Dmg = {200, 200, 400},
-                Procs = {"", "Impact", "Knockdown"}
+                Procs = {"", "Impact", "Renversement"}
             }
         },
-        ["Forward"] = {
-            Name = "Twisting Flurry",
+        ["Avancer"] = {
+            Name = "Orbite Cramoisie",
             Duration = 2,
             {Hits = 1, Dmg = 100},
             {Type = "Spin", Hits = 1, Dmg = 200},
             {Hits = {1, 1}, Dmg = {100, 200}}
         },
-        ["Forward Block"] = {
-            Name = "Coiling Impale",
+        ["Avancer + Parade"] = {
+            Name = "Empalement Enroulé",
             Duration = 1.5,
             {
                 Type = "Spin",
                 Hits = {1, 1, 1},
                 Dmg = {200, 200, 400},
-                Procs = {"", {"Impact", "Slash"}, "Knockdown"}
+                Procs = {"", {"Impact", "Tranchant"}, "Renversement"}
             }
         }
     },
 
-    ["Crossing Snakes"] = {
-        WeaponType = "Dual Swords",
-        ["Neutral"] = {
-            Name = "East to West",
+    ["Serpents Croisés"] = {
+        WeaponType = "Doubles Épées",
+        ["Neutre"] = {
+            Name = "D'Est en Ouest",
             Duration = 1.35,
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 300},
             {Hits = 1, Dmg = 300},
             {Hits = 2, Dmg = 200, Procs = {"Impact"}}
         },
-        ["Forward"] = {
-            Name = "Lacerating Leap",
+        ["Avancer"] = {
+            Name = "Saut Lacérant",
             Duration = 1.85,
             {Hits = 2, Dmg = 100},
             {Hits = 2, Dmg = 100},
             {Hits = 2, Dmg = 200},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
-            Name = "Northern Coil",
+        ["Avancer + Parade"] = {
+            Name = "Anneau du Nord",
             Duration = 2.2,
             {
                 Hits = {2, 1, 1},
@@ -544,124 +567,152 @@ local StanceData = {
             },
             {Hits = 2, Dmg = 200}
         },
-        ["Block"] = {
-            Name = "Twin Fang",
+        ["Parade"] = {
+            Name = "Crocs Jumeaux",
             Duration = 2.4,
-            {Hits = 2, Dmg = 100, Procs = {"Lifted"}},
-            {Hits = {2, 2}, Dmg = {100, 200}, Procs = {"Slash", "Knockdown"}}
-        }
-    },
-
-    ["Crushing Ruin"] = {
-        WeaponType = "Hammer",
-        ["Neutral"] = {
-            Name = "Raging Whirlwind",
-            Duration = 3,
-            {Hits = 1, Dmg = 400, Procs = {"Impact"}},
-            {Type = "Spin", Hits = {1, 1}, Dmg = {200, 300}},
-            {Type = "Slam", Hits = 1, Dmg = 500, Procs = {"Knockdown"}}
-        },
-        ["Forward"] = {
-            Name = "Tidal Force",
-            Duration = 2.6,
-            {Hits = 1, Dmg = 100},
-            {Type = "Spin", Hits = 2, Dmg = 100},
-            {Hits = 1, Dmg = 200, Procs = {"Lifted"}},
-            {Hits = 1, Dmg = 300}
-        },
-        ["Forward Block"] = {
-            Name = "Shattered Village",
-            Duration = 4.25,
-            {Type = "Spin", Hits = {1, 2}, Dmg = {300, 50}},
-            {Type = "Spin", Hits = {1, 2}, Dmg = {300, 50}},
-            {Type = "Spin", Hits = 1, Dmg = 400, Procs = {"Impact"}},
-            {Type = "Slam", Hits = 1, Dmg = 500, Procs = {"Knockdown"}}
-        },
-        ["Block"] = {
-            Name = "Winding Temper",
-            Duration = 2.25,
+            {Hits = 2, Dmg = 100, Procs = {"Suspendu"}},
             {
-                Type = "Slam",
-                Hits = {1, 1, 1},
-                Dmg = {300, 200, 400},
-                Procs = {"", "Impact", "Knockdown"}
+                Hits = {2, 2},
+                Dmg = {100, 200},
+                Procs = {"Tranchant", "Renversement"}
             }
         }
     },
 
-    ["Cunning Aspect"] = {
-        WeaponType = "Rapier",
+    ["Ruine Dévastatrice"] = {
+        WeaponType = "Marteau",
+        ["Neutre"] = {
+            Name = "Tourbillon Furieux",
+            Duration = 3,
+            {Hits = 1, Dmg = 400, Procs = {"Impact"}},
+            {Type = "Spin", Hits = {1, 1}, Dmg = {200, 300}},
+            {
+                Type = "Frappe au Sol",
+                Hits = 1,
+                Dmg = 500,
+                Procs = {"Renversement"}
+            }
+        },
+        ["Avancer"] = {
+            Name = "Force de la Marée",
+            Duration = 2.6,
+            {Hits = 1, Dmg = 100},
+            {Type = "Spin", Hits = 2, Dmg = 100},
+            {Hits = 1, Dmg = 200, Procs = {"Suspendu"}},
+            {Hits = 1, Dmg = 300}
+        },
+        ["Avancer + Parade"] = {
+            Name = "Village en Ruine",
+            Duration = 4.25,
+            {Type = "Spin", Hits = {1, 2}, Dmg = {300, 50}},
+            {Type = "Spin", Hits = {1, 2}, Dmg = {300, 50}},
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 400,
+                Procs = {"Impact"}
+            },
+            {
+                Type = "Frappe au Sol",
+                Hits = 1,
+                Dmg = 500,
+                Procs = {"Renversement"}
+            }
+        },
+        ["Parade"] = {
+            Name = "Colère Sinueuse",
+            Duration = 2.25,
+            {
+                Type = "Frappe au Sol",
+                Hits = {1, 1, 1},
+                Dmg = {300, 200, 400},
+                Procs = {"", "Impact", "Renversement"}
+            }
+        }
+    },
+
+    ["Aspect Rusé"] = {
+        WeaponType = "Rapière",
         ConclaveOnly = true,
-        ["Neutral"] = {
+        ["Neutre"] = {
             Name = "Shrouded Point",
-            {Hits = {1, 1}, Dmg = {100, 100}, Procs = {"Impair", "Impair"}},
+            {Hits = {1, 1}, Dmg = {100, 100}, Procs = {"Diminuer", "Diminuer"}},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Deceptive Lunge",
             {Hits = {1, 1}, Dmg = {100, 100}},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Covert Coil",
             {Hits = {1, 1}, Dmg = {100, 100}},
             {Hits = {1, 1, 1}, Dmg = {100, 100, 100}}
         }
     },
 
-    ["Cyclone Kraken"] = {
-        WeaponType = "Machete",
-        ["Neutral"] = {
+    ["Kraken Cyclonique"] = {
+        WeaponType = "Machette",
+        ["Neutre"] = {
             Name = "Gale Triton",
             Duration = 4.1,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {Hits = {1, 1}, Dmg = {200, 100}},
-            {Type = "Spin", Hits = {1, 1, 1}, Dmg = {100, 200, 400}},
-            {Type = "Spin", Hits = 1, Dmg = 400, Procs = {"Knockdown"}}
+            {
+                Type = "Spin",
+                Hits = {1, 1, 1},
+                Dmg = {100, 200, 400}
+            },
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 400,
+                Procs = {"Renversement"}
+            }
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Leviathan Rain",
             Duration = 1.95,
             {Hits = 2, Dmg = 100},
             {Type = "Spin", Hits = 3, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Lightning Siren",
             Duration = 2.3,
             {Hits = {1, 1}, Dmg = {200, 200}, Procs = {"", "Impact"}},
             {
                 Hits = {1, 1, 1},
                 Dmg = {100, 200, 400},
-                Procs = {"", "Slash", "Knockdown"}
+                Procs = {"", "Tranchant", "Renversement"}
             }
         },
-        ["Block"] = {
+        ["Parade"] = {
             Name = "Thunder Hydra",
             Duration = 2.3,
-            {Hits = {1, 1}, Dmg = {100, 300}, Procs = {"Lifted", ""}},
+            {Hits = {1, 1}, Dmg = {100, 300}, Procs = {"Suspendu", ""}},
             {Type = "Spin", Hits = 1, Dmg = 300},
-            {Hits = 1, Dmg = 400, Procs = {"Ragdoll"}}
+            {Hits = 1, Dmg = 400, Procs = {"Étourdi"}}
         }
     },
 
-    ["Defiled Snapdragon"] = {
-        WeaponType = "Blade and Whip",
-        ["Neutral"] = {
-            Name = "Claws of the Drake",
+    ["Ire Souillée du Dragon"] = {
+        WeaponType = "Lame-Fouet",
+        ["Neutre"] = {
+            Name = "Griffes du Dragon",
             Duration = 4.25,
-            {Hits = 1, Dmg = 300, Procs = {"Lifted"}},
+            {Hits = 1, Dmg = 300, Procs = {"Suspendu"}},
             {Hits = 1, Dmg = 300},
-            {Hits = {1, 1}, Dmg = {100, 200}, Procs = {"", "Slash"}},
+            {Hits = {1, 1}, Dmg = {100, 200}, Procs = {"", "Tranchant"}},
             {
                 Hits = {1, 1, 1, 1},
                 Dmg = {200, 100, 100, 200},
-                Procs = {"", "", {"Slash", "Ragdoll"}, ""}
+                Procs = {"", "", {"Tranchant", "Étourdi"}, ""}
             },
-            {Hits = 2, Dmg = 400, Procs = {"Knockdown"}}
+            {Hits = 2, Dmg = 400, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Soul of the Leviathan",
+        ["Avancer"] = {
+            Name = "Âme du Léviathan",
             Duration = 4.1,
             {Hits = 4, Dmg = 100},
             {Type = "Spin", Hits = 5, Dmg = 100},
@@ -669,44 +720,44 @@ local StanceData = {
             {Hits = {2, 2}, Dmg = {200, 100}},
             {Hits = 1, Dmg = 200}
         },
-        ["Forward Block"] = {
-            Name = "Heart of the Naga",
+        ["Avancer + Parade"] = {
+            Name = "Coeur du Naga",
             Duration = 4.35,
             {Hits = 1, Dmg = 300},
-            {Hits = {3, 1}, Dmg = {100, 200}, Procs = {"", "Slash"}},
+            {Hits = {3, 1}, Dmg = {100, 200}, Procs = {"", "Tranchant"}},
             {
                 Type = "Spin",
                 Hits = {1, 1, 1},
                 Dmg = {200, 100, 200},
-                Procs = {"", "", {"Slash", "Knockdown"}}
+                Procs = {"", "", {"Tranchant", "Renversement"}}
             }
         },
-        ["Block"] = {
-            Name = "Fangs of the<br /><br /><br />Lindwurm",
+        ["Parade"] = {
+            Name = "Crocs du Lindwurm",
             Duration = 1.35,
-            {Hits = 1, Dmg = 500, Procs = {"Ragdoll"}}
+            {Hits = 1, Dmg = 500, Procs = {"Étourdi"}}
         }
     },
 
-    ["Decisive Judgement"] = {
+    ["Jugement Décisif"] = {
         WeaponType = "Nikana",
-        ["Neutral"] = {
-            Name = "Swift Retribution",
+        ["Neutre"] = {
+            Name = "Châtiment Éclair",
             Duration = 2.65,
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 300, Procs = {""}},
-            {Hits = 1, Dmg = 200, Procs = {"Slash"}},
-            {Hits = 1, Dmg = 300, Procs = {"Lifted"}},
-            {Hits = 1, Dmg = 400, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 200, Procs = {"Tranchant"}},
+            {Hits = 1, Dmg = 300, Procs = {"Suspendu"}},
+            {Hits = 1, Dmg = 400, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Windless Cuts",
+        ["Avancer"] = {
+            Name = "Coupes sans Vent",
             Duration = 0.9,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
-        ["Forward Block"] = {
-            Name = "Consent Decree",
+        ["Avancer + Parade"] = {
+            Name = "Décret du Consentement",
             Duration = 1.65,
             {
                 Hits = {1, 1, 1},
@@ -715,189 +766,217 @@ local StanceData = {
             },
             {Hits = 1, Dmg = 400, Procs = {"Impact"}}
         },
-        ["Block"] = {
-            Name = "Silent Acumen",
+        ["Parade"] = {
+            Name = "Perspicacité Silencieuse",
             Duration = 1.55,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
-            {Hits = 1, Dmg = 500, Procs = {"Ragdoll"}}
+            {Hits = 1, Dmg = 500, Procs = {"Étourdi"}}
         },
-        ["Slide"] = {
-            Name = "Parting Knee",
+        ["Glissade"] = {
+            Name = "Genou Séparateur",
             Duration = 0.67,
-            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 200,
+                Procs = {"Impact"}
+            }
         }
     },
 
-    ["Dividing Blades"] = {
-        WeaponType = "Dual Swords",
+    ["Lames Scindantes"] = {
+        WeaponType = "Doubles Épées",
         ConclaveOnly = true,
-        ["Neutral"] = {
+        ["Neutre"] = {
             Name = "Converging Edge",
-            {Hits = 2, Dmg = 100, Procs = {"Impair"}},
+            {Hits = 2, Dmg = 100, Procs = {"Diminuer"}},
             {Hits = {1, 1, 1, 1}, Dmg = {100, 100, 100, 100}}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Cross Cuts",
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Combined Strike",
             {Hits = 2, Dmg = 100},
             {Hits = 2, Dmg = 100}
         }
     },
 
-    ["Eleventh Storm"] = {
-        WeaponType = "Sword & Shield",
-        ["Neutral"] = {
-            Name = "Striking Thunder",
+    ["Onzième Tempête"] = {
+        WeaponType = "Épée et Bouclier",
+        ["Neutre"] = {
+            Name = "Frappe du Tonnerre",
             Duration = 3.5,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 400},
-            {Hits = {1, 1}, Dmg = {300, 200}, Procs = {"Lifted", "Slash"}},
-            {Hits = 1, Dmg = 400, Procs = {"Knockdown"}}
+            {Hits = {1, 1}, Dmg = {300, 200}, Procs = {"Suspendu", "Tranchant"}},
+            {Hits = 1, Dmg = 400, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Devouring Beast",
+        ["Avancer"] = {
+            Name = "Bête Dévorante",
             Duration = 1.15,
             {Type = "Spin", Hits = 1, Dmg = 100},
             {Type = "Spin", Hits = 1, Dmg = 200},
             {Type = "Spin", Hits = 1, Dmg = 200}
         },
-        ["Forward Block"] = {
-            Name = "Bide and Bleed",
+        ["Avancer + Parade"] = {
+            Name = "Patience et Saignement",
             Duration = 1.8,
             {Hits = {1, 2}, Dmg = {200, 100}},
-            {Type = "Slam", Hits = 1, Dmg = 400, Procs = {"Knockdown"}}
+            {
+                Type = "Frappe au Sol",
+                Hits = 1,
+                Dmg = 400,
+                Procs = {"Renversement"}
+            }
         },
-        ["Block"] = {
-            Name = "Diamond Deus",
+        ["Parade"] = {
+            Name = "Deus Diamand",
             Duration = 2,
             {Hits = 5, Dmg = 100},
-            {Hits = 1, Dmg = 500, Procs = {"Ragdoll"}}
+            {Hits = 1, Dmg = 500, Procs = {"Étourdi"}}
         }
     },
 
-    ["Exalted Blade"] = {
-        WeaponType = "Sword",
-        ["Neutral"] = {
-            Name = "Cutting Poise",
+    ["Lame Exaltée"] = {
+        WeaponType = "Arme Exalté",
+        ["Neutre"] = {
+            Name = "Grâce Coupante",
             Duration = 3.2,
             {Hits = 1, Dmg = 300},
             {Hits = 1, Dmg = 300},
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 100},
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Lancing Justice",
+        ["Avancer"] = {
+            Name = "Justice Perçante",
             Duration = 1.4,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
-            Name = "Virtuous Slash",
+        ["Avancer + Parade"] = {
+            Name = "Tranchant Virtueux",
             Duration = 2.4,
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 200}
         },
-        ["Block"] = {
-            Name = "Equal Laceration",
+        ["Parade"] = {
+            Name = "Lacération Médiane",
             Duration = 2.8,
             {Hits = 1, Dmg = 300},
             {Hits = 1, Dmg = 200},
-            {Hits = 1, Dmg = 300, Procs = {"Ragdoll"}}
+            {Hits = 1, Dmg = 300, Procs = {"Étourdi"}}
         },
-        ["Slide"] = {
-            Name = "Judged Severance",
+        ["Glissade"] = {
+            Name = "Rupture Voulue",
             Duration = 0.95,
             {Type = "Spin", Hits = 1, Dmg = 200}
         },
-        ["Finisher"] = {
-            Name = "Death's Mark",
-            {Hits = 1, Dmg = 250, Procs = {"Slash"}}
+        ["Coup de Grâce"] = {
+            Name = "Marque de la Mort",
+            {Hits = 1, Dmg = 250, Procs = {"Tranchant"}}
         }
     },
 
-    ["Fateful Truth"] = {
+    ["Vérité Fatidique"] = {
         WeaponType = "Nikana",
         ConclaveOnly = true,
-        ["Neutral"] = {
+        ["Neutre"] = {
             Name = "Leading Blade",
             {
                 Hits = {1, 1, 1, 2},
                 Dmg = {100, 100, 100, 100},
-                Procs = {"Impair", "Impair", "Impair", "Impair"}
+                Procs = {"Diminuer", "Diminuer", "Diminuer", "Diminuer"}
             },
             {Hits = 1, Dmg = 100}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Keen Cuts",
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Sudden Spring",
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {1, 1},
                 Dmg = {100, 100},
-                Procs = {"Knockdown", ""}
+                Procs = {"Renversement", ""}
             },
             {Hits = 1, Dmg = 100}
 
         },
-        ["Slide"] = {
-            Name = "Parting Knee",
-            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
+        ["Glissade"] = {
+            Name = "Genou Séparateur",
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 200,
+                Procs = {"Impact"}
+            }
         }
     },
 
-    ["Final Harbinger"] = {
-        WeaponType = "Sword & Shield",
-        ["Neutral"] = {
-            Name = "Null Warning",
+    ["Dernier Présage"] = {
+        WeaponType = "Épée et Bouclier",
+        ["Neutre"] = {
+            Name = "Sans Sommation",
             Duration = 3.05,
-            {Hits = {1, 1}, Dmg = {200, 200}, Procs = {"", {"Impact", "Slash"}}},
+            {
+                Hits = {1, 1},
+                Dmg = {200, 200},
+                Procs = {"", {"Impact", "Tranchant"}}
+            },
             {Hits = {1, 1}, Dmg = {200, 300}},
             {
                 Hits = {1, 2, 1},
                 Dmg = {300, 100, 100},
-                Procs = {"Lifted", "", "Slash"}
+                Procs = {"Suspendu", "", "Tranchant"}
             },
-            {Hits = 3, Dmg = 400, Procs = {"Knockdown"}}
+            {Hits = 3, Dmg = 400, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Impending Battery",
+        ["Avancer"] = {
+            Name = "Batterie Imminente",
             Duration = 2.65,
             {Hits = 1, Dmg = 100},
             {Type = "Spin", Hits = 2, Dmg = 200},
             {Type = "Spin", Hits = 1, Dmg = 100},
             {Hits = 2, Dmg = 200},
-            {Type = "Spin", Hits = {1, 1, 2}, Dmg = {100, 200, 100}}
+            {
+                Type = "Spin",
+                Hits = {1, 1, 2},
+                Dmg = {100, 200, 100}
+            }
         },
-        ["Forward Block"] = {
-            Name = "Dark Light",
+        ["Avancer + Parade"] = {
+            Name = "Lumière Sombre",
             Duration = 4.05,
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {3, 1},
                 Dmg = {100, 300},
                 Procs = {"", "Impact"}
             },
             {Hits = 4, Dmg = 200},
-            {Type = "Spin", Hits = 5, Dmg = 100, Procs = {"Knockdown"}}
+            {
+                Type = "Spin",
+                Hits = 5,
+                Dmg = 100,
+                Procs = {"Renversement"}
+            }
         },
-        ["Block"] = {
-            Name = "Systemic Shred",
+        ["Parade"] = {
+            Name = "Déchiquetage Systémique",
             Duration = 1.8,
             {
                 Type = "Spin",
@@ -905,115 +984,119 @@ local StanceData = {
                 Dmg = {200, 100, 100},
                 Procs = {"", "", "Impact"}
             },
-            {Hits = 1, Dmg = 500, Procs = {"Ragdoll"}}
+            {Hits = 1, Dmg = 500, Procs = {"Étourdi"}}
         }
     },
 
-    ["Flailing Branch"] = {
-        WeaponType = "Staff",
-        ["Neutral"] = {
-            Name = "Rising Falls",
+    ["Branche Battante"] = {
+        WeaponType = "Bâton",
+        ["Neutre"] = {
+            Name = "Chutes Montantes",
             Duration = 2.35,
             {Hits = {1, 1}, Dmg = {300, 200}, Procs = {"", "Impact"}},
-            {Hits = 1, Dmg = 400, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 400, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Battered Thread",
+        ["Avancer"] = {
+            Name = "fil Usé",
             Duration = 1.85,
             {Hits = 1, Dmg = 100, Procs = {"Impact"}},
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
-            {Hits = {1, 1}, Dmg = {200, 300}, Procs = {"", "Knockdown"}}
+            {Hits = {1, 1}, Dmg = {200, 300}, Procs = {"", "Renversement"}}
         },
-        ["Forward Block"] = {
-            Name = "Autumn Leaf",
+        ["Avancer + Parade"] = {
+            Name = "Feuille d'Automne",
             Duration = 2.05,
             {Hits = 1, Dmg = 200},
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {1, 1},
                 Dmg = {300, 300},
-                Procs = {"", "Knockdown"}
+                Procs = {"", "Renversement"}
             }
         }
     },
 
-    ["Four Riders"] = {
-        WeaponType = "Claws",
-        ["Neutral"] = {
-            Name = "Aggravated Swarm",
+    ["Quatre Cavaliers"] = {
+        WeaponType = "Griffes",
+        ["Neutre"] = {
+            Name = "Essaim Aggravé",
             Duration = 2.3,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 200, Procs = {"Impact"}},
             {Hits = 1, Dmg = 200, Procs = {"Impact"}},
-            {Hits = 1, Dmg = 400, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 400, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Hungering<br /><br /><br />Encroachment",
+        ["Avancer"] = {
+            Name = "Soif de Conquête",
             Duration = 1.7,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 200},
             {Hits = 2, Dmg = 100},
             {Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
-        ["Forward Block"] = {
-            Name = "Raging Conflict",
+        ["Avancer + Parade"] = {
+            Name = "Coeur du Conflit",
             Duration = 3,
             {Hits = {2, 2}, Dmg = {100, 200}, Procs = {"Impact", ""}},
-            {Hits = {1, 1}, Dmg = {200, 200}, Procs = {"", "Slash"}},
+            {Hits = {1, 1}, Dmg = {200, 200}, Procs = {"", "Tranchant"}},
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {1, 1},
                 Dmg = {100, 400},
-                Procs = {"Lifted", "Knockdown"}
+                Procs = {"Suspendu", "Renversement"}
             }
         },
-        ["Block"] = {
-            Name = "Eternal Fall",
+        ["Parade"] = {
+            Name = "Chute Éternelle",
             Duration = 2.1,
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {Hits = 1, Dmg = 300},
-            {Hits = 2, Dmg = 400, Procs = {"Ragdoll"}}
+            {Hits = 2, Dmg = 400, Procs = {"Étourdi"}}
         },
-        ["Slide"] = {
-            Name = "Feuding Blood",
+        ["Glissade"] = {
+            Name = "Conflit de Sang",
             Duration = 0.69,
             {Type = "Spin", Hits = 2, Dmg = 200}
         }
     },
 
-    ["Fracturing Wind"] = {
-        WeaponType = "Fist",
-        ["Neutral"] = {
-            Name = "Rolling Gale",
+    ["Vent Fracturant"] = {
+        WeaponType = "Poings",
+        ["Neutre"] = {
+            Name = "Roulement du Vent",
             Duration = 1.55,
             {Hits = {1, 1}, Dmg = {200, 300}},
-            {Hits = 1, Dmg = 400, Procs = {"Lifted"}}
+            {Hits = 1, Dmg = 400, Procs = {"Suspendu"}}
         },
-        ["Forward"] = {
-            Name = "Gaining Humility",
+        ["Avancer"] = {
+            Name = "Humilité Persuasive",
             Duration = 1.8,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100, Procs = {"Impact"}},
             {Hits = 1, Dmg = 300},
             {Hits = 1, Dmg = 200}
         },
-        ["Forward Block"] = {
-            Name = "Trailing Doom",
+        ["Avancer + Parade"] = {
+            Name = "Ruine Traînante",
             Duration = 1.9,
             {
                 Hits = {1, 3, 1},
                 Dmg = {200, 100, 300},
                 Procs = {"", "", "Impact"}
             },
-            {Hits = {1, 1}, Dmg = {300, 400}, Procs = {"Impact", "Knockdown"}}
+            {
+                Hits = {1, 1},
+                Dmg = {300, 400},
+                Procs = {"Impact", "Renversement"}
+            }
         },
-        ["Block"] = {
-            Name = "Rising Wind",
+        ["Parade"] = {
+            Name = "Vent Levant",
             Duration = 1.45,
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {1, 1},
                 Dmg = {300, 500},
                 Procs = {"Impact", ""}
@@ -1021,78 +1104,78 @@ local StanceData = {
         }
     },
 
-    ["Gaia's Tragedy"] = {
-        WeaponType = "Fist",
-        ["Neutral"] = {
-            Name = "River's Grief",
+    ["Tragédie de Gaïa"] = {
+        WeaponType = "Poings",
+        ["Neutre"] = {
+            Name = "Chagrin de la Rivière",
             Duration = 3.65,
             {Hits = {1, 1}, Dmg = {300, 200}, Procs = {"Impact", ""}},
-            {Hits = {1, 1}, Dmg = {200, 300}, Procs = {"", "Lifted"}},
+            {Hits = {1, 1}, Dmg = {200, 300}, Procs = {"", "Suspendu"}},
             {Hits = 1, Dmg = 400},
-            {Hits = 1, Dmg = 800, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 800, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Ocean's Contempt",
+        ["Avancer"] = {
+            Name = "Mépris de l'Océan",
             Duration = 1.65,
             {Hits = 1, Dmg = 100},
             {Hits = 2, Dmg = 100},
             {Hits = 1, Dmg = 200, Procs = {"Impact"}},
             {Hits = 2, Dmg = 100}
         },
-        ["Forward Block"] = {
-            Name = "Mountain's Rage",
+        ["Avancer + Parade"] = {
+            Name = "Rage de la Montagne",
             Duration = 2.3,
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {2, 1},
                 Dmg = {200, 100},
                 Procs = {"Impact", ""}
             },
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {2, 1},
                 Dmg = {250, 100},
                 Procs = {"Impact", "Impact"}
             },
-            {Hits = 1, Dmg = 400, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 400, Procs = {"Renversement"}}
         },
-        ["Block"] = {
-            Name = "Forest's Remorse",
+        ["Parade"] = {
+            Name = "Remords de la Forêt",
             Duration = 3.8,
             {
                 Hits = {1, 3, 1},
                 Dmg = {200, 100, 100},
-                Procs = {"", "", "Lifted"}
+                Procs = {"", "", "Suspendu"}
             },
             {Hits = 1, Dmg = 300},
-            {Type = "Slam", Hits = 1, Dmg = 500, Procs = {"Impact"}}
+            {Type = "Frappe au Sol", Hits = 1, Dmg = 500, Procs = {"Impact"}}
         }
     },
 
-    ["Gemini Cross"] = {
+    ["Croisement des Gémeaux"] = {
         WeaponType = "Tonfa",
-        ["Neutral"] = {
-            Name = "Vagrant Blight",
+        ["Neutre"] = {
+            Name = "Anéantissement du Vagabondt",
             Duration = 4.6,
             {Hits = {2, 2}, Dmg = {200, 100}},
-            {Hits = {4, 1}, Dmg = {100, 100}, Procs = {"", "Slash"}},
+            {Hits = {4, 1}, Dmg = {100, 100}, Procs = {"", "Tranchant"}},
             {Hits = 5, Dmg = 100},
             {Hits = 2, Dmg = 200},
             {
                 Hits = {1, 1},
                 Dmg = {300, 200},
-                Procs = {"Impact", {"Slash", "Knockdown"}}
+                Procs = {"Impact", {"Tranchant", "Renversement"}}
             }
         },
-        ["Forward"] = {
-            Name = "Cold Vendetta",
+        ["Avancer"] = {
+            Name = "Froide Vendetta",
             Duration = 1.2,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 200}
         },
-        ["Forward Block"] = {
-            Name = "Baleful Sin",
+        ["Avancer + Parade"] = {
+            Name = "Péché Sinistre",
             Duration = 2.3,
             {
                 Hits = {1, 1, 1, 1},
@@ -1103,23 +1186,23 @@ local StanceData = {
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 200}
         },
-        ["Block"] = {
-            Name = "Blind Tormentor",
+        ["Parade"] = {
+            Name = "Tourmenteur Aveugle",
             Duration = 2.85,
             {Hits = {2, 2}, Dmg = {100, 100}, Procs = {"", "Impact"}},
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {2, 2, 2},
                 Dmg = {200, 100, 300},
-                Procs = {"", "Slash", "Knockdown"}
+                Procs = {"", "Tranchant", "Renversement"}
             }
         }
     },
 
-    ["Gleaming Talon"] = {
+    ["Serre Étincelante"] = {
         WeaponType = "Glaive",
-        ["Neutral"] = {
-            Name = "Mercury Vortex",
+        ["Neutre"] = {
+            Name = "Vortex Mercurien",
             Duration = 4.3,
             {Hits = 2, Dmg = 200},
             {Hits = 2, Dmg = 200},
@@ -1130,22 +1213,27 @@ local StanceData = {
                 Procs = {"Impact", ""}
             },
             {Hits = 1, Dmg = 300},
-            {Hits = 1, Dmg = 400, Procs = {"Lifted"}}
+            {Hits = 1, Dmg = 400, Procs = {"Suspendu"}}
         },
-        ["Forward"] = {
-            Name = "Ruin",
+        ["Avancer"] = {
+            Name = "Ruine",
             Duration = 2,
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 100, Procs = {"Impact"}},
-            {Type = "Spin", Hits = 3, Dmg = 100, Procs = {"Impact"}}
+            {
+                Type = "Spin",
+                Hits = 3,
+                Dmg = 100,
+                Procs = {"Impact"}
+            }
         },
-        ["Forward Block"] = {
-            Name = "Silver Reach",
+        ["Avancer + Parade"] = {
+            Name = "Atteinte d'Argent",
             Duration = 2.6,
             {
                 Hits = {1, 1, 1},
                 Dmg = {100, 200, 100},
-                Procs = {"Lifted", "Slash", ""}
+                Procs = {"Suspendu", "Tranchant", ""}
             },
             {
                 Type = "Spin",
@@ -1157,26 +1245,26 @@ local StanceData = {
         }
     },
 
-    ["Gnashing Payara"] = {
-        WeaponType = "Dual Daggers",
-        ["Neutral"] = {
-            Name = "Pincer Strike",
+    ["Grincement du Payara"] = {
+        WeaponType = "Doubles Dagues",
+        ["Neutre"] = {
+            Name = "Frappe de Pince",
             Duration = 2.5,
             {Hits = 2, Dmg = 300},
             {
                 Hits = {2, 1},
                 Dmg = {200, 400},
-                Procs = {{"Slash", "Lifted"}, "Knockdown"}
+                Procs = {{"Tranchant", "Suspendu"}, "Renversement"}
             }
         },
-        ["Forward"] = {
-            Name = "Cheetah's Guile",
+        ["Avancer"] = {
+            Name = "Ruse du Guépard",
             Duration = 1.15,
             {Hits = 2, Dmg = 100},
             {Type = "Spin", Hits = {1, 1}, Dmg = {100, 200}}
         },
-        ["Forward Block"] = {
-            Name = "Flash Flurry",
+        ["Avancer + Parade"] = {
+            Name = "Rafale Éclair",
             Duration = 1.55,
             {Hits = 2, Dmg = 300},
             {
@@ -1188,67 +1276,67 @@ local StanceData = {
         }
     },
 
-    ["Grim Fury"] = {
-        WeaponType = "Sparring",
-        ["Neutral"] = {
-            Name = "Fanning Flame",
+    ["Fureur Sombre"] = {
+        WeaponType = "Mains et Pieds",
+        ["Neutre"] = {
+            Name = "Flamme Dansante",
             Duration = 1.9,
             {Hits = {1, 1}, Dmg = {200, 100}, Procs = {"Impact", ""}},
             {Hits = 2, Dmg = 300},
-            {Hits = 1, Dmg = 400, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 400, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Bright Blaze",
+        ["Avancer"] = {
+            Name = "Flamme Éclatante",
             Duration = 1.75,
             {Hits = 2, Dmg = 100},
             {Hits = 1, Dmg = 200},
             {Hits = 2, Dmg = 200},
             {Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
-        ["Forward Block"] = {
-            Name = "Burning Desire",
+        ["Avancer + Parade"] = {
+            Name = "Désir Brûlant",
             Duration = 1.4,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {Hits = 1, Dmg = 300, Procs = {"Impact"}}
         }
     },
 
-    ["High Noon"] = {
-        WeaponType = "Gunblade",
-        ["Neutral"] = {
-            Name = "Final Showdown",
+    ["Haut Zénith"] = {
+        WeaponType = "Pistolame",
+        ["Neutre"] = {
+            Name = "Épreuve Finale",
             Duration = 3.25,
-            {Type = "Ranged", Hits = 2, Dmg = 100},
+            {Type = "Distance", Hits = 2, Dmg = 100},
             {Hits = 2, Dmg = 250, Procs = {"Impact"}},
             {Hits = 1, Dmg = 250},
-            {Hits = 1, Dmg = 300, Procs = {"Lifted"}}
+            {Hits = 1, Dmg = 300, Procs = {"Suspendu"}}
         },
-        ["Forward"] = {
-            Name = "Vagabond Blitz",
+        ["Avancer"] = {
+            Name = "Blitz Vagabond",
             Duration = 2.5,
-            {Type = "Ranged", Hits = 1, Dmg = 100},
+            {Type = "Distance", Hits = 1, Dmg = 100},
             {Hits = 2, Dmg = 200},
-            {Type = "Ranged", Hits = 2, Dmg = 100}
+            {Type = "Distance", Hits = 2, Dmg = 100}
         },
-        ["Forward Block"] = {
-            Name = "Desperado Zeal",
+        ["Avancer + Parade"] = {
+            Name = "Zèle du Desperadol",
             Duration = 1.85,
-            {Type = "Ranged", Hits = 1, Dmg = 100},
-            {Type = "Ranged", Hits = 2, Dmg = 100}
+            {Type = "Distance", Hits = 1, Dmg = 100},
+            {Type = "Distance", Hits = 2, Dmg = 100}
         },
-        ["Block"] = {
-            Name = "Tomahawk Double-Tap",
+        ["Parade"] = {
+            Name = "Tomahawk à Double Tranchant",
             Duration = 1.75,
-            {Type = "Slam", Hits = 1, Dmg = 300},
+            {Type = "Frappe au Sol", Hits = 1, Dmg = 300},
             {Hits = 2, Dmg = 400},
             {Hits = 1, Dmg = 400}
         }
     },
 
-    ["Homing Fang"] = {
-        WeaponType = "Dagger",
-        ["Neutral"] = {
-            Name = "Cutting Arches",
+    ["Crocs Autoguidés"] = {
+        WeaponType = "Dague",
+        ["Neutre"] = {
+            Name = "Arches Coupantes",
             Duration = 2.8,
             {
                 Hits = {1, 1, 1},
@@ -1259,42 +1347,42 @@ local StanceData = {
             {
                 Hits = {1, 1, 1},
                 Dmg = {300, 100, 400},
-                Procs = {"", "", {"Knockdown", "Slash"}}
+                Procs = {"", "", {"Renversement", "Tranchant"}}
             }
         },
-        ["Forward"] = {
-            Name = "Life Eater",
+        ["Avancer"] = {
+            Name = "Dévoreur de Vie",
             Duration = 1.4,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Type = "Spin", Hits = 2, Dmg = 100}
         },
-        ["Forward Block"] = {
-            Name = "Lashing Forward",
+        ["Avancer + Parade"] = {
+            Name = "Fouet en Avant",
             Duration = 1.7,
-            {Hits = 1, Dmg = 200, Procs = {"Slash"}},
+            {Hits = 1, Dmg = 200, Procs = {"Tranchant"}},
             {
                 Type = "Spin",
                 Hits = {3, 1},
                 Dmg = {100, 300},
-                Procs = {"", "Lifted"}
+                Procs = {"", "Suspendu"}
             }
         }
     },
 
-    ["Hysteria"] = {
-        WeaponType = "Claws",
-        ["Neutral"] = {
-            Name = "Fervor",
+    ["Arme Exaltée"] = {
+        WeaponType = "Arme Exaltée",
+        ["Neutre"] = {
+            Name = "Ferveur",
             Duration = 4.55,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Type = "Spin", Hits = 2, Dmg = 100},
             {Type = "Spin", Hits = 2, Dmg = 100},
             {Hits = 1, Dmg = 100},
-            {Hits = 2, Dmg = 100, Procs = {"Finisher"}}
+            {Hits = 2, Dmg = 100, Procs = {"Coup de Grâce"}}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Rage",
             Duration = 2.7,
             {Hits = 1, Dmg = 100},
@@ -1302,8 +1390,8 @@ local StanceData = {
             {Hits = 1, Dmg = 100},
             {Type = "Spin", Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
-            Name = "Madness",
+        ["Avancer + Parade"] = {
+            Name = "Folie",
             Duration = 5.65,
             {Hits = 1, Dmg = 100},
             {Hits = 2, Dmg = 100},
@@ -1313,221 +1401,256 @@ local StanceData = {
             {
                 Hits = {2, 1},
                 Dmg = {100, 200},
-                Procs = {"Knockdown", "Knockdown"}
+                Procs = {"Renversement", "Renversement"}
             }
         },
-        ["Block"] = {
-            Name = "Delirium",
+        ["Parade"] = {
+            Name = "Délire",
             Duration = 3.7,
             {Hits = 1, Dmg = 100},
-            {Hits = 2, Dmg = 100, Procs = {"Finisher"}},
+            {Hits = 2, Dmg = 100, Procs = {"Coup de Grâce"}},
             {Hits = 3, Dmg = 100},
             {
                 Hits = {1, 1, 1},
                 Dmg = {100, 100, 200},
-                Procs = {"Knockdown", {"Impact", "Knockdown"}, "Knockdown"}
+                Procs = {
+                    "Renversement", {"Impact", "Renversement"},
+                    "Renversement"
+                }
             }
         },
-        ["Heavy"] = {
-            Name = "Rise From Ashes",
+        ["Attaque Lourde"] = {
+            Name = "Renaître des Cendres",
             {
-                Shape = "Heavy",
-                Type = "Slam",
+                Shape = "Attaque Lourde",
+                Type = "Frappe au Sol",
                 Hits = 1,
                 Dmg = 500,
-                Procs = {"Lifted"}
+                Procs = {"Suspendu"}
             },
             {
-                Shape = "Heavy",
+                Shape = "Attaque Lourde",
                 Hits = {4, 1},
                 Dmg = {100, 100},
-                Procs = {"", "Lifted"}
+                Procs = {"", "Suspendu"}
             }
         },
-        ["Slide"] = {
-            Name = "Launching Spring",
+        ["Glissade"] = {
+            Name = "Attaque Surgissante",
             {Type = "Spin", Hits = 6, Dmg = 300}
         },
-        ["Finisher"] = {Name = "Roaring Drums", {Hits = 6, Dmg = 2000}}
+        ["Coup de Grâce"] = {
+            Name = "Tambours rugissants",
+            {Hits = 6, Dmg = 2000}
+        }
     },
     ["Phénix de Fer"] = {
-        WeaponType = "Sword",
-        ["Neutral"] = {
-            Name = "Wings and Beak",
+        WeaponType = "Épée",
+        ["Neutre"] = {
+            Name = "Ailes et Bec",
             Duration = 1.35,
-            {Hits = 1, Dmg = 300, Procs = {{"Impact", "Slash"}}},
+            {Hits = 1, Dmg = 300, Procs = {{"Impact", "Tranchant"}}},
             {Hits = 1, Dmg = 200},
-            {Hits = 1, Dmg = 200, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 200, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Double Slash",
+        ["Avancer"] = {
+            Name = "Tranche Double",
             Duration = 0.65,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 200}
         },
-        ["Forward Block"] = {
-            Name = "Taking Flight",
+        ["Avancer + Parade"] = {
+            Name = "Envol",
             Duration = 1.8,
             {Hits = {1, 1}, Dmg = {100, 300}, Procs = {"", "Impact"}},
-            {Type = "Slam", Hits = 1, Dmg = 400, Procs = {"Lifted"}, Note = "*"}
+            {
+                Type = "Frappe au Sol",
+                Hits = 1,
+                Dmg = 400,
+                Procs = {"Suspendu"},
+                Note = "*"
+            }
         }
     },
 
-    ["Lashing Coil"] = {
-        WeaponType = "Whip",
+    ["Volute Fustigeante"] = {
+        WeaponType = "Fouet",
         ConclaveOnly = true,
-        ["Neutral"] = {
+        ["Neutre"] = {
             Name = "Whispering Bite",
-            {Type = "Spin", Hits = 1, Dmg = 100, Procs = {"Impair"}},
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 100,
+                Procs = {"Diminuer"}
+            },
             {Tyoe = "Spin", Hits = 1, Dmg = 100}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Screaming Gust",
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Burning Hum",
-            {Hits = 1, Dmg = 100, Procs = {"Knockdown"}},
+            {Hits = 1, Dmg = 100, Procs = {"Renversement"}},
             {Hits = 1, Dmg = 100}
         }
     },
 
-    ["Last Herald"] = {
-        WeaponType = "Sword & Shield",
+    ["Dernier Héraut"] = {
+        WeaponType = "Épée et Bouclier",
         ConclaveOnly = true,
-        ["Neutral"] = {
+        ["Neutre"] = {
             Name = "Driving Steel",
-            {Hits = 3, Dmg = 100, Procs = {"Knockdown"}},
+            {Hits = 3, Dmg = 100, Procs = {"Renversement"}},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Bulwark",
             {Hits = 1, Dmg = 100},
-            {Hits = 1, Dmg = 100, Procs = {"Impair"}},
+            {Hits = 1, Dmg = 100, Procs = {"Diminuer"}},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Spiral Ward",
-            {Hits = 3, Dmg = 100, Procs = {"Knockdown"}},
+            {Hits = 3, Dmg = 100, Procs = {"Renversement"}},
             {Hits = 1, Dmg = 100}
         }
     },
 
-    ["Mafic Rain"] = {
+    ["Pluie Mafique"] = {
         WeaponType = "Nunchaku",
         ConclaveOnly = true,
-        ["Neutral"] = {
+        ["Neutre"] = {
             Name = "Searing Sleet",
-            {Hits = 13, Dmg = 100, Procs = {"Impair"}},
+            {Hits = 13, Dmg = 100, Procs = {"Diminuer"}},
             {Type = "Spin", Hits = 2, Dmg = 100}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Blazing Deluge",
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Torrid Torrent",
-            {Type = "Spin", Hits = 5, Dmg = 100, Procs = {"Knockdown"}},
+            {
+                Type = "Spin",
+                Hits = 5,
+                Dmg = 100,
+                Procs = {"Renversement"}
+            },
             {Type = "Spin", Hits = {2, 1}, Dmg = {100, 100}}
         }
     },
 
-    ["Malicious Raptor"] = {
-        WeaponType = "Claws",
-        ["Neutral"] = {
-            Name = "Jagged Gash",
+    ["Rapace Malicieux"] = {
+        WeaponType = "Griffes",
+        ["Neutre"] = {
+            Name = "Déchirure Dentelée",
             Duration = 3.35,
-            {Hits = {1, 1, 1}, Dmg = {100, 200, 200}, Procs = {"", "", "Slash"}},
-            {Hits = {4, 1}, Dmg = {100, 300}, Procs = {"", {"Impact", "Slash"}}},
+            {
+                Hits = {1, 1, 1},
+                Dmg = {100, 200, 200},
+                Procs = {"", "", "Tranchant"}
+            },
+            {
+                Hits = {4, 1},
+                Dmg = {100, 300},
+                Procs = {"", {"Impact", "Tranchant"}}
+            },
             {
                 Hits = {1, 1, 1},
                 Dmg = {100, 200, 400},
-                Procs = {"Lifted", "", ""}
+                Procs = {"Suspendu", "", ""}
             }
         },
-        ["Forward"] = {
-            Name = "Wicked Slash",
+        ["Avancer"] = {
+            Name = "Entaille Monstrueuse",
             Duration = 1.8,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 200},
             {Hits = {1, 2, 1}, Dmg = {200, 100, 200}}
         },
-        ["Forward Block"] = {
-            Name = "Lethal Clash",
+        ["Avancer + Parade"] = {
+            Name = "Affrontement Mortel",
             Duration = 3.7,
             {
                 Hits = {1, 1, 1},
                 Dmg = {200, 100, 100},
-                Procs = {"Impact", "Impact", {"Impact", "Slash"}}
+                Procs = {"Impact", "Impact", {"Impact", "Tranchant"}}
             },
-            {Hits = {1, 2}, Dmg = {300, 100}, Procs = {"Lifted", "Impact"}},
-            {Type = "Slam", Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+            {Hits = {1, 2}, Dmg = {300, 100}, Procs = {"Suspendu", "Impact"}},
+            {
+                Type = "Frappe au Sol",
+                Hits = 1,
+                Dmg = 300,
+                Procs = {"Renversement"}
+            }
         },
-        ["Block"] = {
-            Name = "Venging Thrash",
+        ["Parade"] = {
+            Name = "Ruée de Coups Vengeurs",
             Duration = 2.95,
             {Hits = {1, 1}, Dmg = {200, 200}, Procs = {"", "Impact"}},
-            {Hits = {1, 1}, Dmg = {300, 200}, Procs = {"", "Slash"}},
-            {Hits = 1, Dmg = 300, Procs = {"Ragdoll"}}
+            {Hits = {1, 1}, Dmg = {300, 200}, Procs = {"", "Tranchant"}},
+            {Hits = 1, Dmg = 300, Procs = {"Étourdi"}}
         }
     },
 
-    ["Noble Cadence"] = {
-        WeaponType = "Heavy Blade",
+    ["Cadence Noble"] = {
+        WeaponType = "Lame Lourde",
         ConclaveOnly = true,
-        ["Neutral"] = {
+        ["Neutre"] = {
             Name = "Rushing Bull",
             {Hits = {1, 1}, Dmg = {100, 100}},
-            {Hits = {1, 1}, Dmg = {100, 100}, Procs = {"", "Knockdown"}}
+            {Hits = {1, 1}, Dmg = {100, 100}, Procs = {"", "Renversement"}}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Skull Smasher",
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Plunging Edge",
-            {Hits = 1, Dmg = 100, Procs = {"Knockdown"}},
+            {Hits = 1, Dmg = 100, Procs = {"Renversement"}},
             {Hits = 1, Dmg = 100}
         }
     },
 
-    ["Piercing Fury"] = {
-        WeaponType = "Dagger",
+    ["Furie Perforante"] = {
+        WeaponType = "Dague",
         ConclaveOnly = true,
-        ["Neutral"] = {
+        ["Neutre"] = {
             Name = "Arcing Slice",
             {Hits = {1, 1, 1}, Dmg = {100, 100, 200}}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Swift Incision",
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Leading Point",
-            {Hits = 1, Dmg = 100, Procs = {"Impair"}},
+            {Hits = 1, Dmg = 100, Procs = {"Diminuer"}},
             {Hits = {1, 1, 1}, Dmg = {100, 100, 100}}
         }
     },
 
-    ["Pointed Wind"] = {
-        WeaponType = "Dagger",
-        ["Neutral"] = {
-            Name = "Parting Edge",
+    ["Vent Tranchant"] = {
+        WeaponType = "Dague",
+        ["Neutre"] = {
+            Name = "Lame Séparatrice",
             Duration = 1.55,
             {Hits = 1, Dmg = 200},
             {Type = "Spin", Hits = {1, 1}, Dmg = {100, 300}},
             {Hits = {1, 1}, Dmg = {300, 300}, Procs = {"", "Impact"}}
         },
-        ["Forward"] = {
-            Name = "Viper's Bite",
+        ["Avancer"] = {
+            Name = "Morsure de la Vipère",
             Duration = 1.25,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 300},
@@ -1536,10 +1659,10 @@ local StanceData = {
         }
     },
 
-    ["Primal Fury"] = {
-        WeaponType = "Iron Staff",
-        ["Neutral"] = {
-            Name = "Falling Oak Buster",
+    ["Fureur Primale"] = {
+        WeaponType = "Arme Exaltée",
+        ["Neutre"] = {
+            Name = "Fracas du Chêne Tombant",
             Duration = 3.2,
             {Hits = 4, Dmg = 25},
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
@@ -1547,25 +1670,25 @@ local StanceData = {
                 Type = "Spin",
                 Hits = {2, 5},
                 Dmg = {50, 100},
-                Procs = {"Impact", "Knockdown"}
+                Procs = {"Impact", "Renversement"}
             }
         },
-        ["Forward"] = {
-            Name = "Spinning Crash Technique",
+        ["Avancer"] = {
+            Name = "Technique de Chute en Vrille",
             Duration = 2.8,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Type = "Spin", Hits = 4, Dmg = 50},
-            {Type = "Slam", Hits = 1, Dmg = 100}
+            {Type = "Frappe au Sol", Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
-            Name = "Cyclone Lightning Strike",
+        ["Avancer + Parade"] = {
+            Name = "Frappe Foudroyante du Cyclone",
             Duration = 1.9,
             {Hits = 1, Dmg = 100, Procs = {{"Impact", "Puncture"}}},
-            {Hits = 1, Dmg = 200, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 200, Procs = {"Renversement"}}
         },
-        ["Block"] = {
-            Name = "Rolling Boulder Rush",
+        ["Parade"] = {
+            Name = "Avalanche de Rochers",
             Duration = 3.95,
             {
                 Type = "Spin",
@@ -1573,144 +1696,177 @@ local StanceData = {
                 Dmg = {100, 30, 110},
                 Procs = {"", "", "Impact"}
             },
-            {Type = "Slam", Hits = 1, Dmg = 200},
-            {Type = "Slam", Hits = 1, Dmg = 300, Procs = {"Impact"}},
+            {Type = "Frappe au Sol", Hits = 1, Dmg = 200},
+            {Type = "Frappe au Sol", Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {2, 1},
                 Dmg = {100, 600},
-                Procs = {"", "Lifted"}
+                Procs = {"", "Suspendu"}
             }
         },
-        ["Heavy"] = {
-            Name = "The Way",
-            {Shape = "Heavy", Hits = 1, Dmg = 500, Procs = {"Knockdown"}},
-            {Shape = "Heavy", Hits = 1, Dmg = 500, Procs = {"Knockdown"}}
+        ["Attaque Lourde"] = {
+            Name = "La Voie",
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 500,
+                Procs = {"Renversement"}
+            },
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 500,
+                Procs = {"Renversement"}
+            }
         },
-        ["Slide"] = {
-            Name = "Crushing Reach",
-            {Type = "Spin", Hits = 1, Dmg = 100, Procs = {"Impact"}}
+        ["Glissade"] = {
+            Name = "Atteinte Dévastatrice",
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 100,
+                Procs = {"Impact"}
+            }
         },
-        ["Aerial"] = {
-            Name = "Deadly Circle",
+        ["Dans les Airs"] = {
+            Name = "Cercle Mortel",
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 200}
         },
-        ["Wall"] = {Name = "Guiding Plank", {Hits = 1, Dmg = 166}},
-        ["Finisher"] = {Name = "Wide Dispatch", {Hits = 1, Dmg = 1000}}
+        ["Sur un Mur"] = {Name = "Planche Guidée", {Hits = 1, Dmg = 166}},
+        ["Coup de Grâce"] = {
+            Name = "Large Déploiement",
+            {Hits = 1, Dmg = 1000}
+        }
     },
 
-    ["Quaking Hand"] = {
-        WeaponType = "Fist",
+    ["Main Traumatique"] = {
+        WeaponType = "Poings",
         ConclaveOnly = true,
-        ["Neutral"] = {
-            Name = "Spinning Palms",
-            {Hits = 1, Dmg = 100, Procs = {"Impair"}},
+        ["Neutre"] = {
+            Name = "Frappes Tournoyantesning Palms",
+            {Hits = 1, Dmg = 100, Procs = {"Diminuer"}},
             {Hits = 2, Dmg = 100}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "One Two Three",
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Descending Impact",
             {Hits = 2, Dmg = 200},
             {Hits = 2, Dmg = 100}
         }
     },
 
-    ["Ravenous Wraith"] = {
-        WeaponType = "Shadow Claws",
-        ["Neutral"] = {
-            Name = "Cleaving Claws",
+    ["Spectre Vorace"] = {
+        WeaponType = "Arme Exaltée",
+        ["Neutre"] = {
+            Name = "Griffes Déchirantes",
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {Hits = 1, Dmg = 200, Procs = {""}},
-            {Hits = 2, Dmg = 200, Procs = {"Slash"}},
+            {Hits = 2, Dmg = 200, Procs = {"Tranchant"}},
             {
                 Hits = {1, 1, 1},
                 Dmg = {100, 200, 300},
-                Procs = {"Impact", "Slash", "Knockdown"}
+                Procs = {"Impact", "Tranchant", "Renversement"}
             }
         },
-        ["Forward"] = {
-            Name = "Soul Thresher",
+        ["Avancer"] = {
+            Name = "Faucheur d'Âmes",
             {Hits = 2, Dmg = 100, Procs = {""}},
             {Hits = 3, Dmg = 100, Procs = {"Impact"}}
         },
-        ["Forward Block"] = {
-            Name = "Void Torrent",
+        ["Avancer + Parade"] = {
+            Name = "Torrent du Néant",
             {Hits = 1, Dmg = 100, Procs = {""}},
             {Hits = 1, Dmg = 100, Procs = {""}},
             {Hits = 1, Dmg = 100, Procs = {""}},
             {Hits = 1, Dmg = 100, Procs = {""}}
         },
-        ["Block"] = {
-            Name = "Reaping Cyclone",
+        ["Parade"] = {
+            Name = "Cyclone Moissonneur",
             {Hits = 1, Dmg = 100, Procs = {""}},
             {Hits = 1, Dmg = 100, Procs = {""}}
         },
-        ["Heavy"] = {
-            Name = "Death Knocking",
+        ["Attaque Lourde"] = {
+            Name = "Mort Imminente",
             {
-                Shape = "Heavy",
+                Shape = "Attaque Lourde",
                 Hits = 2,
                 Dmg = 400,
-                Procs = {{"Impact", "Slash"}}
+                Procs = {{"Impact", "Tranchant"}}
             },
-            {Shape = "Heavy", Hits = 2, Dmg = 400, Procs = {"Slash"}}
+            {
+                Shape = "Attaque Lourde",
+                Hits = 2,
+                Dmg = 400,
+                Procs = {"Tranchant"}
+            }
         },
-        ["Slide"] = {
-            Name = "Nightfall",
+        ["Glissade"] = {
+            Name = "Crépuscule",
             {Type = "Spin", Hits = 1, Dmg = 100, Procs = {""}}
         },
-        ["Aerial"] = {
-            Name = "Mortal Squall",
+        ["Dans les Airs"] = {
+            Name = "Bourasque Mortelle",
             {Hits = 1, Dmg = 100, Procs = {""}},
             {Hits = 1, Dmg = 100, Procs = {""}},
             {Hits = 1, Dmg = 100, Procs = {""}}
         },
-        ["Finisher"] = {
+        ["Coup de Grâce"] = {
             Name = "Combo Name",
             {Hits = 1, Dmg = 100, Procs = {""}}
         }
     },
 
-    ["Reaping Spiral"] = {
-        WeaponType = "Scythe",
-        ["Neutral"] = {
-            Name = "Eternal Nocturne",
+    ["Fauchage Tournoyant"] = {
+        WeaponType = "Faux",
+        ["Neutre"] = {
+            Name = "Nocturne Éternelle",
             Duration = 2.9,
-            {Hits = {1, 1}, Dmg = {400, 200}, Procs = {"Lifted", ""}},
-            {Hits = {1, 1}, Dmg = {300, 200}, Procs = {"", "Slash"}},
-            {Hits = 1, Dmg = 500, Procs = {"Knockdown"}}
+            {Hits = {1, 1}, Dmg = {400, 200}, Procs = {"Suspendu", ""}},
+            {Hits = {1, 1}, Dmg = {300, 200}, Procs = {"", "Tranchant"}},
+            {Hits = 1, Dmg = 500, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Reclamation",
+        ["Avancer"] = {
+            Name = "Réclamation",
             Duration = 1.85,
             {Type = "Spin", Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 100},
-            {Type = "Spin", Hits = 1, Dmg = 300, Procs = {"Impact"}}
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 300,
+                Procs = {"Impact"}
+            }
         },
-        ["Forward Block"] = {
-            Name = "Abyssal Automaton",
+        ["Avancer + Parade"] = {
+            Name = "Automate Abyssal",
             Duration = 2.1,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
-            {Hits = {2, 1}, Dmg = {200, 200}, Procs = {"", "Slash"}}
+            {Hits = {2, 1}, Dmg = {200, 200}, Procs = {"", "Tranchant"}}
         }
     },
 
-    ["Rending Crane"] = {
-        WeaponType = "Heavy Blade",
-        ["Neutral"] = {
-            Name = "Skull Splitter",
+    ["Grue Déchirante"] = {
+        WeaponType = "Lame Lourde",
+        ["Neutre"] = {
+            Name = "Fendeur Crânien",
             Duration = 1.85,
-            {Type = "Slam", Hits = 1, Dmg = 400},
-            {Type = "Slam", Hits = 1, Dmg = 500, Procs = {"Knockdown"}}
+            {Type = "Frappe au Sol", Hits = 1, Dmg = 400},
+            {
+                Type = "Frappe au Sol",
+                Hits = 1,
+                Dmg = 500,
+                Procs = {"Renversement"}
+            }
         },
-        ["Forward"] = {
-            Name = "Lashing Tempest",
+        ["Avancer"] = {
+            Name = "Tempête fouettante",
             Duration = 2.35,
             {
                 Hits = {1, 1, 1},
@@ -1718,247 +1874,265 @@ local StanceData = {
                 Procs = {"Impact", "", ""}
             },
             {Type = "Spin", Hits = 1, Dmg = 300},
-            {Type = "Spin", Hits = 1, Dmg = 300, Procs = {"Impact"}}
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 300,
+                Procs = {"Impact"}
+            }
         },
-        ["Forward Block"] = {
-            Name = "Rampaging Boar",
+        ["Avancer + Parade"] = {
+            Name = "Sanglier Féroce",
             Duration = 2.3,
             {Hits = {1, 1}, Dmg = {100, 300}, Procs = {"Impact", "Impact"}},
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {1, 1},
                 Dmg = {200, 400},
                 Procs = {"", "Impact"}
             }
         },
-        ["Block"] = {
-            Name = "Landing Dragon",
+        ["Parade"] = {
+            Name = "Atterrissage du Dragon",
             Duration = 1.05,
-            {Hits = 1, Dmg = 500, Procs = {{"Impact", "Ragdoll"}}}
+            {Hits = 1, Dmg = 500, Procs = {{"Impact", "Étourdi"}}}
         }
     },
 
-    ["Rending Wind"] = {
-        WeaponType = "Machete",
+    ["Vent Violent"] = {
+        WeaponType = "Machette",
         ConclaveOnly = true,
-        ["Neutral"] = {
+        ["Neutre"] = {
             Name = "Brisk Current",
-            {Hits = 1, Dmg = 100, Procs = {"Impair"}},
+            {Hits = 1, Dmg = 100, Procs = {"Diminuer"}},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Ascending Surf",
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Impending Tide",
             {Type = "Spin", Hits = {2, 1}, Dmg = {100, 100}},
-            {Type = "Slam", Hits = 1, Dmg = 100}
+            {Type = "Frappe au Sol", Hits = 1, Dmg = 100}
         }
     },
 
-    ["Rising Steel"] = {
-        WeaponType = "Sword",
+    ["Acier Montant"] = {
+        WeaponType = "Épée",
         ConclaveOnly = true,
-        ["Neutral"] = {
-            Name = "Forward Edge",
-            {Hits = 1, Dmg = 100, Procs = {"Impair"}},
+        ["Neutre"] = {
+            Name = "Avancer + Edge",
+            {Hits = 1, Dmg = 100, Procs = {"Diminuer"}},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward"] = {
-            Name = "Hack And Slash",
+        ["Avancer"] = {
+            Name = "Hack And Tranchant",
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
-            Name = "Blade Whip",
-            {Hits = {1, 1}, Dmg = {100, 100}, Procs = {"", "Knockdown"}},
-            {Type = "Slam", Hits = 1, Dmg = 100}
+        ["Avancer + Parade"] = {
+            Name = "Blade Fouet",
+            {Hits = {1, 1}, Dmg = {100, 100}, Procs = {"", "Renversement"}},
+            {Type = "Frappe au Sol", Hits = 1, Dmg = 100}
         }
     },
 
-    ["Scarlet Hurricane"] = {
-        WeaponType = "Claws",
+    ["Tornade Écarlate"] = {
+        WeaponType = "Griffes",
         ConclaveOnly = true,
-        ["Neutral"] = {
+        ["Neutre"] = {
             Name = "Bloody Fall",
-            {Hits = 2, Dmg = 100, Procs = {"Impair"}},
+            {Hits = 2, Dmg = 100, Procs = {"Diminuer"}},
             {Hits = {1, 1}, Dmg = {100, 100}}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Ruby Current",
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Whirling Rush",
             {Hits = {1, 1}, Dmg = {100, 100}},
             {Hits = 2, Dmg = 100}
         },
-        ["Slide"] = {
-            Name = "Launching Spring",
-            {Type = "Spin", Hits = 1, Dmg = 300, Procs = {"Lifted"}}
+        ["Glissade"] = {
+            Name = "Conflit de Sang",
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 300,
+                Procs = {"Suspendu"}
+            }
         }
     },
 
-    ["Seismic Palm"] = {
-        WeaponType = "Fist",
-        ["Neutral"] = {
-            Name = "Quaking Touch",
+    ["Paume Sismique"] = {
+        WeaponType = "Poings",
+        ["Neutre"] = {
+            Name = "Touché Tremblant",
             Duration = 1.55,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {Hits = 1, Dmg = 300},
-            {Hits = 2, Dmg = 300, Procs = {"Knockdown"}}
+            {Hits = 2, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Erupting Vulcan",
+        ["Avancer"] = {
+            Name = "Éruption Volcanique",
             Duration = 1.35,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 300, Procs = {"Impact"}}
         },
-        ["Forward Block"] = {
-            Name = "Sudden Rockfall",
+        ["Avancer + Parade"] = {
+            Name = "Chute de Pierres Soudaine",
             Duration = 1.7,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {Hits = 1, Dmg = 300},
             {Hits = 2, Dmg = 200, Procs = {"Impact"}}
         },
-        ["Block"] = {
-            Name = "Echoing Hands",
+        ["Parade"] = {
+            Name = "Mains Résonantes",
             Duration = 2.05,
             {
                 Hits = {1, 1, 1},
                 Dmg = {100, 200, 300},
-                Procs = {"Impact", "Lifted", "Impact"}
+                Procs = {"Impact", "Suspendu", "Impact"}
             },
-            {Type = "Slam", Hits = 2, Dmg = 300}
+            {Type = "Frappe au Sol", Hits = 2, Dmg = 300}
         }
     },
 
-    ["Serene Storm"] = {
-        WeaponType = "Desert Wind",
-        ["Neutral"] = {
-            Name = "Trespass Denied",
+    ["Tempête Reposante"] = {
+        WeaponType = "Arme Exaltée",
+        ["Neutre"] = {
+            Name = "Accès Refusé",
             Duration = 3.5,
             {Hits = 1, Dmg = 100},
             {Hits = 2, Dmg = 100},
             {Hits = 2, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward"] = {
-            Name = "Father's Lesson",
+        ["Avancer"] = {
+            Name = "Leçon Paternelle",
             Duration = 2.5,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
-            Name = "Final Sunrise",
+        ["Avancer + Parade"] = {
+            Name = "Aube Finale",
             Duration = 3.15,
             {Hits = 2, Dmg = 100},
             {Hits = 2, Dmg = 100},
             {Hits = 2, Dmg = 100}
         },
-        ["Block"] = {
-            Name = "Patience Shattered",
+        ["Parade"] = {
+            Name = "Patience Éreintée",
             Duration = 4.1,
             {Hits = 3, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 4, Dmg = 100},
             {Hits = 1, Dmg = 100, Procs = {"Impact"}}
         },
-        ["Heavy"] = {
-            Name = "Rise From Ashes",
+        ["Attaque Lourde"] = {
+            Name = "Renaître des Cendres",
             {
-                Shape = "Heavy",
-                Type = "Slam",
+                Shape = "Attaque Lourde",
+                Type = "Frappe au Sol",
                 Hits = 1,
                 Dmg = 1500,
-                Procs = {"Knockdown"}
+                Procs = {"Renversement"}
             },
             {
-                Shape = "Heavy",
+                Shape = "Attaque Lourde",
                 Hits = {4, 1},
                 Dmg = {100, 100},
-                Procs = {"Lifted"}
+                Procs = {"Suspendu"}
             }
         },
-        ["Slide"] = {
-            Name = "Rolling Blast",
+        ["Glissade"] = {
+            Name = "Vipère des Sables",
             {
                 Type = "Spin",
                 Hits = {5, 1},
                 Dmg = {300, 300},
-                Procs = {"", "Lifted"}
+                Procs = {"", "Suspendu"}
             }
         },
-        ["Aerial"] = {
-            Name = "One Point",
+        ["Dans les Airs"] = {
+            Name = "Un Point",
             {Hits = 1, Dmg = 200},
             {Hits = 2, Dmg = 200},
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Wall"] = {Name = "Through Strike", {Hits = 1, Dmg = 300}},
-        ["Finisher"] = {Name = "Roaring Drums", {Hits = 6, Dmg = 500}}
+        ["Sur un Mur"] = {Name = "Frappe Transperçante", {Hits = 1, Dmg = 300}},
+        ["Coup de Grâce"] = {
+            Name = "Tambours Rugissants",
+            {Hits = 6, Dmg = 500}
+        }
     },
 
-    ["Shadow Harvest"] = {
-        WeaponType = "Scythe",
+    ["Faucheuse d'Ombre"] = {
+        WeaponType = "Faux",
         ConclaveOnly = true,
-        ["Neutral"] = {
+        ["Neutre"] = {
             Name = "Reaping Leap",
-            {Hits = 1, Dmg = 100, Procs = {"Impair"}},
+            {Hits = 1, Dmg = 100, Procs = {"Diminuer"}},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Reclaimation",
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Soul Dance",
-            {Type = "Spin", Hits = {3, 1}, Dmg = {100, 100}, Procs = {"", ""}},
+            {
+                Type = "Spin",
+                Hits = {3, 1},
+                Dmg = {100, 100},
+                Procs = {"", ""}
+            },
             {Hits = 1, Dmg = 100}
         }
     },
 
-    ["Shattering Storm"] = {
-        WeaponType = "Hammer",
-        ["Neutral"] = {
-            Name = "Falling Rock",
+    ["Tempête Fracassante"] = {
+        WeaponType = "Marteau",
+        ["Neutre"] = {
+            Name = "Rocher Tombant",
             Duration = 4.9,
-            {Type = "Slam", Hits = 1, Dmg = 400},
+            {Type = "Frappe au Sol", Hits = 1, Dmg = 400},
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {1, 1},
                 Dmg = {300, 300},
                 Procs = {"Impact", ""}
             },
-            {Type = "Slam", Hits = 1, Dmg = 400},
+            {Type = "Frappe au Sol", Hits = 1, Dmg = 400},
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {1, 1},
                 Dmg = {200, 500},
-                Procs = {"Knockdown", "Knockdown"}
+                Procs = {"Renversement", "Renversement"}
             }
         },
-        ["Forward"] = {
-            Name = "Pounding Smite",
+        ["Avancer"] = {
+            Name = "Frappe Martelante",
             Duration = 2.6,
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 200},
-            {Hits = 1, Dmg = 300, Procs = {"Lifted"}}
+            {Hits = 1, Dmg = 300, Procs = {"Suspendu"}}
         },
-        ["Forward Block"] = {
-            Name = "Smashing Fury",
+        ["Avancer + Parade"] = {
+            Name = "Rage Destructrice",
             Duration = 3.55,
             {Hits = {1, 1}, Dmg = {300, 200}},
             {
@@ -1968,63 +2142,68 @@ local StanceData = {
                 Procs = {"Impact", ""}
             },
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {1, 1},
                 Dmg = {200, 500},
-                Procs = {"Knockdown", "Knockdown"}
+                Procs = {"Renversement", "Renversement"}
             }
         },
-        ["Block"] = {
-            Name = "Rising Thunder",
+        ["Parade"] = {
+            Name = "Tonnerre Levant",
             Duration = 3.3,
-            {Hits = {1, 1}, Dmg = {300, 300}, Procs = {"", "Lifted"}},
-            {Type = "Slam", Hits = 1, Dmg = 500, Procs = {"Knockdown"}}
+            {Hits = {1, 1}, Dmg = {300, 300}, Procs = {"", "Suspendu"}},
+            {
+                Type = "Frappe au Sol",
+                Hits = 1,
+                Dmg = 500,
+                Procs = {"Renversement"}
+            }
         }
     },
 
-    ["Shimmering Blight"] = {
-        WeaponType = "Polearm",
-        ["Neutral"] = {
-            Name = "Slashing Wind",
+    ["Fléau Chatoyant"] = {
+        WeaponType = "Arme d'Hast",
+        ["Neutre"] = {
+            Name = "Vent Découpant",
             Duration = 0.95,
             {Hits = 1, Dmg = 100},
             {Hits = {2, 1}, Dmg = {100, 200}}
         },
-        ["Forward Block"] = {
-            Name = "Howling Gale",
+        ["Avancer + Parade"] = {
+            Name = "Vent Hurlant",
             Duration = 2.55,
             {Type = "Spin", Hits = 5, Dmg = 100},
-            {Hits = {1, 1}, Dmg = {200, 200}, Procs = {"", "Slash"}},
+            {Hits = {1, 1}, Dmg = {200, 200}, Procs = {"", "Tranchant"}},
             {Hits = {2}, Dmg = {200}}
         }
     },
 
-    ["Sinking Talon"] = {
-        WeaponType = "Dual Daggers",
-        ["Forward"] = {
-            Name = "Lashing Panther",
+    ["Serres Acérées"] = {
+        WeaponType = "Doubles Dagues",
+        ["Avancer"] = {
+            Name = "Fouet de la Panthère",
             Duration = 1.15,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
-            Name = "Rising Lion",
+        ["Avancer + Parade"] = {
+            Name = "Lion Déchaîné",
             Duration = 3.05,
             {Hits = 2, Dmg = 200, Procs = {"Impact"}},
             {
                 Hits = {2, 1, 2, 1},
                 Dmg = {100, 300, 100, 100},
-                Procs = {"", {"Slash", "Lifted"}, "", "Impact"}
+                Procs = {"", {"Tranchant", "Suspendu"}, "", "Impact"}
             }
         }
     },
 
-    ["Slicing Feathers"] = {
-        WeaponType = "Warfan",
-        ["Neutral"] = {
-            Name = "Scathing Plume",
+    ["Plumes Tranchantes"] = {
+        WeaponType = "Éventail de Guerre",
+        ["Neutre"] = {
+            Name = "Plume Mordante",
             Duration = 3.6,
             {
                 Hits = {1, 1},
@@ -2032,38 +2211,38 @@ local StanceData = {
                 Procs = {"", "Impact"},
                 Note = "*"
             },
-            {Hits = {2, 1}, Dmg = {100, 300}, Procs = {"", "Slash"}},
+            {Hits = {2, 1}, Dmg = {100, 300}, Procs = {"", "Tranchant"}},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
-            {Hits = 1, Dmg = 400, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 400, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Razor Fin",
+        ["Avancer"] = {
+            Name = "Aileron Rasoir",
             Duration = 1.65,
             {Hits = 2, Dmg = 100},
             {Hits = 2, Dmg = 100},
             {Hits = {2, 1}, Dmg = {200, 300}}
         },
-        ["Forward Block"] = {
-            Name = "Serrated Crest",
+        ["Avancer + Parade"] = {
+            Name = "Crête Dentelée",
             Duration = 3.55,
             {Hits = {2, 3}, Dmg = {100, 100}, Procs = {"Impact", ""}},
             {Hits = 1, Dmg = 200},
-            {Hits = {3, 2}, Dmg = {100, 100}, Procs = {"", "Slash"}},
-            {Hits = {1, 1}, Dmg = {200, 400}, Procs = {"Impact", "Lifted"}}
+            {Hits = {3, 2}, Dmg = {100, 100}, Procs = {"", "Tranchant"}},
+            {Hits = {1, 1}, Dmg = {200, 400}, Procs = {"Impact", "Suspendu"}}
         },
-        ["Block"] = {
-            Name = "Cutting Fringe",
+        ["Parade"] = {
+            Name = "Frange Coupante",
             Duration = 2.15,
             {Hits = 2, Dmg = 200},
-            {Hits = 1, Dmg = 400, Procs = {"Ragdoll"}}
+            {Hits = 1, Dmg = 400, Procs = {"Étourdi"}}
         }
     },
 
-    ["Sovereign Outcast"] = {
+    ["Souverain Proscrit"] = {
         WeaponType = "Tonfa",
-        ["Neutral"] = {
-            Name = "Rogue Edict",
+        ["Neutre"] = {
+            Name = "Édit sans Scrupules",
             Duration = 2.85,
             {Hits = {1, 5}, Dmg = {200, 50}},
             {
@@ -2071,72 +2250,77 @@ local StanceData = {
                 Dmg = {200, 100, 300},
                 Procs = {"", "", "Impact"}
             },
-            {Hits = 4, Dmg = 200, Procs = {"Slash"}},
-            {Hits = 2, Dmg = 300, Procs = {"Knockdown"}}
+            {Hits = 4, Dmg = 200, Procs = {"Tranchant"}},
+            {Hits = 2, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Vagrant Behest",
+        ["Avancer"] = {
+            Name = "Ordre Vagabond",
             Duration = 1.75,
             {Hits = 1, Dmg = 100},
             {Hits = 2, Dmg = 100},
             {Type = "Spin", Hits = 6, Dmg = 100}
         },
-        ["Forward Block"] = {
-            Name = "Villain Rule",
+        ["Avancer + Parade"] = {
+            Name = "Règle de Scélérat",
             Duration = 3,
             {Hits = 6, Dmg = 50},
             {Hits = 1, Dmg = 300},
             {Hits = 2, Dmg = 200},
-            {Type = "Slam", Hits = 2, Dmg = 300, Procs = {"Knockdown"}}
+            {
+                Type = "Frappe au Sol",
+                Hits = 2,
+                Dmg = 300,
+                Procs = {"Renversement"}
+            }
         },
-        ["Block"] = {
-            Name = "Scout Command",
+        ["Parade"] = {
+            Name = "Commandement de l'Éclaireur",
             Duration = 1.25,
             {Hits = 1, Dmg = 400, Procs = {"Impact"}},
-            {Hits = {1, 1}, Dmg = {200, 300}, Procs = {"", "Ragdoll"}}
+            {Hits = {1, 1}, Dmg = {200, 300}, Procs = {"", "Étourdi"}}
         }
     },
 
-    ["Spinning Needle"] = {
-        WeaponType = "Dual Daggers",
-        ["Neutral"] = {
-            Name = "True Kiss",
+    ["Aiguille Tourbillonnante"] = {
+        WeaponType = "Doubles Dagues",
+        ["Neutre"] = {
+            Name = "Vrai Baiser",
             Duration = 1.85,
             {Hits = 1, Dmg = 300},
-            {Hits = 2, Dmg = 200, Procs = {"Slash"}},
-            {Hits = 1, Dmg = 400, Procs = {"Knockdown"}}
+            {Hits = 2, Dmg = 200, Procs = {"Tranchant"}},
+            {Hits = 1, Dmg = 400, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Accursed Whispers",
+        ["Avancer"] = {
+            Name = "Murmures Maudits",
             Duration = 2.15,
             {Hits = 1, Dmg = 100},
             {Type = "Spin", Hits = {2, 1}, Dmg = {100, 200}},
             {Type = "Spin", Hits = 5, Dmg = 100},
-            {Hits = 1, Dmg = 300, Procs = {"Lifted"}}
+            {Hits = 1, Dmg = 300, Procs = {"Suspendu"}}
         },
-        ["Forward Block"] = {
-            Name = "Fey Intervention",
+        ["Avancer + Parade"] = {
+            Name = "Intervention Funeste",
             Duration = 2.5,
             {Hits = 2, Dmg = 200, Procs = {"Impact"}},
-            {Hits = 1, Dmg = 200, Procs = {{"Impact", "Slash"}}},
+            {Hits = 1, Dmg = 200, Procs = {{"Impact", "Tranchant"}}},
             {Type = "Spin", Hits = {2, 1}, Dmg = {100, 200}},
-            {Hits = 2, Dmg = 200, Procs = {"Knockdown"}}
+            {Hits = 2, Dmg = 200, Procs = {"Renversement"}}
         },
-        ["Block"] = {
-            Name = "Fey Intervention",
+        ["Parade"] = {
+            Name = "Intervention Funeste",
             Duration = 1.1,
             {
                 Hits = {1, 1, 1},
                 Dmg = {100, 200, 400},
-                Procs = {"Lifted", "", "Ragdoll"}
+                Procs = {"Suspendu", "", "Étourdi"}
             }
         }
     },
 
-    ["Stalking Fan"] = {
-        WeaponType = "Scythe",
-        ["Neutral"] = {
-            Name = "Shadow Wing",
+    ["Éventail Harcelant"] = {
+        WeaponType = "Faux",
+        ["Neutre"] = {
+            Name = "Aile d'Ombre",
             Duration = 4.9,
             {Hits = {1, 1}, Dmg = {300, 200}},
             {
@@ -2145,152 +2329,165 @@ local StanceData = {
                 Dmg = {200, 300},
                 Procs = {"Impact", ""}
             },
-            {Hits = 1, Dmg = 500, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 500, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Many Tears",
+        ["Avancer"] = {
+            Name = "nombreuses Larmes",
             Duration = 1.25,
             {Type = "Spin", Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 300, Procs = {"Impact"}}
         },
-        ["Forward Block"] = {
-            Name = "Dying Light",
+        ["Avancer + Parade"] = {
+            Name = "Lueur Mourante",
             Duration = 2.4,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {
                 Type = "Spin",
                 Hits = {3, 1},
                 Dmg = {200, 100},
-                Procs = {"", {"Impact", "Slash"}}
+                Procs = {"", {"Impact", "Tranchant"}}
             }
         }
     },
 
-    ["Star Divide"] = {
+    ["Dichotomie Stellaire"] = {
         WeaponType = "Tonfa",
         ConclaveOnly = true,
-        ["Neutral"] = {
+        ["Neutre"] = {
             Name = "Wandering Scourge",
             {
                 Hits = {1, 1, 1, 1},
                 Dmg = {100, 100, 100, 100},
-                Procs = {"Impair", "Impair", "Impair", "Impair"}
+                Procs = {"Diminuer", "Diminuer", "Diminuer", "Diminuer"}
             },
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {2, 2, 2},
                 Dmg = {100, 100, 100},
-                Procs = {"Knockdown", "Knockdown", "Knockdown"}
+                Procs = {
+                    "Renversement", "Renversement",
+                    "Renversement"
+                }
             }
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Bitter Grudge",
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Dire Fall",
             {Hits = {1, 1}, Dmg = {300, 200}},
             {Hits = 5, Dmg = 100}
         }
     },
 
-    ["Stinging Thorn"] = {
-        WeaponType = "Dagger",
-        ["Neutral"] = {
-            Name = "Carving Spike",
+    ["Épine Cinglante"] = {
+        WeaponType = "Dague",
+        ["Neutre"] = {
+            Name = "Dague Sculptante",
             Duration = 3.95,
             {Hits = {1, 1}, Dmg = {300, 100}, Procs = {"", "Impact"}},
             {
                 Hits = {1, 1, 1},
                 Dmg = {100, 200, 200},
-                Procs = {"Slash", "Slash", ""}
+                Procs = {"Tranchant", "Tranchant", ""}
             },
             {Hits = {1, 1}, Dmg = {300, 200}},
-            {Hits = {1, 1}, Dmg = {200, 200}, Procs = {"", "Slash"}},
-            {Hits = 1, Dmg = 400, Procs = {"Knockdown"}}
+            {Hits = {1, 1}, Dmg = {200, 200}, Procs = {"", "Tranchant"}},
+            {Hits = 1, Dmg = 400, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Piercing Horn",
+        ["Avancer"] = {
+            Name = "Corne Perçante",
             Duration = 1.8,
             {Hits = {1, 1}, Dmg = {100, 200}},
             {Hits = 1, Dmg = 200},
             {Hits = {1, 1}, Dmg = {100, 200}}
         },
-        ["Forward Block"] = {
-            Name = "Lacerating Spine",
+        ["Avancer + Parade"] = {
+            Name = "Épine Lacérante",
             Duration = 2.7,
             {Hits = 1, Dmg = 200},
-            {Hits = {2, 1}, Dmg = {200, 200}, Procs = {"", "Slash"}},
-            {Type = "Slam", Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+            {Hits = {2, 1}, Dmg = {200, 200}, Procs = {"", "Tranchant"}},
+            {
+                Type = "Frappe au Sol",
+                Hits = 1,
+                Dmg = 300,
+                Procs = {"Renversement"}
+            }
         },
-        ["Block"] = {
-            Name = "Impaling Quill",
+        ["Parade"] = {
+            Name = "Plume Taraudante",
             Duration = 2.35,
             {
                 Hits = {1, 1, 1},
                 Dmg = {100, 200, 300},
                 Procs = {"", "", "Impact"}
             },
-            {Hits = 1, Dmg = 200, Procs = {"Slash"}},
-            {Hits = 1, Dmg = 400, Procs = {"Ragdoll"}}
+            {Hits = 1, Dmg = 200, Procs = {"Tranchant"}},
+            {Hits = 1, Dmg = 400, Procs = {"Étourdi"}}
         }
     },
 
-    ["Sundering Weave"] = {
-        WeaponType = "Machete",
-        ["Neutral"] = {
-            Name = "Rapid Current",
+    ["Tresse Scindante"] = {
+        WeaponType = "Machette",
+        ["Neutre"] = {
+            Name = "Courant Rapide",
             Duration = 1.7,
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 300},
-            {Hits = 1, Dmg = 400, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 400, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Cresting Surf",
+        ["Avancer"] = {
+            Name = "Vague Déferlante",
             Duration = 2,
             {Hits = 1, Dmg = 100},
             {Type = "Spin", Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 200}
         },
-        ["Forward Block"] = {
-            Name = "Flash Flood",
+        ["Avancer + Parade"] = {
+            Name = "Crues Éclair",
             Duration = 2.4,
             {
                 Type = "Spin",
                 Hits = {2, 1},
                 Dmg = {100, 200},
-                Procs = {"", "Slash"}
+                Procs = {"", "Tranchant"}
             },
-            {Type = "Slam", Hits = 1, Dmg = 400, Procs = {"Knockdown"}}
+            {
+                Type = "Frappe au Sol",
+                Hits = 1,
+                Dmg = 400,
+                Procs = {"Renversement"}
+            }
         },
-        ["Block"] = {
-            Name = "Coming Tide",
+        ["Parade"] = {
+            Name = "Marée Montante",
             Duration = 1.2,
-            {Hits = 1, Dmg = 500, Procs = {"Ragdoll"}}
+            {Hits = 1, Dmg = 500, Procs = {"Étourdi"}}
         }
     },
 
-    ["Swirling Tiger"] = {
-        WeaponType = "Dual Swords",
-        ["Neutral"] = {
-            Name = "Winding Claws",
+    ["Tigre Tourbillonnant"] = {
+        WeaponType = "Doubles Épées",
+        ["Neutre"] = {
+            Name = "Griffes Rotatives",
             Duration = 2.05,
-            {Hits = {5, 1}, Dmg = {100, 100}, Procs = {"", "Slash"}},
+            {Hits = {5, 1}, Dmg = {100, 100}, Procs = {"", "Tranchant"}},
             {Hits = 1, Dmg = 300},
-            {Hits = {1, 1}, Dmg = {100, 300}, Procs = {"", "Knockdown"}}
+            {Hits = {1, 1}, Dmg = {100, 300}, Procs = {"", "Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Raking Flesh",
+        ["Avancer"] = {
+            Name = "Balayage de Chair",
             Duration = 1.6,
             {Hits = 1, Dmg = 100},
             {Hits = 2, Dmg = 100},
-            {Hits = {3, 1}, Dmg = {100, 200}, Procs = {"", "Lifted"}},
+            {Hits = {3, 1}, Dmg = {100, 200}, Procs = {"", "Suspendu"}},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
-            Name = "Dancing Hunter",
+        ["Avancer + Parade"] = {
+            Name = "Dance du Chasseur",
             Duration = 2.3,
             {Hits = 2, Dmg = 100},
             {
@@ -2302,73 +2499,76 @@ local StanceData = {
         }
     },
 
-    ["Swooping Falcon"] = {
-        WeaponType = "Sword",
-        ["Neutral"] = {
-            Name = "Diving Kestrel",
+    ["Attaque de Faucon"] = {
+        WeaponType = "Épée",
+        ["Neutre"] = {
+            Name = "Crécerelle Plongeante",
             Duration = 2,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
-            {Hits = {1, 1}, Dmg = {100, 300}, Procs = {"Slash", ""}},
-            {Hits = {1, 1}, Dmg = {300, 200}, Procs = {"", "Knockdown"}}
+            {Hits = {1, 1}, Dmg = {100, 300}, Procs = {"Tranchant", ""}},
+            {Hits = {1, 1}, Dmg = {300, 200}, Procs = {"", "Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Swift Pursuit",
+        ["Avancer"] = {
+            Name = "Poursuite Rapide",
             Duration = 1.95,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 200}
         },
-        ["Forward Block"] = {
-            Name = "Slicing Talon",
+        ["Avancer + Parade"] = {
+            Name = "Serre Coupante",
             Duration = 2.05,
             {Hits = 1, Dmg = 200},
-            {Hits = 1, Dmg = 200, Procs = {{"Impact", "Slash"}}},
+            {Hits = 1, Dmg = 200, Procs = {{"Impact", "Tranchant"}}},
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 300}
         },
-        ["Block"] = {
-            Name = "Keen Broadwing",
+        ["Parade"] = {
+            Name = "Rapace Vif",
             Duration = 2.75,
             {Type = "Spin", Hits = {1, 1}, Dmg = {100, 300}},
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
-            {Hits = 1, Dmg = 500, Procs = {"Ragdoll"}}
+            {Hits = 1, Dmg = 500, Procs = {"Étourdi"}}
         }
     },
 
-    ["Tainted Hydra"] = {
-        WeaponType = "Blade and Whip",
+    ["Hydre Entachée"] = {
+        WeaponType = "Lame-Fouet",
         ConclaveOnly = true,
-        ["Neutral"] = {
+        ["Neutre"] = {
             Name = "Heart of the Naga",
             {
                 Hits = {1, 1, 1},
                 Dmg = {100, 100, 100},
-                Procs = {"Knockdown", "Knockdown", "Knockdown"}
+                Procs = {
+                    "Renversement", "Renversement",
+                    "Renversement"
+                }
             },
             {Hits = {1, 1, 1}, Dmg = {100, 100, 100}}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Talons of the Wyrm",
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Heart of the Imoogi",
-            {Hits = 1, Dmg = 100, Procs = {"Impair"}},
+            {Hits = 1, Dmg = 100, Procs = {"Diminuer"}},
             {Hits = 1, Dmg = 100}
         }
     },
 
     ["Tempo Royale"] = {
-        WeaponType = "Heavy Blade",
-        ["Neutral"] = {
-            Name = "August Mesto",
+        WeaponType = "Lame Lourde",
+        ["Neutre"] = {
+            Name = "Mesto August",
             Duration = 4.65,
             {Hits = 1, Dmg = 300},
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {1, 1},
                 Dmg = {200, 300},
                 Procs = {"", "Impact"}
@@ -2377,126 +2577,135 @@ local StanceData = {
             {
                 Hits = {1, 1, 1},
                 Dmg = {200, 100, 400},
-                Procs = {"", "Impact", "Knockdown"}
+                Procs = {"", "Impact", "Renversement"}
             }
         },
-        ["Forward"] = {
-            Name = "Majestic Abandon",
+        ["Avancer"] = {
+            Name = "Abandon Majestueux",
             Duration = 3.4,
             {Type = "Spin", Hits = 2, Dmg = 100},
-            {Hits = 1, Dmg = 200, Procs = {"Lifted"}},
+            {Hits = 1, Dmg = 200, Procs = {"Suspendu"}},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 200, Procs = {"Impact"}},
-            {Hits = 1, Dmg = 100, Procs = {"Lifted"}}
+            {Hits = 1, Dmg = 100, Procs = {"Suspendu"}}
         },
-        ["Forward Block"] = {
-            Name = "Resplendent Calma",
+        ["Avancer + Parade"] = {
+            Name = "Calma Resplendissant",
             Duration = 2.1,
-            {Hits = 1, Dmg = 300, Procs = {"Lifted"}},
+            {Hits = 1, Dmg = 300, Procs = {"Suspendu"}},
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {1, 1},
                 Dmg = {200, 500},
-                Procs = {"", "Knockdown"}
+                Procs = {"", "Renversement"}
             }
         },
-        ["Block"] = {
-            Name = "Bold Reprise",
+        ["Parade"] = {
+            Name = "Reprise Intrépide",
             Duration = 1.8,
-            {Type = "Slam", Hits = 1, Dmg = 600, Procs = {"Knockdown"}}
+            {
+                Type = "Frappe au Sol",
+                Hits = 1,
+                Dmg = 600,
+                Procs = {"Renversement"}
+            }
         }
     },
 
-    ["Tranquil Cleave"] = {
+    ["Fente Tranquille"] = {
         WeaponType = "Nikana",
-        ["Neutral"] = {
-            Name = "Breathless Lunge",
+        ["Neutre"] = {
+            Name = "Bond Haletant",
             Duration = 3.8,
-            {Hits = {1, 1, 1}, Dmg = {300, 100, 100}, Procs = {"", "", "Slash"}},
+            {
+                Hits = {1, 1, 1},
+                Dmg = {300, 100, 100},
+                Procs = {"", "", "Tranchant"}
+            },
             {Hits = {1, 1}, Dmg = {100, 300}, Procs = {"", ""}},
-            {Hits = 1, Dmg = 400, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 400, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Windless Cut",
+        ["Avancer"] = {
+            Name = "Coupes sans Vent",
             Duration = 1.9,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 200}
         },
-        ["Forward Block"] = {
-            Name = "Beyond Reproach",
+        ["Avancer + Parade"] = {
+            Name = "Irréprochable",
             Duration = 2.6,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 400, Procs = {"Impact"}}
         },
-        ["Block"] = {
-            Name = "Hook and Eye",
+        ["Parade"] = {
+            Name = "Crochet et Oeil",
             Duration = 1.2,
-            {Hits = 2, Dmg = 400, Procs = {"Ragdoll"}}
+            {Hits = 2, Dmg = 400, Procs = {"Étourdi"}}
         },
-        ["Slide"] = {
-            Name = "Parting Knee",
+        ["Glissade"] = {
+            Name = "Genou Séparateur",
             Duration = 0.67,
             {Type = "Spin", Hits = 1, Dmg = 200}
         }
     },
 
-    ["Twirling Spire"] = {
-        WeaponType = "Polearm",
-        ["Neutral"] = {
-            Name = "Cresting Peak",
+    ["Flèche Virevoltante"] = {
+        WeaponType = "Arme d'Hast",
+        ["Neutre"] = {
+            Name = "Conquête du Pic",
             Duration = 3.3,
-            {Hits = {1, 1}, Dmg = {300, 200}, Procs = {"", "Slash"}},
-            {Hits = {1, 1}, Dmg = {300, 200}, Procs = {"", "Lifted"}},
-            {Hits = 1, Dmg = 400, Procs = {"Knockdown"}}
+            {Hits = {1, 1}, Dmg = {300, 200}, Procs = {"", "Tranchant"}},
+            {Hits = {1, 1}, Dmg = {300, 200}, Procs = {"", "Suspendu"}},
+            {Hits = 1, Dmg = 400, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Spiraling Pinnacle",
+        ["Avancer"] = {
+            Name = "Cime Tournoyante",
             Duration = 2.5,
             {Hits = 1, Dmg = 100},
             {Type = "Spin", Hits = {1, 2}, Dmg = {200, 100}},
             {Type = "Spin", Hits = {4, 1}, Dmg = {100, 200}}
         },
-        ["Forward Block"] = {
-            Name = "Vaulting Apex",
+        ["Avancer + Parade"] = {
+            Name = "Pointe de Voûte",
             Duration = 1.75,
-            {Type = "Slam", Hits = 1, Dmg = 300, Procs = {"Impact"}},
+            {Type = "Frappe au Sol", Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {Hits = 1, Dmg = 400}
         },
-        ["Block"] = {
-            Name = "Summit Plunge",
+        ["Parade"] = {
+            Name = "Chute du Sommet",
             Duration = 2,
             {
                 Hits = {1, 4, 1, 2},
                 Dmg = {200, 100, 400, 100},
-                Procs = {"", "", "Knockdown", ""}
+                Procs = {"", "", "Renversement", ""}
             }
         }
     },
 
-    ["Vermillion Storm"] = {
-        WeaponType = "Claws",
-        ["Neutral"] = {
-            Name = "Flurry Rose",
+    ["Tempête Vermillon"] = {
+        WeaponType = "Griffes",
+        ["Neutre"] = {
+            Name = "Rose Dansante",
             Duration = 3.95,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
-            {Hits = 1, Dmg = 300, Procs = {"Lifted"}},
+            {Hits = 1, Dmg = 300, Procs = {"Suspendu"}},
             {Hits = {1, 1}, Dmg = {100, 300}},
-            {Hits = {2, 2}, Dmg = {100, 100}, Procs = {"", "Slash"}},
+            {Hits = {2, 2}, Dmg = {100, 100}, Procs = {"", "Tranchant"}},
             {Hits = {1, 1}, Dmg = {200, 400}, Procs = {"Impact", ""}},
-            {Hits = 2, Dmg = 300, Procs = {"Knockdown"}}
+            {Hits = 2, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Crimson<br /><br /><br />Hurricane",
+        ["Avancer"] = {
+            Name = "Ouragan Cramoisi",
             Duration = 1.9,
             {Hits = 1, Dmg = 100},
             {Type = "Spin", Hits = {1, 3}, Dmg = {200, 100}},
             {Hits = {1, 1}, Dmg = {200, 100}}
         },
-        ["Forward Block"] = {
-            Name = "Cardinal Breeze",
+        ["Avancer + Parade"] = {
+            Name = "Brise Cardinale",
             Duration = 3.4,
             {Hits = {1, 2}, Dmg = {100, 100}, Procs = {"Impact", ""}},
             {Type = "Spin", Hits = {3, 3}, Dmg = {50, 100}},
@@ -2504,44 +2713,44 @@ local StanceData = {
                 Type = "Spin",
                 Hits = {6, 1},
                 Dmg = {50, 200},
-                Procs = {"", "Knockdown"}
+                Procs = {"", "Renversement"}
             }
         },
-        ["Block"] = {
-            Name = "Ruby Wind",
+        ["Parade"] = {
+            Name = "Vent Vermeil",
             Duration = 2.5,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {Hits = {1, 1}, Dmg = {100, 200}, Procs = {"", "Impact"}},
             {
-                Type = "Slam",
+                Type = "Frappe au Sol",
                 Hits = {1, 1, 1},
                 Dmg = {100, 200, 300},
-                Procs = {"", "Knockdown", "Knockdown"}
+                Procs = {"", "Renversement", "Renversement"}
             }
         }
     },
 
-    ["Vengeful Revenant"] = {
-        WeaponType = "Sword",
-        ["Neutral"] = {
-            Name = "Impending Dread",
+    ["Esprit Vengeur"] = {
+        WeaponType = "Épée",
+        ["Neutre"] = {
+            Name = "Terreur Imminente",
             Duration = 3.15,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 300},
             {Hits = 1, Dmg = 300},
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Lone Vengeance",
+        ["Avancer"] = {
+            Name = "Vengeance Solitaire",
             Duration = 1.55,
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 200},
-            {Hits = 1, Dmg = 100, Procs = {"Slash"}},
+            {Hits = 1, Dmg = 100, Procs = {"Tranchant"}},
             {Hits = 1, Dmg = 200}
         },
-        ["Forward Block"] = {
-            Name = "Drowning Despair",
+        ["Avancer + Parade"] = {
+            Name = "Désespoir Étouffant",
             Duration = 2.3,
             {
                 Type = "Spin",
@@ -2550,42 +2759,47 @@ local StanceData = {
                 Procs = {"", "Impact"}
             },
             {Hits = {2, 1}, Dmg = {50, 300}},
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Block"] = {
-            Name = "Rising Hate",
+        ["Parade"] = {
+            Name = "Haine Grandissante",
             Duration = 3,
             {Type = "Spin", Hits = {1, 1}, Dmg = {400, 100}},
-            {Hits = 1, Dmg = 200, Procs = {{"Slash", "Lifted"}}},
-            {Type = "Slam", Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 200, Procs = {{"Tranchant", "Suspendu"}}},
+            {
+                Type = "Frappe au Sol",
+                Hits = 1,
+                Dmg = 300,
+                Procs = {"Renversement"}
+            }
         }
     },
 
-    ["Vicious Approach"] = {
-        WeaponType = "Sparring",
+    ["Approche Vicieuse"] = {
+        WeaponType = "Mains et Pieds",
         ConclaveOnly = true,
-        ["Neutral"] = {
+        ["Neutre"] = {
             Name = "Savagery At Hand",
-            {Hits = {2, 1}, Dmg = {100, 100}, Procs = {"Impair", "Impair"}},
+            {Hits = {2, 1}, Dmg = {100, 100}, Procs = {"Diminuer", "Diminuer"}},
             {Hits = 2, Dmg = 100}
         },
-        ["Forward"] = {
+        ["Avancer"] = {
             Name = "Cruel Advance",
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 100}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Impending Danger",
             {Hits = 2, Dmg = 100},
             {Hits = 1, Dmg = 100}
         }
     },
 
-    ["Votive Onslaught"] = {
-        WeaponType = "Warfan",
-        ["Neutral"] = {
-            Name = "Purging Drive",
+    ["Massacre Votif"] = {
+        WeaponType = "Éventail de Guerre",
+        ["Neutre"] = {
+            Name = "Purge Destructrice",
             Duration = 2.57,
             {Hits = 2, Dmg = 300},
             {Hits = {1, 1}, Dmg = {100, 200}},
@@ -2593,48 +2807,48 @@ local StanceData = {
             {
                 Hits = {1, 1, 1, 1},
                 Dmg = {100, 100, 300, 300},
-                Procs = {"", "", "", {"Slash", "Knockdown"}}
+                Procs = {"", "", "", {"Tranchant", "Renversement"}}
             }
         },
-        ["Forward"] = {
-            Name = "Clarion Rush",
+        ["Avancer"] = {
+            Name = "Charge Destructrice",
             Duration = 1.84,
             {Hits = 1, Dmg = 100},
             {Hits = 2, Dmg = 100},
             {Hits = 3, Dmg = 100},
             {Hits = 4, Dmg = 100}
         },
-        ["Forward Block"] = {
-            Name = "Rending Lamentation",
+        ["Avancer + Parade"] = {
+            Name = "Lamentation Déchirante",
             Duration = 2.78,
             {Hits = {1, 1}, Dmg = {200, 100}},
             {Type = "Spin", Hits = {2, 1}, Dmg = {100, 200}},
             {Hits = {1, 1, 1}, Dmg = {200, 100, 300}},
-            {Hits = 2, Dmg = 300, Procs = {"Lifted"}}
+            {Hits = 2, Dmg = 300, Procs = {"Suspendu"}}
         },
-        ["Block"] = {
-            Name = "Penitent Offering",
+        ["Parade"] = {
+            Name = "Offrande du Pénitent",
             Duration = 2.67,
             {Hits = 2, Dmg = 200},
-            {Hits = 1, Dmg = 300, Procs = {"Lifted"}},
+            {Hits = 1, Dmg = 300, Procs = {"Suspendu"}},
             {Hits = 1, Dmg = 300},
-            {Hits = {2, 2}, Dmg = {100, 200}, Procs = {"", "Lifted"}}
+            {Hits = {2, 2}, Dmg = {100, 200}, Procs = {"", "Suspendu"}}
         }
     },
 
-    ["Vulpine Mask"] = {
-        WeaponType = "Rapier",
-        ["Neutral"] = {
-            Name = "Assailant Guise",
+    ["Masque Vulpin"] = {
+        WeaponType = "Rapière",
+        ["Neutre"] = {
+            Name = "Feinte Assaillante",
             Duration = 3,
             {Hits = 2, Dmg = 100},
-            {Hits = 1, Dmg = 300, Procs = {{"Impact", "Slash"}}},
+            {Hits = 1, Dmg = 300, Procs = {{"Impact", "Tranchant"}}},
             {Hits = 1, Dmg = 300},
-            {Hits = {1, 1}, Dmg = {300, 100}, Procs = {"", "Slash"}},
-            {Hits = 1, Dmg = 400, Procs = {"Knockdown"}}
+            {Hits = {1, 1}, Dmg = {300, 100}, Procs = {"", "Tranchant"}},
+            {Hits = 1, Dmg = 400, Procs = {"Renversement"}}
         },
-        ["Forward"] = {
-            Name = "Duel Secrets",
+        ["Avancer"] = {
+            Name = "Secrets du Duel",
             Duration = 3,
             {Hits = 2, Dmg = 50},
             {Hits = 1, Dmg = 100},
@@ -2642,26 +2856,26 @@ local StanceData = {
             {Type = "Spin", Hits = {1, 1}, Dmg = {100, 200}},
             {Hits = 1, Dmg = 200}
         },
-        ["Forward Block"] = {
-            Name = "Hidden Flourish",
+        ["Avancer + Parade"] = {
+            Name = "Botte Secrète",
             Duration = 2.5,
             {Hits = 1, Dmg = 200, Procs = {"Impact"}},
-            {Hits = {1, 1}, Dmg = {100, 100}, Procs = {"", "Slash"}},
+            {Hits = {1, 1}, Dmg = {100, 100}, Procs = {"", "Tranchant"}},
             {Hits = {1, 1, 1}, Dmg = {100, 200, 300}},
             {Hits = 1, Dmg = 400, Procs = {"Impact"}}
         },
-        ["Block"] = {
-            Name = "Deceptive Lunge",
+        ["Parade"] = {
+            Name = "Estocade Trompeuse",
             Duration = 1.45,
-            {Hits = {1, 1}, Dmg = {200, 300}, Procs = {"", "Lifted"}},
-            {Hits = 1, Dmg = 400, Procs = {"Ragdoll"}}
+            {Hits = {1, 1}, Dmg = {200, 300}, Procs = {"", "Suspendu"}},
+            {Hits = 1, Dmg = 400, Procs = {"Étourdi"}}
         }
     },
 
-    ["Wise Razor"] = {
-        WeaponType = "Two-Handed Nikana",
-        ["Neutral"] = {
-            Name = "Threshing Grain",
+    ["Rasoir Lucide"] = {
+        WeaponType = "Nikana à Deux Mains",
+        ["Neutre"] = {
+            Name = "Moissonneuse-Batteuse",
             Duration = 4.4,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {Hits = 1, Dmg = 300},
@@ -2669,746 +2883,998 @@ local StanceData = {
             {
                 Hits = {1, 1, 1},
                 Dmg = {200, 200, 400},
-                Procs = {"", "Slash", "Knockdown"}
+                Procs = {"", "Tranchant", "Renversement"}
             }
         },
-        ["Forward"] = {
-            Name = "Cutting Thrice",
+        ["Avancer"] = {
+            Name = "Triple Coupe",
             Duration = 2.55,
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 400, Procs = {"Impact"}}
         },
-        ["Forward Block"] = {
+        ["Avancer + Parade"] = {
             Name = "Calling Thunder",
             Duration = 3.5,
             {
-                Type = "Slam",
+                Type = "Appel du Tonnerre",
                 Hits = {1, 1, 1},
                 Dmg = {200, 200, 300},
-                Procs = {"", "Knockdown", {"Slash", "Lifted"}}
+                Procs = {"", "Renversement", {"Tranchant", "Suspendu"}}
             },
             {Hits = 1, Dmg = 300},
-            {Type = "Spin", Hits = 1, Dmg = 400, Procs = {"Knockdown"}}
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 400,
+                Procs = {"Renversement"}
+            }
         }
     },
 
     --[[ = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ]] --
     -- Shared Data --
-    -- note that slide, aerial, wall, and finisher combos are same as swords'
-    ["Blade and Whip"] = {
-        ["Heavy"] = {
-            Name = "Rolling Thunder",
-            {Shape = "Heavy", Hits = 1, Dmg = 400, Procs = {"Ragdoll"}},
+    -- note that Glissade, Dans les Airs, Sur un Mur, and Coup de Grâce combos are same as Épées'
+    ["Lame-Fouet"] = {
+        ["Attaque Lourde"] = {
+            Name = "Roulement du Tonnerre",
             {
-                Shape = "Heavy",
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 400,
+                Procs = {"Étourdi"}
+            },
+            {
+                Shape = "Attaque Lourde",
                 Hits = {1, 1, 1},
                 Dmg = {400, 400, 400},
-                Procs = {"Lifted", "Ragdoll", ""}
+                Procs = {"Suspendu", "Étourdi", ""}
             }
         },
-        ["Slide"] = {
-            Name = "Spiral Cut",
-            {Type = "Spin", Hits = 1, Dmg = 100, Procs = {"Impact"}}
+        ["Glissade"] = {
+            Name = "Coupe Spirale",
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 100,
+                Procs = {"Impact"}
+            }
         },
-        ["Aerial"] = {
-            Name = "Weightless Steel",
+        ["Dans les Airs"] = {
+            Name = "Acier Léger",
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 200},
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Wall"] = {
-            Name = "Weightless Steel",
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+        ["Sur un Mur"] = {
+            Name = "Acier Léger",
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Finisher"] = {
-            Name = "Death's Mark",
-            {Hits = 1, Dmg = 1000, Procs = {"Slash"}}
+        ["Coup de Grâce"] = {
+            Name = "Marque de la Mort",
+            {Hits = 1, Dmg = 1000, Procs = {"Tranchant"}}
         }
     },
 
-    ["Claws"] = {
-        ["Heavy"] = {
-            Name = "Three Lessons",
+    ["Griffes"] = {
+        ["Attaque Lourde"] = {
+            Name = "Trois Leçons",
             {
-                Shape = "Heavy",
+                Shape = "Attaque Lourde",
                 Hits = 1,
                 Dmg = 500,
-                Procs = {{"Knockdown", "Slash"}}
+                Procs = {{"Renversement", "Tranchant"}}
             },
             {
-                Shape = "Heavy",
+                Shape = "Attaque Lourde",
                 Hits = 1,
                 Dmg = 500,
-                Procs = {{"Knockdown", "Slash"}}
+                Procs = {{"Renversement", "Tranchant"}}
             }
         },
-        ["Slide"] = {
-            Name = "Launching Spring",
+        ["Glissade"] = {
+            Name = "Conflit de Sang",
             Duration = 0.67,
-            {Type = "Spin", Hits = 1, Dmg = 300, Procs = {"Lifted"}}
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 300,
+                Procs = {"Suspendu"}
+            }
         },
-        ["Aerial"] = {
-            Name = "One Point",
+        ["Dans les Airs"] = {
+            Name = "Un Point",
             {Hits = 1, Dmg = 200},
             {Hits = 2, Dmg = 200},
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Wall"] = {
-            Name = "Through Strike",
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+        ["Sur un Mur"] = {
+            Name = "Frappe Transperçante",
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Finisher"] = {Name = "Roaring Drums", {Hits = 6, Dmg = 500}}
-    },
-
-    ["Dagger"] = {
-        ["Heavy"] = {
-            Name = "Butterfly Slash",
-            {
-                Shape = "Heavy",
-                Hits = {1, 1},
-                Dmg = {250, 250},
-                Procs = {{"Impact", "Slash"}, "Finisher"}
-            },
-            {
-                Shape = "Heavy",
-                Hits = {1, 1},
-                Dmg = {250, 250},
-                Procs = {{"Impact", "Slash"}, "Knockdown"}
-            }
-        },
-        ["Slide"] = {
-            Name = "Splitting Brush",
-            Duration = 0.53,
-            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
-        },
-        ["Aerial"] = {
-            Name = "Scorpion Fall",
-            {Hits = 1, Dmg = 200, Procs = {"Impact"}},
-            {Hits = 1, Dmg = 100, Procs = {"Slash"}}
-        },
-        ["Wall"] = {
-            Name = "Fanning Sting",
-            {Hits = 1, Dmg = 300, Procs = {"Impact"}}
-        },
-        ["Finisher"] = {
-            Name = "Relentless Point",
-            {Hits = 2, Dmg = 500, Procs = {"Slash"}}
+        ["Coup de Grâce"] = {
+            Name = "Tambours Rugissants",
+            {Hits = 6, Dmg = 500}
         }
     },
 
-    ["Dual Daggers"] = {
-        ["Heavy"] = {
-            Name = "Savage Tiger",
+    ["Dague"] = {
+        ["Attaque Lourde"] = {
+            Name = "Entaille Papillon",
             {
-                Shape = "Heavy",
-                Hits = 2,
-                Dmg = 250,
-                Procs = {{"Slash", "Knockdown"}}
+                Shape = "Attaque Lourde",
+                Hits = {1, 1},
+                Dmg = {250, 250},
+                Procs = {{"Impact", "Tranchant"}, "Coup de Grâce"}
             },
             {
-                Shape = "Heavy",
-                Hits = 2,
-                Dmg = 250,
-                Procs = {{"Slash", "Knockdown"}}
+                Shape = "Attaque Lourde",
+                Hits = {1, 1},
+                Dmg = {250, 250},
+                Procs = {{"Impact", "Tranchant"}, "Renversement"}
             }
         },
-        ["Slide"] = {
-            Name = "Lurking Cougar",
-            Duration = 0.67,
-            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
+        ["Glissade"] = {
+            Name = "Effleurement Fendant",
+            Duration = 0.53,
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 200,
+                Procs = {"Impact"}
+            }
         },
-        ["Aerial"] = {
-            Name = "Lion's Roar",
+        ["Dans les Airs"] = {
+            Name = "Chute du Scorpion",
+            {Hits = 1, Dmg = 200, Procs = {"Impact"}},
+            {Hits = 1, Dmg = 100, Procs = {"Tranchant"}}
+        },
+        ["Sur un Mur"] = {
+            Name = "Éventail de Dards",
+            {Hits = 1, Dmg = 300, Procs = {"Impact"}}
+        },
+        ["Coup de Grâce"] = {
+            Name = "Point Implacable",
+            {Hits = 2, Dmg = 500, Procs = {"Tranchant"}}
+        }
+    },
+
+    ["Doubles Dagues"] = {
+        ["Attaque Lourde"] = {
+            Name = "Tigre Féroce",
+            {
+                Shape = "Attaque Lourde",
+                Hits = 2,
+                Dmg = 250,
+                Procs = {{"Tranchant", "Renversement"}}
+            },
+            {
+                Shape = "Attaque Lourde",
+                Hits = 2,
+                Dmg = 250,
+                Procs = {{"Tranchant", "Renversement"}}
+            }
+        },
+        ["Glissade"] = {
+            Name = "Cougar Rôdant",
+            Duration = 0.67,
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 200,
+                Procs = {"Impact"}
+            }
+        },
+        ["Dans les Airs"] = {
+            Name = "Rugissement du Lion",
             {Hits = 2, Dmg = 100, Procs = {"Impact"}},
             {Hits = 2, Dmg = 100, Procs = {"Impact"}},
             {Hits = 2, Dmg = 200, Procs = {"Impact"}}
         },
-        ["Wall"] = {
-            Name = "Weightless Steel",
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+        ["Sur un Mur"] = {
+            Name = "Acier Léger",
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Finisher"] = {
-            Name = "Final Strike",
-            {Hits = 2, Dmg = 800, Procs = {"Slash"}}
+        ["Coup de Grâce"] = {
+            Name = "Frappe Finale",
+            {Hits = 2, Dmg = 800, Procs = {"Tranchant"}}
         }
     },
 
-    ["Dual Swords"] = {
-        ["Heavy"] = {
-            Name = "Northern Coil",
-            {Shape = "Heavy", Hits = 2, Dmg = 250, Procs = {"Knockdown"}},
-            {Shape = "Heavy", Hits = 2, Dmg = 250, Procs = {"Knockdown"}}
+    ["Doubles Épées"] = {
+        ["Attaque Lourde"] = {
+            Name = "Anneau du Nord",
+            {
+                Shape = "Attaque Lourde",
+                Hits = 2,
+                Dmg = 250,
+                Procs = {"Renversement"}
+            },
+            {
+                Shape = "Attaque Lourde",
+                Hits = 2,
+                Dmg = 250,
+                Procs = {"Renversement"}
+            }
         },
-        ["Slide"] = {
-            Name = "Trimming Flowers",
-            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
+        ["Glissade"] = {
+            Name = "Fleurs Rognantes",
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 200,
+                Procs = {"Impact"}
+            }
         },
-        ["Aerial"] = {
-            Name = "Red Soil",
+        ["Dans les Airs"] = {
+            Name = "Souillure Sanglante",
             {Hits = 2, Dmg = 200, Procs = {"Impact"}},
             {Hits = 1, Dmg = 200, Procs = {"Impact"}},
-            {Hits = 2, Dmg = 200, Procs = {"Knockdown"}}
+            {Hits = 2, Dmg = 200, Procs = {"Renversement"}}
         },
-        ["Wall"] = {
-            Name = "Weightless Steel",
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+        ["Sur un Mur"] = {
+            Name = "Acier Léger",
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Finisher"] = {
-            Name = "Mirrored Spike",
-            {Hits = 2, Dmg = 800, Procs = {"Slash"}}
+        ["Coup de Grâce"] = {
+            Name = "Embrochement Miroir",
+            {Hits = 2, Dmg = 800, Procs = {"Tranchant"}}
         }
     },
 
-    ["Fist"] = {
-        ["Heavy"] = {
-            Name = "Three Lessons",
-            {Shape = "Heavy", Hits = 1, Dmg = 500, Procs = {"Knockdown"}},
-            {Shape = "Heavy", Hits = 1, Dmg = 500, Procs = {"Knockdown"}}
+    ["Poings"] = {
+        ["Attaque Lourde"] = {
+            Name = "Trois Leçons",
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 500,
+                Procs = {"Renversement"}
+            },
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 500,
+                Procs = {"Renversement"}
+            }
         },
-        ["Slide"] = {
-            Name = "Launching Spring",
-            {Type = "Spin", Hits = 1, Dmg = 300, Procs = {"Lifted"}}
+        ["Glissade"] = {
+            Name = "Conflit de Sang",
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 300,
+                Procs = {"Suspendu"}
+            }
         },
-        ["Aerial"] = {
-            Name = "One Point",
+        ["Dans les Airs"] = {
+            Name = "Un Point",
             {Hits = 1, Dmg = 200},
             {Hits = 2, Dmg = 200},
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Wall"] = {Name = "Through Strike", {Hits = 1, Dmg = 300}},
-        ["Finisher"] = {Name = "Roaring Drums", {Hits = 6, Dmg = 500}}
+        ["Sur un Mur"] = {Name = "Frappe Transperçante", {Hits = 1, Dmg = 300}},
+        ["Coup de Grâce"] = {
+            Name = "Tambours Rugissants",
+            {Hits = 6, Dmg = 500}
+        }
     },
 
     ["Glaive"] = {
-        ["Heavy"] = {
-            Name = "Falling Star",
-            {Shape = "Heavy", Type = "Ranged", Hits = 1, Dmg = 500}
+        ["Attaque Lourde"] = {
+            Name = "Étoile Filante",
+            {Shape = "Attaque Lourde", Type = "Distance", Hits = 1, Dmg = 500}
         },
-        ["Slide"] = {
+        ["Glissade"] = {
             Name = "Pirouette",
             Duration = 0.74,
-            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 200,
+                Procs = {"Impact"}
+            }
         },
-        ["Aerial"] = {
-            Name = "Auger",
-            {Type = "Spin", Hits = 2, Dmg = 300, Procs = {"Knockdown"}},
-            {Type = "Spin", Hits = 2, Dmg = 300, Procs = {"Knockdown"}},
-            {Type = "Spin", Hits = 2, Dmg = 300, Procs = {"Knockdown"}}
+        ["Dans les Airs"] = {
+            Name = "Vrille",
+            {
+                Type = "Spin",
+                Hits = 2,
+                Dmg = 300,
+                Procs = {"Renversement"}
+            },
+            {
+                Type = "Spin",
+                Hits = 2,
+                Dmg = 300,
+                Procs = {"Renversement"}
+            },
+            {
+                Type = "Spin",
+                Hits = 2,
+                Dmg = 300,
+                Procs = {"Renversement"}
+            }
         },
-        ["Wall"] = {Name = "Through Strike", {Hits = 1, Dmg = 300}},
-        ["Finisher"] = {
-            Name = "Nemesis",
-            {Hits = 1, Dmg = 1000, Procs = {"Slash"}}
+        ["Sur un Mur"] = {Name = "Frappe Transperçante", {Hits = 1, Dmg = 300}},
+        ["Coup de Grâce"] = {
+            Name = "Némésis",
+            {Hits = 1, Dmg = 1000, Procs = {"Tranchant"}}
         }
     },
 
-    ["Gunblade"] = {
-        ["Heavy"] = {
-            Name = "Spinning Uppercut",
+    ["Pistolame"] = {
+        ["Attaque Lourde"] = {
+            Name = "Uppercut Tournoyant",
             {
-                Type = "Ranged",
-                Shape = "Heavy",
+                Type = "Distance",
+                Shape = "Attaque Lourde",
                 Hits = 1,
                 Dmg = 400,
                 Procs = {"Impact"}
             },
             {
-                Type = "Ranged",
-                Shape = "Heavy",
+                Type = "Distance",
+                Shape = "Attaque Lourde",
                 Hits = 1,
                 Dmg = 400,
                 Procs = {"Impact"}
             }
         },
-        ["Slide"] = {
-            Name = "Fast Draw",
+        ["Glissade"] = {
+            Name = "Dégaine",
             Duration = 0.60,
-            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 200,
+                Procs = {"Impact"}
+            }
         },
-        ["Aerial"] = {
-            Name = "Outlaw Rush",
+        ["Dans les Airs"] = {
+            Name = "Cavale",
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 200}
         },
-        ["Wall"] = {
+        ["Sur un Mur"] = {
             Name = "Vendetta",
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Finisher"] = {
-            Name = "Last Words",
+        ["Coup de Grâce"] = {
+            Name = "Dernières Volontés",
             {Hits = 1, Dmg = 1000, Procs = {"Blast"}}
         }
     },
 
-    ["Hammer"] = {
-        ["Heavy"] = {
-            Name = "Crowd Fall",
-            {Shape = "Heavy", Hits = 1, Dmg = 600, Procs = {"Lifted"}},
-            {Shape = "Heavy", Hits = 1, Dmg = 600, Procs = {"Knockdown"}}
+    ["Marteau"] = {
+        ["Attaque Lourde"] = {
+            Name = "Chute de Foule",
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 600,
+                Procs = {"Suspendu"}
+            },
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 600,
+                Procs = {"Renversement"}
+            }
         },
-        ["Slide"] = {
-            Name = "Hell's Wave",
+        ["Glissade"] = {
+            Name = "Vague de l'Enfer",
             Duration = 0.97,
-            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 200,
+                Procs = {"Impact"}
+            }
         },
-        ["Aerial"] = {
-            Name = "Mountain's Chisel",
+        ["Dans les Airs"] = {
+            Name = "Burin de la Montagne",
             {Hits = 1, Dmg = 200, Procs = {"Impact"}},
             {Hits = 1, Dmg = 200, Procs = {"Impact"}},
             {Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
-        ["Wall"] = {Name = "Cyclical Dwelling", {Hits = 1, Dmg = 200}},
-        ["Finisher"] = {Name = "Tunneling Spike", {Hits = 1, Dmg = 1200}}
+        ["Sur un Mur"] = {Name = "Foyer Écorchant", {Hits = 1, Dmg = 200}},
+        ["Coup de Grâce"] = {Name = "Dernier Mot", {Hits = 1, Dmg = 1200}}
     },
 
-    ["Heavy Blade"] = {
-        ["Heavy"] = {
-            Name = "Crowd Fall",
-            {Shape = "Heavy", Hits = 1, Dmg = 600, Procs = {"Lifted"}},
-            {Shape = "Heavy", Hits = 1, Dmg = 600, Procs = {"Knockdown"}}
+    ["Lame Lourde"] = {
+        ["Attaque Lourde"] = {
+            Name = "Chute de Foule",
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 600,
+                Procs = {"Suspendu"}
+            },
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 600,
+                Procs = {"Renversement"}
+            }
         },
-        ["Slide"] = {
-            Name = "Hell's Wave",
+        ["Glissade"] = {
+            Name = "Vague de l'Enfer",
             Duration = 0.98,
-            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 200,
+                Procs = {"Impact"}
+            }
         },
-        ["Aerial"] = {
-            Name = "Mountain's Chisel",
+        ["Dans les Airs"] = {
+            Name = "Burin de la Montagne",
             {Hits = 1, Dmg = 200, Procs = {"Impact"}},
             {Hits = 1, Dmg = 200, Procs = {"Impact"}},
             {Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
-        ["Wall"] = {
-            Name = "Flaying Home",
+        ["Sur un Mur"] = {
+            Name = "Foyer Écorchant",
             {Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
-        ["Finisher"] = {
-            Name = "Tunneling Spike",
-            {Hits = 1, Dmg = 1200, Procs = {"Slash"}}
+        ["Coup de Grâce"] = {
+            Name = "Tunnel en Pointe",
+            {Hits = 1, Dmg = 1200, Procs = {"Tranchant"}}
         }
     },
 
-    ["Machete"] = {
-        ["Heavy"] = {
-            Name = "Rolling Wave",
+    ["Machette"] = {
+        ["Attaque Lourde"] = {
+            Name = "Vague Roulante",
             {
-                Shape = "Heavy",
+                Shape = "Attaque Lourde",
                 Type = "Spin",
                 Hits = {2, 1, 1, 1},
                 Dmg = {150, 150, 150, 150},
-                Procs = {"", "Slash", "", {"Impact", "Finisher"}}
+                Procs = {"", "Tranchant", "", {"Impact", "Coup de Grâce"}}
             },
-            {Shape = "Heavy", Hits = 1, Dmg = 500, Procs = {"Knockdown"}}
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 500,
+                Procs = {"Renversement"}
+            }
         },
-        ["Slide"] = {
-            Name = "Flowing River",
+        ["Glissade"] = {
+            Name = "Rivière en Cascade",
             Duration = 0.66,
-            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 200,
+                Procs = {"Impact"}
+            }
         },
-        ["Aerial"] = {
-            Name = "Weightless Steel",
+        ["Dans les Airs"] = {
+            Name = "Acier Léger",
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 200},
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Wall"] = {
-            Name = "Weightless Steel",
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+        ["Sur un Mur"] = {
+            Name = "Acier Léger",
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Finisher"] = {
-            Name = "Crashing Wave",
-            {Hits = 1, Dmg = 1000, Procs = {"Slash"}}
+        ["Coup de Grâce"] = {
+            Name = "Vague Formidable",
+            {Hits = 1, Dmg = 1000, Procs = {"Tranchant"}}
         }
     },
 
     ["Nikana"] = {
-        ["Heavy"] = {
-            Name = "Windless Cuts",
+        ["Attaque Lourde"] = {
+            Name = "Coupes sans Vent",
             {
-                Shape = "Heavy",
+                Shape = "Attaque Lourde",
                 Hits = 1,
                 Dmg = 500,
-                Procs = {{"Slash", "Knockdown"}}
+                Procs = {{"Tranchant", "Renversement"}}
             },
             {
-                Shape = "Heavy",
+                Shape = "Attaque Lourde",
                 Hits = 1,
                 Dmg = 500,
-                Procs = {{"Slash", "Knockdown"}}
+                Procs = {{"Tranchant", "Renversement"}}
             }
         },
-        ["Aerial"] = {
-            Name = "Setting Sun",
+        ["Dans les Airs"] = {
+            Name = "Soleil Couchant",
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 200}
         },
-        ["Wall"] = {Name = "Guiding Wire", {Hits = 1, Dmg = 215}},
-        ["Finisher"] = {
-            Name = "Resting Place",
-            {Hits = 1, Dmg = 1000, Procs = {"Slash"}}
+        ["Sur un Mur"] = {Name = "Fil Guidant", {Hits = 1, Dmg = 215}},
+        ["Coup de Grâce"] = {
+            Name = "Endroit de Repos",
+            {Hits = 1, Dmg = 1000, Procs = {"Tranchant"}}
         }
     },
 
     ["Nunchaku"] = {
-        ["Heavy"] = {
-            Name = "Tidal Flames",
-            {Shape = "Heavy", Hits = 1, Dmg = 500, Procs = {"Knockdown"}},
-            {Shape = "Heavy", Hits = 1, Dmg = 500, Procs = {"Knockdown"}}
-        },
-        ["Slide"] = {
-            Name = "Tidal Conflagration",
-            Duration = 1.05,
-            {Type = "Spin", Hits = 3, Dmg = 200, Procs = {"Impact"}}
-        },
-        ["Aerial"] = {
-            Name = "Fire Storm",
-            {Hits = 1, Dmg = 200, Procs = {"Impact"}},
-            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
-        },
-        ["Wall"] = {
-            Name = "Creating Fire",
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
-        },
-        ["Finisher"] = {Name = "Burning Tsunami", {Hits = 1, Dmg = 1000}}
-    },
-
-    ["Polearm"] = {
-        ["Heavy"] = {
-            Name = "The Way",
-            {Shape = "Heavy", Hits = 1, Dmg = 600, Procs = {"Knockdown"}},
-            {Shape = "Heavy", Hits = 1, Dmg = 600, Procs = {"Knockdown"}}
-        },
-        ["Slide"] = {
-            Name = "Cyclone Strike",
-            Duration = 0.78,
-            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
-        },
-        ["Aerial"] = {
-            Name = "Planting Widow",
-            {Type = "Spin", Hits = 1, Dmg = 300},
-            {Type = "Spin", Hits = 1, Dmg = 300},
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
-        },
-        ["Wall"] = {Name = "Guiding Plank", {Hits = 1, Dmg = 166}},
-        ["Finisher"] = {
-            Name = "Tunneling Spike",
-            {Hits = 1, Dmg = 1200, Procs = {"Slash"}}
-        }
-    },
-
-    ["Rapier"] = {
-        ["Heavy"] = {
-            Name = "Veiled Riposte",
+        ["Attaque Lourde"] = {
+            Name = "Marée de Flammes",
             {
-                Shape = "Heavy",
-                Hits = 1,
-                Dmg = 450,
-                Procs = {{"Impact", "Slash"}}
-            },
-            {
-                Shape = "Heavy",
-                Hits = 1,
-                Dmg = 450,
-                Procs = {{"Impact", "Slash"}}
-            }
-        },
-        ["Slide"] = {
-            Name = "Spiral Cut",
-            Duration = 0.64,
-            {Type = "Spin", Hits = 1, Dmg = 100, Procs = {"Impact"}}
-        },
-        ["Aerial"] = {
-            Name = "Sky Doom",
-            {Hits = 1, Dmg = 200, Procs = {"Impact"}},
-            {Hits = 1, Dmg = 200, Procs = {"Impact"}},
-            {Hits = 1, Dmg = 200, Procs = {"Impact"}}
-        },
-        ["Wall"] = {
-            Name = "Weightless Steel",
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
-        },
-        ["Finisher"] = {
-            Name = "Death's Mark",
-            {Hits = 1, Dmg = 1000, Procs = {"Slash"}}
-        }
-    },
-
-    ["Scythe"] = {
-        ["Heavy"] = {
-            Name = "Fading Hope",
-            {
-                Shape = "Heavy",
-                Hits = 1,
-                Dmg = 600,
-                Procs = {{"Slash", "Knockdown"}}
-            },
-            {
-                Shape = "Heavy",
-                Hits = 1,
-                Dmg = 600,
-                Procs = {{"Slash", "Knockdown"}}
-            }
-        },
-        ["Slide"] = {
-            Name = "Hell's Wave",
-            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
-        },
-        ["Aerial"] = {
-            Name = "Mountain's Chisel",
-            {Hits = 1, Dmg = 200, Procs = {"Impact"}},
-            {Hits = 1, Dmg = 200, Procs = {"Impact"}}
-        },
-        ["Wall"] = {Name = "Flaying Home", {Hits = 1, Dmg = 200}},
-        ["Finisher"] = {
-            Name = "Tunneling Spike",
-            {Hits = 1, Dmg = 1200, Procs = {"Slash"}}
-        }
-    },
-
-    ["Sparring"] = {
-        ["Heavy"] = {
-            Name = "Rising from Ashes",
-            {
-                Shape = "Heavy",
-                Type = "Slam",
+                Shape = "Attaque Lourde",
                 Hits = 1,
                 Dmg = 500,
-                Procs = {"Lifted"}
+                Procs = {"Renversement"}
             },
             {
-                Shape = "Heavy",
-                Hits = {4, 1},
-                Dmg = {100, 100},
-                Procs = {"", "Lifted"}
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 500,
+                Procs = {"Renversement"}
             }
         },
-        ["Slide"] = {
-            Name = "Rolling Blast",
-            Duration = 0.84,
-            {Hits = 2, Dmg = 200, Procs = {"Ragdoll"}}
+        ["Glissade"] = {
+            Name = "Marée Incendiaire",
+            Duration = 1.05,
+            {
+                Type = "Spin",
+                Hits = 3,
+                Dmg = 200,
+                Procs = {"Impact"}
+            }
         },
-        ["Aerial"] = {
-            Name = "One Point",
-            {Hits = 1, Dmg = 200},
-            {Hits = 2, Dmg = 200},
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+        ["Dans les Airs"] = {
+            Name = "Tempête de Feu",
+            {Hits = 1, Dmg = 200, Procs = {"Impact"}},
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 200,
+                Procs = {"Impact"}
+            }
         },
-        ["Wall"] = {Name = "Through Strike", {Hits = 1, Dmg = 300}},
-        ["Finisher"] = {Name = "Roaring Drums", {Hits = 6, Dmg = 500}}
-    },
-
-    ["Staff"] = {
-        ["Heavy"] = {
-            Name = "The Way",
-            {Shape = "Heavy", Hits = 1, Dmg = 500, Procs = {"Knockdown"}},
-            {Shape = "Heavy", Hits = 1, Dmg = 500, Procs = {"Knockdown"}}
+        ["Sur un Mur"] = {
+            Name = "Pyromanie",
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Slide"] = {
-            Name = "Crushing Reach",
-            Duration = 0.68,
-            {Type = "Spin", Hits = 1, Dmg = 100, Procs = {"Lifted"}}
-        },
-        ["Aerial"] = {
-            Name = "Planting Widow",
-            {Hits = 1, Dmg = 300},
-            {Hits = 1, Dmg = 300},
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
-        },
-        ["Wall"] = {Name = "Guiding Plank", {Hits = 1, Dmg = 166}},
-        ["Finisher"] = {Name = "Wide Dispatch", {Hits = 1, Dmg = 1000}}
-    },
-
-    ["Sword"] = {
-        ["Heavy"] = {
-            Name = "Perfect Cut",
-            {Shape = "Heavy", Hits = 1, Dmg = 500, Procs = {"Lifted"}},
-            {Shape = "Heavy", Hits = 1, Dmg = 500, Procs = {"Knockdown"}}
-        },
-        ["Slide"] = {
-            Name = "Spiral Cut",
-            Duration = 0.69,
-            {Type = "Spin", Hits = 1, Dmg = 100, Procs = {"Impact"}}
-        },
-        ["Aerial"] = {
-            Name = "Weightless Steel",
-            {Hits = 1, Dmg = 200},
-            {Hits = 1, Dmg = 200},
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
-        },
-        ["Wall"] = {
-            Name = "Weightless Steel",
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
-        },
-        ["Finisher"] = {
-            Name = "Death's Mark",
-            {Hits = 1, Dmg = 1000, Procs = {"Slash"}}
+        ["Coup de Grâce"] = {
+            Name = "Tsunami de Flammes",
+            {Hits = 1, Dmg = 1000}
         }
     },
 
-    ["Sword & Shield"] = {
-        ["Heavy"] = {
-            Name = "Hallowed Name",
+    ["Arme d'Hast"] = {
+        ["Attaque Lourde"] = {
+            Name = "La Voie",
             {
-                Shape = "Heavy",
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 600,
+                Procs = {"Renversement"}
+            },
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 600,
+                Procs = {"Renversement"}
+            }
+        },
+        ["Glissade"] = {
+            Name = "Cyclone Tranchant",
+            Duration = 0.78,
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 200,
+                Procs = {"Impact"}
+            }
+        },
+        ["Dans les Airs"] = {
+            Name = "Veuve Noire",
+            {Type = "Spin", Hits = 1, Dmg = 300},
+            {Type = "Spin", Hits = 1, Dmg = 300},
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
+        },
+        ["Sur un Mur"] = {Name = "Planche Guidée", {Hits = 1, Dmg = 166}},
+        ["Coup de Grâce"] = {
+            Name = "Dernier Mot",
+            {Hits = 1, Dmg = 1200, Procs = {"Tranchant"}}
+        }
+    },
+
+    ["Rapière"] = {
+        ["Attaque Lourde"] = {
+            Name = "Riposte Voilée",
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 450,
+                Procs = {{"Impact", "Tranchant"}}
+            },
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 450,
+                Procs = {{"Impact", "Tranchant"}}
+            }
+        },
+        ["Glissade"] = {
+            Name = "Coupe Spirale",
+            Duration = 0.64,
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 100,
+                Procs = {"Impact"}
+            }
+        },
+        ["Dans les Airs"] = {
+            Name = "Ciel de Mort",
+            {Hits = 1, Dmg = 200, Procs = {"Impact"}},
+            {Hits = 1, Dmg = 200, Procs = {"Impact"}},
+            {Hits = 1, Dmg = 200, Procs = {"Impact"}}
+        },
+        ["Sur un Mur"] = {
+            Name = "Acier Léger",
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
+        },
+        ["Coup de Grâce"] = {
+            Name = "Marque de la Mort",
+            {Hits = 1, Dmg = 1000, Procs = {"Tranchant"}}
+        }
+    },
+
+    ["Faux"] = {
+        ["Attaque Lourde"] = {
+            Name = "Espoir Évanoui",
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 600,
+                Procs = {{"Tranchant", "Renversement"}}
+            },
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 600,
+                Procs = {{"Tranchant", "Renversement"}}
+            }
+        },
+        ["Glissade"] = {
+            Name = "Vague de l'Enfer",
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 200,
+                Procs = {"Impact"}
+            }
+        },
+        ["Dans les Airs"] = {
+            Name = "Burin de la Montagne",
+            {Hits = 1, Dmg = 200, Procs = {"Impact"}},
+            {Hits = 1, Dmg = 200, Procs = {"Impact"}}
+        },
+        ["Sur un Mur"] = {Name = "Foyer Écorchant", {Hits = 1, Dmg = 200}},
+        ["Coup de Grâce"] = {
+            Name = "Dernier Mot",
+            {Hits = 1, Dmg = 1200, Procs = {"Tranchant"}}
+        }
+    },
+
+    ["Mains et Pieds"] = {
+        ["Attaque Lourde"] = {
+            Name = "Renaître des Cendres",
+            {
+                Shape = "Attaque Lourde",
+                Type = "Frappe au Sol",
+                Hits = 1,
+                Dmg = 500,
+                Procs = {"Suspendu"}
+            },
+            {
+                Shape = "Attaque Lourde",
+                Hits = {4, 1},
+                Dmg = {100, 100},
+                Procs = {"", "Suspendu"}
+            }
+        },
+        ["Glissade"] = {
+            Name = "Rafale Roulante",
+            Duration = 0.84,
+            {Hits = 2, Dmg = 200, Procs = {"Étourdi"}}
+        },
+        ["Dans les Airs"] = {
+            Name = "Un Point",
+            {Hits = 1, Dmg = 200},
+            {Hits = 2, Dmg = 200},
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
+        },
+        ["Sur un Mur"] = {Name = "Frappe Transperçante", {Hits = 1, Dmg = 300}},
+        ["Coup de Grâce"] = {
+            Name = "Tambours Rugissants",
+            {Hits = 6, Dmg = 500}
+        }
+    },
+
+    ["Bâton"] = {
+        ["Attaque Lourde"] = {
+            Name = "La Voie",
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 500,
+                Procs = {"Renversement"}
+            },
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 500,
+                Procs = {"Renversement"}
+            }
+        },
+        ["Glissade"] = {
+            Name = "Atteinte Dévastatrice",
+            Duration = 0.68,
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 100,
+                Procs = {"Suspendu"}
+            }
+        },
+        ["Dans les Airs"] = {
+            Name = "Veuve Noire",
+            {Hits = 1, Dmg = 300},
+            {Hits = 1, Dmg = 300},
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
+        },
+        ["Sur un Mur"] = {Name = "Planche Guidée", {Hits = 1, Dmg = 166}},
+        ["Coup de Grâce"] = {
+            Name = "Large Déploiement",
+            {Hits = 1, Dmg = 1000}
+        }
+    },
+
+    ["Épée"] = {
+        ["Attaque Lourde"] = {
+            Name = "Coupe Parfaite",
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 500,
+                Procs = {"Suspendu"}
+            },
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 500,
+                Procs = {"Renversement"}
+            }
+        },
+        ["Glissade"] = {
+            Name = "Coupe Spirale",
+            Duration = 0.69,
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 100,
+                Procs = {"Impact"}
+            }
+        },
+        ["Dans les Airs"] = {
+            Name = "Acier Léger",
+            {Hits = 1, Dmg = 200},
+            {Hits = 1, Dmg = 200},
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
+        },
+        ["Sur un Mur"] = {
+            Name = "Acier Léger",
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
+        },
+        ["Coup de Grâce"] = {
+            Name = "Marque de la Mort",
+            {Hits = 1, Dmg = 1000, Procs = {"Tranchant"}}
+        }
+    },
+
+    ["Épée et Bouclier"] = {
+        ["Attaque Lourde"] = {
+            Name = "Nom Sacré",
+            {
+                Shape = "Attaque Lourde",
                 Type = "Spin",
                 Hits = 1,
                 Dmg = 500,
-                Procs = {"Knockdown"}
+                Procs = {"Renversement"}
             },
-            {Shape = "Heavy", Hits = 1, Dmg = 500, Procs = {"Knockdown"}}
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 500,
+                Procs = {"Renversement"}
+            }
         },
-        ["Slide"] = {
+        ["Glissade"] = {
             Name = "Destructive Symphony",
-            {Type = "Spin", Hits = 1, Dmg = 100, Procs = {"Impact"}}
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 100,
+                Procs = {"Impact"}
+            }
         },
-        ["Aerial"] = {
-            Name = "Fist of Iron",
+        ["Dans les Airs"] = {
+            Name = "Poing de Fer",
             {Hits = 1, Dmg = 200, Procs = {"Impact"}},
             {Hits = 1, Dmg = 200, Procs = {"Impact"}},
             {Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
-        ["Wall"] = {
-            Name = "Dying Angel",
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+        ["Sur un Mur"] = {
+            Name = "Ange Mourant",
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Finisher"] = {
-            Name = "Last Stand",
-            {Hits = 1, Dmg = 800, Procs = {"Slash"}}
+        ["Coup de Grâce"] = {
+            Name = "Dernier Combat",
+            {Hits = 1, Dmg = 800, Procs = {"Tranchant"}}
         }
     },
 
     ["Tonfa"] = {
-        ["Heavy"] = {
-            Name = "Discord Sewn",
+        ["Attaque Lourde"] = {
+            Name = "Cousure en Discorde",
             {
-                Shape = "Heavy",
+                Shape = "Attaque Lourde",
                 Hits = 2,
                 Dmg = 250,
-                Procs = {{"Slash", "Knockdown"}}
+                Procs = {{"Tranchant", "Renversement"}}
             },
             {
-                Shape = "Heavy",
+                Shape = "Attaque Lourde",
                 Hits = 2,
                 Dmg = 250,
-                Procs = {{"Slash", "Knockdown"}}
+                Procs = {{"Tranchant", "Renversement"}}
             }
         },
-        ["Slide"] = {
-            Name = "Feuding Blood",
+        ["Glissade"] = {
+            Name = "Conflit de Sang",
             Duration = 0.74,
             {Type = "Spin", Hits = 2, Dmg = 200}
         },
-        ["Aerial"] = {
-            Name = "Ascendant Bane",
+        ["Dans les Airs"] = {
+            Name = "Fléau Prépondérant",
             {Hits = 2, Dmg = 200, Procs = {"Impact"}},
             {Hits = 3, Dmg = 200, Procs = {"Impact"}},
             {Hits = 5, Dmg = 200, Procs = {"Impact"}}
         },
-        ["Wall"] = {
-            Name = "Opposing Force",
-            {Hits = 2, Dmg = 200, Procs = {"Knockdown"}}
+        ["Sur un Mur"] = {
+            Name = "Force Opposante",
+            {Hits = 2, Dmg = 200, Procs = {"Renversement"}}
         },
-        ["Finisher"] = {Name = "Cold Vendetta", {Hits = 1, Dmg = 1000}}
+        ["Coup de Grâce"] = {Name = "Froide Vendetta", {Hits = 1, Dmg = 1000}}
     },
 
-    ["Two-Handed Nikana"] = {
-        ["Heavy"] = {
-            Name = "Lover's Farewell",
+    ["Nikana à Deux Mains"] = {
+        ["Attaque Lourde"] = {
+            Name = "Adieu du Coeur",
             {
-                Shape = "Heavy",
+                Shape = "Attaque Lourde",
                 Hits = 1,
                 Dmg = 600,
-                Procs = {{"Slash", "Lifted"}}
+                Procs = {{"Tranchant", "Suspendu"}}
             },
             {
-                Shape = "Heavy",
+                Shape = "Attaque Lourde",
                 Type = "Spin",
                 Hits = {1, 1},
                 Dmg = {300, 300},
-                Procs = {{"Impact", "Slash"}, {"Slash", "Knockdown"}}
+                Procs = {
+                    {"Impact", "Tranchant"}, {"Tranchant", "Renversement"}
+                }
             }
         },
-        ["Slide"] = {
-            Name = "Deceitful Serpent",
-            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
+        ["Glissade"] = {
+            Name = "Serpent Sournois",
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 200,
+                Procs = {"Impact"}
+            }
         },
-        ["Aerial"] = {
-            Name = "Cunning Monkey",
+        ["Dans les Airs"] = {
+            Name = "Singe Malin",
             {Hits = 1, Dmg = 200, Procs = {"Impact"}},
             {Hits = 1, Dmg = 200, Procs = {"Impact"}},
             {Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
-        ["Wall"] = {
-            Name = "Strident Gazelle",
+        ["Sur un Mur"] = {
+            Name = "Gazelle Éclatante",
             {Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
-        ["Finisher"] = {
-            Name = "Terrapin's Rebuke",
-            {Hits = 1, Dmg = 1200, Procs = {"Slash"}}
+        ["Coup de Grâce"] = {
+            Name = "Riposte de la Tortue",
+            {Hits = 1, Dmg = 1200, Procs = {"Tranchant"}}
         }
     },
 
-    ["Warfan"] = {
-        ["Heavy"] = {
-            Name = "Perfect Cut",
-            {Shape = "Heavy", Hits = 2, Dmg = 250, Procs = {"Slash"}},
-            {Shape = "Heavy", Hits = 1, Dmg = 500, Procs = {"Slash"}}
+    ["Éventail de Guerre"] = {
+        ["Attaque Lourde"] = {
+            Name = "Coupe Parfaite",
+            {
+                Shape = "Attaque Lourde",
+                Hits = 2,
+                Dmg = 250,
+                Procs = {"Tranchant"}
+            },
+            {
+                Shape = "Attaque Lourde",
+                Hits = 1,
+                Dmg = 500,
+                Procs = {"Tranchant"}
+            }
         },
-        ["Slide"] = {
-            Name = "Spiral Cut",
-            {Type = "Spin", Hits = 1, Dmg = 100, Procs = {"Impact"}}
+        ["Glissade"] = {
+            Name = "Coupe Spirale",
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 100,
+                Procs = {"Impact"}
+            }
         },
-        ["Aerial"] = {
-            Name = "Sky Doom",
+        ["Dans les Airs"] = {
+            Name = "Ciel de Mort",
             {Hits = 2, Dmg = 200, Procs = {"Impact"}},
             {Hits = 3, Dmg = 200, Procs = {"Impact"}},
             {Hits = 6, Dmg = 200, Procs = {"Impact"}}
         },
-        ["Wall"] = {
-            Name = "Weightless Steel",
-            {Hits = 1, Dmg = 200, Procs = {"Knockdown"}}
+        ["Sur un Mur"] = {
+            Name = "Acier Léger",
+            {Hits = 1, Dmg = 200, Procs = {"Renversement"}}
         },
-        ["Finisher"] = {
-            Name = "Death's Mark",
-            {Hits = 1, Dmg = 1000, Procs = {"Slash"}}
+        ["Coup de Grâce"] = {
+            Name = "Marque de la Mort",
+            {Hits = 1, Dmg = 1000, Procs = {"Tranchant"}}
         }
     },
 
-    ["Whip"] = {
-        ["Heavy"] = {
-            Name = "Rolling Thunder",
+    ["Fouet"] = {
+        ["Attaque Lourde"] = {
+            Name = "Roulement du Tonnerre",
             {
-                Shape = "Heavy",
+                Shape = "Attaque Lourde",
                 Hits = 1,
                 Dmg = 450,
-                Procs = {{"Slash", "Knockdown"}}
+                Procs = {{"Tranchant", "Renversement"}}
             },
             {
-                Shape = "Heavy",
+                Shape = "Attaque Lourde",
                 Hits = 1,
                 Dmg = 450,
-                Procs = {{"Slash", "Knockdown"}}
+                Procs = {{"Tranchant", "Renversement"}}
             }
         },
-        ["Slide"] = {
-            Name = "Spiral Cut",
+        ["Glissade"] = {
+            Name = "Coupe Spirale",
             Duration = 0.64,
-            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
+            {
+                Type = "Spin",
+                Hits = 1,
+                Dmg = 200,
+                Procs = {"Impact"}
+            }
         },
-        ["Aerial"] = {
-            Name = "Mountain's Chisel",
+        ["Dans les Airs"] = {
+            Name = "Burin de la Montagne",
             {Hits = 1, Dmg = 200, Procs = {"Impact"}},
             {Hits = 1, Dmg = 200, Procs = {"Impact"}},
-            {Hits = 1, Dmg = 300, Procs = {{"Impact", "Slash"}}}
+            {Hits = 1, Dmg = 300, Procs = {{"Impact", "Tranchant"}}}
         },
-        ["Wall"] = {
-            Name = "Weightless Steel",
-            {Hits = 1, Dmg = 300, Procs = {"Knockdown"}}
+        ["Sur un Mur"] = {
+            Name = "Acier Léger",
+            {Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         },
-        ["Finisher"] = {Name = "Resounding Fear", {Hits = 1, Dmg = 1000}}
+        ["Coup de Grâce"] = {Name = "Resounding Fear", {Hits = 1, Dmg = 1000}}
     },
 
     -- Legend Data --

@@ -2257,7 +2257,7 @@ local IconData = {
                 link = "Melee#Heavy Attacks",
                 title = "Charge"
             },
-            ["HEAVY"] = {
+            ["ATTAQUE LOURDE"] = {
                 icon = "BlackChargex64.png",
                 link = "Melee#Heavy Attacks",
                 title = "Heavy Attack"
@@ -2279,7 +2279,7 @@ local IconData = {
                 title = "Right"
             }
         },
-        ["SLAM"] = {
+        ["FRAPPE AU SOL"] = {
             ["DEFAULT"] = {
                 icon = "RedBasex64.png",
                 link = "Melee#Normal Attack",
