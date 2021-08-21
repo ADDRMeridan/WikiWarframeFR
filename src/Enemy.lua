@@ -503,6 +503,7 @@ function p.buildCodexPlanet(frame)
     local ret = {}
 
     if (planetName ~= nil) then
+        table.insert(ret, frame:preprocess('{{clr}}'))
         table.insert(ret, DIV_CODEXCONTAINER)
         table.insert(ret, _buildCodexPlanet(planetName))
         table.insert(ret, '</div>')

@@ -5,10 +5,12 @@ local Data = {
         ["Corpus"] = {Name = "Laboratoire Énergie", Faction = "Corpus"},
         ["Tenno"] = {Name = "Laboratoire Tenno", Faction = "Tenno"},
         ["Orokin"] = {Name = "Laboratoire Orokin", Faction = "Orokin"},
+        ["Squat des Orphelins"] = {Name = "Squat des Orphelins", Faction = "Orphelins des Conduits"},
         ["Railjack"] = {Name = "Cale Sèche", Faction = "Tenno"}
     },
     ["Recherche"] = {
-        ------------------------------Bio Lab------------------------------
+    	
+        ------------------------------ Laboratoire de Biologie ------------------------------
         {
             Name = 'Acrid',
             Image = 'Acrid2.png',
@@ -329,7 +331,9 @@ local Data = {
                 {Name = 'Neurodes', Count = 20}
             },
             Credits = 5000
-        }, ------------------------------Chem Lab------------------------------
+        }, 
+        
+        ------------------------------ Laboratoire de Chimie ------------------------------
         {
             Name = 'Ack & Brunt',
             Image = 'RegorAxeShield.png',
@@ -792,7 +796,7 @@ local Data = {
             Lab = 'Corpus',
             Time = 72,
             Affinity = 2000,
-            Prereq = nil,
+            None,
             Resources = {
                 {Name = 'Échantillon de Fieldron', Count = 5},
                 {Name = 'Rubedo', Count = 100},
@@ -1065,7 +1069,7 @@ local Data = {
             Credits = 10000
         },
 
-        ------------------------------Tenno Lab------------------------------
+        ------------------------------ Laboratoire Tenno ------------------------------
         {
             Name = 'Adrenal Stim',
             Image = 'AdrenalStim.png',
@@ -2058,7 +2062,95 @@ local Data = {
                 {Name = "Récupération", Count = 5500}
             },
             Credits = 10000
-        }
+        },
+        
+        
+        ------------------------------ Squat des Orphelins ------------------------------
+		{
+            Name = 'Neuroptiques Yareli',
+            Image = 'Helmet.png',
+            Lab = 'Squat des Orphelins',
+            Time = 72,
+            Affinity = 1500,
+            Prereq = 'Aucun',
+            Resources = {
+                {Name = "Injecteur de Détonite", Count = 1}, 
+                {Name = "Neurodes", Count = 1},
+                {Name = "Rubedo", Count = 500},
+                {Name = "Plaque d'Alliage", Count = 1000}
+            },
+            Credits = 10000
+        }, {
+            Name = 'Châssis Yareli',
+            Image = 'Chassis.png',
+            Lab = 'Squat des Orphelins',
+            Time = 72,
+            Affinity = 1500,
+            Prereq = 'Aucun',
+            Resources = {
+                {Name = "Masse Mutagène", Count = 1}, 
+                {Name = "Morphics", Count = 1},
+                {Name = "Pack Polymère", Count = 500},
+                {Name = "Récupération", Count = 1000}
+            },
+            Credits = 10000
+        }, {
+            Name = 'Systèmes Yareli',
+            Image = 'Systems.png',
+            Lab = 'Squat des Orphelins',
+            Time = 72,
+            Affinity = 1500,
+            Prereq = 'Aucun',
+            Resources = {
+                {Name = "Fieldron", Count = 1}, 
+                {Name = "Gallium", Count = 1},
+                {Name = "Circuits", Count = 500},
+                {Name = "Nano Spores", Count = 1000}
+            },
+            Credits = 10000
+        },
+        
+        ------------------------------ Cale Sèche ------------------------------
+		{
+            Name = 'Cryophon Mk I',
+            Image = 'Cryophon.png',
+            Lab = 'Railjack',
+            Time = 72,
+            Affinity = 0,
+            Prereq = 'Aucun',
+            Resources = {
+                {Name = 'Morphics', Count = 1}, {Name = 'Circuits', Count = 2159},
+                {Name = 'Nano Spores', Count = 4750},
+                {Name = "Récupération", Count = 2894}
+            },
+            Credits = 10000
+        }, {
+            Name = 'Cryophon Mk II',
+            Image = 'Cryophon.png',
+            Lab = 'Railjack',
+            Time = 72,
+            Affinity = 0,
+            Prereq = 'Cryophon Mk I',
+            Resources = {
+                {Name = 'Gallium', Count = 1}, {Name = 'Rubedo', Count = 2622},
+                {Name = 'Plaques d\'Alliage', Count = 6510},
+                {Name = "Nano Spores", Count = 5500}
+            },
+            Credits = 10000
+        }, {
+            Name = 'Cryophon Mk III',
+            Image = 'Cryophon.png',
+            Lab = 'Railjack',
+            Time = 72,
+            Affinity = 0,
+            Prereq = 'Cryophon Mk II',
+            Resources = {
+                {Name = 'Module de Contrôle', Count = 1}, {Name = 'Pack Polymère', Count = 2846},
+                {Name = 'Ferrite', Count = 8138},
+                {Name = "Récupération", Count = 5157}
+            },
+            Credits = 10000
+        },
     }
 }
 

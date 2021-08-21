@@ -1,3 +1,17 @@
+-- '''Mods''' automatise la construction des tableaux, listes et gallerie touchant aux mods
+--
+--  @module Mods
+--  @alias  p
+--  @author [[User:ADDRMeridan]]
+--  @image  Icon_Mods.png
+--  @require    [[Module:Mods/data]]
+--  @require    [[Module:Shared]]
+--  @require    [[Module:Icon]]
+--  @require    [[Module:Version]]
+--  @require    [[Module:Tooltip]]
+--  @require    [[Module:Warframes]]
+--  @require    [[Module:Ability]]
+--  <nowiki>
 local p = {}
 
 local ModData = mw.loadData('Module:Mods/data')
@@ -98,7 +112,7 @@ function p._getValue(ModName, ValName)
             elseif (UpName == "STANCE") then
                 ret = Mod.Stance
             elseif (UpName == "TRADETAX") then
-                if (Mod.Rarity ~= nil) then
+                if (Mod.Rarity ~= nil and (Mod.Tradable == nil or Mod.Tradable)) then
                     local credIcon = Icon._Item("Crédits")
                     local rarityTab = {
                         ["Commun"] = '2,000 ' .. credIcon,
@@ -109,6 +123,8 @@ function p._getValue(ModName, ValName)
                         ["Amalgame"] = 'Non Échangeable'
                     }
                     ret = rarityTab[Mod.Rarity]
+                else
+                	ret = nil
                 end
             elseif (UpName == "TRANSMUTABLE") then
                 if (Mod.Transmutable) then
@@ -550,6 +566,27 @@ function p.getStance(StanceName)
         if (Stance.Name == StanceName) then return Stance end
     end
     return nil
+end
+
+-- Counts the number of Stances stored in Module:Mods/data
+-- @function    getStanceCount
+-- @return      {number}
+function p.getStanceCount() return Shared.tableCount(ModData["Postures"]) end
+
+-- Counts the number of different weapon types in the Stances stored in Module:Mods/data
+-- @function    getStanceWpTypeCount
+-- @return      {number}
+function p.getStanceWpTypeCount()
+
+    local wpTypesArray = {}
+    for _, stcData in ipairs(ModData["Postures"]) do
+        local wpType = stcData.Class
+        if (not Shared.contains(wpTypesArray, wpType)) then
+            table.insert(wpTypesArray, wpType)
+        end
+    end
+
+    return #wpTypesArray
 end
 
 function p.getStanceValue(frame)

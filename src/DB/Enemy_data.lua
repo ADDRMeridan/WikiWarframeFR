@@ -6829,7 +6829,7 @@ local EnemyData = {
         Faction = "Infesté",
         Family = "Rampant Électrique",
         HealthTypes = {["Chair Infesté"] = 50},
-        Image = "Rampant_Électrique.png",
+        Image = "Rampant Électrique.png",
         Icon = nil,
         Introduced = "10.5",
         Link = nil,
@@ -8166,7 +8166,7 @@ local EnemyData = {
     -- Y
     -- Z
     ["Zeplen"] = {
-        Affinity = 2000,
+        Affinity = 2285,
         BaseLevel = 1,
         Capacities = nil,
         Faction = "Grineer",

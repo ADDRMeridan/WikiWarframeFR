@@ -10,7 +10,9 @@ local WeaponData = {
         "Grattler (Atmosphère)", "Imperator (Atmosphère)",
         "Imperator Vandal (Atmosphère)", "Ayanga Kuva (Atmosphère)",
         "Larkspur (Atmosphère)", "Phaedra (Atmosphère)",
-        "Velocitus (Atmosphère)", "Désarmé"
+        "Velocitus (Atmosphère)", "Désarmé",
+        "Apoc", "Carcinnox", "Cryophon", "Glazio", "Laith", "Photor", "Pulsar", "Talyn", "Canon Tunguska", "Vort",
+		"Galvarc", "Milati", "Missile à Tête Chercheuse Tycho"
     },
     ["Weapons"] = {
         ["Ack & Brunt"] = {
@@ -22,24 +24,18 @@ local WeaponData = {
                 Rush = 35,
                 Time = 24,
                 Parts = {
-                    {
-                        Name = "Injecteur de Détonite",
-                        Type = "Ressource",
-                        Count = 5
-                    },
+                    {Name = "Injecteur de Détonite",Type = "Ressource",Count = 5},
                     {Name = "Récupération", Type = "Ressource", Count = 7500},
                     {Name = "Cryotique", Type = "Ressource", Count = 3300},
                     {Name = "Forma", Type = "Objet", Count = 1}
                 }
             },
             BlockAngle = 70,
-            -- BlockResist = 0.85,cori
             Class = "Épée et Bouclier",
             Conclave = true,
             Disposition = 0.9,
             Image = "AcketBrunt.png",
-            Introduced = "[[Update 17#Update 17.0|Update 17.0]]",
-            -- JumpAttack = 50,
+            Introduced = "17.0",
             Mastery = 3,
             NormalAttack = {
                 Damage = {
@@ -79,8 +75,59 @@ local WeaponData = {
             Users = {"[[Tyl Regor]]", "[[Bourreau Gorth]]"},
             WallAttack = 200
         },
+        
+    	["Ambassadeur"] = {
+			Accuracy = 111.1,
+			Class = "Fusil",
+			Conclave = true,
+			Disposition = 0.5,
+			ExilusPolarity = "Bar",
+			Introduced = "30.5",
+			Magazine = 96,
+			Mastery = 10,
+			MaxAmmo = 960,
+			Name = "Ambassadeur",
+			Cost = {
+                Credits = 20000,
+                BPCost = nil,
+                MarketCost = 225,
+                Rush = 35,
+                Time = 24,
+                Parts = {
+                    {Name = "Canon",Type = "Objet",Count = 1},
+                    {Name = "Crosse", Type = "Objet", Count = 1},
+                    {Name = "Culasse", Type = "Objet", Count = 1},
+                }
+            },
+			Image = "Ambassadeur.png",
+			NormalAttack = {
+				AttackName = "Auto",
+				CritChance = 0.14,
+				CritMultiplier = 2.8,
+				Damage = {["Électrique"] = 24},
+				FireRate = 13.33,
+				ShotType = "Hit-Scan",
+				StatusChance = 0.26 
+			},
+			Polarities = {},
+			Reload = 2.6,
+			Attack2 = {
+				Accuracy = 100,
+				AttackName = "Charge",
+				CritChance = 0.16,
+				CritMultiplier = 2.8,
+				Damage = {["Électrique"] = 600},
+				FireRate = 1,
+				ShotType = "Hit-Scan",
+				StatusChance = 0.32,
+				Traits = {"Corpus"},
+				Trigger = "Charge" 
+			},
+			Trigger = "Auto / Charge",
+			Type = "Principale" 
+		},
+        
         ["Amphis"] = {
-            -- BlockResist = 0.6,
             Class = "Bâton",
             Conclave = true,
             Cost = {
@@ -98,8 +145,7 @@ local WeaponData = {
             },
             Disposition = 1.5,
             Image = "Amphis.png",
-            Introduced = "[[Closed Beta Updates#Update 6.5|Update 6.5]]",
-            -- JumpAttack = 40,
+            Introduced = "6.5",
             JumpElement = "Électrique",
             JumpRadius = 5,
             Mastery = 5,
@@ -159,13 +205,11 @@ local WeaponData = {
                     {Name = "Morphics", Type = "Ressource", Count = 4}
                 }
             },
-            -- BlockResist = 0.85,
             Class = "Faux",
             Conclave = true,
             Disposition = 1.46,
             Image = "Anku.png",
-            Introduced = "[[Update 16#Update 16.7|Update 16.7]]",
-            -- JumpAttack = 140,
+            Introduced = "16.7",
             Mastery = 3,
             Name = "Anku",
             NormalAttack = {
@@ -226,10 +270,9 @@ local WeaponData = {
                 Magazine = 100
             },
 
-            Introduced = "[[Update 22]]"
+            Introduced = "22.0"
         },
         ["Ankyros"] = {
-            -- BlockResist = 0.85,
             Class = "Poings",
             Conclave = true,
             Cost = {
@@ -248,8 +291,7 @@ local WeaponData = {
             Disposition = 1.45,
             Family = "Ankyros",
             Image = "Ankyros.png",
-            Introduced = "[[Update 7#Update 7.8|Update 7.8]]",
-            -- JumpAttack = 60,
+            Introduced = "7.8",
             Mastery = 2,
             MeleeRange = 1.25,
             Name = "Ankyros",
@@ -301,14 +343,12 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
                 }
             },
-            -- BlockResist = 0.85,
             Class = "Poings",
             Conclave = true,
             Disposition = 1.45,
             Family = "Ankyros",
             Image = "250px-DEPrimeAnkyros.png",
-            Introduced = "[[Update 12#Update 12.4|Update 12.4]]",
-            -- JumpAttack = 76,
+            Introduced = "12.4",
             Mastery = 8,
             MeleeRange = 1.25,
             Name = "Ankyros Prime",
@@ -351,7 +391,6 @@ local WeaponData = {
             WallAttack = 114
         },
         ["Arca Titron"] = {
-            -- BlockResist = 0.85,
             Class = "Marteau",
             Conclave = true,
             Cost = {
@@ -367,10 +406,9 @@ local WeaponData = {
                     {Name = "Ferrite", Type = "Ressource", Count = 1200}
                 }
             },
-            Disposition = 1.0,
+            Disposition = 1.3,
             Image = "Arca_Titron.png",
-            Introduced = "[[Update 21#Update 21.7|Update 21.7]]",
-            -- JumpAttack = 360,
+            Introduced = "21.7",
             Mastery = 10,
             Name = "Arca Titron",
             NormalAttack = {
@@ -413,30 +451,25 @@ local WeaponData = {
             Class = "Éventail de Guerre",
             Conclave = true,
             Cost = {
-                Credits = 5000,
+                Credits = 20000,
                 Rush = 35,
                 Time = 12,
                 Parts = {
-                    {
-                        Name = "Alliage d'Auroxium",
-                        Type = "Ressource",
-                        Count = 1200
-                    },
-                    {Name = "Alliage Hespazym", Type = "Ressource", Count = 100},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {Name = "Kuva", Type = "Ressource", Count = 1200}
+                    {Name = "Garde", Type = "Objet", Count = 2},
+                    {Name = "Rivet", Type = "Objet", Count = 1},
+                    {Name = "Xénorhast Trapèze", Type = "Ressource", Count = 1},
+                    {Name = "Cabochon Embolos", Type = "Ressource", Count = 1}
                 }
             },
             Name = "Arum Spinosa",
-            Family = "Arum Spinosa",
             Image = "ArumSpinosa.png",
-            Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            Introduced = "29.5",
             Traits = {"Infesté"},
             Mastery = 11,
             Type = "Mêlée",
             Polarities = {"Bar", "V"},
             StancePolarity = "Bar",
-            Disposition = 0.5,
+            Disposition = 1.05,
             NormalAttack = {
                 Damage = {
                     ["Impact"] = 35.6,
@@ -487,10 +520,9 @@ local WeaponData = {
                     {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 1.05,
             Image = "Atterax.png",
-            Introduced = "[[Update 14#Update 14.7|Update 14.7]]",
-            -- JumpAttack = 90,
+            Introduced = "14.7",
             Mastery = 5,
             Name = "Atterax",
             NormalAttack = {
@@ -535,7 +567,7 @@ local WeaponData = {
             Accuracy = 25,
             Disposition = 1,
             Image = "Ayanga Kuva.png",
-            Introduced = "[[Update 26#Update 26|Update 26]]",
+            Introduced = "26.0",
             Magazine = 99,
             Mastery = 13,
             Name = "Ayanga Kuva",
@@ -557,7 +589,7 @@ local WeaponData = {
             Accuracy = 25,
             Disposition = 1,
             Image = "Ayanga Kuva.png",
-            Introduced = "[[Update 26#Update 26|Update 26]]",
+            Introduced = "26.0",
             Magazine = 99,
             Mastery = 13,
             Name = "Kuva Ayanga",
@@ -574,8 +606,159 @@ local WeaponData = {
             Trigger = "Auto",
             Type = "Arch-Fusil (Atmosphère)"
         },
+        ["Grattler Kuva"] = {
+		Class = 'Arch-Fusil',
+		Accuracy = 16.7,
+		Attack5 = {
+			AttackName = "Explosion",
+			Damage = {["Explosif"] = 205},
+			Falloff = {EndRange = 9, Reduction = 0.7, StartRange = 0},
+			Radius = 9 
+		},
+		Disposition = 0.5,
+		Image = "Grattler Kuva.png",
+		Introduced = "30.5",
+		Magazine = 60,
+		Mastery = 15,
+		Name = "Grattler Kuva",
+		NormalAttack = {
+			AttackName = "Impact de Projectile",
+			CritChance = 0.27 ,
+			CritMultiplier = 2.1,
+			Damage = {["Impact"] = 10, ["Perforation"] = 80, ["Tranchant"] = 10},
+			Falloff = {EndRange = 2000, StartRange = 1000},
+			FireRate = 5.55,
+			ShotSpeed = "?",
+			ShotType = "Projectile",
+			StatusChance = 0.27 
+		},
+		Polarities = {"V","V","V"},
+		Reload = 10,
+		ReloadDelay = 1,
+		ReloadStyle = "Régénération",
+		Traits = {"Grineer"},
+		Family = "Grattler",
+		Trigger = "Auto",
+		Type = "Arch-Fusil" 
+	},
+	["Grattler Kuva (Atmosphère)"] = {
+		Accuracy = 25,
+		Attack5 = {
+			AttackName = "Explosion",
+			Damage = {["Explosif"] = 155},
+			Falloff = {EndRange = 9, Reduction = 0.7, StartRange = 0},
+			Radius = 9 
+		},
+		Disposition = 0.5,
+		Image = "Grattler Kuva.png",
+		Introduced = "30.5",
+		Link = "Grattler Kuva",
+		Magazine = 60,
+		Mastery = 15,
+		MaxAmmo = 180,
+		Name = "Grattler Kuva (Atmosphère)",
+		NormalAttack = {
+			AttackName = "Impact de Projectile",
+			CritChance = 0.27 ,
+			CritMultiplier = 2.1,
+			Damage = {["Impact"] = 5, ["Perforation"] = 40, ["Tranchant"] = 5},
+			FireRate = 5.55,
+			ShotSpeed = "?",
+			ShotType = "Projectile",
+			StatusChance = 0.27 
+		},
+		Polarities = {"V","V","V"},
+		Reload = 2.5,
+		Traits = {"Grineer"},
+		Trigger = "Auto",
+		Type = "Arch-Fusil (Atmosphère)" 
+	},
+	["Hek Kuva"] = {
+		Accuracy = 9.09,
+		Class = "Fusil à Pompe",
+		Conclave = true,
+		Disposition = 0.5,
+		ExilusPolarity = "Bar",
+		Family = "Hek",
+		Image = "Hek Kuva.png",
+		Introduced = "30.5",
+		Magazine = 4,
+		Mastery = 15,
+		MaxAmmo = 120,
+		Name = "Hek Kuva",
+		NoiseLevel = "Bruyant",
+		NormalAttack = {
+			CritChance = 0.23,
+			CritMultiplier = 2.1,
+			Damage = {["Impact"] = 13.1, ["Perforation"] = 56.5, ["Tranchant"] = 17.4},
+			Falloff = {EndRange = 30, Reduction = 0.8, StartRange = 15},
+			FireRate = 2.17,
+			Multishot = 7,
+			ShotType = "Hit-Scan",
+			StatusChance = 0.13
+		},
+		Reload = 2,
+		Traits = {"Grineer"},
+		Trigger = "Semi-Auto",
+		Type = "Principal",
+	},
+	["Zarr Kuva"] = {
+		Class = "Lanceur",
+		Conclave = false,
+		Disposition = 0.5,
+		ExilusPolarity = "V",
+		Image = "Zarr Kuva.png",
+		Introduced = "30.5",
+		Magazine = 5,
+		Mastery = 15,
+		MaxAmmo = 15,
+		Name = "Zarr Kuva",
+		Polarities = {"V","V","V"},
+		Reload = 4.8,
+		Traits = {"Grineer"},
+		Family = "Zarr",
+		Trigger = "Semi-Auto",
+		Type = "Principal",
+		NormalAttack = {
+			Accuracy = 100,
+			AttackName = "Cannon Mode Projectile",
+			CritChance = 0.25,
+			CritMultiplier = 2.5,
+			Damage = {["Impact"] = 50},
+			FireRate = 2.17,
+			ShotSpeed = "?",
+			ShotType = "Projectile",
+			StatusChance = 0.31 
+		},
+		Attack2 = {
+			AttackName = "Cannon Mode Explosion",
+			CritChance = 0.17,
+			Damage = {["Explosif"] = 673},
+			Falloff = {EndRange = 7, Reduction = 0.7, StartRange = 0},
+			Radius = 7,
+			StatusChance = 0.29 
+		},
+		Attack3 = {
+			AttackName = "Cannon Mode Cluster Bombs",
+			CritChance = 0.17,
+			Damage = {["Explosif"] = 50},
+			Multishot = 6,
+			PelletName = "Bombe",
+			StatusChance = 0.048 
+		},
+		Attack4 = {
+			AttackName = "Barrage Mode",
+			Accuracy = 4.3,
+			CritChance = 0.37,
+			Damage = {["Impact"] = 15, ["Perforation"] = 25, ["Tranchant"] = 10},
+			FireRate = 2.17,
+			Multishot = 10,
+			PunchThrough = 1.6,
+			Falloff = {EndRange = 40, Reduction = 0.98, StartRange = 20},
+			StatusChance = 0.097 
+		}
+	},
         ["Bo"] = {
-            -- BlockResist = 0.6,
             Class = "Bâton",
             Conclave = true,
             Cost = {
@@ -594,8 +777,7 @@ local WeaponData = {
             Disposition = 1.29,
             Family = "Bo",
             Image = "BoStaff.png",
-            Introduced = "[[Closed Beta Updates#Vanilla|Vanilla]]",
-            -- JumpAttack = 100,
+            Introduced = "Vanilla",
             Mastery = 4,
             Name = "Bo",
             NormalAttack = {
@@ -645,14 +827,12 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
                 }
             },
-            -- BlockResist = 0.6,
             Class = "Bâton",
             Conclave = true,
             Disposition = 1.29,
             Family = "Bo",
             Image = "250px-PrimeBo.png",
-            Introduced = "[[Update 13#Update 13.7|Update 13.7]]",
-            -- JumpAttack = 150,
+            Introduced = "13.7",
             Mastery = 10,
             Name = "Bo Prime",
             NormalAttack = {
@@ -692,7 +872,6 @@ local WeaponData = {
             WallAttack = 125
         },
         ["Boltace"] = {
-            -- BlockResist = 0.6,
             Class = "Tonfa",
             Conclave = true,
             Cost = {
@@ -710,8 +889,7 @@ local WeaponData = {
             Disposition = 1.0,
             Family = "Boltace",
             Image = "Boltace.png",
-            Introduced = "[[Update 16#Update 16.5|Update 16.5]]",
-            -- JumpAttack = 170,
+            Introduced = "16.5",
             Mastery = 4,
             Name = "Boltace",
             NormalAttack = {
@@ -776,13 +954,13 @@ local WeaponData = {
             Name = "Bursite",
             Family = "Bursite",
             Image = "Bursite.png",
-            Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            Introduced = "29.5",
             Traits = {"Infesté"},
             Mastery = 11,
             Type = "Mêlée",
             Polarities = {"V", "V"},
             StancePolarity = "D",
-            Disposition = 0.5,
+            Disposition = 1.05,
             NormalAttack = {
                 Damage = {["Impact"] = 193.0, ["Viral"] = 97.0},
                 CritChance = 0.19,
@@ -814,13 +992,11 @@ local WeaponData = {
             MeleeRange = 2.51
         },
         ["Sceptre Brisé"] = {
-            -- BlockResist = 0.6,
             Class = "Bâton",
             Conclave = true,
             Disposition = 1.19,
             Image = "Sceptre_Brisé.png",
-            Introduced = "[[Update 19#Update 19.0|Update 19.0]]",
-            -- JumpAttack = 120,
+            Introduced = "19.0",
             Mastery = 7,
             Name = "Sceptre Brisé",
             NormalAttack = {
@@ -873,13 +1049,11 @@ local WeaponData = {
                     {Name = "Lame", Type = "Objet", Count = 2}
                 }
             },
-            -- BlockResist = 0.6,
             Class = "Épée",
             Conclave = true,
-            Disposition = 0.79,
+            Disposition = 1.15,
             Image = "StalkerTwoSword.png",
-            Introduced = "[[Update 18#Update 18.0|Update 18.0]]",
-            -- JumpAttack = 180,
+            Introduced = "18.0",
             Mastery = 10,
             Name = "War Brisée",
             NormalAttack = {
@@ -921,9 +1095,6 @@ local WeaponData = {
             WallAttack = 360
         },
         ["Cadus"] = {
-            -- BlockResist = 0.6,
-            Class = "Bâton",
-            Conclave = false,
             Cost = {
                 Credits = 20000,
                 BPCost = 20000,
@@ -937,45 +1108,51 @@ local WeaponData = {
                     {Name = "Bo", Type = "Arme", Count = 1}
                 }
             },
+            Class = "Bâton",
+            Conclave = false,
             Disposition = 1.29,
+            Family = "Cadus",
             Image = "Cadus.png",
-            -- JumpAttack = 100,
+            Introduced = "30.5",
             Mastery = 0,
             Name = "Cadus",
             NormalAttack = {
-                Damage = {["Électrique"] = 50},
+                Damage = {
+                    ["Impact"] = 70,
+                    ["Électrique"] = 60
+                },
                 CritChance = 0.15,
-                CritMultiplier = 2,
+                CritMultiplier = 2.0,
                 StatusChance = 0.25,
                 FireRate = 1
             },
+            SlideAttack = 170,
             Polarities = {"D"},
-            SlideAttack = 107,
-            Stagger = "Yes",
             StancePolarity = "R",
+            Traits = {"Tenno"},
             Type = "Mêlée",
             MeleeSlam = {
-                Damage = 0,
+                Damage = 510.0,
                 Element = nil,
-                RadialDamage = 0,
+                RadialDamage = 510.0,
                 RadialElement = nil,
-                Radius = 0
+                Radius = 6.0
             },
             MeleeHeavy = {
-                Damage = 0,
+                Damage = 850.0,
                 Element = nil,
-                WindUp = 0,
-                SlamDamage = 0,
+                WindUp = 0.5,
+                SlamDamage = 680.0,
                 SlamElement = nil,
-                SlamRadialDamage = 0,
+                SlamRadialDamage = 680.0,
                 SlamRadialElement = nil,
-                SlamRadius = 0
+                SlamRadius = 7.0
             },
-            BlockAngle = 0,
+            BlockAngle = 60,
             MeleeComboDur = 5.0,
-            FollowThrough = 0,
-            MeleeRange = 0,
-            WallAttack = 83
+            FollowThrough = 0.5,
+            MeleeRange = 2.8,
+            WallAttack = 170
         },
         ["Cassowar"] = {
             Cost = {
@@ -991,13 +1168,11 @@ local WeaponData = {
                     {Name = "Oxium", Type = "Ressource", Count = 150}
                 }
             },
-            -- BlockResist = 0.85,
             Class = "Arme d'Hast",
             Conclave = true,
-            Disposition = 1.0,
+            Disposition = 1.35,
             Image = "Cassowar.png",
-            Introduced = "[[Update 22#Update 22.4|Update 22.4]]",
-            -- JumpAttack = 140,
+            Introduced = "22.4",
             Mastery = 5,
             Name = "Cassowar",
             NormalAttack = {
@@ -1053,13 +1228,11 @@ local WeaponData = {
                     {Name = "Extrait de Nitain", Type = "Ressource", Count = 5}
                 }
             },
-            -- BlockResist = 0.85,
             Class = "Faux",
             Conclave = true,
             Disposition = 1.3,
             Image = "Caustacyst.png",
-            Introduced = "[[Update 19#Update: L'Index Preview|Update: L'Index Preview]]",
-            -- JumpAttack = 150,
+            Introduced = "TIP",
             JumpElement = "Corrosif",
             Mastery = 7,
             Name = "Caustacyst",
@@ -1106,7 +1279,6 @@ local WeaponData = {
             WallElement = "Corrosif"
         },
         ["Dague en Céramique"] = {
-            -- BlockResist = 0.35,
             Class = "Dague",
             Conclave = true,
             Cost = {
@@ -1122,8 +1294,7 @@ local WeaponData = {
             },
             Disposition = 1.43,
             Image = "Dague en Céramique.png",
-            Introduced = "[[Closed Beta Updates#Update 5.0|Update 5.0]]",
-            -- JumpAttack = 70,
+            Introduced = "5.0",
             Mastery = 3,
             MeleeRange = 1.8,
             Name = "Dague en Céramique",
@@ -1162,7 +1333,6 @@ local WeaponData = {
             WallAttack = 105
         },
         ["Cerata"] = {
-            -- BlockResist = 0.35,
             ChargedThrowAttack = {
                 Damage = {
                     ["Impact"] = 42,
@@ -1192,8 +1362,7 @@ local WeaponData = {
             },
             Disposition = 1.36,
             Image = "Cerata.png",
-            Introduced = "[[Update 17#Update 17.9|Update 17.9]]",
-            -- JumpAttack = 88,
+            Introduced = "17.9",
             JumpElement = "Poison",
             Mastery = 7,
             Name = "Cerata",
@@ -1265,7 +1434,7 @@ local WeaponData = {
             ExilusPolarity = "Bar",
             Family = "Chakkhurr",
             Image = "Chakkhurr Kuva.png",
-            Introduced = "[[Update 26#Update 26|Update 26]]",
+            Introduced = "26.0",
             Magazine = 11,
             Mastery = 15,
             MaxAmmo = 55,
@@ -1288,7 +1457,6 @@ local WeaponData = {
             Users = {"[[Liche Kuva]]"}
         },
         ["Cobra & Crane"] = {
-            -- BlockResist = 0.85,
             ChannelCost = 5,
             ChannelMult = 1.5,
             Class = "Épée et Bouclier",
@@ -1297,7 +1465,7 @@ local WeaponData = {
                 Credits = 20000,
                 BPCost = 20000,
                 MarketCost = 150,
-                Rush = 35, -- confirmation needed
+                Rush = 35,
                 Time = 12,
                 Parts = {
                     {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
@@ -1308,8 +1476,7 @@ local WeaponData = {
             },
             Disposition = 1.0,
             Image = "Cobra & Crane.png",
-            Introduced = "[[Update 24#Update 24.2|Update 24.2]]",
-            -- JumpAttack = 100,
+            Introduced = "24.2",
             Mastery = 10,
             Name = "Cobra & Crane",
             NormalAttack = {
@@ -1346,7 +1513,6 @@ local WeaponData = {
             WallAttack = 400
         },
         ["Cronus"] = {
-            -- BlockResist = 0.6,
             Class = "Épée",
             Conclave = true,
             Cost = {
@@ -1361,8 +1527,7 @@ local WeaponData = {
             },
             Disposition = 1.48,
             Image = "Cronus.png",
-            Introduced = "[[Closed Beta Updates#Vanilla|Vanilla]]",
-            -- JumpAttack = 70,
+            Introduced = "Vanilla",
             Mastery = 0,
             Name = "Cronus",
             NormalAttack = {
@@ -1415,14 +1580,12 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
                 }
             },
-            -- BlockResist = 0.6,
             Class = "Épée",
             Conclave = true,
             Disposition = 1.15,
             FinisherDamage = 120,
             Image = "SwordPrime.png",
-            Introduced = "[[Update 10#Update 10.0|Update 10.0]]",
-            -- JumpAttack = 120,
+            Introduced = "10.0",
             Mastery = 10,
             Name = "Dakra Prime",
             NormalAttack = {
@@ -1465,7 +1628,6 @@ local WeaponData = {
             WallAttack = 240
         },
         ["Dague Sombre"] = {
-            -- BlockResist = 0.35,
             Class = "Dague",
             Conclave = true,
             Cost = {
@@ -1482,8 +1644,7 @@ local WeaponData = {
             Disposition = 0.52,
             Family = "Dague Sombre",
             Image = "DagueSombre.png",
-            Introduced = "[[Closed Beta Updates#Update 5.0|Update 5.0]]",
-            -- JumpAttack = 70,
+            Introduced = "5.0",
             JumpElement = "Radiation",
             Mastery = 2,
             MeleeRange = 1.75,
@@ -1560,13 +1721,11 @@ local WeaponData = {
                     {Name = "Masse Mutagène", Type = "Ressource", Count = 10}
                 }
             },
-            -- BlockResist = 0.6,
             Class = "Doubles Épées",
             Conclave = true,
             Disposition = 1.21,
             Image = "DarkSplitSwordDualIcon.png",
-            Introduced = "[[Update 18#Update 18.14|Update 18.14]]",
-            -- JumpAttack = 130,
+            Introduced = "18.14",
             Mastery = 5,
             Name = "Épées Versatiles Sombres",
             NormalAttack = {
@@ -1609,13 +1768,11 @@ local WeaponData = {
             WallAttack = 260
         },
         ["Épées Versatiles Sombres (Lame Lourde)"] = {
-            -- BlockResist = 0.85,
             Class = "Lame Lourde",
             Conclave = true,
             Disposition = 1.21,
             Image = "VersatilesSombres.png",
-            Introduced = "[[Update 18#Update 18.14|Update 18.14]]",
-            -- JumpAttack = 180,
+            Introduced = "18.14",
             Mastery = 5,
             Name = "Épées Versatiles Sombres",
             NormalAttack = {
@@ -1669,13 +1826,11 @@ local WeaponData = {
                     {Name = "Pack Polymère", Type = "Ressource", Count = 75}
                 }
             },
-            -- BlockResist = 0.6,
             Class = "Épée",
             Conclave = true,
             Disposition = 1.48,
             Image = "Épée Sombre.png",
-            Introduced = "[[Closed Beta Updates#Update 5.0|Update 5.0]]",
-            -- JumpAttack = 74,
+            Introduced = "5.0",
             JumpElement = "Radiation",
             JumpRadius = 3,
             Mastery = 8,
@@ -1737,14 +1892,12 @@ local WeaponData = {
                     {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
                 }
             },
-            -- BlockResist = 0.35,
             Class = "Rapière",
             Conclave = true,
             Disposition = 1.14,
             Family = "Destreza",
             Image = "TnoRapier.png",
-            Introduced = "[[Update 18#Update 18.3|Update 18.3]]",
-            -- JumpAttack = 150,
+            Introduced = "18.3",
             Mastery = 7,
             Name = "Destreza",
             NormalAttack = {
@@ -1798,14 +1951,12 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
                 }
             },
-            -- BlockResist = 0.35,
             Class = "Rapière",
             Conclave = true,
             Disposition = 1.14,
             Family = "Destreza",
             Image = "DestrezaPrime.png",
-            Introduced = "[[Update 23#Hotfix 23.0.3|Hotfix 23.0.3]]",
-            -- JumpAttack = 152,
+            Introduced = "23.0.3",
             Mastery = 10,
             Name = "Destreza Prime",
             NormalAttack = {
@@ -1848,13 +1999,11 @@ local WeaponData = {
             WallAttack = 304
         },
         ["Dex Dakra"] = {
-            -- BlockResist = 0.6,
             Class = "Doubles Épées",
             Conclave = true,
             Disposition = 1.15,
             Image = "DexDakra.png",
-            Introduced = "[[Update 16#Hotfix 16.1.2|Hotfix 16.1.2]]",
-            -- JumpAttack = 130,
+            Introduced = "16.1.2",
             Mastery = 6,
             Name = "Dex Dakra",
             NormalAttack = {
@@ -1897,7 +2046,6 @@ local WeaponData = {
             WallAttack = 260
         },
         ["Nikana Dragon"] = {
-            -- BlockResist = 0.85,
             Class = "Nikana",
             Conclave = true,
             Cost = {
@@ -1915,8 +2063,7 @@ local WeaponData = {
             Disposition = 1.35,
             Family = "Nikana",
             Image = "DragonKatana.png",
-            Introduced = "[[Update 13#Update 13.0|Update 13.0]]",
-            -- JumpAttack = 170,
+            Introduced = "13.0",
             Mastery = 8,
             Name = "Nikana Dragon",
             NormalAttack = {
@@ -1959,7 +2106,6 @@ local WeaponData = {
             WallAttack = 182
         },
         ["Doubles Hachoirs"] = {
-            -- BlockResist = 0.85,
             Class = "Doubles Épées",
             Conclave = true,
             Cost = {
@@ -1983,8 +2129,7 @@ local WeaponData = {
             Family = "Doubles Hachoirs",
             FinisherDamage = 55,
             Image = "DoubleHachoirs.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
-            -- JumpAttack = 70,
+            Introduced = "8.0",
             Mastery = 5,
             Name = "Doubles Hachoirs",
             NormalAttack = {
@@ -2031,7 +2176,6 @@ local WeaponData = {
             WallAttack = 140
         },
         ["Doubles Ether"] = {
-            -- BlockResist = 0.6,
             Class = "Doubles Épées",
             Conclave = true,
             Cost = {
@@ -2049,8 +2193,7 @@ local WeaponData = {
             },
             Disposition = 1.45,
             Image = "DoubleEther.png",
-            Introduced = "[[Update 7#Update 7.7.3|Update 7.7.3]]",
-            -- JumpAttack = 80,
+            Introduced = "7.7.3",
             Mastery = 8,
             Name = "Doubles Ether",
             NormalAttack = {
@@ -2093,7 +2236,6 @@ local WeaponData = {
             WallAttack = 160
         },
         ["Doubles Épées de Chaleur"] = {
-            -- BlockResist = 0.6,
             Class = "Doubles Épées",
             Conclave = true,
             Cost = {
@@ -2111,8 +2253,7 @@ local WeaponData = {
             },
             Disposition = 1.44,
             Image = "Doubles Épées de Chaleur.png",
-            Introduced = "[[Closed Beta Updates#Update 6.2|Update 6.2]]",
-            -- JumpAttack = 90,
+            Introduced = "6.2",
             JumpElement = "Feu",
             JumpRadius = 5,
             Mastery = 3,
@@ -2156,7 +2297,6 @@ local WeaponData = {
             WallAttack = 180
         },
         ["Doubles Ichor"] = {
-            -- BlockResist = 0.6,
             Class = "Doubles Épées",
             Conclave = true,
             Cost = {
@@ -2174,8 +2314,7 @@ local WeaponData = {
             Disposition = 1.16,
             FinisherDamage = 55,
             Image = "Ichor_Double.png",
-            Introduced = "[[Update 10#Update 10.0|Update 10.0]]",
-            -- JumpAttack = 70,
+            Introduced = "10.0",
             JumpElement = "Poison",
             Mastery = 6,
             Name = "Doubles Ichor",
@@ -2222,7 +2361,6 @@ local WeaponData = {
             WallElement = "Poison"
         },
         ["Doubles Kamas"] = {
-            -- BlockResist = 0.6,
             Class = "Doubles Épées",
             Conclave = true,
             Cost = {
@@ -2237,11 +2375,10 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 1}
                 }
             },
-            Disposition = 0.81,
+            Disposition = 1.3,
             Family = "Doubles Kamas",
             Image = "DoubleKamas.png",
-            Introduced = "[[Update 11#Update 11.1|Update 11.1]]",
-            -- JumpAttack = 84,
+            Introduced = "11.1",
             Mastery = 1,
             Name = "Doubles Kamas",
             NormalAttack = {
@@ -2292,14 +2429,12 @@ local WeaponData = {
                     {Name = "Poignée", Type = "Partie Prime", Count = 2}
                 }
             },
-            -- BlockResist = 0.6,
             Class = "Doubles Épées",
             Conclave = true,
-            Disposition = 0.81,
+            Disposition = 1.2,
             Family = "Doubles Kamas",
             Image = "DoublesKamasPrime.png",
-            Introduced = "[[Update 17#Update 17.6|Update 17.6]]",
-            -- JumpAttack = 140,
+            Introduced = "17.6",
             Mastery = 8,
             Name = "Doubles Kamas Prime",
             NormalAttack = {
@@ -2355,14 +2490,11 @@ local WeaponData = {
                     {Name = "Tellure", Type = "Ressource", Count = 3}
                 }
             },
-            ----BlockResist = 0.6,
             Class = "Doubles Épées",
-            -- Conclave = true,
             Disposition = 1.48,
             Family = "Doubles Keres",
             Image = "DualKeres.png",
-            Introduced = "[[Update 22#Update 22.18|Update 22.18]]",
-            ----JumpAttack = 140,
+            Introduced = "22.18",
             Mastery = 7,
             Name = "Doubles Keres",
             NormalAttack = {
@@ -2416,13 +2548,11 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 1}
                 }
             },
-            -- BlockResist = 0.6,
             Class = "Doubles Épées",
             Conclave = true,
             Disposition = 1.4,
             Image = "DoubleRaza.png",
-            Introduced = "[[Update 16#Update 16.3|Update 16.3]]",
-            -- JumpAttack = 96,
+            Introduced = "16.3",
             Mastery = 6,
             Name = "Doubles Raza",
             NormalAttack = {
@@ -2465,7 +2595,6 @@ local WeaponData = {
             WallAttack = 192
         },
         ["Doubles Skana"] = {
-            -- BlockResist = 0.6,
             Class = "Doubles Épées",
             Conclave = true,
             Cost = {
@@ -2483,7 +2612,6 @@ local WeaponData = {
             },
             Disposition = 1.48,
             Image = "Double_Skana.png",
-            -- JumpAttack = 64,
             Mastery = 0,
             Name = "Doubles Skana",
             NormalAttack = {
@@ -2526,7 +2654,6 @@ local WeaponData = {
             WallAttack = 128
         },
         ["Doubles Zoren"] = {
-            -- BlockResist = 0.35,
             Class = "Doubles Épées",
             Conclave = true,
             Cost = {
@@ -2544,8 +2671,7 @@ local WeaponData = {
             },
             Disposition = 1.44,
             Image = "DualZoren.png",
-            Introduced = "[[Closed Beta Updates#Update 6.0|Update 6.0]]",
-            -- JumpAttack = 60,
+            Introduced = "6.0",
             Mastery = 2,
             Name = "Doubles Zoren",
             NormalAttack = {
@@ -2588,7 +2714,6 @@ local WeaponData = {
             WallAttack = 120
         },
         ["Endura"] = {
-            -- BlockResist = 0.35,
             Class = "Rapière",
             Conclave = true,
             Cost = {
@@ -2609,8 +2734,7 @@ local WeaponData = {
             },
             Disposition = 1.0,
             Image = "Endura.png",
-            Introduced = "[[Update 20#Update 20.6|Update 20.6]]",
-            -- JumpAttack = 190,
+            Introduced = "20.6",
             Mastery = 7,
             Name = "Endura",
             NormalAttack = {
@@ -2664,13 +2788,11 @@ local WeaponData = {
                     {Name = "Nano Spores", Type = "Ressource", Count = 1200}
                 }
             },
-            -- BlockResist = 0.35,
             Class = "Doubles Dagues",
             Conclave = true,
             Disposition = 1.49,
             Image = "Dagues Ether.png",
-            Introduced = "[[Update 7#Update 7.7.3|Update 7.7.3]]",
-            -- JumpAttack = 90,
+            Introduced = "7.7.3",
             Mastery = 6,
             MeleeRange = 1.75,
             Name = "Dagues Ether",
@@ -2714,7 +2836,6 @@ local WeaponData = {
             WallAttack = 180
         },
         ["Reaper Ether"] = {
-            -- BlockResist = 0.85,
             Class = "Faux",
             Conclave = true,
             Cost = {
@@ -2732,8 +2853,7 @@ local WeaponData = {
             },
             Disposition = 1.45,
             Image = "Reaper Ether.png",
-            Introduced = "[[Update 10#Update 10.0|Update 10.0]]",
-            -- JumpAttack = 130,
+            Introduced = "10.0",
             Mastery = 4,
             Name = "Reaper Ether",
             NormalAttack = {
@@ -2777,7 +2897,6 @@ local WeaponData = {
             WallAttack = 130
         },
         ["Épée Ether"] = {
-            -- BlockResist = 0.6,
             Class = "Épée",
             Conclave = true,
             Cost = {
@@ -2795,8 +2914,7 @@ local WeaponData = {
             },
             Disposition = 1.44,
             Image = "EpeeEther.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
-            -- JumpAttack = 74,
+            Introduced = "8.0",
             Mastery = 7,
             Name = "Épée Ether",
             NormalAttack = {
@@ -2837,7 +2955,6 @@ local WeaponData = {
             WallAttack = 148
         },
         ["Falcor"] = {
-            -- BlockResist = 0.35,
             Conclave = false,
             Cost = {
                 Credits = 20000,
@@ -2870,8 +2987,7 @@ local WeaponData = {
             Class = "Glaive",
             Disposition = 1.0,
             Image = "Falcor.png",
-            Introduced = "[[Update_23#Update_23.10|Update 23.10]]",
-            -- JumpAttack = 78,
+            Introduced = "23.10",
             Mastery = 8,
             Name = "Falcor",
             NormalAttack = {
@@ -2925,7 +3041,6 @@ local WeaponData = {
             WallAttack = 234
         },
         ["Fang"] = {
-            -- BlockResist = 0.35,
             Class = "Doubles Dagues",
             Conclave = true,
             Cost = {
@@ -2944,8 +3059,7 @@ local WeaponData = {
             Disposition = 1.36,
             Family = "Fang",
             Image = "Fang.png",
-            Introduced = "[[Update 7#Update 7.0|Update 7.0]]",
-            -- JumpAttack = 60,
+            Introduced = "7.0",
             Mastery = 0,
             MeleeRange = 1.65,
             Name = "Fang",
@@ -2997,15 +3111,13 @@ local WeaponData = {
                     {Name = "Poignée", Type = "Partie Prime", Count = 2}
                 }
             },
-            -- BlockResist = 0.35,
             Class = "Doubles Dagues",
             Conclave = true,
             Disposition = 1.36,
             Family = "Fang",
             FinisherDamage = 90,
             Image = "Fang Prime.png",
-            Introduced = "[[Update 9#Update 9.0|Update 9.0]]",
-            -- JumpAttack = 72,
+            Introduced = "9.0",
             Mastery = 10,
             MeleeRange = 1.75,
             Name = "Fang Prime",
@@ -3048,7 +3160,6 @@ local WeaponData = {
             WallAttack = 144
         },
         ["Fragor"] = {
-            -- BlockResist = 0.85,
             Class = "Marteau",
             Conclave = true,
             Cost = {
@@ -3068,8 +3179,7 @@ local WeaponData = {
             Family = "Fragor",
             FinisherDamage = 200,
             Image = "Fragor.png",
-            Introduced = "[[Closed Beta Updates#Update 5.4|Update 5.4]]",
-            -- JumpAttack = 230,
+            Introduced = "5.4",
             Mastery = 2,
             Name = "Fragor",
             NormalAttack = {
@@ -3114,7 +3224,6 @@ local WeaponData = {
             WallAttack = 230
         },
         ["Fragor Prime"] = {
-            -- BlockResist = 0.85,
             ChannelCost = 5,
             ChannelMult = 1.75,
             Class = "Marteau",
@@ -3132,8 +3241,7 @@ local WeaponData = {
             Disposition = 0.96,
             Family = "Fragor",
             Image = "FragorPrime.png",
-            Introduced = "[[Update 18#Update 18.12|Update 18.12]]",
-            -- JumpAttack = 260,
+            Introduced = "18.12",
             Mastery = 12,
             Name = "Fragor Prime",
             NormalAttack = {
@@ -3176,7 +3284,6 @@ local WeaponData = {
             WallAttack = 260
         },
         ["Furax"] = {
-            -- BlockResist = 0.6,
             Class = "Poings",
             Conclave = true,
             Cost = {
@@ -3196,7 +3303,6 @@ local WeaponData = {
             Family = "Furax",
             FinisherDamage = 30,
             Image = "Furax.png",
-            -- JumpAttack = 70,
             Mastery = 5,
             MeleeRange = 1.25,
             Name = "Furax",
@@ -3239,7 +3345,6 @@ local WeaponData = {
             WallAttack = 105
         },
         ["Furax Wraith"] = {
-            -- BlockResist = 0.6,
             ChannelCost = 5,
             ChannelMult = 1.75,
             Class = "Poings",
@@ -3256,8 +3361,7 @@ local WeaponData = {
             Disposition = 1.38,
             Family = "Furax",
             Image = "WraithFurax.png",
-            Introduced = "[[Update 18#Update 18.10|Update 18.10]]",
-            -- JumpAttack = 70,
+            Introduced = "18.10",
             Mastery = 9,
             MeleeRange = 1.25,
             Name = "Furax Wraith",
@@ -3298,7 +3402,6 @@ local WeaponData = {
             WallAttack = 105
         },
         ["Galatine"] = {
-            -- BlockResist = 0.85,
             Class = "Lame Lourde",
             Conclave = true,
             Cost = {
@@ -3314,12 +3417,11 @@ local WeaponData = {
                     {Name = "Plaque d'Alliage", Type = "Ressource", Count = 200}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 1.05,
             Family = "Galatine",
             FinisherDamage = 200,
             Image = "Galatine_o.png",
-            Introduced = "[[Update 10#Update 10.2|Update 10.2]]",
-            -- JumpAttack = 250,
+            Introduced = "10.2",
             JumpRadius = 5,
             Mastery = 3,
             Name = "Galatine",
@@ -3364,7 +3466,6 @@ local WeaponData = {
             WallAttack = 250
         },
         ["Galatine Prime"] = {
-            -- BlockResist = 0.85,
             Class = "Lame Lourde",
             Conclave = true,
             Cost = {
@@ -3377,11 +3478,10 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 0.8,
             Family = "Galatine",
             Image = "PrimeGalatine342.png",
-            Introduced = "[[Update 19#Hotfix: The Silver Grove 3|Hotfix: The Silver Grove 3]]",
-            -- JumpAttack = 330,
+            Introduced = "TSG 3",
             Mastery = 13,
             Name = "Galatine Prime",
             NormalAttack = {
@@ -3424,7 +3524,6 @@ local WeaponData = {
             WallAttack = 330
         },
         ["Galvacord"] = {
-            -- BlockResist = 0.35,
             ChannelCost = 5,
             ChannelMult = 1.5,
             Class = "Fouet",
@@ -3444,8 +3543,7 @@ local WeaponData = {
             },
             Disposition = 1.0,
             Image = "Galvacord.png",
-            Introduced = "[[Update 24#Update 24.2|Update 24.2]]",
-            -- JumpAttack = 320,
+            Introduced = "24.2",
             Mastery = 6,
             Name = "Galvacord",
             NormalAttack = {
@@ -3503,13 +3601,11 @@ local WeaponData = {
                     }, {Name = "Plastides", Type = "Ressource", Count = 1400}
                 }
             },
-            -- BlockResist = 0.85,
             Class = "Machette",
             Conclave = true,
             Disposition = 1.35,
             Image = "Machette Gazal.png",
-            Introduced = "[[Update 19#Update: The Vacuum Within|Update: The Vacuum Within]]",
-            -- JumpAttack = 104,
+            Introduced = "Update: The Vacuum Within",
             Mastery = 5,
             Name = "Machette Gazal",
             NormalAttack = {
@@ -3552,7 +3648,6 @@ local WeaponData = {
             WallAttack = 208
         },
         ["Glaive"] = {
-            -- BlockResist = 0.35,
             ChargedThrowAttack = {
                 Damage = {
                     ["Impact"] = 60,
@@ -3583,8 +3678,7 @@ local WeaponData = {
             Family = "Glaive",
             FinisherDamage = 75,
             Image = "DEGlaive.png",
-            Introduced = "[[Update 7#Update 7.9|Update 7.9]]",
-            -- JumpAttack = 90,
+            Introduced = "7.9",
             Mastery = 1,
             Name = "Glaive",
             NormalAttack = {
@@ -3641,7 +3735,6 @@ local WeaponData = {
             WallAttack = 135
         },
         ["Glaive Prime"] = {
-            -- BlockResist = 0.35,
             ChargedThrowAttack = {
                 Damage = {
                     ["Impact"] = 75,
@@ -3666,11 +3759,10 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
                 }
             },
-            Disposition = 1.22,
+            Disposition = 0.9,
             Family = "Glaive",
             Image = "PrimeGlaive.png",
-            Introduced = "[[Update 11]]",
-            -- JumpAttack = 100,
+            Introduced = "11.0",
             Mastery = 10,
             Name = "Glaive Prime",
             NormalAttack = {
@@ -3727,7 +3819,6 @@ local WeaponData = {
             WallAttack = 150
         },
         ["Gram"] = {
-            -- BlockResist = 0.85,
             Class = "Lame Lourde",
             Conclave = true,
             Cost = {
@@ -3743,12 +3834,11 @@ local WeaponData = {
                     {Name = "Plaque d'Alliage", Type = "Ressource", Count = 80}
                 }
             },
-            Disposition = 1.44,
+            Disposition = 0.75,
             Family = "Gram",
             FinisherDamage = 200,
             Image = "Gram.png",
-            Introduced = "[[Closed Beta Updates#Update 6.2|Update 6.2]]",
-            -- JumpAttack = 200,
+            Introduced = "6.2",
             Mastery = 2,
             Name = "Gram",
             NormalAttack = {
@@ -3790,7 +3880,6 @@ local WeaponData = {
             WallAttack = 200
         },
         ["Gram Prime"] = {
-            -- BlockResist = 0.8,
             Class = "Lame Lourde",
             Conclave = true,
             Cost = {
@@ -3803,11 +3892,10 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
                 }
             },
-            Disposition = 0.9,
+            Disposition = 0.8,
             Family = "Gram",
             Image = "GramPrime.png",
-            Introduced = "[[Update 23#Update 23.9|Update 23.9]]",
-            -- JumpAttack = 180,
+            Introduced = "23.9",
             Mastery = 14,
             Name = "Gram Prime",
             NormalAttack = {
@@ -3863,13 +3951,11 @@ local WeaponData = {
                     {Name = "Ferrite", Type = "Ressource", Count = 2500}
                 }
             },
-            -- BlockResist = 0.85,
             Class = "Arme d'Hast",
             Conclave = true,
-            Disposition = 1.0,
+            Disposition = 1.05,
             Image = "Guandao.png",
-            Introduced = "[[Update 21#Update 21.1.0|Update 21.1.0]]",
-            -- JumpAttack = 180,
+            Introduced = "21.1",
             Mastery = 4,
             Name = "Guandao",
             NormalAttack = {
@@ -3926,7 +4012,7 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 0.65,
             Family = "Guandao",
             FollowThrough = 0.6,
             HeavyAttack = 1440,
@@ -3934,7 +4020,7 @@ local WeaponData = {
             HeavyRadialDmg = 1200,
             HeavySlamRadius = 9,
             Image = "Guandao Prime.png",
-            Introduced = "[[Update 29#Update 29.3|Update 29.3]]",
+            Introduced = "29.3",
             Mastery = 12,
             MeleeRange = 3,
             Name = "Guandao Prime",
@@ -3976,13 +4062,11 @@ local WeaponData = {
                     {Name = "Nano Spores", Type = "Ressource", Count = 19750}
                 }
             },
-            -- BlockResist = 0.8,
             Class = "Éventail de Guerre",
             Conclave = true,
-            Disposition = 1.0,
+            Disposition = 1.35,
             Image = "Gunsen.png",
-            Introduced = "[[Update 22#Update 22.8.0|Update 22]]",
-            -- JumpAttack = 100,
+            Introduced = "22.0",
             Mastery = 8,
             MeleeRange = 1.7,
             Name = "Gunsen",
@@ -4054,8 +4138,7 @@ local WeaponData = {
             },
             Disposition = 1.44,
             Image = "GrnBoomerang.png",
-            Introduced = "[[Update 15#Update 15.0|Update 15.0]]",
-            -- JumpAttack = 90,
+            Introduced = "15.0",
             JumpElement = "Magnétique",
             Mastery = 7,
             Name = "Halikar",
@@ -4113,8 +4196,96 @@ local WeaponData = {
             Users = {"[[Maître Drahk]]"},
             WallAttack = 135
         },
+        ["Halikar Wraith"] = {
+		BlockAngle = 55,
+		MeleeComboDur = 5,
+		FollowThrough = 0.7,
+		MeleeRange = 1.2,
+		ChargedThrowAttack = {
+			AttackName = "Lancer Chargé",
+			Damage = {
+				["Impact"] = 52.7,
+				["Perforation"] = 421.6,
+				["Tranchant"] = 22.7,},
+			CritChance = 0.21,
+			CritMultiplier = 2.5,
+			PunchThrough = 1,
+			StatusChance = 0.41,
+		},
+		SecondaryAreaAttack = {
+			AttackName = "Explosion du Lancer Chargé",
+			Damage = {
+				["Explosif"] = 1314,},
+			Falloff = {StartRange = 0,EndRange = 5.1,Reduction = 0,},
+			CritChance = 0.21,
+			CritMultiplier = 2.5,
+			Radius = 5.1,
+			StatusChance = 0.41,
+		},
+		Class = "Glaive",
+		Conclave = true,
+		Disposition = 0.75,
+		Image = "Halikar Wraith.png",
+		Introduced = "29.10.10",
+		Mastery = 13,
+		Name = "Halikar Wraith",
+		NormalAttack = {
+			Damage = {
+				["Impact"] = 22.5,
+				["Perforation"] = 180.0,
+				["Tranchant"] = 22.5,},
+			CritChance = 0.19,
+			CritMultiplier = 2.3,
+			StatusChance = 0.35,
+			FireRate = 1.17,
+			ShotType = "Thrown",
+			ShotSpeed = 30,
+			Range = 30,
+		},
+        MeleeSlam = {
+            Damage = 675.0,
+            Element = "Magnétique",
+            RadialDamage = 225.0,
+            RadialElement = nil,
+            Radius = 5.0
+        },
+        MeleeHeavy = {
+            Damage = nil,
+            Element = nil,
+            WindUp = 0.6,
+            SlamDamage = 900.0,
+            SlamElement = "Magnétique",
+            SlamRadialDamage = 900.0,
+            SlamRadialElement = nil,
+            SlamRadius = 6.0
+        },
+		Polarities = {"V", "Bar", "V"},
+		SlideAttack = 450,
+		StancePolarity = "Bar",
+		ThrowAttack = {
+			AttackName = "Lancer",
+			Damage = {
+				["Impact"] = 50.3,
+				["Perforation"] = 402.4,
+				["Tranchant"] = 50.3,},
+			CritChance = 0.21,
+			CritMultiplier = 2.3,
+			StatusChance = 0.39,
+		},
+		AreaAttack = {
+			AttackName = "Explosion du Lancer",
+			Damage = {
+				["Explosif"] = 1242,},
+			Falloff = {StartRange = 0,EndRange = 5.1,Reduction = 0,},
+			CritChance = 0.21,
+			CritMultiplier = 2.3,
+			Radius = 5.1,
+			StatusChance = 0.39,
+		},
+		Traits = {"Grineer", "Wraith", "Baro"},
+		Type = "Mêlée",
+	},
         ["Hate"] = {
-            -- BlockResist = 0.85,
             Class = "Faux",
             Conclave = true,
             Cost = {
@@ -4130,8 +4301,7 @@ local WeaponData = {
             },
             Disposition = 1.1,
             Image = "Hate.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
-            -- JumpAttack = 140,
+            Introduced = "8.0",
             Mastery = 8,
             Name = "Hate",
             NormalAttack = {
@@ -4185,13 +4355,11 @@ local WeaponData = {
                     {Name = "Capteurs Neuronaux", Type = "Ressource", Count = 1}
                 }
             },
-            -- BlockResist = 0.35,
             Class = "Dague",
             Conclave = true,
             Disposition = 1.44,
             Image = "Dague de Chaleur.png",
-            Introduced = "[[Closed Beta Updates#Update 5.0|Update 5.0]]",
-            -- JumpAttack = 90,
+            Introduced = "5.0",
             JumpElement = "Feu",
             Mastery = 3,
             MeleeRange = 1.75,
@@ -4248,14 +4416,12 @@ local WeaponData = {
                     {Name = "Pack Polymère", Type = "Ressource", Count = 300}
                 }
             },
-            -- BlockResist = 0.6,
             Class = "Épée",
             Conclave = true,
             Disposition = 1.48,
             FinisherDamage = 75,
             Image = "Épée_de_Chaleur.png",
-            Introduced = "[[Closed Beta Updates#Update 5.0|Update 5.0]]",
-            -- JumpAttack = 88,
+            Introduced = "5.0",
             JumpElement = "Feu",
             Mastery = 3,
             Name = "Épée de Chaleur",
@@ -4312,15 +4478,14 @@ local WeaponData = {
                     {Name = "Rubedo", Type = "Ressource", Count = 1200},
                     {Name = "Morphics", Type = "Ressource", Count = 1}
                 }
-            }, -- BlockResist = 0.85,
+            },
             ChannelCost = 5,
             Class = "Marteau",
             Conclave = true,
-            Disposition = 1.3,
+            Disposition = 1.35,
             Family = "Heliocor",
             Image = "CephHammer.png",
-            Introduced = "[[Update 19#Update: Specters of the Rail 1.0|Update: Specters of the Rail 1.0]]",
-            -- JumpAttack = 280,
+            Introduced = "SotR 1",
             Mastery = 9,
             Name = "Heliocor",
             NormalAttack = {
@@ -4375,13 +4540,11 @@ local WeaponData = {
                     {Name = "Nano Spores", Type = "Ressource", Count = 4600}
                 }
             },
-            -- BlockResist = 0.35,
             Class = "Mains et Pieds",
             Conclave = true,
-            Disposition = 0.5,
+            Disposition = 1.1,
             Image = "Hirudo.png",
-            Introduced = "[[Update 19#Update 19.5|Update 19.5]]",
-            -- JumpAttack = 110,
+            Introduced = "19.5",
             Mastery = 7,
             Name = "Hirudo",
             NormalAttack = {
@@ -4424,7 +4587,6 @@ local WeaponData = {
             WallAttack = 165
         },
         ["Jat Kittag"] = {
-            -- BlockResist = 0.85,
             Class = "Marteau",
             Conclave = true,
             Cost = {
@@ -4444,10 +4606,9 @@ local WeaponData = {
                     {Name = "Forma", Type = "Ressource", Count = 1}
                 }
             },
-            Disposition = 0.75,
+            Disposition = 1.35,
             Image = "Jatkitag.png",
-            Introduced = "[[Update 12#Update 12.0|Update 12.0]]",
-            -- JumpAttack = 260,
+            Introduced = "12.0",
             JumpElement = "Explosif",
             JumpRadius = 10,
             Mastery = 5,
@@ -4512,13 +4673,11 @@ local WeaponData = {
                     {Name = "Forma", Type = "Ressource", Count = 1}
                 }
             },
-            -- BlockResist = 0.6,
             Class = "Lame-Fouet",
             Conclave = true,
             Disposition = 0.81,
             Image = "JatKusar.png",
-            Introduced = "[[Update 21#Update 21.2|Update 21.2]]",
-            -- JumpAttack = 160,
+            Introduced = "21.2",
             JumpElement = "Feu",
             JumpRadius = 10,
             Mastery = 11,
@@ -4577,13 +4736,11 @@ local WeaponData = {
                     {Name = "Rubedo", Type = "Ressource", Count = 300}
                 }
             },
-            -- BlockResist = 0.6,
             Class = "Épée",
             Conclave = true,
             Disposition = 1.47,
             Image = "Épée_de_Mâchoire.png",
-            Introduced = "[[Closed Beta Updates#Update 5.0|Update 5.0]]",
-            -- JumpAttack = 88,
+            Introduced = "5.0",
             Mastery = 0,
             Name = "Épée Jaw",
             NormalAttack = {
@@ -4626,7 +4783,6 @@ local WeaponData = {
             WallAttack = 176
         },
         ["Kama"] = {
-            -- BlockResist = 0.35,
             Class = "Machette",
             Conclave = true,
             Cost = {
@@ -4644,8 +4800,7 @@ local WeaponData = {
             },
             Disposition = 1.47,
             Image = "Kama.png",
-            Introduced = "[[Update 10#Update 10.0|Update 10.0]]",
-            -- JumpAttack = 90,
+            Introduced = "10.0",
             Mastery = 1,
             Name = "Kama",
             NormalAttack = {
@@ -4688,7 +4843,6 @@ local WeaponData = {
             WallAttack = 180
         },
         ["Karyst"] = {
-            -- BlockResist = 0.35,
             Class = "Dague",
             Conclave = true,
             Cost = {
@@ -4704,11 +4858,10 @@ local WeaponData = {
                     {Name = "Cristal d'Argon", Type = "Ressource", Count = 1}
                 }
             },
-            Disposition = 1.29,
+            Disposition = 1.35,
             Family = "Karyst",
             Image = "Karyst.png",
-            Introduced = "[[Update 14#Update 14.2|Update 14.2]]",
-            -- JumpAttack = 100,
+            Introduced = "14.2",
             JumpElement = "Poison",
             Mastery = 6,
             MeleeRange = 1.75,
@@ -4769,11 +4922,11 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 1.05,
             Family = "Karyst",
             FollowThrough = 0.9,
             Image = "Karyst Prime.png",
-            Introduced = "[[Update 28#Update 28.2|Update 28.2]]",
+            Introduced = "28.2",
             Mastery = 12,
             MeleeComboDur = 5.0,
             MeleeHeavy = {
@@ -4831,7 +4984,7 @@ local WeaponData = {
                     {Name = "Gantelet", Type = "Objet", Count = 2}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 1,
             ExilusPolarity = "V",
             Family = "Keratinos",
             FollowThrough = 0.8,
@@ -4840,7 +4993,7 @@ local WeaponData = {
             HeavyRadialDmg = 976,
             HeavySlamRadius = 7,
             Image = "Keratinos.png",
-            Introduced = "[[Update 29]]",
+            Introduced = "29.0",
             Mastery = 9,
             MeleeRange = 1.7,
             Name = "Keratinos",
@@ -4866,9 +5019,7 @@ local WeaponData = {
             Type = "Mêlée",
             WindUp = 0.8
         },
-
         ["Kesheg"] = {
-            -- BlockResist = 0.85,
             Class = "Arme d'Hast",
             Conclave = true,
             Cost = {
@@ -4893,8 +5044,7 @@ local WeaponData = {
             },
             Disposition = 1.24,
             Image = "Kesheg.png",
-            Introduced = "[[Update 19#Update 19.0|Update 19.0]]",
-            -- JumpAttack = 210,
+            Introduced = "19.0",
             Mastery = 7,
             Name = "Kesheg",
             NormalAttack = {
@@ -4938,7 +5088,6 @@ local WeaponData = {
             WallAttack = 175
         },
         ["Kestrel"] = {
-            -- BlockResist = 0.35,
             ChargedThrowAttack = {
                 Damage = {
                     ["Impact"] = 176,
@@ -4968,8 +5117,7 @@ local WeaponData = {
             },
             Disposition = 1.45,
             Image = "Kestrel.png",
-            Introduced = "[[Update 8#Update 8.1|Update 8.1]]",
-            -- JumpAttack = 70,
+            Introduced = "8.1",
             Mastery = 0,
             Name = "Kestrel",
             NormalAttack = {
@@ -5026,7 +5174,6 @@ local WeaponData = {
             WallAttack = 105
         },
         ["Kogake"] = {
-            -- BlockResist = 0.35,
             Class = "Mains et Pieds",
             Conclave = true,
             Cost = {
@@ -5046,8 +5193,7 @@ local WeaponData = {
             Family = "Kogake",
             FinisherDamage = 75,
             Image = "250px-Kogake.png",
-            Introduced = "[[Update 8#Update 8.2|Update 8.2]]",
-            -- JumpAttack = 70,
+            Introduced = "8.2",
             Mastery = 2,
             MeleeRange = 1.25,
             Name = "Kogake",
@@ -5089,11 +5235,9 @@ local WeaponData = {
             WallAttack = 105
         },
         ["Désarmé"] = {
-            -- BlockResist = 0.35,
             Class = "Mains et Pieds",
             FinisherDamage = 75,
             Image = "Blank.png",
-            -- JumpAttack = 70,
             Name = "Désarmé",
             NormalAttack = {
                 Damage = {
@@ -5133,7 +5277,6 @@ local WeaponData = {
             WallAttack = 105
         },
         ["Kogake Prime"] = {
-            -- BlockResist = 0.35,
             Class = "Mains et Pieds",
             Conclave = true,
             Cost = {
@@ -5150,8 +5293,7 @@ local WeaponData = {
             Family = "Kogake",
             FinisherDamage = 75,
             Image = "MirageKogakePrime.png",
-            Introduced = "[[Update 22#Update 22.7|Update 22.7]]",
-            -- JumpAttack = 140,
+            Introduced = "22.7",
             Mastery = 10,
             MeleeRange = 1.25,
             Name = "Kogake Prime",
@@ -5192,8 +5334,43 @@ local WeaponData = {
             FollowThrough = 0.9,
             WallAttack = 210
         },
+        
+        ["Kompressa"] = {
+			Accuracy = 3.8,
+			Class = "Pistolet",
+			Conclave = false,
+			Disposition = 0.5,
+			Image = "Kompressa.png",
+			ExilusPolarity = "V",
+			Introduced = "30.5",
+			Magazine = 12,
+			Mastery = 8,
+			MaxAmmo = 210,
+			Name = "Kompressa",
+			NormalAttack = {
+				CritChance = 0.06,
+				CritMultiplier = 1.8,
+				Damage = {["Viral"] = 2},
+				FireRate = 3.33,
+				Multishot = 4,
+				ShotType = "Hit-Scan",
+				StatusChance = 0.3
+			},
+			Attack5 = {
+				AttackName = "Explosion",
+				Damage = {["Viral"] = 42},
+				Falloff = {EndRange = 2.4, Reduction = 0.2, StartRange = 0},
+				Radius = 2.4,
+				ExplosionDelay = "0.6 - 0.8",
+			},
+			Polarities = { "D" },
+			Reload = 1.8,
+			Traits = {"Tenno"},
+			Trigger = "Auto",
+			Type = "Secondaire" 
+		},
+        
         ["Korrudo"] = {
-            -- BlockResist = 0.35,
             Class = "Mains et Pieds",
             Conclave = true,
             Cost = {
@@ -5215,11 +5392,10 @@ local WeaponData = {
                     }
                 }
             },
-            Disposition = 1.0,
+            Disposition = 1.35,
             Family = "Korrudo",
             Image = "Korrudo.png",
-            Introduced = "[[Update 24#Update 24.6|Update 24.6]]",
-            -- JumpAttack = 61,
+            Introduced = "24.6",
             Mastery = 9,
             MeleeRange = 1.25,
             Name = "Korrudo",
@@ -5234,7 +5410,6 @@ local WeaponData = {
                 StatusChance = 0.09,
                 FireRate = 0.833
             },
-            -- Polarities = {""},
             SlideAttack = 244,
             StancePolarity = "Bar",
             Type = "Mêlée",
@@ -5261,7 +5436,6 @@ local WeaponData = {
             WallAttack = 183
         },
         ["Kreska"] = {
-            -- BlockResist = 0.85,
             Class = "Machette",
             Conclave = false,
             Cost = {
@@ -5280,8 +5454,7 @@ local WeaponData = {
             Disposition = 1.0,
             Family = "Kreska",
             Image = "Arme_kreska.png",
-            Introduced = "[[Update 24#Update 24.0|Update 24]]",
-            -- JumpAttack = 70,
+            Introduced = "24.0",
             Mastery = 6,
             Name = "Kreska",
             NormalAttack = {
@@ -5326,7 +5499,6 @@ local WeaponData = {
             Users = {"[[Terra Trencher]]"}
         },
         ["Krohkur"] = {
-            -- BlockResist = 0.6,
             Class = "Épée",
             Conclave = true,
             Cost = {
@@ -5349,8 +5521,7 @@ local WeaponData = {
             Disposition = 1.22,
             Family = "Krohkur",
             Image = "GrnEgyptSword.png",
-            Introduced = "[[Update 22#Update 22|Update 22]]",
-            -- JumpAttack = 140,
+            Introduced = "22.0",
             Mastery = 9,
             Name = "Krohkur",
             NormalAttack = {
@@ -5392,7 +5563,6 @@ local WeaponData = {
             WallAttack = 280
         },
         ["Kronen"] = {
-            -- BlockResist = 0.35,
             Class = "Tonfa",
             Conclave = true,
             Cost = {
@@ -5411,8 +5581,7 @@ local WeaponData = {
             Disposition = 1.43,
             Family = "Kronen",
             Image = "Kronen.png",
-            Introduced = "[[Update 14#Update 14.5|Update 14.5]]",
-            -- JumpAttack = 130,
+            Introduced = "14.5",
             Mastery = 3,
             Name = "Kronen",
             NormalAttack = {
@@ -5454,7 +5623,6 @@ local WeaponData = {
             WallAttack = 260
         },
         ["Kronen Prime"] = {
-            -- BlockResist = 0.35,
             Class = "Tonfa",
             Conclave = true,
             Cost = {
@@ -5467,11 +5635,10 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
                 }
             },
-            Disposition = 1.43,
+            Disposition = 0.65,
             Family = "Kronen",
             Image = "KronenPrime.png",
-            Introduced = "[[Update 22#Hotfix 22.16.4|Hotfix 22.16.4]]",
-            -- JumpAttack = 132,
+            Introduced = "22.16.4",
             Mastery = 13,
             Name = "Kronen Prime",
             NormalAttack = {
@@ -5526,14 +5693,12 @@ local WeaponData = {
                     {Name = "Gallium", Type = "Ressource", Count = 20}
                 }
             },
-            -- BlockResist = 0.6,
             Class = "Lame-Fouet",
             Conclave = true,
-            Disposition = 1.31,
+            Disposition = 1.15,
             Family = "Lacera",
             Image = "StalkerMios.png",
-            Introduced = "[[Update 18#Update 18.0|Update 18.0]]",
-            -- JumpAttack = 160,
+            Introduced = "18.0",
             JumpElement = "Électrique",
             Mastery = 7,
             Name = "Lacera",
@@ -5605,7 +5770,7 @@ local WeaponData = {
             HeavyRadialDmg = 1080,
             HeavySlamRadius = 9,
             Image = "Lacera Ceti.png",
-            Introduced = "[[Update 27#Update 27.3|Update 27.3]]",
+            Introduced = "27.3",
             Mastery = 12,
             MeleeRange = 2.5,
             Name = "Lacera Ceti",
@@ -5632,7 +5797,6 @@ local WeaponData = {
             WindUp = 0.4
         },
         ["Lecta"] = {
-            -- BlockResist = 0.35,
             Class = "Fouet",
             Conclave = true,
             Cost = {
@@ -5648,12 +5812,11 @@ local WeaponData = {
                     {Name = "Capteurs Neuronaux", Type = "Ressource", Count = 3}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 1.25,
             Family = "Lecta",
             FinisherDamage = 75,
             Image = "Lecta.png",
-            Introduced = "[[Update 11#Update 11.0|Update 11.0]]",
-            -- JumpAttack = 90,
+            Introduced = "11.0",
             JumpElement = "Électrique",
             Mastery = 0,
             Name = "Lecta",
@@ -5699,7 +5862,6 @@ local WeaponData = {
             WallAttack = 180
         },
         ["Lesion"] = {
-            -- BlockResist = 0.85,
             Class = "Arme d'Hast",
             Conclave = true,
             Cost = {
@@ -5717,8 +5879,7 @@ local WeaponData = {
             },
             Disposition = 0.5,
             Image = "Lesion.png",
-            Introduced = "[[Update 18#Update 18.5|Update 18.5]]",
-            -- JumpAttack = 200,
+            Introduced = "18.5",
             Mastery = 9,
             Name = "Lesion",
             NormalAttack = {
@@ -5772,14 +5933,12 @@ local WeaponData = {
                     {Name = "Plaque d'Alliage", Type = "Ressource", Count = 900}
                 }
             },
-            -- BlockResist = 0.85,
             Class = "Machette",
             Conclave = true,
             Disposition = 1.45,
             Family = "Machette",
             Image = "Machette.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
-            -- JumpAttack = 50,
+            Introduced = "8.0",
             Mastery = 1,
             Name = "Machette",
             NormalAttack = {
@@ -5822,14 +5981,12 @@ local WeaponData = {
             WallAttack = 100
         },
         ["Machette Wraith"] = {
-            -- BlockResist = 0.85,
             Class = "Machette",
             Conclave = true,
             Disposition = 1.45,
             Family = "Machette",
             Image = "DEWraithMachete.png",
-            Introduced = "[[Update 10#Update 10.5|Update 10.5]]",
-            -- JumpAttack = 90,
+            Introduced = "10.5",
             Mastery = 11,
             Name = "Machette Wraith",
             NormalAttack = {
@@ -5872,7 +6029,6 @@ local WeaponData = {
             WallAttack = 180
         },
         ["Magistar"] = {
-            -- BlockResist = 0.6,
             Class = "Marteau",
             Conclave = true,
             Cost = {
@@ -5892,8 +6048,7 @@ local WeaponData = {
             Family = "Magistar",
             FinisherDamage = 200,
             Image = "Magistar.png",
-            Introduced = "[[Update 11#Update 11.5|Update 11.5]]",
-            -- JumpAttack = 160,
+            Introduced = "11.5",
             Mastery = 1,
             Name = "Magistar",
             NormalAttack = {
@@ -5954,7 +6109,7 @@ local WeaponData = {
             Disposition = 1,
             FollowThrough = 0.6,
             Image = "Masseter.png",
-            Introduced = "[[Update 26#Update 26|Update 26]]",
+            Introduced = "26.0",
             Mastery = 8,
             MeleeComboDur = 5.0,
             MeleeHeavy = {
@@ -5989,7 +6144,6 @@ local WeaponData = {
             Type = "Mêlée"
         },
         ["Mios"] = {
-            -- BlockResist = 0.6,
             Class = "Lame-Fouet",
             Conclave = true,
             Cost = {
@@ -6005,10 +6159,9 @@ local WeaponData = {
                     {Name = "Forma", Type = "Ressource", Count = 1}
                 }
             },
-            Disposition = 0.95,
+            Disposition = 1.25,
             Image = "Mios.png",
-            Introduced = "[[Update 17#Update 17.11|Update 17.11]]",
-            -- JumpAttack = 160,
+            Introduced = "17.11",
             Mastery = 8,
             Name = "Mios",
             NormalAttack = {
@@ -6051,7 +6204,6 @@ local WeaponData = {
             WallAttack = 320
         },
         ["Mire"] = {
-            -- BlockResist = 0.6,
             Class = "Épée",
             Conclave = true,
             Cost = {
@@ -6074,8 +6226,7 @@ local WeaponData = {
             Disposition = 1.43,
             FinisherDamage = 75,
             Image = "Mire.png",
-            Introduced = "[[Update 7#Update 7.7.2|Update 7.7.2]]",
-            -- JumpAttack = 70,
+            Introduced = "7.7.2",
             JumpElement = "Poison",
             Mastery = 5,
             Name = "Mire",
@@ -6119,14 +6270,12 @@ local WeaponData = {
             WallAttack = 140
         },
         ["MK1-Bo"] = {
-            -- BlockResist = 0.6,
             Class = "Bâton",
             Conclave = true,
             Disposition = 1.29,
             Family = "Bo",
             Image = "BoStaff.png",
-            Introduced = "[[Update 14#Update 14.0|Update 14.0]]",
-            -- JumpAttack = 90,
+            Introduced = "14.0",
             Mastery = 0,
             Name = "MK1-Bo",
             NormalAttack = {
@@ -6166,15 +6315,13 @@ local WeaponData = {
             WallAttack = 75
         },
         ["MK1-Furax"] = {
-            -- BlockResist = 0.6,
             Class = "Poings",
             Conclave = true,
             Disposition = 1.38,
             Family = "Furax",
             FinisherDamage = 30,
             Image = "Furax.png",
-            Introduced = "[[Update 14#Update 14.0|Update 14.0]]",
-            -- JumpAttack = 60,
+            Introduced = "14.0",
             Mastery = 0,
             MeleeRange = 1.25,
             Name = "MK1-Furax",
@@ -6216,7 +6363,6 @@ local WeaponData = {
             WallAttack = 90
         },
         ["Nami Skyla"] = {
-            -- BlockResist = 0.6,
             Class = "Doubles Épées",
             Conclave = true,
             Cost = {
@@ -6235,8 +6381,7 @@ local WeaponData = {
             Disposition = 1.175,
             Family = "Nami Skyla",
             Image = "Nami_Skyla.png",
-            Introduced = "[[Update 13#Update 13.0|Update 13.0]]",
-            -- JumpAttack = 100,
+            Introduced = "13.0",
             Mastery = 2,
             Name = "Nami Skyla",
             NormalAttack = {
@@ -6288,14 +6433,12 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
                 }
             },
-            -- BlockResist = 0.6,
             Class = "Doubles Épées",
             Conclave = true,
             Disposition = 1.175,
             Family = "Nami Skyla",
             Image = "PrimeNamiSkyla.png",
-            Introduced = "[[Update 21#Update 21.6|Update 21.6]]",
-            -- JumpAttack = 120,
+            Introduced = "21.6",
             Mastery = 11,
             Name = "Nami Skyla Prime",
             NormalAttack = {
@@ -6337,7 +6480,6 @@ local WeaponData = {
             WallAttack = 240
         },
         ["Nami Solo"] = {
-            -- BlockResist = 0.85,
             Class = "Machette",
             Conclave = true,
             Cost = {
@@ -6355,8 +6497,7 @@ local WeaponData = {
             },
             Disposition = 1.43,
             Image = "DENamiSolo.png",
-            Introduced = "[[Update 13#Update 13.5|Update 13.5]]",
-            -- JumpAttack = 70,
+            Introduced = "13.5",
             Mastery = 6,
             Name = "Nami Solo",
             NormalAttack = {
@@ -6413,14 +6554,12 @@ local WeaponData = {
                     {Name = "Forma", Type = "Ressource", Count = 1}
                 }
             },
-            -- BlockResist = 0.6,
             Class = "Nikana",
             Conclave = true,
-            Disposition = 0.5,
+            Disposition = 0.95,
             Family = "Nikana",
             Image = "Nikana.png",
-            Introduced = "[[Update 13#Update 13.0|Update 13.0]]",
-            -- JumpAttack = 90,
+            Introduced = "13.0",
             Mastery = 4,
             Name = "Nikana",
             NormalAttack = {
@@ -6463,7 +6602,6 @@ local WeaponData = {
             WallAttack = 96
         },
         ["Nikana Prime"] = {
-            -- BlockResist = 0.6,
             Class = "Nikana",
             Conclave = true,
             Cost = {
@@ -6479,8 +6617,7 @@ local WeaponData = {
             Disposition = 0.5,
             Family = "Nikana",
             Image = "NikanaPrime.png",
-            Introduced = "[[Update 18#Hotfix 18.4.12|Hotfix 18.4.12]]",
-            -- JumpAttack = 190,
+            Introduced = "18.4.12",
             Mastery = 12,
             Name = "Nikana Prime",
             NormalAttack = {
@@ -6523,7 +6660,6 @@ local WeaponData = {
             WallAttack = 204
         },
         ["Ninkondi"] = {
-            -- BlockResist = 0.35,
             Class = "Nunchaku",
             Family = "Ninkondi",
             Conclave = true,
@@ -6542,8 +6678,7 @@ local WeaponData = {
             },
             Disposition = 1.41,
             Image = "Ninkondi.png",
-            Introduced = "[[Update 17#Update 17.4|Update 17.4]]",
-            -- JumpAttack = 90,
+            Introduced = "17.4",
             JumpElement = "Électrique",
             Mastery = 8,
             MeleeRange = 2.31,
@@ -6583,7 +6718,6 @@ local WeaponData = {
             WallAttack = 180
         },
         ["Ninkondi Prime"] = {
-            -- BlockResist = 0.35,
             Class = "Nunchaku",
             Family = "Ninkondi",
             Conclave = false,
@@ -6599,9 +6733,7 @@ local WeaponData = {
             },
             Disposition = 1.41,
             Image = "Ninkondi Prime.png",
-            Introduced = "[[Update 25#Update 25.3.0|Update 25.3.0]]",
-            -- JumpAttack = 54,
-            -- JumpElement = "Électrique",
+            Introduced = "25.3",
             Mastery = 14,
             MeleeRange = 1,
             Name = "Ninkondi Prime",
@@ -6619,7 +6751,6 @@ local WeaponData = {
             },
             Polarities = {"V", "V"},
             SlideAttack = 116,
-            -- SlideElement = "Électrique",
             StancePolarity = "D",
             Traits = {"Tenno"},
             Type = "Mêlée",
@@ -6646,7 +6777,6 @@ local WeaponData = {
             WallAttack = 216
         },
         ["Obex"] = {
-            -- BlockResist = 0.35,
             Class = "Mains et Pieds",
             Conclave = true,
             Cost = {
@@ -6666,8 +6796,7 @@ local WeaponData = {
             Family = "Obex",
             FinisherDamage = 75,
             Image = "Obexicon.png",
-            Introduced = "[[Update 10#Update 10.7|Update 10.7]]",
-            -- JumpAttack = 50,
+            Introduced = "10.7",
             JumpElement = "Électrique",
             Mastery = 4,
             MeleeRange = 1.25,
@@ -6724,13 +6853,11 @@ local WeaponData = {
                     {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
                 }
             },
-            -- BlockResist = 0.6,
             Class = "Tonfa",
             Conclave = true,
             Disposition = 1.0,
             Image = "Ohma.png",
-            Introduced = "[[Update 19#Update 19.7|Update 19.7]]",
-            -- JumpAttack = 200,
+            Introduced = "19.7",
             JumpElement = "Électrique",
             Mastery = 8,
             Name = "Ohma",
@@ -6794,13 +6921,11 @@ local WeaponData = {
                 }
             },
             ChannelCost = 5,
-            -- BlockResist = 0.35,
             Class = "Doubles Dagues",
             Conclave = true,
             Disposition = 1.31,
             Image = "TennoSais.png",
-            Introduced = "[[Update 19#Update: Specters of the Rail|Update: Specters of the Rail]]",
-            -- JumpAttack = 80,
+            Introduced = "SotR",
             Mastery = 5,
             MeleeRange = 1.70,
             Name = "Okina",
@@ -6843,7 +6968,6 @@ local WeaponData = {
             WallAttack = 160
         },
         ["Orthos"] = {
-            -- BlockResist = 0.85,
             Class = "Arme d'Hast",
             Conclave = true,
             Cost = {
@@ -6859,12 +6983,11 @@ local WeaponData = {
                     {Name = "Plaque d'Alliage", Type = "Ressource", Count = 700}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 1,
             Family = "Orthos",
             FinisherDamage = 200,
             Image = "250px-Orthos.png",
-            Introduced = "[[Update 8#Update 8.1|Update 8.1]]",
-            -- JumpAttack = 100,
+            Introduced = "8.1",
             JumpElement = "Explosif",
             JumpRadius = 10,
             Mastery = 2,
@@ -6918,15 +7041,13 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
                 }
             },
-            -- BlockResist = 0.85,
             Class = "Arme d'Hast",
             Conclave = true,
-            Disposition = 0.5,
+            Disposition = 0.65,
             Family = "Orthos",
             FinisherDamage = 200,
             Image = "Orthos_Prime.png",
-            Introduced = "[[Update 9#Update 9.0|Update 9.0]]",
-            -- JumpAttack = 130,
+            Introduced = "9.0",
             JumpElement = "Explosif",
             JumpRadius = 10,
             Mastery = 12,
@@ -6970,7 +7091,6 @@ local WeaponData = {
             WallAttack = 108
         },
         ["Orvius"] = {
-            -- BlockResist = 0.35,
             ChargedThrowAttack = {
                 Damage = {
                     ["Impact"] = 88,
@@ -6998,8 +7118,7 @@ local WeaponData = {
             },
             Disposition = 1.15,
             Image = "Orvius.png",
-            Introduced = "[[Update 19#Update 19.0|Update 19.0]]",
-            -- JumpAttack = 140,
+            Introduced = "19.0",
             Mastery = 5,
             Name = "Orvius",
             NormalAttack = {
@@ -7055,7 +7174,6 @@ local WeaponData = {
             WallAttack = 210
         },
         ["Paracesis"] = {
-            -- BlockResist = 0.85,
             Class = "Lame Lourde",
             Conclave = true,
             Cost = {
@@ -7071,8 +7189,7 @@ local WeaponData = {
             },
             Disposition = 1.0,
             Image = "Arme paracesis.png",
-            Introduced = "[[Update_23#Update_23.10|Update 23.10]]",
-            -- JumpAttack = 144,
+            Introduced = "23.10",
             Mastery = 10,
             Name = "Paracesis",
             NormalAttack = {
@@ -7115,7 +7232,6 @@ local WeaponData = {
             WallAttack = 288
         },
         ["Pathocyst"] = {
-            -- BlockResist = 0.35,
             Class = "Glaive",
             Conclave = false,
             Cost = {
@@ -7130,8 +7246,7 @@ local WeaponData = {
             },
             Disposition = 1.0,
             Image = "Pathocyst.png",
-            Introduced = "[[Update_25#Update_25.7.7|Update 25.7.7]]",
-            -- JumpAttack = 82,
+            Introduced = "25.7.7",
             Mastery = 9,
             Name = "Pathocyst",
             NormalAttack = {
@@ -7202,14 +7317,12 @@ local WeaponData = {
                     {Name = "Plaque d'Alliage", Type = "Ressource", Count = 80}
                 }
             },
-            -- BlockResist = 0.6,
             Class = "Épée",
             Conclave = true,
             Disposition = 1.47,
             Family = "Épée Pangolin",
             Image = "Pangolin.png",
-            Introduced = "[[Closed Beta Updates#Update 5.0|Update 5.0]]",
-            -- JumpAttack = 74,
+            Introduced = "5.0",
             Mastery = 3,
             Name = "Épée Pangolin",
             NormalAttack = {
@@ -7271,7 +7384,7 @@ local WeaponData = {
             Family = "Épée Pangolin",
             FollowThrough = 0.6,
             Image = "Pangolin Prime.png",
-            Introduced = "[[Update 27#Update 27.3.6|Update 27.3.6]]",
+            Introduced = "27.3.6",
             Mastery = 14,
             MeleeRange = 2.5,
             Name = "Pangolin Prime",
@@ -7295,7 +7408,6 @@ local WeaponData = {
                 RadialElement = nil,
                 Radius = 8
             },
-            -- HeavySlamAttack = 992,
             MeleeHeavy = {
                 Damage = 1240,
                 Element = nil,
@@ -7322,13 +7434,11 @@ local WeaponData = {
                     {Name = "Pack Polymère", Type = "Ressource", Count = 50}
                 }
             },
-            -- BlockResist = 0.6,
             Class = "Épée",
             Conclave = true,
             Disposition = 1.48,
             Image = "Épée à Plasma.png",
-            Introduced = "[[Closed Beta Updates#Update 5.0|Update 5.0]]",
-            -- JumpAttack = 70,
+            Introduced = "5.0",
             Mastery = 4,
             Name = "Épée à Plasma",
             NormalAttack = {
@@ -7373,14 +7483,12 @@ local WeaponData = {
             WallElement = "Électrique"
         },
         ["Doubles Hachoirs Prisma"] = {
-            -- BlockResist = 0.85,
             Class = "Doubles Épées",
             Conclave = true,
             Disposition = 1.0,
             Family = "Doubles Hachoirs",
             Image = "DoublesHachoirsPrisma.png",
-            Introduced = "[[Update 16#Update 16.11.3|Update 16.11.3]]",
-            -- JumpAttack = 70,
+            Introduced = "16.11.3",
             Mastery = 9,
             Name = "Doubles Hachoirs Prisma",
             NormalAttack = {
@@ -7423,13 +7531,11 @@ local WeaponData = {
             WallAttack = 140
         },
         ["Machette Prisma"] = {
-            -- BlockResist = 0.85,
             Class = "Machette",
             Conclave = false,
             Disposition = 1.45,
             Family = "Machette",
             Image = "Machette_Prisma.png",
-            -- JumpAttack = 50,
             Mastery = 7,
             Name = "Machette Prisma",
             NormalAttack = {
@@ -7470,15 +7576,13 @@ local WeaponData = {
             WallAttack = 100
         },
         ["Obex Prisma"] = {
-            -- BlockResist = 0.35,
             Class = "Mains et Pieds",
             Conclave = true,
             Disposition = 1.1,
             Family = "Obex",
             FinisherDamage = 75,
             Image = "PrismaObex.png",
-            Introduced = "[[Update 20#Hotfix 20.4.2|Hotfix 20.4.2]]",
-            -- JumpAttack = 50,
+            Introduced = "20.4.2",
             JumpElement = "Électrique",
             Mastery = 10,
             MeleeRange = 1.25,
@@ -7534,14 +7638,12 @@ local WeaponData = {
                     {Name = "Forma", Type = "Ressource", Count = 1}
                 }
             },
-            -- BlockResist = 0.85,
             Class = "Machette",
             Conclave = true,
             Disposition = 1.29,
             Family = "Prova",
             Image = "Prova8point2.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
-            -- JumpAttack = 70,
+            Introduced = "8.0",
             JumpElement = "Électrique",
             Mastery = 3,
             Name = "Prova",
@@ -7586,14 +7688,12 @@ local WeaponData = {
             WallElement = "Électrique"
         },
         ["Prova Vandal"] = {
-            -- BlockResist = 0.85,
             Class = "Machette",
             Conclave = true,
             Disposition = 1.29,
             Family = "Prova",
             Image = "250px-VandalElectroProd.png",
-            Introduced = "[[Update 10#Update 10.5|Update 10.5]]",
-            -- JumpAttack = 96,
+            Introduced = "10.5",
             JumpElement = "Électrique",
             Mastery = 8,
             Name = "Prova Vandal",
@@ -7634,7 +7734,6 @@ local WeaponData = {
             WallElement = "Électrique"
         },
         ["Pupacyst"] = {
-            -- BlockResist = 0.85,
             Class = "Arme d'Hast",
             Conclave = true,
             Cost = {
@@ -7652,8 +7751,7 @@ local WeaponData = {
             },
             Disposition = 1.0,
             Image = "Pupacyst.png",
-            Introduced = "[[Update_23#Update_23.10|Update 23.10]]",
-            -- JumpAttack = 90,
+            Introduced = "23.10",
             Mastery = 7,
             Name = "Pupacyst",
             NormalAttack = {
@@ -7714,11 +7812,11 @@ local WeaponData = {
                     }
                 }
             },
-            Disposition = 0.75,
+            Disposition = 1,
             Family = "Quassus",
             FollowThrough = 0.7,
             Image = "Quassus.png",
-            Introduced = "[[Update 29]]",
+            Introduced = "29.0",
             Mastery = 8,
             MeleeComboDur = 5.0,
             MeleeHeavy = {
@@ -7758,13 +7856,11 @@ local WeaponData = {
             Type = "Mêlée"
         },
         ["Dague Sombre Rakta"] = {
-            -- BlockResist = 0.35,
             Class = "Dague",
             Disposition = 0.52,
             Family = "Dague Sombre",
             Image = "Dague_Sombre_Rakta.png",
-            Introduced = "[[Update 19#Update: The Silver Grove 2.0|Update: The Silver Grove 2.0]]",
-            -- JumpAttack = 100,
+            Introduced = "TSG 2",
             Mastery = 8,
             MeleeRange = 1.75,
             Name = "Dague Sombre Rakta",
@@ -7817,13 +7913,11 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
                 }
             },
-            -- BlockResist = 0.85,
             Class = "Faux",
             Conclave = true,
-            Disposition = 1.29,
+            Disposition = 0.7,
             Image = "Reaper_Prime.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
-            -- JumpAttack = 150,
+            Introduced = "8.0",
             Mastery = 10,
             Name = "Reaper Prime",
             NormalAttack = {
@@ -7865,7 +7959,6 @@ local WeaponData = {
             WallAttack = 150
         },
         ["Redeemer"] = {
-            -- BlockResist = 0.60,
             ChargeAttack = {
                 AttackName = "Tirs",
                 Damage = {["Explosif"] = 300},
@@ -7886,11 +7979,10 @@ local WeaponData = {
                     {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
                 }
             },
-            Disposition = 1.17,
+            Disposition = 1.05,
             Family = "Redeemer",
             Image = "Redeemer.png",
-            Introduced = "[[Update 15#Update 15.5|Update 15.5]]",
-            -- JumpAttack = 120,
+            Introduced = "15.5",
             Mastery = 4,
             Name = "Redeemer",
             NormalAttack = {
@@ -7933,7 +8025,6 @@ local WeaponData = {
             WallAttack = 240
         },
         ["Redeemer Prime"] = {
-            -- BlockResist = 0.60,
             ChargeAttack = {
                 AttackName = "Tirs",
                 Damage = {["Explosif"] = 800},
@@ -7951,11 +8042,10 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
                 }
             },
-            Disposition = 1.17,
+            Disposition = 0.6,
             Family = "Redeemer",
             Image = "RedeemerPrime.png",
-            Introduced = "[[Update 24#Hotfix 24.2.2|Hotfix 24.2.2]]",
-            -- JumpAttack = 80,
+            Introduced = "24.2.2",
             Mastery = 10,
             Name = "Redeemer Prime",
             NormalAttack = {
@@ -7998,7 +8088,6 @@ local WeaponData = {
             WallAttack = 320
         },
         ["Ripkas"] = {
-            -- BlockResist = 0.85,
             Class = "Griffes",
             Conclave = true,
             Cost = {
@@ -8016,8 +8105,7 @@ local WeaponData = {
             },
             Disposition = 1.38,
             Image = "Ripkas.png",
-            Introduced = "[[Update 16#Update 16.0|Update 16.0]]",
-            -- JumpAttack = 110,
+            Introduced = "16.0",
             Mastery = 5,
             MeleeRange = 1.75,
             Name = "Ripkas",
@@ -8065,14 +8153,12 @@ local WeaponData = {
             WallAttack = 165
         },
         ["Magistar Sancti"] = {
-            -- BlockResist = 0.6,
             Class = "Marteau",
             Conclave = true,
             Disposition = 1.09,
             Family = "Magistar",
             Image = "Magistar_Sancti.png",
-            Introduced = "[[Update 19#Update: The Silver Grove 2.0|Update: The Silver Grove 2.0]]",
-            -- JumpAttack = 240,
+            Introduced = "TSG 2",
             Mastery = 8,
             Name = "Magistar Sancti",
             NormalAttack = {
@@ -8115,7 +8201,6 @@ local WeaponData = {
             WallAttack = 240
         },
         ["Sarpa"] = {
-            -- BlockResist = 0.35,
             ChargeAttack = {
                 AttackName = "Tirs",
                 Damage = {
@@ -8149,8 +8234,7 @@ local WeaponData = {
             },
             Disposition = 1.24,
             Image = "Sarpa.png",
-            Introduced = "[[Update 19#Update: The Silver Grove|Update: The Silver Grove]]",
-            -- JumpAttack = 140,
+            Introduced = "TSG",
             Mastery = 8,
             Name = "Sarpa",
             NormalAttack = {
@@ -8193,7 +8277,6 @@ local WeaponData = {
             WallAttack = 280
         },
         ["Scindo"] = {
-            -- BlockResist = 0.85,
             Class = "Lame Lourde",
             Conclave = true,
             Cost = {
@@ -8213,8 +8296,7 @@ local WeaponData = {
             Family = "Scindo",
             FinisherDamage = 200,
             Image = "Scindo2.png",
-            Introduced = "[[Closed Beta Updates#Update 5.4|Update 5.4]]",
-            -- JumpAttack = 200,
+            Introduced = "5.4",
             Mastery = 2,
             Name = "Scindo",
             NormalAttack = {
@@ -8256,7 +8338,6 @@ local WeaponData = {
             WallAttack = 200
         },
         ["Scindo Prime"] = {
-            -- BlockResist = 0.85,
             Class = "Lame Lourde",
             Conclave = true,
             Cost = {
@@ -8272,8 +8353,7 @@ local WeaponData = {
             Disposition = 1.0,
             Family = "Scindo",
             Image = "PrimeScindo.png",
-            Introduced = "[[Update 14#Update 14.8|Update 14.8]]",
-            -- JumpAttack = 260,
+            Introduced = "14.8",
             Mastery = 8,
             Name = "Scindo Prime",
             NormalAttack = {
@@ -8316,7 +8396,6 @@ local WeaponData = {
             WallAttack = 260
         },
         ["Scoliac"] = {
-            -- BlockResist = 0.35,
             Class = "Fouet",
             Conclave = true,
             Cost = {
@@ -8334,8 +8413,7 @@ local WeaponData = {
             Disposition = 1.3,
             FinisherDamage = 75,
             Image = "DEScoliac2.png",
-            Introduced = "[[Update 11#Update 11.5|Update 11.5]]",
-            -- JumpAttack = 110,
+            Introduced = "11.5",
             JumpElement = "Poison",
             Mastery = 6,
             Name = "Scoliac",
@@ -8379,14 +8457,12 @@ local WeaponData = {
             WallAttack = 220
         },
         ["Lecta Secura"] = {
-            -- BlockResist = 0.35,
             Class = "Fouet",
             Conclave = true,
-            Disposition = 0.5,
+            Disposition = 1.1,
             Family = "Lecta",
             Image = "Lecta Secura.png",
-            Introduced = "[[Update 19#Update: The Silver Grove 2.0|Update: The Silver Grove 2.0]]",
-            -- JumpAttack = 150,
+            Introduced = "TSG 2",
             JumpElement = "Électrique",
             Mastery = 8,
             Name = "Lecta Secura",
@@ -8445,13 +8521,11 @@ local WeaponData = {
                     {Name = "Capteurs Neuronaux", Type = "Ressource", Count = 3}
                 }
             },
-            -- BlockResist = 0.85,
             Class = "Arme d'Hast",
             Conclave = true,
             Disposition = 1.38,
             Image = "Serro.png",
-            Introduced = "[[Update 13#Update 13.4|Update 13.4]]",
-            -- JumpAttack = 150,
+            Introduced = "13.4",
             Mastery = 6,
             Name = "Serro",
             NormalAttack = {
@@ -8503,13 +8577,11 @@ local WeaponData = {
                     {Name = "Morphics", Type = "Ressource", Count = 10}
                 }
             },
-            -- BlockResist = 0.35,
             Class = "Nunchaku",
             Conclave = true,
             Disposition = 1.35,
             Image = "Shaku.png",
-            Introduced = "[[Update 18#Update 18.1|Update 18.1]]",
-            -- JumpAttack = 110,
+            Introduced = "18.1",
             Mastery = 10,
             MeleeRange = 2.21,
             Name = "Shaku",
@@ -8558,13 +8630,11 @@ local WeaponData = {
                     {Name = "Poignée", Type = "Objet", Count = 1}
                 }
             },
-            -- BlockResist = 0.35,
             Class = "Dague",
             Conclave = true,
-            Disposition = 1.25,
+            Disposition = 1.35,
             Image = "Sheev.png",
-            Introduced = "[[Update 14#Update 14.7|Update 14.7]]",
-            -- JumpAttack = 90,
+            Introduced = "14.7",
             Mastery = 5,
             MeleeRange = 1.7,
             Name = "Sheev",
@@ -8618,7 +8688,7 @@ local WeaponData = {
             MeleeRange = 3,
             Disposition = 1,
             Image = "Shildeg Kuva.png",
-            Introduced = "[[Update 26#Update 26|Update 26]]",
+            Introduced = "26.0",
             Mastery = 13,
             MeleeComboDur = 5,
             MeleeSlam = {
@@ -8657,7 +8727,6 @@ local WeaponData = {
             Users = {"[[Liche Kuva]]"}
         },
         ["Sibear"] = {
-            -- BlockResist = 0.85,
             Class = "Marteau",
             Conclave = true,
             Cost = {
@@ -8678,8 +8747,7 @@ local WeaponData = {
             },
             Disposition = 1.35,
             Image = "IceHammer.png",
-            Introduced = "[[Update 18#Update 18.8|Update 18.8]]",
-            -- JumpAttack = 260,
+            Introduced = "18.8",
             Mastery = 6,
             Name = "Sibear",
             NormalAttack = {
@@ -8724,13 +8792,11 @@ local WeaponData = {
             WallAttack = 260
         },
         ["Sigma & Octantis"] = {
-            -- BlockResist = 0.85,
             Class = "Épée et Bouclier",
             Conclave = true,
             Disposition = 1.0,
             Image = "SundialSwordAndBoard.png",
-            Introduced = "[[Update 22#Hotfix 22.1.1|Hotfix 22.1.2]]",
-            -- JumpAttack = 120,
+            Introduced = "22.1.2",
             Mastery = 10,
             Name = "Sigma & Octantis",
             NormalAttack = {
@@ -8785,14 +8851,12 @@ local WeaponData = {
                     {Name = "Forma", Type = "Ressource", Count = 1}
                 }
             },
-            -- BlockResist = 0.85,
             Class = "Épée et Bouclier",
             Conclave = true,
             Disposition = 1.0,
             Family = "Silva & Aegis",
             Image = "250px-TennoSwordShield.png",
-            Introduced = "[[Update 14#Update 14.0|Update 14.0]]",
-            -- JumpAttack = 70,
+            Introduced = "14.0",
             JumpElement = "Feu",
             JumpRadius = 4,
             Mastery = 0,
@@ -8834,7 +8898,6 @@ local WeaponData = {
             WallElement = "Feu"
         },
         ["Silva & Aegis Prime"] = {
-            -- BlockResist = 0.9,
             Class = "Épée et Bouclier",
             Conclave = true,
             Cost = {
@@ -8851,8 +8914,7 @@ local WeaponData = {
             Disposition = 1.0,
             Family = "Silva & Aegis",
             Image = "SilvaAegisPrime.png",
-            Introduced = "[[Update 20#Hotfix 20.6.2|Hotfix 20.6.2]]",
-            -- JumpAttack = 240,
+            Introduced = "20.6.2",
             JumpElement = "Feu",
             JumpRadius = 4,
             Mastery = 12,
@@ -8895,7 +8957,6 @@ local WeaponData = {
             WallElement = "Feu"
         },
         ["Skana"] = {
-            -- BlockResist = 0.6,
             Class = "Épée",
             Conclave = true,
             Cost = {
@@ -8917,7 +8978,6 @@ local WeaponData = {
             Disposition = 1.22,
             Family = "Skana",
             Image = "Skana.png",
-            -- JumpAttack = 70,
             Mastery = 0,
             Name = "Skana",
             NormalAttack = {
@@ -8959,14 +9019,12 @@ local WeaponData = {
             WallAttack = 140
         },
         ["Skana Prime"] = {
-            -- BlockResist = 0.6,
             Class = "Épée",
             Conclave = true,
             Disposition = 1.22,
             Family = "Skana",
             Image = "SkanaPrime.png",
-            Introduced = "[[Closed Beta Updates#Update 5.0|Update 5.0]]",
-            -- JumpAttack = 84,
+            Introduced = "5.0",
             Mastery = 12,
             Name = "Skana Prime",
             NormalAttack = {
@@ -9009,14 +9067,12 @@ local WeaponData = {
             WallAttack = 168
         },
         ["Skana Prisma"] = {
-            -- BlockResist = 0.6,
             Class = "Épée",
             Conclave = true,
             Disposition = 1.22,
             Family = "Skana",
             Image = "PrismaSkanaNew.png",
-            Introduced = "[[Update 16#Hotfix 16.6.2|Hotfix 16.6.2]]",
-            -- JumpAttack = 70,
+            Introduced = "16.6.2",
             Mastery = 8,
             Name = "Skana Prisma",
             NormalAttack = {
@@ -9058,14 +9114,12 @@ local WeaponData = {
             WallAttack = 140
         },
         ["Skiajati"] = {
-            -- BlockResist = 0.6,
             Class = "Nikana",
             Conclave = true,
             Disposition = 1.0,
             Family = "Skiajati",
             Image = "Skiajati.png",
-            Introduced = "[[Update 23#Update 23.0|Update 23.0]]",
-            -- JumpAttack = 77,
+            Introduced = "23.0",
             Mastery = 11,
             Name = "Skiajati",
             NormalAttack = {
@@ -9135,7 +9189,7 @@ local WeaponData = {
             Disposition = 0.5,
             FollowThrough = 0.5,
             Image = "Stropha.png",
-            Introduced = "[[Update 28#Update 28]]",
+            Introduced = "28.0",
             Mastery = 10,
             MeleeComboDur = 5.0,
             MeleeHeavy = {
@@ -9191,14 +9245,12 @@ local WeaponData = {
                     {Name = "Amphis", Type = "Arme", Count = 1}
                 }
             },
-            -- BlockResist = 0.85,
             Class = "Arme d'Hast",
             Conclave = true,
-            Disposition = 0.84,
+            Disposition = 1.35,
             Family = "Sydon",
             Image = "GrnTridentWeapon.png",
-            Introduced = "[[Update 18#Update 18.2|Update 18.2]]",
-            -- JumpAttack = 150,
+            Introduced = "18.2",
             JumpElement = "Explosif",
             Mastery = 5,
             Name = "Sydon",
@@ -9238,15 +9290,13 @@ local WeaponData = {
             WallAttack = 125
         },
         ["Heliocor Synoid"] = {
-            -- BlockResist = 0.85,
             ChannelCost = 5,
             ChannelMult = 1.75,
             Class = "Marteau",
-            Disposition = 0.94,
+            Disposition = 1.35,
             Family = "Heliocor",
             Image = "Heliocor Synoid.png",
-            Introduced = "[[Update 19#Update: The Silver Grove 2.0|Update: The Silver Grove 2.0]]",
-            -- JumpAttack = 240,
+            Introduced = "TSG 2",
             Mastery = 11,
             Name = "Heliocor Synoid",
             NormalAttack = {
@@ -9288,7 +9338,6 @@ local WeaponData = {
             WallAttack = 240
         },
         ["Tatsu"] = {
-            -- BlockResist = 0.60,
             Class = "Nikana à Deux Mains",
             Conclave = true,
             Cost = {
@@ -9311,8 +9360,7 @@ local WeaponData = {
             Disposition = 1.0,
             Family = "Tatsu",
             Image = "Tatsu.png",
-            Introduced = "[[Update 24#Update 24.4|Update 24.4]]",
-            -- JumpAttack = 96,
+            Introduced = "24.4",
             Mastery = 7,
             Name = "Tatsu",
             NormalAttack = {
@@ -9356,7 +9404,6 @@ local WeaponData = {
             WallAttack = 192
         },
         ["Tekko"] = {
-            -- BlockResist = 0.6,
             Class = "Poings",
             Conclave = true,
             Cost = {
@@ -9375,8 +9422,7 @@ local WeaponData = {
             Disposition = 1.4,
             Family = "Tekko",
             Image = "Tekko.png",
-            Introduced = "[[Update 17#Update 17.5|Update 17.5]]",
-            -- JumpAttack = 45,
+            Introduced = "17.5",
             Mastery = 6,
             MeleeRange = 1.25,
             Name = "Tekko",
@@ -9419,7 +9465,6 @@ local WeaponData = {
             WallAttack = 135
         },
         ["Tekko Prime"] = {
-            -- BlockResist = 0.6,
             Class = "Poings",
             Conclave = false,
             Cost = {
@@ -9435,8 +9480,7 @@ local WeaponData = {
             Disposition = 1.4,
             Family = "Tekko",
             Image = "Tekko Prime.png",
-            Introduced = "[[Update 25#Update 25.8|Update 25.8]]",
-            -- JumpAttack = 56,
+            Introduced = "25.8",
             Mastery = 12,
             MeleeRange = 1.35,
             Name = "Tekko Prime",
@@ -9479,14 +9523,12 @@ local WeaponData = {
             WallAttack = 168
         },
         ["Boltace Telos"] = {
-            -- BlockResist = 0.6,
             Class = "Tonfa",
             Conclave = true,
             Disposition = 1.0,
             Family = "Boltace",
             Image = "BoltaceTelos.png",
-            Introduced = "[[Update 19#Update: The Silver Grove 2.0|Update: The Silver Grove 2.0]]",
-            -- JumpAttack = 170,
+            Introduced = "TSG 2",
             Mastery = 11,
             Name = "Boltace Telos",
             NormalAttack = {
@@ -9529,7 +9571,6 @@ local WeaponData = {
             WallAttack = 340
         },
         ["Tipedo"] = {
-            -- BlockResist = 0.6,
             Class = "Bâton",
             Conclave = true,
             Cost = {
@@ -9548,8 +9589,7 @@ local WeaponData = {
             Disposition = 1.31,
             Family = "Tipedo",
             Image = "Tipedo.png",
-            Introduced = "[[Update 15#Update 15.9|Update 15.9]]",
-            -- JumpAttack = 100,
+            Introduced = "15.9",
             Mastery = 3,
             Name = "Tipedo",
             NormalAttack = {
@@ -9593,11 +9633,12 @@ local WeaponData = {
             WallAttack = 83
         },
         ["Tipedo Prime"] = {
-            -- BlockResist = 0.6,
             Class = "Bâton",
             Conclave = true,
             Cost = {
                 Credits = 20000,
+                --BPCost = 50000,
+                --MarketCost = 180,
                 Rush = 50,
                 Time = 12,
                 Parts = {
@@ -9606,13 +9647,16 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
                 }
             },
-            Disposition = 1.31,
+            Name = "Tipedo Prime",
             Family = "Tipedo",
             Image = "Tipedo_Prime.png",
-            Introduced = "[[Update 24#Hotfix 24.5.8|Hotfix 24.5.8]]",
-            -- JumpAttack = 76.0,
+            Introduced = "24.5.8",
+            Traits = {"Prime"},
             Mastery = 10,
-            Name = "Tipedo Prime",
+            Type = "Mêlée",
+            Polarities = {"V", "D"},
+            StancePolarity = "R",
+            Disposition = 1.25,
             NormalAttack = {
                 Damage = {
                     ["Impact"] = 17,
@@ -9624,16 +9668,11 @@ local WeaponData = {
                 StatusChance = 0.24,
                 FireRate = 1.17
             },
-            Polarities = {"D", "V"},
-            SlideAttack = 163,
-            StancePolarity = "R",
-            Traits = {"Prime"},
-            Type = "Mêlée",
             MeleeSlam = {
                 Damage = 510.0,
                 Element = nil,
                 RadialDamage = 170.0,
-                RadialElement = nil,
+                RadialElement = "Impact",
                 Radius = 6.0
             },
             MeleeHeavy = {
@@ -9646,11 +9685,11 @@ local WeaponData = {
                 SlamRadialElement = nil,
                 SlamRadius = 7.0
             },
-            BlockAngle = 60,
-            MeleeComboDur = 5.0,
+            SlideAttack = 163,
+		    BlockAngle = 60,
             FollowThrough = 0.5,
-            MeleeRange = 3.0,
-            WallAttack = 127
+            MeleeComboDur = 5.0,
+            MeleeRange = 3.00
         },
         ["Tonbo"] = {
             Cost = {
@@ -9669,13 +9708,11 @@ local WeaponData = {
                     {Name = "Oxium", Type = "Ressource", Count = 100}
                 }
             },
-            -- BlockResist = 0.85,
             Class = "Arme d'Hast",
             Conclave = true,
             Disposition = 1.38,
             Image = "Tonbo.png",
-            Introduced = "[[Update 15#Update 15.15|Update 15.15]]",
-            -- JumpAttack = 160,
+            Introduced = "15.15",
             Mastery = 3,
             Name = "Tonbo",
             NormalAttack = {
@@ -9718,7 +9755,6 @@ local WeaponData = {
             WallAttack = 133
         },
         ["Basolk Jumeaux"] = {
-            -- BlockResist = 0.35,
             Class = "Doubles Épées",
             Conclave = true,
             Cost = {
@@ -9739,8 +9775,7 @@ local WeaponData = {
             },
             Disposition = 1.18,
             Image = "BasolkJumeaux.png",
-            Introduced = "[[Update 17#Update 17.8|Update 17.8]]",
-            -- JumpAttack = 130,
+            Introduced = "17.8",
             Mastery = 7,
             Name = "Basolk Jumeaux",
             NormalAttack = {
@@ -9785,7 +9820,6 @@ local WeaponData = {
             WallAttack = 260
         },
         ["Krohkur Jumeaux"] = {
-            -- BlockResist = 0.6,
             Class = "Doubles Épées",
             Conclave = true,
             Cost = {
@@ -9808,8 +9842,7 @@ local WeaponData = {
             Disposition = 1.2,
             Family = "Krohkur Jumeaux",
             Image = "DualGrnEgyptSwords.png",
-            Introduced = "[[Update 22#Update 22|Update 22]]",
-            -- JumpAttack = 140,
+            Introduced = "22.0",
             Mastery = 10,
             Name = "Krohkur Jumeaux",
             NormalAttack = {
@@ -9852,14 +9885,12 @@ local WeaponData = {
             WallAttack = 280
         },
         ["Sydon Vaykor"] = {
-            -- BlockResist = 0.85,
             Class = "Arme d'Hast",
             Conclave = true,
-            Disposition = 0.84,
+            Disposition = 1.3,
             Family = "Sydon",
             Image = "SMSydon.png",
-            Introduced = "[[Update 19#Update: The Silver Grove 2.0|Update: The Silver Grove 2.0]]",
-            -- JumpAttack = 170,
+            Introduced = "TSG 2",
             JumpElement = "Explosif",
             Mastery = 11,
             Name = "Sydon Vaykor",
@@ -9912,14 +9943,12 @@ local WeaponData = {
                     {Name = "Forma", Type = "Ressource", Count = 1}
                 }
             },
-            -- BlockResist = 0.35,
             Class = "Griffes",
             Conclave = true,
-            Disposition = 0.5,
+            Disposition = 1.05,
             Family = "Venka",
             Image = "TennoClaws.png",
-            Introduced = "[[Update 13#Update 13.9|Update 13.9]]",
-            -- JumpAttack = 74,
+            Introduced = "13.9",
             Mastery = 4,
             MeleeRange = 1.75,
             Name = "Venka",
@@ -9972,14 +10001,12 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
                 }
             },
-            -- BlockResist = 0.35,
             Class = "Griffes",
             Conclave = true,
             Disposition = 0.5,
             Family = "Venka",
             Image = "Venka Prime.png",
-            Introduced = "[[Update 19#Hotfix 19.0.7|Hotfix 19.0.7]]",
-            -- JumpAttack = 110,
+            Introduced = "19.0.7",
             Mastery = 14,
             MeleeRange = 1.8,
             Name = "Venka Prime",
@@ -10042,15 +10069,13 @@ local WeaponData = {
                         Count = 10
                     }
                 }
-            }, -- BlockResist = 0.85,
-            -- ChannelCost = 5,
+            },
             Class = "Lame Lourde",
             Conclave = false,
-            Disposition = 0.5,
+            Disposition = 0.85,
             Family = "Vitrica",
             Image = "Vitrica.png",
-            Introduced = "[[Update 29#Update 29.3|Update 29.3]]",
-            -- JumpAttack = 333,
+            Introduced = "29.3",
             Mastery = 13,
             Name = "Vitrica",
             NormalAttack = {
@@ -10081,7 +10106,6 @@ local WeaponData = {
                 StatusChance = 0.33,
                 Radius = 6.0,
                 Falloff = {StartRange = 0, EndRange = 6, Reduction = 0.9}
-                -- FireRate = 0.833
             },
             MeleeSlam = {
                 Damage = 999.0,
@@ -10107,7 +10131,6 @@ local WeaponData = {
             WallAttack = 333
         },
         ["Volnus"] = {
-            -- BlockResist = 0.85,
             Class = "Marteau",
             Conclave = true,
             Cost = {
@@ -10129,8 +10152,7 @@ local WeaponData = {
             Disposition = 1.2,
             Family = "Volnus",
             Image = "GlassHammer.png",
-            Introduced = "[[Update 22|Plaines d'Eidolon]]",
-            -- JumpAttack = 200,
+            Introduced = "22.0",
             Mastery = 9,
             Name = "Volnus",
             NormalAttack = {
@@ -10172,6 +10194,63 @@ local WeaponData = {
             MeleeRange = 2.9,
             WallAttack = 200
         },
+        ["Volnus Prime"] = {
+            Cost = {
+                Credits = 15000,
+                Rush = 50,
+                Time = 12,
+                Parts = {
+                    {Name = "Lame", Type = "Partie Prime", Count = 1},
+                    {Name = "Poignée", Type = "Partie Prime", Count = 1},
+                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
+                }
+            },
+            Class = "Marteau",
+            Conclave = true,
+            Disposition = 0.5,
+            Family = "Volnus",
+            Image = "VolnusPrime.png",
+            Introduced = "30.3",
+            Mastery = 14,
+            Name = "Volnus Prime",
+            NormalAttack = {
+                Damage = {
+                    ["Impact"] = 55.0,
+					["Perforation"] = 80.0,
+					["Tranchant"] = 115.0
+                },
+                CritChance = 0.2,
+                CritMultiplier = 1.8,
+                StatusChance = 0.34,
+                FireRate = 1.2,
+            },
+            SlideAttack = 500.0,
+            MeleeSlam = {
+                Damage = 750.0,
+                Element = nil,
+                RadialDamage = 250.0,
+                RadialElement = nil,
+                Radius = 10.0
+            },
+            MeleeHeavy = {
+                Damage = 1500.0,
+                Element = nil,
+                WindUp = 1.1,
+                SlamDamage = 1250.0,
+                SlamElement = nil,
+                SlamRadialDamage = 1250.0,
+                SlamRadialElement = nil,
+                SlamRadius = 10.0
+            },
+            BlockAngle = 50,
+            MeleeComboDur = 5.0,
+            FollowThrough = 0.6,
+            MeleeRange = 2.9,
+            Polarities = {"V", "V"},
+            StancePolarity = "V",
+            Traits = {"Prime"},
+            Type = "Mêlée",
+        },
         ["War"] = {
             Cost = {
                 Credits = 20000,
@@ -10184,13 +10263,11 @@ local WeaponData = {
                     {Name = "War Brisée", Type = "Arme", Count = 1}
                 }
             },
-            -- BlockResist = 0.85,
             Class = "Lame Lourde",
             Conclave = true,
-            Disposition = 0.5,
+            Disposition = 1,
             Image = "StalkerTwoGreatSword.png",
-            Introduced = "[[Update 18#Update 18.0|Update 18.0]]",
-            -- JumpAttack = 280,
+            Introduced = "18.0",
             Mastery = 10,
             Name = "War",
             NormalAttack = {
@@ -10243,13 +10320,11 @@ local WeaponData = {
                     {Name = "Moteur", Type = "Objet", Count = 1}
                 }
             },
-            -- BlockResist = 0.85,
             Class = "Marteau",
             Conclave = true,
             Disposition = 0.96,
             Image = "Marteau_du_Loup.png",
-            Introduced = "[[Update 24#Update 24.3|Update 24.3]]",
-            -- JumpAttack = 115,
+            Introduced = "24.3",
             Mastery = 7,
             Name = "Marteau du Loup",
             NormalAttack = {
@@ -10263,7 +10338,6 @@ local WeaponData = {
                 StatusChance = 0.33,
                 FireRate = 1.0
             },
-            -- Polarities = {"Bar"},
             SlideAttack = 230,
             StancePolarity = "V",
             Type = "Mêlée",
@@ -10337,7 +10411,7 @@ local WeaponData = {
             Disposition = 0.5,
             FollowThrough = 0.7,
             Image = "Xoris.png",
-            Introduced = "[[Update 28#Update 28|Update 28]]",
+            Introduced = "28.0",
             Mastery = 4,
             MeleeRange = 1.3,
             MeleeSlam = {
@@ -10391,17 +10465,15 @@ local WeaponData = {
                 Damage = {["Feu"] = 350},
                 Radius = 4
             },
-            -- BlockResist = 0.85,
             ChargeAttack = {
                 AttackName = "Impact Disque",
                 Damage = {["Impact"] = 75},
                 Range = 9
             },
             Class = "Lame Lourde",
-            Disposition = 0.5,
+            Disposition = 1.1,
             Image = "Zenistar.png",
-            Introduced = "[[Update 19#Specters of the Rail 1.0|Update: Specters of the Rail 1.0]]",
-            -- JumpAttack = 260,
+            Introduced = "SotR 1",
             JumpElement = "Feu",
             Mastery = 6,
             Name = "Zenistar",
@@ -10476,7 +10548,7 @@ local WeaponData = {
             Class = "Pistolet",
             Disposition = 1.33,
             Image = "Acrid.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
+            Introduced = "8.0",
             Magazine = 15,
             Mastery = 7,
             MaxAmmo = 210,
@@ -10515,7 +10587,7 @@ local WeaponData = {
             Disposition = 1.39,
             Family = "Afuris",
             Image = "Afuris.png",
-            Introduced = "[[Closed Beta Updates#Update 5.3|Update 5.3]]",
+            Introduced = "5.3",
             Magazine = 70,
             Mastery = 4,
             MaxAmmo = 210,
@@ -10558,7 +10630,7 @@ local WeaponData = {
             },
             Disposition = 1.0,
             Image = "Akarius.png",
-            Introduced = "[[Update 25#Update 25.7|Update 25.7]]",
+            Introduced = "25.7",
             Magazine = 10,
             Mastery = 8,
             MaxAmmo = 20,
@@ -10597,10 +10669,10 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 1}
                 }
             },
-            Disposition = 0.8,
+            Disposition = 1.3,
             Family = "Akbolto",
             Image = "Akbolto.png",
-            Introduced = "[[Closed Beta Updates#Update 6.0|Update 6.0]]",
+            Introduced = "6.0",
             Magazine = 30,
             Mastery = 9,
             MaxAmmo = 210,
@@ -10635,10 +10707,10 @@ local WeaponData = {
                     {Name = "Lien", Type = "Partie Prime", Count = 1}
                 }
             },
-            Disposition = 0.8,
+            Disposition = 1.15,
             Family = "Akbolto",
             Image = "PrimeAkbolto.png",
-            Introduced = "[[Update 22#Update 22.7|Update 22.7]]",
+            Introduced = "22.7",
             Magazine = 40,
             Mastery = 13,
             MaxAmmo = 210,
@@ -10680,7 +10752,7 @@ local WeaponData = {
             Disposition = 1.25,
             Family = "Akbronco",
             Image = "DoubleBroncos.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
+            Introduced = "8.0",
             Magazine = 4,
             Mastery = 2,
             MaxAmmo = 210,
@@ -10723,7 +10795,7 @@ local WeaponData = {
             Disposition = 1.25,
             Family = "Akbronco",
             Image = "DEPrimeDualBroncos.png",
-            Introduced = "[[Update 12#Update 12.4|Update 12.4]]",
+            Introduced = "12.4",
             Magazine = 8,
             Mastery = 10,
             MaxAmmo = 210,
@@ -10765,10 +10837,10 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 2}
                 }
             },
-            Disposition = 1.25,
+            Disposition = 1.05,
             Family = "Akjagara",
             Image = "AkJagara.png",
-            Introduced = "[[Update 15#Update 15.13|Update 15.13]]",
+            Introduced = "15.13",
             Magazine = 36,
             Mastery = 8,
             MaxAmmo = 210,
@@ -10807,10 +10879,10 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
                 }
             },
-            Disposition = 1.25,
+            Disposition = 0.9,
             Family = "Akjagara",
             Image = "AkjagaraPrime.png",
-            Introduced = "[[Update 24#Hotfix 24.2.2|Hotfix 24.2.2]]",
+            Introduced = "24.2.2",
             Magazine = 40,
             Mastery = 12,
             MaxAmmo = 320,
@@ -10842,7 +10914,7 @@ local WeaponData = {
             Cost = {Credits = 25000},
             Disposition = 1.52,
             Image = "Aklato.png",
-            Introduced = "[[Closed Beta Updates#Vanilla|Vanilla]]",
+            Introduced = "Vanilla",
             Magazine = 30,
             Mastery = 3,
             MaxAmmo = 210,
@@ -10883,7 +10955,7 @@ local WeaponData = {
             Disposition = 0.85,
             Family = "Aklex",
             Image = "DEAklex.png",
-            Introduced = "[[Update 11#Update 11.1|Update 11.1]]",
+            Introduced = "11.1",
             Magazine = 12,
             Mastery = 4,
             MaxAmmo = 210,
@@ -10923,7 +10995,7 @@ local WeaponData = {
             Disposition = 0.85,
             Family = "Aklex",
             Image = "Aklex Prime.png",
-            Introduced = "[[Update 19#Hotfix 19.8.1|Hotfix 19.8.1]]",
+            Introduced = "19.8.1",
             Magazine = 16,
             Mastery = 15,
             MaxAmmo = 210,
@@ -10963,7 +11035,7 @@ local WeaponData = {
             },
             Disposition = 1.28,
             Image = "DEAkmagnus.png",
-            Introduced = "[[Update 11#Update 11.9|Update 11.9]]",
+            Introduced = "11.9",
             Magazine = 16,
             Mastery = 12,
             Name = "Akmagnus",
@@ -11003,7 +11075,7 @@ local WeaponData = {
             Disposition = 1.2,
             Family = "Aksomati",
             Image = "Aksomati.png",
-            Introduced = "[[Update 16#Update 16.3|Update 16.3]]",
+            Introduced = "16.3",
             Magazine = 70,
             Mastery = 9,
             MaxAmmo = 420,
@@ -11043,7 +11115,7 @@ local WeaponData = {
             Disposition = 1,
             Family = "Aksomati",
             Image = "Aksomati Prime.png",
-            Introduced = "[[Update 27#Hotfix 27.0.4|Hotfix 27.0.4]]",
+            Introduced = "27.0.4",
             Magazine = 80,
             Mastery = 12,
             MaxAmmo = 420,
@@ -11083,10 +11155,10 @@ local WeaponData = {
             Accuracy = 23.5,
             Class = "Doubles Pistolets",
             Conclave = true,
-            Disposition = 0.5,
+            Disposition = 0.95,
             Family = "Akstiletto",
             Image = "Akstiletto.png",
-            Introduced = "[[Update 12#Update 12.0|Update 12.0]]",
+            Introduced = "12.0",
             Magazine = 28,
             Mastery = 8,
             MaxAmmo = 210,
@@ -11123,10 +11195,10 @@ local WeaponData = {
             Accuracy = 23.5,
             Class = "Doubles Pistolets",
             Conclave = true,
-            Disposition = 0.5,
+            Disposition = 0.65,
             Family = "Akstiletto",
             Image = "AkstilettoPrime.png",
-            Introduced = "[[Update 18#Update 18.12|Update 18.12]]",
+            Introduced = "18.12",
             Magazine = 40,
             Mastery = 10,
             MaxAmmo = 400,
@@ -11168,7 +11240,7 @@ local WeaponData = {
             Disposition = 1.2,
             Family = "Akvasto",
             Image = "Akvasto.png",
-            Introduced = "[[Update 9#Update 9.7|Update 9.7]]",
+            Introduced = "9.7",
             Magazine = 12,
             Mastery = 8,
             MaxAmmo = 210,
@@ -11208,7 +11280,7 @@ local WeaponData = {
             Disposition = 1.2,
             Family = "Akvasto",
             Image = "AkvastoPrime.png",
-            Introduced = "[[Update 24#Hotfix 24.0.6|Hotfix 24.0.6]]",
+            Introduced = "24.0.6",
             Magazine = 12,
             Mastery = 12,
             MaxAmmo = 210,
@@ -11250,7 +11322,7 @@ local WeaponData = {
             },
             Disposition = 1.52,
             Image = "AkZani.png",
-            Introduced = "[[Update 14#Update 14.0|Update 14.0]]",
+            Introduced = "14.0",
             Magazine = 100,
             Mastery = 4,
             MaxAmmo = 400,
@@ -11268,6 +11340,7 @@ local WeaponData = {
                 ShotType = "Hit-Scan"
             },
             Polarities = {"Bar"},
+            ExilusPolarity = "V",
             Reload = 2,
             Traits = {"Tenno"},
             Trigger = "Auto",
@@ -11309,7 +11382,7 @@ local WeaponData = {
             Family = "Angstrum",
             FireRate = 2,
             Image = "Angstrum.png",
-            Introduced = "[[Update 13#Update 13.3|Update 13.3]]",
+            Introduced = "13.3",
             Magazine = 3,
             Mastery = 4,
             MaxAmmo = 18,
@@ -11363,7 +11436,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 1.0,
             Image = "Arca Scisco.png",
-            Introduced = "[[Update 21#Update 21.7|Update 21.7]]",
+            Introduced = "21.7",
             Magazine = 36,
             Mastery = 10,
             MaxAmmo = 288,
@@ -11385,15 +11458,27 @@ local WeaponData = {
             Zoom = {"2.0x", "4.0x"}
         },
         ["Athodai"] = {
+        	Cost = {
+                Credits = 30000,
+                BPCost = nil,
+                MarketCost = nil,
+                Rush = 35,
+                Time = 24,
+                Parts = {
+                    {Name = "Canon", Type = "Objet", Count = 1},
+                    {Name = "Culasse", Type = "Objet", Count = 1},
+                    {Name = "Cellule Orokin", Type = "Ressource", Count = 5}
+                }
+            },
             Class = "Pistolet",
             Conclave = false,
-            Disposition = 0.5,
+            Disposition = 1,
             ExilusPolarity = "V",
             Image = "Athodai.png",
-            Introduced = "[[Update 28#Update 28.2.0.1|Update 28.2.0.1]]",
+            Introduced = "28.2.1",
             Magazine = 24,
             Mastery = 10,
-            MaxAmmo = 0,
+            MaxAmmo = 48,
             Name = "Athodai",
             NormalAttack = {
                 Accuracy = 50,
@@ -11402,7 +11487,6 @@ local WeaponData = {
                 CritMultiplier = 2.0,
                 StatusChance = 0.08,
                 FireRate = 5.00,
-                -- BurstCount = "?",
                 ShotType = "?",
                 ShotSpeed = "?"
             },
@@ -11414,12 +11498,11 @@ local WeaponData = {
                 CritMultiplier = 2.0,
                 StatusChance = 0.24,
                 FireRate = 12.00,
-                -- ChargeTime = "?",
                 PunchThrough = 2.0,
                 Trigger = "Chargé",
                 ShotType = "?"
             },
-            Polarities = {},
+            Polarities = {"V"},
             Reload = 2.0,
             Traits = {"Tenno"},
             Trigger = "Rafale Auto / Chargé",
@@ -11442,9 +11525,9 @@ local WeaponData = {
                     {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
                 }
             },
-            Disposition = 0.8,
+            Disposition = 0.9,
             Image = "Atomos.png",
-            Introduced = "[[Update 16#Update 16.5|Update 16.5]]",
+            Introduced = "16.5",
             Magazine = 70,
             Mastery = 5,
             MaxAmmo = 350,
@@ -11455,7 +11538,7 @@ local WeaponData = {
                 CritMultiplier = 1.7,
                 StatusChance = 0.21,
                 FireRate = 8,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 15
             },
             Polarities = {"D"},
@@ -11470,7 +11553,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 1.25,
             Image = "Azima.png",
-            Introduced = "[[Update 18#Update 18.5|Update 18.5]]",
+            Introduced = "18.5",
             Magazine = 75,
             Mastery = 6,
             MaxAmmo = 525,
@@ -11535,7 +11618,7 @@ local WeaponData = {
             Disposition = 1.05,
             Family = "Ballistica",
             Image = "DEBallistica.png",
-            Introduced = "[[Update 10#Update 10.4|Update 10.4]]",
+            Introduced = "10.4",
             Magazine = 16,
             Mastery = 2,
             Name = "Ballistica",
@@ -11600,7 +11683,7 @@ local WeaponData = {
             Disposition = 1.05,
             Family = "Ballistica",
             Image = "BallisticaPrime.png",
-            Introduced = "[[Update 21#Update 21.6|Update 21.6]]",
+            Introduced = "21.6",
             Magazine = 32,
             Mastery = 14,
             MaxAmmo = 210,
@@ -11651,7 +11734,7 @@ local WeaponData = {
             Disposition = 1.05,
             Family = "Ballistica",
             Image = "RVBallistica.png",
-            Introduced = "[[Update 15#Update 15.5|Update 15.5]]",
+            Introduced = "15.5",
             Magazine = 20,
             Mastery = 6,
             MaxAmmo = 210,
@@ -11700,7 +11783,7 @@ local WeaponData = {
             Disposition = 1.51,
             Family = "Bolto",
             Image = "Bolto.png",
-            Introduced = "[[Closed Beta Updates#Update 5.3|Update 5.3]]",
+            Introduced = "5.3",
             Magazine = 15,
             Mastery = 7,
             MaxAmmo = 210,
@@ -11749,7 +11832,7 @@ local WeaponData = {
             Disposition = 1,
             ExilusPolarity = "Bar",
             Image = "Bramma Kuva.png",
-            Introduced = "[[Update 27#Update 27.1|Update 27.1]]",
+            Introduced = "27.1",
             Magazine = 1,
             Mastery = 15,
             MaxAmmo = 15,
@@ -11778,7 +11861,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 1.1,
             Image = "Brakk.png",
-            Introduced = "[[Update 10#Update 10.6|Update 10.6]]",
+            Introduced = "10.6",
             Magazine = 5,
             Mastery = 6,
             MaxAmmo = 210,
@@ -11811,7 +11894,7 @@ local WeaponData = {
             ExilusPolarity = "Bar",
             Family = "Brakk",
             Image = "Brakk Kuva.png",
-            Introduced = "[[Update 26#Update 26|Update 26]]",
+            Introduced = "26.0",
             Magazine = 13,
             Mastery = 13,
             MaxAmmo = 221,
@@ -11900,7 +11983,7 @@ local WeaponData = {
             Disposition = 1.35,
             Family = "Bronco",
             Image = "BroncoPrime.png",
-            Introduced = "[[Update 9#Update 9.0|Update 9.0]]",
+            Introduced = "9.0",
             Magazine = 4,
             Mastery = 4,
             MaxAmmo = 210,
@@ -11949,7 +12032,7 @@ local WeaponData = {
             Disposition = 1.35,
             Family = "Castanas",
             Image = "250px-TaserStar.png",
-            Introduced = "[[Update 12#Update 12.2|Update 12.2]]",
+            Introduced = "12.2",
             Magazine = 2,
             Mastery = 3,
             MaxAmmo = 18,
@@ -11976,7 +12059,7 @@ local WeaponData = {
             Disposition = 1.35,
             Family = "Castanas",
             Image = "NLCastanas.png",
-            Introduced = "[[Update 15#Update 15.5|Update 15.5]]",
+            Introduced = "15.5",
             Magazine = 2,
             Mastery = 10,
             MaxAmmo = 18,
@@ -12002,15 +12085,26 @@ local WeaponData = {
 
         ["Catabolyste"] = {
             Accuracy = 6.3,
-            AreaAttack = {
-                AttackName = "Partial Reload Explosion",
-                Damage = {["Corrosif"] = 203},
-                Falloff = {StartRange = 0, EndRange = 5, Reduction = 0.5},
-                Radius = 5
+            ChargeAttack = {
+            	AttackName = "Impact Rechargement Partiel",
+            	Damage = {["Impact"] = 11},
+            	CritChance = 0.11,
+            	CritMultiplier = 2.9,
+            	StatusChance = 0.43
+            },
+            ChargeAreaAttack = {
+            	AttackName = "Explosion Rechargement Partiel",
+            	Damage = {["Corrosif"] = 203},
+            	CritChance = 0.11,
+            	CritMultiplier = 2.9,
+            	Falloff = {StartRange = 0, EndRange = 5, Reduction = 0.5},
+            	Radius = 5,
+            	StatusChance = 0.43
             },
             Class = "Pistolet",
             Conclave = false,
             Cost = {
+            	BPCost = 50000,
                 Credits = 30000,
                 MarketCost = 190,
                 Rush = 35,
@@ -12026,46 +12120,48 @@ local WeaponData = {
                     }
                 }
             },
-            Disposition = 0.5,
+            Disposition = 1,
             ExilusPolarity = "V",
             Family = "Catabolyste",
             Image = "Catabolyste.png",
-            Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            Introduced = "29.5",
             Magazine = 31,
             Mastery = 11,
-            MaxAmmo = 540,
+            MaxAmmo = 155,
             Name = "Catabolyste",
             NormalAttack = {
                 AttackName = "Principale",
                 Damage = {["Corrosif"] = 53},
                 CritChance = 0.11,
                 CritMultiplier = 2.9,
-                StatusChance = 0.1,
+                StatusChance = 0.43,
                 FireRate = 1.0,
                 Falloff = {StartRange = 9, EndRange = 19, Reduction = 0.2},
                 PunchThrough = 0.9,
-                ShotType = "Projectile",
-                ShotSpeed = "?",
-                Trigger = "Semi-Auto"
+                ShotType = "Flux",
+                Trigger = "Maintenu"
             },
             NoiseLevel = "Bruyant",
-            Polarities = {},
+            Polarities = {"V"},
             Reload = 1.7,
             SecondaryAreaAttack = {
-                AttackName = "Reload From Empty Explosion",
-                Damage = {["Corrosif"] = 1997},
-                Falloff = {StartRange = 0, EndRange = 7, Reduction = 0.5}
-            },
-            SecondaryAttack = {
-                AttackName = "Reload From Empty Impact",
-                Damage = {["Impact"] = 11},
+                AttackName = "Explosion Rechargement Complet",
                 CritChance = 0.31,
                 CritMultiplier = 2.9,
+                Damage = {["Corrosif"] = 1997},
+                Falloff = {StartRange = 0, EndRange = 7, Reduction = 0.5},
+                StatusChance = 0.59,
+            },
+            SecondaryAttack = {
+                AttackName = "Impact Rechargement Complet",
+                CritChance = 0.31,
+                CritMultiplier = 2.9,
+                Damage = {["Impact"] = 11},
                 PunchThrough = 0.9,
                 Reload = 2.1,
                 StatusChance = 0.59
             },
-            Trigger = "Semi-Auto",
+            Trigger = "Maintenu",
             Traits = {"Infesté"},
             Type = "Secondaire"
         },
@@ -12089,7 +12185,7 @@ local WeaponData = {
             },
             Disposition = 1.52,
             Image = "CorpusMinigun.png",
-            Introduced = "[[Update 11#Update 11.0|Update 11.0]]",
+            Introduced = "11.0",
             Magazine = 60,
             Mastery = 4,
             MaxAmmo = 420,
@@ -12126,7 +12222,7 @@ local WeaponData = {
             },
             Disposition = 1.0,
             Image = "Cyanex.png",
-            Introduced = "[[Update 25#Update 25.0|Update 25.0]]",
+            Introduced = "25.0",
             Magazine = 11,
             Mastery = 8,
             MaxAmmo = 110,
@@ -12180,7 +12276,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 1.1,
             Image = "Cycron.png",
-            Introduced = "[[Update 20#Update 20.3|Update 20.3]]",
+            Introduced = "20.3",
             Magazine = 40,
             Mastery = 8,
             MaxAmmo = 40,
@@ -12197,7 +12293,7 @@ local WeaponData = {
                 PunchThrough = 1,
                 FireRate = 12,
                 AmmoCost = 0.5,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 24
             },
             Polarities = {"Bar", "Bar"},
@@ -12223,7 +12319,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 1.3,
             Image = "Despair.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
+            Introduced = "8.0",
             Magazine = 10,
             Mastery = 4,
             MaxAmmo = 210,
@@ -12264,7 +12360,7 @@ local WeaponData = {
             Disposition = 1.0,
             Family = "Detron",
             Image = "250px-DECorpusHandCannon.png",
-            Introduced = "[[Update 11#Update 11.5.5|Update 11.5.5]]",
+            Introduced = "11.5.5",
             Magazine = 5,
             Mastery = 6,
             MaxAmmo = 210,
@@ -12296,7 +12392,7 @@ local WeaponData = {
             Disposition = 1.0,
             Family = "Detron",
             Image = "Mara Detron.png",
-            Introduced = "[[Update 15#Hotfix 15.6.3|Hotfix 15.6.3]]",
+            Introduced = "15.6.3",
             Magazine = 8,
             Mastery = 9,
             Name = "Detron Mara",
@@ -12322,7 +12418,7 @@ local WeaponData = {
             Disposition = 1.39,
             Family = "Afuris",
             Image = "DexFuris.png",
-            Introduced = "[[Update 12#Update 12.6|Update 12.6]]",
+            Introduced = "12.6",
             Magazine = 100,
             Mastery = 10,
             MaxAmmo = 400,
@@ -12365,7 +12461,7 @@ local WeaponData = {
             Disposition = 1.3,
             Family = "Doubles Cestra",
             Image = "250px-DualCorpusMinigun.png",
-            Introduced = "[[Update 12#Update 12.0|Update 12.0]]",
+            Introduced = "12.0",
             Magazine = 120,
             Mastery = 7,
             MaxAmmo = 480,
@@ -12393,7 +12489,7 @@ local WeaponData = {
             Disposition = 1.3,
             Family = "Doubles Cestra",
             Image = "PSDualCestra.png",
-            Introduced = "[[Update 15#Update 15.5|Update 15.5]]",
+            Introduced = "15.5",
             Magazine = 120,
             Mastery = 10,
             MaxAmmo = 480,
@@ -12434,7 +12530,7 @@ local WeaponData = {
             },
             Disposition = 1.3,
             Image = "DoublesToxocyst.png",
-            Introduced = "[[Update 18#Update 18.5|Update 18.5]]",
+            Introduced = "18.5",
             Magazine = 12,
             Mastery = 11,
             MaxAmmo = 72,
@@ -12475,7 +12571,7 @@ local WeaponData = {
             },
             Disposition = 1.45,
             Image = "Embolist.png",
-            Introduced = "[[Update 10#Update 10.0|Update 10.0]]",
+            Introduced = "10.0",
             Magazine = 33,
             Mastery = 9,
             MaxAmmo = 210,
@@ -12487,7 +12583,7 @@ local WeaponData = {
                 StatusChance = 0.41,
                 FireRate = 8,
                 AmmoCost = 0.5,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 9
             },
             Polarities = {"Bar"},
@@ -12496,6 +12592,74 @@ local WeaponData = {
             Trigger = "Maintenu",
             Type = "Secondaire"
         },
+        ["Épitaphe"] = {
+	      Accuracy = 80,
+	      Class = "Pistolet",
+	      Conclave = false,
+	      Cost = {
+	        Credits = 20000,
+	        MarketCost = 225,
+	        Rush = 35,
+	        Time = 12,
+	        Parts = {
+	          { Name = "Canon", Type = "Objet",Count = 1 },
+	          { Name = "Culasse", Type = "Objet", Count = 1 },
+	          { Name = "Cellule Orokin", Type = "Ressource", Count = 7 }
+	        }
+	      },
+	      Disposition = 0.5,
+	      ExilusPolarity = "Bar",
+	      Family = "Épitaphe",
+	      Image = "Épitaphe.png",
+	      Introduced = "30",
+	      Magazine = 1,
+	      Mastery = 8,
+	      MaxAmmo = 60,
+	      Name = "Épitaphe",
+	      NormalAttack = {
+      	        AttackName = "Tir Chargé",
+      	        ChargeTime = 0.36,
+      	        Damage = {
+        	        ["Impact"] = 120,
+        	        ["Perforation"] = 45,
+        	        ["Tranchant"] = 135
+    	        },
+	        CritChance = 0.48,
+	        CritMultiplier = 2.6,
+	        StatusChance = 0.04,
+	        PunchThrough = 2,
+	        ShotType = "Projectile",
+	        ShotSpeed = "?",
+	        Trigger = "Charge"
+	      },
+	      SecondaryAttack = {
+	      	    AttackName = "Tir non Chargé",
+	      	    Damage = {
+	      	    	["Impact"] = 40,
+        	        ["Perforation"] = 30,
+        	        ["Tranchant"] = 30
+	      	    },
+	      	CritChance = 0.02,
+	        CritMultiplier = 1.2,
+	        StatusChance = 0.5,
+	      FireRate = 1.5
+	      },
+	      SecondaryAreaAttack = {
+	      	    AttackName = "Explosion Tir non Chargé",
+	      	    Damage = {
+	      	    	["Explosif"] = 20
+	      	    },
+	      	CritChance = 0.02,
+	        CritMultiplier = 1.2,
+	        StatusChance = 0.5,
+	        Radius = 8.0,
+	        Falloff = {StartRange = 0, EndRange = 8, Reduction = 0.8}
+	      },
+	      NoiseLevel = "Bruyant",
+	      Polarities = { "V", "V" },
+	      Reload = 0.6,
+          Type = "Secondaire"
+	    },
         ["Euphona Prime"] = {
             Cost = {
                 Credits = 15000,
@@ -12510,9 +12674,9 @@ local WeaponData = {
             Accuracy = 100,
             Class = "Fusil à Pompe de Poche",
             Conclave = true,
-            Disposition = 0.7,
+            Disposition = 0.8,
             Image = "EuphoraPrime.png",
-            Introduced = "[[Update 19#Hotfix 19.11.5|Hotfix 19.11.5]]",
+            Introduced = "19.11.5",
             Magazine = 5,
             Mastery = 14,
             MaxAmmo = 40,
@@ -12568,7 +12732,7 @@ local WeaponData = {
             Disposition = 1.35,
             Family = "Furis",
             Image = "Furis.png",
-            Introduced = "[[Closed Beta Updates#Vanilla|Vanilla]]",
+            Introduced = "Vanilla",
             Magazine = 35,
             Mastery = 2,
             MaxAmmo = 210,
@@ -12610,7 +12774,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 1.3,
             Image = "GlassKunai.png",
-            Introduced = "[[Update 22#Update: Plains of Eidolon|Update: Plains of Eidolon]]",
+            Introduced = "22.0",
             Magazine = 6,
             Mastery = 7,
             MaxAmmo = 72,
@@ -12670,7 +12834,7 @@ local WeaponData = {
             Disposition = 0.8,
             Family = "Gammacor",
             Image = "Gammacor.png",
-            Introduced = "[[Update 15#Update 15.5|Update 15.5]]",
+            Introduced = "15.5",
             Magazine = 60,
             Mastery = 2,
             MaxAmmo = 240,
@@ -12682,7 +12846,7 @@ local WeaponData = {
                 StatusChance = 0.2,
                 FireRate = 12,
                 AmmoCost = 0.5,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 25
             },
             Polarities = {"D"},
@@ -12711,7 +12875,7 @@ local WeaponData = {
             Disposition = 0.95,
             Family = "Hikou",
             Image = "Hikou.png",
-            Introduced = "[[Update 9#Update 9.0|Update 9.0]]",
+            Introduced = "9.0",
             Magazine = 20,
             Mastery = 2,
             MaxAmmo = 210,
@@ -12753,7 +12917,7 @@ local WeaponData = {
             Disposition = 0.95,
             Family = "Hikou",
             Image = "PrimeHikou.png",
-            Introduced = "[[Update 14#Update 14.8|Update 14.8]]",
+            Introduced = "14.8",
             Magazine = 26,
             Mastery = 4,
             MaxAmmo = 210,
@@ -12797,10 +12961,9 @@ local WeaponData = {
                     }
                 }
             },
-            Disposition = 1.15,
-            -- Conclave = true,
+            Disposition = 1.2,
             Image = "Hystrix.png",
-            Introduced = "[[Update 22#Update 22|Update 22.18]]",
+            Introduced = "22.18",
             Magazine = 16,
             Mastery = 7,
             MaxAmmo = 320,
@@ -12854,7 +13017,7 @@ local WeaponData = {
             },
             Disposition = 1.15,
             Image = "Knell.png",
-            Introduced = "[[Update 21#Update 21.0|Update 21.0]]",
+            Introduced = "21.0",
             Magazine = 1,
             Mastery = 10,
             MaxAmmo = 10,
@@ -12911,7 +13074,7 @@ local WeaponData = {
             },
             Disposition = 1.35,
             Image = "Kohmak.png",
-            Introduced = "[[Update 16#Update 16.0|Update 16.0]]",
+            Introduced = "16.0",
             Magazine = 40,
             Mastery = 5,
             Name = "Kohmak",
@@ -12965,7 +13128,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 1.25,
             Image = "KohmakJumeaux.png",
-            Introduced = "[[Update 16#Update 16.0|Update 16.0]]",
+            Introduced = "16.0",
             Magazine = 80,
             Mastery = 10,
             MaxAmmo = 240,
@@ -13012,7 +13175,7 @@ local WeaponData = {
             },
             Disposition = 1.53,
             Image = "Kraken.png",
-            Introduced = "[[Closed Beta Updates#Update 6.3|Update 6.3]]",
+            Introduced = "6.3",
             Magazine = 14,
             Mastery = 0,
             MaxAmmo = 210,
@@ -13044,7 +13207,7 @@ local WeaponData = {
             ExilusPolarity = "Bar",
             Family = "Kraken",
             Image = "Kraken Kuva.png",
-            Introduced = "[[Update 26#Update 26|Update 26]]",
+            Introduced = "26.0",
             Magazine = 21,
             Mastery = 15,
             MaxAmmo = 210,
@@ -13103,7 +13266,7 @@ local WeaponData = {
             },
             Disposition = 1.25,
             Image = "Kulstar.png",
-            Introduced = "[[Update 17#Update 17.0|Update 17.0]]",
+            Introduced = "17.0",
             Magazine = 3,
             Mastery = 5,
             MaxAmmo = 15,
@@ -13154,7 +13317,7 @@ local WeaponData = {
             Disposition = 1.51,
             Family = "Kunai",
             Image = "Kunai.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
+            Introduced = "8.0",
             Magazine = 10,
             Mastery = 2,
             MaxAmmo = 210,
@@ -13188,7 +13351,7 @@ local WeaponData = {
             Disposition = 1.35,
             Family = "Lato",
             Image = "Lato.png",
-            Introduced = "[[Closed Beta Updates#Vanilla|Vanilla]]",
+            Introduced = "Vanilla",
             Magazine = 15,
             Mastery = 0,
             MaxAmmo = 210,
@@ -13219,7 +13382,7 @@ local WeaponData = {
             Disposition = 1.35,
             Family = "Lato",
             Image = "LatoPrime.png",
-            Introduced = "[[Closed Beta Updates#Update 5.0|Update 5.0]]",
+            Introduced = "5.0",
             Magazine = 20,
             Mastery = 14,
             MaxAmmo = 210,
@@ -13258,7 +13421,7 @@ local WeaponData = {
             Disposition = 1.35,
             Family = "Lato",
             Image = "Lato Vandal.png",
-            Introduced = "[[Update 7#Update 7.0|Update 7.0]]",
+            Introduced = "7.0",
             Magazine = 15,
             Mastery = 7,
             MaxAmmo = 210,
@@ -13289,7 +13452,7 @@ local WeaponData = {
             Disposition = 0.7,
             Family = "Lex",
             Image = "Lex.png",
-            Introduced = "[[Closed Beta Updates#Vanilla|Vanilla]]",
+            Introduced = "Vanilla",
             Magazine = 6,
             Mastery = 3,
             MaxAmmo = 210,
@@ -13331,7 +13494,7 @@ local WeaponData = {
             Disposition = 0.7,
             Family = "Lex",
             Image = "PrimeLex.png",
-            Introduced = "[[Update 13#Update 13.0|Update 13.0]]",
+            Introduced = "13.0",
             Magazine = 8,
             Mastery = 8,
             MaxAmmo = 210,
@@ -13374,7 +13537,7 @@ local WeaponData = {
             },
             Disposition = 1.53,
             Image = "TennoMagnum.png",
-            Introduced = "[[Update 11#Update 11.2|Update 11.2]]",
+            Introduced = "11.2",
             Magazine = 8,
             Mastery = 10,
             MaxAmmo = 210,
@@ -13422,7 +13585,7 @@ local WeaponData = {
             Disposition = 0.8,
             Family = "Marelok",
             Image = "250px-GrineerLeverActionPistol.png",
-            Introduced = "[[Update 12#Update 12.3|Update 12.3]]",
+            Introduced = "12.3",
             Magazine = 6,
             Mastery = 7,
             Name = "Marelok",
@@ -13457,7 +13620,7 @@ local WeaponData = {
             Disposition = 0.8,
             Family = "Marelok",
             Image = "SMMarelok.png",
-            Introduced = "[[Update 15#Update 15.5|Update 15.5]]",
+            Introduced = "15.5",
             Magazine = 10,
             Mastery = 10,
             Name = "Marelok Vaykor",
@@ -13488,7 +13651,7 @@ local WeaponData = {
             Disposition = 1.35,
             Family = "Furis",
             Image = "Furis.png",
-            Introduced = "[[Update 14#Update 14.0|Update 14.0]]",
+            Introduced = "14.0",
             Magazine = 35,
             Mastery = 0,
             MaxAmmo = 210,
@@ -13518,7 +13681,7 @@ local WeaponData = {
             Disposition = 1.51,
             Family = "Kunai",
             Image = "Kunai.png",
-            Introduced = "[[Update 14#Update 14.0|Update 14.0]]",
+            Introduced = "14.0",
             Magazine = 10,
             Mastery = 0,
             MaxAmmo = 210,
@@ -13565,7 +13728,7 @@ local WeaponData = {
             },
             Disposition = 1.45,
             Image = "Nukor.png",
-            Introduced = "[[Update 14#Update 14.5|Update 14.5]]",
+            Introduced = "14.5",
             Magazine = 50,
             Mastery = 4,
             MaxAmmo = 210,
@@ -13577,7 +13740,7 @@ local WeaponData = {
                 StatusChance = 0.29,
                 FireRate = 10,
                 AmmoCost = 0.5,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 25
             },
             Reload = 2,
@@ -13596,7 +13759,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Nukor",
             Image = "Nukor Kuva.png",
-            Introduced = "[[Update 27#Update 27.1|Update 27.1]]",
+            Introduced = "27.1",
             Magazine = 77,
             Mastery = 13,
             MaxAmmo = 210,
@@ -13608,7 +13771,7 @@ local WeaponData = {
                 CritMultiplier = 5,
                 StatusChance = 0.5,
                 FireRate = 10,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 29
             },
             Reload = 2.0,
@@ -13636,7 +13799,7 @@ local WeaponData = {
             },
             Disposition = 1.1,
             Image = "Ocucor.png",
-            Introduced = "[[Update 24#Update 24.0|Update 24]]",
+            Introduced = "24.0",
             Magazine = 60,
             Mastery = 8,
             MaxAmmo = 300,
@@ -13648,7 +13811,7 @@ local WeaponData = {
                 StatusChance = 0.24,
                 FireRate = 12,
                 AmmoCost = 0.5,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 20
             },
             Reload = 1.6,
@@ -13675,7 +13838,7 @@ local WeaponData = {
             },
             Disposition = 0.95,
             Image = "Pandero.png",
-            Introduced = "[[Update 20#Update: Octavia's Anthem|Update: Octavia's Anthem]]",
+            Introduced = "20.0",
             Magazine = 8,
             Mastery = 8,
             MaxAmmo = 210,
@@ -13708,6 +13871,58 @@ local WeaponData = {
             Trigger = "Semi-Auto / Rafale",
             Type = "Secondaire"
         },
+        ["Pandero Prime"] = {
+		Accuracy = 16,
+		Class = "Pistolet",
+		Conclave = true,
+		Cost = {
+			Credits = 20000,
+			Rush = 35,
+			Time = 12,
+			Parts = {
+				{ Name = "Canon",Type = "Partie Prime",Count = 1,},
+				{ Name = "Culasse",Type = "Partie Prime",Count = 1,},
+				{ Name = "Cellule Orokin",Type = "Ressource",Count = 10,},},
+		},
+		Disposition = 0.75,
+		ExilusPolarity = "V",
+		Image = "Pandero Prime.png",
+		Introduced = "29.9",
+		Family = "Pandero",
+		Magazine = 8,
+		Mastery = 14,
+		MaxAmmo = 210,
+		Name = "Pandero Prime",
+		NormalAttack = {
+			Damage = {
+				["Impact"] = 26,
+				["Perforation"] = 26,
+				["Tranchant"] = 52,},
+			CritChance = 0.3,
+			CritMultiplier = 2.8,
+			StatusChance = 0.24,
+			FireRate = 3,
+			ShotType = "Hit-Scan",
+		},
+		Polarities = {"V"},
+		Reload = 1,
+		SecondaryAttack = {
+			Damage = {
+				["Impact"] = 26,
+				["Perforation"] = 26,
+				["Tranchant"] = 52,},
+			Accuracy = 8.2,
+			CritChance = 0.3,
+			CritMultiplier = 2.8,
+			StatusChance = 0.24,
+			FireRate = 7.69,
+			AmmoCost = 8,
+			Trigger = "Burst",
+		},
+		Traits = {"Prime"},
+		Trigger = "Semi-Auto / Rafale",
+		Type = "Secondaire",
+	},
         ["Plinx"] = {
             Accuracy = 50.0,
             Class = "Pistolet",
@@ -13730,7 +13945,7 @@ local WeaponData = {
             },
             Disposition = 1.1,
             Image = "Plinx.png",
-            Introduced = "[[Update 24#Update 24.2|Update 24.2]]",
+            Introduced = "24.2",
             Magazine = 10,
             Mastery = 6,
             MaxAmmo = 10,
@@ -13772,9 +13987,9 @@ local WeaponData = {
             },
             Class = "Arme de Lancer",
             Conclave = true,
-            Disposition = 1.05,
+            Disposition = 1.2,
             Image = "Pox.png",
-            Introduced = "[[Update 19#Update: The Silver Grove|Update: The Silver Grove]]",
+            Introduced = "TSG",
             Magazine = 4,
             Mastery = 9,
             MaxAmmo = 20,
@@ -13819,7 +14034,7 @@ local WeaponData = {
             Family = "Angstrum",
             FireRate = 2,
             Image = "Angstrum Prisma.png",
-            Introduced = "[[Update 21#Update 21.7|Update 21.7]]",
+            Introduced = "21.7",
             Magazine = 3,
             Mastery = 8,
             MaxAmmo = 18,
@@ -13869,7 +14084,7 @@ local WeaponData = {
             Disposition = 1.3,
             Family = "Gremlins Jumeaux",
             Image = "GremlinsJumeaux.png",
-            Introduced = "[[Update 9#Update 9.5|Update 9.5]]",
+            Introduced = "9.5",
             Magazine = 30,
             Mastery = 5,
             MaxAmmo = 210,
@@ -13900,7 +14115,7 @@ local WeaponData = {
             Disposition = 1.3,
             Family = "Gremlins Jumeaux",
             Image = "PrismaTwinGremlins.png",
-            Introduced = "[[Update 23#Hotfix 23.4.2|Hotfix 23.4.2]]",
+            Introduced = "23.4.2",
             Magazine = 70,
             Mastery = 11,
             MaxAmmo = 600,
@@ -13945,10 +14160,10 @@ local WeaponData = {
             Accuracy = 5,
             Class = "Fusil à Pompe de Poche",
             Conclave = true,
-            Disposition = 0.8,
+            Disposition = 0.95,
             Family = "Pyrana",
             Image = "250px-SawnOffShotgun.png",
-            Introduced = "[[Update 13#Update 13.6|Update 13.6]]",
+            Introduced = "13.6",
             Magazine = 10,
             Mastery = 12,
             MaxAmmo = 210,
@@ -13989,7 +14204,7 @@ local WeaponData = {
             Disposition = 0.8,
             Family = "Pyrana",
             Image = "PyranaPrime.png",
-            Introduced = "[[Update 23#Hotfix 23.0.3|Hotfix 23.0.3]]",
+            Introduced = "23.0.3",
             Magazine = 12,
             Mastery = 13,
             MaxAmmo = 210,
@@ -14017,7 +14232,6 @@ local WeaponData = {
         ["Quatz"] = {
             Accuracy = 40.0,
             Class = "Pistolet",
-            -- Conclave = true,
             Cost = {
                 Credits = 30000,
                 BPCost = 40000,
@@ -14034,9 +14248,9 @@ local WeaponData = {
                     }
                 }
             },
-            Disposition = 1.0,
+            Disposition = 1.2,
             Image = "Quatz.png",
-            Introduced = "[[Update 25#Update 25.4.0|Update 25.4.0]]",
+            Introduced = "25.4",
             Magazine = 72,
             Mastery = 9,
             MaxAmmo = 210,
@@ -14054,7 +14268,6 @@ local WeaponData = {
                 CritMultiplier = 1.5,
                 StatusChance = 0.27,
                 FireRate = 15.0
-                -- ShotType = "Hit-Scan",
             },
             Reload = 2.7,
             SecondaryAttack = {
@@ -14071,8 +14284,6 @@ local WeaponData = {
                 StatusChance = 0.19,
                 FireRate = 10.0,
                 BurstCount = 4
-                -- ShotType = "Projectile",
-                -- ShotSpeed = 100,
             },
             Trigger = "Auto / Rafale",
             Type = "Secondaire"
@@ -14093,7 +14304,7 @@ local WeaponData = {
             },
             Disposition = 1.5,
             Image = "Prophète.png",
-            Introduced = "[[Update 9#Update 9.0|Update 9.0]]",
+            Introduced = "9.0",
             Magazine = 8,
             Mastery = 0,
             MaxAmmo = 210,
@@ -14125,7 +14336,7 @@ local WeaponData = {
             ExilusPolarity = "Bar",
             Family = "Seer",
             Image = "Seer Kuva.png",
-            Introduced = "[[Update 26#Update 26|Update 26]]",
+            Introduced = "26.0",
             Magazine = 9,
             Mastery = 15,
             MaxAmmo = 27,
@@ -14174,10 +14385,10 @@ local WeaponData = {
                     {Name = "Culasse", Type = "Objet", Count = 1}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 0.95,
             ExilusPolarity = "V",
             Image = "Sepulcrum.png",
-            Introduced = "[[Update 29]]",
+            Introduced = "29.0",
             Magazine = 90,
             Mastery = 14,
             MaxAmmo = 180,
@@ -14268,7 +14479,7 @@ local WeaponData = {
             Disposition = 1.15,
             Family = "Sicarus",
             Image = "PrimeSicarus.png",
-            Introduced = "[[Update 11#Update 11.0|Update 11.0]]",
+            Introduced = "11.0",
             Magazine = 24,
             Mastery = 14,
             MaxAmmo = 210,
@@ -14322,7 +14533,7 @@ local WeaponData = {
             },
             Disposition = 0.8,
             Image = "Sonicor.png",
-            Introduced = "[[Update 17#Update 17.5|Update 17.5]]",
+            Introduced = "17.5",
             Magazine = 15,
             Mastery = 2,
             MaxAmmo = 150,
@@ -14363,7 +14574,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 1.49,
             Image = "Spectra.png",
-            Introduced = "[[Update 9#Update 9.0|Update 9.0]]",
+            Introduced = "9.0",
             Magazine = 60,
             Mastery = 4,
             MaxAmmo = 360,
@@ -14376,7 +14587,7 @@ local WeaponData = {
                 PunchThrough = 0.5,
                 FireRate = 12,
                 AmmoCost = 0.5,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 18
             },
             Reload = 1.8,
@@ -14391,7 +14602,7 @@ local WeaponData = {
             Disposition = 1.49,
             Family = "Spectra",
             Image = "SpectraVandal.png",
-            Introduced = "[[Update 25#Update 25.0|Update 25.0]]",
+            Introduced = "25.0",
             Cost = {
                 Credits = 25000,
                 Rush = 25,
@@ -14439,7 +14650,7 @@ local WeaponData = {
             Disposition = 1.0,
             Family = "Spira",
             Image = "Spira.png",
-            Introduced = "[[Update 17#Update 17.4.5|Update 17.4.5]]",
+            Introduced = "17.4.5",
             Magazine = 10,
             Mastery = 8,
             MaxAmmo = 210,
@@ -14480,7 +14691,7 @@ local WeaponData = {
             Disposition = 1.0,
             Family = "Spira",
             Image = "SpiraPrime.png",
-            Introduced = "[[Update 18#Hotfix 18.4.12|Hotfix 18.4.12]]",
+            Introduced = "18.4.12",
             Magazine = 12,
             Mastery = 10,
             MaxAmmo = 210,
@@ -14537,9 +14748,9 @@ local WeaponData = {
             },
             Class = "Doubles Pistolets",
             Conclave = true,
-            Disposition = 0.53,
+            Disposition = 0.7,
             Image = "Staticor-arme.png",
-            Introduced = "[[Update 18#Update 18.4.7|Update 18.4.7]]",
+            Introduced = "18.4.7",
             Magazine = 48,
             Mastery = 10,
             MaxAmmo = 288,
@@ -14594,7 +14805,7 @@ local WeaponData = {
             },
             Disposition = 1.48,
             Image = "Stug.png",
-            Introduced = "[[Update 11#Update 11.5|Update 11.5]]",
+            Introduced = "11.5",
             Magazine = 20,
             Mastery = 2,
             Name = "Stug",
@@ -14635,7 +14846,7 @@ local WeaponData = {
             },
             Disposition = 1.3,
             Image = "Stubba.png",
-            Introduced = "[[Update 22#Update 22.8.0|Update 22]]",
+            Introduced = "22.0",
             Magazine = 57,
             Mastery = 7,
             MaxAmmo = 399,
@@ -14664,7 +14875,7 @@ local WeaponData = {
             Disposition = 1.0,
             Family = "Stubba",
             Image = "Stubbas Jumeaux Kuva.png",
-            Introduced = "[[Update 26#Update 26.0|Update 26]]",
+            Introduced = "26.0",
             Magazine = 114,
             Mastery = 13,
             MaxAmmo = 684,
@@ -14694,7 +14905,7 @@ local WeaponData = {
             Disposition = 0.8,
             Family = "Gammacor",
             Image = "SynoidGammacor.png",
-            Introduced = "[[Update 15#Update 15.5|Update 15.5]]",
+            Introduced = "15.5",
             Magazine = 80,
             Mastery = 7,
             MaxAmmo = 400,
@@ -14706,7 +14917,7 @@ local WeaponData = {
                 StatusChance = 0.28,
                 FireRate = 12,
                 AmmoCost = 0.5,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 40
             },
             Polarities = {"D", "Bar"},
@@ -14739,7 +14950,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 1.44,
             Image = "U18throwingknives.png",
-            Introduced = "[[Update 18#Update 18.0|Update 18.0]]",
+            Introduced = "18.0",
             Magazine = 4,
             Mastery = 8,
             MaxAmmo = 12,
@@ -14763,10 +14974,10 @@ local WeaponData = {
             Accuracy = 26.7,
             Class = "Doubles Pistolets",
             Conclave = true,
-            Disposition = 0.8,
+            Disposition = 1.25,
             Family = "Akbolto",
             Image = "AHAkbolto.png",
-            Introduced = "[[Update 15#Update 15.5|Update 15.5]]",
+            Introduced = "15.5",
             Magazine = 30,
             Mastery = 11,
             MaxAmmo = 210,
@@ -14810,7 +15021,7 @@ local WeaponData = {
             },
             Disposition = 1.2,
             Image = "TwinRogga.png",
-            Introduced = "[[Update 19#Update 19.0|Update 19.0]]",
+            Introduced = "19.0",
             Magazine = 2,
             Mastery = 9,
             MaxAmmo = 120,
@@ -14855,7 +15066,7 @@ local WeaponData = {
             Disposition = 1.41,
             Family = "Vipers Jumeaux",
             Image = "VipersJumeaux.png",
-            Introduced = "[[Update 7#Hotfix 7.7.3|Hotfix 7.7.3]]",
+            Introduced = "7.7.3",
             Magazine = 28,
             Mastery = 5,
             MaxAmmo = 420,
@@ -14895,7 +15106,7 @@ local WeaponData = {
             Disposition = 1.41,
             Family = "Vipers Jumeaux",
             Image = "VipersJumeauxWraith.png",
-            Introduced = "[[Update 11#Update 11.5|Update 11.5]]",
+            Introduced = "11.5",
             Magazine = 40,
             Mastery = 7,
             MaxAmmo = 440,
@@ -14937,7 +15148,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 1.51,
             Image = "250px-DETysis.png",
-            Introduced = "[[Update 11#Update 11.7|Update 11.7]]",
+            Introduced = "11.7",
             Magazine = 11,
             Mastery = 9,
             MaxAmmo = 210,
@@ -14960,6 +15171,84 @@ local WeaponData = {
             Traits = {"Infesté"},
             Trigger = "Semi-Auto",
             Type = "Secondaire"
+        },
+        ["Vastilok"] = {
+            Cost = {
+                Credits = 20000,
+                BPCost = 20000,
+                MarketCost = 65,
+                Rush = 35,
+                Time = 12,
+                Parts = {
+                    {Name = "Capteurs Neuronaux", Type = "Ressource", Count = 2},
+                    {Name = "Pack Polymère", Type = "Ressource", Count = 3000},
+                    {Name = "Circuits", Type = "Ressource", Count = 1600},
+                    {Name = "Bo", Type = "Arme", Count = 1}
+                }
+            },
+            Class = "Pistolame",
+            Conclave = false,
+            Disposition = 0.5,
+            Family = "Vastilok",
+            Image = "Vastilok.png",
+            Introduced = "30.5.4",
+            Mastery = 9,
+            Name = "Vastilok",
+            NormalAttack = {
+                Damage = {
+                    ["Impact"] = 19.53,
+                    ["Perforation"] = 25.11,
+					["Tranchant"] = 234.36
+                },
+                PelletCount = 1,
+                CritChance = 0.19,
+                CritMultiplier = 1.7,
+                StatusChance = 0.31,
+                FireRate = 1,
+                ShotType = "Hit-Scan"
+            },
+			SecondaryAttack = {
+                AttackName = "Tirs",
+                Damage = {
+                    ["Impact"] = 8.97,
+					["Perforation"] = 10.35,
+					["Tranchant"] = 49.68
+				},
+                PelletCount = 9,
+                CritChance = 0.19,
+                CritMultiplier = 1.7,
+                StatusChance = 0.1033,
+                FireRate = 2.5,
+                ChargeTime = 0.4,
+                Falloff = { EndRange = 49, StartRange = 24, Reduction = 1},
+                PunchThrough = 1.3
+            },
+            SlideAttack = 558,
+            StancePolarity = "V",
+            Traits = {"Grineer"},
+            Type = "Mêlée",
+            MeleeSlam = {
+                Damage = 837.0,
+                Element = nil,
+                RadialDamage = 837.0,
+                RadialElement = nil,
+                Radius = 5.0
+            },
+            MeleeHeavy = {
+                Damage = 1395.0,
+                Element = nil,
+                WindUp = 0.4,
+                SlamDamage = 279.0,
+                SlamElement = nil,
+                SlamRadialDamage = 279.0,
+                SlamRadialElement = nil,
+                SlamRadius = 7.0
+            },
+            BlockAngle = 90,
+            MeleeComboDur = 5.0,
+            FollowThrough = 0.5,
+            MeleeRange = 1,
+            WallAttack = 558
         },
         ["Vasto"] = {
             Accuracy = 16,
@@ -14984,7 +15273,7 @@ local WeaponData = {
             Disposition = 1.35,
             Family = "Vasto",
             Image = "Vasto.png",
-            Introduced = "[[Update 9#Update 9.3|Update 9.3]]",
+            Introduced = "9.3",
             Magazine = 6,
             Mastery = 4,
             MaxAmmo = 210,
@@ -15024,7 +15313,7 @@ local WeaponData = {
             Disposition = 1.35,
             Family = "Vasto",
             Image = "PrimeVasto.png",
-            Introduced = "[[Update 15#Update 15.7|Update 15.7]]",
+            Introduced = "15.7",
             Magazine = 6,
             Mastery = 10,
             Name = "Vasto Prime",
@@ -15066,7 +15355,7 @@ local WeaponData = {
             Disposition = 1.45,
             Family = "Viper",
             Image = "Viper.png",
-            Introduced = "[[Update 7#Update 7.0|Update 7.0]]",
+            Introduced = "7.0",
             Magazine = 14,
             Mastery = 4,
             MaxAmmo = 420,
@@ -15097,7 +15386,7 @@ local WeaponData = {
             Disposition = 1.35,
             Family = "Viper",
             Image = "Viper Wraith.png",
-            Introduced = "[[Update 22#Hotfix 22.8.4|Hotfix 22.8.4]]",
+            Introduced = "22.8.4",
             Magazine = 20,
             Mastery = 4,
             MaxAmmo = 420,
@@ -15136,10 +15425,10 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 3}
                 }
             },
-            Disposition = 1,
+            Disposition = 1.15,
             ExilusPolarity = "V",
             Image = "Velox.png",
-            Introduced = "[[Update 28#Update 28]]",
+            Introduced = "28.0",
             Magazine = 62,
             Mastery = 8,
             MaxAmmo = 1,
@@ -15195,7 +15484,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 1.2,
             Image = "Zakti.png",
-            Introduced = "[[Update 21#Update 21.1|Update 21.1]]",
+            Introduced = "21.1",
             Magazine = 3,
             Mastery = 10,
             MaxAmmo = 210,
@@ -15235,11 +15524,11 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 0.9,
             ExilusPolarity = "V",
             Family = "Zakti",
             Image = "Zakti Prime.png",
-            Introduced = "[[Update 29#Update 29.3|Update 29.3]]",
+            Introduced = "29.3",
             Magazine = 8,
             Mastery = 14,
             MaxAmmo = 210,
@@ -15269,7 +15558,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 1.15,
             Image = "Zylok.png",
-            Introduced = "[[Update 23#Update 23.6|Update 23.6]]",
+            Introduced = "23.6",
             Magazine = 8,
             Mastery = 6,
             Name = "Zylok",
@@ -15311,12 +15600,12 @@ local WeaponData = {
                     {Name = "Culasse", Type = "Objet", Count = 1}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 1.05,
             ExilusPolarity = "Bar",
             Users = {"[[Prosélyte Fanatique]]"},
             Family = "Zymos",
             Image = "Zymos.png",
-            Introduced = "[[Update 29]]",
+            Introduced = "29.0",
             Magazine = 9,
             Mastery = 11,
             MaxAmmo = 27,
@@ -15356,9 +15645,9 @@ local WeaponData = {
                     {Name = "Nano Spores", Type = "Ressource", Count = 8000}
                 }
             },
-            Disposition = 1.0,
+            Disposition = 0.6,
             Image = "Acceltra.png",
-            Introduced = "[[Update 25#Update 25.7|Update 25.7]]",
+            Introduced = "25.7",
             Magazine = 48,
             Mastery = 8,
             MaxAmmo = 96,
@@ -15403,7 +15692,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 0.7,
             Image = "Amprex.png",
-            Introduced = "[[Update 13#Update 13.1|Update 13.1]]",
+            Introduced = "13.1",
             Magazine = 100,
             Mastery = 10,
             MaxAmmo = 700,
@@ -15416,7 +15705,7 @@ local WeaponData = {
                 StatusChance = 0.22,
                 FireRate = 12,
                 AmmoCost = 0.5,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 18
             },
             Reload = 2.6,
@@ -15450,7 +15739,7 @@ local WeaponData = {
             },
             Disposition = 1.2,
             Image = "Argonak.png",
-            Introduced = "[[Update 22#Update: Plains of Eidolon|Update: Plains of Eidolon]]",
+            Introduced = "22.0",
             Magazine = 43,
             Mastery = 7,
             MaxAmmo = 473,
@@ -15508,7 +15797,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 1.415,
             Image = "250px-TnoPrmryXbow.png",
-            Introduced = "[[Update 13#Update 13.0|Update 13.0]]",
+            Introduced = "13.0",
             Magazine = 20,
             Mastery = 7,
             MaxAmmo = 540,
@@ -15551,7 +15840,7 @@ local WeaponData = {
             },
             Disposition = 1.0,
             Image = "Battacor.png",
-            Introduced = "[[Update 24#Update 24.0|Update 24]]",
+            Introduced = "24.0",
             Magazine = 60,
             Mastery = 10,
             MaxAmmo = 720,
@@ -15600,16 +15889,16 @@ local WeaponData = {
                 Rush = 35,
                 Time = 24,
                 Parts = {
-                    {Name = "Copernics", Type = "Ressource", Count = 1500},
-                    {Name = "Pustrules", Type = "Ressource", Count = 800},
+                    {Name = "Titane", Type = "Ressource", Count = 1500},
+                    {Name = "Carbures", Type = "Ressource", Count = 800},
                     {Name = "Isos", Type = "Ressource", Count = 450},
                     {Name = "Larmes du Néant", Type = "Ressource", Count = 1}
                 }
             },
-            Disposition = 1.1,
+            Disposition = 1.15,
             ExilusPolarity = "V",
             Image = "Basmu.png",
-            Introduced = "[[Update 27#Update 27.3|Update 27.3]]",
+            Introduced = "27.3",
             Magazine = 21,
             Mastery = 11,
             Name = "Basmu",
@@ -15665,7 +15954,7 @@ local WeaponData = {
             },
             Disposition = 1.05,
             Image = "Baza.png",
-            Introduced = "[[Update 22#Update 22.4|Update 22.4]]",
+            Introduced = "22.4",
             Magazine = 40,
             Mastery = 7,
             MaxAmmo = 800,
@@ -15685,6 +15974,7 @@ local WeaponData = {
             },
             NoiseLevel = "Silencieux",
             Polarities = {"V"},
+            ExilusPolarity = "Bar",
             Reload = 1.4,
             Traits = {"Tenno"},
             Trigger = "Auto",
@@ -15708,7 +15998,7 @@ local WeaponData = {
             Disposition = 0.95,
             Family = "Baza",
             Image = "Baza Prime.png",
-            Introduced = "[[Update 27#Hotfix 27.0.4|Hotfix 27.0.4]]",
+            Introduced = "27.0.4",
             Magazine = 60,
             Mastery = 10,
             MaxAmmo = 800,
@@ -15753,7 +16043,7 @@ local WeaponData = {
             Disposition = 1.25,
             Family = "Boltor",
             Image = "Boltor.png",
-            Introduced = "[[Closed Beta Updates#Update 6.0|Update 6.0]]",
+            Introduced = "6.0",
             Magazine = 60,
             Mastery = 2,
             MaxAmmo = 540,
@@ -15797,7 +16087,7 @@ local WeaponData = {
             ExilusPolarity = "Bar",
             Family = "Boltor",
             Image = "DEPrimeBoltor.png",
-            Introduced = "[[Update 12#Update 12.4|Update 12.4]]",
+            Introduced = "12.4",
             Magazine = 60,
             Mastery = 13,
             MaxAmmo = 540,
@@ -15825,7 +16115,7 @@ local WeaponData = {
             Disposition = 1.35,
             Family = "Braton",
             Image = "Braton.png",
-            Introduced = "[[Closed Beta Updates#Vanilla|Vanilla]]",
+            Introduced = "Vanilla",
             Magazine = 45,
             Mastery = 0,
             MaxAmmo = 540,
@@ -15865,7 +16155,7 @@ local WeaponData = {
             Disposition = 1.1,
             Family = "Braton",
             Image = "PrimeBraton.png",
-            Introduced = "[[Update 9]]",
+            Introduced = "9.0",
             Magazine = 75,
             Mastery = 8,
             MaxAmmo = 600,
@@ -15904,7 +16194,7 @@ local WeaponData = {
             Disposition = 1.01,
             Family = "Braton",
             Image = "BratonVandal.png",
-            Introduced = "[[Closed Beta Updates#Hotfix 6.3.1|Hotfix 6.3.1]]",
+            Introduced = "6.3.1",
             Magazine = 50,
             Mastery = 4,
             MaxAmmo = 550,
@@ -15946,11 +16236,11 @@ local WeaponData = {
                     {Name = "Nano Spores", Type = "Ressource", Count = 22000}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 0.7,
             ExilusPolarity = "V",
             Family = "Bubonico",
             Image = "Bubonico.png",
-            Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            Introduced = "29.5",
             Magazine = 27,
             Mastery = 13,
             Name = "Bubonico",
@@ -15968,12 +16258,12 @@ local WeaponData = {
                 FireRate = 3.83,
                 PelletCount = 7,
                 ShotType = "Hit-Scan",
-                StatusChance = 0.1,
+                StatusChance = 0.0929,
                 Trigger = "Auto"
             },
             NoiseLevel = "Bruyant",
-            Polarities = {},
-            Reload = 0.5,
+            Polarities = {"Bar"},
+            Reload = 1.6,
             ReloadStyle = "Régénération",
             SecondaryAreaAttack = {
                 AttackName = "Attaque Radial",
@@ -16018,7 +16308,7 @@ local WeaponData = {
             ExilusPolarity = "Bar",
             Family = "Burston",
             Image = "Burston.png",
-            Introduced = "[[Closed Beta Updates#Vanilla|Vanilla]]",
+            Introduced = "Vanilla",
             Magazine = 45,
             Mastery = 0,
             MaxAmmo = 540,
@@ -16063,7 +16353,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Burston",
             Image = "PrimeBurston.png",
-            Introduced = "[[Update 11#Update 11.5|Update 11.5]]",
+            Introduced = "11.5",
             Magazine = 45,
             Mastery = 12,
             MaxAmmo = 540,
@@ -16110,7 +16400,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 1.45,
             Image = "Buzlok.png",
-            Introduced = "[[Update 14#Update 14.7|Update 14.7]]",
+            Introduced = "14.7",
             Magazine = 50,
             Mastery = 11,
             MaxAmmo = 540,
@@ -16182,7 +16472,7 @@ local WeaponData = {
             Disposition = 1.1,
             Family = "Cernos",
             Image = "Cernos.png",
-            Introduced = "[[Update 11#Update 11.1|Update 11.1]]",
+            Introduced = "11.1",
             Magazine = 1,
             Mastery = 6,
             MaxAmmo = 72,
@@ -16250,7 +16540,7 @@ local WeaponData = {
             Disposition = 1.35,
             Family = "Cernos",
             Image = "CernosMutaliste.png",
-            Introduced = "[[Update 18#Update 18.5|Update 18.5]]",
+            Introduced = "18.5",
             Magazine = 1,
             Mastery = 7,
             MaxAmmo = 72,
@@ -16316,7 +16606,7 @@ local WeaponData = {
             Disposition = 1.1,
             Family = "Cernos",
             Image = "Cernos Prime.png",
-            Introduced = "[[Update 19#Hotfix 19.0.7|Hotfix 19.0.7]]",
+            Introduced = "19.0.7",
             Magazine = 1,
             Mastery = 12,
             MaxAmmo = 72,
@@ -16347,12 +16637,13 @@ local WeaponData = {
             }
         },
         ["Cernos Proboscis"] = {
-            Accuracy = 16.6,
+            Accuracy = 16.7,
             AreaAttack = {
-                AttackName = "Uncharged Shot Explosion",
+                AttackName = "Explosion Tir Chargé",
                 Damage = {["Viral"] = 1003},
+                ExplosionDelay = 1.7,
                 Radius = 7,
-                ExplosionDelay = 1.7
+                Falloff = {StartRange = 0,EndRange = 7,Reduction = 0.5,},
             },
             Class = "Arc",
             Conclave = false,
@@ -16364,18 +16655,16 @@ local WeaponData = {
             },
             ChargeAttack = {
                 AttackName = "Tir Chargé",
-                ChargeTime = 0.1,
+                ChargeTime = 0.7,
                 Damage = {
-                    ["Impact"] = 1,
-                    ["Perforation"] = 1,
-                    ["Tranchant"] = 1
+                    ["Impact"] = 103.2,
+                    ["Perforation"] = 30.7,
+                    ["Tranchant"] = 145.1
                 },
-                CritChance = 0.1,
-                CritMultiplier = 1,
-                StatusChance = 0.1,
-                PelletCount = 10,
-                PunchThrough = 1.5,
-                ShotSpeed = 100,
+                CritChance = 0.07,
+                CritMultiplier = 1.9,
+                StatusChance = 0.43,
+                ShotSpeed = "?",
                 ShotType = "Hit-Scan"
             },
             Cost = {
@@ -16387,37 +16676,23 @@ local WeaponData = {
                 Parts = {
                     {Name = "Cernos Mutaliste", Type = "Arme", Count = 1},
                     {Name = "Pack Polymère", Type = "Ressource", Count = 1600},
-                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 5}
+                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 5},
+                    {Name = "Nano Spores", Type = "Ressource", Count = 25000},
                 }
             },
-            Disposition = 0.5,
-            ExilusPolarity = "V",
+            Disposition = 0.55,
+            ExilusPolarity = "Bar",
             Family = "Cernos",
             Image = "Cernos Proboscis.png",
-            Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            Introduced = "29.5",
             Magazine = 1,
             Mastery = 15,
-            MaxAmmo = 540,
+            MaxAmmo = 9,
             Name = "Cernos Proboscis",
-            NormalAttack = {
-                AttackName = "Normal",
-                ChargeTime = 0.7,
-                Damage = {
-                    ["Impact"] = 103.2,
-                    ["Perforation"] = 30.7,
-                    ["Tranchant"] = 145.1
-                },
-                CritChance = 0.07,
-                CritMultiplier = 1.9,
-                StatusChance = 0.43,
-                ShotType = "Projectile",
-                ShotSpeed = "?",
-                Trigger = "Charge"
-            },
             NoiseLevel = "Silencieux",
-            Polarities = {},
+            Polarities = {"Bar", "Bar"},
             Reload = 0.6,
-            Trigger = "Charge",
+            Trigger = "Chargé",
             Traits = {"Infesté"},
             Type = "Principale"
         },
@@ -16443,7 +16718,7 @@ local WeaponData = {
             Disposition = 0.92,
             Family = "Cernos",
             Image = "CernosRakta.png",
-            Introduced = "[[Update 17#Update 17.3|Update 17.3]]",
+            Introduced = "17.3",
             Magazine = 1,
             Mastery = 12,
             MaxAmmo = 72,
@@ -16507,7 +16782,7 @@ local WeaponData = {
             Disposition = 1.3,
             NoiseLevel = "Silencieux",
             Image = "AsymmetricBow.png",
-            Introduced = "[[Update 16#Update 16.5|Update 16.5]]",
+            Introduced = "16.5",
             Magazine = 1,
             Mastery = 10,
             MaxAmmo = 72,
@@ -16538,7 +16813,7 @@ local WeaponData = {
             ExilusPolarity = "Bar",
             Family = "Dera",
             Image = "Dera.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
+            Introduced = "8.0",
             Magazine = 45,
             Mastery = 4,
             MaxAmmo = 540,
@@ -16581,7 +16856,7 @@ local WeaponData = {
             ExilusPolarity = "Bar",
             Family = "Dera",
             Image = "DeraVandal.png",
-            Introduced = "[[Update 16#Update 16.5|Update 16.5]]",
+            Introduced = "16.5",
             Magazine = 60,
             Mastery = 7,
             MaxAmmo = 540,
@@ -16613,7 +16888,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Sybaris",
             Image = "DexSybaris.png",
-            Introduced = "[[Update 18#Hotfix 18.6.2|Hotfix 18.6.2]]",
+            Introduced = "18.6.2",
             Magazine = 14,
             Mastery = 7,
             MaxAmmo = 540,
@@ -16666,9 +16941,9 @@ local WeaponData = {
             },
             Class = "Arc",
             Conclave = true,
-            Disposition = 1.1,
+            Disposition = 1.3,
             Image = "Dread.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
+            Introduced = "8.0",
             Magazine = 1,
             Mastery = 5,
             MaxAmmo = 72,
@@ -16745,7 +17020,7 @@ local WeaponData = {
             Disposition = 1.15,
             ExilusPolarity = "Bar",
             Image = "Ferrox.png",
-            Introduced = "[[Update 19#Update 19.13|Update 19.13]]",
+            Introduced = "19.13",
             Magazine = 10,
             Mastery = 14,
             MaxAmmo = 540,
@@ -16804,7 +17079,7 @@ local WeaponData = {
             Disposition = 1.55,
             ExilusPolarity = "Bar",
             Image = "Fusil à Flux.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
+            Introduced = "8.0",
             Magazine = 50,
             Mastery = 6,
             MaxAmmo = 50,
@@ -16817,7 +17092,7 @@ local WeaponData = {
                 FireRate = 12,
                 AmmoCost = 0.5,
                 PunchThrough = 0.5,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 30
             },
             Reload = 2.25,
@@ -16843,9 +17118,9 @@ local WeaponData = {
                     {Name = "Hexenon", Type = "Ressource", Count = 350}
                 }
             },
-            Disposition = 1.0,
+            Disposition = 0.65,
             Image = "Fulmin.png",
-            Introduced = "[[Update 25#Update 25.0|Update 25.0]]",
+            Introduced = "25.0",
             Magazine = 60,
             Mastery = 8,
             MaxAmmo = 500,
@@ -16893,7 +17168,7 @@ local WeaponData = {
             },
             Disposition = 1.35,
             Image = "Glaxion.png",
-            Introduced = "[[Update 14#Update 14.5|Update 14.5]]",
+            Introduced = "14.5",
             Magazine = 80,
             Mastery = 8,
             MaxAmmo = 720,
@@ -16905,7 +17180,7 @@ local WeaponData = {
                 StatusChance = 0.34,
                 FireRate = 12,
                 AmmoCost = 0.5,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 24
             },
             Reload = 2.2,
@@ -16924,7 +17199,7 @@ local WeaponData = {
             Disposition = 1.35,
             Family = "Glaxion",
             Image = "Glaxion Vandal.png",
-            Introduced = "[[Update 25#Update 25.0|Update 25.0]]",
+            Introduced = "25.0",
             Magazine = 100,
             Mastery = 12,
             MaxAmmo = 1000,
@@ -16961,7 +17236,7 @@ local WeaponData = {
             ExilusPolarity = "Madurai",
             Family = "Gorgon",
             Image = "Gorgon.png",
-            Introduced = "[[Closed Beta Updates#Vanilla|Vanilla]]",
+            Introduced = "Vanilla",
             Magazine = 90,
             Mastery = 3,
             MaxAmmo = 540,
@@ -17007,7 +17282,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Gorgon",
             Image = "WraithGorgon.png",
-            Introduced = "[[Update 12#Update 12.4|Update 12.4]]",
+            Introduced = "12.4",
             Magazine = 90,
             Mastery = 7,
             MaxAmmo = 900,
@@ -17050,7 +17325,7 @@ local WeaponData = {
             Disposition = 1.2,
             Family = "Grakata",
             Image = "Grakata.png",
-            Introduced = "[[Update 7#Update 7.8|Update 7.8]]",
+            Introduced = "7.8",
             Magazine = 60,
             Mastery = 5,
             MaxAmmo = 750,
@@ -17095,7 +17370,7 @@ local WeaponData = {
             },
             Disposition = 1.0,
             Image = "GrakatasJumelles.png",
-            Introduced = "[[Update 17#Update 17.0|Update 17.0]]",
+            Introduced = "17.0",
             Magazine = 120,
             Mastery = 9,
             MaxAmmo = 1200,
@@ -17146,7 +17421,7 @@ local WeaponData = {
             Disposition = 1.245,
             Family = "Grinlok",
             Image = "250px-DEGrinlok.png",
-            Introduced = "[[Update 12#Update 12.1|Update 12.1]]",
+            Introduced = "12.1",
             Magazine = 9,
             Mastery = 7,
             MaxAmmo = 540,
@@ -17192,7 +17467,7 @@ local WeaponData = {
             },
             Disposition = 1.55,
             Image = "Harpak.png",
-            Introduced = "[[Update 17#Update 17.0|Update 17.0]]",
+            Introduced = "17.0",
             Magazine = 45,
             Mastery = 7,
             MaxAmmo = 540,
@@ -17254,7 +17529,7 @@ local WeaponData = {
             },
             Disposition = 1.2,
             Image = "Hema.png",
-            Introduced = "[[Update 19#Update 19.5|Update 19.5]]",
+            Introduced = "19.5",
             Magazine = 60,
             Mastery = 7,
             MaxAmmo = 60,
@@ -17294,7 +17569,7 @@ local WeaponData = {
             },
             Disposition = 1.42,
             Image = "Hind.png",
-            Introduced = "[[Update 9#Update 9.6|Update 9.6]]",
+            Introduced = "9.6",
             Magazine = 65,
             Mastery = 0,
             MaxAmmo = 540,
@@ -17352,11 +17627,11 @@ local WeaponData = {
             },
             Class = "Fusil",
             Conclave = false,
-            Disposition = 1,
+            Disposition = 1.05,
             ExilusPolarity = "Bar",
             Family = "Hind",
             Image = "Hind Kuva.png",
-            Introduced = "[[Update 27#Update 27.1|Update 27.1]]",
+            Introduced = "27.1",
             Magazine = 90,
             Mastery = 15,
             MaxAmmo = 540,
@@ -17421,18 +17696,19 @@ local WeaponData = {
             Disposition = 0.6,
             Family = "Ignis",
             Image = "Ignis.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
+            Introduced = "8.0",
             Magazine = 150,
             Mastery = 5,
             MaxAmmo = 750,
             Name = "Ignis",
             NormalAttack = {
+		AmmoCost = 0.5,
                 Damage = {["Feu"] = 33},
                 CritChance = 0.11,
                 CritMultiplier = 2,
                 StatusChance = 0.27,
                 FireRate = 8,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 20
             },
             Reload = 2,
@@ -17463,20 +17739,22 @@ local WeaponData = {
             Class = "Fusil",
             Conclave = true,
             Disposition = 0.6,
+            ExilusPolarity = "V",
             Family = "Ignis",
             Image = "IgnisWraith.png",
-            Introduced = "[[Update 19#Update 19.12|Update 19.12]]",
+            Introduced = "19.12",
             Magazine = 200,
             Mastery = 9,
             MaxAmmo = 800,
             Name = "Ignis Wraith",
             NormalAttack = {
+                AmmoCost = 0.5,
                 Damage = {["Feu"] = 35},
                 CritChance = 0.17,
                 CritMultiplier = 2.5,
                 StatusChance = 0.29,
                 FireRate = 8,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 27
             },
             Reload = 1.7,
@@ -17589,7 +17867,7 @@ local WeaponData = {
             Disposition = 1.28,
             Family = "Karak",
             Image = "250px-Karak.png",
-            Introduced = "[[Update 11#Update 11.5|Update 11.5]]",
+            Introduced = "11.5",
             Magazine = 30,
             Mastery = 1,
             MaxAmmo = 540,
@@ -17621,7 +17899,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Karak",
             Image = "Karak Kuva.png",
-            Introduced = "[[Update 26#Update 26|Update 26]]",
+            Introduced = "26.0",
             Magazine = 70,
             Mastery = 13,
             MaxAmmo = 540,
@@ -17665,7 +17943,7 @@ local WeaponData = {
             ExilusPolarity = "Bar",
             Family = "Karak",
             Image = "KarakWraith.png",
-            Introduced = "[[Update 16#Update 16.5|Update 16.5]]",
+            Introduced = "16.5",
             Magazine = 60,
             Mastery = 7,
             MaxAmmo = 540,
@@ -17708,7 +17986,7 @@ local WeaponData = {
             },
             Disposition = 1.0,
             Image = "Komorex.png",
-            Introduced = "[[Update 25#Update 25.0|Update 25.0]]",
+            Introduced = "25.0",
             Magazine = 20,
             Mastery = 8,
             MaxAmmo = 40,
@@ -17782,9 +18060,9 @@ local WeaponData = {
             },
             Class = "Fusil de Sniper",
             Conclave = true,
-            Disposition = 0.9,
+            Disposition = 1,
             Image = "Lanka.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
+            Introduced = "8.0",
             Magazine = 10,
             Mastery = 10,
             MaxAmmo = 72,
@@ -17842,7 +18120,7 @@ local WeaponData = {
             Disposition = 1.4,
             Family = "Latron",
             Image = "Latron.png",
-            Introduced = "[[Closed Beta Updates#Vanilla|Vanilla]]",
+            Introduced = "Vanilla",
             Magazine = 15,
             Mastery = 0,
             MaxAmmo = 540,
@@ -17885,7 +18163,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Latron",
             Image = "LatronPrime.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
+            Introduced = "8.0",
             Magazine = 15,
             Mastery = 10,
             MaxAmmo = 540,
@@ -17926,7 +18204,7 @@ local WeaponData = {
             ExilusPolarity = "Bar",
             Family = "Latron",
             Image = "LatronWraith.png",
-            Introduced = "[[Update 14#Update 14.5|Update 14.5]]",
+            Introduced = "14.5",
             Magazine = 15,
             Mastery = 7,
             MaxAmmo = 540,
@@ -17987,7 +18265,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 0.9,
             Image = "Lenz.png",
-            Introduced = "[[Update 21#Update 21.3|Update 21.3]]",
+            Introduced = "21.3",
             Magazine = 1,
             Mastery = 8,
             MaxAmmo = 6,
@@ -18046,7 +18324,7 @@ local WeaponData = {
             },
             Disposition = 1.55,
             Image = "miter.png",
-            Introduced = "[[Update 9#Update 9.5|Update 9.5]]",
+            Introduced = "9.5",
             Magazine = 20,
             Mastery = 6,
             MaxAmmo = 72,
@@ -18080,7 +18358,7 @@ local WeaponData = {
             ExilusPolarity = "Bar",
             Family = "Braton",
             Image = "Braton.png",
-            Introduced = "[[Closed Beta Updates#Vanilla|Vanilla]]",
+            Introduced = "Vanilla",
             Magazine = 60,
             Mastery = 0,
             MaxAmmo = 540,
@@ -18124,7 +18402,7 @@ local WeaponData = {
             Disposition = 1.05,
             Family = "Paris",
             Image = "Paris.png",
-            Introduced = "[[Update 14#Update 14.0|Update 14.0]]",
+            Introduced = "14.0",
             Magazine = 1,
             Mastery = 0,
             MaxAmmo = 72,
@@ -18176,7 +18454,7 @@ local WeaponData = {
             Disposition = 1.55,
             Family = "Quanta",
             Image = "QuantaMutaliste.png",
-            Introduced = "[[Update 13#Update 13.8|Update 13.8]]",
+            Introduced = "13.8",
             Magazine = 60,
             Mastery = 2,
             MaxAmmo = 540,
@@ -18231,7 +18509,7 @@ local WeaponData = {
             Disposition = 1.05,
             Family = "Nagantaka",
             Image = "Nagantaka.png",
-            Introduced = "[[Update 24#Update 24.0|Update 24]]",
+            Introduced = "24.0",
             Magazine = 9,
             Mastery = 9,
             MaxAmmo = 540,
@@ -18295,7 +18573,7 @@ local WeaponData = {
                 }
             },
             Image = "OgrisNew.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
+            Introduced = "8.0",
             Accuracy = 100,
             ChargeAttack = {
                 AttackName = "Rocket Impact",
@@ -18336,7 +18614,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Ogris",
             Image = "Ogris Kuva.png",
-            Introduced = "[[Update 26#Update 26|Update 26]]",
+            Introduced = "26.0",
             Magazine = 3,
             Mastery = 15,
             MaxAmmo = 20,
@@ -18404,7 +18682,7 @@ local WeaponData = {
             Disposition = 1.15,
             Family = "Opticor",
             Image = "250px-opticor.png",
-            Introduced = "[[Update 15#Update 15.0|Update 15.0]]",
+            Introduced = "15.0",
             Magazine = 5,
             Mastery = 14,
             MaxAmmo = 200,
@@ -18440,7 +18718,7 @@ local WeaponData = {
             Disposition = 1.15,
             Family = "Opticor",
             Image = "Opticor Vandal.png",
-            Introduced = "[[Update 24#Update 24.4|Update 24.4]]",
+            Introduced = "24.4",
             Magazine = 8,
             Mastery = 14,
             MaxAmmo = 200,
@@ -18470,7 +18748,7 @@ local WeaponData = {
             },
             Disposition = 1.4,
             Image = "Panthera.png",
-            Introduced = "[[Update 15#Update 15.10|Update 15.10]]",
+            Introduced = "15.10",
             Family = "Panthera",
             Magazine = 60,
             Mastery = 7,
@@ -18530,11 +18808,11 @@ local WeaponData = {
                     {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 1.15,
             ExilusPolarity = "V",
             Family = "Panthera",
             Image = "Panthera Prime.png",
-            Introduced = "[[Update 28#Update 28.2|Update 28.2]]",
+            Introduced = "28.2",
             Magazine = 80,
             Mastery = 14,
             MaxAmmo = 320,
@@ -18590,7 +18868,7 @@ local WeaponData = {
             Disposition = 1.315,
             ExilusPolarity = "Bar",
             Image = "250px-Paracyst.png",
-            Introduced = "[[Update 15#Update 15.5|Update 15.5]]",
+            Introduced = "15.5",
             Magazine = 60,
             Mastery = 7,
             Name = "Paracyst",
@@ -18659,7 +18937,7 @@ local WeaponData = {
             Disposition = 1.2,
             Family = "Paris",
             Image = "Paris.png",
-            Introduced = "[[Update 7#Update 7.0|Update 7.0]]",
+            Introduced = "7.0",
             Magazine = 1,
             Mastery = 3,
             MaxAmmo = 72,
@@ -18728,7 +19006,7 @@ local WeaponData = {
             Disposition = 1.2,
             Family = "Paris",
             Image = "ParisPrime.png",
-            Introduced = "[[Update 9#Update 9.0|Update 9.0]]",
+            Introduced = "9.0",
             Magazine = 1,
             Mastery = 8,
             MaxAmmo = 72,
@@ -18786,7 +19064,7 @@ local WeaponData = {
             Disposition = 1.0,
             Family = "Pennant",
             Image = "Pennant.png",
-            Introduced = "[[Update 27#Update 27.0|Update 27.0]]",
+            Introduced = "27.0",
             Mastery = 7,
             Name = "Pennant",
             NormalAttack = {
@@ -18829,7 +19107,7 @@ local WeaponData = {
             Disposition = 1.3,
             Family = "Penta",
             Image = "250px-DEPenta.png",
-            Introduced = "[[Update 11#Update 11.3|Update 11.3]]",
+            Introduced = "11.3",
             Magazine = 5,
             Mastery = 6,
             MaxAmmo = 20,
@@ -18857,21 +19135,32 @@ local WeaponData = {
             Type = "Principale",
             Users = {"[[Penta Ranger]]", "[[M-W.A.M.]]"}
         },
-        ["Penta Carmin"] = {
+        ["Penta Carmine"] = {
+        	Cost = {
+                Credits = 20000,
+                BPCost = nil,
+                MarketCost = nil,
+                Rush = 35,
+                Time = 12,
+                Parts = {
+                    {Name = "Canon", Type = "Objet", Count = 1},
+                    {Name = "Culasse", Type = "Objet", Count = 1},
+                    {Name = "Crosse", Type = "Ressource", Count = 1}
+                }
+            },
             Accuracy = 100,
             Class = "Lanceur",
             Conclave = false,
             Disposition = 1.25,
             Family = "Penta",
             Image = "Penta_Carmin.png",
-
             Magazine = 10,
             Mastery = 6,
             MaxAmmo = 20,
-            Name = "Penta Carmin",
+            Name = "Penta Carmine",
             NoiseLevel = "Silencieux",
             NormalAttack = {
-                AttackName = "Grenade Impact",
+                AttackName = "Impact de Grenade",
                 Damage = {["Impact"] = 75, ["Explosif"] = 350},
                 CritChance = 0.1,
                 CritMultiplier = 2,
@@ -18882,10 +19171,10 @@ local WeaponData = {
             },
             Reload = 2.5,
             SecondaryAttack = {
-                AttackName = "Grenade Detonation",
+                AttackName = "Détonation de Grenade",
                 Damage = {["Explosif"] = 350},
                 Radius = 5,
-                Trigger = "Detonate"
+                Trigger = "Détonation"
             },
             Trigger = "Activé",
             Type = "Principale"
@@ -18902,7 +19191,7 @@ local WeaponData = {
             Disposition = 1.3,
             Family = "Penta",
             Image = "PentaSecura.png",
-            Introduced = "[[Update 17#Update 17.3|Update 17.3]]",
+            Introduced = "17.3",
             Magazine = 7,
             Mastery = 12,
             MaxAmmo = 28,
@@ -18946,17 +19235,14 @@ local WeaponData = {
                 Time = 12,
                 Parts = {
                     {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {
-                        Name = "Coeur de Sentient Intact",
-                        Type = "Ressource",
-                        Count = 10
-                    }, {Name = "Plastides", Type = "Ressource", Count = 650},
+                    {Name = "Coeur de Sentient Intact",Type = "Ressource",Count = 10}, 
+                    {Name = "Plastides", Type = "Ressource", Count = 650},
                     {Name = "Nano Spores", Type = "Ressource", Count = 12500}
                 }
             },
             Disposition = 1.0,
             Image = "Phantasma.png",
-            Introduced = "[[Update 23#Update 23.5|Update 23.5]]",
+            Introduced = "23.5",
             Magazine = 11,
             Mastery = 9,
             MaxAmmo = 275,
@@ -18994,7 +19280,7 @@ local WeaponData = {
             ExilusPolarity = "Bar",
             Family = "Gorgon",
             Image = "PrismaGorgon.png",
-            Introduced = "[[Update 15#Update 15.11.1|Update 15.11.1]]",
+            Introduced = "15.11.1",
             Magazine = 120,
             Mastery = 11,
             MaxAmmo = 840,
@@ -19024,7 +19310,7 @@ local WeaponData = {
             Disposition = 1.2,
             Family = "Grakata",
             Image = "PrismaGrakata.png",
-            Introduced = "[[Update 16#Hotfix 16.8.3|Hotfix 16.8.3]]",
+            Introduced = "16.8.3",
             Magazine = 120,
             Mastery = 11,
             MaxAmmo = 1000,
@@ -19053,7 +19339,7 @@ local WeaponData = {
             Disposition = 1.245,
             Family = "Grinlok",
             Image = "Grinlok Prisma.png",
-            Introduced = "[[Update 24#Update 24.4|Update 24.4]]",
+            Introduced = "24.4",
             Magazine = 21,
             Mastery = 11,
             MaxAmmo = 540,
@@ -19084,7 +19370,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Tetra",
             Image = "TetraPrisma.png",
-            Introduced = "[[Update 17#Hotfix 17.0.5|Hotfix 17.0.5]]",
+            Introduced = "17.0.5",
             Magazine = 60,
             Mastery = 4,
             MaxAmmo = 540,
@@ -19131,7 +19417,7 @@ local WeaponData = {
             Disposition = 1.1,
             Family = "Quanta",
             Image = "Quanta.png",
-            Introduced = "[[Update 14#Update 14.1|Update 14.1]]",
+            Introduced = "14.1",
             Magazine = 60,
             Mastery = 4,
             MaxAmmo = 540,
@@ -19143,7 +19429,7 @@ local WeaponData = {
                 StatusChance = 0.16,
                 FireRate = 12,
                 AmmoCost = 0.5,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 50
             },
             Polarities = {"D"},
@@ -19175,7 +19461,7 @@ local WeaponData = {
             Disposition = 1.1,
             Family = "Quanta",
             Image = "QuantaVandal.png",
-            Introduced = "[[Update 16#Update 16.4|Update 16.4]]",
+            Introduced = "16.4",
             Magazine = 80,
             Mastery = 10,
             MaxAmmo = 560,
@@ -19187,7 +19473,7 @@ local WeaponData = {
                 StatusChance = 0.3,
                 FireRate = 12,
                 AmmoCost = 0.5,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 50
             },
             Polarities = {"V"},
@@ -19227,7 +19513,7 @@ local WeaponData = {
             },
             Disposition = 1.25,
             Image = "Quartakk.png",
-            Introduced = "[[Update 22#Update 22.8.0|Update 22]]",
+            Introduced = "22.0",
             Magazine = 84,
             Mastery = 10,
             MaxAmmo = 840,
@@ -19260,7 +19546,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Quartakk",
             Image = "Quartakk Kuva.png",
-            Introduced = "[[Update 26#Update 26|Update 26]]",
+            Introduced = "26.0",
             Magazine = 88,
             Mastery = 13,
             MaxAmmo = 840,
@@ -19321,9 +19607,9 @@ local WeaponData = {
                     }
                 }
             },
-            Disposition = 1.0,
+            Disposition = 1.1,
             Image = "Quellor.png",
-            Introduced = "[[Update 27#Update 27.0|Update 27.0]]",
+            Introduced = "27.0",
             Magazine = 300,
             Mastery = 12,
             MaxAmmo = 0,
@@ -19378,11 +19664,11 @@ local WeaponData = {
             Accuracy = 13.3,
             Class = "Fusil de Sniper",
             Conclave = true,
-            Disposition = 0.8,
+            Disposition = 0.9,
             ExilusPolarity = "V",
             Family = "Rubico",
             Image = "Rubico.png",
-            Introduced = "[[Update 18#Update 18.0|Update 18.0]]",
+            Introduced = "18.0",
             Magazine = 5,
             Mastery = 6,
             MaxAmmo = 72,
@@ -19430,7 +19716,7 @@ local WeaponData = {
             Disposition = 0.6,
             Family = "Rubico",
             Image = "RubicoPrime.png",
-            Introduced = "[[Update 23#Update 23.9|Update 23.9]]",
+            Introduced = "23.9",
             Magazine = 5,
             Mastery = 12,
             MaxAmmo = 72,
@@ -19486,7 +19772,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 1.15,
             Image = "Scourge.png",
-            Introduced = "[[Update 21#Update 21.0|Update 21.0]]",
+            Introduced = "21.0",
             Magazine = 20,
             Mastery = 6,
             MaxAmmo = 100,
@@ -19541,7 +19827,7 @@ local WeaponData = {
             },
             Disposition = 1.0,
             Image = "Shedu.png",
-            Introduced = "[[Update 27]]",
+            Introduced = "27.0",
             Magazine = 7,
             Mastery = 13,
             MaxAmmo = 0,
@@ -19555,7 +19841,7 @@ local WeaponData = {
                 ShotType = "Hit-Scan"
             },
             SecondaryAttack = {
-                AttackName = "Attaque Radial",
+                AttackName = "Attaque Radiale",
                 Damage = {["Électrique"] = 87},
                 Range = 5.5
             },
@@ -19563,7 +19849,7 @@ local WeaponData = {
             Traits = {"Sentient"},
             Trigger = "Auto",
             Type = "Principale",
-            Polarities = {}
+            Polarities = {"V", "V"}
         },
         ["Simulor"] = {
             Accuracy = 100,
@@ -19589,7 +19875,7 @@ local WeaponData = {
             Disposition = 0.85,
             Family = "Simulor",
             Image = "Simulor.png",
-            Introduced = "[[Update 16#Update 16.10|Update 16.10]]",
+            Introduced = "16.10",
             Magazine = 8,
             Mastery = 5,
             MaxAmmo = 72,
@@ -19635,7 +19921,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Snipetron",
             Image = "Snipetron.png",
-            Introduced = "[[Closed Beta Updates#Vanilla|Vanilla]]",
+            Introduced = "Vanilla",
             Magazine = 4,
             Mastery = 0,
             MaxAmmo = 72,
@@ -19684,7 +19970,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Snipetron",
             Image = "SnipetronVandal.png",
-            Introduced = "[[Update 8#Hotfix 8.3.2|Hotfix 8.3.2]]",
+            Introduced = "8.3.2",
             Magazine = 6,
             Mastery = 5,
             MaxAmmo = 72,
@@ -19736,7 +20022,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Soma",
             Image = "Soma.png",
-            Introduced = "[[Update 10#Update 10.0|Update 10.0]]",
+            Introduced = "10.0",
             Magazine = 100,
             Mastery = 6,
             MaxAmmo = 540,
@@ -19779,7 +20065,7 @@ local WeaponData = {
             Disposition = 0.75,
             Family = "Soma",
             Image = "PrimeSoma.png",
-            Introduced = "[[Update 15#Update 15.7|Update 15.7]]",
+            Introduced = "15.7",
             Magazine = 200,
             Mastery = 7,
             MaxAmmo = 800,
@@ -19807,10 +20093,13 @@ local WeaponData = {
         ["Sporothrix"] = {
             Accuracy = 100,
             AreaAttack = {
+            	CritChance = 0.01,
+            	CritMultiplier = 3,
                 Damage = {["Tranchant"] = 22, ["Viral"] = 19},
                 ExplosionDelay = 0.9,
                 Falloff = {StartRange = 0, EndRange = 1.7, Reduction = 0.1},
-                Radius = 1.7
+                Radius = 1.7,
+                StatusChance = 0.53,
             },
             Class = "Fusil de Sniper",
             Conclave = false,
@@ -19825,13 +20114,14 @@ local WeaponData = {
                     {Name = "Support Crânien", Type = "Ressource", Count = 2}
                 }
             },
-            Disposition = 0.5,
-            ExilusPolarity = "V",
+            Disposition = 1.1,
+            ExilusPolarity = "Bar",
             Image = "Sporothrix.png",
-            Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            Introduced = "29.5",
             Magazine = 9,
             Mastery = 13,
-            MaxAmmo = 40,
+            MaxAmmo = 45,
+            NoiseLevel = "Bruyant",
             Name = "Sporothrix",
             NormalAttack = {
                 AttackName = "Normal",
@@ -19850,14 +20140,13 @@ local WeaponData = {
             },
             Polarities = {"D"},
             Reload = 2.7,
-            SniperComboMin = 5,
+            SniperComboMin = 3,
             SniperComboReset = 2,
             Traits = {"Infesté"},
             Trigger = "Semi-Auto",
             Type = "Principale",
             Zoom = {
-                "2x Zoom (-50% Recul, +2m Pénétration)",
-                "3.5x Zoom (+100% Dégâts, +3.5m Rayon d'Explosion, -75% Cadence de Tir)"
+                "2.7x Zoom (+50% Dégâts Tir à la Tête)"
             }
         },
 
@@ -19889,7 +20178,6 @@ local WeaponData = {
                 StatusChance = 0.32,
                 FireRate = 0.667,
                 PelletCount = 1,
-                -- PunchThrough = 1.5,
                 ShotSpeed = 100,
                 ShotType = "Projectile"
             },
@@ -19904,10 +20192,10 @@ local WeaponData = {
                     {Name = "Crosse", Type = "Objet", Count = 1}
                 }
             },
-            Disposition = 1,
+            Disposition = 0.85,
             ExilusPolarity = "V",
             Image = "Stahlta.png",
-            Introduced = "[[Update 28#Update 28]]",
+            Introduced = "28.0",
             Magazine = 40,
             Mastery = 10,
             MaxAmmo = 0,
@@ -19954,7 +20242,7 @@ local WeaponData = {
             ExilusPolarity = "Bar",
             Family = "Stradavar",
             Image = "Stradavar.png",
-            Introduced = "[[Update 18#Update 18.11|Update 18.11]]",
+            Introduced = "18.11",
             Magazine = 65,
             Mastery = 8,
             MaxAmmo = 540,
@@ -20013,7 +20301,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Stradavar",
             Image = "Stradavar_Prime.png",
-            Introduced = "[[Update 24#Hotfix 24.5.8|Hotfix 24.5.8]]",
+            Introduced = "24.5.8",
             Magazine = 90,
             Mastery = 12,
             MaxAmmo = 540,
@@ -20074,11 +20362,11 @@ local WeaponData = {
             Accuracy = 14.3,
             Class = "Fusil",
             Conclave = true,
-            Disposition = 1,
+            Disposition = 1.05,
             ExilusPolarity = "Bar",
             Family = "Supra",
             Image = "Supra.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
+            Introduced = "8.0",
             Magazine = 180,
             Mastery = 12,
             MaxAmmo = 1080,
@@ -20106,10 +20394,10 @@ local WeaponData = {
             Accuracy = 28.6,
             Class = "Fusil",
             Conclave = true,
-            Disposition = 0.80,
+            Disposition = 0.95,
             Family = "Supra",
             Image = "SupraVandal.png",
-            Introduced = "[[Update 20#Update 20.4|Update 20.4]]",
+            Introduced = "20.4",
             Magazine = 300,
             Mastery = 14,
             MaxAmmo = 1600,
@@ -20155,7 +20443,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Sybaris",
             Image = "Sybaris.png",
-            Introduced = "[[Update 13#Update 13.3|Update 13.3]]",
+            Introduced = "13.3",
             Magazine = 10,
             Mastery = 5,
             MaxAmmo = 540,
@@ -20196,7 +20484,7 @@ local WeaponData = {
             Disposition = 1.0,
             Family = "Sybaris",
             Image = "Sybaris_Prime.png",
-            Introduced = "[[Update 20#Hotfix 20.6.2|Hotfix 20.6.2]]",
+            Introduced = "20.6.2",
             Magazine = 20,
             Mastery = 12,
             MaxAmmo = 540,
@@ -20240,7 +20528,7 @@ local WeaponData = {
             Disposition = 1.31,
             ExilusPolarity = "V",
             Image = "Synapse.png",
-            Introduced = "[[Update 10#Update 10.0|Update 10.0]]",
+            Introduced = "10.0",
             Magazine = 70,
             Mastery = 11,
             MaxAmmo = 540,
@@ -20252,7 +20540,7 @@ local WeaponData = {
                 StatusChance = 0.13,
                 FireRate = 12,
                 AmmoCost = 0.5,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 27
             },
             Reload = 1.5,
@@ -20271,7 +20559,7 @@ local WeaponData = {
             Disposition = 0.85,
             Family = "Simulor",
             Image = "SimulorSynoid.png",
-            Introduced = "[[Update 17#Update 17.3|Update 17.3]]",
+            Introduced = "17.3",
             Magazine = 16,
             Mastery = 12,
             MaxAmmo = 96,
@@ -20305,7 +20593,7 @@ local WeaponData = {
             Disposition = 1.15,
             Family = "Boltor",
             Image = "BoltorTelos.png",
-            Introduced = "[[Update 17#Update 17.3|Update 17.3]]",
+            Introduced = "17.3",
             Magazine = 90,
             Mastery = 12,
             MaxAmmo = 540,
@@ -20326,6 +20614,392 @@ local WeaponData = {
             Trigger = "Auto",
             Type = "Principale"
         },
+        
+        ["Agendus - Principe"] = {
+		Introduced = "30.5",
+		BlockAngle = 90,
+		Class = "Épée et Bouclier",
+		ComboDur = 5,
+		Conclave = true,
+		Disposition = 0.5,
+		FollowThrough = 0.6,
+		HeavyAttack = 1300,
+		HeavyRadialDmg = 1040,
+		HeavySlamAttack = 1040,
+		HeavySlamRadius = 10,
+		Mastery = 0,
+		MeleeRange = 2.6,
+		Name = "Agendus - Principe",
+		Image = "Agendus - Principe.png",
+		NormalAttack = {
+			CritChance = 0.24,
+			CritMultiplier = 2,
+			Damage = {["Impact"] = 120, ["Électrique"] = 140},
+			FireRate = 0.92,
+			StatusChance = 0.3
+		},
+		Polarities = {},
+		SlamAttack = 780,
+		SlamElement = "Impact",
+		SlamRadialDmg = 260,
+		SlamRadialElement = "Impact",
+		SlamRadialProc = "Impact",
+		SlamRadius = 6,
+		SlideAttack = 260,
+		StancePolarity = "Madurai",
+		Traits = {"Corpus", "Principe"},
+		Type = "Mêlée",
+		WindUp = 1 
+	},
+	["Arca Plasmor - Principe"] = {
+		Accuracy = 9.1,
+		Class = "Fusil à Pompe",
+		Disposition = 0.5,
+		ExilusPolarity = "V",
+		Introduced = "30.5",
+		Magazine = 10,
+		Mastery = 16,
+		MaxAmmo = 40,
+		Name = "Arca Plasmor - Principe",
+		Image = "Arca Plasmor - Principe.png",
+		NormalAttack = {
+			CritChance = 0.22,
+			CritMultiplier = 2.0,
+			Damage = {["Radiation"] = 760},
+			Falloff = {EndRange = 36, Reduction = 0.6667, StartRange = 18},
+			FireRate = 1.0,
+			Range = 36,
+			ShotSpeed = 60,
+			ShotType = "Projectile",
+			StatusChance = 0.34 
+		},
+		Polarities = { "V", "V" },
+		Reload = 3.0,
+		Traits = {"Corpus", "Principe"},
+		Family = "Arca Plasmor",
+		Trigger = "Semi-Auto",
+		Type = "Principale",
+	},
+	["Cycron - Principe"] = {
+		Accuracy = 100,
+		Class = "Pistolet",
+		Disposition = 0.5,
+		Introduced = "30.5",
+		Magazine = 40,
+		Mastery = 14,
+		ExilusPolarity = "Bar",
+		Polarities = {"Bar", "Bar"},
+		Name = "Cycron - Principe",
+		Image = "Cycron - Principe.png",
+		NormalAttack = {
+			AmmoCost = 0.5,
+			CritChance = 0.20,
+			CritMultiplier = 1.8,
+			Damage = {["Feu"] = 22},
+			FireRate = 12,
+			PunchThrough = 1,
+			Range = 28,
+			ShotType = "Décharge",
+			StatusChance = 0.4 
+		},
+		Reload = 40,
+		ReloadDelay = 1,
+		ReloadStyle = "Régénération",
+		Traits = {"Corpus", "Principe"},
+		Family = "Cycron",
+		Trigger = "Continue",
+		Type = "Secondaire" 
+	},
+	["Detron - Principe"] = {
+		Accuracy = 20,
+		Class = "Sidearm Fusil à Pompe",
+		Disposition = 0.5,
+		ExilusPolarity = "V",
+		Family = "Detron",
+		Introduced = "30.5",
+		Magazine = 6,
+		Mastery = 16,
+		MaxAmmo = 210,
+		Name = "Detron - Principe",
+		Image = "Detron - Principe.png",
+		NormalAttack = {
+			CritChance = 0.18,
+			CritMultiplier = 2.0,
+			Damage = {["Radiation"] = 26},
+			Falloff = {EndRange = 22, Reduction = 0.625, StartRange = 13},
+			FireRate = 3.33,
+			Multishot = 10,
+			ShotType = "Projectile",
+			StatusChance = 0.10 
+		},
+		Polarities = {},
+		Reload = 1.05,
+		Traits = {"Corpus", "Principe"},
+		Trigger = "Semi-Auto",
+		Type = "Secondaire" 
+	},
+	["Diplos - Principe"] = {
+		Introduced = "30.5",
+		Accuracy = 100,
+		Class = "Doubles Pistolets",
+		Conclave = true,
+		Disposition = 0.5,
+		ExilusPolarity = "V",
+		Magazine = 92,
+		Mastery = 16,
+		MaxAmmo = 460,
+		Name = "Diplos - Principe",
+		Image = "Diplos - Principe.png",
+		NoiseLevel = "Bruyant",
+		NormalAttack = {
+			CritChance = 0.36,
+			CritMultiplier = 2.2,
+			Damage = {["Impact"] = 11.2, ["Perforation"]= 9, ["Tranchant"] = 7.8},
+			FireRate = 9.67,
+			ShotType = "Projectile",
+			StatusChance = 0.14
+		},
+		Polarities = { "V" },
+		Reload = 2.8,
+		Traits = {"Corpus", "Principe"},
+		Trigger = "Auto",
+		Type = "Secondaire" 
+	},
+	["Envoi - Principe"] = {
+		Accuracy = 100,
+		Attack5 = {
+			AttackName = "Explosion de Roquette",
+			Damage = {["Glace"] = 640},
+			Falloff = {EndRange = 8, Reduction = 0.8, StartRange = 0},
+			Radius = 8 
+		},
+		Class = "Lanceur",
+		Disposition = 0.5,
+		ExilusPolarity = "Bar",
+		Magazine = 8,
+		Mastery = 16,
+		MaxAmmo = 32,
+		Name = "Envoi - Principe",
+		Image = "Envoi - Principe.png",
+		NormalAttack = {
+			AttackName = "Impact de Grenade",
+			CritChance = 0.28,
+			CritMultiplier = 2.6,
+			Damage = {Impact = 100},
+			FireRate = 0.83,
+			ShotSpeed = "?",
+			ShotType = "Projectile",
+			StatusChance = 0.24 
+		},
+		Reload = 4,
+		ReloadStyle = "ByRound",
+		Traits = {"Corpus", "Principe"},
+		Trigger = "Auto",
+		Type = "Principale",
+	},
+	["Exec - Principe"] = {
+		Introduced = "30.5",
+		BlockAngle = 55,
+		Class = "Lame Lourde",
+		ComboDur = 5,
+		Conclave = true,
+		Disposition = 0.5,
+		FollowThrough = 0.4,
+		HeavyAttack = 1140,
+		HeavyRadialDmg = 950,
+		HeavySlamAttack = 950,
+		HeavySlamRadius = 4,
+		Mastery = 16,
+		MeleeRange = 2.8,
+		Name = "Exec - Principe",
+		Image = "Exec - Principe.png",
+		NormalAttack = {
+			CritChance = 0.38,
+			CritMultiplier = 2.4,
+			Damage = {["Impact"] = 102.6, ["Tranchant"] = 87.4},
+			FireRate = 1,
+			StatusChance = 0.22
+		},
+		Polarities = {},
+		SlamAttack = 570,
+		SlamRadialDmg = 190,
+		SlamRadialElement = "Impact",
+		SlamRadialProc = "Impact",
+		SlamRadius = 4,
+		SlideAttack = 380,
+		StancePolarity = "Madurai",
+		Traits = {"Corpus", "Principe"},
+		Type = "Mêlée",
+		WindUp = 1.1 
+	},
+	["Fusil à Flux - Principe"] = {
+		Accuracy = 200,
+		Class = "Fusil",
+		Disposition = 0.5,
+		ExilusPolarity = "Bar",
+		Introduced = "30.5",
+		Magazine = 120,
+		Mastery = 15,
+		Name = "Fusil à Flux - Principe",
+		Image = "Fusil à Flux - Principe.png",
+		NormalAttack = {
+			CritChance = 0.2,
+			CritMultiplier = 1.8,
+			Damage = {["Perforation"] = 4.8, ["Tranchant"] = 17.2},
+			FireRate = 15,
+			StatusChance = 0.26 
+		},
+		Polarities = {},
+		Reload = 1.8,
+		Traits = {"Corpus", "Principe"},
+		Family = "Fusil à Flux",
+		Trigger = "Auto",
+		Type = "Principale",
+	},
+	["Grigori - Principe"] = {
+		Introduced = "30.5",
+		BlockAngle = 90,
+		Class = "Faux",
+		ComboDur = 5,
+		Conclave = true,
+		Disposition = 0.5,
+		FollowThrough = 0.35,
+		HeavyAttack = 1368,
+		HeavyRadialDmg = 1140,
+		HeavySlamAttack = 1140,
+		HeavySlamRadius = 8,
+		Mastery = 14,
+		MeleeRange = 2.5,
+		Name = "Grigori - Principe",
+		Image = "Grigori - Principe.png",
+		NormalAttack = {
+			CritChance = 0.24,
+			CritMultiplier = 1.6,
+			Damage = {["Impact"] = 9.1, ["Perforation"] = 82.1, ["Tranchant"] = 136.8},
+			FireRate = 1.08,
+			StatusChance = 0.38
+		},
+		Polarities = { "V" },
+		SlamAttack = 684,
+		SlamRadialDmg = 228,
+		SlamRadialElement = "Impact",
+		SlamRadialProc = "Impact",
+		SlamRadius = 8,
+		SlideAttack = 465,
+		StancePolarity = "Zenurik",
+		Traits = {"Corpus", "Principe"},
+		Type = "Mêlée",
+		WindUp = 1 
+	},
+	["Livia - Principe"] = {
+		Introduced = "30.5",
+		BlockAngle = 55,
+		Class = "Nikana à deux mains",
+		ComboDur = 5, 
+		Conclave = true,
+		Disposition = 0.5,
+		FollowThrough = 0.7,
+		HeavyAttack = 1188,
+		HeavyRadialDmg = 792,
+		HeavySlamAttack = 792,
+		HeavySlamRadius = 8,
+		Mastery = 14,
+		MeleeRange = 2.5,
+		Name = "Livia - Principe",
+		Image = "Livia - Principe.png",
+		NormalAttack = {
+			CritChance = 0.28,
+			CritMultiplier = 2.4,
+			Damage = {["Impact"] = 9.9, ["Perforation"] = 9.9, ["Tranchant"] = 178.2},
+			FireRate = 1.08,
+			StatusChance = 0.28 
+		},
+		Polarities = {},
+		SlamAttack = 594,
+		SlamRadialDmg = 198,
+		SlamRadialElement = "Impact",
+		SlamRadialProc = "Impact",
+		SlamRadius = 6,
+		SlideAttack = 396,
+		StancePolarity = "Madurai",
+		Traits = {"Corpus", "Principe"},
+		Type = "Mêlée",
+		WindUp = 0.7 
+	},
+	["Spirex - Principe"] = {
+		Introduced = "30.5",
+		Attack5 = {
+			AttackName = "Rocket Explosion",
+			Damage = {["Feu"] = 80},
+			Falloff = {EndRange = 2, Reduction = 0.2, StartRange = 0},
+			Radius = 2 
+		},
+		Accuracy = 12.5,
+		Class = "Pistolet",
+		Conclave = true,
+		Disposition = 0.5,
+		Polarities = {"V", "V"},
+		Magazine = 8,
+		Mastery = 14,
+		MaxAmmo = 210,
+		Name = "Spirex - Principe",
+		Image = "Spirex - Principe.png",
+		NoiseLevel = "Bruyant",
+		NormalAttack = {
+			CritChance = 0.26,
+			CritMultiplier = 2.4,
+			Damage = {["Impact"] = 40, ["Perforation"] = 20, ["Feu"] = 60},
+			FireRate = 2.33,
+			ShotSpeed = "?",
+			ShotType = "Projectile",
+			StatusChance = 0.40 
+		},
+		Reload = 2.4,
+		Traits = {"Corpus", "Principe"},
+		Trigger = "Semi-Auto",
+		Type = "Secondaire",
+	},
+		["Tetra - Principe"] = {
+		Accuracy = 18.2,
+		Class = "Fusil",
+		Disposition = 1,
+		ExilusPolarity = "V",
+		Family = "Tetra",
+		Introduced = "30.5",
+		Magazine = 80,
+		Mastery = 15,
+		MaxAmmo = 540,
+		Name = "Tetra - Principe",
+		Image = "Tetra - Principe.png",
+		NormalAttack = {
+			CritChance = 0.28,
+			CritMultiplier = 2.2,
+			Damage = {["Impact"] = 13.2, ["Perforation"] = 33.6, ["Tranchant"] = 13.2},
+			FireRate = 5,
+			ShotSpeed = 100,
+			ShotType = "Projectile",
+			StatusChance = 0.30 
+		},
+		Attack2 = {
+			AttackName = "Secondaire",
+			Damage = {Impact = 200},
+			Reload = 1.8,
+			FireRate = 1.33,
+			ShotSpeed = "?",
+			ShotType = "Projectile",
+		},
+		Attack5 = {
+			AttackName = "Explosion de Grenade",
+			Damage = {Blast = 1000},
+			Falloff = {EndRange = 8, Reduction = 0, StartRange = 0},
+			Radius = 8 
+		},
+		Polarities = {},
+		Reload = 2.2,
+		Traits = {"Corpus", "Principe"},
+		Trigger = "Auto",
+		Type = "Principale" 
+	},
         ["Tenora"] = {
             Accuracy = 12.5,
             Class = "Fusil",
@@ -20346,7 +21020,7 @@ local WeaponData = {
             Disposition = 1.1,
             ExilusPolarity = "V",
             Image = "TnBardRifle.png",
-            Introduced = "[[Update 20#Update: Octavia's Anthem|Update: Octavia's Anthem]]",
+            Introduced = "20.0",
             Magazine = 150,
             Mastery = 10,
             MaxAmmo = 900,
@@ -20386,6 +21060,63 @@ local WeaponData = {
             Trigger = "Auto à Chauffe / Chargé",
             Type = "Principale"
         },
+        ["Tenora Prime"] = {
+		Accuracy = 12.5,
+		Class = "Fusil",
+		Conclave = true,
+		Cost = {
+			Credits = 20000,
+			Rush = 35,
+			Time = 12,
+			Parts = {
+				{ Name = "Canon",Type = "Partie Prime",Count = 1,},
+				{ Name = "Culasse",Type = "Partie Prime",Count = 1,},
+				{ Name = "Crosse",Type = "Partie Prime",Count = 1,},
+				{ Name = "Cellule Orokin",Type = "Ressource",Count = 10,},},
+		},
+		Disposition = 0.5,
+		ExilusPolarity = "V",
+		Family = "Tenora",
+		Image = "Tenora Prime.png",
+		Introduced = "29.9",
+		Magazine = 200,
+		Mastery = 14,
+		MaxAmmo = 900,
+		Name = "Tenora Prime",
+		NormalAttack = {
+			Damage = {
+				["Impact"] = 8.4,
+				["Perforation"] = 11.2,
+				["Tranchant"] = 8.4,},
+			CritChance = 0.3,
+			CritMultiplier = 2.2,
+			StatusChance = 0.24,
+			FireRate = 12.67,
+			ShotType = "Hit-Scan",
+		},
+		SecondaryAttack = {
+			Damage = {
+				["Impact"] = 56,
+				["Perforation"] = 168,
+				["Tranchant"] = 56,},
+			CritChance = 0.4,
+			CritMultiplier = 3,
+			StatusChance = 0.2,
+			FireRate = 2,
+			ChargeTime = 0.8,
+			PunchThrough = 1,
+			Trigger = "Charge",
+			AmmoCost = 10,
+			ShotType = "Projectile",
+			ShotSpeed = "?",
+		},
+		Polarities = {"V", "V"},
+		Reload = 2.5,
+		Spool = 9,
+		Traits = {"Prime"},
+		Trigger = "Auto à Chauffe / Chargé",
+		Type = "Principale",
+	},
         ["Tetra"] = {
             Accuracy = 18.2,
             Class = "Fusil",
@@ -20411,7 +21142,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Tetra",
             Image = "DETetra.png",
-            Introduced = "[[Update 11#Update 11.8|Update 11.8]]",
+            Introduced = "11.8",
             Magazine = 60,
             Mastery = 3,
             MaxAmmo = 540,
@@ -20452,11 +21183,11 @@ local WeaponData = {
                     {Name = "Forma", Type = "Objet", Count = 1}
                 }
             },
-            Disposition = 1,
+            Disposition = 1.05,
             ExilusPolarity = "Bar",
             Family = "Tiberon",
             Image = "Tiberon.png",
-            Introduced = "[[Update 14#Update 14.9|Update 14.9]]",
+            Introduced = "14.9",
             Magazine = 30,
             Mastery = 10,
             MaxAmmo = 540,
@@ -20525,7 +21256,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Tiberon",
             Image = "TiberonPrime.png",
-            Introduced = "[[Update 22#Hotfix 22.16.4|Hotfix 22.16.4]]",
+            Introduced = "22.16.4",
             Magazine = 42,
             Mastery = 14,
             MaxAmmo = 540,
@@ -20568,7 +21299,7 @@ local WeaponData = {
             Disposition = 1.3,
             Family = "Tonkor",
             Image = "Tonkor.png",
-            Introduced = "[[Update 16#Update 16.4|Update 16.4]]",
+            Introduced = "16.4",
             Magazine = 1,
             Mastery = 5,
             MaxAmmo = 30,
@@ -20611,7 +21342,7 @@ local WeaponData = {
             ExilusPolarity = "Bar",
             Family = "Tonkor",
             Image = "Tonkor Kuva.png",
-            Introduced = "[[Update 26#Update 26|Update 26]]",
+            Introduced = "26.0",
             Magazine = 1,
             Mastery = 13,
             MaxAmmo = 60,
@@ -20658,7 +21389,7 @@ local WeaponData = {
             Conclave = false,
             Disposition = 1.3,
             Image = "Torid.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
+            Introduced = "8.0",
             Magazine = 5,
             Mastery = 4,
             MaxAmmo = 60,
@@ -20678,7 +21409,6 @@ local WeaponData = {
             Trigger = "Semi-Auto",
             Type = "Principale"
         },
-
         ["Trumna"] = {
             Accuracy = 200,
             AreaAttack = {
@@ -20703,11 +21433,11 @@ local WeaponData = {
                     {Name = "Crosse", Type = "Objet", Count = 1}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 0.75,
             ExilusPolarity = "V",
             Family = "Trumna",
             Image = "Trumna.png",
-            Introduced = "[[Update 29]]",
+            Introduced = "29.0",
             Magazine = 200,
             Mastery = 13,
             MaxAmmo = 400,
@@ -20745,7 +21475,6 @@ local WeaponData = {
             Trigger = "Auto / Semi",
             Type = "Principale"
         },
-
         ["Vectis"] = {
             Accuracy = 13.3,
             Class = "Fusil de Sniper",
@@ -20766,7 +21495,7 @@ local WeaponData = {
             Disposition = 0.85,
             Family = "Vectis",
             Image = "DEVectis.png",
-            Introduced = "[[Update 10#Update 10.6|Update 10.6]]",
+            Introduced = "10.6",
             Magazine = 1,
             Mastery = 2,
             MaxAmmo = 72,
@@ -20817,7 +21546,7 @@ local WeaponData = {
             ExilusPolarity = "Bar",
             Family = "Vectis",
             Image = "VectisPrime.png",
-            Introduced = "[[Update 16#Update 16.11|Update 16.11]]",
+            Introduced = "16.11",
             Magazine = 2,
             Mastery = 14,
             MaxAmmo = 72,
@@ -20868,7 +21597,7 @@ local WeaponData = {
             Disposition = 1.25,
             Family = "Veldt",
             Image = "Veldt.png",
-            Introduced = "[[Update 22#Update 22.18|Update 22.18]]",
+            Introduced = "22.18",
             Magazine = 26,
             Mastery = 8,
             MaxAmmo = 528,
@@ -20890,7 +21619,6 @@ local WeaponData = {
             Trigger = "Semi-Auto",
             Type = "Principale"
         },
-
         ["Vulkar"] = {
             Cost = {
                 Credits = 20000,
@@ -20912,7 +21640,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Vulkar",
             Image = "Vulkar.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
+            Introduced = "8.0",
             Magazine = 6,
             Mastery = 3,
             MaxAmmo = 72,
@@ -20955,7 +21683,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Vulkar",
             Image = "VulkarWraith.png",
-            Introduced = "[[Update 18#Update 18.4.1|Update 18.4.1]]",
+            Introduced = "18.4.1",
             Magazine = 8,
             Mastery = 7,
             MaxAmmo = 72,
@@ -21006,10 +21734,12 @@ local WeaponData = {
                 Damage = {["Explosif"] = 175},
                 CritChance = 0.17,
                 StatusChance = 0.29,
-                Radius = 5
+                Radius = 4,
+                Falloff = {StartRange = 0,EndRange = 4.0,Reduction = 0.5,}
             },
             Class = "Lanceur",
             Conclave = true,
+            Introduced = "19",
             Disposition = 1.15,
             Image = "Zarr.png",
             Magazine = 3,
@@ -21028,25 +21758,26 @@ local WeaponData = {
                 ShotSpeed = "???"
             },
             Polarities = {"V"},
-            Reload = 2.3,
+            ExilusPolarity = "V",
+            Reload = 2.25,
             SecondaryAreaAttack = {
-                AttackName = "Cannon Mode Cluster Bombs",
+                AttackName = "Cannon Mode Bombes à Fragmenation",
                 Damage = {["Explosif"] = 300},
                 CritChance = 0.17,
-                StatusChance = 0.29,
+                StatusChance = 4.80,
                 PelletCount = 6,
                 PelletName = "Bomb"
             },
             SecondaryAttack = {
                 Accuracy = 1.4,
-                AttackName = "Barrage Mode",
+                AttackName = "Mode Barrage",
                 Damage = {
                     ["Impact"] = 240,
                     ["Perforation"] = 400,
                     ["Tranchant"] = 160
                 },
                 CritChance = 0.17,
-                StatusChance = 0.29,
+                StatusChance = 8.70,
                 FireRate = 3,
                 PunchThrough = 1.6,
                 PelletCount = 10
@@ -21061,7 +21792,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 1.1,
             Image = "SundialRifle.png",
-            Introduced = "[[Update 20#Update 20.2|Update 20.2]]",
+            Introduced = "20.2",
             Magazine = 90,
             Mastery = 10,
             MaxAmmo = 540,
@@ -21120,7 +21851,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 1.25,
             Image = "RepeatingCrossbow.png",
-            Introduced = "[[Update 18#Update 18.6|Update 18.6]]",
+            Introduced = "18.6",
             Magazine = 20,
             Mastery = 10,
             MaxAmmo = 540,
@@ -21173,7 +21904,7 @@ local WeaponData = {
             Disposition = 1.25,
             Family = "Zhuge",
             Image = "Zhuge Prime.png",
-            Introduced = "[[Update 25#Update 25.3|Update 25.3]]",
+            Introduced = "25.3",
             Magazine = 30,
             Mastery = 14,
             MaxAmmo = 540,
@@ -21219,7 +21950,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 0.6,
             Image = "Arca Plasmor.png",
-            Introduced = "[[Update 21#Update 21.7|Update 21.7]]",
+            Introduced = "21.7",
             Magazine = 10,
             Mastery = 10,
             MaxAmmo = 48,
@@ -21272,7 +22003,7 @@ local WeaponData = {
             },
             Disposition = 1.1,
             Image = "Astilla.png",
-            Introduced = "[[Update 22#Update: Plains of Eidolon|Update: Plains of Eidolon]]",
+            Introduced = "22.0",
             Magazine = 16,
             Mastery = 10,
             MaxAmmo = 112,
@@ -21298,6 +22029,59 @@ local WeaponData = {
             Trigger = "Auto",
             Type = "Principale"
         },
+        ["Astilla Prime"] = {
+            Cost = {
+                Credits = 15000,
+                Rush = 50,
+                Time = 12,
+                Parts = {
+                    {Name = "Canon", Type = "Partie Prime", Count = 1},
+                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
+                    {Name = "Crosse", Type = "Partie Prime", Count = 1},
+                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
+                }
+            },
+            Accuracy = 25,
+            Class = "Fusil à Pompe",
+            Conclave = true,
+            Disposition = 0.5,
+            Family = "Astilla",
+            Image = "AstillaPrime.png",
+            Introduced = "30.3",
+            Magazine = 24,
+            Mastery = 14,
+            MaxAmmo = 120,
+            Name = "Astilla Prime",
+            NormalAttack = {
+                Damage = {
+                    ["Impact"] = 100
+                },
+                CritChance = 0.21,
+                CritMultiplier = 1.9,
+                StatusChance = 0.37,
+--                PelletCount = 8,
+                FireRate = 4.33,
+                Falloff = {StartRange = 30, EndRange = 60, Reduction = 0.5},
+                ShotType = "Projectile",
+				ShotSpeed = "75"
+            },
+            AreaAttack = {
+                AttackName = "Explosion de Verre",
+                Damage = {
+                    ["Perforation"] = 49,
+                    ["Tranchant"] = 91
+                },
+                CritChance = 0.21,
+                CritMultiplier = 1.9,
+                StatusChance = 0.37
+            },
+            Polarities = {"V", "V", "Bar"},
+            ExilusPolarity = "V",
+            Reload = 2,
+            Traits = {"Prime"},
+            Trigger = "Auto",
+            Type = "Principale"
+        },
         ["Boar"] = {
             Accuracy = 5,
             Class = "Fusil à Pompe",
@@ -21317,7 +22101,7 @@ local WeaponData = {
             Disposition = 1.34,
             Family = "Boar",
             Image = "Boar.png",
-            Introduced = "[[Closed Beta Updates#Vanilla|Vanilla]]",
+            Introduced = "Vanilla",
             Magazine = 20,
             Mastery = 2,
             MaxAmmo = 120,
@@ -21360,7 +22144,7 @@ local WeaponData = {
             Disposition = 1.34,
             Family = "Boar",
             Image = "FixedPrimeBoar.png",
-            Introduced = "[[Update 10#Update 10.0|Update 10.0]]",
+            Introduced = "10.0",
             Magazine = 20,
             Mastery = 11,
             MaxAmmo = 120,
@@ -21400,7 +22184,7 @@ local WeaponData = {
                     {Name = "Forma", Type = "Ressource", Count = 1}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 0.6,
             ExilusPolarity = "V",
             Image = "Cedo.png",
             Introduced = "29.6",
@@ -21463,7 +22247,7 @@ local WeaponData = {
             Conclave = false,
             Disposition = 1.46,
             Image = "Convectrix.png",
-            Introduced = "[[Update 17#Update 17.5|Update 17.5]]",
+            Introduced = "17.5",
             Magazine = 70,
             Mastery = 7,
             MaxAmmo = 700,
@@ -21481,7 +22265,7 @@ local WeaponData = {
                 PelletName = "Rayon",
                 FireRate = 12,
                 AmmoCost = 0.5,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 30
             },
             Reload = 2,
@@ -21512,7 +22296,7 @@ local WeaponData = {
             Conclave = true,
             Disposition = 0.95,
             Image = "Corinth.png",
-            Introduced = "[[Update 22#Update 22.8.0|Update 22.8]]",
+            Introduced = "22.8",
             Magazine = 5,
             Mastery = 8,
             MaxAmmo = 132,
@@ -21574,7 +22358,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Corinth",
             Image = "Corinth Prime.png",
-            Introduced = "[[Update 27#Update 27.3.6|Update 27.3.6]]",
+            Introduced = "27.3.6",
             Magazine = 20,
             Mastery = 14,
             MaxAmmo = 120,
@@ -21654,7 +22438,7 @@ local WeaponData = {
             Disposition = 1.48,
             Family = "Drakgoon",
             Image = "Drakgoon.png",
-            Introduced = "[[Update 11#Update 11.6|Update 11.6]]",
+            Introduced = "11.6",
             Magazine = 7,
             Mastery = 5,
             Name = "Drakgoon",
@@ -21704,7 +22488,7 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Drakgoon",
             Image = "Drakgoon Kuva.png",
-            Introduced = "[[Update 26#Update 26|Update 26]]",
+            Introduced = "26.0",
             Magazine = 11,
             Mastery = 13,
             MaxAmmo = 120,
@@ -21739,7 +22523,7 @@ local WeaponData = {
                 Credits = 20000,
                 BPCost = 20000,
                 MarketCost = 225,
-                Rush = 35, -- confirmation needed
+                Rush = 35,
                 Time = 12,
                 Parts = {
                     {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
@@ -21751,9 +22535,9 @@ local WeaponData = {
                     {Name = "Récupération", Type = "Ressource", Count = 8500}
                 }
             },
-            Disposition = 1.0,
+            Disposition = 1.1,
             Image = "Exergis.png",
-            Introduced = "[[Update 24#Update 24.2|Update 24.2]]",
+            Introduced = "24.2",
             Magazine = 1,
             Mastery = 8,
             MaxAmmo = 47,
@@ -21771,7 +22555,6 @@ local WeaponData = {
                 PelletCount = 3,
                 PunchThrough = 0.5,
                 FireRate = 3.33,
-                --	ShotSpeed = 100, 
                 ShotType = "Projectile",
 
                 Falloff = {StartRange = 30, EndRange = 60, Reduction = 0.508}
@@ -21801,7 +22584,7 @@ local WeaponData = {
             Disposition = 0.85,
             Family = "Hek",
             Image = "Hek.png",
-            Introduced = "[[Closed Beta Updates#Update 5.2|Update 5.2]]",
+            Introduced = "5.2",
             Magazine = 4,
             Mastery = 4,
             MaxAmmo = 120,
@@ -21842,7 +22625,7 @@ local WeaponData = {
             Disposition = 0.85,
             Family = "Hek",
             Image = "HekVaykor.png",
-            Introduced = "[[Update 17#Update 17.3|Update 17.3]]",
+            Introduced = "17.3",
             Magazine = 8,
             Mastery = 12,
             MaxAmmo = 120,
@@ -21871,7 +22654,7 @@ local WeaponData = {
         ["Kohm"] = {
             Accuracy = 3.6,
             ChargeAttack = {
-                AttackName = "Fully Spooled",
+                AttackName = "Cadence Maximale",
                 PelletCount = 12,
                 AmmoCost = 4,
                 Damage = {
@@ -21899,7 +22682,7 @@ local WeaponData = {
             },
             Disposition = 1.4,
             Image = "Kohm.png",
-            Introduced = "[[Update 15#Update 15.6|Update 15.6]]",
+            Introduced = "15.6",
             Magazine = 245,
             Mastery = 5,
             MaxAmmo = 960,
@@ -21914,7 +22697,7 @@ local WeaponData = {
                 CritMultiplier = 2.3,
                 StatusChance = 0.25,
                 PunchThrough = 1.5,
-                AttackName = "Single Pellet",
+                AttackName = "Cadence de Chauffe",
                 FireRate = 3.67,
                 Falloff = {StartRange = 15, EndRange = 25, Reduction = 0.4667},
                 ShotType = "Hit-Scan"
@@ -21929,7 +22712,7 @@ local WeaponData = {
         ["Kohm Kuva"] = {
             Accuracy = 8,
             ChargeAttack = {
-                AttackName = "Fully Spooled",
+                AttackName = "Cadence Maximale",
                 PelletCount = 12,
                 AmmoCost = 4,
                 Damage = {
@@ -21946,14 +22729,14 @@ local WeaponData = {
             ExilusPolarity = "V",
             Family = "Kohm",
             Image = "Kohm Kuva.png",
-            Introduced = "[[Update 26#Update 26|Update 26]]",
+            Introduced = "26.0",
             Magazine = 209,
             Mastery = 13,
             MaxAmmo = 960,
             Name = "Kohm Kuva",
             NoiseLevel = "Bruyant",
             NormalAttack = {
-                AttackName = "Single Pellet",
+                AttackName = "Cadence de Maximale",
                 Damage = {
                     ["Impact"] = 4,
                     ["Perforation"] = 4,
@@ -21981,7 +22764,7 @@ local WeaponData = {
             Disposition = 1.35,
             Family = "Strun",
             Image = "Strun.png",
-            Introduced = "[[Update 14#Update 14.0|Update 14.0]]",
+            Introduced = "14.0",
             Magazine = 6,
             Mastery = 0,
             MaxAmmo = 120,
@@ -22026,7 +22809,7 @@ local WeaponData = {
             },
             Disposition = 1.46,
             Image = "Phage.png",
-            Introduced = "[[Update 12#Update 12.0|Update 12.0]]",
+            Introduced = "12.0",
             Magazine = 90,
             Mastery = 11,
             MaxAmmo = 720,
@@ -22040,7 +22823,7 @@ local WeaponData = {
                 PelletName = "Rayon",
                 FireRate = 12,
                 AmmoCost = 0.5,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Range = 25
             },
             Polarities = {"Bar"},
@@ -22068,7 +22851,7 @@ local WeaponData = {
             },
             Disposition = 1.33,
             Image = "Sobek.png",
-            Introduced = "[[Update 9#Update 9.0|Update 9.0]]",
+            Introduced = "9.0",
             Magazine = 20,
             Mastery = 7,
             MaxAmmo = 240,
@@ -22143,7 +22926,7 @@ local WeaponData = {
             Disposition = 1.35,
             Family = "Strun",
             Image = "StrunSpectre.png",
-            Introduced = "[[Update 9#Update 9.7.2|Update 9.7.2]]",
+            Introduced = "9.7.2",
             Magazine = 10,
             Mastery = 10,
             MaxAmmo = 120,
@@ -22189,7 +22972,7 @@ local WeaponData = {
             Disposition = 0.5,
             Family = "Tigris",
             Image = "Tigris.png",
-            Introduced = "[[Update 11#Update 11.0|Update 11.0]]",
+            Introduced = "11.0",
             Magazine = 2,
             Mastery = 7,
             MaxAmmo = 120,
@@ -22229,10 +23012,10 @@ local WeaponData = {
             Accuracy = 9.1,
             Class = "Fusil à Pompe",
             Conclave = true,
-            Disposition = 0.5,
+            Disposition = 0.9,
             Family = "Tigris",
             Image = "PrimeTigris342.png",
-            Introduced = "[[Update 19#Hotfix: The Silver Grove 3|Hotfix: The Silver Grove 3]]",
+            Introduced = "TSG 3",
             Magazine = 2,
             Mastery = 13,
             MaxAmmo = 120,
@@ -22245,7 +23028,7 @@ local WeaponData = {
                 },
                 CritChance = 0.1,
                 CritMultiplier = 2,
-                StatusChance = 0.3,
+                StatusChance = 0.1125,
                 PelletCount = 8,
                 FireRate = 2,
                 Falloff = {StartRange = 10, EndRange = 20, Reduction = 0.4872},
@@ -22261,10 +23044,10 @@ local WeaponData = {
             Accuracy = 6.5,
             Class = "Fusil à Pompe",
             Conclave = true,
-            Disposition = 0.5,
+            Disposition = 0.95,
             Family = "Tigris",
             Image = "TigrisSancti.png",
-            Introduced = "[[Update 17#Update 17.3|Update 17.3]]",
+            Introduced = "17.3",
             Magazine = 2,
             Mastery = 12,
             Name = "Tigris Sancti",
@@ -22294,7 +23077,7 @@ local WeaponData = {
             Class = "Fusil",
             Disposition = 1.0,
             Image = "Artax.png",
-            Introduced = "[[Update 19#Update 19.10|Update 19.10]]",
+            Introduced = "19.10",
             Magazine = 100,
             Mastery = 0,
             Name = "Artax",
@@ -22305,7 +23088,7 @@ local WeaponData = {
                 StatusChance = 0.03,
                 FireRate = 1,
                 Range = 30,
-                ShotType = "Décharge"
+                ShotType = "Flux"
             },
             Reload = 1.5,
             Traits = {"Tenno"},
@@ -22318,7 +23101,7 @@ local WeaponData = {
             Disposition = 1.45,
             Family = " Laser à Rafales",
             Image = "Pistolet laser à rafale.png",
-            Introduced = "[[Update 7#Update 7.0|Update 7.0]]",
+            Introduced = "7.0",
             Magazine = 15,
             Mastery = 0,
             Name = " Laser à Rafales",
@@ -22358,7 +23141,7 @@ local WeaponData = {
             Class = "Fusil",
             Disposition = 1.0,
             Image = "Cryotra.png",
-            Introduced = "[[Update 24#Update 24.0|Update 24.0]]",
+            Introduced = "24.0",
             Magazine = 80,
             Mastery = 0,
             Name = "Cryotra",
@@ -22369,7 +23152,7 @@ local WeaponData = {
                 CritMultiplier = 2,
                 StatusChance = 0.35,
                 FireRate = 1,
-                ShotType = "Décharge"
+                ShotType = "Flux"
             },
             Reload = 4,
             Traits = {"Corpus"},
@@ -22388,7 +23171,7 @@ local WeaponData = {
             Conclave = false,
             Disposition = 0.5,
             Image = "Helstrum.png",
-            Introduced = "[[Update 28#Update 28|Update 28]]",
+            Introduced = "28.0",
             Magazine = 80,
             Mastery = 0,
             Name = "Helstrum",
@@ -22416,7 +23199,7 @@ local WeaponData = {
             Class = "Fusil",
             Disposition = 1.455,
             Image = "FusilMachinedeMort.png",
-            Introduced = "[[Update 8#Update 8.0|Update 8.0]]",
+            Introduced = "8.0",
             Magazine = 100,
             Mastery = 0,
             Name = "Fusil Machine de Mort",
@@ -22442,7 +23225,7 @@ local WeaponData = {
             Class = "Fusil",
             Disposition = 1.455,
             Image = "FusilMachinedeMortPrime.png",
-            Introduced = "[[Update 25#Update 25.8|Update 25.8]]",
+            Introduced = "25.8",
             Magazine = 100,
             Mastery = 0,
             Name = "Fusil Machine de Mort Prime",
@@ -22469,7 +23252,7 @@ local WeaponData = {
             Disposition = 1.25,
             Family = "Déconstructeur",
             Image = "ArmeSentinelleGlaive.png",
-            Introduced = "[[Update 12#Update 12.5|Update 12.5]]",
+            Introduced = "12.5",
             Magazine = 6,
             Mastery = 0,
             Name = "Déconstructeur",
@@ -22492,7 +23275,7 @@ local WeaponData = {
             Disposition = 1.25,
             Family = "Déconstructeur",
             Image = "DéconstructeurPrime.png",
-            Introduced = "[[Update 19#Hotfix 19.11.5|Hotfix 19.11.5]]",
+            Introduced = "19.11.5",
             Magazine = 6,
             Mastery = 8,
             Name = "Déconstructeur Prime",
@@ -22515,7 +23298,7 @@ local WeaponData = {
             Disposition = 1.21,
             Family = "Fusil Laser",
             Image = "Fusil Laser.png",
-            Introduced = "[[Update 7#Update 7.0|Update 7.0]]",
+            Introduced = "7.0",
             Magazine = 5,
             Mastery = 0,
             Name = "Fusil Laser",
@@ -22542,7 +23325,7 @@ local WeaponData = {
             Class = "Fusil",
             Disposition = 1.0,
             Image = "Arme_multron.png",
-            Introduced = "[[Update 24#Update 24.0|Update 24.0]]",
+            Introduced = "24.0",
             Magazine = 60,
             Mastery = 3,
             Name = "Multron",
@@ -22568,7 +23351,7 @@ local WeaponData = {
             Disposition = 1.21,
             Family = "Fusil Laser",
             Image = "FusilLaserPrime.png",
-            Introduced = "[[Update 13#Update 13.7|Update 13.7]]",
+            Introduced = "13.7",
             Magazine = 5,
             Mastery = 0,
             Name = "Fusil Laser Prime ",
@@ -22597,7 +23380,7 @@ local WeaponData = {
             Disposition = 1.45,
             Family = " Laser à Rafales",
             Image = "LaseràRafalesPrisma.png",
-            Introduced = "[[Update 17#Update 17.2.2|Update 17.2.2]]",
+            Introduced = "17.2.2",
             Magazine = 15,
             Mastery = 0,
             Name = " Laser à Rafales Prisma",
@@ -22624,7 +23407,7 @@ local WeaponData = {
             Class = "Fusil",
             Disposition = 1.315,
             Image = "Stinger.png",
-            Introduced = "[[Update 10#Update 10.0|Update 10.0]]",
+            Introduced = "10.0",
             Magazine = 4,
             Mastery = 0,
             Name = "Stinger",
@@ -22648,7 +23431,7 @@ local WeaponData = {
             Disposition = 1.0,
             Family = "Sweeper",
             Image = "Balayeuse.png",
-            Introduced = "[[Update 10#Update 10.0|Update 10.0]]",
+            Introduced = "10.0",
             Magazine = 10,
             Mastery = 0,
             Name = "Sweeper",
@@ -22677,7 +23460,7 @@ local WeaponData = {
             Disposition = 1.0,
             Family = "Sweeper",
             Image = "SweeperPrime.png",
-            Introduced = "[[Update 16#Update 16.11|Update 16.11]]",
+            Introduced = "16.11",
             Magazine = 20,
             Mastery = 0,
             Name = "Sweeper Prime",
@@ -22705,7 +23488,7 @@ local WeaponData = {
             Class = "Fusil",
             Disposition = 1.0,
             Image = "Taxicor.png",
-            Introduced = "[[Update 24#Update 24.0|Update 24.0]]",
+            Introduced = "24.0",
             Magazine = 4,
             Mastery = 3,
             Name = "Tazicor",
@@ -22715,13 +23498,37 @@ local WeaponData = {
                 CritMultiplier = 1.5,
                 StatusChance = 0.15,
                 FireRate = 8.33,
-                ShotType = "Décharge"
+                ShotType = "Flux"
             },
             Reload = 2.5,
             Traits = {"Corpus"},
             Trigger = "Auto",
             Type = "Robotique"
         },
+        ["Verglas"] = {
+		Accuracy = 100,
+		Class = "Fusil",
+		Disposition = 0.5,
+		Family = "Verglas",
+		Image = "Verglas.png",
+		Introduced = "29.10",
+		Magazine = 80,
+		Mastery = 0,
+		Name = "Verglas",
+		NormalAttack = {
+			Damage = {
+				["Glace"] = 26,},
+			CritChance = 0.08,
+			CritMultiplier = 2,
+			StatusChance = 0.34,
+			FireRate = 12,
+			ShotType = "Décharge",
+		},
+		Reload = 2.2,
+		Traits = {"Tenno"},
+		Trigger = "Continue",
+		Type = "Robotique",
+	},
         ["Vulcax"] = {
             Accuracy = 100,
             Class = "Fusil",
@@ -22733,11 +23540,11 @@ local WeaponData = {
                 ChargeTime = 1,
                 FireRate = 1,
                 PunchThrough = 1,
-                ShotType = "Décharge"
+                ShotType = "Flux"
             },
             Disposition = 1.0,
             Image = "Vulcax.png",
-            Introduced = "[[Update 24#Update 24.0|Update 24.0]]",
+            Introduced = "24.0",
             Magazine = 1,
             Mastery = 14,
             Name = "Vulcax",
@@ -22751,7 +23558,7 @@ local WeaponData = {
             Class = "Fusil de Sniper",
             Disposition = 1.245,
             Image = "Vulklok.png",
-            Introduced = "[[Update 17#Update 17.3|Update 17.3]]",
+            Introduced = "17.3",
             Magazine = 10,
             Mastery = 0,
             Name = "Vulklok",
@@ -22769,7 +23576,6 @@ local WeaponData = {
             Trigger = "Auto",
             Type = "Robotique"
         },
-
         ["Cortège"] = {
             Accuracy = 100,
             Conclave = false,
@@ -22783,10 +23589,10 @@ local WeaponData = {
                     {Name = "Cortège Crosse", Type = "Objet", Count = 1}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 1,
             Family = "Cortège",
             Image = "Cortège.png",
-            Introduced = "[[Update 29]]",
+            Introduced = "29.0",
             Magazine = 100,
             Mastery = 14,
             Name = "Cortège",
@@ -22797,7 +23603,7 @@ local WeaponData = {
                 CritMultiplier = 1.9,
                 StatusChance = 0.4,
                 FireRate = 12,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Trigger = "Maintenu"
             },
             NoiseLevel = "Bruyant",
@@ -22822,7 +23628,6 @@ local WeaponData = {
             Traits = {"Entrati"},
             Type = "Arch-Fusil"
         },
-
         ["Cortège (Atmosphère)"] = {
             Accuracy = 100,
             Conclave = false,
@@ -22836,9 +23641,9 @@ local WeaponData = {
                     {Name = "Crosse", Type = "Objet", Count = 1}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 1,
             Image = "Cortège.png",
-            Introduced = "[[Update 29]]",
+            Introduced = "29.0",
             Magazine = 100,
             Mastery = 14,
             MaxAmmo = 300,
@@ -22851,7 +23656,7 @@ local WeaponData = {
                 CritMultiplier = 1.9,
                 StatusChance = 0.4,
                 FireRate = 12,
-                ShotType = "Décharge",
+                ShotType = "Flux",
                 Trigger = "Maintenu"
             },
             NoiseLevel = "Bruyant",
@@ -22883,7 +23688,6 @@ local WeaponData = {
             Traits = {"Entrati"},
             Type = "Arch-Fusil (Atmosphère)"
         },
-
         ["Corvas"] = {
             Accuracy = 9.1,
             ChargeAttack = {
@@ -22902,6 +23706,7 @@ local WeaponData = {
                 ShotType = "Hit-scan"
             },
             Class = "Fusil à Pompe",
+            Disposition = 1.2,
             Cost = {
                 Credits = 25000,
                 BPCost = 35000,
@@ -22916,7 +23721,7 @@ local WeaponData = {
                 }
             },
             Image = "Corvas.png",
-            Introduced = "[[Update 15#Update 15.0|Update 15.0]]",
+            Introduced = "15.0",
             Magazine = 25,
             Mastery = 1,
             Name = "Corvas",
@@ -22959,6 +23764,7 @@ local WeaponData = {
                 ShotType = "Hit-scan"
             },
             Class = "Fusil à Pompe",
+            Disposition = 1.2,
             Cost = {
                 Credits = 25000,
                 BPCost = 35000,
@@ -22973,7 +23779,7 @@ local WeaponData = {
                 }
             },
             Image = "Corvas.png",
-            Introduced = "[[Update 24#Update 24.2|Update 24.2]]",
+            Introduced = "24.2",
             Magazine = 25,
             Mastery = 1,
             MaxAmmo = 100,
@@ -23015,7 +23821,7 @@ local WeaponData = {
                 }
             },
             Image = "Cyngas.png",
-            Introduced = "[[Update 19#Update: Specters of the Rail|Update: Specters of the Rail]]",
+            Introduced = "SotR",
             Magazine = 30,
             Mastery = 4,
             Name = "Cyngas",
@@ -23055,7 +23861,7 @@ local WeaponData = {
                 }
             },
             Image = "Cyngas.png",
-            Introduced = "[[Update 24#Update 24.2|Update 24.2]]",
+            Introduced = "24.2",
             Magazine = 30,
             Mastery = 4,
             MaxAmmo = 480,
@@ -23079,91 +23885,85 @@ local WeaponData = {
             Type = "Arch-Fusil (Atmosphère)"
         },
         ["Doubles Décurion"] = {
-            Accuracy = 100,
-            Cost = {
-                Credits = 45000,
-                BPCost = 35000,
-                MarketCost = 225,
-                Rush = 50,
-                Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 2},
-                    {Name = "Culasse", Type = "Objet", Count = 2},
-                    {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 2
-                    }
-                }
-            },
-            Image = "DoublesDecurion.png",
-            Introduced = "[[Update 15#Update 15.5|Update 15.5]]",
-            Magazine = 32,
-            Mastery = 1,
-            Name = "Doubles Decurion",
-            NormalAttack = {
-                Damage = {
-                    ["Impact"] = 27,
-                    ["Perforation"] = 16.5,
-                    ["Tranchant"] = 16.5
-                },
-                CritChance = 0.25,
-                CritMultiplier = 2,
-                StatusChance = 0.1,
-                FireRate = 8.3,
-                ShotType = "Hit-scan"
-            },
-            Reload = 50,
-            ReloadStyle = "Regenerate",
-            Traits = {"Tenno"},
-            Trigger = "Auto",
-            Type = "Arch-Fusil"
-        },
-        ["Doubles Décurion (Atmosphère)"] = {
-            Accuracy = 100,
-            Cost = {
-                Credits = 45000,
-                BPCost = 35000,
-                MarketCost = 225,
-                Rush = 50,
-                Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 2},
-                    {Name = "Culasse", Type = "Objet", Count = 2},
-                    {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 2
-                    }
-                }
-            },
-            Image = "DoublesDecurion.png",
-            Introduced = "[[Update 24#Update 24.2|Update 24.2]]",
-            Magazine = 32,
-            Mastery = 1,
-            MaxAmmo = 512,
-            Name = "Doubles Decurion (Atmosphère)",
-            NormalAttack = {
-                Damage = {
-                    ["Impact"] = 49.6,
-                    ["Perforation"] = 30.25,
-                    ["Tranchant"] = 30.25
-                },
-                CritChance = 0.28,
-                CritMultiplier = 2.2,
-                StatusChance = 0.14,
-                FireRate = 8.3,
-                ShotType = "Hit-scan"
-            },
-            Reload = 1.4,
-            Traits = {"Tenno"},
-            Trigger = "Auto",
-            Type = "Arch-Fusil (Atmosphère)"
-        },
+		Accuracy = 12.5,
+		Cost = {
+			Credits = 45000,
+			BPCost = 35000,
+			MarketCost = 225,
+			Rush = 50,
+			Time = 12,
+			Parts = {
+				{ Name = "Canon",Type = "Objet",Count = 2,},
+				{ Name = "Culasse",Type = "Objet",Count = 2,},
+				{ Name = "Module de Contrôle",Type = "Ressource",Count = 2,},},
+		},
+		Disposition = 1.3,
+		Family = "Doubles Décurion",
+		Image = "DoublesDecurion.png",
+		Introduced = "15.5",
+		Magazine = 32,
+		Mastery = 1,
+		Name = "Doubles Décurion",
+		NormalAttack = {
+			Damage = {
+				["Impact"] = 49.5,
+				["Puncture"] = 30.3,
+				["Slash"] = 30.2,},
+			CritChance = 0.28,
+			CritMultiplier = 2.2,
+			StatusChance = 0.14,
+			FireRate = 8.33,
+			ShotType = "Projectile",
+			ShotSpeed = "?",
+			Falloff = {StartRange = 1500,EndRange = 3000,Reduction = 0.5,},
+		},
+		Reload = 50,
+		ReloadStyle = "Régénération",
+		Traits = {"Tenno"},
+		Trigger = "Auto",
+		Type = "Arch-Fusil",
+	},
+		["Doubles Décurion (Atmosphère)"] = {
+		Accuracy = 100,
+		Cost = {
+			Credits = 45000,
+			BPCost = 35000,
+			MarketCost = 225,
+			Rush = 50,
+			Time = 12,
+			Parts = {
+				{ Name = "Canon",Type = "Objet",Count = 2,},
+				{ Name = "Culasse",Type = "Objet",Count = 2,},
+				{ Name = "Module de Contrôle",Type = "Ressource",Count = 2,},},
+		},
+		Disposition = 1.25,
+		Image = "DoublesDecurion.png",
+		Introduced = "24.2",
+		Link = "Doubles Décurion",
+		Magazine = 32,
+		Mastery = 1,
+		MaxAmmo = 512,
+		Name = "Doubles Décurion (Atmosphère)",
+		NormalAttack = {
+			Damage = {
+				["Impact"] = 49.5,
+				["Perforation"] = 30.3,
+				["Tranchant"] = 30.2,},
+			CritChance = 0.28,
+			CritMultiplier = 2.2,
+			StatusChance = 0.14,
+			FireRate = 8.33,
+			ShotType = "Hit-scan",
+		},
+		Reload = 1.4,
+		Traits = {"Tenno"},
+		Trigger = "Auto",
+		Type = "Arch-Fusil (Atmosphère)",
+	},
         ["Doubles Decurion Prisma"] = {
             Accuracy = 16,
             Cost = {BPCost = 35000},
-            Disposition = 0.5,
+            Disposition = 1.05,
             Family = "Doubles Décurion",
             Image = "Doubles Decurion Prisma.png",
             Introduced = "29.5.8",
@@ -23198,7 +23998,7 @@ local WeaponData = {
         ["Doubles Décurion Prisma (Atmosphère)"] = {
             Accuracy = 100,
             Cost = {BPCost = 35000},
-            Disposition = 0.5,
+            Disposition = 1.05,
             Image = "Doubles Decurion Prisma.png",
             Introduced = "29.5.8",
             Link = "Doubles Décurion Prisma",
@@ -23240,7 +24040,7 @@ local WeaponData = {
             },
             Accuracy = 100,
             Image = "250px-ArchRocketCrossbow.png",
-            Introduced = "[[Update 15#Update 15.7.2|Update 15.7.2]]",
+            Introduced = "15.7.2",
             Magazine = 25,
             Mastery = 2,
             Name = "Fluctus",
@@ -23281,7 +24081,7 @@ local WeaponData = {
             },
             Accuracy = 100,
             Image = "250px-ArchRocketCrossbow.png",
-            Introduced = "[[Update 24#Update 24.2|Update 24.2]]",
+            Introduced = "24.2",
             Magazine = 40,
             Mastery = 2,
             MaxAmmo = 160,
@@ -23330,7 +24130,7 @@ local WeaponData = {
                 }
             },
             Image = "Grattler.png",
-            Introduced = "[[Update 17#Update 17.0|Update 17.0]]",
+            Introduced = "17.0",
             Magazine = 60,
             Mastery = 4,
             Name = "Grattler",
@@ -23379,7 +24179,7 @@ local WeaponData = {
                 }
             },
             Image = "Grattler.png",
-            Introduced = "[[Update 24#Update 24.2|Update 24.2]]",
+            Introduced = "24.2",
             Magazine = 30,
             Mastery = 4,
             MaxAmmo = 180,
@@ -23408,9 +24208,10 @@ local WeaponData = {
             Accuracy = 25,
             Family = "Imperator",
             Image = "Imperator.png",
-            Introduced = "[[Update 15#Update 15.0|Update 15.0]]",
+            Introduced = "15.0",
             Magazine = 250,
             Mastery = 0,
+            Disposition = 1.05,
             Name = "Imperator",
             NormalAttack = {
                 Damage = {
@@ -23434,10 +24235,11 @@ local WeaponData = {
         ["Imperator (Atmosphère)"] = {
             Accuracy = 25,
             Image = "Imperator.png",
-            Introduced = "[[Update 24#Update 24.2|Update 24.2]]",
+            Introduced = "24.2",
             Magazine = 200,
             Mastery = 0,
             MaxAmmo = 800,
+            Disposition = 1.05,
             Name = "Imperator (Atmosphère)",
             NormalAttack = {
                 Damage = {
@@ -23471,7 +24273,7 @@ local WeaponData = {
             },
             Family = "Imperator",
             Image = "ImperatorVandal.png",
-            Introduced = "[[Update 15#Update 15.8|Update 15.8]]",
+            Introduced = "15.8",
             Magazine = 300,
             Mastery = 5,
             Name = "Imperator Vandal",
@@ -23507,7 +24309,7 @@ local WeaponData = {
                 }
             },
             Image = "ImperatorVandal.png",
-            Introduced = "[[Update 24#Update 24.2|Update 24.2]]",
+            Introduced = "24.2",
             Magazine = 300,
             Mastery = 5,
             MaxAmmo = 1200,
@@ -23545,7 +24347,7 @@ local WeaponData = {
             },
             Accuracy = 8.3,
             Image = "Larkspur.png",
-            Introduced = "[[Update 24#Update 24.4|Update 24.4]]",
+            Introduced = "24.4",
             Magazine = 600,
             Mastery = 8,
             Name = "Larkspur",
@@ -23592,7 +24394,7 @@ local WeaponData = {
             },
             Accuracy = 8.3,
             Image = "Larkspur.png",
-            Introduced = "[[Update 24#Update 24.4|Update 24.4]]",
+            Introduced = "24.4",
             Magazine = 100,
             MaxAmmo = 400,
             Mastery = 8,
@@ -23648,7 +24450,7 @@ local WeaponData = {
             Disposition = 0.5,
             Family = "Mausolon",
             Image = "Mausolon.png",
-            Introduced = "[[Update 29]]",
+            Introduced = "29.0",
             Magazine = 300,
             Mastery = 14,
             Name = "Mausolon",
@@ -23697,7 +24499,7 @@ local WeaponData = {
             Conclave = false,
             Disposition = 0.5,
             Image = "Mausolon.png",
-            Introduced = "[[Update 29]]",
+            Introduced = "29.0",
             Magazine = 300,
             Mastery = 14,
             MaxAmmo = 900,
@@ -23741,9 +24543,9 @@ local WeaponData = {
                     {Name = "Crosse", Type = "Item", Count = 1}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 0.85,
             Image = "Morgha.png",
-            Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            Introduced = "29.5",
             Magazine = 80,
             Mastery = 15,
             Name = "Morgha",
@@ -23807,9 +24609,9 @@ local WeaponData = {
                     {Name = "Crosse", Type = "Item", Count = 1}
                 }
             },
-            Disposition = 0.5,
+            Disposition = 0.85,
             Image = "Morgha.png",
-            Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            Introduced = "29.5",
             Magazine = 80,
             Mastery = 15,
             Name = "Morgha (Atmosphère)",
@@ -23875,7 +24677,7 @@ local WeaponData = {
                 }
             },
             Image = "Phaedra.png",
-            Introduced = "[[Update 17#Update 17.5|Update 17.5]]",
+            Introduced = "17.5",
             Magazine = 250,
             Mastery = 3,
             Name = "Phaedra",
@@ -23914,7 +24716,7 @@ local WeaponData = {
                 }
             },
             Image = "Phaedra.png",
-            Introduced = "[[Update 24#Update 24.2|Update 24.2]]",
+            Introduced = "24.2",
             Magazine = 250,
             Mastery = 3,
             MaxAmmo = 960,
@@ -23968,7 +24770,7 @@ local WeaponData = {
                 ShotSpeed = "???"
             },
             Image = "Velocitus.png",
-            Introduced = "[[Update 15#Update 15.2|Update 15.2]]",
+            Introduced = "15.2",
             Magazine = 100,
             Mastery = 4,
             Name = "Velocitus",
@@ -24014,7 +24816,7 @@ local WeaponData = {
                 ShotSpeed = "???"
             },
             Image = "ArchRailgun.png",
-            Introduced = "[[Update 24#Update 24.2|Update 24.2]]",
+            Introduced = "24.2",
             Magazine = 10,
             Mastery = 4,
             MaxAmmo = 60,
@@ -24043,8 +24845,7 @@ local WeaponData = {
                 }
             },
             Image = "Agkuza.png",
-            Introduced = "[[Update 19#Update: Specters of the Rail|Update: Specters of the Rail]]",
-            -- JumpAttack = 350,
+            Introduced = "SotR",
             Mastery = 3,
             Name = "Agkuza",
             NormalAttack = {
@@ -24078,8 +24879,7 @@ local WeaponData = {
                 }
             },
             Image = "Centaur.png",
-            Introduced = "[[Update 15#Update 15.7.2|Update 15.7.2]]",
-            -- JumpAttack = 280,
+            Introduced = "15.7.2",
             Mastery = 8,
             Name = "Centaur",
             NormalAttack = {
@@ -24113,8 +24913,7 @@ local WeaponData = {
                 }
             },
             Image = "Kaszas.png",
-            Introduced = "[[Update 17#Update 17.5|Update 17.5]]",
-            -- JumpAttack = 325,
+            Introduced = "17.5",
             Mastery = 4,
             Name = "Kaszas",
             NormalAttack = {
@@ -24151,8 +24950,7 @@ local WeaponData = {
                 }
             },
             Image = "Knux.png",
-            Introduced = "[[Update 17#Update 17.2|Update 17.2]]",
-            -- JumpAttack = 325,
+            Introduced = "17.2",
             Mastery = 7,
             Name = "Knux",
             NormalAttack = {
@@ -24187,8 +24985,7 @@ local WeaponData = {
                 }
             },
             Image = "Onorix.png",
-            Introduced = "[[Update 15#Update 15.0|Update 15.0]]",
-            -- JumpAttack = 290,
+            Introduced = "15.0",
             Mastery = 1,
             Name = "Onorix",
             NormalAttack = {
@@ -24227,8 +25024,7 @@ local WeaponData = {
                 }
             },
             Image = "Rathbone.png",
-            Introduced = "[[Update 15#Update 15.0|Update 15.0]]",
-            -- JumpAttack = 280,
+            Introduced = "15.2",
             Mastery = 6,
             Name = "Rathbone",
             NormalAttack = {
@@ -24251,8 +25047,7 @@ local WeaponData = {
         ["Veritux Prisma"] = {
             Family = "Veritux",
             Image = "VerituxPrisma.png",
-            Introduced = "[[Update 15#Hotfix 15.13.3|Hotfix 15.13.3]]",
-            -- JumpAttack = 300,
+            Introduced = "15.13.3",
             Mastery = 8,
             Name = "Veritux Prisma",
             NormalAttack = {
@@ -24275,8 +25070,7 @@ local WeaponData = {
         ["Veritux"] = {
             Family = "Veritux",
             Image = "Veritux.png",
-            Introduced = "[[Update 15#Update 15.0|Update 15.0]]",
-            -- JumpAttack = 300,
+            Introduced = "15.0",
             Mastery = 0,
             Name = "Veritux",
             NormalAttack = {
@@ -24300,7 +25094,7 @@ local WeaponData = {
             Class = "Dual Machine Gun",
             IgnoreCategories = true,
             Image = "Rempart.png",
-            Introduced = "[[Update 17#Update 17.0|Update 17.0]]",
+            Introduced = "17.0",
             Magazine = 200,
             Name = "Rempart",
             NormalAttack = {
@@ -24325,7 +25119,7 @@ local WeaponData = {
             Class = "Turret",
             IgnoreCategories = true,
             Image = "GrnSkiffMissile.png",
-            Introduced = "[[Update 22#Update 22.12|Update 22.12]]",
+            Introduced = "22.12",
             Magazine = 75,
             Name = "Dargyn",
             NormalAttack = {
@@ -24358,7 +25152,7 @@ local WeaponData = {
                 CritMultiplier = 2.0,
                 StatusChance = 0.0
             },
-            Introduced = "[[Update 22]]",
+            Introduced = "22.0",
             Traits = {"Cetus"}
         },
         ["Tulok"] = {
@@ -24374,7 +25168,7 @@ local WeaponData = {
                 CritMultiplier = 2.0,
                 StatusChance = 0.0
             },
-            Introduced = "[[Update 22]]",
+            Introduced = "22.0",
             Traits = {"Cetus"}
         },
         ["Peram"] = {
@@ -24387,12 +25181,10 @@ local WeaponData = {
             Range = 20,
             NormalAttack = {
                 Damage = {["Tranchant"] = 10.0},
-                -- CritChance = ,
                 CritMultiplier = 2.0,
                 StatusChance = 0.0
-                -- FireRate = ,
             },
-            Introduced = "[[Update 22]]",
+            Introduced = "22.0",
             Traits = {"Cetus"}
         },
         ["Shockprod"] = {
@@ -24409,7 +25201,7 @@ local WeaponData = {
           CritMultiplier = 2.0,
           StatusChance = 0.0,
         },--]]
-            Introduced = "[[Update 24]]",
+            Introduced = "24.0",
             Traits = {"Vallée Orbis"}
         },
         ["Stunna"] = {
@@ -24426,10 +25218,153 @@ local WeaponData = {
           CritMultiplier = 2.0,
           StatusChance = 0.0,
         },--]]
-            Introduced = "[[Update 24]]",
+            Introduced = "24.0",
             Traits = {"Vallée Orbis"}
         },
-
+        -- Armement du Railjack --
+        ["Apoc"] = {
+		Accuracy = 16.7,
+		NormalAttack = {
+			CritChance = 0.2,
+			CritMultiplier = 2,
+			Damage = { ["Perforation"] = 432.6, ["Tranchant"] = 185.4 },
+			Falloff = { EndRange = 4000, Reduction = 0.6667, StartRange = 2000 },
+			FireRate = 8.33,
+			ShotSpeed = "?",
+			ShotType = "Projectile",
+			StatusChance = 0.1 
+		},
+		Class = "Armement du Railjack",
+		Image = "Apoc.png",
+		Introduced = "27",
+		Link = "Apoc",
+		Name = "Apoc",
+		Reload = 3,
+		Trigger = "Auto",
+		Type = "Tourelle de Railjack" 
+	},
+        ["Tunguska Cannon"] = {
+		Accuracy = 100,
+		NormalAttack = {
+			ChargeTime = 4,
+			CritChance = 3,
+			CritMultiplier = 2,
+			Damage = { ["Impact"] = 5650, ["Perforation"] = 48025, ["Tranchant"] = 2825 },
+			FireRate = 1,
+			ShotType = "Hit-Scan",
+			StatusChance = 0 
+		},
+		Class = "Armement du Railjack",
+		Image = "TunguskaCannon.png",
+		Introduced = "27",
+		Link = "Canon Tunguska",
+		Magazine = 1,
+		Mastery = 14,
+		MaxAmmo = 2,
+		Name = "Canon Tunguska",
+		Reload = 1,
+		Trigger = "Chargé",
+		Type = "Armement du Railjack" 
+	},
+        ["Carcinnox"] = {
+		Class = "Armement du Railjack",
+		Image = "Carcinnox.png",
+		Introduced = "27",
+		Link = "Carcinnox",
+		Name = "Carcinnox",
+		Trigger = "Auto",
+		Type = "Tourelle de Railjack" 
+	},
+        ["Cryophon"] = {
+		Class = "Armement du Railjack",
+		Image = "Cryophon.png",
+		Introduced = "27",
+		Link = "Cryophon",
+		Name = "Cryophon",
+		Trigger = "Semi-Auto",
+		Type = "Tourelle de Railjack" 
+	},
+		["Galvarc"] = {
+		Class = "Armement du Railjack",
+		Image = "Galvarc.png",
+		Introduced = "29.10",
+		Link = "Galvarc",
+		Name = "Galvarc",
+		Trigger = "Semi-Auto",
+		Type = "Calamité de Railjack" 
+	},
+        ["Glazio"] = {
+		Class = "Armement du Railjack",
+		Image = "Glazio.png",
+		Introduced = "29.10",
+		Link = "Glazio",
+		Name = "Glazio",
+		Trigger = "Auto",
+		Type = "Tourelle de Railjack" 
+	},
+        ["Laith"] = {
+		Class = "Armement du Railjack",
+		Image = "Laith.png",
+		Introduced = "29.10",
+		Link = "Laith",
+		Name = "Laith",
+		Trigger = "Auto",
+		Type = "Tourelle de Railjack" 
+	},
+		["Milati"] = {
+		Class = "Armement du Railjack",
+		Image = "Milati.png",
+		Introduced = "29.10",
+		Link = "Milati",
+		Name = "Milati",
+		Trigger = "Semi-Auto",
+		Type = "Calamité de Railjack" 
+	},
+		["Missile à Tête Chercheuse Tycho"] = {
+		Class = "Armement du Railjack",
+		Image = "Missile-a-tete-chercheuse.png",
+		Introduced = "29.10",
+		Link = "Tycho Seeker",
+		Name = "Tycho Seeker",
+		Trigger = "Semi-Auto",
+		Type = "Calamité de Railjack" 
+	},
+        ["Photor"] = {
+		Class = "Armement du Railjack",
+		Image = "Photor.png",
+		Introduced = "27",
+		Link = "Photor",
+		Name = "Photor",
+		Trigger = "Continue",
+		Type = "Tourelle de Railjack" 
+		},
+        ["Pulsar"] = {
+		Class = "Armement du Railjack",
+		Image = "Pulsar.png",
+		Introduced = "27",
+		Link = "Pulsar",
+		Name = "Pulsar",
+		Trigger = "Auto Burst",
+		Type = "Tourelle de Railjack" 
+		},
+        ["Talyn"] = {
+		Class = "Armement du Railjack",
+		Image = "Talyn.png",
+		Introduced = "29.10",
+		Link = "Talyn",
+		Name = "Talyn",
+		Trigger = "Auto",
+		Type = "Tourelle de Railjack" 
+		},
+        ["Vort"] = {
+		Class = "Armement du Railjack",
+		Image = "Vort.png",
+		Introduced = "29.10",
+		Link = "Vort",
+		Name = "Vort",
+		Trigger = "Auto",
+		Type = "Tourelle de Railjack" 
+		},
         -- Exalted Weapons --
         ["Arquebex"] = {
             Accuracy = 16.7,
@@ -24443,7 +25378,7 @@ local WeaponData = {
             Conclave = false,
             ExilusPolarity = nil,
             Image = "Arquebex.png",
-            Introduced = "[[Update 29]]",
+            Introduced = "29.0",
             Magazine = 10,
             Name = "Arquebex",
             NormalAttack = {
@@ -24486,7 +25421,7 @@ local WeaponData = {
             Class = "Arme Exaltée",
             Conclave = true,
             Image = "Arc d'Artémis.png",
-            Introduced = "[[Update 23|Update 23]]",
+            Introduced = "23.0",
             Link = "Arc d'Artémis (Arme)",
             Magazine = 1,
             NoiseLevel = "Silencieux",
@@ -24519,7 +25454,7 @@ local WeaponData = {
             Class = "Arme Exaltée",
             Conclave = false,
             Image = "Chargeur Incandescent.png",
-            Introduced = "[[Update 24|Update 24.4]]",
+            Introduced = "24.4",
             MaxAmmo = 0,
             NormalAttack = {
                 Damage = {["Électrique"] = 500},
@@ -24543,7 +25478,7 @@ local WeaponData = {
             Class = "Arme Exaltée",
             Conclave = true,
             Image = "DexPixia.png",
-            Introduced = "[[Update 23|Update 23.0]]",
+            Introduced = "23.0",
             Magazine = 60,
             NormalAttack = {
                 Damage = {
@@ -24564,6 +25499,52 @@ local WeaponData = {
             Type = "Secondaire",
             Users = {"[[Titania]]"}
         },
+        ["Griffes de l'Ombre"] = {
+            Name = "Griffes de l'Ombre",
+            Class = "Arme Exaltée",
+            Conclave = false,
+            Image = "Griffes de lOmbre.png",
+            Introduced = "30.0",
+            Link = nil,
+            Traits = {"Tenno"},
+            Type = "Mêlée",
+            Disposition = nil,
+            NormalAttack = {
+                Damage = {
+                    ["Impact"] = 75.0,
+                    ["Perforation"] = 50.0,
+                    ["Tranchant"] = 125.0
+                },
+                CritChance = 0.38,
+                CritMultiplier = 2.6,
+                StatusChance = 0.24,
+                FireRate = 1.0
+            },
+            Polarities = none,
+            SlideAttack = 500,
+            MeleeSlam = {
+                Damage = 750,
+                Element = nil,
+                RadialDamage = 250,
+                RadialElement = nil,
+                Radius = 8
+            },
+            MeleeHeavy = {
+                Damage = 1000,
+                Element = nil,
+                WindUp = 0.9,
+                SlamDamage = 1000,
+                SlamElement = nil,
+                SlamRadialDamage = 1000,
+                SlamRadialElement = nil,
+                SlamRadius = 9
+            },
+            BlockAngle = 60,
+            MeleeComboDur = 5.0,
+            FollowThrough = 1.0,
+            MeleeRange = 1.5,
+            Users = {"[[Sevagoth]]"}
+        },
         ["Ironbride"] = {
             BlockAngle = 90,
             Class = "Arme Exaltée",
@@ -24571,7 +25552,7 @@ local WeaponData = {
             Conclave = false,
             FollowThrough = 0.7,
             Image = "Ironbride.png",
-            Introduced = "[[Update 29#Update 29.5|Update 29.5]]",
+            Introduced = "29.5",
             MeleeRange = 3,
             Name = "Ironbride",
             NormalAttack = {
@@ -24610,11 +25591,10 @@ local WeaponData = {
         },
         ["Lame Exaltée"] = {
             Name = "Lame Exaltée",
-            -- BlockResist = 0.6,
             Class = "Arme Exaltée",
             Conclave = true,
             Image = "EWExaltedBlade.png",
-            Introduced = "[[Update 23#Update 23.0|Update 23.0]]",
+            Introduced = "23.0",
             Link = "Lame Exaltée (Arme)",
             NormalAttack = {
                 Damage = {
@@ -24666,7 +25646,7 @@ local WeaponData = {
       Class = "Arme Exaltée",
       Conclave = true,
       Image = "EWExaltedBlade.png",
-      Introduced = "[[Update 23#Update 23.0|Update 23.0]]",
+      Introduced = "23.0",
       Link = "Lame Exaltée (Arme)",
       --JumpAttack = 500,
       JumpRadius = 5,
@@ -24715,7 +25695,7 @@ local WeaponData = {
             Class = "Arme Exaltée",
             Conclave = true,
             Image = "EWRegulators.png",
-            Introduced = "[[Update 23|Update 23.0]]",
+            Introduced = "23.0",
             Link = "Pacificateurs (Arme)",
             Magazine = 100,
             Name = "Pacificateurs",
@@ -24741,11 +25721,9 @@ local WeaponData = {
         },
         ["Vents du Désert"] = {
             Name = "Vents du Désert",
-            -- BlockResist = 0.8,
             Class = "Arme Exaltée",
-            -- Conclave = true,
             Image = "Desert_Wind.png",
-            Introduced = "[[Update 24#Update 24.2|Update 24.2]]",
+            Introduced = "24.2",
             NormalAttack = {
                 Damage = {["Impact"] = 250},
                 CritChance = 0.5,
@@ -24783,11 +25761,10 @@ local WeaponData = {
         },
         ["Diwata"] = {
             Name = "Diwata",
-            -- BlockResist = 0.8,
             Class = "Arme Exaltée",
             Conclave = true,
             Image = "EWDiwata.png",
-            Introduced = "[[Update 23#Update 23.0|Update 23.0]]",
+            Introduced = "23.0",
             NormalAttack = {
                 Damage = {
                     ["Impact"] = 39,
@@ -24818,7 +25795,6 @@ local WeaponData = {
                 SlamElement = nil,
                 SlamRadialDamage = 0,
                 SlamRadialElement = nil
-                -- SlamRadius = 0,
             },
             BlockAngle = 90,
             MeleeComboDur = 5.0,
@@ -24829,13 +25805,11 @@ local WeaponData = {
         },
         ["Bâton de Fer"] = {
             Name = "Bâton de Fer",
-            -- BlockResist = 0.6,
             ChannelMult = 1.5,
             Class = "Arme Exaltée",
             Conclave = true,
             Image = "EWIronStaff.png",
-            Introduced = "[[Update 23#Update 23.0|Update 23.0]]",
-            -- JumpAttack = 500,
+            Introduced = "23.0",
             JumpRadius = 3,
             NormalAttack = {
                 Damage = {["Impact"] = 170.0, ["Tranchant"] = 80.0},
@@ -24874,13 +25848,10 @@ local WeaponData = {
         },
         ["Serres Valkyr"] = {
             Name = "Serres Valkyr",
-            -- BlockResist = 0.8,
             Class = "Arme Exaltée",
             Conclave = true,
             Image = "EWValkyrTalons.png",
-            Introduced = "[[Update 23#Update 23.0|Update 23.0]]",
-            ----JumpAttack = 300,
-            -- JumpRadius = 5,
+            Introduced = "23.0",
             NormalAttack = {
                 Damage = {
                     ["Impact"] = 154,
@@ -24922,13 +25893,10 @@ local WeaponData = {
         },
         ["Serres de Garuda"] = {
             Name = "Serres de Garuda",
-            -- BlockResist = 0.8,
             Class = "Arme Exaltée",
             Conclave = true,
             Image = "GarudaMeleeClaws.png",
-            Introduced = "[[Update 24#Update 24.0|Update 24.0]]",
-            ----JumpAttack = 300,
-            -- JumpRadius = 5,
+            Introduced = "24.0",
             NormalAttack = {
                 Damage = {
                     ["Impact"] = 14.4,
@@ -24977,6 +25945,7 @@ local WeaponData = {
         ["Hystérie"] = {"Serres Valkyr"},
         ["Incandescence"] = {"Chargeur Incandescent"},
         ["Ironbride Exaltée"] = {"Ironbride"},
+        ["Ombre Exaltée"] = {"Griffes de l'Ombre"},
         ["Lame Exaltée"] = {"Lame Exaltée"},
         ["Pacificateurs"] = {"Pacificateurs"},
         ["Tempête Reposante"] = {"Vents du Désert"}

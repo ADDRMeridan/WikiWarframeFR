@@ -384,4 +384,3 @@ function p.AvionicTable(frame)--------------------------------------------------
 end
 
 return p
-

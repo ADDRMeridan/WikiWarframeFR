@@ -15,16 +15,19 @@ local synRankCol = 4 -- The required Syndicate Rank to purchase the offering
 local p = {}
 
 local DropData = mw.loadData('Module:DropTables/data')
+local RelicData = mw.loadData('Module:Void/data')['RelicData']
 local Missions = require("Module:Missions")
+local MissionData = mw.loadData('Module:Missions/data')
+local ModsData = mw.loadData('Module:Mods/data')
 local Icon = require("Module:Icon")
 local Shared = require("Module:Shared")
 local Void = require("Module:Void")
 local TT = require("Module:Tooltip")
+local Void = require('Module:Void')
 
 local RELICSORDER = {"Lith", "Meso", "Neo", "Axi", "Requiem"}
 
-local relicTooltipStart =
-    "<span style=\"border-bottom: 1px dotted;\" class=\"relic-tooltip\" data-param=\""
+local relicTooltipStart = "<span style=\"border-bottom: 1px dotted;\" class=\"relic-tooltip\" data-param=\""
 local relicTooltipCenter = "\">"
 local relicTooltipEnd = "</span>"
 
@@ -32,7 +35,9 @@ function p.getMValue(theMission, ValName, noBreaks)
     if (type(theMission) == "string") then
         theMission = p.getMission(theMission)
     end
-    if (theMission == nil) then return nil end
+    if (theMission == nil) then
+        return nil
+    end
 
     ValName = string.upper(ValName)
     if (ValName == 'ALIAS') then
@@ -70,8 +75,7 @@ function p.getMission(MissionType, MissionTier, MissionName)
     for i, Miss in pairs(DropData["Missions"]) do
         -- If MissionTier is nil, the MissionType variable is the Alias so check against that instead
         if (MissionTier == nil) then
-            if (MissionType == Miss.Alias or MissionType == Miss.Tier) and
-                (Miss.Type == MissionName) then
+            if (MissionType == Miss.Alias or MissionType == Miss.Tier) and (Miss.Type == MissionName) then
                 return Miss
             elseif (MissionType == Miss.Alias) then
                 return Miss
@@ -79,8 +83,7 @@ function p.getMission(MissionType, MissionTier, MissionName)
                 return Miss
             end
         else
-            if (Miss.Type == MissionType and
-                (Miss.Tier == MissionTier or Miss.Name == MissionTier)) then
+            if (Miss.Type == MissionType and (Miss.Tier == MissionTier or Miss.Name == MissionTier)) then
                 return Miss
             end
         end
@@ -91,7 +94,10 @@ end
 -- Calling this whenever I'm pulling drops from enemies and passing them around
 -- NOTE: As of writing, this assumes enemies don't have Blueprint or other drops listed.
 local function buildEnemyDrop(Enemy, Mod)
-    local drop = {EName = Enemy.Name, IName = Mod[modNameCol]}
+    local drop = {
+        EName = Enemy.Name,
+        IName = Mod[modNameCol]
+    }
     drop.Chance = (Enemy.ModChance * Mod[modChanceCol]) / 100
     drop.Count = Mod[modCountCol] ~= nil and Mod[modCountCol] or 1
     if (drop.IName == 'Endo') then
@@ -105,7 +111,10 @@ end
 -- Like above, but for mission drops
 -- Calling this whenever I'm pulling drops from missions and passing them around
 local function buildMissionDrop(theMission, Rotation, Item)
-    local drop = {MType = theMission.Type, MTier = theMission.Tier}
+    local drop = {
+        MType = theMission.Type,
+        MTier = theMission.Tier
+    }
     drop.Rotation = Rotation
     drop.IName = Item[misNameCol]
     drop.Chance = Item[misChanceCol]
@@ -118,24 +127,62 @@ end
 
 -- Like above, but for Syndicate Offerings
 local function buildSyndicateDrop(theSyndicate, Item)
-    local drop = {SName = theSyndicate.Name, IName = Item[synNameCol]}
+    local drop = {
+        SName = theSyndicate.Name,
+        IName = Item[synNameCol]
+    }
     drop.Type = Item[synTypeCol]
     drop.Cost = Item[synCostCol]
     drop.Rank = Item[synRankCol]
     return drop
 end
 
+-- Like above, but for Avionics
+-- TODO: Remove unused function as avionics are now considered as mods
+local function buildAvionicDrop(Enemy, Avionic)
+    local drop = {
+        EName = Enemy.Name,
+        IName = Avionic[aviNameCol]
+    }
+    drop.Chance = (Enemy.ModChance * Avionic[aviChanceCol]) / 100
+    drop.Count = 1
+    drop.Type = 'Avionic'
+    if (Avionic[aviHouseCol] ~= nil) then
+        drop.House = Avionic[aviHouseCol]
+    end
+    return drop
+end
+
+---	Like above, but for resource drops
+--	@function		buildResourceDrop
+local function buildResourceDrop(Enemy, Resource)
+    local drop = {
+        EName = Enemy.Name,
+        IName = Resource[resourceNameCol]
+    }
+    drop.Chance = (Enemy.ResourceChance * Resource[resourceChanceCol]) / 100
+    drop.Count = 1
+    drop.Type = 'Resource'
+    return drop
+end
+
 -- Copied wholesale from Module:Weapons
 -- Possibly should just go live in Shared
 local function asPercent(val, digits)
-    if (digits == nil) then digits = 2 end
-    if (val == nil) then val = 0 end
+    if (digits == nil) then
+        digits = 2
+    end
+    if (val == nil) then
+        val = 0
+    end
     return Shared.round(val, digits) .. "%"
 end
 
 -- Links a Syndicate and returns it.
 -- Doesn't actually do anything but add brackets right now
-local function linkSyndicate(SName) return '[[' .. SName .. ']]' end
+local function linkSyndicate(SName)
+    return '[[' .. SName .. ']]'
+end
 
 local function getAllModDrops(enemyName)
     local drops = {}
@@ -201,14 +248,12 @@ local function getModLink(ModName)
     -- Scorch and Seeker are both enemies and mods. Thanks DE.
     -- Also Sanctuary as mod VS Simaris's thing
     -- Also Antitoxin, mod vs gear
-    if (ModName == "Scorch" or ModName == "Seeker" or ModName == "Sanctuary" or
-        ModName == "Antitoxin") then
-        return "<span class=\"mod-tooltip\" data-param=\"" .. ModName ..
-                   "\" style=\"white-space:pre\">[[" .. ModName .. " (Mod)" ..
-                   "|" .. ModName .. "]]</span>"
+    if (ModName == "Scorch" or ModName == "Seeker" or ModName == "Sanctuary" or ModName == "Antitoxin") then
+        return "<span class=\"mod-tooltip\" data-param=\"" .. ModName .. "\" style=\"white-space:pre\">[[" .. ModName ..
+                   " (Mod)" .. "|" .. ModName .. "]]</span>"
     else
-        return "<span class=\"mod-tooltip\" data-param=\"" .. ModName ..
-                   "\" style=\"white-space:pre\">[[" .. ModName .. "]]</span>"
+        return "<span class=\"mod-tooltip\" data-param=\"" .. ModName .. "\" style=\"white-space:pre\">[[" .. ModName ..
+                   "]]</span>"
     end
 end
 
@@ -224,6 +269,49 @@ local function formatDropString(drop, frame)
     if (drop == nil) then
         table.insert(ret, '\n| align="center" | ')
     else
+        local dropTypeSwitch = {
+            ["Arcane"] = function(dropContent)
+                return TT._tooltipText(dropContent, 'Arcane')
+            end,
+            ["Credits"] = function(dropContent)
+                return Icon._Item("Crédits", nil, nil)
+            end,
+            ["Endo"] = function(dropContent)
+                return Icon._Item("Endo", "text", nil)
+            end,
+            ["Fragments"] = function(dropContent)
+                return string.format('[[Fragments|%s]]', dropContent)
+            end,
+            ["Item"] = function(dropContent)
+                return Icon._Item(dropContent, "text", nil)
+            end,
+            ["Mod"] = function(dropContent)
+                return TT._tooltipText(dropContent, 'Mod')
+            end,
+            ["MorceauArme"] = function(dropContent)
+                return string.format('%s - %s', Icon._Item(dropContent[1], "text", nil),
+                    TT._tooltipText(dropContent[2], "Weapon"))
+            end,
+            ["Relique"] = function(dropContent)
+                local tmpRelicTokens = Shared.splitString(dropContent, ' ')
+                local tmpRelicName = tmpRelicTokens[1] .. ' ' .. tmpRelicTokens[2]
+                if (Void.getRelic(tmpRelicName).isVaulted ~= 1) then
+                    return TT._tooltipText(tmpRelicName, "Relic", dropContent)
+                end
+            end,
+            ["Ressource"] = function(dropContent)
+                return Icon._Ressource(dropContent, "text", nil)
+            end,
+            ["Scene"] = function(dropContent)
+                return string.format('[[Captura|%s]]', dropContent)
+            end,
+            ["Schéma"] = function(dropContent)
+                return string.format('Schéma %s', frame:preprocess(dropContent))
+            end,
+            ["Sculpture Ayatan"] = function(dropContent)
+                return string.format('[[Sculpture Ayatan|%s]]', dropContent)
+            end
+        }
         local dropContent = drop[1]
         local dropType = drop[2]
         local dropChance = drop[3]
@@ -232,48 +320,13 @@ local function formatDropString(drop, frame)
             table.insert(ret, dropCount)
             table.insert(ret, ' ')
         end
-        if (dropType == "Credits") then
-            table.insert(ret, Icon._Item("Crédits", nil, nil))
-        elseif (dropType == "Endo" or dropType == "Item") then
-            table.insert(ret, Icon._Item(dropContent, "text", nil))
-        elseif (dropType == "Fragments") then
-            table.insert(ret, "[[Fragments|")
-            table.insert(ret, dropContent)
-            table.insert(ret, "]]")
-        elseif (dropType == "Item") then
-            if (string.find(dropContent, "Sceau") ~= nil) then
-                table.insert(ret, "[[Sceaux|")
-                table.insert(ret, dropContent)
-                table.insert(ret, "]]")
-            else
-                table.insert(ret, Icon._Item(dropContent, "text"))
-            end
-        elseif (dropType == 'Mod') then
-            table.insert(ret, TT._tooltipText(dropContent, "Mod"))
-        elseif (dropType == "MorceauArme") then
-            table.insert(ret, Icon._Item(dropContent[1], "text", nil))
-            table.insert(ret, ' - ')
-            table.insert(ret, TT._tooltipText(dropContent[2], "Weapon"))
-        elseif (dropType == "Relique") then
-            if (Void.getRelic(dropContent).isVaulted ~= 1) then
-                table.insert(ret, TT._tooltipText(dropContent, "Relic"))
-            end
-        elseif (dropType == "Ressource") then
-            table.insert(ret, Icon._Ressource(dropContent, "text", nil))
-        elseif (dropType == "Scene") then
-            table.insert(ret, '[[Captura|')
-            table.insert(ret, dropContent)
-            table.insert(ret, ']]')
-        elseif (dropType == "Schéma") then
-            table.insert(ret, "Schéma ")
-            table.insert(ret, frame:preprocess(dropContent))
-        elseif (dropType == "Sculpture Ayatan") then
-            table.insert(ret, '[[Sculpture Ayatan|')
-            table.insert(ret, dropContent)
-            table.insert(ret, ']]')
+        local dropFormated = dropTypeSwitch[dropType]
+        if (dropFormated == nil) then
+            dropFormated = dropContent
         else
-            table.insert(ret, dropContent)
+            dropFormated = dropFormated(dropContent)
         end
+        table.insert(ret, dropFormated)
         table.insert(ret, '\n| align="center" |')
         table.insert(ret, asPercent(dropChance))
     end
@@ -316,7 +369,9 @@ local function findMaxLines(missionRewards)
     local ret = 0
     for _, drops in pairs(missionRewards) do
         local tmp = Shared.tableCount(drops)
-        if (tmp > ret) then ret = tmp end
+        if (tmp > ret) then
+            ret = tmp
+        end
     end
 
     return ret
@@ -330,18 +385,13 @@ local function buildMissionRewardsTable(missionRewards, frame)
         local nbCol = Shared.tableCount(missionRewards)
         -- Header
         if (nbCol == 1) then
-            table.insert(ret,
-                         '! colspan="2" style="text-align:center;" | Récompenses')
+            table.insert(ret, '! colspan="2" style="text-align:center;" | Récompenses')
         else
             for rot, loot in Shared.skpairs(missionRewards) do
                 if (Shared.contains({"A", "B", "C"}, rot)) then
-                    table.insert(ret,
-                                 '! colspan="2" style="text-align:center;" | Rotation ' ..
-                                     rot)
+                    table.insert(ret, '! colspan="2" style="text-align:center;" | Rotation ' .. rot)
                 else
-                    table.insert(ret,
-                                 '! colspan="2" style="text-align:center;" | ' ..
-                                     rot)
+                    table.insert(ret, '! colspan="2" style="text-align:center;" | ' .. rot)
                 end
             end
         end
@@ -350,8 +400,7 @@ local function buildMissionRewardsTable(missionRewards, frame)
         for i = 1, nbLines, 1 do
             table.insert(ret, '|-')
             for _, loot in Shared.skpairs(missionRewards) do
-                table.insert(ret, '| align="right" | ' ..
-                                 formatDropString(loot[i], frame))
+                table.insert(ret, '| align="right" | ' .. formatDropString(loot[i], frame))
             end
         end
         table.insert(ret, '|}')
@@ -362,10 +411,8 @@ end
 
 function p.getRewards(frame)
 
-    local missType =
-        frame.args ~= nil and frame.args[1] ~= "" and frame.args[1] or nil
-    local missCat =
-        frame.args ~= nil and frame.args[2] ~= "" and frame.args[2] or nil
+    local missType = frame.args ~= nil and frame.args[1] ~= "" and frame.args[1] or nil
+    local missCat = frame.args ~= nil and frame.args[2] ~= "" and frame.args[2] or nil
 
     local ret = nil
     local mission = nil
@@ -391,10 +438,8 @@ function p.getRewards(frame)
         mission = p.getMission(missType, missCat)
     end
     if (mission == nil) then
-        ret = Shared.printModuleError('Aucune mission avec "' ..
-                                          tostring(missType) .. '" et "' ..
-                                          tostring(missCat) .. '"',
-                                      'DropTables.getRewards')
+        ret = Shared.printModuleError('Aucune mission avec "' .. tostring(missType) .. '" et "' .. tostring(missCat) ..
+                                          '"', 'DropTables.getRewards')
     else
         ret = buildMissionRewardsTable(mission.Rewards, frame)
     end
@@ -457,7 +502,9 @@ end
 function p.getMissionAllTier(MissionType)
     local a = {}
     for i, Miss in pairs(DropData["Missions"]) do
-        if (Miss.Type == MissionType) then table.insert(a, Miss) end
+        if (Miss.Type == MissionType) then
+            table.insert(a, Miss)
+        end
     end
     return a
 end
@@ -482,38 +529,45 @@ function p.getRewardTableAllTier(frame)
         local RB = data["B"]
         local RC = data["C"]
         -- for k,v in pairs(dd) do data[k] = v end
-        for k, v in pairs(RA) do table.insert(RotA, v) end
-        for k, v in pairs(RB) do table.insert(RotB, v) end
-        for k, v in pairs(RC) do table.insert(RotC, v) end
+        for k, v in pairs(RA) do
+            table.insert(RotA, v)
+        end
+        for k, v in pairs(RB) do
+            table.insert(RotB, v)
+        end
+        for k, v in pairs(RC) do
+            table.insert(RotC, v)
+        end
     end
 
     -- Goes through all three rotations to find which one has the most items
     local ACount = Shared.tableCount(RotA)
     local maxLen = ACount
     local BCount = Shared.tableCount(RotB)
-    if (BCount > maxLen) then maxLen = BCount end
+    if (BCount > maxLen) then
+        maxLen = BCount
+    end
     local CCount = Shared.tableCount(RotC)
-    if (CCount > maxLen) then maxLen = CCount end
+    if (CCount > maxLen) then
+        maxLen = CCount
+    end
 
     -- We need as many rows as the longest list has items
     -- So if any lists are shorter then after their last row the columns are just blank
     for i = 1, maxLen, 1 do
         result = result .. "\n|-"
         if (RotA[i] ~= nil) then
-            result = result .. "\n| align=\"right\" | " ..
-                         formatDropString(RotA[i], frame)
+            result = result .. "\n| align=\"right\" | " .. formatDropString(RotA[i], frame)
         else
             result = result .. "\n| || "
         end
         if (RotB[i] ~= nil) then
-            result = result .. "\n| align=\"right\" | " ..
-                         formatDropString(RotB[i], frame)
+            result = result .. "\n| align=\"right\" | " .. formatDropString(RotB[i], frame)
         else
             result = result .. "\n| || "
         end
         if (RotC[i] ~= nil) then
-            result = result .. "\n| align=\"right\" | " ..
-                         formatDropString(RotC[i], frame)
+            result = result .. "\n| align=\"right\" | " .. formatDropString(RotC[i], frame)
         else
             result = result .. "\n| || "
         end
@@ -556,8 +610,7 @@ local function getDropMissions(itemName)
                 for j, drop in pairs(dropTable) do
                     -- ... if the drop is the right item, add it to the list
                     if (drop[misNameCol] == itemName) then
-                        table.insert(Drops,
-                                     buildMissionDrop(theMission, key, drop))
+                        table.insert(Drops, buildMissionDrop(theMission, key, drop))
                     end
                 end
             end
@@ -574,8 +627,7 @@ local function getDropSyndicates(itemName)
         if (theSyndicate.Offerings ~= nil and theSyndicate.Ignore ~= true) then
             for i, Offering in pairs(theSyndicate.Offerings) do
                 if (Offering[synNameCol] == itemName) then
-                    table.insert(Drops,
-                                 buildSyndicateDrop(theSyndicate, Offering))
+                    table.insert(Drops, buildSyndicateDrop(theSyndicate, Offering))
                 end
             end
         end
@@ -607,8 +659,7 @@ local function getRelicMissionAlias(tableMissionAlias2Include)
 
     local ret = {}
     for _, mission in ipairs(DropData["Missions"]) do
-        if ((tableMissionAlias2Include == nil or
-            (Shared.contains(tableMissionAlias2Include, mission.Alias))) and
+        if ((tableMissionAlias2Include == nil or (Shared.contains(tableMissionAlias2Include, mission.Alias))) and
             mission.Rewards ~= nil) then
             for rot, rewards in pairs(mission.Rewards) do
                 for _, loot in ipairs(rewards) do
@@ -625,8 +676,7 @@ local function getRelicMissionAlias(tableMissionAlias2Include)
                         if (ret[relicTier][relicName][mission.Alias] == nil) then
                             ret[relicTier][relicName][mission.Alias] = {}
                         end
-                        table.insert(ret[relicTier][relicName][mission.Alias],
-                                     rot)
+                        table.insert(ret[relicTier][relicName][mission.Alias], rot)
                     end
                 end
             end
@@ -652,20 +702,17 @@ function p.getRelicByPlanet(frame)
         if (Shared.tableCount(missionsDrops) > 0) then
             local missionsTiersFound = {}
             -- Build html table header
-            table.insert(ret,
-                         '\n{| class="wikitable"\n! rowspan="2" | Noeud (Type)')
+            table.insert(ret, '\n{| class="wikitable"\n! rowspan="2" | Noeud (Type)')
             for _, relicTier in pairs(RELICSORDER) do
                 if (missionsDrops[relicTier] ~= nil) then
                     table.insert(ret, '\n! colspan="')
-                    table.insert(ret,
-                                 Shared.tableCount(missionsDrops[relicTier]))
+                    table.insert(ret, Shared.tableCount(missionsDrops[relicTier]))
                     table.insert(ret, '" | ')
                     table.insert(ret, relicTier)
                     -- Store which mission tier was found
                     for _, missionsTiers in pairs(missionsDrops[relicTier]) do
                         for tierFound, _ in pairs(missionsTiers) do
-                            if (not Shared.contains(missionsTiersFound,
-                                                    tierFound)) then
+                            if (not Shared.contains(missionsTiersFound, tierFound)) then
                                 table.insert(missionsTiersFound, tierFound)
                             end
                         end
@@ -679,10 +726,7 @@ function p.getRelicByPlanet(frame)
                 if (missionsDrops[relicTier] ~= nil) then
                     for relicName, _ in pairs(missionsDrops[relicTier]) do
                         local relicFullName = relicTier .. ' ' .. relicName
-                        table.insert(toInsert, TT._tooltipText(relicFullName,
-                                                               "Relic",
-                                                               relicName, nil,
-                                                               true))
+                        table.insert(toInsert, TT._tooltipText(relicFullName, "Relic", relicName, nil, true))
                     end
                 end
             end
@@ -691,8 +735,7 @@ function p.getRelicByPlanet(frame)
             -- Filter missions to corresponding found tiers
             local correctMissions = {}
             for _, mission in pairs(missions) do
-                if (Shared.contains(missionsTiersFound,
-                                    Missions.getValue(mission, "TIER"))) then
+                if (Shared.contains(missionsTiersFound, Missions.getValue(mission, "TIER"))) then
                     table.insert(correctMissions, mission)
                 end
             end
@@ -708,12 +751,10 @@ function p.getRelicByPlanet(frame)
                 for _, relicTier in pairs(RELICSORDER) do
                     if (missionsDrops[relicTier] ~= nil) then
                         for relicName, _ in pairs(missionsDrops[relicTier]) do
-                            if (missionsDrops[relicTier][relicName][currMissionTier] ~=
-                                nil) then
-                                table.sort(
-                                    missionsDrops[relicTier][relicName][currMissionTier])
-                                table.insert(toInsert, table.concat(
-                                                 missionsDrops[relicTier][relicName][currMissionTier]))
+                            if (missionsDrops[relicTier][relicName][currMissionTier] ~= nil) then
+                                table.sort(missionsDrops[relicTier][relicName][currMissionTier])
+                                table.insert(toInsert,
+                                    table.concat(missionsDrops[relicTier][relicName][currMissionTier]))
                             else
                                 table.insert(toInsert, '')
                             end
@@ -758,8 +799,7 @@ function p.getRelicByLocation(frame)
                     -- When we find a relic drop, make sure it's for the right tier
                     if (drop[misTypeCol] == "Relic") then
                         -- Example: {"Lith", "A1"}
-                        local RelicBits =
-                            Shared.splitString(drop[misNameCol], " ")
+                        local RelicBits = Shared.splitString(drop[misNameCol], " ")
                         -- Example: "Lith"
                         local RTier = RelicBits[1]
                         -- Example: "A1"
@@ -769,17 +809,14 @@ function p.getRelicByLocation(frame)
                         if (RTier == tier) then
                             -- Create an entry for this relic if we don't have one yet
                             if (relicData[RName] == nil) then
-                                relicData[RName] =
-                                    {
-                                        Drops = {},
-                                        Rewards = Void.getRelic(RTier, RName)
-                                            .Drops
-                                    }
+                                relicData[RName] = {
+                                    Drops = {},
+                                    Rewards = Void.getRelic(RTier, RName).Drops
+                                }
                             end
 
                             -- Then add this drop to the relic's table
-                            table.insert(relicData[RName].Drops,
-                                         buildMissionDrop(theMission, rot, drop))
+                            table.insert(relicData[RName].Drops, buildMissionDrop(theMission, rot, drop))
                         end
                     end
                 end
@@ -808,20 +845,17 @@ function p.getRelicByLocation(frame)
         for i, reward in pairs(RTable.Rewards) do
             local ItemName = Void.getItemName(reward.Item)
             local PartName = Void.getPartName(reward.Part)
-            result = result .. "\n* [[" .. ItemName .. "|" .. ItemName .. " " ..
-                         PartName .. "]]"
+            result = result .. "\n* [[" .. ItemName .. "|" .. ItemName .. " " .. PartName .. "]]"
         end
 
         local rTable = rHeader
 
         table.sort(RTable.Drops, function(d1, d2)
             if (d1.MType == d2.MType) then
-                if (p.getMValue(d1.theMission, 'Name') ==
-                    p.getMValue(d2.theMission, 'Name')) then
+                if (p.getMValue(d1.theMission, 'Name') == p.getMValue(d2.theMission, 'Name')) then
                     return d1.Rotation < d2.Rotation
                 else
-                    return p.getMValue(d1.theMission, 'Name') <
-                               p.getMValue(d2.theMission, 'Name')
+                    return p.getMValue(d1.theMission, 'Name') < p.getMValue(d2.theMission, 'Name')
                 end
             else
                 return d1.MType < d2.MType
@@ -830,10 +864,8 @@ function p.getRelicByLocation(frame)
 
         for i, d in pairs(RTable.Drops) do
             rTable = rTable .. "\n|-\n|" .. p.linkType(d.MType)
-            if (d.MType == "Bounty" or d.MType == "Ghoul Bounty" or d.MType ==
-                "Onslaught") then
-                rTable = rTable .. "||" ..
-                             p.getMValue(d.theMission, 'ShortName')
+            if (d.MType == "Bounty" or d.MType == "Ghoul Bounty" or d.MType == "Onslaught") then
+                rTable = rTable .. "||" .. p.getMValue(d.theMission, 'ShortName')
             else
                 rTable = rTable .. "||" .. p.getMValue(d.theMission, 'Name')
             end
@@ -850,7 +882,10 @@ function p.getRelicByLocation(frame)
 end
 
 function p.getSingleRelicByLocation(tier, name)
-    local relicData = {Drops = {}, Rewards = Void._getRelic(tier, name).Drops}
+    local relicData = {
+        Drops = {},
+        Rewards = Void._getRelic(tier, name).Drops
+    }
     local missionData = {}
 
     local result = ""
@@ -865,8 +900,7 @@ function p.getSingleRelicByLocation(tier, name)
                     -- When relic drop found, make sure it's for the right relic
                     if (drop[misTypeCol] == "Relic") then
                         -- Example: {"Lith", "A1"}
-                        local RelicBits =
-                            Shared.splitString(drop[misNameCol], " ")
+                        local RelicBits = Shared.splitString(drop[misNameCol], " ")
                         -- Example: "Lith"
                         local RTier = RelicBits[1]
                         -- Example: "A1"
@@ -875,8 +909,7 @@ function p.getSingleRelicByLocation(tier, name)
                         -- Then if it is for the right tier, it needs to be added to our table of data
                         if (RTier == tier and RName == name) then
                             -- Then add this drop to the relic's table
-                            table.insert(relicData.Drops, buildMissionDrop(
-                                             theMission, rot, drop))
+                            table.insert(relicData.Drops, buildMissionDrop(theMission, rot, drop))
                         end
                     end
                 end
@@ -886,8 +919,7 @@ function p.getSingleRelicByLocation(tier, name)
 
     -- Second, build the actual table being sent back
     local result = ''
-    result =
-        "{| cellpadding=\"0\" cellspacing=\"0\" class=\"article-table sortable\" "
+    result = "{| cellpadding=\"0\" cellspacing=\"0\" class=\"article-table sortable\" "
     result = result .. "style=\"width:100%;border:1px solid black;"
     result = result .. "text-align:left;font-size:12px;margin:12px 0 0 0;\""
     result = result .. "\n!Mission"
@@ -897,12 +929,10 @@ function p.getSingleRelicByLocation(tier, name)
 
     table.sort(relicData.Drops, function(d1, d2)
         if (d1.MType == d2.MType) then
-            if (p.getMValue(d1.theMission, 'Name') ==
-                p.getMValue(d2.theMission, 'Name')) then
+            if (p.getMValue(d1.theMission, 'Name') == p.getMValue(d2.theMission, 'Name')) then
                 return d1.Rotation < d2.Rotation
             else
-                return p.getMValue(d1.theMission, 'Name') <
-                           p.getMValue(d2.theMission, 'Name')
+                return p.getMValue(d1.theMission, 'Name') < p.getMValue(d2.theMission, 'Name')
             end
         else
             return d1.MType < d2.MType
@@ -955,10 +985,8 @@ function p.getSingleRelicByLocation(tier, name)
             local framepass = {}
             framepass["args"] = {types[i], missions[i]}
             local mlist = p.getMissionList2(framepass)
-            result = result .. "\n|-\n|style=\"padding:10px;\"|" ..
-                         p.linkType(types[i])
-            if (mlist == "" or mlist ==
-                "ERROR: Could not figure out that mission type") then
+            result = result .. "\n|-\n|style=\"padding:10px;\"|" .. p.linkType(types[i])
+            if (mlist == "" or mlist == "ERROR: Could not figure out that mission type") then
                 result = result .. "\n|style=\"padding:10px;\"|" .. missions[i]
             else
                 result = result ..
@@ -966,9 +994,7 @@ function p.getSingleRelicByLocation(tier, name)
                              mlist .. "\">" .. missions[i] .. "</span>"
             end
             result = result .. "\n|style=\"padding:10px;\"|" .. rotations[i]
-            result =
-                result .. "\n|style=\"padding:10px;\" data-sort-value=\"" ..
-                    highchance .. "\"|" .. chances[i]
+            result = result .. "\n|style=\"padding:10px;\" data-sort-value=\"" .. highchance .. "\"|" .. chances[i]
         end
         i = i + 1
     end
@@ -982,7 +1008,9 @@ function p.getItemByMissionTable(frame)
     local theDrop = frame.args ~= nil and frame.args[1] or frame
 
     local Drops = getDropMissions(theDrop)
-    table.sort(Drops, function(d1, d2) return d1.MType < d2.MType end)
+    table.sort(Drops, function(d1, d2)
+        return d1.MType < d2.MType
+    end)
 
     local rHeader
 
@@ -997,8 +1025,7 @@ function p.getItemByMissionTable(frame)
     local rTable = rHeader
 
     for i, d in pairs(Drops) do
-        rTable = rTable .. "\n|-\n|" .. p.linkType(d.MType) .. "||" ..
-                     p.getMValue(d.theMission, 'NAME')
+        rTable = rTable .. "\n|-\n|" .. p.linkType(d.MType) .. "||" .. p.getMValue(d.theMission, 'NAME')
         rTable = rTable .. "||" .. d.Rotation .. "||" .. asPercent(d.Chance)
     end
 
@@ -1011,7 +1038,9 @@ function p.getItemByEnemyTable(frame)
     local theDrop = frame.args ~= nil and frame.args[1] or frame
 
     local Drops = getDropEnemies(theDrop)
-    table.sort(Drops, function(d1, d2) return d1.EName < d2.EName end)
+    table.sort(Drops, function(d1, d2)
+        return d1.EName < d2.EName
+    end)
 
     local rHeader
 
@@ -1039,13 +1068,16 @@ function p.getItemDropList(frame)
 
     -- First, get all the missions that drop this
     local Drops = getDropMissions(theDrop)
-    table.sort(Drops, function(d1, d2) return d1.MType < d2.MType end)
+    table.sort(Drops, function(d1, d2)
+        return d1.MType < d2.MType
+    end)
 
     local checked = {}
+    local ret = {}
     local result = ""
     local space = " "
 
-    if (Shared.tableCount(Drops) > 0) then
+    if (#Drops > 0) then
         local finalTable = {}
         result = "'''Missions :'''" -- Voided to add more mods (example Syndicates)
         -- Going through and grouping the drops by Type
@@ -1065,66 +1097,89 @@ function p.getItemDropList(frame)
             end
         end
 
-        table.sort(finalTable, function(r1, r2) return r1 < r2 end)
+        table.sort(finalTable, function(r1, r2)
+            return r1 < r2
+        end)
 
         -- This is where all the items are put into the list
         -- Each mission type gets its own row, with the relevant tiers in parentheses
         -- For example "Spy (T1, T2, Lua)" or "Survival (DS1, DS2)"
         for i, item in pairs(finalTable) do
             table.sort(item)
-            result = result .. "<br/>" .. p.linkType(i) .. " ("
+            local mType = p.linkType(i)
+            mType = string.gsub(mType, " %(Steel Path%)%]%]", "%]%] %(%[%[The Steel Path|Steel Path%]%]%)")
+
+            result = result .. "<br/>" .. mType
+
+            local tierList = ""
             for j, alias in pairs(item) do
                 local drop1 = checked[alias][1]
                 local shortName = p.getMValue(drop1.theMission, 'SHORTNAME')
-                if (shortName == nil) then shortName = "Toutes" end
-                local ttip = p.getMValue(drop1.theMission, 'NAME')
-                if (ttip ~= nil) then
-                    ttip = ttip .. ' - '
-                else
-                    ttip = ""
-                end
-                for k, thisDrop in pairs(checked[alias]) do
-                    ttip = ttip .. 'Rotation ' .. thisDrop.Rotation .. ': ' ..
-                               asPercent(thisDrop.Chance, 2)
-                end
+                if shortName ~= "" then
+                    local ttip = {p.getMValue(drop1.theMission, 'NAME', true)}
 
-                if j > 1 then result = result .. ', ' end
-                result = result ..
-                             '<span style="border-bottom: 1px dotted;" title="' ..
-                             ttip .. '">' .. shortName .. '</span>'
+                    for k, thisDrop in pairs(checked[alias]) do
+                        table.insert(ttip, '\nRotation ')
+                        table.insert(ttip, thisDrop.Rotation)
+                        if (thisDrop.Chance ~= nil) then
+                            table.insert(ttip, ': ')
+                            table.insert(ttip, thisDrop.Chance)
+                            table.insert(ttip, '%')
+                        end
+                    end
 
+                    if j > 1 then
+                        tierList = tierList .. ', '
+                    end
+                    tierList = tierList .. '<span style="border-bottom: 1px dotted;" class="basic-tooltip" title="' ..
+                                   table.concat(ttip) .. '">' .. shortName .. '</span>'
+                end
             end
-            result = result .. ")"
+            if tierList ~= "" then
+                result = result .. " (" .. tierList .. ")"
+            end
         end
+
+        table.insert(ret, result)
+        result = ""
     end
 
     local Drops = getDropSyndicates(theDrop)
     if (Shared.tableCount(Drops) > 0) then
-        table.sort(Drops, function(d1, d2) return d1.SName < d2.SName end)
+        table.sort(Drops, function(d1, d2)
+            return d1.SName < d2.SName
+        end)
 
-        if (string.len(result) > 0) then result = result .. "<br/>" end
+        if (string.len(result) > 0) then
+            result = result .. "<br/>"
+        end
         result = result .. "'''Syndicats :'''"
         for i, Drop in pairs(Drops) do
-            result = result .. "<br/>" .. linkSyndicate(Drop.SName) .. ' ' ..
-                         Icon._Syndicat("Drapeau", "", "x20") .. ' ' ..
-                         Shared.formatnum(Drop.Cost)
+            result = result .. "<br/>" .. linkSyndicate(Drop.SName) .. ' ' .. Icon._Syndicat("Drapeau", "", "x20") ..
+                         ' ' .. Shared.formatnum(Drop.Cost)
         end
+        table.insert(ret, result)
+        result = ""
     end
 
     -- Then all the enemies are added to the list if there are any
-    Drops = getDropEnemies(theDrop)
-    if (Shared.tableCount(Drops) > 0) then
-        table.sort(Drops, function(d1, d2) return d1.EName < d2.EName end)
-        if (string.len(result) > 0) then result = result .. "<br/>" end
-        result = result .. "'''Ennemis :'''"
-        for i, Drop in pairs(Drops) do
-            result =
-                result .. "<br/>" .. TT._tooltipText(Drop.EName, 'Enemy') ..
-                    space .. asPercent(Drop.Chance)
+    if (ModsData.Mods[theDrop] ~= nil) then -- Skip if not a mod (getDropEnemies only check mods anyway)
+        Drops = getDropEnemies(theDrop)
+        if (#Drops > 0) then
+            local mobDropsText = {"'''Ennemis :'''"}
+            table.sort(Drops, function(d1, d2)
+                return d1.EName < d2.EName
+            end)
+            for i, Drop in pairs(Drops) do
+                table.insert(mobDropsText,
+                    string.format('%s %s%s', TT._tooltipText(Drop.EName, 'Enemy'), Drop.Chance, '%'))
+            end
+
+            table.insert(ret, table.concat(mobDropsText, '<br/>'))
         end
     end
 
-    return result
+    return table.concat(ret, '<hr/>')
 end
 
 function p.getItemByEnemyCount(frame)
@@ -1147,10 +1202,14 @@ function p.getFullEnemyList(frame)
     local result = "Tous les Ennemis : "
     local ENames = {}
     for i, Enemy in pairs(DropData["Ennemis"]) do
-        if (Enemy.Name ~= nil) then table.insert(ENames, Enemy.Name) end
+        if (Enemy.Name ~= nil) then
+            table.insert(ENames, Enemy.Name)
+        end
     end
 
-    table.sort(ENames, function(n1, n2) return n1 < n2 end)
+    table.sort(ENames, function(n1, n2)
+        return n1 < n2
+    end)
     for i, Name in pairs(ENames) do
         result = result .. "\n* " .. TT._tooltipText(Name, 'Enemy')
     end
@@ -1161,13 +1220,17 @@ function p._getEnemyModDrops(EnemyName)
 
     local Drops = getAllModDrops(EnemyName)
 
-    if (Shared.tableCount(Drops) == 0) then return; end
+    if (Shared.tableCount(Drops) == 0) then
+        return;
+    end
 
     enemyTableSort(Drops)
     local space = " "
     local result = ""
     for i, Drop in pairs(Drops) do
-        if i > 1 then result = result .. "<br/>" end
+        if i > 1 then
+            result = result .. "<br/>"
+        end
         if (Drop.IName == "Endo") then
             if (Drop.Count < 10) then
                 result = result .. "[[Endo]]"

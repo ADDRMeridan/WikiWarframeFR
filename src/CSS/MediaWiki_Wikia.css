@@ -1,5 +1,51 @@
 @import url("/index.php?title=MediaWiki:Common.css&usemsgcache=yes&ctype=text/css&smaxage=86400&action=raw&maxage=86400");
 
+/* --------- Polices importées ------------- */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manjari&display=swap');
+@import url('https://fonts.googleapis.com/css2?famitly=Mukta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+
+/*@font-face {
+    font-family: 'Michroma';
+    src: url('https://vignette.wikia.nocookie.net/warframe/images/c/cc/Michroma-Regular.ttf/revision/latest?cb=20210517095614&path-prefix=fr') format('opentype'),
+         url('https://vignette.wikia.nocookie.net/warframe/images/c/cc/Michroma-Regular.ttf/revision/latest?cb=20210517095614&path-prefix=fr') format('truetype');
+}*/
+@font-face {
+    font-family: 'Michroma';
+    src: url('https://static.wikia.nocookie.net/warframe/images/b/bd/Michroma-Regular.ttf/revision/latest?cb=20210517095614&format=original&path-prefix=fr') format('opentype'),
+         url('https://static.wikia.nocookie.net/warframe/images/b/bd/Michroma-Regular.ttf/revision/latest?cb=20210517095614&format=original&path-prefix=fr') format('truetype');
+}
+@font-face {
+    font-family: 'Mukta';
+    src: url('https://static.wikia.nocookie.net/warframe/images/f/f2/Mukta-Regular.ttf/revision/latest?cb=20210518165746&format=original&path-prefix=fr') format('opentype'),
+         url('https://static.wikia.nocookie.net/warframe/images/f/f2/Mukta-Regular.ttf/revision/latest?cb=20210518165746&format=original&path-prefix=fr') format('truetype');
+}
+@font-face {
+    font-family: 'Philosopher';
+    src: url('https://static.wikia.nocookie.net/warframe/images/9/93/Philosopher-Regular.ttf/revision/latest?cb=20210518170155&format=original&path-prefix=fr') format('opentype'),
+         url('https://static.wikia.nocookie.net/warframe/images/9/93/Philosopher-Regular.ttf/revision/latest?cb=20210518170155&format=original&path-prefix=fr') format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('https://static.wikia.nocookie.net/warframe/images/2/25/OpenSans-Regular.ttf/revision/latest?cb=20210518170213&format=original&path-prefix=fr') format('opentype'),
+         url('https://static.wikia.nocookie.net/warframe/images/2/25/OpenSans-Regular.ttf/revision/latest?cb=20210518170213&format=original&path-prefix=fr') format('truetype');
+}
+@font-face {
+    font-family: 'Manjari';
+    src: url('https://static.wikia.nocookie.net/warframe/images/0/03/Manjari-Regular.ttf/revision/latest?cb=20210518170504&format=original&path-prefix=fr') format('opentype'),
+         url('https://static.wikia.nocookie.net/warframe/images/0/03/Manjari-Regular.ttf/revision/latest?cb=20210518170504&format=original&path-prefix=fr') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://static.wikia.nocookie.net/warframe/images/1/1e/Roboto-Regular.ttf/revision/latest?cb=20210518170522&format=original&path-prefix=fr') format('opentype'),
+         url('https://static.wikia.nocookie.net/warframe/images/1/1e/Roboto-Regular.ttf/revision/latest?cb=20210518170522&format=original&path-prefix=fr') format('truetype');
+}
+
 /* ---------Formatage spécial, police / avatar pour admins------------- */
 .avatar {
     border-radius: 100px;
@@ -11,39 +57,82 @@
 .SpeechBubble .speech-bubble-message::before, .SpeechBubble .speech-bubble-message::after {
     display: none;
 }
-a[href="/fr/wiki/Utilisateur:Xhell96"]:nth-child(2)::after {
+
+.EntityHeader_header-details__1bZ7- a[href="/fr/wiki/Utilisateur:Xhell96"]:nth-child(2)::after {
     content: "Fondateur";
     display: block;
     color: #f2bb15;
     margin: -6px 0;
     font-size: 10px;
 }
-a[href="/fr/wiki/Utilisateur:Beuargh"]:nth-child(2)::after, a[href="/fr/wiki/Utilisateur:Zengrof"]:nth-child(2)::after,  a[href="/fr/wiki/Utilisateur:Franck054"]:nth-child(2)::after, a[href="/fr/wiki/Utilisateur:Redgard_archeos"]:nth-child(2)::after {
+a[href="/fr/wiki/Utilisateur:Xhell96"] {
+	color: #f2bb15;
+}
+
+.EntityHeader_header-details__1bZ7- a[href="/fr/wiki/Utilisateur:Beuargh"]:nth-child(2)::after, 
+.EntityHeader_header-details__1bZ7- a[href="/fr/wiki/Utilisateur:Zengrof"]:nth-child(2)::after, 
+.EntityHeader_header-details__1bZ7- a[href="/fr/wiki/Utilisateur:Franck054"]:nth-child(2)::after, 
+.EntityHeader_header-details__1bZ7- a[href="/fr/wiki/Utilisateur:Redgard_archeos"]:nth-child(2)::after {
     content: "Bureaucrate";
     display: block;
     color: #0bc5d8;
     margin: -6px 0;
     font-size: 10px;
 }
-a[href="/fr/wiki/Utilisateur:Killer_pingoui"]:nth-child(2)::after,  a[href="/fr/wiki/Utilisateur:Hasen1"]:nth-child(2)::after, a[href="/fr/wiki/Utilisateur:Noxamas"]:nth-child(2)::after, a[href="/fr/wiki/Utilisateur:ADDRMeridan"]:nth-child(2)::after, a[href="/fr/wiki/Utilisateur:Yazuh"]:nth-child(2)::after {
+a[href="/fr/wiki/Utilisateur:Beuargh"],
+a[href="/fr/wiki/Utilisateur:Zengrof"], 
+a[href="/fr/wiki/Utilisateur:Franck054"], 
+a[href="/fr/wiki/Utilisateur:Redgard_archeos"] {
+	color: #0bc5d8;
+}
+
+
+.EntityHeader_header-details__1bZ7- a[href="/fr/wiki/Utilisateur:Killer_pingoui"]:nth-child(2)::after,
+.EntityHeader_header-details__1bZ7- a[href="/fr/wiki/Utilisateur:Hasen1"]:nth-child(2)::after, 
+.EntityHeader_header-details__1bZ7- a[href="/fr/wiki/Utilisateur:Noxamas"]:nth-child(2)::after, 
+.EntityHeader_header-details__1bZ7- a[href="/fr/wiki/Utilisateur:ADDRMeridan"]:nth-child(2)::after, 
+.EntityHeader_header-details__1bZ7- a[href="/fr/wiki/Utilisateur:Yazuh"]:nth-child(2)::after {
     content: "Administrateur";
     display: block;
     color: #1297e6;
     margin: -6px 0;
     font-size: 10px;
 }
-a[href="/fr/wiki/Utilisateur:Kenexey"]:nth-child(2)::after, a[href="/fr/wiki/Utilisateur:Blade_Wolf_16"]:nth-child(2)::after {
+a[href="/fr/wiki/Utilisateur:Killer_pingoui"],
+a[href="/fr/wiki/Utilisateur:Hasen1"], 
+a[href="/fr/wiki/Utilisateur:Noxamas"], 
+a[href="/fr/wiki/Utilisateur:ADDRMeridan"], 
+a[href="/fr/wiki/Utilisateur:Yazuh"] {
+	color: #1297e6;
+}
+
+.EntityHeader_header-details__1bZ7- a[href="/fr/wiki/Utilisateur:Kenexey"]:nth-child(2)::after, 
+.EntityHeader_header-details__1bZ7- a[href="/fr/wiki/Utilisateur:Blade_Wolf_16"]:nth-child(2)::after {
     content: "Modérateur";
     display: block;
     color: #9d2aec;
     margin: -6px 0;
     font-size: 10px;
 }
-.comments li[data-user="Zengrof"] .speech-bubble-avatar a img, .comments li[data-user="Franck054"] .speech-bubble-avatar a img, .comments li[data-user="Wikirion"] .speech-bubble-avatar a img, .comments li[data-user="Redgard archeos"] .speech-bubble-avatar a img, .comments li[data-user="Beuargh"] .speech-bubble-avatar a img {
+a[href="/fr/wiki/Utilisateur:Kenexey"],
+a[href="/fr/wiki/Utilisateur:Blade_Wolf_16"] {
+	color: #9d2aec;
+}
+
+.comments li[data-user="Zengrof"] .speech-bubble-avatar a img, 
+.comments li[data-user="Franck054"] .speech-bubble-avatar a img, 
+.comments li[data-user="Wikirion"] .speech-bubble-avatar a img, 
+.comments li[data-user="Redgard archeos"] .speech-bubble-avatar a img, 
+.comments li[data-user="Beuargh"] .speech-bubble-avatar a img {
     box-shadow: 0 0 10px 2px #11c3bd;
     border: 2px solid #0dafbd;
 }
-.comments li[data-user="Zengrof"] .speech-bubble-avatar::after, .comments li[data-user="Franck054"] .speech-bubble-avatar::after, .comments li[data-user="Wikirion"] .speech-bubble-avatar::after, .comments li[data-user="Redgard archeos"] .speech-bubble-avatar::after, .comments li[data-user="Beuargh"] .speech-bubble-avatar::after {
+
+.comments li[data-user="Zengrof"] .speech-bubble-avatar::after, 
+.comments li[data-user="Franck054"] .speech-bubble-avatar::after, 
+.comments li[data-user="Wikirion"] .speech-bubble-avatar::after, 
+.comments li[data-user="Redgard archeos"] .speech-bubble-avatar::after, 
+.comments li[data-user="Beuargh"] .speech-bubble-avatar::after {
     content: "Bureaucrate";
     display: block;
     text-align: center;
@@ -52,15 +141,42 @@ a[href="/fr/wiki/Utilisateur:Kenexey"]:nth-child(2)::after, a[href="/fr/wiki/Uti
     font-weight: bold;
     margin: 0 -8px;
 }
-.WikiaPage .edit-info-user[href$="Zengrof"], .WikiaPage .edit-info-user[href$="Franck054"],  .WikiaPage .edit-info-user[href$="Wikirion"], .WikiaPage .edit-info-user[href$="Redgard archeos"], .WikiaPage .edit-info-user[href$="Beuargh"] {
+
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Zengrof"]::after,
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Franck054"]::after,
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Wikirion"]::after,
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Redgard archeos"]::after,
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Beuargh"]::after {
+    content: "Bureaucrate";
+    display: block;
+    color: #21d7bd;
+    margin: -10px 0;
+    font-size: 10px;
+}
+
+.WikiaPage .edit-info-user[href$="Zengrof"], 
+.WikiaPage .edit-info-user[href$="Franck054"],
+.WikiaPage .edit-info-user[href$="Wikirion"],
+.WikiaPage .edit-info-user[href$="Redgard archeos"],
+.WikiaPage .edit-info-user[href$="Beuargh"] {
     color: #21d7bd;
     text-shadow: rgb(36, 150, 110) 0px 0px 4px;
 }
-.comments li[data-user="Killer pingoui"] .speech-bubble-avatar a img, .comments li[data-user="Hasen1"] .speech-bubble-avatar a img, .comments li[data-user="Noxamas"] .speech-bubble-avatar a img, .comments li[data-user="ADDRMeridan"] .speech-bubble-avatar a img, .comments li[data-user="Yazuh"] .speech-bubble-avatar a img {
+
+.comments li[data-user="Killer pingoui"] .speech-bubble-avatar a img, 
+.comments li[data-user="Hasen1"] .speech-bubble-avatar a img, 
+.comments li[data-user="Noxamas"] .speech-bubble-avatar a img, 
+.comments li[data-user="ADDRMeridan"] .speech-bubble-avatar a img, 
+.comments li[data-user="Yazuh"] .speech-bubble-avatar a img {
     box-shadow: 0 0 10px 2px #2a76ec;
     border: 2px solid #2c75dd;
 }
-.comments li[data-user="Killer pingoui"] .speech-bubble-avatar::after, .comments li[data-user="Hasen1"] .speech-bubble-avatar::after, .comments li[data-user="Noxamas"] .speech-bubble-avatar::after, .comments li[data-user="ADDRMeridan"] .speech-bubble-avatar::after, .comments li[data-user="Yazuh"] .speech-bubble-avatar::after {
+
+.comments li[data-user="Killer pingoui"] .speech-bubble-avatar::after, 
+.comments li[data-user="Hasen1"] .speech-bubble-avatar::after, 
+.comments li[data-user="Noxamas"] .speech-bubble-avatar::after, 
+.comments li[data-user="ADDRMeridan"] .speech-bubble-avatar::after, 
+.comments li[data-user="Yazuh"] .speech-bubble-avatar::after {
     content: "Admin";
     display: block;
     text-align: center;
@@ -68,15 +184,34 @@ a[href="/fr/wiki/Utilisateur:Kenexey"]:nth-child(2)::after, a[href="/fr/wiki/Uti
     font-family: 'Manjari', serif;
     font-weight: bold;
 }
-.WikiaPage .edit-info-user[href$="Killer pingoui"], .WikiaPage .edit-info-user[href$="Hasen1"], .WikiaPage .edit-info-user[href$="Noxamas"], .WikiaPage .edit-info-user[href$="ADDRMeridan"], .WikiaPage .edit-info-user[href$="Yazuh"] {
+
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Killer pingoui"]::after,
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Hasen1"]::after,
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Noxamas"]::after,
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:ADDRMeridan"]::after,
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Yazuh"]::after {
+    content: "Admin";
+    display: block;
+    color: #1297e6;
+    margin: -10px 0;
+    font-size: 10px;
+}
+
+.WikiaPage .edit-info-user[href$="Killer pingoui"], 
+.WikiaPage .edit-info-user[href$="Hasen1"], 
+.WikiaPage .edit-info-user[href$="Noxamas"], 
+.WikiaPage .edit-info-user[href$="ADDRMeridan"], 
+.WikiaPage .edit-info-user[href$="Yazuh"] {
     color: #1297e6;
     text-shadow: rgb(37, 83, 64) 0px 0px 4px;
 }
-.comments li[data-user="Kenexey"] .speech-bubble-avatar a img, .comments li[data-user="Blade Wolf 16"] .speech-bubble-avatar a img {
+.comments li[data-user="Kenexey"] .speech-bubble-avatar a img, 
+.comments li[data-user="Blade Wolf 16"] .speech-bubble-avatar a img {
     box-shadow: 0 0 10px 2px #9d2aec;
     border: 2px solid #9d2aec;
 }
-.comments li[data-user="Kenexey"] .speech-bubble-avatar::after, .comments li[data-user="Blade Wolf 16"] .speech-bubble-avatar::after {
+.comments li[data-user="Kenexey"] .speech-bubble-avatar::after, 
+.comments li[data-user="Blade Wolf 16"] .speech-bubble-avatar::after {
     content: "Modérateur";
     display: block;
     text-align: center;
@@ -84,6 +219,97 @@ a[href="/fr/wiki/Utilisateur:Kenexey"]:nth-child(2)::after, a[href="/fr/wiki/Uti
     font-family: 'Manjari', serif;
     font-weight: bold;
     margin: 0 -6px;
+}
+
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Kenexey"]::after,
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Blade Wolf 16"]::after {
+	content: "Modérateur";
+    display: block;
+    color: #af21d7;
+    margin: -10px 0;
+    font-size: 10px;
+}
+
+/* --- Drapeaux des Pays --- */
+.page-header__languages span[data-tracking="interwiki-dropdown"]:before {
+	content: url('https://static.wikia.nocookie.net/warframe/images/f/f6/Flag-France.png/revision/latest?cb=20210218000009&path-prefix=fr') " ";
+}
+.WikiaArticleInterlang li a[data-tracking="de"]:before,
+.page-header__languages li a[data-tracking="top-de"]:before,
+.wds-list li a [data-tracking="lang-de"]:before {
+	content: url('https://static.wikia.nocookie.net/warframe/images/e/ef/Mainpage-Flag-Germany.png/revision/latest') " ";
+}
+
+.WikiaArticleInterlang li a[data-tracking="es"]:before,
+.page-header__languages li a[data-tracking="top-es"]:before,
+.wds-list li a [data-tracking="lang-es"]:before {
+	content: url('https://static.wikia.nocookie.net/warframe/images/1/1f/Mainpage-Flag-Spain.png/revision/latest') " ";
+}
+.WikiaArticleInterlang li a[data-tracking="en"]:before,
+.page-header__languages li a[data-tracking="top-en"]:before,
+.wds-list li a [data-tracking="lang-en"]:before {
+	content: url('https://static.wikia.nocookie.net/warframe/images/f/fa/Flag-English.png/revision/latest') " ";
+	
+}
+.WikiaArticleInterlang li a[data-tracking="hu"]:before,
+.page-header__languages li a[data-tracking="top-hu"]:before,
+.wds-list li a [data-tracking="lang-hu"]:before {
+	content: url('https://static.wikia.nocookie.net/warframe/images/0/01/Mainpage-Flag-Hungary.png/revision/latest') " ";
+}
+.WikiaArticleInterlang li a[data-tracking="it"]:before,
+.page-header__languages li a[data-tracking="top-it"]:before,
+.wds-list li a [data-tracking="lang-it"]:before {
+	content: url('https://static.wikia.nocookie.net/warframe/images/a/a8/Mainpage-Flag-Italy.png/revision/latest') " ";
+}
+.WikiaArticleInterlang li a[data-tracking="ja"]:before,
+.page-header__languages li a[data-tracking="top-ja"]:before,
+.wds-list li a [data-tracking="lang-ja"]:before {
+	content: url('https://static.wikia.nocookie.net/warframe/images/c/c9/Flag-Japan.png/revision/latest') " ";
+}
+.WikiaArticleInterlang li a[data-tracking="ko"]:before,
+.page-header__languages li a[data-tracking="top-ko"]:before,
+.wds-list li a [data-tracking="lang-ko"]:before {
+	content: url('https://static.wikia.nocookie.net/warframe/images/7/78/Flag-Korea.png/revision/latest') " ";
+}
+.WikiaArticleInterlang li a[data-tracking="nl"]:before,
+.page-header__languages li a[data-tracking="top-nl"]:before,
+.wds-list li a [data-tracking="lang-nl"]:before {
+	content: url('https://static.wikia.nocookie.net/warframe/images/3/35/Flag-Nederlands.png/revision/latest') " ";
+}
+.WikiaArticleInterlang li a[data-tracking="pl"]:before,
+.page-header__languages li a[data-tracking="top-pl"]:before,
+.wds-list li a [data-tracking="lang-pl"]:before {
+	content: url('https://static.wikia.nocookie.net/warframe/images/5/52/Mainpage-Flag-Poland.png/revision/latest') " ";
+}
+.WikiaArticleInterlang li a[data-tracking="pt"]:before,
+.page-header__languages li a[data-tracking="top-pt"]:before,
+.wds-list li a [data-tracking="lang-pt"]:before {
+	content: url('https://static.wikia.nocookie.net/warframe/images/f/fe/Mainpage-Flag-Portugal.png/revision/latest') " ";
+}
+.WikiaArticleInterlang li a[data-tracking="ru"]:before,
+.page-header__languages li a[data-tracking="top-ru"]:before,
+.wds-list li a [data-tracking="lang-ru"]:before {
+	content: url('https://static.wikia.nocookie.net/warframe/images/8/8d/Mainpage-Flag-Russia.png/revision/latest') " ";
+}
+.WikiaArticleInterlang li a[data-tracking="tr"]:before,
+.page-header__languages li a[data-tracking="top-tr"]:before,
+.wds-list li a [data-tracking="lang-tr"]:before {
+	content: url('https://static.wikia.nocookie.net/warframe/images/1/1d/Mainpage-Flag-Turkey.png/revision/latest') " ";
+}
+.WikiaArticleInterlang li a[data-tracking="uk"]:before,
+.page-header__languages li a[data-tracking="top-uk"]:before,
+.wds-list li a [data-tracking="lang-uk"]:before {
+	content: url('https://static.wikia.nocookie.net/warframe/images/1/16/Flag-Ukraine.png/revision/latest') " ";
+}
+.WikiaArticleInterlang li a[data-tracking="vi"]:before,
+.page-header__languages li a[data-tracking="top-vi"]:before,
+.wds-list li a [data-tracking="lang-vi"]:before {
+	content: url('https://static.wikia.nocookie.net/warframe/images/6/6b/Flag-Vietnam.png/revision/latest') " ";
+}
+.WikiaArticleInterlang li a[data-tracking="zh"]:before,
+.page-header__languages li a[data-tracking="top-zh"]:before,
+.wds-list li a [data-tracking="lang-zh"]:before {
+	content: url('https://static.wikia.nocookie.net/warframe/images/1/12/Flag-Taiwan.png/revision/latest') " 繁體";
 }
 
 
@@ -115,3 +341,15 @@ a[href="/fr/wiki/Utilisateur:Kenexey"]:nth-child(2)::after, a[href="/fr/wiki/Uti
     background: radial-gradient(ellipse at center, #443501 0%,#000000 100%);
 }
 /*----------------------------*/
+
+/* -------------------------- Discussion -------------------------- */
+.community-info,
+.moderation-module, 
+.desktop-entry-point, 
+.wiki-top-articles,
+.categories-module, 
+.wiki-recent-changes {
+    background-color: rgb(24, 26, 27) !important;
+    box-shadow: rgba(0, 34, 40, 0.06) 0px 4px 10px 0px !important;
+    color: rgb(216, 213, 208) !important;
+}

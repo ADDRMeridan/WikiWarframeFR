@@ -1,22 +1,157 @@
 /***** Feuille CSS principale qui inclut tout le style CSS appliqué sur le Wiki *****/
 @import url("/MediaWiki:Tooltips.css?ctype=text/css&action=raw");/*Current Tooltips.js */
+@import "/load.php?mode=articles&articles=u:dev:MediaWiki:ConsistentDiscussionsFeeds.css&only=styles"; /* Discuss part stylesheet */
+
+/* ---------========== Charte graphique ==========------------- */
+
+:root{
+  --main-bg-color: #061d40;
+}
+/* .exemple {
+  background-color: var(--main-bg-color);
+} */
+
+.home-page-desktop__main {
+  background-color: var(--main-bg-color);
+}
+
 
 /* ---------==========Polices importées==========------------- */
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Michroma&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Philosopher&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Maoutpunjari&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manjari&display=swap');
+@import url('https://fonts.googleapis.com/css2?famitly=Mukta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
 @font-face {
     font-family: 'Ailerons';
     src: url('https://vignette.wikia.nocookie.net/warframe/images/c/cc/Ailerons-Typeface.ttf/revision/latest?cb=20200810110512&path-prefix=fr') format('opentype'),
          url('https://vignette.wikia.nocookie.net/warframe/images/c/cc/Ailerons-Typeface.ttf/revision/latest?cb=20200810110512&path-prefix=fr') format('truetype');
 }
+@font-face {
+    font-family: 'Michroma';
+    src: url('https://static.wikia.nocookie.net/warframe/images/b/bd/Michroma-Regular.ttf/revision/latest?cb=20210517095614&format=original&path-prefix=fr') format('opentype'),
+         url('https://static.wikia.nocookie.net/warframe/images/b/bd/Michroma-Regular.ttf/revision/latest?cb=20210517095614&format=original&path-prefix=fr') format('truetype');
+}
+@font-face {
+    font-family: 'Mukta';
+    src: url('https://static.wikia.nocookie.net/warframe/images/f/f2/Mukta-Regular.ttf/revision/latest?cb=20210518165746&format=original&path-prefix=fr') format('opentype'),
+         url('https://static.wikia.nocookie.net/warframe/images/f/f2/Mukta-Regular.ttf/revision/latest?cb=20210518165746&format=original&path-prefix=fr') format('truetype');
+}
+@font-face {
+    font-family: 'Philosopher';
+    src: url('https://static.wikia.nocookie.net/warframe/images/9/93/Philosopher-Regular.ttf/revision/latest?cb=20210518170155&format=original&path-prefix=fr') format('opentype'),
+         url('https://static.wikia.nocookie.net/warframe/images/9/93/Philosopher-Regular.ttf/revision/latest?cb=20210518170155&format=original&path-prefix=fr') format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('https://static.wikia.nocookie.net/warframe/images/2/25/OpenSans-Regular.ttf/revision/latest?cb=20210518170213&format=original&path-prefix=fr') format('opentype'),
+         url('https://static.wikia.nocookie.net/warframe/images/2/25/OpenSans-Regular.ttf/revision/latest?cb=20210518170213&format=original&path-prefix=fr') format('truetype');
+}
+@font-face {
+    font-family: 'Manjari';
+    src: url('https://static.wikia.nocookie.net/warframe/images/0/03/Manjari-Regular.ttf/revision/latest?cb=20210518170504&format=original&path-prefix=fr') format('opentype'),
+         url('https://static.wikia.nocookie.net/warframe/images/0/03/Manjari-Regular.ttf/revision/latest?cb=20210518170504&format=original&path-prefix=fr') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://static.wikia.nocookie.net/warframe/images/1/1e/Roboto-Regular.ttf/revision/latest?cb=20210518170522&format=original&path-prefix=fr') format('opentype'),
+         url('https://static.wikia.nocookie.net/warframe/images/1/1e/Roboto-Regular.ttf/revision/latest?cb=20210518170522&format=original&path-prefix=fr') format('truetype');
+}
+
+.WikiaPageContentWrapper #WikiaMainContent,
+.page__main {
+    font-family: 'Mukta', serif;
+    /*font-size: 18px;*/
+}
+
+.page-content h2,
+.page-content h3, 
+.page-content h4 {
+	font-family: 'Mukta', serif !important;
+	font-weight: revert;
+	padding: 0;
+}
+
+/* ---------==========TEMP==========------------- */
+/*TOUTE LA CSS INCLUSE ICI DOIT N'ETRE QUE TEMPORAIRE POUR DES TESTS*/
+
+.reward-tab tr td {
+        border: 1px solid #235196bf;
+}
+/* ---------==========END-TEMP==========------------- */
+
+
+
 
 
 /* ---------==========TEMPLATES==========------------- */
+/* ---------Doc Template (CCS pour la documentation sur les pages de modèles)------------- */
+.mw-templatedata-doc-wrap {
+    position: relative;
+    padding-top: 35px;
+    margin-top: 5%;
+}
+.mw-templatedata-doc-wrap::after {
+    content: "DOCUMENTATION";
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #081f42;
+    border-color: black;
+}
+
+/* --------- TopbuttonOnArticles------------- */
+.toptag-container {
+  display: flex;
+}
+.toptag-container > span {
+  border: 1px solid #5288DD63;
+  margin: 0 5px;
+  padding: 7px 5px 5px;
+  border-radius: 4px;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1em;
+}
+
+/* --------- posturesByWeaponType ------------- */
+.posturesByWeaponType {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
+  width: 90%;
+}
+.posturesByWeaponType .box {
+  text-align: center;
+  border: 1px solid #061D40;
+  background-color: rgba(65,85,143,0.16);
+}
+
+.posturesByWeaponType .weaponType {
+  display: block;
+  padding: 5px;
+  background-color: #5288DD63;
+}
+.posturesByWeaponType .mod-list {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  list-style: none;
+  padding: 0;
+}
+.posturesByWeaponType .mod-list li {
+  margin: 2px 0;
+}
+
+
+
 /* ---------Navbox Template------------- */
 .navbox {
      background-color: rgba(65,85,143,0.16);
@@ -44,15 +179,18 @@
      color: white;
      font-weight: bold;
      text-align: center;
-     width: 15%;
+     width: 20%;
 }
 .navboxfooter {
      background-color: #5288DD63;
      color: white;
      font-size: 14px;
      margin: 0 auto;
-     padding: 2px 0;
+     padding: 2px 10%;
      text-align: center;
+}
+.navboxfooter a {
+     color: #fff;
 }
 
 
@@ -98,6 +236,10 @@
     width:50%; 
     text-align:left; 
     padding:0px 5px; 
+}
+
+.pi-data-label {
+	font-weight: bold;
 }
 
 
@@ -175,7 +317,7 @@ align-items: center;
 .HomeNav {
     display:inline-block;
     position:relative;
-    width:112px;
+    width:25%;
     transform: skew(30deg);
     text-align:center;
     background:#5288DD63;
@@ -371,52 +513,77 @@ margin-left: 50px;
     padding: 5px;
 }
 
+/* ---------Fonderie Box (.fonderie_box)------------- */
+.fonderie_box {
+    display: grid;
+    grid-template-rows: 90% 10%;
+    grid-template-columns: auto;
+    max-width: 750px;
+    color: #fff;
+}
+.fonderie_box .fonderie_item_left img {
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
+}
+.mw-content-ltr .mw-parser-output .fonderie_box p {
+    margin: 0;
+}
 
-/* ---------MEAG Buttons------------- */
-.MEAG {
-    width:150px;
-    height:150px;
-    box-shadow: inset 0px 0px 25px 20px rgba(15, 15, 15, 0.75);
-    background-color: #eeeeee;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
-    background-image: -webkit-linear-gradient(top, #646464, #909090);
-    background-image: -moz-linear-gradient(top, #646464, #909090);
-    background-image: -ms-linear-gradient(top, #646464, #909090);
-    background-image: -o-linear-gradient(top, #646464, #909090);
-    background-image: linear-gradient(top, #646464, #909090);
-    border-width: 1px;
-    border-style: solid;
-    border-color:#4a4a4a;
-    border-radius: 0% 25% 0% 25%;
-    -webkit-border-radius: 0% 25% 0% 25%;
-    -moz-border-radius: 0% 25% 0% 25%;
-    overflow:hidden;
-    color: #ffa02d;
-    text-align: center;
-    text-shadow: 0 0 5px #ffa02d;
+.mw-parser-output {
+	overflow: hidden;
 }
-.MEAG:hover {
-    box-shadow: inset 0px 0px 25px 20px rgba(15, 15, 15, 0.75);
-    background-color: #dddddd;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #bbbbbb));
-    background-image: -webkit-linear-gradient(top, #FF6600, #000000);
-    background-image: -moz-linear-gradient(top, #FF6600, #000000);
-        background-image: -ms-linear-gradient(top, #FF6600, #000000);
-        background-image: -o-linear-gradient(top, #FF6600, #000000);
-    background-image: linear-gradient(top, #FF6600, #000000);
-    border-width: 1px;
-    border-style: solid;
-    border-color:#4a4a4a;
-    cursor: pointer;
-    text-shadow: 0 0 5px #ffa02d;
+
+.fonderie_box .fonderie_item_comp img {
+    max-width: 100%;
+    max-height: 40px;
 }
-.MEAG:active {
-    border: 1px solid #aaa;
-    border-bottom: 1px solid #888;
-    border-color:#4a4a4a;
-    -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
-    -moz-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
-    box-shadow: inset 8px 8px 25px 20px rgba(15, 15, 15, 0.75);
+.fonderie_box .fonderie_item {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-gap: 3%;
+    justify-items: center;
+    background-color: rgba(65,85,143,0.16);
+}
+.fonderie_box .fonderie_item_info {
+    display: grid;
+    margin: 1% 3%;
+}
+.fonderie_box .fonderie_item_comp {
+    display: grid;
+    grid-template-areas: "comp1 comp2"
+                         "comp3 comp4";
+}
+.fonderie_box .comp1 {
+    grid-area: comp1;
+}
+.fonderie_box .comp2 {
+    grid-area: comp2;
+}
+.fonderie_box .comp3 {
+    grid-area: comp3;
+}
+.fonderie_box .comp4 {
+    grid-area: comp4;
+}
+.fonderie_box .fonderie_item_right {
+    display: grid;
+}
+.fonderie_box .comp1, .comp2, .comp3, .comp4 {
+    display: grid;
+    grid-template-columns: 20% 60%;
+    align-items: center;
+}
+.fonderie_box .fonderie_trivia {
+    display: flex;
+    background-color: #808c91a1;
+}
+.fonderie_box .fonderie_trivia .cost {
+    margin: 0 2%;
+}
+.fonderie_box .fonderie_item_info .item_name {
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 
@@ -434,12 +601,8 @@ div.codex_box_container > div > a > img {
 .codex_box_container {
     height: 109px;
     width: 109px;
-    display:grid;
-    grid-template-rows: 65% 1fr;
-    grid-template-areas: "img"
-                        "text";
     position: relative;
-    background: rgba(38, 62, 81, 0.46);
+    background: rgba(38,62,81,0.46);
     border: 1px solid #67819c;
     text-align: center;
     margin-bottom: 4px;
@@ -448,21 +611,25 @@ div.codex_box_container > div > a > img {
     grid-area: img;
 }
 .codex_box_text {
-    display: grid;
-    align-items: center;
-    grid-area: text;
-    font-family:'Roboto';
-    background-color: rgba(36, 44, 70, 0.44);
-    text-transform:uppercase;
-    font-weight:bold;
-    font-size:80%;
-    line-height:1.5em;
-    color:white;
-    overflow:hidden;
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 4px 0;
+    font-family: 'Roboto';
+    background-color: rgba(36,44,70,0.44);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 80%;
+    line-height: 1.3em;
+    color: white;
 }
 .codex_box_text a {
-    text-decoration:none;
-    color:white;
+    text-decoration: none;
+    color: white;
+    padding: 0 3px;
+    white-space: break-spaces;
+    word-break: break-word;
 }
 .codexflower {
     background-color: rgba(47,56,66,0.23);
@@ -471,6 +638,13 @@ div.codex_box_container > div > a > img {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 1em;
+}
+
+/* ---------BaroCurrent - Modèle:BaroCurrent------------- */
+.baroCurrent .baroCurrentBox img{
+    width: 20%;
+    height: auto;
+    object-fit: contain;
 }
 
 
@@ -489,6 +663,7 @@ div.codex_box_container > div > a > img {
     transition: 0.3s;
     filter: brightness(150%);
 }
+
 
 
 /* ---------Alert Tabber------------- */
@@ -537,33 +712,37 @@ div.codex_box_container > div > a > img {
 
 
 /* ---------Switch Homepage------------- */
+.switch-box-container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
 .Switch-Box {
-    Display: grid;
-    grid-template-columns: repeat(5,125px);
-    grid-template-rows: repeat(5,auto);
-    column-gap: 0.2em;
-    row-gap: 0.05em;
+    margin: 5px;
 }
 .Switch-Box .Switcher {
-    height: 115px;
-    width: 115px;
+    width: 120px;
+    height: 120px;
     position: relative;
+    display: grid;
+    grid-template-areas: "box";
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     border: 5px solid #5288DD63;
-    display: grid;
-    justify-items: center;
 }
 .Switch-Box .Switcher .switch_img {
-position: absolute;
-top: 0;
+    position: absolute;
+    top: 0;
 }
 .Switch-Box .Switcher .Switch_link {
-position: absolute;
-bottom: 0;
-width: 100%;
-text-align: center;
-background-color: #012e5963;
-z-index: 2;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #012e5963;
+    z-index: 2;
+    font-size: 14px;
 }
 .Switch-Box .Switcher .Switch_link a {
 color: #fff;
@@ -573,7 +752,6 @@ color: #fff;
 }
 .Switch-Box .Switcher .Switcherimage, .Switch-Box .Switcher .Switcherimage2 {
     transition:0.3s;
-    position: absolute;
     top: 0;
 }
 .Switch-Box .Switcher:hover .Switcherimage, .Switch-Box .Switcher:hover .Switcherimage-overlap {
@@ -585,16 +763,17 @@ color: #fff;
 .Switch-Box .Switcher:hover .Switcherimage2 {
     opacity:1;
 }
-/* SPECIAL PLACEMENT */
-.switch-placement a img[alt="PlanetsButtonStill"] {
+/* ---SPECIAL PLACEMENT--- */
+/*.switch-placement a img[alt="PlanetsButtonStill"] {
     width: 115px;
     height: 109px;
+}*/
+.switch-placement img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
 }
-.Switch-Box img[data-image-key="PrimeBraton.png"], .Switch-Box img[data-image-key="Braton.png"], .Switch-Box img[data-image-key="Orokin_Reactor.png"], .Switch-Box img[data-image-key="Orokin_Catalyst.png"]  {
-    width: 100%;
-    height: 125px;
-    object-fit: none;
-}
+
 /* Switcher Effect in Switch Homepage Template*/ 
 .PolButton2 {
     height: 30px;
@@ -614,6 +793,7 @@ color: #fff;
     width: 106px;
     z-index:0;
 }
+
 .Switcherlink {
     position:absolute;
     top:84px;
@@ -631,14 +811,15 @@ color: #fff;
     text-decoration: none;
 }
 .Switcherimage, .Switcherimage-overlap {
-    position:absolute;
-    top:0px;
-    transition:0.3s;
-    -webkit-transition: 0.3s; 
-    -moz-transition: 0.3s; 
-    -o-transition: 0.3s; 
-    opacity:1;
-    z-index:1;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    opacity: 1;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    grid-area: box;
 }
 .Switcherimage2 {
     position:absolute;
@@ -670,7 +851,6 @@ color: #fff;
 .syndicate_container .flag {
     position:relative;
     height:95px; 
-    width:60px;
     display:inline-block;
     margin:0 2px;
 }
@@ -696,19 +876,36 @@ color: #fff;
 
 /* ---------Tooltip------------- */
 .Tooltip {
-    background-color: #ddd0;
     border: 1px solid #313234;
     border-spacing: 0;
     border-radius: 4px;
     font-size: 11px;
-    max-width: 200px;
     color: #fff;
+    max-width: 200px;
+}
+.Tooltip .Sub {
+    background-color: rgba(65,85,143,0.16);
+    border: 3px solid rgba(49,50,52,0.3);
+    border-spacing: 0;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    width: auto;
+    padding: 0;
 }
 .Tooltip.container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "Left Right";
     max-width: 100%;
+}
+.Tooltip_imgbox {
+    position: relative;
+    background-color: rgb(77 86 93 / 61%);
+    display: block;
+    max-width: 200px;
+    height: 170px;
+    overflow: hidden;
 }
 .Tooltip.leftCol {
     grid-area: Left;
@@ -724,21 +921,13 @@ color: #fff;
     margin: 0;
     padding: 0;
 }
-.Tooltip_imgbox {
-    position: relative;
-    background-color: rgba(77,86,93,0.9);
-    display: block;
-    max-width: 200px;
-    height: 170px;
-    overflow: hidden;
-}
 .Tooltip img {
     max-width: 200px;
     max-height: 170px;
     object-fit: contain;
 }
 .Tooltip .Tooltip_bg {
-    background-color: #0D1B1C;
+    background-color: #061d40;
 }
 .Tooltip .HeadText {
     color:rgb(175, 216, 255);
@@ -758,7 +947,7 @@ p.HeadText:nth-child(3),p.HeadText:nth-child(7) {
     margin-top: 2px;
 }
 body .tooltips-init-complete {
-    word-break: break-all;
+    word-break: break-word;
 }
 
 
@@ -789,7 +978,7 @@ table.voidtable td {
     border:1px solid orange;
     background:#061D40D6;
     padding:5px;
-    font-family:Open Sans;
+    font-family: 'Open Sans';
 }
 .voidbutton:hover {
     background:transparent;
@@ -799,11 +988,12 @@ table.voidtable td {
 
 /* ---------Ability table------------- */
 .abilityTable {
-    background-color: #061D40D6;
+    /*background-color: #061D40D6;*/
+    background-color: #38445b;
     color: white;
 }
 .abilityTable > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(3) {
-    display: flex;
+    display: block;
 }
 table.foundrytable .mw-collapsible-content {
     min-width: 100%;
@@ -896,34 +1086,26 @@ table.foundrytable .mw-collapsible-content table {
 .tabber-light ul.tabbernav li a:visited {
     color: #2a2a31;
 }
-.tabber-dark ul.tabbernav li a:hover, .tabber-light ul.tabbernav li a:hover {
-    padding-top: 8px;
-    padding-bottom: 6px;
-    border-bottom: #bcbcc5 solid 2px;
-}
 .tabber-light ul.tabbernav li a:hover {
     border-bottom: #061D40D6 solid 2px;
-}
-.tabber-dark ul.tabbernav li.tabberactive a, .tabber-light ul.tabbernav li.tabberactive a {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    border-bottom: none;
-    color: #2a2a31;
-    background-color: #061D40D6;
 }
 .tabber-light ul.tabbernav li.tabberactive a {
     color: white;
     background-color: #2a2a31;
 }
 .tabber-dark ul.tabbernav li.tabberactive a:hover, .tabber-light ul.tabbernav li.tabberactive a:hover {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
     border-bottom: none;
-    color: #2a2a31;
     background-color: #bcbcc5;
 }
 .tabber-light ul.tabbernav li.tabberactive a:hover {
     color: white;
+    background-color: #061D40D6;
+}
+.tabber-dark ul.tabbernav li.tabberactive a, .tabber-light ul.tabbernav li.tabberactive a {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border-bottom: none;
+    color: #2a2a31;
     background-color: #061D40D6;
 }
 .tabber-dark .tabberlive, .tabber-light .tabberlive {
@@ -933,36 +1115,51 @@ table.foundrytable .mw-collapsible-content table {
     border: none;
     padding: 0 7px;
 }
+.abilityTable .tabbernav .tabberactive  {
+    color: black;
+    border: none;
+    background-color: white;
+}
+div.tabbertab-borderless div.tabber.tabberlive ul.tabbernav li.tabberactive a {
+    border-bottom: none;
+    padding: 5px;
+    margin: 0;
+}
+div .tabbernav li a:hover {
+    text-decoration: none;
+}
+div ul.tabbernav li.tabberactive a:hover {
+    border-bottom: none;
+    text-decoration: none;
+}
 
 
 /* ---------Custom Mod table------------- */
-.emodtable {
-    width: 55%;
+.emodtable th, .bigmodtable th, .Arcane-table td {
+    padding: 2px 5px;
+    min-width: 50px;
 }
 .bigmodtable {
     width: 100%;
 }
-.emodtable td, .bigmodtable td, .wikitable td {
+.emodtable, .emodlist, .bigmodtable, .wikitable, .Arcane-table {
+    text-align: center;
+    border-collapse: collapse;
+}
+.emodtable td, .bigmodtable td, .wikitable td, .Arcane-table td {
     background-color: #353535;
     background-color: rgba(65,85,143,0.16);
     border: 1px solid black;
 }
-.emodtable th, .bigmodtable th, .wikitable th {
+.emodtable th, .bigmodtable th, .wikitable th, .Arcane-table th, .ooui-theme-fandomooui .wikitable>*>tr>th {
     background-color: #5288DD63;
     border: 1px solid black;
     color: white;
-    width: 10%;
-    /* width: 65px; */ /*OLD DATA*/ 
 }
-.emodtable th a, .bigmodtable th a, .wikitable th a {
+.emodtable th a, .bigmodtable th a, .wikitable th a, .Arcane-table th a {
     color: white;
 }
-.emodtable, .emodlist, .bigmodtable, .wikitable {
-    text-align: center;
-    margin-left:auto; 
-    margin-right:auto;
-    border-collapse: collapse;
-}
+
 
 
 /* ---------Warframe Nav Box------------- */
@@ -984,7 +1181,6 @@ table.foundrytable .mw-collapsible-content table {
     background: rgba(0,0,0,0.6);
     padding: 0 2px;
     line-height: 15px;
-    width: 90%;
 }
 .WarframeNavBoxImage {
     position: absolute;
@@ -996,7 +1192,6 @@ table.foundrytable .mw-collapsible-content table {
     -o-transition: 0.2s;
     opacity: 1;
     z-index: 1;
-    width: 100%;
 }
 .WarframeNavBox:hover .WarframeNavBoxImage {
     opacity: 0;
@@ -1012,7 +1207,6 @@ table.foundrytable .mw-collapsible-content table {
     -o-transition: 0.2s;
     opacity: 0;
     z-index: 2;
-    width: 100%;
 }
 .WarframeNavBox:hover .WarframeNavBoxImage2 {
     opacity: 1;
@@ -1021,13 +1215,11 @@ table.foundrytable .mw-collapsible-content table {
 
 /* ---------Portable Infobox - styles for new class names------------- */
 .portable-infobox {
-    width: 270px;
+    max-width: 100%;
     background-color: rgba(65,85,143,0.16);
-    border: 1px solid #061D40;
+    border: none;
     color: white;
-    float: right;
     font-size: 11px;
-    /*padding: 0 0 5px 0;*/
 }
 .portable-infobox .pi-title {
    font-weight: bold;
@@ -1042,7 +1234,6 @@ ul.pi-image-collection-tabs li.current {
    background: 
    #324666;
    font-weight: bold;
-   padding: 0px 7px;
 }
 .portable-infobox .item-type-key-val {
    box-sizing: border-box;
@@ -1061,9 +1252,12 @@ ul.pi-image-collection-tabs li.current {
 .tabberlive .tabbertab .portable-infobox h3.pi-data-label {
    display: table-cell; /* needed for proper handling of tabber */
 }
+.portable-infobox h3.pi-data-label {
+   display: table-cell; 
+}
 .pi-image {
    text-align: center;
-   background-image: url(https://vignette.wikia.nocookie.net/warframe/images/a/a7/Codex_wallpaper.jpg/revision/latest?cb=20200112094224&format=original&path-prefix=fr);
+   /*background-image: url(https://vignette.wikia.nocookie.net/warframe/images/a/a7/Codex_wallpaper.jpg/revision/latest?cb=20200112094224&format=original&path-prefix=fr);*/
    background-position: center;
    background-size: cover;
 }
@@ -1071,10 +1265,11 @@ ul.pi-image-collection-tabs li.current {
 
 /* ---------Ambox------------- */
 .ambox {
-    font-size: 95%;
+    font-size: 1em;
     width: 80%;
     padding: 25px;
     margin: 0 auto;
+    border: 1px solid #4d4d4d;
     border-left: 10px solid #1e90ff;
     border-collapse: collapse;
 }
@@ -1094,7 +1289,7 @@ ul.pi-image-collection-tabs li.current {
     border-left: 10px solid #9932cc;    /* Purple (merge) */
 }
 .ambox-gray {
-    border-left: 10px solid #4d4d4d;    /* Gray (protection) */
+    border-left: 10px solid #777777;
 }
 .ambox-green {
     border-left: 10px solid #228b22;    /* Green */
@@ -1150,7 +1345,9 @@ ul.pi-image-collection-tabs li.current {
 .tooltip-contents {
     background: rgba(0, 0, 0, 0.80);
 }
-
+div.mainpage-box-discord.glow_hover_element span.plainlinks a.external.text {
+	text-decoration:none;
+}
 
 /* ---------Portable Infobox------------- */
 .portable-infobox .pi-data-label {
@@ -1172,6 +1369,10 @@ ul.pi-image-collection-tabs li.current {
     min-height: 24px;*/
     padding: 0;
     padding-top: 1px;
+}
+.portable-infobox .pi-item.pi-image a img { /*Règle la taille de l'image du portable-infobox pour qu'elle soit contenue*/
+    max-width: 100%;
+    object-fit: contain;
 }
 .portable-infobox .pi-header {
     background-color: #5288DD63;
@@ -1311,14 +1512,27 @@ ul.pi-image-collection-tabs li.current {
     border:none; /* contour des onglets inactifs */
     background-color:#EDF5FF; /* fond de l'onglet inactif */
 }
+
 /* Personnalisation de TabView */
+.mw-parser-output ol.tabs li.selected a, .mw-parser-output ul.tabs li.selected a {
+    background-color: #081f42;
+    
+}
+.mw-parser-output ol.tabs li a, .mw-parser-output ul.tabs li a, .mw-parser-output ol.tabs li.selected a, .mw-parser-output ul.tabs li.selected a, .mw-parser-output ol.tabs, .mw-parser-output ul.tabs {
+    border: none;
+}
+.mw-parser-output a:active, .mw-parser-output a:hover {
+    text-decoration: none;
+}
 ul.tabs {
+    display: flex;
+    justify-content: center;
     border:none; /* bordure autour des onglets */
-    background-color:#474747;
-    text-align:center;
-    color:black;
-    font-weight:normal;
-    text-transform:uppercase;
+    background-color: #5288DD63;
+    text-align: center;
+    color: #fff;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 /** Onglet actif **/
 ul.tabs li.selected a {
@@ -1331,25 +1545,24 @@ ul.tabs li.selected a {
 ul.tabs li a {
     color:white; /* couleur du texte de l'onglet inactif */
     border:none; /* contour des onglets inactifs */
-    background-color:#474747; /* fond de l'onglet inactif */
+    background-color:#041c2e; /* fond de l'onglet inactif */
 }
 /** Contenu de l'onglet actif **/
 div.tabBody.selected {
     color: white;
-    border: 2px solid #474747;
-    border-top: none;
+    border: 1px solid #061D40;
 }
 
 
 /* ---------Infobox horizontal------------- */
 .infobox-hori {
-     background-color: rgba(65,85,143,0.16);
-     border: 1px solid #5288DD63;
-     color: white;
-     float: left;
-     font-size: 12px;
-     margin: 0px 0px 10px 2em;
-     width: 660px;
+    background-color: rgba(65,85,143,0.16);
+    border: 1px solid #5288DD63;
+    color: white;
+    float: none;
+    font-size: 12px;
+    margin: 1% auto;
+    width: 660px;
 }
 .infobox-hori .name {
      background: #061d40a3;
@@ -1382,7 +1595,7 @@ div.tabBody.selected {
 .infobox-hori .right {
     padding: 1px 5px;
     text-align: left;
-    width: 110px;
+    width: 140px;
     background-color: #3F73C614;
 }
 .infobox-hori .statut {
@@ -1402,10 +1615,12 @@ div.tabBody.selected {
 /*-------- Personnalisation des onglets Tabber -------*/
 /** Personnalisation générale des onglets (navigation) **/
 ul.tabbernav {
-    border: none; /* bordure autour des onglets */
-    background-color: rgb(19, 55, 111);
-    padding: 0px; /*8px*/
+    /*display: flex;*/
+    justify-content: center;
+    padding: 0px;
+    border: none;
     text-align: center;
+    background-color: #081f42;
     color: black;
     font-weight: normal;
     text-transform: uppercase;
@@ -1421,15 +1636,16 @@ ul.tabbernav li a:hover {
     padding-bottom: 6px;
     border-bottom: #FFF solid 2px;
 }
-.tabbertab-borderless .tabber .tabbertab {
-    padding: 10px;
+.tabbertab-borderless {
+	border: 0;
 }
+
 /** Personnalisation des onglets inactifs **/
 ul.tabbernav li:not(.tabberactive) a {
     color: white; /* couleur du texte de l'onglet inactif */
-    padding: 8px;
+    padding: 5px;
     border: none; /* contour des onglets inactifs */
-    background-color: rgb(19, 55, 111); /* fond de l'onglet inactif */
+    background-color: #081f42; /* fond de l'onglet inactif */
 }
 /** Personnalisation des onglets actifs **/
 ul.tabbernav li.tabberactive a {
@@ -1442,6 +1658,7 @@ ul.tabbernav li.tabberactive a {
 /** Tabber / Tabberlive **/
 .tabber .tabbertab {
     border: none; 
+    margin: 1% 0;
 }
 .tabberlive {
     width: 100%; /* longueur du tabber */
@@ -1494,7 +1711,7 @@ table.listtable {
     text-align:center;
 }
 table.listtable th {
-    background-color: #061D40D6;
+    background-color: #5288DD63; /*#3E557C*/
 }
 
 
@@ -1502,7 +1719,7 @@ table.listtable th {
 table.foundrytable {
     color:white;
     text-align:center;
-    max-width:calc(100% - 305px);
+    max-width: calc(100% - 455px);
 }
 table.article-table {
     color:white;
@@ -1510,8 +1727,9 @@ table.article-table {
     border-collapse: collapse;
     background: none !important;
 }
-table.foundrytable th, table.article-table th {
-    background-color: #061d40;
+
+.ooui-theme-fandomooui .article-table th, .ooui-theme-fandomooui table.foundrytable th {
+    background-color: #5288DD63;
     color: white;
 }
 table.foundrytable td, table.article-table td {
@@ -1526,8 +1744,18 @@ table.foundrytable th a, table.article-table th a{
 .article-table, .WikiaTable {
     margin: 0;
 }
+.article-table, .wikitable {
+    border: none;
+}
+.ooui-theme-fandomooui table.article-table tr:first-of-type th {
+    border: none;
+}
 table.listtable tr td, table.foundrytable tr td {
     background-color: rgba(65,85,143,0.16);
+}
+
+.client-js .sortable:not(.jquery-tablesorter) > thead > :last-of-type > th:not(.unsortable), .jquery-tablesorter th.headerSort {
+	padding-right: 12px;
 }
 
 
@@ -1589,7 +1817,7 @@ table.listtable tr td, table.foundrytable tr td {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background: #5288DD63;
+    background: #3D5273;
     padding-top: 11px;
     padding-left: 22px;
     height: 54px;
@@ -1611,7 +1839,7 @@ table.listtable tr td, table.foundrytable tr td {
     right: -20px;
     height: 100%; 
     width: 50px;
-    background: #213657;
+    background: #3D5273;
     transform: skew(30deg);
 }
 .mainpage-header-sub {
@@ -1626,6 +1854,11 @@ table.listtable tr td, table.foundrytable tr td {
     color: #5288DD;
     font-family:'Open Sans';
     font-weight:700;
+}
+.mainpage-header-news a {
+    font-family: 'Open Sans';
+    font-size: 25px;
+    font-weight: 800;
 }
 .mainpage-box-blogs .WikiaBlogListing {
     border: 1px solid #5288DD63;
@@ -1668,39 +1901,27 @@ table.listtable tr td, table.foundrytable tr td {
 
 
 /* ---------Custom Tabber style------------- */
-.WikiaArticle .tabbertab-borderless ul.tabbernav,.WikiaArticle .tabbertab-bordered ul.tabbernav {
-    background-color: #081f42;
-    padding: 8px;
-    border: none;
-    text-align: center;
-    color: #FFF;
-    font-weight:normal;
-    text-transform:uppercase;
-}
-.WikiaArticle .tabbertab-borderless ul.tabbernav li a, .WikiaArticle .tabbertab-bordered ul.tabbernav li a {
+.tabbertab-bordered ul.tabbernav li a {
     border: none;
     background: none;
     text-decoration: none;
-    color: white; 
 }
-.WikiaArticle .tabbertab-borderless ul.tabbernav li a:link, .WikiaArticle .tabbertab-bordered ul.tabbernav li a:link {
-    color: white; 
+ul.tabbernav li.tabberactive {
+    background-color: #fff;
+    color: black;
 }
-.WikiaArticle .tabbertab-borderless ul.tabbernav li a:hover, .WikiaArticle .tabbertab-bordered ul.tabbernav li a:hover {
-    background-color:transparent;
-}
-.WikiaArticle .tabbertab-borderless ul.tabbernav li.tabberactive a, .WikiaArticle .tabbertab-bordered ul.tabbernav li.tabberactive a {
+ul.tabbernav li.tabberactive a {
     border-bottom: none;
-    /*background-color: #517783;*/
-    padding: 8px;
-    color: white;
+    padding: 5px;
+}
+.tabber-dark ul.tabbernav li.tabberactive a {
+    background-color: unset;
 }
 .WikiaArticle .tabbertab-borderless .tabberlive, .WikiaArticle .tabbertab-bordered .tabberlive {
     width: 100%;
 }
 .WikiaArticle .tabbertab-borderless .tabberlive .tabbertab {
     border: none;
-    padding: 0px;
 }
 .WikiaArticle .tabbertab-bordered .tabberlive .tabbertab {
     border: 1px solid #061D40D6;
@@ -1726,8 +1947,9 @@ table.listtable tr td, table.foundrytable tr td {
     border: 0px;
 }
 .portable-infobox .pi-data .pi-data-value:only-child {
-    /*background-color:rgba(56,45,20,0.75);*/
-    text-align: center;
+    /*background-color:rgba(56,45,20,0.75);
+    text-align: center;*/
+    text-align: left;
     width: 100%;
 }
 
@@ -2010,21 +2232,24 @@ table.listtable tr td, table.foundrytable tr td {
 
 
 /* ---------WikiTable------------- */
-.wikitable tr:first-child {
-    background-color: #5288DD63;
-    color: white;
-    border: 1px solid black;
-}
 .wikitable_first_reset tr:first-child {
     background-color: none;
 }
 .wikitable {
-    background:rgba(65,85,143,0.16);
+    background:rgba(65,85,143,0.16) !important;
+    border: 1px solid #012b53 !important;
+    border-color: #061d40 !important; /*WIKI FORCE AVEC UNE REGLE CHIANTE*/
 }
 .wikitable > tr > th, table.wikitable > tr > td, table.wikitable > * > tr > th, table.wikitable > * > tr > td {
     border: 1px solid #061d40;
 }
-
+.ooui-theme-fandom .mw-datatable > tr > th, .ooui-theme-fandom .mw-datatable > * > tr > th, .ooui-theme-fandom .mw-json > tr > th, .ooui-theme-fandom .mw-json > * > tr > th, .ooui-theme-fandom .wikitable > tr > th, .ooui-theme-fandom .wikitable > * > tr > th {
+    background-color: #081f42;
+    border: 1px solid #061d40;
+}
+.ooui-theme-fandom .mw-datatable > tr > td, .ooui-theme-fandom .mw-datatable > * > tr > td, .ooui-theme-fandom .mw-json > tr > td, .ooui-theme-fandom .mw-json > * > tr > td, .ooui-theme-fandom .wikitable > tr > td, .ooui-theme-fandom .wikitable > * > tr > td {
+    border: 1px solid #012b53; 
+}
 
 /* ---------TennoScript------------- */
 .tennoscript_S {
@@ -2088,6 +2313,24 @@ table.listtable tr td, table.foundrytable tr td {
 .mainpage-box-recentactivity .mw-changeslist-separator:empty:before {
 	content: " » ";
 }
+
+
+/* ---------Postures / Combo------------- */
+.posture-legend-table caption {
+    background-color: var(--main-bg-color);
+    padding: 2px;
+}
+table.posture-legend-table {
+    min-width: 45%;
+    margin: 1%;
+}
+.posture-toggle {
+    display: inline-flex;
+    background-color: var(--main-bg-color);
+    padding: 1%;
+    border-radius: 6px;
+}
+
 
 
 /* ---------==========ICONS==========------------- */
@@ -2165,13 +2408,25 @@ table.listtable tr td, table.foundrytable tr td {
         display: none;
     }
 }
-@media only screen and (max-width: 1595px) {
+@media only screen and (max-width: 1596px) {
     .codex_page_container {
         grid-template-columns: repeat(6,1fr);
     }
+    .homepage-nav {
+        margin: 21% 0 2% 4%;
+    }
 }
- /* ---------- OTHERS - OTHERS - OTHERS ---------- */
 
+ /* ---------- OTHERS - OTHERS - OTHERS ---------- */
+/*--formules LaTeX (Armure ect)--*/
+.mwe-math-fallback-image-inline,
+.mwe-math-fallback-image-display {
+    filter: hue-rotate(180deg) invert(1);
+}
+
+div#mw-content-text.mw-content-ltr div.mw-parser-output div.tabbertab-borderless.tabber-no-margin div#tabber-fbdfcd00cb0bb94bebed202aa60ee2e5.tabber.tabberlive div.tabbertab table.article-table {
+    margin: 0;
+}
 /*--Cursor--*/
 body {
     cursor: url(https://images.wikia.nocookie.net/__cb20150224072054/warframe/fr/images/e/eb/Warframe_cursor.png), default;
@@ -2181,6 +2436,14 @@ a:link {
     cursor: url(https://images.wikia.nocookie.net/__cb20150224072917/warframe/fr/images/b/bf/Warframe_cursor_lien.png), pointer;
 }
 
+/*--Active Page Link (Affichage du lien dans une Nav sur la page actuellement visionnée)--*/
+.mw-selflink.selflink {
+    font-weight: bold;
+    color: #7ba1e1;
+}
+.mw-selflink.selflink:hover {
+    text-decoration: none;
+}
 
  /* ---------- COMMENTS / UNUSED ---------- */
 
@@ -2228,16 +2491,17 @@ a:link {
 	display: none;
 }
 .WikiaPage .page-header__title {
-    font-family: 'Michroma', serif;
+    font-family: "Michroma", serif;
 }
 .WikiaPage h2 {
     font-size: 28px;
     line-height: 30px;
+    margin-top: 15px;
 }
 .WikiaPage h3 {
     font-size: 22px;
     line-height: 24px;
-	margin-top: 30px;
+	margin-top: 20px;
 }
 .WikiaArticle h3 .mw-headline {
     font-weight: bold;
@@ -2250,15 +2514,37 @@ a:link {
 }
 .ooui-theme-fandom .article-table th, .ooui-theme-fandom .WikiaTable th {
 	background: #061d40;
+	text-align: center;
 }
+
+
+/* ANCIENNE REGLE - OLD RULE
 .ooui-theme-fandom .article-table th, .ooui-theme-fandom .article-table td, .ooui-theme-fandom .WikiaTable th, .ooui-theme-fandom .WikiaTable td {
-	border-bottom: 1px #012b53 solid;
+	border: 1px #012b53 solid;
 }
+*/
+.ooui-theme-fandomooui .article-table td, .ooui-theme-fandomooui .article-table th, .ooui-theme-fandomooui .WikiaTable td, .ooui-theme-fandomooui .WikiaTable th {
+    border: 1px solid #5288DD63;
+}
+
+
+table.article-table tr:last-of-type td {
+    border-bottom: none;
+}
+
 .mobile-wiki .warframevisualnav {
 	display: none;
 }
 .WikiaMainContent h2 {
 	border-bottom: 1px solid #ffffff40;
+}
+
+/* -------------------------- Page : Contribution -------------------------- */
+.mw-contributions-table > :nth-child(5) {
+	display: block;
+}
+.mw-contributions-table {
+	width: 500px;
 }
 
 
@@ -2290,18 +2576,17 @@ body.background-dynamic.skin-oasis::after {
 
 
 /* -- */
+
+
 .mw-parser-output a.external::after {
     display: none;
     width: 0px;
     mask: "";
 }
-.tabber.tabberlive .tabbertab p a.external.text span.button {
+.tabber.tabberlive .tabbertab p a.external.text span.button, div.mw-parser-output p a.external.text span.button {
     background-color: #294067 !important;
     color: white !important;
     padding: 3px 10px !important;
-}
-.WikiaPage h2 {
-    margin-top: 30px;
 }
 .CategorySelect.articlePage {
     background: none;
@@ -2324,7 +2609,7 @@ body.background-dynamic.skin-oasis::after {
 }
 .toc .toctitle {
     padding: 3px 9px;
-    background: #012e59;
+    background: #38445b;
 }
 .toclimit-2 .toclevel-2 , .toclimit-3 .toclevel-3 , .toclimit-4 .toclevel-4 , .toclimit-5 .toclevel-5 ,.toclimit-6 .toclevel-6 , .toclimit-7 .toclevel-7 {
     display:none;
@@ -2334,3 +2619,163 @@ body.background-dynamic.skin-oasis::after {
     color: #5288dd;
 }
 /* -- */
+
+/* -------------------------- Widget Homepage -------------------------- */
+/* ---------- Timers ---------- */
+.mainpage-box-timers {
+    margin-bottom: 15px;
+}
+.mainpage-box-timers .timer-item {
+    min-height: 49px;
+    border-radius: 4px;
+    padding: 1px 2px;
+    margin: 5px 2px;
+    line-height: 22px;
+}
+
+.activity-summary {
+	display: none;
+}
+
+
+/* =================================== NOUVEAU THEME FANDOM ======================================= */
+/* Tabber */
+.wds-tabber {
+    border: 1px solid #38445b;
+    border-radius: 8px;
+}
+.tabber .wds-tabs__wrapper {
+    display: flex;
+    margin-bottom: 10px;
+    background: #5288DD63; /*#3E557C*/
+}
+.page-content ul.wds-tabs {
+    margin: auto;
+}
+.tabber .wds-tabs__tab.wds-is-current {
+    background: #21304a;
+    color: white;
+    box-shadow: none;
+}
+.tabber .wds-tab__content.wds-is-current {
+	padding: 10px;
+}
+.tabber .wds-tabs__wrapper.with-bottom-border {
+	border: 0;
+}
+
+.activity-tabs {
+	display: flex;
+	border-bottom: 1px solid #555;
+} 
+
+/* Bouton Modifier */
+.mw-editsection a::after {
+    content: "Modifier";
+    color: #5288dd;
+    margin: 6px;
+    vertical-align: text-top;
+}
+.mw-editsection a:hover::after {
+	color: #a7c2ed
+}
+
+/* Widget droite */
+.right-rail-wrapper {
+	background: #2f2f2f;
+}
+.page__right-rail p, 
+.page__right-rail section,
+.rail-module {
+	background: transparent;
+}
+.rail-module h2.has-icon {
+    width: 95%;
+    background: #5288DD63; /*#3E557C*/
+    padding: 10px 15px;
+}
+.module.AchievementsModule.UserProfileAchievementsModule.rail-module {
+    background: transparent;
+}
+
+/* Lien */
+a:active, a:focus, a:hover {
+    text-decoration: none;
+}
+
+/* Pre */
+.page-content pre {
+    background-color: #151515;
+}
+
+/* Lien rouge */
+a.new {
+    color: #ff0723 !important;
+}
+
+/* Bouton Modifier */
+#ca-edit {
+    background: #5288DD63; /*#3E557C*/
+    color: white;
+    margin: 0 10px;
+}
+#ca-edit:hover {
+    background: #466599;
+}
+
+#p-views .wds-dropdown {
+	background: #5288DD63; /*#3E557C*/
+    color: white;
+    border-radius: 300px;
+    margin: 0;
+}
+#p-views .wds-dropdown .wds-button {
+	margin: 0;
+}
+
+.page-header__action-button::before {
+	display: none;
+}
+
+
+/* Rôles dans commentaires */
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Xhell96"]::after {
+    content: "Fondateur";
+    display: block;
+    color: #f2bb15;
+    margin: -10px 0;
+    font-size: 10px;
+}
+
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Zengrof"]::after,
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Franck054"]::after,
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Wikirion"]::after,
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Redgard archeos"]::after,
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Beuargh"]::after {
+    content: "Bureaucrate";
+    display: block;
+    color: #21d7bd;
+    margin: -10px 0;
+    font-size: 10px;
+}
+
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Killer pingoui"]::after,
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Hasen1"]::after,
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Noxamas"]::after,
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:ADDRMeridan"]::after,
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Yazuh"]::after {
+    content: "Admin";
+    display: block;
+    color: #1297e6;
+    margin: -10px 0;
+    font-size: 10px;
+}
+
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Kenexey"]::after,
+.EntityHeader_name__2oRXg[href="/fr/wiki/Utilisateur:Blade Wolf 16"]::after {
+	content: "Modérateur";
+    display: block;
+    color: #af21d7;
+    margin: -10px 0;
+    font-size: 10px;
+}

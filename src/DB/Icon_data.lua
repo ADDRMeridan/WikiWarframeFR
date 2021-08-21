@@ -14,10 +14,16 @@ local IconData = {
             icon = "Adaptateur Exilus pour Arme.png",
             link = "Adaptateur Exilus pour Arme"
         },
-        ["Adaptateur Exilus Pour Arme"] = {
-            icon = "Adaptateur Exilus pour Arme.png",
-            link = "Adaptateur Exilus pour Arme"
-        }, -- requis pour tooltip Relique
+        ["Adaptateur d'Arcane Principal"] = {
+            icon = "Adaptateur d'Arcane Principal.png",
+            link = "Adaptateur d'Arcane Principal"
+        },
+        ["Adaptateur d'Arcane Secondaire"] = {
+            icon = "Adaptateur d'Arcane Secondaire.png",
+            link = "Adaptateur d'Arcane Secondaire"
+        },
+        
+        -- requis pour tooltip Relique
         ["Affinity"] = {icon = "Orb_affinite.png", link = "Ramassables#Orbes"},
         ["Affinité"] = {icon = "Orb_affinite.png", link = "Ramassables#Orbes"},
         ["Agilité Arcane"] = {
@@ -90,6 +96,7 @@ local IconData = {
         ["Crosse"] = {icon = "Crosse.png"},
         ["Culasse"] = {icon = "Culasse.png"},
         -- D
+        
         ["Décoration Couronne Granum"] = {
             icon = "Couronne Granum.png",
             link = "Orbiteur"
@@ -117,10 +124,6 @@ local IconData = {
             link = "Éruption Arcane"
         },
         ["Étoile Ayatan Ambre"] = {
-            icon = "OroFusexOrnamentB.png",
-            link = "Sculpture Ayatan#Étoiles"
-        },
-        ["ÉToile Ayatan Ambre"] = {
             icon = "OroFusexOrnamentB.png",
             link = "Sculpture Ayatan#Étoiles"
         }, -- Requis pour tooltip Relique
@@ -178,6 +181,7 @@ local IconData = {
             icon = "HarnaisArchwing.png",
             link = "Schéma Harnais Archwing"
         },
+        
         -- I
         ["Influence"] = {icon = "ReputationBlancx64.png", link = "Influence"},
         ["Inhérence"] = {icon = "Inhérences.png", link = "Inhérence"},
@@ -206,6 +210,10 @@ local IconData = {
         ["Jeton d'Interlude III"] = {
             icon = "Jeton_d'Interlude III.png",
             link = "Jeton d'Interlude III"
+        },
+        ["Jeton de la Sélection de Nora"] = {
+            icon = "Jeton de la Sélection de Nora.png",
+            link = "Jeton de la Sélection de Nora"
         },
         -- K
         -- L
@@ -725,6 +733,7 @@ local IconData = {
         ["Ember"] = {icon = "Ember_Prime_Icon.png", link = "Ember/Prime"},
         ["Equinox"] = {icon = "EquinoxPrimeIcon.png", link = "Equinox/Prime"},
         ["Frost"] = {icon = "FrostPrimecropped.png", link = "Frost/Prime"},
+        ["Gara"] = {icon = "Gara Prime.png", link = "Gara/Prime"},
         ["Hydroid"] = {icon = "Hydroid_Prime_Icon.png", link = "Hydroid/Prime"},
         ["Inaros"] = {icon = " Inaros PrimeIcon272.png", link = "Inaros/Prime"},
         ["Ivara"] = {icon = " Ivara PrimeIcon272.png", link = "Ivara/Prime"},
@@ -734,6 +743,7 @@ local IconData = {
         ["Mesa"] = {icon = "MesaPrime.png", link = "Mesa/Prime"},
         ["Mirage"] = {icon = "MiragePrime-0.png", link = "Mirage/Prime"},
         ["Nekros"] = {icon = "NekrosPrime.png", link = "Nekros/Prime"},
+        ["Nezha"] = {icon = "Nezha Prime.png", link = "Nezha/Prime"},
         ["Nova"] = {icon = "NovaPrime.png", link = "Nova/Prime"},
         ["Nyx"] = {icon = "NyxPrime.png", link = "Nyx/Prime"},
         ["Oberon"] = {icon = "Oberon_Prime_Icon.png", link = "Oberon/Prime"},
@@ -787,6 +797,7 @@ local IconData = {
         },
         ["Akvasto"] = {icon = "AkvastoPrime.png", link = "Akvasto Prime"},
         ["Ankyros"] = {icon = "DEPrimeAnkyros.png", link = "Ankyros Prime"},
+        ["Astilla"] = {icon = "AstillaPrime.png", link = "Astilla Prime"},
         ["Baza"] = {icon = "Baza Prime.png", link = "Baza Prime"},
         ["Bo"] = {icon = "PrimeBo.png", link = "Bo Prime"},
         ["Boar"] = {icon = "Boar Prime.png", link = "Boar Prime"},
@@ -851,6 +862,7 @@ local IconData = {
         ["Spira"] = {icon = "SpiraPrime.png", link = "Spira Prime"},
         ["Stradavar"] = {icon = "Stradavar_Prime.png", link = "Stradavar Prime"},
         ["Sybaris"] = {icon = "Sybaris_Prime.png", link = "Sybaris Prime"},
+        ["Tenora"] = {icon = "Tenora Prime.png", link = "Tenora Prime"},
         ["Tiberon"] = {icon = "TiberonPrime.png", link = "Tiberon Prime"},
         ["Tigris"] = {icon = "PrimeTigris342.png", link = "Tigris Prime"},
         ["Tipedo"] = {icon = "Tipedo_Prime.png", link = "Tipedo Prime"},
@@ -858,6 +870,7 @@ local IconData = {
         ["Vasto"] = {icon = "PrimeVasto.png", link = "Vasto Prime"},
         ["Vectis"] = {icon = "VectisPrime.png", link = "Vectis Prime"},
         ["Venka"] = {icon = "Venka_Prime.png", link = "Venka Prime"},
+        ["Volnus"] = {icon = "VolnusPrime.png", link = "Volnus Prime"},
         ["Zakti"] = {icon = "Zakti Prime.png", link = "Zakti Prime"},
         ["Zhuge"] = {icon = "Zhuge Prime.png", link = "Zhuge Prime"},
 
@@ -1011,6 +1024,7 @@ local IconData = {
             icon = "AlloyPlate64.png",
             link = "Plaque d'Alliage"
         },
+        ["Plaque Ticor"] = {icon = "Plaque Ticor.png", link = "Plaque Ticor"},
         ["Point de Jugement"] = {
             icon = "KelaEventBadgeWhite.png",
             link = "Kela De Thaym#Points de Jugement"
@@ -1032,6 +1046,23 @@ local IconData = {
         -- A TRIER
 
         ["Chaine Prime"] = {icon = "Crosse Prime.png", link = ""},
+        ["Lentille Basique"] = {
+            icon = "FocusLens1.png",
+            link = "Lentille Basique"
+        },
+        ["Lentille Supérieure"] = {
+            icon = "FocusLens2.png",
+            link = "Lentille Supérieure"
+        },
+        ["Lentille Eidolon"] = {
+            icon = "EidolonLens.png",
+            link = "Lentille Eidolon"
+        },
+        ["Lentille Lua"] = {
+            icon = "Lentille Lua.png",
+            link = "Lentille Lua"
+        },
+        
         ["Lentille Focus 1"] = {
             icon = "FocusLens1.png",
             link = "Lentilles de Focus#Lentille Basique"
@@ -1614,6 +1645,26 @@ local IconData = {
         ["Thermia Dilué"] = {
             icon = "Thermia Dilué.png",
             link = "Thermia Dilué"
+        },
+        ["Holo-Clef Corrompue"] = {
+            icon = "Holo-Clef Corrompue.png",
+            link = "Holo-Clef Corrompue"
+        },
+        ["Débris Spectraux"] = {
+            icon = "Débris Spectraux.png",
+            link = "Débris Spectraux"
+        },
+        ["Décodeur de Riven Voilé"] = {
+            icon = "Décodeur de Riven Voilé.png",
+            link = "Décodeur de Riven Voilé"
+        },
+        ["Balise de Navigation Animo"] = {
+            icon = "AnimoNavBeacon.png",
+            link = "Balise de Navigation Animo"
+        },
+        ["Transmuteur de Riven"] = {
+            icon = "RivenTransmuter.png",
+            link = "Transmuteur de Riven"
         },
 
         -- Ressources du Puy de Cambion
@@ -2239,93 +2290,93 @@ local IconData = {
         ["DEFAULT"] = {
             ["DEFAULT"] = {
                 icon = "BlackBasex64.png",
-                link = "Melee#Normal Attack",
-                title = "Default Melee Attack"
+                link = "Mêlée#Attaque Normale",
+                title = "Attaque de Mêlée par Défaut"
             },
             ["BLOCK"] = {
                 icon = "BlackBlockx64.png",
-                link = "Melee#Blocking",
-                title = "Block"
+                link = "Mêlée#Parer",
+                title = "Parade"
             },
             ["PAUSE"] = {
                 icon = "BlackPausex64.png",
-                link = "Maneuvers",
+                link = "Mouvement",
                 title = "Pause"
             },
             ["CHARGE"] = {
                 icon = "BlackChargex64.png",
-                link = "Melee#Heavy Attacks",
+                link = "Mêlée#Attaque Lourde",
                 title = "Charge"
             },
             ["ATTAQUE LOURDE"] = {
                 icon = "BlackChargex64.png",
-                link = "Melee#Heavy Attacks",
-                title = "Heavy Attack"
+                link = "Mêlée#Attaque Lourde",
+                title = "Attaque Lourde"
             },
-            ["UP"] = {icon = "BlackUpx64.png", link = "Maneuvers", title = "Up"},
+            ["UP"] = {icon = "BlackUpx64.png", link = "Mouvement", title = "Haut"},
             ["DOWN"] = {
                 icon = "BlackDownx64.png",
-                link = "Maneuvers",
-                title = "Down"
+                link = "Mouvement",
+                title = "Bas"
             },
             ["LEFT"] = {
                 icon = "BlackLeftx64.png",
-                link = "Maneuvers",
-                title = "Left"
+                link = "Mouvement",
+                title = "Gauche"
             },
             ["RIGHT"] = {
                 icon = "BlackRightx64.png",
-                link = "Maneuvers",
-                title = "Right"
+                link = "Mouvement",
+                title = "Droite"
             }
         },
         ["FRAPPE AU SOL"] = {
             ["DEFAULT"] = {
                 icon = "RedBasex64.png",
-                link = "Melee#Normal Attack",
-                title = "Slam"
+                link = "Mêlée#Attaque Normale",
+                title = "Frappe au Sol"
             },
             ["BLOCK"] = {
                 icon = "RedBlockx64.png",
-                link = "Melee#Blocking",
-                title = "Block"
+                link = "Mêlée#Parer",
+                title = "Parade"
             },
             ["PAUSE"] = {
                 icon = "RedPausex64.png",
-                link = "Maneuvers",
+                link = "Mouvement",
                 title = "Pause"
             },
             ["CHARGE"] = {
                 icon = "RedChargex64.png",
-                link = "Melee#Charge Attacks",
+                link = "Mêlée#Attaque Chargée",
                 title = "Charge"
             },
-            ["HEAVY"] = {
+            ["ATTAQUE LOURDE"] = {
                 icon = "RedChargex64.png",
-                link = "Melee#Heavy Attacks",
-                title = "Heavy Attack"
+                link = "Mêlée#Attaque Lourde",
+                title = "Attaque Lourde"
             },
-            ["UP"] = {icon = "RedUpx64.png", link = "Maneuvers", title = "Up"},
+            ["UP"] = {icon = "RedUpx64.png", link = "Mouvement", title = "Haut"},
             ["DOWN"] = {
                 icon = "RedDownx64.png",
-                link = "Maneuvers",
-                title = "Down"
+                link = "Mouvement",
+                title = "Bas"
             }
         },
         ["360"] = {
             ["DEFAULT"] = {
                 icon = "BlueBasex64.png",
-                link = "Melee#Normal Attack",
-                title = "360° Attack"
+                link = "Mêlée#Attaque Normale",
+                title = "Attaque à 360°"
             },
             ["BLOCK"] = {
                 icon = "BlueBlockx64.png",
-                link = "Melee#Blocking",
-                title = "Block"
+                link = "Mêlée#Parer",
+                title = "Parade"
             },
             ["PAUSE"] = {
                 icon = "BluePausex64.png",
-                link = "Maneuvers",
+                link = "Mouvement",
                 title = "Pause"
             },
             ["CHARGE"] = {
@@ -2333,26 +2384,26 @@ local IconData = {
                 link = "Melee#Charge Attacks",
                 title = "Charge"
             },
-            ["HEAVY"] = {
+            ["ATTAQUE LOURDE"] = {
                 icon = "BlueChargex64.png",
-                link = "Maneuvers",
-                title = "Heavy Attack"
+                link = "Mouvement",
+                title = "Attaque Lourde"
             },
-            ["UP"] = {icon = "BlueUpx64.png", link = "Maneuvers", title = "Up"},
+            ["UP"] = {icon = "BlueUpx64.png", link = "Mouvement", title = "Haut"},
             ["DOWN"] = {
                 icon = "BlueDownx64.png",
-                link = "Maneuvers",
-                title = "Down"
+                link = "Mouvement",
+                title = "Bas"
             }
         },
-        ["RANGED"] = {
+        ["DISTANCE"] = {
             ["DEFAULT"] = {icon = "GunbladeShot.svg", title = "Ranged"},
             ["CHARGE"] = {
                 icon = "HeavyGunbladeShot.svg",
                 title = "Ranged",
                 link = "Melee#Charge Attacks"
             },
-            ["HEAVY"] = {
+            ["ATTAQUE LOURDE"] = {
                 icon = "HeavyGunbladeShot.svg",
                 title = "Ranged",
                 link = "Melee#Heavy Attacks"

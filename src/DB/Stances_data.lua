@@ -287,12 +287,7 @@ local StanceData = {
             Name = "Torture Étincelante",
             Duration = 1.9,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 300,
-                Procs = {"Renversement"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 300, Procs = {"Renversement"}}
         },
         ["Avancer"] = {
             Name = "Piqûre Bourdonnante",
@@ -416,12 +411,7 @@ local StanceData = {
             {Type = "Spin", Hits = 2, Dmg = 100},
             {Type = "Spin", Hits = {1, 1}, Dmg = {100, 200}},
             {Type = "Spin", Hits = 2, Dmg = 200},
-            {
-                Type = "Spin",
-                Hits = 2,
-                Dmg = 300,
-                Procs = {"Renversement"}
-            }
+            {Type = "Spin", Hits = 2, Dmg = 300, Procs = {"Renversement"}}
         },
         ["Avancer + Parade"] = {
             Name = "Défense Scindée",
@@ -606,12 +596,7 @@ local StanceData = {
             Duration = 4.25,
             {Type = "Spin", Hits = {1, 2}, Dmg = {300, 50}},
             {Type = "Spin", Hits = {1, 2}, Dmg = {300, 50}},
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 400,
-                Procs = {"Impact"}
-            },
+            {Type = "Spin", Hits = 1, Dmg = 400, Procs = {"Impact"}},
             {
                 Type = "Frappe au Sol",
                 Hits = 1,
@@ -655,30 +640,21 @@ local StanceData = {
     ["Kraken Cyclonique"] = {
         WeaponType = "Machette",
         ["Neutre"] = {
-            Name = "Gale Triton",
+            Name = "Triton Grondant",
             Duration = 4.1,
             {Hits = 1, Dmg = 300, Procs = {"Impact"}},
             {Hits = {1, 1}, Dmg = {200, 100}},
-            {
-                Type = "Spin",
-                Hits = {1, 1, 1},
-                Dmg = {100, 200, 400}
-            },
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 400,
-                Procs = {"Renversement"}
-            }
+            {Type = "Spin", Hits = {1, 1, 1}, Dmg = {100, 200, 400}},
+            {Type = "Spin", Hits = 1, Dmg = 400, Procs = {"Renversement"}}
         },
         ["Avancer"] = {
-            Name = "Leviathan Rain",
+            Name = "Pluie Leviathane",
             Duration = 1.95,
             {Hits = 2, Dmg = 100},
             {Type = "Spin", Hits = 3, Dmg = 100}
         },
         ["Avancer + Parade"] = {
-            Name = "Lightning Siren",
+            Name = "Sirène Foudroyante",
             Duration = 2.3,
             {Hits = {1, 1}, Dmg = {200, 200}, Procs = {"", "Impact"}},
             {
@@ -688,7 +664,7 @@ local StanceData = {
             }
         },
         ["Parade"] = {
-            Name = "Thunder Hydra",
+            Name = "Hydre Tonitruante",
             Duration = 2.3,
             {Hits = {1, 1}, Dmg = {100, 300}, Procs = {"Suspendu", ""}},
             {Type = "Spin", Hits = 1, Dmg = 300},
@@ -775,12 +751,7 @@ local StanceData = {
         ["Glissade"] = {
             Name = "Genou Séparateur",
             Duration = 0.67,
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 200,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
         }
     },
 
@@ -843,7 +814,7 @@ local StanceData = {
     },
 
     ["Lame Exaltée"] = {
-        WeaponType = "Arme Exalté",
+        WeaponType = "Arme Exaltée",
         ["Neutre"] = {
             Name = "Grâce Coupante",
             Duration = 3.2,
@@ -918,12 +889,20 @@ local StanceData = {
         },
         ["Glissade"] = {
             Name = "Genou Séparateur",
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 200,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
+        }
+    },
+    
+    ["Ailes Rasoirs"] = {
+        WeaponType = "Arme Exaltée",
+        ["Neutre"] = {
+            Name = "valse des fées",
+            Duration = 5.4,
+            {Hits = 1, Dmg = 100},
+            {Hits = 1, Dmg = 100},
+            {Hits = 1, Dmg = 100},
+            {Hits = 1, Dmg = 100},
+            {Hits = 1, Dmg = 100}
         }
     },
 
@@ -952,11 +931,7 @@ local StanceData = {
             {Type = "Spin", Hits = 2, Dmg = 200},
             {Type = "Spin", Hits = 1, Dmg = 100},
             {Hits = 2, Dmg = 200},
-            {
-                Type = "Spin",
-                Hits = {1, 1, 2},
-                Dmg = {100, 200, 100}
-            }
+            {Type = "Spin", Hits = {1, 1, 2}, Dmg = {100, 200, 100}}
         },
         ["Avancer + Parade"] = {
             Name = "Lumière Sombre",
@@ -968,12 +943,7 @@ local StanceData = {
                 Procs = {"", "Impact"}
             },
             {Hits = 4, Dmg = 200},
-            {
-                Type = "Spin",
-                Hits = 5,
-                Dmg = 100,
-                Procs = {"Renversement"}
-            }
+            {Type = "Spin", Hits = 5, Dmg = 100, Procs = {"Renversement"}}
         },
         ["Parade"] = {
             Name = "Déchiquetage Systémique",
@@ -1220,12 +1190,7 @@ local StanceData = {
             Duration = 2,
             {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 100, Procs = {"Impact"}},
-            {
-                Type = "Spin",
-                Hits = 3,
-                Dmg = 100,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 3, Dmg = 100, Procs = {"Impact"}}
         },
         ["Avancer + Parade"] = {
             Name = "Atteinte d'Argent",
@@ -1370,7 +1335,7 @@ local StanceData = {
         }
     },
 
-    ["Arme Exaltée"] = {
+    ["Hystérie"] = {
         WeaponType = "Arme Exaltée",
         ["Neutre"] = {
             Name = "Ferveur",
@@ -1380,7 +1345,7 @@ local StanceData = {
             {Type = "Spin", Hits = 2, Dmg = 100},
             {Type = "Spin", Hits = 2, Dmg = 100},
             {Hits = 1, Dmg = 100},
-            {Hits = 2, Dmg = 100, Procs = {"Coup de Grâce"}}
+            {Hits = 2, Dmg = 100, Procs = {"Brut"}}
         },
         ["Avancer"] = {
             Name = "Rage",
@@ -1408,14 +1373,13 @@ local StanceData = {
             Name = "Délire",
             Duration = 3.7,
             {Hits = 1, Dmg = 100},
-            {Hits = 2, Dmg = 100, Procs = {"Coup de Grâce"}},
+            {Hits = 2, Dmg = 100, Procs = {"Brut"}},
             {Hits = 3, Dmg = 100},
             {
                 Hits = {1, 1, 1},
                 Dmg = {100, 100, 200},
                 Procs = {
-                    "Renversement", {"Impact", "Renversement"},
-                    "Renversement"
+                    "Renversement", {"Impact", "Renversement"}, "Renversement"
                 }
             }
         },
@@ -1478,12 +1442,7 @@ local StanceData = {
         ConclaveOnly = true,
         ["Neutre"] = {
             Name = "Whispering Bite",
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 100,
-                Procs = {"Diminuer"}
-            },
+            {Type = "Spin", Hits = 1, Dmg = 100, Procs = {"Diminuer"}},
             {Tyoe = "Spin", Hits = 1, Dmg = 100}
         },
         ["Avancer"] = {
@@ -1536,12 +1495,7 @@ local StanceData = {
         },
         ["Avancer + Parade"] = {
             Name = "Torrid Torrent",
-            {
-                Type = "Spin",
-                Hits = 5,
-                Dmg = 100,
-                Procs = {"Renversement"}
-            },
+            {Type = "Spin", Hits = 5, Dmg = 100, Procs = {"Renversement"}},
             {Type = "Spin", Hits = {2, 1}, Dmg = {100, 100}}
         }
     },
@@ -1684,7 +1638,7 @@ local StanceData = {
         ["Avancer + Parade"] = {
             Name = "Frappe Foudroyante du Cyclone",
             Duration = 1.9,
-            {Hits = 1, Dmg = 100, Procs = {{"Impact", "Puncture"}}},
+            {Hits = 1, Dmg = 100, Procs = {{"Impact", "Perforation"}}},
             {Hits = 1, Dmg = 200, Procs = {"Renversement"}}
         },
         ["Parade"] = {
@@ -1722,12 +1676,7 @@ local StanceData = {
         },
         ["Glissade"] = {
             Name = "Atteinte Dévastatrice",
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 100,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 100, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Cercle Mortel",
@@ -1837,12 +1786,7 @@ local StanceData = {
             Duration = 1.85,
             {Type = "Spin", Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 100},
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 300,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 300, Procs = {"Impact"}}
         },
         ["Avancer + Parade"] = {
             Name = "Automate Abyssal",
@@ -1874,12 +1818,7 @@ local StanceData = {
                 Procs = {"Impact", "", ""}
             },
             {Type = "Spin", Hits = 1, Dmg = 300},
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 300,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 300, Procs = {"Impact"}}
         },
         ["Avancer + Parade"] = {
             Name = "Sanglier Féroce",
@@ -1962,12 +1901,7 @@ local StanceData = {
         },
         ["Glissade"] = {
             Name = "Conflit de Sang",
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 300,
-                Procs = {"Suspendu"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 300, Procs = {"Suspendu"}}
         }
     },
 
@@ -2093,12 +2027,7 @@ local StanceData = {
         },
         ["Avancer + Parade"] = {
             Name = "Soul Dance",
-            {
-                Type = "Spin",
-                Hits = {3, 1},
-                Dmg = {100, 100},
-                Procs = {"", ""}
-            },
+            {Type = "Spin", Hits = {3, 1}, Dmg = {100, 100}, Procs = {"", ""}},
             {Hits = 1, Dmg = 100}
         }
     },
@@ -2332,7 +2261,7 @@ local StanceData = {
             {Hits = 1, Dmg = 500, Procs = {"Renversement"}}
         },
         ["Avancer"] = {
-            Name = "nombreuses Larmes",
+            Name = "Nombreuses Larmes",
             Duration = 1.25,
             {Type = "Spin", Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 300, Procs = {"Impact"}}
@@ -2364,10 +2293,7 @@ local StanceData = {
                 Type = "Frappe au Sol",
                 Hits = {2, 2, 2},
                 Dmg = {100, 100, 100},
-                Procs = {
-                    "Renversement", "Renversement",
-                    "Renversement"
-                }
+                Procs = {"Renversement", "Renversement", "Renversement"}
             }
         },
         ["Avancer"] = {
@@ -2499,7 +2425,7 @@ local StanceData = {
         }
     },
 
-    ["Attaque de Faucon"] = {
+    ["Attaque de faucon"] = {
         WeaponType = "Épée",
         ["Neutre"] = {
             Name = "Crécerelle Plongeante",
@@ -2541,10 +2467,7 @@ local StanceData = {
             {
                 Hits = {1, 1, 1},
                 Dmg = {100, 100, 100},
-                Procs = {
-                    "Renversement", "Renversement",
-                    "Renversement"
-                }
+                Procs = {"Renversement", "Renversement", "Renversement"}
             },
             {Hits = {1, 1, 1}, Dmg = {100, 100, 100}}
         },
@@ -2561,7 +2484,7 @@ local StanceData = {
         }
     },
 
-    ["Tempo Royale"] = {
+    ["Tempo Royal"] = {
         WeaponType = "Lame Lourde",
         ["Neutre"] = {
             Name = "Mesto August",
@@ -2584,10 +2507,10 @@ local StanceData = {
             Name = "Abandon Majestueux",
             Duration = 3.4,
             {Type = "Spin", Hits = 2, Dmg = 100},
-            {Hits = 1, Dmg = 200, Procs = {"Suspendu"}},
+            {Hits = 1, Dmg = 200},
             {Hits = 1, Dmg = 100},
             {Hits = 1, Dmg = 200, Procs = {"Impact"}},
-            {Hits = 1, Dmg = 100, Procs = {"Suspendu"}}
+            {Hits = 1, Dmg = 100}
         },
         ["Avancer + Parade"] = {
             Name = "Calma Resplendissant",
@@ -2894,21 +2817,16 @@ local StanceData = {
             {Hits = 1, Dmg = 400, Procs = {"Impact"}}
         },
         ["Avancer + Parade"] = {
-            Name = "Calling Thunder",
+            Name = "Appel du Tonnerre",
             Duration = 3.5,
             {
-                Type = "Appel du Tonnerre",
+                Type = "Frappe au Sol",
                 Hits = {1, 1, 1},
                 Dmg = {200, 200, 300},
                 Procs = {"", "Renversement", {"Tranchant", "Suspendu"}}
             },
             {Hits = 1, Dmg = 300},
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 400,
-                Procs = {"Renversement"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 400, Procs = {"Renversement"}}
         }
     },
 
@@ -2933,12 +2851,7 @@ local StanceData = {
         },
         ["Glissade"] = {
             Name = "Coupe Spirale",
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 100,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 100, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Acier Léger",
@@ -2975,12 +2888,7 @@ local StanceData = {
         ["Glissade"] = {
             Name = "Conflit de Sang",
             Duration = 0.67,
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 300,
-                Procs = {"Suspendu"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 300, Procs = {"Suspendu"}}
         },
         ["Dans les Airs"] = {
             Name = "Un Point",
@@ -3005,7 +2913,7 @@ local StanceData = {
                 Shape = "Attaque Lourde",
                 Hits = {1, 1},
                 Dmg = {250, 250},
-                Procs = {{"Impact", "Tranchant"}, "Coup de Grâce"}
+                Procs = {{"Impact", "Tranchant"}, "Brut"}
             },
             {
                 Shape = "Attaque Lourde",
@@ -3017,12 +2925,7 @@ local StanceData = {
         ["Glissade"] = {
             Name = "Effleurement Fendant",
             Duration = 0.53,
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 200,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Chute du Scorpion",
@@ -3058,12 +2961,7 @@ local StanceData = {
         ["Glissade"] = {
             Name = "Cougar Rôdant",
             Duration = 0.67,
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 200,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Rugissement du Lion",
@@ -3099,12 +2997,7 @@ local StanceData = {
         },
         ["Glissade"] = {
             Name = "Fleurs Rognantes",
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 200,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Souillure Sanglante",
@@ -3140,12 +3033,7 @@ local StanceData = {
         },
         ["Glissade"] = {
             Name = "Conflit de Sang",
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 300,
-                Procs = {"Suspendu"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 300, Procs = {"Suspendu"}}
         },
         ["Dans les Airs"] = {
             Name = "Un Point",
@@ -3168,33 +3056,13 @@ local StanceData = {
         ["Glissade"] = {
             Name = "Pirouette",
             Duration = 0.74,
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 200,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Vrille",
-            {
-                Type = "Spin",
-                Hits = 2,
-                Dmg = 300,
-                Procs = {"Renversement"}
-            },
-            {
-                Type = "Spin",
-                Hits = 2,
-                Dmg = 300,
-                Procs = {"Renversement"}
-            },
-            {
-                Type = "Spin",
-                Hits = 2,
-                Dmg = 300,
-                Procs = {"Renversement"}
-            }
+            {Type = "Spin", Hits = 2, Dmg = 300, Procs = {"Renversement"}},
+            {Type = "Spin", Hits = 2, Dmg = 300, Procs = {"Renversement"}},
+            {Type = "Spin", Hits = 2, Dmg = 300, Procs = {"Renversement"}}
         },
         ["Sur un Mur"] = {Name = "Frappe Transperçante", {Hits = 1, Dmg = 300}},
         ["Coup de Grâce"] = {
@@ -3224,12 +3092,7 @@ local StanceData = {
         ["Glissade"] = {
             Name = "Dégaine",
             Duration = 0.60,
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 200,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Cavale",
@@ -3243,7 +3106,7 @@ local StanceData = {
         },
         ["Coup de Grâce"] = {
             Name = "Dernières Volontés",
-            {Hits = 1, Dmg = 1000, Procs = {"Blast"}}
+            {Hits = 1, Dmg = 1000, Procs = {"Explosif"}}
         }
     },
 
@@ -3266,12 +3129,7 @@ local StanceData = {
         ["Glissade"] = {
             Name = "Vague de l'Enfer",
             Duration = 0.97,
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 200,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Burin de la Montagne",
@@ -3302,12 +3160,7 @@ local StanceData = {
         ["Glissade"] = {
             Name = "Vague de l'Enfer",
             Duration = 0.98,
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 200,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Burin de la Montagne",
@@ -3333,7 +3186,7 @@ local StanceData = {
                 Type = "Spin",
                 Hits = {2, 1, 1, 1},
                 Dmg = {150, 150, 150, 150},
-                Procs = {"", "Tranchant", "", {"Impact", "Coup de Grâce"}}
+                Procs = {"", "Tranchant", "", {"Impact", "Brut"}}
             },
             {
                 Shape = "Attaque Lourde",
@@ -3345,12 +3198,7 @@ local StanceData = {
         ["Glissade"] = {
             Name = "Rivière en Cascade",
             Duration = 0.66,
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 200,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Acier Léger",
@@ -3416,22 +3264,12 @@ local StanceData = {
         ["Glissade"] = {
             Name = "Marée Incendiaire",
             Duration = 1.05,
-            {
-                Type = "Spin",
-                Hits = 3,
-                Dmg = 200,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 3, Dmg = 200, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Tempête de Feu",
             {Hits = 1, Dmg = 200, Procs = {"Impact"}},
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 200,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
         ["Sur un Mur"] = {
             Name = "Pyromanie",
@@ -3462,12 +3300,7 @@ local StanceData = {
         ["Glissade"] = {
             Name = "Cyclone Tranchant",
             Duration = 0.78,
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 200,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Veuve Noire",
@@ -3501,12 +3334,7 @@ local StanceData = {
         ["Glissade"] = {
             Name = "Coupe Spirale",
             Duration = 0.64,
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 100,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 100, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Ciel de Mort",
@@ -3542,12 +3370,7 @@ local StanceData = {
         },
         ["Glissade"] = {
             Name = "Vague de l'Enfer",
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 200,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Burin de la Montagne",
@@ -3615,12 +3438,7 @@ local StanceData = {
         ["Glissade"] = {
             Name = "Atteinte Dévastatrice",
             Duration = 0.68,
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 100,
-                Procs = {"Suspendu"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 100, Procs = {"Suspendu"}}
         },
         ["Dans les Airs"] = {
             Name = "Veuve Noire",
@@ -3654,12 +3472,7 @@ local StanceData = {
         ["Glissade"] = {
             Name = "Coupe Spirale",
             Duration = 0.69,
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 100,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 100, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Acier Léger",
@@ -3696,12 +3509,7 @@ local StanceData = {
         },
         ["Glissade"] = {
             Name = "Destructive Symphony",
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 100,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 100, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Poing de Fer",
@@ -3767,19 +3575,12 @@ local StanceData = {
                 Type = "Spin",
                 Hits = {1, 1},
                 Dmg = {300, 300},
-                Procs = {
-                    {"Impact", "Tranchant"}, {"Tranchant", "Renversement"}
-                }
+                Procs = {{"Impact", "Tranchant"}, {"Tranchant", "Renversement"}}
             }
         },
         ["Glissade"] = {
             Name = "Serpent Sournois",
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 200,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Singe Malin",
@@ -3815,12 +3616,7 @@ local StanceData = {
         },
         ["Glissade"] = {
             Name = "Coupe Spirale",
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 100,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 100, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Ciel de Mort",
@@ -3857,12 +3653,7 @@ local StanceData = {
         ["Glissade"] = {
             Name = "Coupe Spirale",
             Duration = 0.64,
-            {
-                Type = "Spin",
-                Hits = 1,
-                Dmg = 200,
-                Procs = {"Impact"}
-            }
+            {Type = "Spin", Hits = 1, Dmg = 200, Procs = {"Impact"}}
         },
         ["Dans les Airs"] = {
             Name = "Burin de la Montagne",

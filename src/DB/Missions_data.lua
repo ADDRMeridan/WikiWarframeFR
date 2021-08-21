@@ -4,7 +4,7 @@ local MissionData = {
         ["Corpus"] = {MissionIcon = "IconCorpusB.svg"},
         ["Infesté"] = {MissionIcon = "IconInfestéB.svg"},
         ["Corrompu"] = {MissionIcon = "IconOrokinB.svg"},
-        ["Feux Croisés"] = {MissionIcon = "CrossfireMissionIcon.png"}
+        ["Feux Croisés"] = {MissionIcon = "Feux Croises.png"}
     },
     ["MissionDetails"] = {
         {
@@ -50,7 +50,7 @@ local MissionData = {
             Enemy = "Infesté",
             MinLevel = 6,
             MaxLevel = 11,
-            Tier = "Defense1",
+            Tier = "Défense1",
             Other = "B"
         }, {
             Node = "M Prime",
@@ -85,7 +85,7 @@ local MissionData = {
             Enemy = "Grineer",
             MinLevel = 8,
             MaxLevel = 10,
-            Tier = "Spy1"
+            Tier = "Espionnage1"
         }, {
             Node = "Terminus",
             Planet = "Mercure",
@@ -105,21 +105,21 @@ local MissionData = {
             MaxLevel = 10,
             Tier = "Vor",
             LinkName = "Capitaine Vor",
-            Pic = "CapitaineVor_sigil_b.png",
+            Pic = "CaptainVor sigil.png",
             Drops = {"Cronus", "Seer"}
         }, {
             Node = "Vallée Orbis",
-            Planet = "Venus",
-            Type = "Landscape|Espace Libre",
+            Planet = "Vénus",
+            Type = "Paysage|Espace Libre",
             Tileset = "Vallée Orbis",
             Enemy = "Corpus",
             MinLevel = 10,
             MaxLevel = 30,
-            Tier = "Landscape",
+            Tier = "Paysage",
             Pic = "SolarisUnitedSigil.png"
         }, {
             Node = "Aphrodite",
-            Planet = "Venus",
+            Planet = "Vénus",
             Type = "Défense Mobile",
             Tileset = "Avant-Poste Corpus",
             Enemy = "Corpus",
@@ -127,7 +127,7 @@ local MissionData = {
             MaxLevel = 8
         }, {
             Node = "Cytherean",
-            Planet = "Venus",
+            Planet = "Vénus",
             Type = "Interception",
             Tileset = "Vaisseau Corpus",
             Enemy = "Corpus",
@@ -136,7 +136,7 @@ local MissionData = {
             Tier = "Interception1"
         }, {
             Node = "E Gate",
-            Planet = "Venus",
+            Planet = "Vénus",
             Type = "Extermination",
             Tileset = "Avant-Poste Corpus",
             Enemy = "Corpus",
@@ -144,7 +144,7 @@ local MissionData = {
             MaxLevel = 5
         }, {
             Node = "Ishtar",
-            Planet = "Venus",
+            Planet = "Vénus",
             Type = "Sabotage",
             Tileset = "Vaisseau Corpus",
             Enemy = "Corpus",
@@ -153,7 +153,7 @@ local MissionData = {
             Tier = "Reactor1"
         }, {
             Node = "Kiliken",
-            Planet = "Venus",
+            Planet = "Vénus",
             Type = "Excavation",
             Tileset = "Avant-Poste Corpus",
             Enemy = "Corpus",
@@ -162,7 +162,7 @@ local MissionData = {
             Tier = "Excavation1"
         }, {
             Node = "Linea",
-            Planet = "Venus",
+            Planet = "Vénus",
             Type = "Sauvetage",
             Tileset = "Avant-Poste Corpus",
             Enemy = "Corpus",
@@ -171,7 +171,7 @@ local MissionData = {
             Tier = "Rescue1"
         }, {
             Node = "Malva",
-            Planet = "Venus",
+            Planet = "Vénus",
             Type = "Survie",
             IsDarkSector = 1,
             Tileset = "Vaisseau Corpus",
@@ -186,7 +186,7 @@ local MissionData = {
             DSWeapon = 'Fusils'
         }, {
             Node = "Montes",
-            Planet = "Venus",
+            Planet = "Vénus",
             Type = "Extermination",
             IsArchwing = 1,
             Tileset = "Vaisseau Corpus (Archwing)",
@@ -196,14 +196,14 @@ local MissionData = {
             Tier = "AWExterminate"
         }, {
             Node = "Romula",
-            Planet = "Venus",
+            Planet = "Vénus",
             Type = "Défense",
             IsDarkSector = 1,
             Tileset = "Avant-Poste Corpus",
             Enemy = "Infesté",
             MinLevel = 8,
             MaxLevel = 18,
-            Tier = "DSDefense",
+            Tier = "DSDéfense",
             DSCredits = 10,
             DSResourceBonus = 10,
             DSXPBonus = 10,
@@ -211,26 +211,26 @@ local MissionData = {
             DSWeapon = 'Fusils'
         }, {
             Node = "Tessera",
-            Planet = "Venus",
+            Planet = "Vénus",
             Type = "Défense",
             Tileset = "Avant-Poste Corpus",
             Enemy = "Corpus",
             MinLevel = 3,
             MaxLevel = 8,
-            Tier = "Defense1",
+            Tier = "Défense1",
             Other = "E"
         }, {
             Node = "Unda",
-            Planet = "Venus",
+            Planet = "Vénus",
             Type = "Espionnage",
             Tileset = "Avant-Poste Corpus",
             Enemy = "Corpus",
             MinLevel = 4,
             MaxLevel = 6,
-            Tier = "Spy1"
+            Tier = "Espionnage1"
         }, {
             Node = "Venera",
-            Planet = "Venus",
+            Planet = "Vénus",
             Type = "Capture",
             Tileset = "Avant-Poste Corpus",
             Enemy = "Corpus",
@@ -239,7 +239,7 @@ local MissionData = {
             Tier = "Capture"
         }, {
             Node = "V Prime",
-            Planet = "Venus",
+            Planet = "Vénus",
             Type = "Survie",
             Tileset = "Vaisseau Corpus",
             Enemy = "Corpus",
@@ -248,7 +248,7 @@ local MissionData = {
             Tier = "Survie1"
         }, {
             Node = "Fossa",
-            Planet = "Venus",
+            Planet = "Vénus",
             Type = "Assassinat",
             Tileset = "Vaisseau Corpus",
             Enemy = "Corpus",
@@ -261,12 +261,12 @@ local MissionData = {
         }, {
             Node = "Plaines d'Eidolon",
             Planet = "Terre",
-            Type = "Landscape|Espace Libre",
+            Type = "Paysage|Espace Libre",
             Tileset = "Plaines d'Eidolon",
             Enemy = "Grineer",
             MinLevel = 10,
             MaxLevel = 30,
-            Tier = "Landscape",
+            Tier = "Paysage",
             Pic = "DawnsEarlyLight.png"
         }, {
             Node = "Cambria",
@@ -276,7 +276,7 @@ local MissionData = {
             Enemy = "Grineer",
             MinLevel = 2,
             MaxLevel = 4,
-            Tier = "Spy1"
+            Tier = "Espionnage1"
         }, {
             Node = "Cervantes",
             Planet = "Terre",
@@ -338,7 +338,7 @@ local MissionData = {
             Enemy = "Grineer",
             MinLevel = 1,
             MaxLevel = 6,
-            Tier = "Defense1",
+            Tier = "Défense1",
             Other = "J"
         }, {
             Node = "Mantle",
@@ -375,7 +375,7 @@ local MissionData = {
             Enemy = "Infesté",
             MinLevel = 6,
             MaxLevel = 16,
-            Tier = "DSDefense",
+            Tier = "DSDéfense",
             DSCredits = 12,
             DSResourceBonus = 15,
             DSXPBonus = 12,
@@ -391,7 +391,7 @@ local MissionData = {
             MaxLevel = 25,
             Tier = "Vay Hek",
             LinkName = "Conseiller Vay Hek",
-            Pic = "VeyHek_sigil_b.png",
+            Pic = "VeyHek sigil.png",
             Drops = {"Hydroid"}
         }, {
             Node = "Tikal",
@@ -442,7 +442,7 @@ local MissionData = {
             Enemy = "Grineer",
             MinLevel = 9,
             MaxLevel = 11,
-            Tier = "Spy1"
+            Tier = "Espionnage1"
         }, {
             Node = "Augustus",
             Planet = "Mars",
@@ -478,7 +478,7 @@ local MissionData = {
             Enemy = "Infesté",
             MinLevel = 10,
             MaxLevel = 20,
-            Tier = "DSDefense",
+            Tier = "DSDéfense",
             DSCredits = 14,
             DSResourceBonus = 20,
             DSXPBonus = 15,
@@ -510,7 +510,7 @@ local MissionData = {
             Enemy = "Grineer",
             MinLevel = 8,
             MaxLevel = 13,
-            Tier = "Defense1",
+            Tier = "Défense1",
             Other = "B"
         }, {
             Node = "Syrtis",
@@ -571,7 +571,7 @@ local MissionData = {
             MaxLevel = 13,
             Tier = "Lech Kril",
             LinkName = "Lieutenant Lech Kril",
-            Pic = "LechKril_sigil_b.png",
+            Pic = "LechKril sigil.png",
             Drops = {"Excalibur"}
         }, {
             Node = "Roche",
@@ -597,7 +597,7 @@ local MissionData = {
             Enemy = "Corpus",
             MinLevel = 10,
             MaxLevel = 15,
-            Tier = "Defense1",
+            Tier = "Défense1",
             Other = "C"
         }, {
             Node = "Kepler",
@@ -641,7 +641,7 @@ local MissionData = {
             Enemy = "Corpus",
             MinLevel = 11,
             MaxLevel = 13,
-            Tier = "Spy1"
+            Tier = "Espionnage1"
         }, {
             Node = "Skyresh",
             Planet = "Phobos",
@@ -707,7 +707,7 @@ local MissionData = {
         }, {
             Node = "Puy de Cambion",
             Planet = "Deimos",
-            Type = "Landscape|Espace Libre",
+            Type = "Paysage|Espace Libre",
             Tileset = "Puy de Cambion",
             Enemy = "Infesté",
             MinLevel = 20,
@@ -730,7 +730,7 @@ local MissionData = {
             Enemy = "Infesté",
             MinLevel = 15,
             MaxLevel = 20,
-            Tier = "DerelictDefense"
+            Tier = "DerelictDéfense"
         }, {
             Node = "Dirus",
             Planet = "Deimos",
@@ -774,26 +774,26 @@ local MissionData = {
             Drops = {"Pathocyst"}
         }, {
             Node = "Bode",
-            Planet = "Ceres",
+            Planet = "Cérès",
             Type = "Espionnage",
             Tileset = "Chantier Naval Grineer",
             Enemy = "Grineer",
             MinLevel = 12,
             MaxLevel = 14,
-            Tier = "Spy2"
+            Tier = "Espionnage2"
         }, {
             Node = "Casta",
-            Planet = "Ceres",
+            Planet = "Cérès",
             Type = "Défense",
             Tileset = "Chantier Naval Grineer",
             Enemy = "Grineer",
             MinLevel = 12,
             MaxLevel = 17,
-            Tier = "Defense1",
+            Tier = "Défense1",
             Other = "I"
         }, {
             Node = "Cinxia",
-            Planet = "Ceres",
+            Planet = "Cérès",
             Type = "Interception",
             Tileset = "Chantier Naval Grineer",
             Enemy = "Grineer",
@@ -802,7 +802,7 @@ local MissionData = {
             Tier = "Interception1"
         }, {
             Node = "Draco",
-            Planet = "Ceres",
+            Planet = "Cérès",
             Type = "Survie",
             Tileset = "Astéroïde Grineer",
             Enemy = "Grineer",
@@ -811,7 +811,7 @@ local MissionData = {
             Tier = "Survie2"
         }, {
             Node = "Gabii",
-            Planet = "Ceres",
+            Planet = "Cérès",
             Type = "Survie",
             IsDarkSector = 1,
             Tileset = "Galion Grineer",
@@ -826,7 +826,7 @@ local MissionData = {
             DSWeapon = 'Melee'
         }, {
             Node = "Ker",
-            Planet = "Ceres",
+            Planet = "Cérès",
             Type = "Sabotage",
             Tileset = "Chantier Naval Grineer",
             Enemy = "Grineer",
@@ -835,7 +835,7 @@ local MissionData = {
             Tier = "Reactor2"
         }, {
             Node = "Kiste",
-            Planet = "Ceres",
+            Planet = "Cérès",
             Type = "Défense Mobile",
             Tileset = "Chantier Naval Grineer",
             Enemy = "Grineer",
@@ -843,7 +843,7 @@ local MissionData = {
             MaxLevel = 15
         }, {
             Node = "Lex",
-            Planet = "Ceres",
+            Planet = "Cérès",
             Type = "Capture",
             Tileset = "Chantier Naval Grineer",
             Enemy = "Grineer",
@@ -852,7 +852,7 @@ local MissionData = {
             Tier = "Capture"
         }, {
             Node = "Ludi",
-            Planet = "Ceres",
+            Planet = "Cérès",
             Type = "Détournement",
             Tileset = "Chantier Naval Grineer",
             Enemy = "Grineer",
@@ -860,7 +860,7 @@ local MissionData = {
             MaxLevel = 17
         }, {
             Node = "Nuovo",
-            Planet = "Ceres",
+            Planet = "Cérès",
             Type = "Sauvetage",
             Tileset = "Chantier Naval Grineer",
             Enemy = "Grineer",
@@ -869,7 +869,7 @@ local MissionData = {
             Tier = "Rescue1"
         }, {
             Node = "Pallas",
-            Planet = "Ceres",
+            Planet = "Cérès",
             Type = "Extermination",
             Tileset = "Chantier Naval Grineer",
             Enemy = "Grineer",
@@ -877,14 +877,14 @@ local MissionData = {
             MaxLevel = 14
         }, {
             Node = "Seimeni",
-            Planet = "Ceres",
+            Planet = "Cérès",
             Type = "Défense",
             IsDarkSector = 1,
             Tileset = "Chantier Naval Grineer",
             Enemy = "Infesté",
             MinLevel = 15,
             MaxLevel = 25,
-            Tier = "DSDefense",
+            Tier = "DSDéfense",
             DSCredits = 20,
             DSResourceBonus = 35,
             DSXPBonus = 26,
@@ -892,7 +892,7 @@ local MissionData = {
             DSWeapon = 'Melee'
         }, {
             Node = "Thon",
-            Planet = "Ceres",
+            Planet = "Cérès",
             Type = "Sabotage",
             Tileset = "Galion Grineer",
             Enemy = "Grineer",
@@ -901,7 +901,7 @@ local MissionData = {
             Tier = "Reactor2"
         }, {
             Node = "Exta",
-            Planet = "Ceres",
+            Planet = "Cérès",
             Type = "Assassinat",
             Tileset = "Chantier Naval Grineer",
             Enemy = "Grineer",
@@ -928,7 +928,7 @@ local MissionData = {
             Enemy = "Corpus",
             MinLevel = 17,
             MaxLevel = 19,
-            Tier = "Spy2"
+            Tier = "Espionnage2"
         }, {
             Node = "Ananke",
             Planet = "Jupiter",
@@ -1000,7 +1000,7 @@ local MissionData = {
             Enemy = "Corpus",
             MinLevel = 15,
             MaxLevel = 20,
-            Tier = "Defense2",
+            Tier = "Défense2",
             Other = "H"
         }, {
             Node = "Metis",
@@ -1043,7 +1043,7 @@ local MissionData = {
             Enemy = "Infesté",
             MinLevel = 20,
             MaxLevel = 30,
-            Tier = "DSDefense",
+            Tier = "DSDéfense",
             DSCredits = 14,
             DSResourceBonus = 20,
             DSXPBonus = 15,
@@ -1059,18 +1059,18 @@ local MissionData = {
             MaxLevel = 20,
             Tier = "Alad V",
             LinkName = "Alad V",
-            Pic = "AladV_sigil_b.png",
+            Pic = "AladV sigil.png",
             Drops = {"Valkyr"}
         }, {
-            Node = "Le Ropalolyst",
+            Node = "Le Ropalolyste",
             Planet = "Jupiter",
             Type = "Assassinat",
             Tileset = "Cité Gazière Corpus",
             Enemy = "Corpus",
             MinLevel = 40,
             MaxLevel = 40,
-            Tier = "Ropalolyst",
-            LinkName = "Ropalolyst",
+            Tier = "Ropalolyste",
+            LinkName = "Ropalolyste",
             Pic = "Ropalolyst.png",
             Drops = {"Wisp"}
         }, {
@@ -1140,7 +1140,7 @@ local MissionData = {
             Enemy = "Corpus",
             MinLevel = 18,
             MaxLevel = 23,
-            Tier = "Defense2",
+            Tier = "Défense2",
             Other = "D/E/F"
         }, {
             Node = "Sorath",
@@ -1158,7 +1158,7 @@ local MissionData = {
             Enemy = {"Grineer", "Corpus"},
             MinLevel = 18,
             MaxLevel = 20,
-            Tier = "Spy2"
+            Tier = "Espionnage2"
         }, {
             Node = "Valefor",
             Planet = "Europe",
@@ -1192,7 +1192,7 @@ local MissionData = {
             Enemy = "Infesté",
             MinLevel = 23,
             MaxLevel = 33,
-            Tier = "DSDefense",
+            Tier = "DSDéfense",
             DSCredits = 16,
             DSResourceBonus = 25,
             DSXPBonus = 18,
@@ -1208,7 +1208,7 @@ local MissionData = {
             MaxLevel = 23,
             Tier = "Raptor",
             LinkName = "Raptors",
-            Pic = "Raptor_sigil_b.png",
+            Pic = "Raptor sigil.png",
             Drops = {"Nova"}
         }, {
             Node = "Anthe",
@@ -1260,7 +1260,7 @@ local MissionData = {
             Enemy = "Grineer",
             MinLevel = 21,
             MaxLevel = 23,
-            Tier = "Spy2"
+            Tier = "Espionnage2"
         }, {
             Node = "Enceladus",
             Planet = "Saturne",
@@ -1277,7 +1277,7 @@ local MissionData = {
             Enemy = "Grineer",
             MinLevel = 21,
             MaxLevel = 26,
-            Tier = "Defense2",
+            Tier = "Défense2",
             Other = "A"
         }, {
             Node = "Keeler",
@@ -1357,7 +1357,7 @@ local MissionData = {
             MaxLevel = 26,
             Tier = "Sargas Ruk",
             LinkName = "General Sargas Ruk",
-            Pic = "SargusRuk_sigil_b.png",
+            Pic = "SargusRuk sigil.png",
             Drops = {"Ember"}
         }, {
             Node = "Ariel",
@@ -1444,7 +1444,7 @@ local MissionData = {
             Enemy = "Grineer",
             MinLevel = 27,
             MaxLevel = 29,
-            Tier = "Spy3"
+            Tier = "Espionnage3"
         }, {
             Node = "Stephano",
             Planet = "Uranus",
@@ -1453,7 +1453,7 @@ local MissionData = {
             Enemy = "Grineer",
             MinLevel = 24,
             MaxLevel = 29,
-            Tier = "Defense3",
+            Tier = "Défense3",
             Other = "O"
         }, {
             Node = "Sycorax",
@@ -1557,7 +1557,7 @@ local MissionData = {
             Enemy = "Corpus",
             MinLevel = 30,
             MaxLevel = 32,
-            Tier = "Spy3"
+            Tier = "Espionnage3"
         }, {
             Node = "Neso",
             Planet = "Neptune",
@@ -1574,7 +1574,7 @@ local MissionData = {
             Enemy = "Corpus",
             MinLevel = 27,
             MaxLevel = 32,
-            Tier = "Defense3",
+            Tier = "Défense3",
             Other = "D/E/F"
         }, {
             Node = "Salacia",
@@ -1689,7 +1689,7 @@ local MissionData = {
             Enemy = "Corpus",
             MinLevel = 32,
             MaxLevel = 36,
-            Tier = "Spy3"
+            Tier = "Espionnage3"
         }, {
             Node = "Outer Terminus",
             Planet = "Pluton",
@@ -1698,7 +1698,7 @@ local MissionData = {
             Enemy = "Corpus",
             MinLevel = 30,
             MaxLevel = 40,
-            Tier = "Defense3",
+            Tier = "Défense3",
             Other = "D/E/F"
         }, {
             Node = "Palus",
@@ -1742,7 +1742,7 @@ local MissionData = {
             Enemy = "Infesté",
             MinLevel = 35,
             MaxLevel = 45,
-            Tier = "DSDefense",
+            Tier = "DSDéfense",
             DSCredits = 24,
             DSResourceBonus = 35,
             DSXPBonus = 30,
@@ -1758,7 +1758,7 @@ local MissionData = {
             MaxLevel = 45,
             Tier = "Ambulas",
             LinkName = "Ambulas",
-            Pic = "Ambulas_sigil_b.png",
+            Pic = "Ambulas sigil.png",
             Drops = {"Trinity"}
         }, {
             Node = "Naga",
@@ -1786,7 +1786,7 @@ local MissionData = {
             Enemy = "Grineer",
             MinLevel = 30,
             MaxLevel = 40,
-            Tier = "Defense3",
+            Tier = "Défense3",
             Other = "A"
         }, {
             Node = "Selkie",
@@ -1822,7 +1822,7 @@ local MissionData = {
             Enemy = "Grineer",
             MinLevel = 34,
             MaxLevel = 38,
-            Tier = "Spy3"
+            Tier = "Espionnage3"
         }, {
             Node = "Marid",
             Planet = "Sedna",
@@ -1863,7 +1863,7 @@ local MissionData = {
             Enemy = "Infesté",
             MinLevel = 35,
             MaxLevel = 45,
-            Tier = "DSDefense",
+            Tier = "DSDéfense",
             DSCredits = 16,
             DSResourceBonus = 25,
             DSXPBonus = 18,
@@ -1915,7 +1915,7 @@ local MissionData = {
             MaxLevel = 40,
             Tier = "Kela De Thaym",
             LinkName = "Kela De Thaym",
-            Pic = "KelaDeThaym_sigil_b.png",
+            Pic = "KelaDeThaym sigil.png",
             Drops = {"Saryn", "Kohmak Jumeaux"}
         }, {
             Node = "Brugia",
@@ -1943,7 +1943,7 @@ local MissionData = {
             Enemy = "Infesté",
             MinLevel = 30,
             MaxLevel = 40,
-            Tier = "Defense3",
+            Tier = "Défense3",
             Other = "C"
         }, {
             Node = "Naeglar",
@@ -1971,7 +1971,7 @@ local MissionData = {
             Enemy = "Infesté",
             MinLevel = 34,
             MaxLevel = 38,
-            Tier = "Salvage"
+            Tier = "RecuperationInfestee"
         }, {
             Node = "Saxis",
             Planet = "Eris",
@@ -2006,7 +2006,7 @@ local MissionData = {
             Enemy = "Infesté",
             MinLevel = 35,
             MaxLevel = 45,
-            Tier = "DSDefense",
+            Tier = "DSDéfense",
             DSCredits = 18,
             DSResourceBonus = 30,
             DSXPBonus = 23,
@@ -2028,19 +2028,19 @@ local MissionData = {
             DSWeaponBonus = 18,
             DSWeapon = 'Pistolets'
         }, {
-            Node = "Jordas Golem Assassinate",
+            Node = "Golem Jordas",
             Planet = "Eris",
             Type = "Assassinat",
             Tileset = "Vaisseau Infesté",
             Enemy = "Infesté",
             MinLevel = 32,
             MaxLevel = 34,
-            Tier = "Jordas Golem",
+            Tier = "Golem Jordas",
             LinkName = "Golem Jordas",
             Pic = "J3Golem.png",
             Drops = {"Atlas"}
         }, {
-            Node = "Mutalist Alad V Assassinate",
+            Node = "Alad V Mutaliste Assassinat",
             Planet = "Eris",
             Type = "Assassinat",
             Tileset = "Vaisseau Infesté",
@@ -2103,7 +2103,7 @@ local MissionData = {
             Enemy = "Grineer",
             MinLevel = 25,
             MaxLevel = 30,
-            Tier = "Defense3",
+            Tier = "Défense3",
             Other = "?"
         }, {
             Node = "Tycho",
@@ -2157,7 +2157,7 @@ local MissionData = {
             Enemy = "Grineer",
             MinLevel = 30,
             MaxLevel = 32,
-            Tier = "Defense3"
+            Tier = "Défense3"
         }, {
             Node = "Pago",
             Planet = "Forteresse Kuva",
@@ -2166,7 +2166,7 @@ local MissionData = {
             Enemy = "Grineer",
             MinLevel = 31,
             MaxLevel = 33,
-            Tier = "KuvaSpy"
+            Tier = "KuvaEspionnage"
         }, {
             Node = "Rotuma",
             Planet = "Forteresse Kuva",
@@ -2202,7 +2202,7 @@ local MissionData = {
             Enemy = "Corrompu",
             MinLevel = 10,
             MaxLevel = 15,
-            Tier = "VoidExterminate1"
+            Tier = "NeantExtermination1"
         }, {
             Node = "Hepit",
             Planet = "Néant",
@@ -2211,7 +2211,7 @@ local MissionData = {
             Enemy = "Corrompu",
             MinLevel = 10,
             MaxLevel = 15,
-            Tier = "VoidCapture1"
+            Tier = "NéantCapture1"
         }, {
             Node = "Taranis",
             Planet = "Néant",
@@ -2220,7 +2220,7 @@ local MissionData = {
             Enemy = "Corrompu",
             MinLevel = 10,
             MaxLevel = 15,
-            Tier = "VoidDefense1",
+            Tier = "NéantDéfense1",
             Other = "K"
         }, {
             Node = "Tiwaz",
@@ -2230,7 +2230,7 @@ local MissionData = {
             Enemy = "Corrompu",
             MinLevel = 20,
             MaxLevel = 25,
-            Tier = "VoidMDefense2"
+            Tier = "NéantMDéfense2"
         }, {
             Node = "Stribog",
             Planet = "Néant",
@@ -2239,7 +2239,7 @@ local MissionData = {
             Enemy = "Corrompu",
             MinLevel = 20,
             MaxLevel = 25,
-            Tier = "VoidSabotage2"
+            Tier = "NéantSabotage2"
         }, {
             Node = "Stribog",
             Planet = "Néant",
@@ -2248,7 +2248,7 @@ local MissionData = {
             Enemy = "Corrompu",
             MinLevel = 20,
             MaxLevel = 25,
-            Tier = "VoidCaches1",
+            Tier = "NéantCaches1",
             IgnoreInList = true
         }, {
             Node = "Ani",
@@ -2258,7 +2258,7 @@ local MissionData = {
             Enemy = "Corrompu",
             MinLevel = 20,
             MaxLevel = 25,
-            Tier = "VoidSurvie2"
+            Tier = "NéantSurvie2"
         }, {
             Node = "Ukko",
             Planet = "Néant",
@@ -2267,7 +2267,7 @@ local MissionData = {
             Enemy = "Corrompu",
             MinLevel = 30,
             MaxLevel = 35,
-            Tier = "VoidCapture3"
+            Tier = "NéantCapture3"
         }, {
             Node = "Oxomoco",
             Planet = "Néant",
@@ -2276,7 +2276,7 @@ local MissionData = {
             Enemy = "Corrompu",
             MinLevel = 30,
             MaxLevel = 35,
-            Tier = "VoidExterminate3"
+            Tier = "NéantExtermination3"
         }, {
             Node = "Belenus",
             Planet = "Néant",
@@ -2285,7 +2285,7 @@ local MissionData = {
             Enemy = "Corrompu",
             MinLevel = 30,
             MaxLevel = 35,
-            Tier = "VoidDefense3",
+            Tier = "NéantDéfense3",
             Other = "K"
         }, {
             Node = "Aten",
@@ -2295,7 +2295,7 @@ local MissionData = {
             Enemy = "Corrompu",
             MinLevel = 40,
             MaxLevel = 45,
-            Tier = "VoidMDefense4"
+            Tier = "NéantMDéfense4"
         }, {
             Node = "Marduk",
             Planet = "Néant",
@@ -2304,7 +2304,7 @@ local MissionData = {
             Enemy = "Corrompu",
             MinLevel = 40,
             MaxLevel = 45,
-            Tier = "VoidSabotage4"
+            Tier = "NéantSabotage4"
         }, {
             Node = "Marduk",
             Planet = "Néant",
@@ -2313,7 +2313,7 @@ local MissionData = {
             Enemy = "Corrompu",
             MinLevel = 40,
             MaxLevel = 45,
-            Tier = "VoidCaches2",
+            Tier = "NéantCaches2",
             IgnoreInList = true
         }, {
             Node = "Mithra",
@@ -2323,7 +2323,7 @@ local MissionData = {
             Enemy = "Corrompu",
             MinLevel = 40,
             MaxLevel = 45,
-            Tier = "VoidInterception4"
+            Tier = "NéantInterception4"
         }, {
             Node = "Mot",
             Planet = "Néant",
@@ -2332,9 +2332,9 @@ local MissionData = {
             Enemy = "Corrompu",
             MinLevel = 40,
             MaxLevel = 45,
-            Tier = "VoidSurvie4"
+            Tier = "NéantSurvie4"
         }, {
-            Node = "Phorid Alert",
+            Node = "Alerte Phorid",
             Planet = "Invasion",
             Type = "Assassinat",
             Tileset = "Astéroïde Grineer",
@@ -2343,365 +2343,62 @@ local MissionData = {
             MaxLevel = 0,
             Tier = "Phorid",
             LinkName = "Phorid",
-            Pic = "Phorid_sigil_b.png",
+            Pic = "Phorid sigil.png",
             Drops = {"Nyx"}
-        }, -- Empyrean
-        -- { Node = "Free Flight", Planet = "Proxima de la Terre", Type = "Landscape|Espace Libre", Tileset = "Espace Libre"},
-        {
-            Node = "Amas Posit",
-            Planet = "Proxima de la Terre",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 15,
-            MaxLevel = 20,
-            Tier = "EarthProxima",
-            FighterMinLevel = 1,
-            FighterMaxLevel = 3,
-            MaxFighters = 30,
-            MaxCrewships = 2,
-            Objectives = 0
-        }, {
-            Node = "Détroit Sover",
-            Planet = "Proxima de la Terre",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 20,
-            MaxLevel = 20,
-            Tier = "EarthProxima",
-            FighterMinLevel = 3,
-            FighterMaxLevel = 3,
-            MaxFighters = 30,
-            MaxCrewships = 2,
-            Objectives = 0
-        }, {
-            Node = "Ceinture Rian",
-            Planet = "Proxima de la Terre",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 17,
-            MaxLevel = 20,
-            Tier = "EarthProxima",
-            FighterMinLevel = 6,
-            FighterMaxLevel = 9,
-            MaxFighters = 30,
-            MaxCrewships = 2,
-            Objectives = 0
-        }, {
-            Node = "Satellites Phanghoul",
-            Planet = "Proxima de la Terre",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 20,
-            MaxLevel = 28,
-            Tier = "EarthProxima",
-            FighterMinLevel = 3,
-            FighterMaxLevel = 6,
-            MaxFighters = 30,
-            MaxCrewships = 2,
-            Objectives = 0
-        }, {
-            Node = "Amas Ogal",
-            Planet = "Proxima de la Terre",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 26,
-            MaxLevel = 30,
-            Tier = "EarthProxima",
-            FighterMinLevel = 9,
-            FighterMaxLevel = 12,
-            MaxFighters = 30,
-            MaxCrewships = 2,
-            Objectives = 0
-        }, {
-            Node = "Station Minhast",
-            Planet = "Proxima de la Terre",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 28,
-            MaxLevel = 33,
-            Tier = "EarthProxima",
-            FighterMinLevel = 12,
-            FighterMaxLevel = 15,
-            MaxFighters = 30,
-            MaxCrewships = 2,
-            Objectives = 0
-        }, {
-            Node = "Couloirs Jex",
-            Planet = "Proxima de la Terre",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 32,
-            MaxLevel = 38,
-            Tier = "EarthProxima",
-            FighterMinLevel = 13,
-            FighterMaxLevel = 17,
-            MaxFighters = 60,
-            MaxCrewships = 4,
-            Objectives = 1
-        }, {
-            Node = "Amas Bendar",
-            Planet = "Proxima de la Terre",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 38,
-            MaxLevel = 42,
-            Tier = "EarthProxima",
-            FighterMinLevel = 16,
-            FighterMaxLevel = 19,
-            MaxFighters = 60,
-            MaxCrewships = 4,
-            Objectives = 1
-        }, {
-            Node = "Temple Iota",
-            Planet = "Proxima de la Terre",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 45,
-            MaxLevel = 57,
-            Tier = "EarthProxima",
-            FighterMinLevel = 18,
-            FighterMaxLevel = 23,
-            MaxFighters = 60,
-            MaxCrewships = 4,
-            Objectives = 1
-        }, {
-            Node = "Ceinture Korms",
-            Planet = "Proxima de la Terre",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 43,
-            MaxLevel = 53,
-            Tier = "EarthProxima",
-            FighterMinLevel = 20,
-            FighterMaxLevel = 25,
-            MaxFighters = 60,
-            MaxCrewships = 4,
-            Objectives = 1,
-            ObjectiveDetails = 'Chance for Galleon Assassinate'
-        }, {
-            Node = "Passe Lupal",
-            Planet = "Proxima de Saturne",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 48,
-            MaxLevel = 56,
-            Tier = "SaturnProxima",
-            FighterMinLevel = 22,
-            FighterMaxLevel = 26,
-            MaxFighters = 60,
-            MaxCrewships = 4,
-            Objectives = 1
-        }, {
-            Node = "Creux Vila",
-            Planet = "Proxima de Saturne",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 62,
-            MaxLevel = 70,
-            Tier = "SaturnProxima",
-            FighterMinLevel = 27,
-            FighterMaxLevel = 30,
-            MaxFighters = 60,
-            MaxCrewships = 4,
-            Objectives = 1
-        }, {
-            Node = "Amas Mordo",
-            Planet = "Proxima de Saturne",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 55,
-            MaxLevel = 60,
-            Tier = "SaturnProxima",
-            FighterMinLevel = 24,
-            FighterMaxLevel = 26,
-            MaxFighters = 60,
-            MaxCrewships = 4,
-            Objectives = 1
-        }, {
-            Node = "Creux Nodo",
-            Planet = "Proxima de Saturne",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 54,
-            MaxLevel = 60,
-            Tier = "SaturnProxima",
-            FighterMinLevel = 22,
-            FighterMaxLevel = 25,
-            MaxFighters = 60,
-            MaxCrewships = 4,
-            Objectives = 1
-        }, {
-            Node = "Creux Spiro",
-            Planet = "Proxima de Saturne",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 58,
-            MaxLevel = 63,
-            Tier = "SaturnProxima",
-            FighterMinLevel = 25,
-            FighterMaxLevel = 28,
-            MaxFighters = 60,
-            MaxCrewships = 4,
-            Objectives = 1
-        }, {
-            Node = "Repos de Kasio",
-            Planet = "Proxima de Saturne",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 70,
-            MaxLevel = 75,
-            Tier = "SaturnProxima",
-            FighterMinLevel = 30,
-            FighterMaxLevel = 33,
-            MaxFighters = 90,
-            MaxCrewships = 6,
-            Objectives = 2,
-            ObjectiveDetails = '1 is an Asteroid Assassinate'
-        }, {
-            Node = "Amas Vand",
-            Planet = "Proxima de Saturne",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 65,
-            MaxLevel = 70,
-            Tier = "SaturnProxima",
-            FighterMinLevel = 29,
-            FighterMaxLevel = 32,
-            MaxFighters = 90,
-            MaxCrewships = 6,
-            Objectives = 1
-        }, {
-            Node = "Réseau Nsu",
-            Planet = "Proxima du Voile",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 80,
-            MaxLevel = 90,
-            Tier = "VeilProxima",
-            FighterMinLevel = 32,
-            FighterMaxLevel = 35,
-            MaxFighters = 90,
-            MaxCrewships = 6,
-            Objectives = 2
-        }, {
-            Node = "Tombe de Ganalen",
-            Planet = "Proxima du Voile",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 80,
-            MaxLevel = 90,
-            Tier = "VeilProxima",
-            FighterMinLevel = 35,
-            FighterMaxLevel = 57,
-            MaxFighters = 90,
-            MaxCrewships = 6,
-            Objectives = 2
-        }, {
-            Node = "Nuage R-9",
-            Planet = "Proxima du Voile",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 80,
-            MaxLevel = 90,
-            Tier = "VeilProxima",
-            FighterMinLevel = 40,
-            FighterMaxLevel = 43,
-            MaxFighters = 90,
-            MaxCrewships = 6,
-            Objectives = 2
-        }, {
-            Node = "Nuage H-2",
-            Planet = "Proxima du Voile",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 80,
-            MaxLevel = 90,
-            Tier = "VeilProxima",
-            FighterMinLevel = 38,
-            FighterMaxLevel = 41,
-            MaxFighters = 90,
-            MaxCrewships = 6,
-            Objectives = 2
-        }, {
-            Node = "Rya",
-            Planet = "Proxima du Voile",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 80,
-            MaxLevel = 90,
-            Tier = "VeilProxima",
-            FighterMinLevel = 34,
-            FighterMaxLevel = 36,
-            MaxFighters = 90,
-            MaxCrewships = 6,
-            Objectives = 2
-        }, {
-            Node = "Point Gian",
-            Planet = "Proxima du Voile",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 80,
-            MaxLevel = 90,
-            Tier = "VeilProxima",
-            FighterMinLevel = 35,
-            FighterMaxLevel = 37,
-            MaxFighters = 90,
-            MaxCrewships = 6,
-            Objectives = 2
-        }, {
-            Node = "Flexa",
-            Planet = "Proxima du Voile",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 80,
-            MaxLevel = 90,
-            Tier = "VeilProxima",
-            FighterMinLevel = 36,
-            FighterMaxLevel = 39,
-            MaxFighters = 90,
-            MaxCrewships = 6,
-            Objectives = 2,
-            ObjectiveDetails = '1 is a Galleon Assassinate'
-        }, {
-            Node = "Champs de Guerre Ruse",
-            Planet = "Proxima du Voile",
-            Type = "Escarmouche",
-            Tileset = "Espace Libre",
-            Enemy = "Grineer",
-            MinLevel = 80,
-            MaxLevel = 90,
-            Tier = "VeilProxima",
-            FighterMinLevel = 42,
-            FighterMaxLevel = 45,
-            MaxFighters = 90,
-            MaxCrewships = 6,
-            Objectives = 1,
-            ObjectiveDetails = '1 additional optional Derelict can spawn'
-        }
+        }, 
+        -- Empyrée
+        -- { Node = "Free Flight", Planet = "Proxima de la Terre", Type = "Paysage|Espace Libre", Tileset = "Espace Libre"},
+        
+        -- Proxima de la Terre
+        { Node = "Détroit Sover", Planet = "Proxima de la Terre", Type = "Escarmouche", Tileset = "Espace Libre", Enemy = "Grineer", MinLevel = 20, MaxLevel = 20, Tier = "EarthProxima", FighterMinLevel = 3, FighterMaxLevel = 3, MaxFighters = 30, MaxCrewships = 2, Objectives = 0},
+        { Node = "Amas Ogal", Planet = "Proxima de la Terre", Type = "Escarmouche", Tileset = "Espace Libre", Enemy = "Grineer", MinLevel = 26, MaxLevel = 30, Tier = "EarthProxima", FighterMinLevel = 9, FighterMaxLevel = 12, MaxFighters = 30, MaxCrewships = 2, Objectives = 0},
+        { Node = "Amas Bendar", Planet = "Proxima de la Terre", Type = "Escarmouche", Tileset = "Espace Libre", Enemy = "Grineer", MinLevel = 38, MaxLevel = 42, Tier = "EarthProxima", FighterMinLevel = 16, FighterMaxLevel = 19, MaxFighters = 60, MaxCrewships = 4, Objectives = 1},
+        { Node = "Temple Iota", Planet = "Proxima de la Terre", Type = "Escarmouche", Tileset = "Espace Libre", Enemy = "Grineer", MinLevel = 45, MaxLevel = 57, Tier = "EarthProxima", FighterMinLevel = 18, FighterMaxLevel = 23, MaxFighters = 60, MaxCrewships = 4, Objectives = 1},
+        { Node = "Ceinture Korms", Planet = "Proxima de la Terre", Type = "Escarmouche", Tileset = "Espace Libre", Enemy = "Grineer", MinLevel = 43, MaxLevel = 53, Tier = "EarthProxima", FighterMinLevel = 20, FighterMaxLevel = 25, MaxFighters = 60, MaxCrewships = 4, Objectives = 1, ObjectiveDetails = 'Chance pour l\'Assassinat du Gallion'},
+        
+        -- Proxima de Saturne
+        { Node = "Passe Lupal", Planet = "Proxima de Saturne", Type = "Escarmouche", Tileset = "Espace Libre", Enemy = "Grineer", MinLevel = 48, MaxLevel = 56, Tier = "SaturnProxima", FighterMinLevel = 22, FighterMaxLevel = 26, MaxFighters = 60, MaxCrewships = 4, Objectives = 1},
+        { Node = "Amas Mordo", Planet = "Proxima de Saturne", Type = "Escarmouche", Tileset = "Espace Libre", Enemy = "Grineer", MinLevel = 55, MaxLevel = 60, Tier = "SaturnProxima", FighterMinLevel = 24, FighterMaxLevel = 26, MaxFighters = 60, MaxCrewships = 4, Objectives = 1},
+        { Node = "Creux Nodo", Planet = "Proxima de Saturne", Type = "Escarmouche", Tileset = "Espace Libre", Enemy = "Grineer", MinLevel = 54, MaxLevel = 60, Tier = "SaturnProxima", FighterMinLevel = 22, FighterMaxLevel = 25, MaxFighters = 60, MaxCrewships = 4, Objectives = 1},
+        { Node = "Repos de Kasio", Planet = "Proxima de Saturne", Type = "Escarmouche", Tileset = "Espace Libre", Enemy = "Grineer", MinLevel = 70, MaxLevel = 75, Tier = "SaturnProxima", FighterMinLevel = 30, FighterMaxLevel = 33, MaxFighters = 90, MaxCrewships = 6, Objectives = 2, ObjectiveDetails = "L'un est un assassinat Astéroïde"},
+        { Node = "Amas Vand", Planet = "Proxima de Saturne", Type = "Escarmouche", Tileset = "Espace Libre", Enemy = "Grineer", MinLevel = 65, MaxLevel = 70, Tier = "SaturnProxima", FighterMinLevel = 29, FighterMaxLevel = 32, MaxFighters = 90, MaxCrewships = 6, Objectives = 1},
+        
+        -- Proxima du Voile
+        { Node = "Réseau Nsu", Planet = "Proxima du Voile", Type = "Escarmouche", Tileset = "Espace Libre", Enemy = "Grineer", MinLevel = 80, MaxLevel = 90, Tier = "VeilProxima", FighterMinLevel = 32, FighterMaxLevel = 35, MaxFighters = 90, MaxCrewships = 6, Objectives = 2},
+        { Node = "Nuage R-9", Planet = "Proxima du Voile", Type = "Escarmouche", Tileset = "Espace Libre", Enemy = "Grineer", MinLevel = 80, MaxLevel = 90, Tier = "VeilProxima", FighterMinLevel = 40, FighterMaxLevel = 43, MaxFighters = 90, MaxCrewships = 6, Objectives = 2},
+        { Node = "Nuage H-2", Planet = "Proxima du Voile", Type = "Escarmouche", Tileset = "Espace Libre", Enemy = "Grineer", MinLevel = 80, MaxLevel = 90, Tier = "VeilProxima", FighterMinLevel = 38, FighterMaxLevel = 41, MaxFighters = 90, MaxCrewships = 6, Objectives = 2},
+        { Node = "Flexa", Planet = "Proxima du Voile", Type = "Escarmouche", Tileset = "Espace Libre", Enemy = "Grineer", MinLevel = 80, MaxLevel = 90, Tier = "VeilProxima", FighterMinLevel = 36, FighterMaxLevel = 39, MaxFighters = 90, MaxCrewships = 6, Objectives = 2, ObjectiveDetails = '1 is a Galleon Assassinate'},
+        { Node = "Calabash", Planet = "Proxima du Voile", Type = "Extermination", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 45, MaxLevel = 49, Tier = "VeilProxima", FighterMinLevel = 45, FighterMaxLevel = 48, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Numina", Planet = "Proxima du Voile", Type = "Volatile", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 48, MaxLevel = 52, Tier = "VeilProximaVolatile", FighterMinLevel = 48, FighterMaxLevel = 52, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Arc d'Argent", Planet = "Proxima du Voile", Type = "Défense", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 51, MaxLevel = 55, Tier = "VeilProximaDefense", FighterMinLevel = 51, FighterMaxLevel = 55, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Erato", Planet = "Proxima du Voile", Type = "Orphix", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 54, MaxLevel = 58, Tier = "VeilProximaOrphix", FighterMinLevel = 55, FighterMaxLevel = 49, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Lu-Yan", Planet = "Proxima du Voile", Type = "Survie", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 57, MaxLevel = 60, Tier = "VeilProximaSurvie", FighterMinLevel = 59, FighterMaxLevel = 62, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Nuage Sabmir", Planet = "Proxima du Voile", Type = "Espionnage", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 57, MaxLevel = 60, Tier = "VeilProximaEspionnage", FighterMinLevel = 59, FighterMaxLevel = 62, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        
+        -- Proxima de Neptune
+        { Node = "Vecteur Arva", Planet = "Proxima de Neptune", Type = "Défense", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 25, MaxLevel = 28, Tier = "NeptuneProximaDefense", FighterMinLevel = 18, FighterMaxLevel = 20, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Mines de Nu-Gua", Planet = "Proxima de Neptune", Type = "Extermination", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 27, MaxLevel = 30, Tier = "NeptuneProxima", FighterMinLevel = 20, FighterMaxLevel = 24, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Protection de Mammon", Planet = "Proxima de Neptune", Type = "Orphix", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 31, MaxLevel = 34, Tier = "NeptuneProximaOrphix", FighterMinLevel = 27, FighterMaxLevel = 32, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Amas Brom", Planet = "Proxima de Neptune", Type = "Espionnage", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 32, MaxLevel = 35, Tier = "NeptuneProximaEspionnage", FighterMinLevel = 18, FighterMaxLevel = 20, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Glaciers d'Enkidu", Planet = "Proxima de Neptune", Type = "Survie", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 39, MaxLevel = 42, Tier = "NeptuneProximaSurvie", FighterMinLevel = 23, FighterMaxLevel = 28, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Étreinte du Souverain", Planet = "Proxima de Neptune", Type = "Volatile", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 33, MaxLevel = 36, Tier = "NeptuneProximaVolatile", FighterMinLevel = 31, FighterMaxLevel = 36, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        
+        -- Proxima de Pluton
+        { Node = "Émissaire Khufu", Planet = "Proxima de Pluton", Type = "Orphix", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 35, MaxLevel = 38, Tier = "PlutoProximaOrphix", FighterMinLevel = 32, FighterMaxLevel = 35, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Sept Sirènes", Planet = "Proxima de Pluton", Type = "Extermination", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 37, MaxLevel = 40, Tier = "PlutoProxima", FighterMinLevel = 45, FighterMaxLevel = 48, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Passage d'Obol", Planet = "Proxima de Pluton", Type = "Défense", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 39, MaxLevel = 42, Tier = "PlutoProximaDefense", FighterMinLevel = 45, FighterMaxLevel = 48, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Marge de Profit", Planet = "Proxima de Pluton", Type = "Volatile", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 41, MaxLevel = 44, Tier = "PlutoProximaVolatile", FighterMinLevel = 45, FighterMaxLevel = 48, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Axe du Pèlerin", Planet = "Proxima de Pluton", Type = "Espionnage", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 43, MaxLevel = 46, Tier = "PlutoProximaEspionnage", FighterMinLevel = 44, FighterMaxLevel = 48, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Champ de Fenton", Planet = "Proxima de Pluton", Type = "Survie", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 50, MaxLevel = 53, Tier = "PlutoProximaSurvie", FighterMinLevel = 38, FighterMaxLevel = 44, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+
+        -- Proxima de Vénus
+        { Node = "Echo Bifrost", Planet = "Proxima de Vénus", Type = "Extermination", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 15, MaxLevel = 18, Tier = "VenusProxima", FighterMinLevel = 4, FighterMaxLevel = 8, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Protection de Balise", Planet = "Proxima de Vénus", Type = "Volatile", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 17, MaxLevel = 20, Tier = "VenusProximaVolatile", FighterMinLevel = 6, FighterMaxLevel = 10, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Orvin-Haarc", Planet = "Proxima de Vénus", Type = "Espionnage", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 19, MaxLevel = 22, Tier = "VenusProximaEspionnage", FighterMinLevel = 9, FighterMaxLevel = 13, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Étendue Désolée", Planet = "Proxima de Vénus", Type = "Survie", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 22, MaxLevel = 25, Tier = "VenusProximaSurvie", FighterMinLevel = 14, FighterMaxLevel = 17, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Détroit de Vesper", Planet = "Proxima de Vénus", Type = "Orphix", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 21, MaxLevel = 24, Tier = "VenusProximaOrphix", FighterMinLevel = 12, FighterMaxLevel = 16, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+        { Node = "Gloire Perdue", Planet = "Proxima de Vénus", Type = "Défense", Tileset = "Espace Libre", Enemy = "Corpus", MinLevel = 23, MaxLevel = 26, Tier = "VenusProximaDefense", FighterMinLevel = 14, FighterMaxLevel = 18, MaxFighters = 0, MaxCrewships = 0, Objectives = 0},
+
     },
     by = {Name = {}},
     dictionary = {},
@@ -2767,7 +2464,7 @@ for i, obj in ipairs(MissionData["MissionDetails"]) do
         ["Corpus"] = "IconCorpusB.svg",
         ["Infesté"] = "IconInfestéB.svg",
         ["Corrompu"] = "IconOrokinB.svg",
-        ["Feux Croisés"] = "CrossfireMissionIcon.png"
+        ["Feux Croisés"] = "Feux Croises.png"
     })[type(obj.Enemy) == type {} and
                            (obj.Enemy[1] ~= 'Infesté' and 'Feux Croisés' or
                                'Infesté') or obj.Enemy]

@@ -11,12 +11,13 @@
 --  @alias		p
 --  @author     [[User:ADDRMeridan]]
 --  @attribution	[[User:FINNER|FINNER]] (Wiki EN)
---  @attribution	[[User:Celphalon Scientia|Celphalon Scientia]] (Wiki EN)
+--  @attribution	[[User:Cephalon Scientia|Cephalon Scientia]] (Wiki EN)
 --	@attribution	[[User:Gigamicro|Gigamicro]] (Wiki EN)
 --  @image		PostureModIcon.png
 --  @require	[[Module:Stances/data]]
 --	@require	[[Module:Icon]]
 --	@require	[[Module:Shared]]
+--	@require	[[Module:Tooltip]]
 --  @release	stable
 --  <nowiki>
 local p = {};
@@ -24,6 +25,7 @@ local p = {};
 local StanceData = mw.loadData("Module:Stances/data");
 local ICON = require("Module:Icon");
 local Shared = require("Module:Shared"); -- TODO: Replace this with M:Table as indexCount() is suitable as an extension of table STL
+local TT = require("Module:Tooltip")
 
 -- ordering determines what row they appear in stance table
 local Combos = {
@@ -199,7 +201,7 @@ local function buildComboIcon(Name, Combo, Num, inputIconData)
     end
 
     icon =
-        '<div style="text-align: center; vertical-align: top; white-space: nowrap; display: inline-block; padding: 0.15em 0.15em 0;">' ..
+        '<div style="text-align: center; vertical-align: top; white-space: nowrap; display: inline-block; padding: 1% 1%;">' ..
             ICON._Melee(iconShape, iconType, 'x19') .. iconNote .. icon ..
             '</div>';
     return icon;
@@ -212,70 +214,59 @@ local function stancelegend()
     return {
         -- legend header and collapsible element
         table.concat {'\n|-', '\n! colspan="'}, table.concat {
-            '" style="text-align:center; padding: 0.2em 0.5em 0.3em 0.5em;" | <small>',
-            ICON._Melee('DEFAULT', '360', 'x19'),
-            '&nbsp;360°&nbsp;Attack&nbsp;&nbsp;&nbsp;',
-            ICON._Melee('DEFAULT', 'Slam', 'x19'),
-            '&nbsp;Slam&nbsp;Attack&nbsp;&nbsp;&nbsp;',
-            ICON._Melee('DEFAULT', 'Ranged', 'x19'), '&nbsp;Ranged&nbsp;Attack',
+            '" style="text-align:center; padding: 1%;" | <small>Attaque à 360° ',
+            ICON._Melee('DEFAULT', '360', 'x19'), ' Frappe au Sol ',
+            ICON._Melee('DEFAULT', 'FRAPPE AU SOL', 'x19'),
+            ' Attaque à Distance ', ICON._Melee('DEFAULT', 'DISTANCE', 'x19'),
             '</small>\n|-', '\n| colspan="'
         }, table.concat {
             '" |',
-            '<div align="right"><div class="mw-customtoggle-stance button">View Full Legend</div></div>',
+            '<div align="right"><div class="mw-customtoggle-stance button posture-toggle">Voir la légende complète</div></div>',
             '<div id="mw-customcollapsible-stance" class="mw-collapsible mw-collapsed">',
 
             -- Key Inputs table
-            '\n{| style="margin: -0.5em 0em 0.8em 0.2em" |', '\n|+ Key Inputs',
-            '\n| colspan="1"  style="text-align:left; padding: 0.3em 0.1em 0em;" | <small>',
+            '\n{| class="posture-legend-table" |', '\n |+ Touches',
+            '\n| colspan="1"  style="text-align:left; padding: 1%;" | <small>',
             ICON._Melee('DEFAULT', '', 'x19'),
-            '&nbsp;Basic Melee&nbsp; (PC default LMB or E)</small>', '\n|-',
-            '\n| colspan="1"  style="text-align:left; padding: 0.3em 0.1em 0em;" | <small>',
-            ICON._Melee('Heavy', '', 'x19'),
-            '&nbsp;[[Melee#Heavy Attack|Heavy Attack]]&nbsp; (PC default MMB)</small>',
-            '\n|-',
-            '\n| colspan="1"  style="text-align:left; padding: 0.3em 0.1em 0em;" | <small>',
+            ' Attaque de Mêlée par Défaut</small>', '\n|-',
+            '\n| colspan="1"  style="text-align:left; padding: 1%;" | <small>',
+            ICON._Melee('ATTAQUE LOURDE', '', 'x19'),
+            ' [[Mêlée#Attaque Lourde|Attaque Lourde]]</small>', '\n|-',
+            '\n| colspan="1"  style="text-align:left; padding: 1%" | <small>',
             ICON._Melee('Block', '', 'x19'),
-            '&nbsp;[[Melee#Blocking|Block]]&nbsp; (PC default RMB)</small>',
-            '\n|-',
-            '\n| colspan="1"  style="text-align:left; padding: 0.3em 0.1em 0em;" | <small>',
-            ICON._Melee('Up', '', 'x19'),
-            '&nbsp;Forward Movement&nbsp; (PC default W)</small>', '\n|}',
-
-            -- Multipliers and Hits table
-            '\n{| style="margin: -0.5em 0em 0.8em 0.2em" |',
-            '\n|+ Multipliers and Hits',
-            '\n| colspan="1"  style="text-align:left; padding: 0.3em 0.1em 0em;" | <small>',
+            ' [[Mêlée#Parer|Parade]]</small>', '\n|-',
+            '\n| colspan="1"  style="text-align:left; padding: 1%;" | <small>',
+            ICON._Melee('Up', '', 'x19'), ' Déplacement en Avant</small>',
+            '\n|}', -- Multipliers and Hits table
+            '\n{| class="posture-legend-table" |',
+            '\n|+ Multiplicateurs et Nbr. de Coups',
+            '\n| colspan="1"  style="text-align:left; padding: 1%;" | <small>',
             buildComboIcon('Legend', 'Damage', 1),
-            '&nbsp;Attack does double damage&nbsp;</small>', '\n|-',
-            '\n| colspan="1"  style="text-align:left; padding: 0.3em 0.1em 0em;" | <small>',
+            ' Attaque infligeant le double de dégâts</small>', '\n|-',
+            '\n| colspan="1"  style="text-align:left; padding: 1%;" | <small>',
             buildComboIcon('Legend', 'Hits', 1),
-            '&nbsp;Attack hits twice&nbsp;</small>', '\n|}',
+            ' Attaque touchant deux fois</small>', '\n|}',
 
             -- Exclusive Procs table
-            '\n{| style="margin: -0.5em 0em 0.8em 0.2em" |',
-            '\n|+ Exclusive Procs',
-            '\n| colspan="1"  style="text-align:left; padding: 0.3em 0.1em 0em;" | <small>',
+            '\n{| class="posture-legend-table" |',
+            '\n|+ [[Effet de Statut|Procs]] Exclusifs',
+            '\n| colspan="1"  style="text-align:left; padding: 1%;" | <small>',
             ICON._Proc('Impact', '', '', '', ''),
-            '&nbsp;Impact or Stagger&nbsp;</small>', '\n|-',
-            '\n| colspan="1"  style="text-align:left; padding: 0.3em 0.1em 0em;" | <small>',
-            ICON._Proc('Knockdown', '', '', '', ''),
-            '&nbsp;Knockdown&nbsp;</small>', '\n|-',
-            '\n| colspan="1"  style="text-align:left; padding: 0.3em 0.1em 0em;" | <small>',
-            ICON._Proc('Lifted', '', '', '', ''), '&nbsp;Lifted&nbsp;</small>',
+            ' Impact ou Déstabilisation</small>', '\n|-',
+            '\n| colspan="1"  style="text-align:left; padding: 1%;" | <small>',
+            ICON._Proc('Renversement', '', '', '', ''), ' Renversement</small>',
             '\n|-',
-            '\n| colspan="1"  style="text-align:left; padding: 0.3em 0.1em 0em;" | <small>',
-            ICON._Proc('Ragdoll', '', '', '', ''),
-            '&nbsp;Ragdoll&nbsp;</small>', '\n|-',
-            '\n| colspan="1"  style="text-align:left; padding: 0.3em 0.1em 0em;" | <small>',
-            ICON._Proc('Finisher', '', '', '', ''),
-            '&nbsp;Front, Back, or Ground [[Finisher]]&nbsp;</small>', '\n|-',
-            '\n| colspan="1"  style="text-align:left; padding: 0.15em 0.2em 0.15em;" | <small>',
-            ICON._Proc('Impair', '', '', '', ''),
-            '&nbsp;Impair ([[Conclave|PvP]] only)&nbsp;</small>', '\n|}</div>',
-
-            '\n{|',
-            '\n| colspan="2" style="text-align:center; border:none; padding: 0 0 0.25em 0.25em;" | <small><i>Shaded rows are combos shared across all stances of the weapon type.</i></small>',
-            '\n|}'
+            '\n| colspan="1"  style="text-align:left; padding: 1%;" | <small>',
+            ICON._Proc('Suspendu', '', '', '', ''), ' Suspendu</small>', '\n|-',
+            '\n| colspan="1"  style="text-align:left; padding: 1%;" | <small>',
+            ICON._Proc('Projeter', '', '', '', ''), ' Projection</small>',
+            '\n|-',
+            '\n| colspan="1"  style="text-align:left; padding: 1%;" | <small>',
+            ICON._Proc('Brut', '', '', '', ''), ' [[Coup de Grâce]]</small>',
+            '\n|-',
+            '\n| colspan="1"  style="text-align:left; padding: 1%;" | <small>',
+            ICON._Proc('Diminuer', '', '', '', ''),
+            ' Diminuer ([[Conclave|PvP]] uniquement)</small>', '\n|}</div>'
         }
     };
 end
@@ -446,9 +437,9 @@ local function buildComboRow(stanceData, comboType)
     local rowSpan = 2;
     local lineHeight = 50;
     local newLine = true;
-    local color = 'rgba(169,182,206,0.6)';
+    local color = 'rgba(65,85,143,0.16)';
 
-    if stanceData[2][comboType] then color = 'rgba(240,236,247,0.6)'; end
+    if stanceData[2][comboType] then color = 'rgba(65,85,143,0.16)'; end
 
     -- required preliminary keys/movements for a combo
     local keysSwitch = {
@@ -512,7 +503,6 @@ local function buildComboRow(stanceData, comboType)
 
     -- neutral and heavy combos don't have required preliminary key inputs
     if comboType == Combos[1] or comboType == Combos[5] then
-        rowSpan = 1;
         lineHeight = 100;
         newLine = false;
     end
@@ -521,23 +511,31 @@ local function buildComboRow(stanceData, comboType)
     table.insert(ret, comboData.Name)
     table.insert(ret, '" style="background-color:')
     table.insert(ret, color)
-    table.insert(ret, '"')
-    table.insert(ret, '\n| style="padding: 0.75em 0.5em; line-height: ')
-    table.insert(ret, lineHeight)
+    table.insert(ret, '"\n| style="padding: 1% 0; line-height: ')
+    if (newLine) then
+        table.insert(ret, lineHeight * 2)
+    else
+        table.insert(ret, lineHeight)
+    end
     table.insert(ret, '%; border-bottom: none;" | ')
     table.insert(ret, tooltipSwitch[comboType])
     table.insert(ret, '<b>')
     table.insert(ret, comboData.Name)
     table.insert(ret, '</b></span>')
 
+    -- if combo has required preliminary key inputs, add them
+    if newLine then
+        table.insert(ret, '<br/>')
+        table.insert(ret, keysSwitch[comboType]())
+    end
+
     for j = 1, maxCols do
         local bRight = ' border-right: none;';
         if j == maxCols then bRight = ''; end
-        table.insert(ret, '\n| rowspan = "')
-        table.insert(ret, rowSpan)
+        table.insert(ret, '\n| ')
         if j <= numIcons then
             table.insert(ret,
-                         '" style="vertical-align:top; text-align:center; border-left: none;')
+                         'style="vertical-align:top; text-align:center; border-left: none;')
             table.insert(ret, bRight)
             table.insert(ret, '" | ')
             table.insert(ret, buildComboIcon(nil, nil, nil,
@@ -551,9 +549,7 @@ local function buildComboRow(stanceData, comboType)
     end
 
     -- displaying combo animation length in seconds
-    table.insert(ret, '\n| rowspan = "')
-    table.insert(ret, rowSpan)
-    table.insert(ret, '" style="padding: 0.75em 0.5em; line-height: ')
+    table.insert(ret, '\n| style="padding: 1% 0; line-height: ')
     table.insert(ret, lineHeight)
     if comboData["Duration"] ~= nil then
         table.insert(ret, '%; border-bottom: none;" |')
@@ -564,34 +560,11 @@ local function buildComboRow(stanceData, comboType)
     end
 
     -- display average damage multiplier per second
-    table.insert(ret, '\n| rowspan = "')
-    table.insert(ret, rowSpan)
-    table.insert(ret, '" style="padding: 0.75em 0.5em; line-height: ')
+    table.insert(ret, '\n| style="padding: 1% 0; line-height: ')
     table.insert(ret, lineHeight)
     table.insert(ret, '%; border-bottom: none;" |')
     table.insert(ret, calcAvgDmgMulti(comboData))
     table.insert(ret, '%/s')
-
-    -- if combo has required preliminary key inputs, add a row below to display the inputs
-    if newLine then
-        table.insert(ret, '\n|- style="background-color:')
-        table.insert(ret, color)
-        table.insert(ret, '"')
-        if comboType == Combos[5] or comboType == Combos[6] or comboType ==
-            Combos[7] or comboType == Combos[8] or comboType == Combos[9] then
-            table.insert(ret,
-                         '\n| style="vertical-align: top; padding: 0.25em 0 0.75em; line-height: ')
-            table.insert(ret, lineHeight)
-            table.insert(ret, '%; text-align: center; border-top: none;" |')
-        else
-            table.insert(ret,
-                         '\n| style="vertical-align: top; padding: 0 0 0.25em; line-height: ')
-            table.insert(ret, lineHeight)
-            table.insert(ret, '%; text-align: center; border-top: none;" |')
-        end
-
-        table.insert(ret, keysSwitch[comboType]())
-    end
 
     return table.concat(ret)
 end
@@ -614,13 +587,13 @@ local function buildStanceTable(stanceName)
         local maxCols = getMaxCols(stanceData[1]);
 
         ret = {
-            '\n{| class="foundrytable" style="font-family:Roboto; text-align:left; max-width:100%;"',
+            '\n{| class="foundrytable" style="white-space: normal; word-break: keep-all; min-width: 70%;"',
             '\n|-',
-            '\n! style="text-align:center; padding: 0 0.5em;" | Nom du [[Mêlée|Combo]]',
-            '\n! style="text-align:center; padding: 0 0.5em;" colspan="',
-            maxCols, '" | [[Posture#Combos de Mêlée|Combinaison de Boutons]]',
-            '\n! style="text-align:center; padding: 0 0.5em;" | Durée',
-            '\n! style="text-align:center; padding: 0 0.5em;" | Multiplicateur de\nDégâts Moyen/s'
+            '\n! style="text-align:center; padding: 0 5px;" | Nom du [[Mêlée|Combo]]',
+            '\n! style="text-align:center; padding: 0 5px;" colspan="', maxCols,
+            '" | [[Posture#Combos de Mêlée|Combinaison de Boutons]]',
+            '\n! style="text-align:center; padding: 0 5px; white-space: nowrap;" | Durée',
+            '\n! style="text-align:center; padding: 0 5px;" | Multiplicateur de\nDégâts Moyen/s'
         }
 
         for _, comboType in ipairs(Combos) do
@@ -650,6 +623,40 @@ function p.buildStanceTable(frame)
     return ret
 end
 
+--- Build Stances table by weapon type
+-- @function    p.buildStanceTableByWeaponType
+-- @return      {string} Stance table in wikitext
+function p.buildStanceTableByWeaponType()
+
+    -- Gather by weapon type the stances tooltip
+    local stancesByWeaponType = {}
+    for stcName, stcData in Shared.skpairs(StanceData) do
+        local stcWpType = stcData.WeaponType
+        if (stcWpType ~= nil) then
+            if (stancesByWeaponType[stcWpType] == nil) then
+                stancesByWeaponType[stcWpType] = {}
+            end
+            table.insert(stancesByWeaponType[stcWpType],
+                         TT._tooltipText(stcName, 'Mod'))
+        end
+    end
+
+    local ret = {'\n<div class="posturesByWeaponType">'}
+    for wpType, stancesTTArray in Shared.skpairs(stancesByWeaponType) do
+        table.insert(ret,
+                     '<div class="box"><span class="weaponType">[[:Category:')
+        table.insert(ret, wpType)
+        table.insert(ret, '|')
+        table.insert(ret, wpType)
+        table.insert(ret, ']]</span><ul class="mod-list"><li>')
+        table.insert(ret, table.concat(stancesTTArray, '</li><li>'))
+        table.insert(ret, '</li></ul></div>')
+    end
+    table.insert(ret, '</div>')
+
+    return table.concat(ret)
+end
+
 --- Builds PvE stance comparison table.
 --  @function		p.buildCompTable
 --  @param			{string} displayAllCombos
@@ -669,16 +676,16 @@ function p.buildCompTable(frame)
     local tHeader = table.concat({
         '\n{|class="foundrytable listtable sortable" style="font-family:Roboto; text-align:left; max-width:100%;"',
         '\n|-',
-        '\n! style="text-align:center; padding: 0 0.5em;" | Stance<br/>Name',
-        '\n! style="text-align:center; padding: 0 0.5em;" | Weapon<br/>Type',
-        '\n! style="text-align:center; padding: 0 0.5em;" | [[Melee|Combo]]',
-        '\n! style="text-align:center; padding: 0 0.5em;" | Combo Name',
-        '\n! style="text-align:center; padding: 0 0.5em;" | Length',
-        '\n! style="text-align:center; padding: 0 0.5em;" | Total<br/>Combo<br/>Gain',
-        '\n! style="text-align:center; padding: 0 0.5em;" | Total<br/>Dmg<br/>Multi',
-        '\n! style="text-align:center; padding: 0 0.5em;" | Total<br/>Slash<br/>Proc<br/>Multi',
-        '\n! style="text-align:center; padding: 0 0.5em;" | Total<br/>Multi',
-        '\n! style="text-align:center; padding: 0 0.5em;" | Avg<br/>Dmg<br/>Multi/s',
+        '\n! style="text-align:center; padding: 0 1%;" | Stance<br/>Name',
+        '\n! style="text-align:center; padding: 0 1%;" | Weapon<br/>Type',
+        '\n! style="text-align:center; padding: 0 1%;" | [[Melee|Combo]]',
+        '\n! style="text-align:center; padding: 0 1%;" | Combo Name',
+        '\n! style="text-align:center; padding: 0 1%;" | Length',
+        '\n! style="text-align:center; padding: 0 1%;" | Total<br/>Combo<br/>Gain',
+        '\n! style="text-align:center; padding: 0 1%;" | Total<br/>Dmg<br/>Multi',
+        '\n! style="text-align:center; padding: 0 1%;" | Total<br/>Slash<br/>Proc<br/>Multi',
+        '\n! style="text-align:center; padding: 0 1%;" | Total<br/>Multi',
+        '\n! style="text-align:center; padding: 0 1%;" | Avg<br/>Dmg<br/>Multi/s',
         '\n|-'
     });
 

@@ -349,8 +349,8 @@ function p.byRarity(frame)
     -- Now we can actually format the table
     -- Starting with all the column headers
     local tableStr = {'{| class="article-table"'}
-    local col1 = '\n! style="width:33%;text-align:center;" | Common'
-    local col2 = '\n! style="width:33%;text-align:center;" | Uncommon'
+    local col1 = '\n! style="width:33%;text-align:center;" | Commune'
+    local col2 = '\n! style="width:33%;text-align:center;" | Inhabituelle'
     local col3 = '\n! style="width:33%;text-align:center;" | Rare'
     table.insert(tableStr, (col1 .. col2 .. col3 .. '\n|-' .. '\n|'))
     -- Then go through each rarity

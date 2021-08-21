@@ -322,33 +322,33 @@ local function MissionsBy(B, M)
     })[B],
                     "\n|+Il y a un total de " ..
                         Shared.tableCount(MissionData.by[B][M]) .. (({
-        -- ['Node'             ] = M.." Missions.",--name
-        -- ['LinkName'         ] = M.." Missions.",
-        -- ['Pic'              ] = M.." Missions.",--single match
-        ['IsArchwing'] = " Missions [[Archwing]].",
-        ['IsDarkSector'] = " Missions [[Dark Sector]].",
-        ['IsCrossfire'] = " Missions [[Feux Croisés]].", -- assume true
+        -- ['Node'             ] = " missions " .. M,--name
+        -- ['LinkName'         ] = " missions " .. M,
+        -- ['Pic'              ] = " missions " .. M,--single match
+        ['IsArchwing'] = " missions [[Archwing]].",
+        ['IsDarkSector'] = " missions [[Dark Sector]].",
+        ['IsCrossfire'] = " missions [[Feux Croisés]].", -- assume true
 
-        ['FighterMaxLevel'] = ' max level ' .. M .. " Missions.",
-        ['MaxLevel'] = ' max level ' .. M .. " Missions.",
-        ['FighterMinLevel'] = ' min level ' .. M .. " Missions.",
-        ['MinLevel'] = ' min level ' .. M .. " Missions.", -- unlikely but whatever
+        ['FighterMaxLevel'] = ' max level ' .. M .. " missions.",
+        ['MaxLevel'] = ' max level ' .. M .. " missions.",
+        ['FighterMinLevel'] = ' min level ' .. M .. " missions.",
+        ['MinLevel'] = ' min level ' .. M .. " missions.", -- unlikely but whatever
 
-        ['Enemy'] = " Missions contre " .. M,
-        ['Tier'] = " Mission de tier " .. M,
-        ['Planète'] = " Missions sur " .. M,
-        ['Environnement'] = " Missions sur l'environnement " .. M,
-        ['Type'] = " Missions " .. DropTables.linkType(M),
-        ['Drops'] = " Missions qui permettent d'obtenir " .. M
+        ['Enemy'] = " missions contre " .. M,
+        ['Tier'] = " missions de tier " .. M,
+        ['Planète'] = " missions sur " .. M,
+        ['Environnement'] = " missions sur l'environnement " .. M,
+        ['Type'] = " missions " .. DropTables.linkType(M),
+        ['Drops'] = " missions qui permettent d'obtenir " .. M
 
-        -- ['DSWeapon'         ] = M.." Missions.",
-        -- ['DSResourceBonus'  ] = M.." Missions.",
-        -- ['DSCredits'        ] = M.." Missions.",
-        -- ['DSXPBonus'        ] = M.." Missions.",
-        -- ['DSWeaponBonus'    ] = M.." Missions.",--unlikely to be used (numbers)
+        -- ['DSWeapon'         ] = M.." missions.",
+        -- ['DSResourceBonus'  ] = M.." missions.",
+        -- ['DSCredits'        ] = M.." missions.",
+        -- ['DSXPBonus'        ] = M.." missions.",
+        -- ['DSWeaponBonus'    ] = M.." missions.",--unlikely to be used (numbers)
 
-        -- ['Other'            ] = M.." Missions.",--what does this even signify (letters, letter/letter/letter)
-    })[B] or (' ' .. M .. ' ' .. B .. ' Missions')))
+        -- ['Other'            ] = " missions sur" .. M,--what does this even signify (letters, letter/letter/letter)
+    })[B] or ( " missions sur " .. ' ' .. M)))
 end
 
 local function FewMissionsBy(B, M)
@@ -598,7 +598,7 @@ local function FewMissionsBy(B, M)
     } -- default
 
     if Shared.contains({
-        'Earth Proxima', 'Saturn Proxima', 'Veil Proxima', 'Skirmish'
+        'Proxima de la Terre', 'Proxima de Saturne', 'Proxima du Voile', 'Proxima de Vénus', 'Proxima de Neptune', 'Proxima de Pluton', 'Escarmouche', 
     }, M) then
         local b = 0;
         for i, v in ipairs(Header) do
@@ -609,7 +609,7 @@ local function FewMissionsBy(B, M)
         end
         table.insert(Header, b, {
             '10',
-            'Fighter Level',
+            'Niveaux des Chasseurs Level',
             cell = function(this, mission)
                 return
                     '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
@@ -622,7 +622,7 @@ local function FewMissionsBy(B, M)
         Header[b + 1][1] = '10' -- Header[b+1][1]-10 ..''
         table.insert(Header, {
             '5',
-            'Max Fighters',
+            'Chasseurs Max',
             cell = function(this, mission)
                 return
                     '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
@@ -631,7 +631,7 @@ local function FewMissionsBy(B, M)
         })
         table.insert(Header, {
             '5',
-            'Max Crewships',
+            'Transporteurs Max',
             cell = function(this, mission)
                 return
                     '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
@@ -640,7 +640,7 @@ local function FewMissionsBy(B, M)
         })
         table.insert(Header, {
             '5',
-            'Other Objective',
+            'Autres Objectifs',
             cell = function(this, mission)
                 return
                     '\n| style=" background-color:rgba(65,85,143,0.16); font-size:12px; border:1px solid black;"|' ..
@@ -661,7 +661,7 @@ local function FewMissionsBy(B, M)
         end
         table.insert(Header, b, {
             '15',
-            'Rewards',
+            'Récompenses',
             cell = function(this, mission)
                 local numDrops = Shared.tableCount(mission.Drops)
                 local r = ''
@@ -941,7 +941,7 @@ function p.getMissionsOnTileSetX(frame)
 
     local result = tHeader .. tBody
     result = result .. "\n|+Il y a un total de " .. Shared.tableCount(data) ..
-                 " Missions sur l'Environnement" .. MTileset .. "\n|}"
+                 " missions sur l'environnement " .. MTileset .. "\n|}"
 
     return result
 end

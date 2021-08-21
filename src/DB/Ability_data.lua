@@ -1530,11 +1530,91 @@ local AbilityData = {
             User = "Saryn",
             UserType = "Warframe"
         },
+        -- Sevagoth
+        ["Récolte"] = {
+        	Cost = 25,
+        	Key = 1,
+        	Description = "L'Ombre de Sevagoth vole et massacre les ennemis sur son passage. Les survivants subissent des Dégâts sur la durée par Moisson Mortelle. Les morts remplissent le Puits des Âmes.",
+        	Image = "ReapModx256.png",
+        	Name = "Récolte",
+        	Icon = "Reap130x.png",
+        	User = "Sevagoth",
+        	UserType = "Warframe"
+        },
+        ["Semis"] = {
+        	Cost = 50,
+        	Key = 2,
+        	Description = "Plantez une graine de mort dans les cibles proches pour drainer leur force vitale. Récoltez ce qui a été semé pour faire exploser les ennemis affectés, infligeant un pourcentage de leur Santé sous forme de Dégâts radiaux. Les morts remplissent le Puits des Âmes.",
+        	Image = "SowModx256.png",
+        	Name = "Semis",
+        	Icon = "Sowx130.png",
+        	User = "Sevagoth",
+        	UserType = "Warframe"
+        },
+        ["Linceul"] = {
+        	Cost = 50,
+        	Key = 3,
+        	Description = "Invoquez une onde radiale qui piège et ralentit les ennemis, siphonnant leur force vitale pour le Puits des Âmes. Les alliés touchés volent de la Santé à chaque attaque.",
+        	Image = "GloomModx256.png",
+        	Name = "Linceul",
+        	Icon = "Gloomx130.png",
+        	User = "Sevagoth",
+        	UserType = "Warframe"
+        },
+        ["Ombre Exaltée"] = {
+        	Cost = 0,
+        	Key = 4,
+        	Description = "Lorsque le Puits des Âmes est rempli à plus de 75%, la forme d'Ombre de Sevagoth est prête à être libérée. Déchirez les ennemis avec une collection de Pouvoirs axés sur la Mêlée.",
+        	Image = "ExaltedShadowModx256.png",
+        	Name = "Ombre Exaltée",
+        	Icon = "ExaltedShadowx130.png",
+        	User = "Sevagoth",
+        	UserType = "Warframe"
+        },
+        
+	  -- Ombre de Sevagoth
+	  ["Étreinte"] = {
+	    Cost = 25,
+	    Key = 1,
+	    Description = "Des mains fantomatiques rassemblent les ennemis en une masse difforme.",
+	    Image = "EmbraceModx256.png",
+	    Icon = "Embracex130.png",
+	    Name = "Étreinte",
+	    Warframe = "Ombre de Sevagoth",
+	  },
+	  ["Ravage (Capacité)"] = {
+	    Cost = 50,
+	    Key = 2,
+	    Description = "Foncez à travers les ennemis et arrachez leurs âmes pour soigner l'Ombre.",
+	    Image = "ConsumeModx256.png",
+	    Icon = "Consume130x.png",
+	    Name = "Ravage (Capacité)",
+	    Warframe = "Ombre de Sevagoth",
+	  },
+	  ["Moisson Mortelle"] = {
+	    Cost = 75,
+	    Key = 3,
+	    Description = "Infligez aux ennemis proches une torture éprouvante.",
+	    Image = "DeathsHarvestModx256.png",
+	    Icon = "DeathsHarvest130x.png",
+	    Name = "Moisson Mortelle",
+	    Warframe = "Ombre de Sevagoth",
+	  },
+	  ["Réunion"] = {
+	    Cost = 0,
+	    Key = 4,
+	    Description = "Sevagoth et son Ombre ne font plus qu'un.",
+	    Image = "ReuniteModx256.png",
+	    Icon = "Reunite130x.png",
+	    Name = "Réunion",
+	    Warframe = "Ombre de Sevagoth",
+	  },
+        
         -- Titania
         ["Enchantement"] = {
             Cost = 25,
             Key = 1,
-            Description = "Les ennemis ne maîtrisent plus leurs armes alors qu'ils sont envoyés dans les airs. Les alliés proches deviennent immunisés aux effets de statut.",
+            Description = "Les ennemis perdent le contrôle de leurs armes lorsqu'ils sont projetés dans les airs. Les alliés proches deviennent immunisés contre les effets de statut. Maintenez le Pouvoir pour conférer l'immunité à Titania",
             Image = "SpellbindModx256.png",
             Name = "Enchantement",
             Icon = "Spellbind130xWhite.png",
@@ -1544,7 +1624,7 @@ local AbilityData = {
         ["Tribut"] = {
             Cost = 25,
             Key = 2,
-            Description = "Faites défiler puis extrayez l'un des quatre buffs lorsqu'il est lancé sur un ennemi. Les Épines réduisent les dégâts reçus. La Poussière réduit la précision de l'ennemi. La Pleine Lune augmente les dégâts des Compagnons. Enchevêtrement ralentit les ennemis à portée.",
+            Description = "Faites défiler puis extrayez l'un des quatre buffs lorsqu'il est lancé sur un ennemi. Les Épines réduisent les dégâts reçus. La Poussière réduit la précision de l'ennemi. La Pleine Lune augmente les Dégâts des Compagnons. Enchevêtrement ralentit les ennemis à portée.",
             Image = "Tribute.png",
             Name = "Tribut",
             Icon = "Tribute130xWhite.png",
@@ -1958,6 +2038,48 @@ local AbilityData = {
             User = "Xaku",
             UserType = "Warframe"
         },
+        
+        -- Yareli
+        ["Pièges Marins"] = {
+            Cost = 25,
+            Key = 1,
+            Description = "Formez cinq bulles d'eau qui recherchent les ennemis et se dilatent au contact, endommageant et immobilisant simultanément leurs victimes.",
+            Image = "Pièges Marinsx256.png",
+            Name = "Pièges Marins",
+            Icon = "Pièges Marins130xWhite.png",
+            User = "Yareli",
+            UserType = "Warframe"
+        },
+        ["Méruline"] = {
+            Cost = 25,
+            Key = 2,
+            Description = "Invoquez Méruline, une créature marine pouvant être utilisée comme un K-Drive. Méruline protège Yareli en absorbant une grande partie des Dégâts subis.",
+            Image = "Mérulinex256.png",
+            Name = "Méruline",
+            Icon = "Méruline130xWhite.png",
+            User = "Yareli",
+            UserType = "Warframe"
+        },
+        ["Aqualames"] = {
+            Cost = 75,
+            Key = 3,
+            Description = "Détruisez les ennemis avec un trio de lames aquatiques.",
+            Image = "Aqualamesx256.png",
+            Name = "Aqualames",
+            Icon = "Aqualames130xWhite.png",
+            User = "Yareli",
+            UserType = "Warframe"
+        },
+        ["Typhon"] = {
+            Cost = 100,
+            Key = 4,
+            Description = "Attirez les ennemis dans un maelström écrasant, puis faites-les exploser dans un torrent d'eau. Chaque ennemi piégé dans le vortex augmente les Dégâts du torrent.",
+            Image = "Typhonx256.png",
+            Name = "Typhon",
+            Icon = "Typhon130xWhite.png",
+            User = "Yareli",
+            UserType = "Warframe"
+        },
 
         -- Amesha
         ["Essaim Vigilant"] = {
@@ -2221,6 +2343,56 @@ local AbilityData = {
             User = nil,
             UserType = nil
         },
+        ["Armure Parasite"] = {
+            Cost = 50,
+            Key = "N/A",
+            Description = "Sacrifiez les Boucliers pour renforcer l'Armure pendant un certain temps.",
+            Image = "Armure Parasite.png",
+            Name = "Armure Parasite",
+            Icon = "Armure Parasite.png",
+            User = nil,
+            UserType = nil
+        },
+        ["Résistance Odieuse"] = {
+            Cost = 50,
+            Key = "N/A",
+            Description = "Octroyez-vous une immunité aux Effets de Statut.",
+            Image = "Résistance Odieuse.png",
+            Name = "Résistance Odieuse",
+            Icon = "Résistance Odieuse.png",
+            User = nil,
+            UserType = nil
+        },
+        ["Métastase Vorace"] = {
+            Cost = 50,
+            Key = "N/A",
+            Description = "Consommez de l'Énergie pour vous soigner et envoyez une quantité d'Énergie équivalente à chaque allié.",
+            Image = "Métastase Vorace.png",
+            Name = "Métastase Vorace",
+            Icon = "Métastase Vorace.png",
+            User = nil,
+            UserType = nil
+        },
+        ["Impulsion Écœurante"] = {
+            Cost = 50,
+            Key = "N/A",
+            Description = "Émet une impulsion qui ajoute des charges aux Effets de Statut qui affectent déjà les ennemis, à l'exception des Effets de Saignement ou de Poison qui sont dupliqués avec de nouvelles durées.",
+            Image = "Impulsion Écœurante.png",
+            Name = "Impulsion Écœurante",
+            Icon = "Impulsion Écœurante.png",
+            User = nil,
+            UserType = nil
+        },
+        ["Instinct Doré"] = {
+            Cost = 50,
+            Key = "N/A",
+            Description = "Envoyez une Étincelle du Néant de courte durée qui est attirée par le Médaillon le plus proche, une Sculpture Ayatan, un Kuria / Fragment non scannés.",
+            Image = "Instinct Doré.png",
+            Name = "Instinct Doré",
+            Icon = "Instinct Doré.png",
+            User = nil,
+            UserType = nil
+        },
 
         -- Necramech Voidrig
         ["Graviton"] = {
@@ -2323,40 +2495,17 @@ local AbilityData = {
             "Hurlement Spectral", "Protection Élémentaire",
             "Armure d'Épines", "Effigie"
         },
-        ["Ember"] = {"Boule de Feu", "Immolation", "Souffle de Feu", "Inferno"},
-        ["Equinox"] = {
-            "Métamorphose", "Obnubilation & Fulmination",
-            "Pacification & Provocation", "Réparation & Mutilation"
-        },
-        ["Excalibur"] = {
-            "Élan Tranchant", "Aveuglement Radial", "Javelot Radial",
-            "Lame Exaltée"
-        },
-        ["Excalibur Umbra"] = {
-            "Élan Tranchant", "Hurlement Radial", "Javelot Radial",
-            "Lame Exaltée"
-        },
-        ["Frost"] = {"Gel", "Vague de Glace", "Boule de Neige", "Avalanche"},
-        ["Gara"] = {
-            "Pique Cassante", "Tempête d'Éclats", "Spectrage",
-            "Vitrification de Masse"
-        },
-        ["Garuda"] = {
-            "Miroir de l'Angoisse", "Autel Sanglant", "Saignée",
-            "Serres Possédées"
-        },
-        ["Gauss"] = {
-            "Supersonique", "Blindage Cinétique", "Fracture Thermique",
-            "Hors Limites"
-        },
-        ["Grendel"] = {
-            "Festin", "Ravitaillement", "Régurgitation", "Pulvérisation"
-        },
-        ["Harrow"] = {"Condamnation", "Pénitence", "Encensoir", "Pacte"},
-        ["Hildryn"] = {
-            "Incandescence", "Pillage Défensif", "Refuge",
-            "Tempête de l'Égide"
-        },
+        ["Ember"]			= {"Boule de Feu", "Immolation", "Souffle de Feu", "Inferno"},
+        ["Equinox"] 		= {"Métamorphose", "Obnubilation & Fulmination","Pacification & Provocation", "Réparation & Mutilation"},
+        ["Excalibur"]		= {"Élan Tranchant", "Aveuglement Radial", "Javelot Radial","Lame Exaltée"},
+        ["Excalibur Umbra"] = {"Élan Tranchant", "Hurlement Radial", "Javelot Radial","Lame Exaltée"},
+        ["Frost"]			= {"Gel", "Vague de Glace", "Boule de Neige", "Avalanche"},
+        ["Gara"]			= {"Pique Cassante", "Tempête d'Éclats", "Spectrage","Vitrification de Masse"},
+        ["Garuda"]			= {"Miroir de l'Angoisse", "Autel Sanglant", "Saignée","Serres Possédées"},
+        ["Gauss"]			= {"Supersonique", "Blindage Cinétique", "Fracture Thermique","Hors Limites"},
+        ["Grendel"] 		= {"Festin", "Ravitaillement", "Régurgitation", "Pulvérisation"},
+        ["Harrow"]			= {"Condamnation", "Pénitence", "Encensoir", "Pacte"},
+        ["Hildryn"] 		= {"Incandescence", "Pillage Défensif", "Refuge","Tempête de l'Égide"},
         ["Hydroid"] = {
             "Barrage Tempête", "Raz de Marée", "Contre-Courant",
             "Déluge de Tentacules"
@@ -2365,13 +2514,13 @@ local AbilityData = {
             "Dessiccation", "Inhumation", "Tempête de Sable",
             "Nuée de Scarabées"
         },
-        ["Ivara"] = {"Carquois", "Navigatrice", "Maraude", "Arc d'Artémis"},
-        ["Khora"] = {"Fouet Acéré", "Ronce de Fer", "Venari", "Cage de Fer"},
+        ["Ivara"]			= {"Carquois", "Navigatrice", "Maraude", "Arc d'Artémis"},
+        ["Khora"]			= {"Fouet Acéré", "Ronce de Fer", "Venari", "Cage de Fer"},
         ["Lavos"] = {
             "Morsure Ophidienne", "Piège de Cristal", "Sonde de Transmutation",
             "Catalyseur"
         },
-        ["Limbo"] = {"Exil", "Stase", "Déferlement Dimensionnel", "Cataclysme"},
+        ["Limbo"]			= {"Exil", "Stase", "Déferlement Dimensionnel", "Cataclysme"},
         ["Loki"] = {
             "Leurre", "Invisibilité", "Transposition", "Désarmement Radial"
         },
@@ -2403,40 +2552,23 @@ local AbilityData = {
         ["Oberon"] = {
             "Châtiment", "Bénédiction Terrestre", "Renouveau", "Jugement"
         },
-        ["Octavia"] = {"Maillet", "Résonateur", "Métronome", "Ampli"},
-        ["Protea"] = {
-            "Couverture de Grenades", "Salve d'Artillerie", "Dispensaire",
-            "Ancre Temporelle"
-        },
-        ["Revenant"] = {
-            "Servitude", "Linceul Hypnotique", "Pillage", "Danse Macabre"
-        },
-        ["Rhino"] = {
-            "Charge Rhino", "Peau de Fer", "Rugissement", "Piétinement Rhino"
-        },
-        ["Saryn"] = {"Spores", "Mue", "Revers Toxique", "Miasme"},
-        ["Titania"] = {"Enchantement", "Tribut", "Lanterne", "Ailes Rasoirs"},
-        ["Trinity"] = {
-            "Puits de Vie", "Vampire d'Énergie", "Lien", "Bénédiction"
-        },
-        ["Valkyr"] = {
-            "Ligne d'Arrachage", "Cri de Guerre", "Paralysie", "Hystérie"
-        },
-        ["Vauban"] = {
-            "Nervos Tesla", "Poseur de Mines", "Frappe à Photons", "Bastille"
-        },
-        ["Volt"] = {"Choc", "Vitesse", "Bouclier Électrique", "Décharge"},
-        ["Wisp"] = {
-            "Réservoirs", "Phantasme", "Surcharge de Faille", "Porte Sol"
-        },
-        ["Wukong"] = {
-            "Jumeau Céleste", "Défi", "Évaporation", "Fureur Primale"
-        },
-        ["Zephyr"] = {"Vent Contraire", "Rafale", "Turbulence", "Tornades"},
-        ["Xaku"] = {
-            "Murmure de Xata", "Étreinte de Lohk", "Les Égarées",
-            "Vide Intemporel"
-        }
+        ["Octavia"] 		= {"Maillet", "Résonateur", "Métronome", "Ampli"},
+        ["Protea"]			= {"Couverture de Grenades", "Salve d'Artillerie", "Dispensaire","Ancre Temporelle"},
+        ["Revenant"]		= {"Servitude", "Linceul Hypnotique", "Pillage", "Danse Macabre"},
+        ["Rhino"]			= {"Charge Rhino", "Peau de Fer", "Rugissement", "Piétinement Rhino"},
+        ["Saryn"]			= {"Spores", "Mue", "Revers Toxique", "Miasme"},
+        ["Sevagoth"]		= {"Récolte", "Semis", "Linceul", "Ombre Exaltée"},
+        ["Ombre de Sevagoth"] = {"Étreinte", "Ravage", "Moisson Mortelle", "Réunion"},
+        ["Titania"] 		= {"Enchantement", "Tribut", "Lanterne", "Ailes Rasoirs"},
+        ["Trinity"] 		= {"Puits de Vie", "Vampire d'Énergie", "Lien", "Bénédiction"},
+        ["Valkyr"]			= {"Ligne d'Arrachage", "Cri de Guerre", "Paralysie", "Hystérie"},
+        ["Vauban"]			= {"Nervos Tesla", "Poseur de Mines", "Frappe à Photons", "Bastille"},
+        ["Volt"]			= {"Choc", "Vitesse", "Bouclier Électrique", "Décharge"},
+        ["Wisp"]			= {"Réservoirs", "Phantasme", "Surcharge de Faille", "Porte Sol"},
+        ["Wukong"]			= {"Jumeau Céleste", "Défi", "Évaporation", "Fureur Primale"},
+        ["Xaku"]			= {"Murmure de Xata", "Étreinte de Lohk", "Les Égarées","Vide Intemporel"},
+        ["Yareli"]			= {"Pièges Marins", "Méruline", "Aqualames", "Typhon"},
+        ["Zephyr"]			= {"Vent Contraire", "Rafale", "Turbulence", "Tornades"}
     }
 }
 

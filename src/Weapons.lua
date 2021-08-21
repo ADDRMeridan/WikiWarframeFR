@@ -1450,6 +1450,8 @@ local function getValue(Weapon, ValName, giveDefault, asString, forTable)
             else
                 return Weapon.Disposition
             end
+        elseif (Weapon.Class == "Arme Exaltée") then
+                return nil
         elseif giveDefault then
             if (asString) then
                 return "Inconnu"
@@ -4221,8 +4223,7 @@ function p.weaponTooltip(frame)
     if (hasMultipleTypes(attack)) then
         attackBiasText = '\n| colspan=4 |' .. GetDamageString(attack, nil) ..
                              " (" ..
-                             GetDamageBiasString(attack, nil, '', nil, 'white',
-                                                 'x16') .. ")"
+                             GetDamageBiasString(attack, nil, '', nil, 'white') .. ")"
     end
 
     local mRankIcon = ''

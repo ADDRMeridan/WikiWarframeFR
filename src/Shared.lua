@@ -1,22 +1,31 @@
 local p = {}
 
--- Constante
-local color = "white"
-local bgColor = "#061D40D6"
-local defaultImage = "Panel.png"
+function p.getDefaultImg()
+    return 'Panel.png'
+end
 
-function p.getDefaultImg() return defaultImage end
+function p.getColor()
+    return "white"
+end
 
-function p.getColor() return color end
+function p.getBgColor()
+    return "#061D40D6"
+end
 
-function p.getBgColor() return bgColor end
+function p.getListSep()
+    return ' • '
+end
 
-function p.getListSep() return ' • ' end
+function p.getClr()
+    return '<div style="clear:both; margin:0; padding:0;"></div>'
+end
 
 function p.getKeySet(table)
 
     local ret = {}
-    for k in pairs(table) do ret[#ret + 1] = k end
+    for k in pairs(table) do
+        ret[#ret + 1] = k
+    end
 
     return ret
 end
@@ -26,7 +35,9 @@ function p.skpairs(t, noSort, revert)
     local keys = p.getKeySet(t)
     if (not noSort) then
         if revert ~= nil then
-            table.sort(keys, function(a, b) return a > b end)
+            table.sort(keys, function(a, b)
+                return a > b
+            end)
         else
             table.sort(keys)
         end
@@ -53,7 +64,9 @@ end
 function p.indexCount(t)
     if (type(t) == 'table') then
         local count = 0
-        for _ in ipairs(t) do count = count + 1 end
+        for _ in ipairs(t) do
+            count = count + 1
+        end
         return count
     else
         return nil
@@ -128,7 +141,9 @@ end
 -- Originally snagged this from Module:VoidByReward written by User:NoBrainz
 function p.tableCount(t)
     local count = 0
-    for _ in pairs(t) do count = count + 1 end
+    for _ in pairs(t) do
+        count = count + 1
+    end
     return count
 end
 
@@ -148,7 +163,9 @@ end
 -- Splits a string based on a sent in separating character
 -- For example calling splitString ("Lith V1 Relic", " ") would return {"Lith", "V1", "Relic"}
 function p.splitString(inputstr, sep)
-    if sep == nil then sep = "%s" end
+    if sep == nil then
+        sep = "%s"
+    end
     local t = {}
     for str in string.gmatch(inputstr, "([^" .. sep .. "]+)") do
         table.insert(t, str)
@@ -165,8 +182,7 @@ end
 -- Stolen from Stack Overflow
 -- Adds commas
 function p.formatnum(number)
-    local i, j, minus, int, fraction = tostring(number):find(
-                                           '([-]?)(%d+)([.]?%d*)')
+    local i, j, minus, int, fraction = tostring(number):find('([-]?)(%d+)([.]?%d*)')
 
     -- reverse the int-string and append a comma to all blocks of 3 digits
     int = int:reverse():gsub("(%d%d%d)", "%1,")
@@ -204,8 +220,12 @@ function p.round(val, maxDigits, minDigits)
 end
 
 function p.contains(List, Item, IgnoreCase)
-    if (List == nil or Item == nil) then return false end
-    if (IgnoreCase == nil) then IgnoreCase = false end
+    if (List == nil or Item == nil) then
+        return false
+    end
+    if (IgnoreCase == nil) then
+        IgnoreCase = false
+    end
 
     if (type(List) == "table") then
         for i, listI in pairs(List) do
@@ -224,16 +244,24 @@ end
 
 -- Stolen from http://lua-users.org/wiki/StringTrim
 -- Trims whitespace. Not quite sure how it works.
-function p.trim(str) return str:match '^()%s*$' and '' or str:match '^%s*(.*%S)' end
+function p.trim(str)
+    return str:match '^()%s*$' and '' or str:match '^%s*(.*%S)'
+end
 
 -- Recup du module Weapon
 function p.asPercent(val, digits, sign)
 
-    if (digits == nil) then digits = 2 end
-    if (val == nil) then val = 0 end
+    if (digits == nil) then
+        digits = 2
+    end
+    if (val == nil) then
+        val = 0
+    end
     local result = val * 100
     local ret = p.round(result, digits) .. "%"
-    if (sign ~= nil and result > 0) then ret = '+' .. ret end
+    if (sign ~= nil and result > 0) then
+        ret = '+' .. ret
+    end
     return ret
 end
 
@@ -252,7 +280,9 @@ function p.randomizeArray(t, limit)
     if limit and limit < arrayLenght then
         local ret = {}
         for i, v in ipairs(t) do
-            if i > limit then break end
+            if i > limit then
+                break
+            end
             ret[i] = v
         end
         return ret
@@ -279,7 +309,9 @@ end
 function p.charChiantFR(name)
 
     local ret = name
-    for i, c in pairs(char2Escape) do ret = ret:gsub(c[1], c[2]) end
+    for i, c in pairs(char2Escape) do
+        ret = ret:gsub(c[1], c[2])
+    end
 
     return ret
 end
@@ -287,7 +319,9 @@ end
 function p.charChiantFRTab(tab)
 
     local t = {}
-    for k, v in pairs(tab) do table.insert(t, p.charChiantFR(v)) end
+    for k, v in pairs(tab) do
+        table.insert(t, p.charChiantFR(v))
+    end
 
     return t
 end
@@ -309,12 +343,22 @@ end
 
 function p.removeFRAccent(str2RemoveFrom)
 
-    local swapArray = {
-        {'è', 'e'}, {'é', 'e'}, {'â', 'a'}, {'ê', 'e'}, {'î', 'i'}
-    }
+    local swapArray = {{'è', 'e'}, {'é', 'e'}, {'â', 'a'}, {'ê', 'e'}, {'î', 'i'}}
     local ret = str2RemoveFrom
     for _, swapper in ipairs(swapArray) do
         ret = string.gsub(ret, swapper[1], swapper[2])
+    end
+
+    return ret
+end
+
+function p.checkImage(fileName)
+
+    local ret = nil
+    if (fileName ~= nil and fileName ~= "" and mw.title.new(fileName, 'File').fileExists) then
+        ret = fileName
+    else
+        ret = p.getDefaultImg()
     end
 
     return ret
