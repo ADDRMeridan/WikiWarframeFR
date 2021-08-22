@@ -1692,6 +1692,10 @@ local IconData = {
             icon = "Cernos Mutaliste.png",
             link = "Cernos Mutaliste"
         },
+        ["Cocons Pherliac"] = {
+            icon = "CoconsPherliac.png",
+            link = "Cocons Pherliac"
+        },
         ["Coord. Nav"] = {
             icon = "NavCoordinates64.png",
             link = "Coord. Nav"
@@ -1699,6 +1703,10 @@ local IconData = {
         ["Coord. Nav Alad V Mutaliste"] = {
             icon = "NavCoordMutaliste.png",
             link = "Coord. Nav#Coord. Nav Alad V Mutaliste"
+        },
+        ["Couronne Granum"] = {
+            icon = "Couronne Granum.png",
+            link = "Couronne Granum"
         },
         ["Cristal d'Argon"] = {
             icon = "ArgonCrystal64.png",
@@ -1708,7 +1716,15 @@ local IconData = {
             icon = "ArgonCrystal64.png",
             link = "Cristal d'Argon"
         },
+        ["Cystolithe Hématocyte"] = {
+            icon = "Cystolithe Hémocyte.png",
+            link = "Cystolithe Hématocyte"
+        },
         -- D
+        ["Décodeur Orokin"] = {
+            icon = "Decodeur Orokin.png",
+            link = "Décodeur Orokin"
+        },
         -- E
         ["Échantillon Mutagène"] = {
             icon = "MutagenSample64.png",
@@ -1768,6 +1784,10 @@ local IconData = {
             link = "Lentille de Focus"
         },
         -- M
+        ["Mandaccord"] = {
+            icon = "Mandaccord.png",
+            link = "Mandaccord"
+        },
         -- N
         -- O
         ["Oeuf de Kubrow"] = {
@@ -1797,6 +1817,10 @@ local IconData = {
         },
         -- Q
         -- R
+        ["Résonance de Céphalite"] = {
+            icon = "Résonance de Céphalite.png",
+            link = "Résonance de Céphalite"
+        },
         -- S
         -- T
         -- U
@@ -2124,10 +2148,6 @@ local IconData = {
         ["Extrait de Threshcone de Nuit"] = {
             icon = "SamplesNightCommon.png",
             link = "Threshcone de Nuit"
-        },
-        ["Décodeur Orokin"] = {
-            icon = "OrokinReceptor.png",
-            link = "Décodeur Orokin"
         },
         ["Mandaccord"] = {
             icon = "Mandaccord.png",
