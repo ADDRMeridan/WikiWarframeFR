@@ -9,12 +9,23 @@ local PetData = {
             MarketCost = 75,
             Rush = 30,
             Time = 24,
-            Parts = {
-                {Name = "Plaque d'Alliage", Type = "Ressource", Count = 1000},
-                {Name = "Circuits", Type = "Ressource", Count = 400},
-                {Name = "Nano Spores", Type = "Ressource", Count = 1500},
-                {Name = "Module de Contrôle", Type = "Ressource", Count = 3}
-            }
+            Parts = {{
+                Name = "Plaque d'Alliage",
+                Type = "Ressource",
+                Count = 1000
+            }, {
+                Name = "Circuits",
+                Type = "Ressource",
+                Count = 400
+            }, {
+                Name = "Nano Spores",
+                Type = "Ressource",
+                Count = 1500
+            }, {
+                Name = "Module de Contrôle",
+                Type = "Ressource",
+                Count = 3
+            }}
         },
         Armor = 50,
         BaseRange = 5,
@@ -37,12 +48,23 @@ local PetData = {
             MarketCost = nil,
             Rush = 30,
             Time = 24,
-            Parts = {
-                {Name = "Cerveau", Type = "Partie Prime", Count = 1},
-                {Name = "Carapace", Type = "Partie Prime", Count = 1},
-                {Name = "Systèmes", Type = "Partie Prime", Count = 1},
-                {Name = "Cellule Orokin", Type = "Ressource", Count = 6}
-            }
+            Parts = {{
+                Name = "Cerveau",
+                Type = "Partie Prime",
+                Count = 1
+            }, {
+                Name = "Carapace",
+                Type = "Partie Prime",
+                Count = 1
+            }, {
+                Name = "Systèmes",
+                Type = "Partie Prime",
+                Count = 1
+            }, {
+                Name = "Cellule Orokin",
+                Type = "Ressource",
+                Count = 6
+            }}
         },
         Armor = 150,
         BaseRange = 5,
@@ -62,7 +84,7 @@ local PetData = {
         HealthTypes = {
             ["Armure en Ferrite"] = 50,
             ["Chair Tenno"] = 95,
-			["Bouclier Tenno"] = 85,
+            ["Bouclier Tenno"] = 85
         },
         Family = "Kubrow",
         Icon = "IconHelminth.png",
@@ -72,16 +94,16 @@ local PetData = {
         Name = "Chargeur Helminth",
         NameEN = "Helminth Charger",
         Polarities = {"Y", "Y", "V"},
-		NormalAttack = {
-                Damage = {
-                    ["Tranchant"] = 304.0,
-					["Poison"] = 45.6
-                },
-                CritChance = 0.1,
-                CritMultiplier = 3,
-                StatusChance = 0.05,
-		},
-	},
+        NormalAttack = {
+            Damage = {
+                ["Tranchant"] = 304.0,
+                ["Poison"] = 45.6
+            },
+            CritChance = 0.1,
+            CritMultiplier = 3,
+            StatusChance = 0.05
+        }
+    },
     -- D
     ["Dethcube"] = {
         Cost = {
@@ -90,12 +112,23 @@ local PetData = {
             MarketCost = 75,
             Rush = 30,
             Time = 24,
-            Parts = {
-                {Name = "Plaque d'Alliage", Type = "Ressource", Count = 500},
-                {Name = "Circuits", Type = "Ressource", Count = 400},
-                {Name = "Nano Spores", Type = "Ressource", Count = 200},
-                {Name = "Module de Contrôle", Type = "Ressource", Count = 1}
-            }
+            Parts = {{
+                Name = "Plaque d'Alliage",
+                Type = "Ressource",
+                Count = 500
+            }, {
+                Name = "Circuits",
+                Type = "Ressource",
+                Count = 400
+            }, {
+                Name = "Nano Spores",
+                Type = "Ressource",
+                Count = 200
+            }, {
+                Name = "Module de Contrôle",
+                Type = "Ressource",
+                Count = 1
+            }}
         },
         Armor = 50,
         BaseRange = 15,
@@ -118,12 +151,23 @@ local PetData = {
             MarketCost = nil,
             Rush = 30,
             Time = 24,
-            Parts = {
-                {Name = "Cerveau", Type = "Partie Prime", Count = 1},
-                {Name = "Carapace", Type = "Partie Prime", Count = 1},
-                {Name = "Systèmes", Type = "Partie Prime", Count = 1},
-                {Name = "Cellule Orokin", Type = "Ressource", Count = 6}
-            }
+            Parts = {{
+                Name = "Cerveau",
+                Type = "Partie Prime",
+                Count = 1
+            }, {
+                Name = "Carapace",
+                Type = "Partie Prime",
+                Count = 1
+            }, {
+                Name = "Systèmes",
+                Type = "Partie Prime",
+                Count = 1
+            }, {
+                Name = "Cellule Orokin",
+                Type = "Ressource",
+                Count = 6
+            }}
         },
         Armor = 150,
         BaseRange = 15,
@@ -146,12 +190,23 @@ local PetData = {
             MarketCost = 75,
             Rush = 30,
             Time = 24,
-            Parts = {
-                {Name = "Plaque d'Alliage", Type = "Ressource", Count = 600},
-                {Name = "Pack Polymère", Type = "Ressource", Count = 500},
-                {Name = "Plastides", Type = "Ressource", Count = 350},
-                {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-            }
+            Parts = {{
+                Name = "Plaque d'Alliage",
+                Type = "Ressource",
+                Count = 600
+            }, {
+                Name = "Pack Polymère",
+                Type = "Ressource",
+                Count = 500
+            }, {
+                Name = "Plastides",
+                Type = "Ressource",
+                Count = 350
+            }, {
+                Name = "Cristal d'Argon",
+                Type = "Ressource",
+                Count = 2
+            }}
         },
         Armor = 50,
         BaseRange = 40,
@@ -174,12 +229,23 @@ local PetData = {
             MarketCost = nil,
             Rush = 30,
             Time = 24,
-            Parts = {
-                {Name = "Masse Mutagène", Type = "Ressource", Count = 6},
-                {Name = "Récupération", Type = "Ressource", Count = 30000},
-                {Name = "Circuits", Type = "Ressource", Count = 3500},
-                {Name = "Forma", Type = "Objet", Count = 2}
-            }
+            Parts = {{
+                Name = "Masse Mutagène",
+                Type = "Ressource",
+                Count = 6
+            }, {
+                Name = "Récupération",
+                Type = "Ressource",
+                Count = 30000
+            }, {
+                Name = "Circuits",
+                Type = "Ressource",
+                Count = 3500
+            }, {
+                Name = "Forma",
+                Type = "Objet",
+                Count = 2
+            }}
         },
         Armor = 50,
         BaseRange = 30,
@@ -206,12 +272,23 @@ local PetData = {
             MarketCost = nil,
             Rush = 35,
             Time = 24,
-            Parts = {
-                {Name = "Fieldron", Type = "Ressource", Count = 10},
-                {Name = "Oxium", Type = "Ressource", Count = 300},
-                {Name = "Ferrite", Type = "Ressource", Count = 5000},
-                {Name = "Forma", Type = "Objet", Count = 1}
-            }
+            Parts = {{
+                Name = "Fieldron",
+                Type = "Ressource",
+                Count = 10
+            }, {
+                Name = "Oxium",
+                Type = "Ressource",
+                Count = 300
+            }, {
+                Name = "Ferrite",
+                Type = "Ressource",
+                Count = 5000
+            }, {
+                Name = "Forma",
+                Type = "Objet",
+                Count = 1
+            }}
         },
         Armor = 50,
         BaseRange = 10,
@@ -234,12 +311,23 @@ local PetData = {
             MarketCost = nil,
             Rush = 30,
             Time = 24,
-            Parts = {
-                {Name = "Cerveau", Type = "Partie Prime", Count = 1},
-                {Name = "Carapace", Type = "Partie Prime", Count = 1},
-                {Name = "Systèmes", Type = "Partie Prime", Count = 1},
-                {Name = "Cellule Orokin", Type = "Ressource", Count = 6}
-            }
+            Parts = {{
+                Name = "Cerveau",
+                Type = "Partie Prime",
+                Count = 1
+            }, {
+                Name = "Carapace",
+                Type = "Partie Prime",
+                Count = 1
+            }, {
+                Name = "Systèmes",
+                Type = "Partie Prime",
+                Count = 1
+            }, {
+                Name = "Cellule Orokin",
+                Type = "Ressource",
+                Count = 6
+            }}
         },
         Armor = 100,
         BaseRange = nil,
@@ -262,7 +350,7 @@ local PetData = {
         HealthTypes = {
             ["Armure en Ferrite"] = 50,
             ["Chair Tenno"] = 40,
-			["Bouclier Tenno"] = 70,
+            ["Bouclier Tenno"] = 70
         },
         Family = "Kavat",
         Icon = nil,
@@ -272,21 +360,21 @@ local PetData = {
         Name = "Kavat Adarza",
         NameEN = "Adarza Kavat",
         Polarities = {"Y", "Y"},
-		NormalAttack = {
-                Damage = {
-                    ["Tranchant"] = 80.0
-                },
-                CritChance = 0.2,
-                CritMultiplier = 2,
-                StatusChance = 0.075,
-		},
-	},
+        NormalAttack = {
+            Damage = {
+                ["Tranchant"] = 80.0
+            },
+            CritChance = 0.2,
+            CritMultiplier = 2,
+            StatusChance = 0.075
+        }
+    },
     ["Kavat Smeeta"] = {
-    	Family = "Kavat Smeeta",
+        Family = "Kavat Smeeta",
         HealthTypes = {
             ["Armure en Ferrite"] = 50,
             ["Chair Tenno"] = 50,
-			["Bouclier Tenno"] = 60,
+            ["Bouclier Tenno"] = 60
         },
         Icon = "Icon_Smeeta.png",
         Image = "KavatSmeeta.png",
@@ -295,20 +383,20 @@ local PetData = {
         Name = "Kavat Smeeta",
         NameEN = "Smeeta Kavat",
         Polarities = {"Y", "Y"},
-		NormalAttack = {
-                Damage = {
-                    ["Tranchant"] = 80.0
-                },
-                CritChance = 0.2,
-                CritMultiplier = 2,
-                StatusChance = 0.075,
-		},
-	},
+        NormalAttack = {
+            Damage = {
+                ["Tranchant"] = 80.0
+            },
+            CritChance = 0.2,
+            CritMultiplier = 2,
+            StatusChance = 0.075
+        }
+    },
     ["Kavat Vasca"] = {
         HealthTypes = {
             ["Armure en Ferrite"] = 50,
             ["Chair Tenno"] = 80,
-			["Bouclier Tenno"] = 70,
+            ["Bouclier Tenno"] = 70
         },
         Family = "Kavat",
         Icon = nil,
@@ -318,20 +406,20 @@ local PetData = {
         Name = "Kavat Vasca",
         NameEN = "Vasca Kavat",
         Polarities = {"Y", "Y"},
-		NormalAttack = {
-                Damage = {
-                    ["Tranchant"] = 80.0
-                },
-                CritChance = 0.2,
-                CritMultiplier = 2,
-                StatusChance = 0.075,
-		},
-	},
+        NormalAttack = {
+            Damage = {
+                ["Tranchant"] = 80.0
+            },
+            CritChance = 0.2,
+            CritMultiplier = 2,
+            StatusChance = 0.075
+        }
+    },
     ["Kubrow Chesa"] = {
         HealthTypes = {
             ["Armure en Ferrite"] = 50,
             ["Chair Tenno"] = 125,
-			["Bouclier Tenno"] = 75,
+            ["Bouclier Tenno"] = 75
         },
         Family = "Kubrow",
         Icon = nil,
@@ -341,20 +429,20 @@ local PetData = {
         Name = "Kubrow Chesa",
         NameEN = "Chesa Kubrow",
         Polarities = {"Y", "Y", "D"},
-		NormalAttack = {
-                Damage = {
-                    ["Tranchant"] = 304.0
-                },
-                CritChance = 0.1,
-                CritMultiplier = 3,
-                StatusChance = 0.05,
-		},
-	},
+        NormalAttack = {
+            Damage = {
+                ["Tranchant"] = 304.0
+            },
+            CritChance = 0.1,
+            CritMultiplier = 3,
+            StatusChance = 0.05
+        }
+    },
     ["Kubrow Huras"] = {
         HealthTypes = {
             ["Armure en Ferrite"] = 50,
             ["Chair Tenno"] = 75,
-			["Bouclier Tenno"] = 125,
+            ["Bouclier Tenno"] = 125
         },
         Family = "Kubrow",
         Icon = nil,
@@ -364,20 +452,20 @@ local PetData = {
         Name = "Kubrow Huras",
         NameEN = "Huras Kubrow",
         Polarities = {"Y", "Y", "V"},
-		NormalAttack = {
-                Damage = {
-                    ["Tranchant"] = 304.0
-                },
-                CritChance = 0.1,
-                CritMultiplier = 3,
-                StatusChance = 0.05,
-		},
-	},
+        NormalAttack = {
+            Damage = {
+                ["Tranchant"] = 304.0
+            },
+            CritChance = 0.1,
+            CritMultiplier = 3,
+            StatusChance = 0.05
+        }
+    },
     ["Kubrow Raksa"] = {
         HealthTypes = {
             ["Armure en Ferrite"] = 50,
             ["Chair Tenno"] = 100,
-			["Bouclier Tenno"] = 100,
+            ["Bouclier Tenno"] = 100
         },
         Family = "Kubrow",
         Icon = nil,
@@ -387,20 +475,20 @@ local PetData = {
         Name = "Kubrow Raksa",
         NameEN = "Raksa Kubrow",
         Polarities = {"Y", "Y", "D"},
-		NormalAttack = {
-                Damage = {
-                    ["Tranchant"] = 304.0
-                },
-                CritChance = 0.1,
-                CritMultiplier = 3,
-                StatusChance = 0.05,
-		},
-	},
+        NormalAttack = {
+            Damage = {
+                ["Tranchant"] = 304.0
+            },
+            CritChance = 0.1,
+            CritMultiplier = 3,
+            StatusChance = 0.05
+        }
+    },
     ["Kubrow Sahasa"] = {
         HealthTypes = {
             ["Armure en Ferrite"] = 50,
             ["Chair Tenno"] = 125,
-			["Bouclier Tenno"] = 75,
+            ["Bouclier Tenno"] = 75
         },
         Family = "Kubrow",
         Icon = nil,
@@ -410,20 +498,20 @@ local PetData = {
         Name = "Kubrow Sahasa",
         NameEN = "Sahasa Kubrow",
         Polarities = {"Y", "Y", "D"},
-		NormalAttack = {
-                Damage = {
-                    ["Tranchant"] = 304.0
-                },
-                CritChance = 0.1,
-                CritMultiplier = 3,
-                StatusChance = 0.05,
-		},
-	},
+        NormalAttack = {
+            Damage = {
+                ["Tranchant"] = 304.0
+            },
+            CritChance = 0.1,
+            CritMultiplier = 3,
+            StatusChance = 0.05
+        }
+    },
     ["Kubrow Sunika"] = {
         HealthTypes = {
             ["Armure en Ferrite"] = 50,
             ["Chair Tenno"] = 110,
-			["Bouclier Tenno"] = 90,
+            ["Bouclier Tenno"] = 90
         },
         Family = "Kubrow",
         Icon = nil,
@@ -433,15 +521,15 @@ local PetData = {
         Name = "Kubrow Sunika",
         NameEN = "Sunika Kubrow",
         Polarities = {"Y", "Y", "V"},
-		NormalAttack = {
-                Damage = {
-                    ["Tranchant"] = 304.0
-                },
-                CritChance = 0.1,
-                CritMultiplier = 3,
-                StatusChance = 0.05,
-		},
-	},
+        NormalAttack = {
+            Damage = {
+                ["Tranchant"] = 304.0
+            },
+            CritChance = 0.1,
+            CritMultiplier = 3,
+            StatusChance = 0.05
+        }
+    },
     -- L
     -- M
     -- N
@@ -452,12 +540,23 @@ local PetData = {
             MarketCost = 75,
             Rush = 30,
             Time = 24,
-            Parts = {
-                {Name = "Carapace", Type = "Objet", Count = 1},
-                {Name = "Cerveau", Type = "Objet", Count = 1},
-                {Name = "Systèmes", Type = "Objet", Count = 1},
-                {Name = "Larmes du Néant", Type = "Ressource", Count = 5}
-            }
+            Parts = {{
+                Name = "Cerveau",
+                Type = "Objet",
+                Count = 1
+            }, {
+                Name = "Carapace",
+                Type = "Objet",
+                Count = 1
+            }, {
+                Name = "Systèmes",
+                Type = "Objet",
+                Count = 1
+            }, {
+                Name = "Larmes du Néant",
+                Type = "Ressource",
+                Count = 5
+            }}
         },
         Armor = 50,
         BaseRange = 5,
@@ -481,12 +580,23 @@ local PetData = {
             MarketCost = 75,
             Rush = 30,
             Time = 24,
-            Parts = {
-                {Name = "Larmes de Goblite", Type = "Ressource", Count = 15},
-                {Name = "Alliage de Axidrol", Type = "Ressource", Count = 45},
-                {Name = "Ferraille", Type = "Ressource", Count = 40},
-                {Name = "Tour Coagulant", Type = "Ressource", Count = 10}
-            }
+            Parts = {{
+                Name = "Larmes de Goblite",
+                Type = "Ressource",
+                Count = 15
+            }, {
+                Name = "Alliage de Axidrol",
+                Type = "Ressource",
+                Count = 45
+            }, {
+                Name = "Ferraille",
+                Type = "Ressource",
+                Count = 40
+            }, {
+                Name = "Tour Coagulant",
+                Type = "Ressource",
+                Count = 10
+            }}
         },
         Armor = 50,
         BaseRange = 10,
@@ -507,7 +617,7 @@ local PetData = {
         HealthTypes = {
             ["Armure en Ferrite"] = 50,
             ["Chair Tenno"] = 95,
-			["Bouclier Tenno"] = 90,
+            ["Bouclier Tenno"] = 90
         },
         Family = "Prédasite",
         Icon = nil,
@@ -517,20 +627,20 @@ local PetData = {
         Name = "Prédasite Medjaÿ",
         NameEN = "Medjay Predasite",
         Polarities = {"Y"},
-		NormalAttack = {
-                Damage = {
-                    ["Tranchant"] = 304.0
-                },
-                CritChance = 0.1,
-                CritMultiplier = 3,
-                StatusChance = 0.05,
-		},
-	},
+        NormalAttack = {
+            Damage = {
+                ["Tranchant"] = 304.0
+            },
+            CritChance = 0.1,
+            CritMultiplier = 3,
+            StatusChance = 0.05
+        }
+    },
     ["Prédasite Pharaon"] = {
         HealthTypes = {
             ["Armure en Ferrite"] = 50,
             ["Chair Tenno"] = 95,
-			["Bouclier Tenno"] = 90,
+            ["Bouclier Tenno"] = 90
         },
         Family = "Prédasite",
         Icon = nil,
@@ -540,20 +650,20 @@ local PetData = {
         Name = "Prédasite Pharaon",
         NameEN = "Pharaoh Predasite",
         Polarities = {"Y"},
-		NormalAttack = {
-                Damage = {
-                    ["Tranchant"] = 304.0
-                },
-                CritChance = 0.1,
-                CritMultiplier = 3,
-                StatusChance = 0.05,
-		},
-	},
+        NormalAttack = {
+            Damage = {
+                ["Tranchant"] = 304.0
+            },
+            CritChance = 0.1,
+            CritMultiplier = 3,
+            StatusChance = 0.05
+        }
+    },
     ["Prédasite Vizir"] = {
         HealthTypes = {
             ["Armure en Ferrite"] = 50,
             ["Chair Tenno"] = 95,
-			["Bouclier Tenno"] = 90,
+            ["Bouclier Tenno"] = 90
         },
         Family = "Prédasite",
         Icon = nil,
@@ -563,15 +673,15 @@ local PetData = {
         Name = "Prédasite Vizir",
         NameEN = "Vizier Predasite",
         Polarities = {"Y"},
-		NormalAttack = {
-                Damage = {
-                    ["Tranchant"] = 304.0
-                },
-                CritChance = 0.1,
-                CritMultiplier = 3,
-                StatusChance = 0.05,
-		},
-	},
+        NormalAttack = {
+            Damage = {
+                ["Tranchant"] = 304.0
+            },
+            CritChance = 0.1,
+            CritMultiplier = 3,
+            StatusChance = 0.05
+        }
+    },
     -- Q
     -- R
     -- S
@@ -582,12 +692,23 @@ local PetData = {
             MarketCost = 75,
             Rush = 30,
             Time = 24,
-            Parts = {
-                {Name = "Plaque d'Alliage", Type = "Ressource", Count = 500},
-                {Name = "Circuits", Type = "Ressource", Count = 400},
-                {Name = "Nano Spores", Type = "Ressource", Count = 200},
-                {Name = "Module de Contrôle", Type = "Ressource", Count = 1}
-            }
+            Parts = {{
+                Name = "Plaque d'Alliage",
+                Type = "Ressource",
+                Count = 500
+            }, {
+                Name = "Circuits",
+                Type = "Ressource",
+                Count = 400
+            }, {
+                Name = "Nano Spores",
+                Type = "Ressource",
+                Count = 200
+            }, {
+                Name = "Module de Contrôle",
+                Type = "Ressource",
+                Count = 1
+            }}
         },
         Armor = 50,
         BaseRange = 15,
@@ -615,7 +736,7 @@ local PetData = {
         Link = "Shade/Prisma",
         Name = "Shade",
         NameEN = "Shade",
-        Polarities = {"Bar", },
+        Polarities = {"Bar"},
         Shield = 100
     },
     -- T
@@ -626,12 +747,23 @@ local PetData = {
             MarketCost = 75,
             Rush = 30,
             Time = 24,
-            Parts = {
-                {Name = "Ferrite", Type = "Ressource", Count = 500},
-                {Name = "Pack Polymère", Type = "Ressource", Count = 200},
-                {Name = "Rubedo", Type = "Ressource", Count = 200},
-                {Name = "Neurodes", Type = "Ressource", Count = 1}
-            }
+            Parts = {{
+                Name = "Ferrite",
+                Type = "Ressource",
+                Count = 500
+            }, {
+                Name = "Pack Polymère",
+                Type = "Ressource",
+                Count = 200
+            }, {
+                Name = "Rubedo",
+                Type = "Ressource",
+                Count = 200
+            }, {
+                Name = "Neurodes",
+                Type = "Ressource",
+                Count = 1
+            }}
         },
         Armor = 50,
         BaseRange = 10,
@@ -652,7 +784,7 @@ local PetData = {
     ["Venari"] = {
         HealthTypes = {
             ["Armure en Ferrite"] = 350,
-            ["Chair Tenno"] = 300,
+            ["Chair Tenno"] = 300
         },
         Family = "Kavat",
         Icon = nil,
@@ -662,20 +794,20 @@ local PetData = {
         Name = "Venari",
         NameEN = "Venari",
         Polarities = {"Y", "V", "D", "Bar"},
-		NormalAttack = {
-                Damage = {
-                    ["Tranchant"] = 80.0
-                },
-                CritChance = 0.2,
-                CritMultiplier = 2,
-                StatusChance = 0.1,
-		},
-	},
+        NormalAttack = {
+            Damage = {
+                ["Tranchant"] = 80.0
+            },
+            CritChance = 0.2,
+            CritMultiplier = 2,
+            StatusChance = 0.1
+        }
+    },
     ["Vulpaphyla Panzer"] = {
         HealthTypes = {
             ["Armure en Ferrite"] = 50,
             ["Chair Tenno"] = 90,
-			["Bouclier Tenno"] = 95,
+            ["Bouclier Tenno"] = 95
         },
         Family = "Vulpaphyla",
         Icon = nil,
@@ -685,20 +817,20 @@ local PetData = {
         Name = "Vulpaphyla Panzer",
         NameEN = "Panzer Vulpaphyla",
         Polarities = {"Y"},
-		NormalAttack = {
-                Damage = {
-                    ["Tranchant"] = 80.0
-                },
-                CritChance = 0.2,
-                CritMultiplier = 2,
-                StatusChance = 0.075,
-		},
-	},
+        NormalAttack = {
+            Damage = {
+                ["Tranchant"] = 80.0
+            },
+            CritChance = 0.2,
+            CritMultiplier = 2,
+            StatusChance = 0.075
+        }
+    },
     ["Vulpaphyla Nocturne"] = {
         HealthTypes = {
             ["Armure en Ferrite"] = 50,
             ["Chair Tenno"] = 90,
-			["Bouclier Tenno"] = 95,
+            ["Bouclier Tenno"] = 95
         },
         Family = "Vulpaphyla",
         Icon = nil,
@@ -708,20 +840,20 @@ local PetData = {
         Name = "Vulpaphyla Nocturne",
         NameEN = "Crescent Vulpaphyla",
         Polarities = {"Y"},
-		NormalAttack = {
-                Damage = {
-                    ["Tranchant"] = 80.0
-                },
-                CritChance = 0.2,
-                CritMultiplier = 2,
-                StatusChance = 0.075,
-		},
-	},
+        NormalAttack = {
+            Damage = {
+                ["Tranchant"] = 80.0
+            },
+            CritChance = 0.2,
+            CritMultiplier = 2,
+            StatusChance = 0.075
+        }
+    },
     ["Vulpaphyla Rusé"] = {
         HealthTypes = {
             ["Armure en Ferrite"] = 50,
             ["Chair Tenno"] = 90,
-			["Bouclier Tenno"] = 95,
+            ["Bouclier Tenno"] = 95
         },
         Family = "Vulpaphyla",
         Icon = nil,
@@ -731,15 +863,15 @@ local PetData = {
         Name = "Vulpaphyla Rusé",
         NameEN = "Spy Vulpaphyla",
         Polarities = {"Y"},
-		NormalAttack = {
-                Damage = {
-                    ["Tranchant"] = 80.0
-                },
-                CritChance = 0.2,
-                CritMultiplier = 2,
-                StatusChance = 0.075,
-		},
-	},
+        NormalAttack = {
+            Damage = {
+                ["Tranchant"] = 80.0
+            },
+            CritChance = 0.2,
+            CritMultiplier = 2,
+            StatusChance = 0.075
+        }
+    },
     -- W
     ["Wyrm"] = {
         Cost = {
@@ -748,12 +880,23 @@ local PetData = {
             MarketCost = 75,
             Rush = 30,
             Time = 24,
-            Parts = {
-                {Name = "Plaque d'Alliage", Type = "Ressource", Count = 500},
-                {Name = "Circuits", Type = "Ressource", Count = 400},
-                {Name = "Nano Spores", Type = "Ressource", Count = 200},
-                {Name = "Module de Contrôle", Type = "Ressource", Count = 1}
-            }
+            Parts = {{
+                Name = "Plaque d'Alliage",
+                Type = "Ressource",
+                Count = 500
+            }, {
+                Name = "Circuits",
+                Type = "Ressource",
+                Count = 400
+            }, {
+                Name = "Nano Spores",
+                Type = "Ressource",
+                Count = 200
+            }, {
+                Name = "Module de Contrôle",
+                Type = "Ressource",
+                Count = 1
+            }}
         },
         Armor = 50,
         BaseRange = 15,
@@ -776,12 +919,23 @@ local PetData = {
             MarketCost = nil,
             Rush = 30,
             Time = 24,
-            Parts = {
-                {Name = "Cerveau", Type = "Partie Prime", Count = 1},
-                {Name = "Carapace", Type = "Partie Prime", Count = 1},
-                {Name = "Systèmes", Type = "Partie Prime", Count = 1},
-                {Name = "Cellule Orokin", Type = "Ressource", Count = 6}
-            }
+            Parts = {{
+                Name = "Cerveau",
+                Type = "Partie Prime",
+                Count = 1
+            }, {
+                Name = "Carapace",
+                Type = "Partie Prime",
+                Count = 1
+            }, {
+                Name = "Systèmes",
+                Type = "Partie Prime",
+                Count = 1
+            }, {
+                Name = "Cellule Orokin",
+                Type = "Ressource",
+                Count = 6
+            }}
         },
         Armor = 150,
         BaseRange = 15,
