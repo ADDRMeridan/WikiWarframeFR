@@ -9,13 +9,16 @@
 --  @attribution	[[User:Falterfire|Falterfire]] (EN)
 --	@attribution	[[User:Synthtech|Synthtech]] (EN)
 --	@image			IconBuild.png
---  @require		[[Module:Weapons]]
---  @require		[[Module:Warframes]]
---  @require		[[Module:Icon]]
---  @require		[[Module:Table]]
---  @require		[[Module:String]]
---  @require		[[Module:Math]]
---  @require		[[Module:Research/data]]
+--  @require        [[Module:Research/data]]
+--  @require        [[Module:DropTables/data]]
+--  @require        [[Module:Pet]]
+--  @require        [[Module:Weapons]]
+--  @require        [[Module:Warframes]]
+--  @require        [[Module:Icon]]
+--  @require        [[Module:Math]]
+--  @require        [[Module:Shared]]
+--  @require        [[Module:Void]]
+--  @require        [[Module:Tooltip]]
 --  @release		stable
 --  <nowiki>
 local p = {}
@@ -140,6 +143,7 @@ end
 local function buildPartsLine(creditCost, partsArray, craftTime, rushCost, preReq)
 
     local primeParts = {}
+    local objetParts = {}
     local ret = {'\n|-'}
     local partStart = '\n| rowspan="2" style="height:50px; width:50px;" | '
     local partsLineEnd = '\n| style="text-align:left; padding: 0em 0.25em;" | '
@@ -159,9 +163,11 @@ local function buildPartsLine(creditCost, partsArray, craftTime, rushCost, preRe
         local part = partsArray[i]
         if (part ~= nil) then
             table.insert(ret, buildPartText(part))
-            -- Update prime parts list
+            -- Update prime/objet parts lists
             if (part.Type == "Partie Prime") then
                 table.insert(primeParts, part)
+            elseif (part.Type == "Objet") then
+                table.insert(objetParts, part)
             end
         end
     end
@@ -195,7 +201,7 @@ local function buildPartsLine(creditCost, partsArray, craftTime, rushCost, preRe
         end
     end
 
-    return table.concat(ret), primeParts
+    return table.concat(ret), primeParts, objetParts
 end
 
 local function buildMarketLine(marketCost, bpCost, bpStanding)
@@ -241,32 +247,22 @@ local function buildCostBox(itemType, itemName, itemCost)
     local ret = {'{| class="foundrytable"\n! colspan="6" | Pré-requis de [[Fonderie|Fabrication]]'}
     -- Components Line
     local bpCost = itemCost
-    if (itemType == "Warframe") then
-        bpCost = itemCost.Main
-    end
-    local tmpString, primeParts = buildPartsLine(bpCost.Credits, bpCost.Parts, bpCost.Time, bpCost.Rush)
+    local tmpString, primeParts, objetParts = buildPartsLine(bpCost.Credits, bpCost.Parts, bpCost.Time, bpCost.Rush)
     table.insert(ret, tmpString)
     -- Market Line
     table.insert(ret, buildMarketLine(bpCost.MarketCost, bpCost.BPCost, bpCost.BPStanding))
-    -- Print warframe parts
-    if (itemType == "Warframe") then
-        local switchWFPartsArray = {
-            ["Châssis"] = itemCost.Chassis,
-            ["Neuroptiques"] = itemCost.Neuro,
-            ["Systèmes"] = itemCost.System
-        }
-        for i = 1, 4 do
-            local part = bpCost.Parts[i]
-            if (part ~= nil) then
-                local partCost = switchWFPartsArray[part.Name]
-                if (partCost ~= nil) then
-                    table.insert(ret, '\n|-')
-                    table.insert(ret, SUBHEADER)
-                    table.insert(ret, part.Name)
-                    table.insert(ret, '\n|-')
-                    local tmp = buildPartsLine(partCost.Credits, partCost.Parts, partCost.Time, partCost.Rush)
-                    table.insert(ret, tmp)
-                end
+    -- Print parts of type Objet cost
+    if (#objetParts > 0 and bpCost.PartsCost ~= nil) then
+        local tmp = {}
+        for _, part in ipairs(objetParts) do
+            local partCost = bpCost.PartsCost[part.Name]
+            if (partCost ~= nil) then
+                table.insert(ret, '\n|-')
+                table.insert(ret, SUBHEADER)
+                table.insert(ret, part.Name)
+                table.insert(ret, '\n|-')
+                local tmp = buildPartsLine(partCost.Credits, partCost.Parts, partCost.Time, partCost.Rush)
+                table.insert(ret, tmp)
             end
         end
     end

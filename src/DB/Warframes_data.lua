@@ -19,91 +19,91 @@ local WarframeData = {
             Themes = "Assassin, Ninja",
             Sex = "Mâle",
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    BPCost = 35000,
-                    MarketCost = 375,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Neuroptiques",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Châssis",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Systèmes",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 300
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 500
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
+                Credits = 25000,
+                BPCost = 35000,
+                MarketCost = 375,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Neuroptiques",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Systèmes",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 300
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 500
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    }
                 }
             }
         },
@@ -125,89 +125,89 @@ local WarframeData = {
             Sex = "Mâle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 750
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Gallium",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 400
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 750
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Gallium",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 400
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Cellule Orokin",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    }
                 }
             }
         },
@@ -229,94 +229,94 @@ local WarframeData = {
             Themes = "Bagarreur, Élémentaire de la Terre",
             Sex = "Mâle",
             Cost = {
-                Main = {
-                    Credits = 30000,
-                    MarketCost = 275,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Neuroptiques",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Châssis",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Systèmes",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 50,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 1400
-                    }, {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 1100
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 800
-                    }, {
-                        Name = "Neurodes",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 50,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 1800
-                    }, {
-                        Name = "Cryotique",
-                        Type = "Ressource",
-                        Count = 1300
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 700
-                    }, {
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 4600
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 1700
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
+                Credits = 30000,
+                MarketCost = 275,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Neuroptiques",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Systèmes",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 50,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 1400
+                        }, {
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 1100
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 800
+                        }, {
+                            Name = "Neurodes",
+                            Type = "Ressource",
+                            Count = 5
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 50,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 1800
+                        }, {
+                            Name = "Cryotique",
+                            Type = "Ressource",
+                            Count = 1300
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 700
+                        }, {
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 4600
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 1700
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 5
+                        }, {
+                            Name = "Cellule Orokin",
+                            Type = "Ressource",
+                            Count = 1
+                        }}
+                    }
                 }
             }
         },
@@ -339,93 +339,93 @@ local WarframeData = {
             Sex = "Mâle",
             Vaulted = false,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Cryotique",
-                        Type = "Ressource",
-                        Count = 525
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 4700
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 200
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Tellure",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 725
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 3600
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Gallium",
-                        Type = "Ressource",
-                        Count = 4
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 1200
-                    }, {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 3200
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Cryotique",
+                            Type = "Ressource",
+                            Count = 525
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 4700
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 200
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Tellure",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 725
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 3600
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Gallium",
+                            Type = "Ressource",
+                            Count = 4
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 1200
+                        }, {
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 3200
+                        }}
+                    }
                 }
             }
         },
@@ -447,91 +447,91 @@ local WarframeData = {
             Themes = "Son, Esprit Hurlant",
             Sex = "Femelle",
             Cost = {
-                Main = {
-                    BPCost = 35000,
-                    Credits = 25000,
-                    MarketCost = 225,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Neuroptiques",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Châssis",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Systèmes",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 200
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 900
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 50
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 500
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 400
-                    }}
+                BPCost = 35000,
+                Credits = 25000,
+                MarketCost = 225,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Neuroptiques",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Systèmes",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 200
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 900
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 50
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 500
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 400
+                        }}
+                    }
                 }
             }
         },
@@ -554,93 +554,93 @@ local WarframeData = {
             Sex = "Femelle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 6000
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 1500
-                    }, {
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 2
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 10
-                    }, {
-                        Name = "Cryotique",
-                        Type = "Ressource",
-                        Count = 1500
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 2000
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 7000
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 10
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 300
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 4500
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 6000
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 1500
+                        }, {
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 2
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 10
+                        }, {
+                            Name = "Cryotique",
+                            Type = "Ressource",
+                            Count = 1500
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 2000
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 7000
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 10
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 300
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 4500
+                        }}
+                    }
                 }
             }
         },
@@ -663,95 +663,95 @@ local WarframeData = {
             Sex = "Mâle",
             Syndic = {"Arbitres d'Hexis", "Nouveau Loka"},
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    BPStanding = 5000,
-                    MarketCost = 325,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Neuroptiques",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Châssis",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Systèmes",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 50,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Tore Sola",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 2850
-                    }, {
-                        Name = "Alliage Hespazym",
-                        Type = "Ressource",
-                        Count = 50
-                    }, {
-                        Name = "Analyseur Écosynth",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 50,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Tore Vega",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 3250
-                    }, {
-                        Name = "Alliage Hespazym",
-                        Type = "Ressource",
-                        Count = 100
-                    }, {
-                        Name = "Thyst Marquise",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Tore Calda",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 2500
-                    }, {
-                        Name = "Entroplasma de Tromyzon",
-                        Type = "Ressource",
-                        Count = 10
-                    }, {
-                        Name = "Zodian Radiant",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
+                Credits = 25000,
+                BPStanding = 5000,
+                MarketCost = 325,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Neuroptiques",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Systèmes",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 50,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Tore Sola",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 2850
+                        }, {
+                            Name = "Alliage Hespazym",
+                            Type = "Ressource",
+                            Count = 50
+                        }, {
+                            Name = "Analyseur Écosynth",
+                            Type = "Ressource",
+                            Count = 5
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 50,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Tore Vega",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 3250
+                        }, {
+                            Name = "Alliage Hespazym",
+                            Type = "Ressource",
+                            Count = 100
+                        }, {
+                            Name = "Thyst Marquise",
+                            Type = "Ressource",
+                            Count = 5
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Tore Calda",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 2500
+                        }, {
+                            Name = "Entroplasma de Tromyzon",
+                            Type = "Ressource",
+                            Count = 10
+                        }, {
+                            Name = "Zodian Radiant",
+                            Type = "Ressource",
+                            Count = 5
+                        }}
+                    }
                 }
             }
         },
@@ -773,98 +773,98 @@ local WarframeData = {
             Sex = "Mâle",
             Syndic = {"Céphalon Suda", "La Séquence Perrin"},
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    MarketCost = 375,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Neuroptiques",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Châssis",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Systèmes",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Neuroptiques Volt",
-                        Type = "Objet",
-                        Count = 1,
-                        Text = "Neuro Volt"
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 50,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 200
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 350
-                    }, {
-                        Name = "Neuroptiques Ember",
-                        Type = "Objet",
-                        Count = 1,
-                        Text = "Neuro Ember"
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 50,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Neurodes",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 900
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 50
-                    }, {
-                        Name = "Châssis Frost",
-                        Type = "Objet",
-                        Count = 1,
-                        Text = "Châssis Frost"
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 400
-                    }, {
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Neurodes",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Systèmes Saryn",
-                        Type = "Objet",
-                        Count = 1,
-                        Text = "Systèmes Saryn"
-                    }}
+                Credits = 25000,
+                MarketCost = 375,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Neuroptiques",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Systèmes",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Neuroptiques Volt",
+                    Type = "Objet",
+                    Count = 1,
+                    Text = "Neuro Volt"
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 50,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 200
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 350
+                        }, {
+                            Name = "Neuroptiques Ember",
+                            Type = "Objet",
+                            Count = 1,
+                            Text = "Neuro Ember"
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 50,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Neurodes",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 900
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 50
+                        }, {
+                            Name = "Châssis Frost",
+                            Type = "Objet",
+                            Count = 1,
+                            Text = "Châssis Frost"
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 400
+                        }, {
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Neurodes",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Systèmes Saryn",
+                            Type = "Objet",
+                            Count = 1,
+                            Text = "Systèmes Saryn"
+                        }}
+                    }
                 }
             }
         },
@@ -887,93 +887,93 @@ local WarframeData = {
             Sex = "Mâle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Neurodes",
-                        Type = "Ressource",
-                        Count = 4
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 1750
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 450
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 4750
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 10
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 1600
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 7800
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 1775
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 4000
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Neurodes",
+                            Type = "Ressource",
+                            Count = 4
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 1750
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 450
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 4750
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 10
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 1600
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 7800
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 5
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 1775
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 4000
+                        }}
+                    }
                 }
             }
         },
@@ -995,91 +995,91 @@ local WarframeData = {
             Sex = "Femelle",
             Syndic = {"Méridien d'Acier", "Voile Rouge"},
             Cost = {
-                Main = {
-                    BPCost = 35000,
-                    Credits = 25000,
-                    MarketCost = 375,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Neuroptiques",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Châssis",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Systèmes",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 300
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 500
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 220
-                    }}
+                BPCost = 35000,
+                Credits = 25000,
+                MarketCost = 375,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Neuroptiques",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Systèmes",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 300
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 500
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 220
+                        }}
+                    }
                 }
             }
         },
@@ -1101,89 +1101,89 @@ local WarframeData = {
             Sex = "Femelle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 750
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 300
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 1200
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 700
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 750
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 300
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 1200
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 700
+                        }}
+                    }
                 }
             }
         },
@@ -1205,202 +1205,200 @@ local WarframeData = {
             Sex = "Femelle",
             Syndic = {"Arbitres d'Hexis", "Nouveau Loka"},
             Cost = {
-                Main = {
-                    BPCost = 25000,
-                    Credits = 25000,
-                    MarketCost = 325,
-                    Parts = {{
-                        Name = "Forme Diurne",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Forme Nocturne",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Forma",
-                        Type = "Objet",
-                        Count = 1
-                    }},
-                    Rush = 50,
-                    Time = 72
-                }
+                BPCost = 25000,
+                Credits = 25000,
+                MarketCost = 325,
+                Parts = {{
+                    Name = "Forme Diurne",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Forme Nocturne",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Forma",
+                    Type = "Objet",
+                    Count = 1
+                }},
+                Rush = 50,
+                Time = 72
             }
         },
         ["Equinox Forme Diurne"] = {
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Neuroptiques",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Châssis",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Systèmes",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Gallium",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 300
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Gallium",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 500
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Neuroptiques",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Systèmes",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Gallium",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 300
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Gallium",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 500
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    }
                 }
             },
             Image = "EquinoxDay.png"
         },
         ["Equinox Forme Nocturne"] = {
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Neuroptiques",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Châssis",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Systèmes",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 300
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 500
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Neuroptiques",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Systèmes",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 300
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 500
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    }
                 }
             },
             Image = "EquinoxNight.png"
@@ -1424,93 +1422,93 @@ local WarframeData = {
             Sex = "Femelle",
             Vaulted = false,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Tellure",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 1275
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 2350
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 10
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Gallium",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 4000
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Cryotique",
-                        Type = "Ressource",
-                        Count = 575
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 225
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 5400
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Tellure",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 1275
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 2350
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 10
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Gallium",
+                            Type = "Ressource",
+                            Count = 5
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 4000
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Cryotique",
+                            Type = "Ressource",
+                            Count = 575
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 225
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 5400
+                        }}
+                    }
                 }
             }
         },
@@ -1603,91 +1601,91 @@ local WarframeData = {
             Sex = "Mâle",
             Syndic = {"Céphalon Suda", "Méridien d'Acier"},
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    BPCost = 35000,
-                    MarketCost = 375,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Neuroptiques",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Châssis",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Systèmes",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 300
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 500
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
+                Credits = 25000,
+                BPCost = 35000,
+                MarketCost = 375,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Neuroptiques",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Systèmes",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 300
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 500
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    }
                 }
             }
         },
@@ -1709,91 +1707,91 @@ local WarframeData = {
             Sex = "Mâle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    BPCost = nil,
-                    MarketCost = 375,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 300
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 500
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 220
-                    }}
+                Credits = 25000,
+                BPCost = nil,
+                MarketCost = 375,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 300
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 500
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 220
+                        }}
+                    }
                 }
             }
         },
@@ -1833,95 +1831,95 @@ local WarframeData = {
             Syndic = {"Arbitres d'Hexis", "Nouveau Loka"},
             Conclave = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    BPCost = nil,
-                    MarketCost = nil,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Neurodes",
-                        Type = "Ressource",
-                        Count = 10
-                    }, {
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 1500
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 6750
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Gallium",
-                        Type = "Ressource",
-                        Count = 7
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 2150
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 250
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 8750
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Tellure",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 1350
-                    }, {
-                        Name = "Récupérations",
-                        Type = "Ressource",
-                        Count = 4375
-                    }}
+                Credits = 25000,
+                BPCost = nil,
+                MarketCost = nil,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Neurodes",
+                            Type = "Ressource",
+                            Count = 10
+                        }, {
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 1500
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 6750
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Gallium",
+                            Type = "Ressource",
+                            Count = 7
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 2150
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 250
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 8750
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Tellure",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 1350
+                        }, {
+                            Name = "Récupérations",
+                            Type = "Ressource",
+                            Count = 4375
+                        }}
+                    }
                 }
             }
         },
@@ -1961,7 +1959,7 @@ local WarframeData = {
             Introduced = "25.7",
             Themes = "Énergie Cinétique, Coureur",
             Sex = "Mâle",
-            MainCost = {
+            Cost = {
                 Credits = 25000,
                 BPCost = 30000,
                 MarketCost = 275,
@@ -1983,73 +1981,77 @@ local WarframeData = {
                     Name = "Cellule Orokin",
                     Type = "Ressource",
                     Count = 3
-                }}
-            },
-            NeuroCost = {
-                Credits = 15000,
-                Rush = 25,
-                Time = 12,
-                Parts = {{
-                    Name = "Cristal d'Argon",
-                    Type = "Ressource",
-                    Count = 1
-                }, {
-                    Name = "Rubedo",
-                    Type = "Ressource",
-                    Count = 1600
-                }, {
-                    Name = "Récupération",
-                    Type = "Ressource",
-                    Count = 6200
-                }, {
-                    Name = "Plaque d'Alliage",
-                    Type = "Ressource",
-                    Count = 2950
-                }}
-            },
-            ChassisCost = {
-                Credits = 15000,
-                Rush = 25,
-                Time = 12,
-                Parts = {{
-                    Name = "Sentirum Radian",
-                    Type = "Ressource",
-                    Count = 3
-                }, {
-                    Name = "Coeur de Nyth",
-                    Type = "Ressource",
-                    Count = 3
-                }, {
-                    Name = "Crimzian Étoilé",
-                    Type = "Ressource",
-                    Count = 6
-                }, {
-                    Name = "Grokdrul",
-                    Type = "Ressource",
-                    Count = 55
-                }}
-            },
-            SystemCost = {
-                Credits = 15000,
-                Rush = 25,
-                Time = 12,
-                Parts = {{
-                    Name = "Zodian Radiant",
-                    Type = "Ressource",
-                    Count = 3
-                }, {
-                    Name = "Thyst Marquise",
-                    Type = "Ressource",
-                    Count = 3
-                }, {
-                    Name = "Spore Mytocardia",
-                    Type = "Ressource",
-                    Count = 70
-                }, {
-                    Name = "Boue Thermique",
-                    Type = "Ressource",
-                    Count = 85
-                }}
+                }},
+                PartsCost = {
+                    PartsCost = {
+                        ["Neuroptiques"] = {
+                            Credits = 15000,
+                            Rush = 25,
+                            Time = 12,
+                            Parts = {{
+                                Name = "Cristal d'Argon",
+                                Type = "Ressource",
+                                Count = 1
+                            }, {
+                                Name = "Rubedo",
+                                Type = "Ressource",
+                                Count = 1600
+                            }, {
+                                Name = "Récupération",
+                                Type = "Ressource",
+                                Count = 6200
+                            }, {
+                                Name = "Plaque d'Alliage",
+                                Type = "Ressource",
+                                Count = 2950
+                            }}
+                        },
+                        ["Châssis"] = {
+                            Credits = 15000,
+                            Rush = 25,
+                            Time = 12,
+                            Parts = {{
+                                Name = "Sentirum Radian",
+                                Type = "Ressource",
+                                Count = 3
+                            }, {
+                                Name = "Coeur de Nyth",
+                                Type = "Ressource",
+                                Count = 3
+                            }, {
+                                Name = "Crimzian Étoilé",
+                                Type = "Ressource",
+                                Count = 6
+                            }, {
+                                Name = "Grokdrul",
+                                Type = "Ressource",
+                                Count = 55
+                            }}
+                        },
+                        ["Systèmes"] = {
+                            Credits = 15000,
+                            Rush = 25,
+                            Time = 12,
+                            Parts = {{
+                                Name = "Zodian Radiant",
+                                Type = "Ressource",
+                                Count = 3
+                            }, {
+                                Name = "Thyst Marquise",
+                                Type = "Ressource",
+                                Count = 3
+                            }, {
+                                Name = "Spore Mytocardia",
+                                Type = "Ressource",
+                                Count = 70
+                            }, {
+                                Name = "Boue Thermique",
+                                Type = "Ressource",
+                                Count = 85
+                            }}
+                        }
+                    }
+                }
             }
         },
         ["Grendel"] = {
@@ -2070,7 +2072,7 @@ local WarframeData = {
             Themes = "Faim, Oni",
             Sex = "Mâle",
             Syndic = {"Méridien d'Acier", "Voile Rouge"},
-            MainCost = {
+            Cost = {
                 Credits = 35000,
                 MarketCost = 325,
                 Rush = 50,
@@ -2091,74 +2093,79 @@ local WarframeData = {
                     Name = "Cellule Orokin",
                     Type = "Ressource",
                     Count = 3
-                }}
-            },
-            NeuroCost = {
-                Credits = 15000,
-                Rush = 25,
-                Time = 12,
-                Parts = {{
-                    Name = "Cristal d'Argon",
-                    Type = "Ressource",
-                    Count = 2
-                }, {
-                    Name = "Module de Contrôle",
-                    Type = "Ressource",
-                    Count = 5
-                }, {
-                    Name = "Ferrite",
-                    Type = "Ressource",
-                    Count = 3500
-                }, {
-                    Name = "Plaque d'Alliage",
-                    Type = "Ressource",
-                    Count = 3800
-                }}
-            },
-            ChassisCost = {
-                Credits = 15000,
-                Rush = 25,
-                Time = 12,
-                Parts = {{
-                    Name = "Aile de Condroc",
-                    Type = "Ressource",
-                    Count = 25
-                }, {
-                    Name = "Griffe Dorsale de Kuaka",
-                    Type = "Ressource",
-                    Count = 30
-                }, {
-                    Name = "Yeux de Tralok",
-                    Type = "Ressource",
-                    Count = 20
-                }, {
-                    Name = "Foie de Murkray",
-                    Type = "Ressource",
-                    Count = 15
-                }}
-            },
-            SystemCost = {
-                Credits = 15000,
-                Rush = 25,
-                Time = 12,
-                Parts = {{
-                    Name = "Circuits",
-                    Type = "Ressource",
-                    Count = 1125
-                }, {
-                    Name = "Morphics",
-                    Type = "Ressource",
-                    Count = 10
-                }, {
-                    Name = "Viande de Poisson",
-                    Type = "Ressource",
-                    Count = 125
-                }, {
-                    Name = "Huile de Poisson",
-                    Type = "Ressource",
-                    Count = 100
-                }}
+                }},
+                PartsCost = {
+                    PartsCost = {
+                        ["Neuroptiques"] = {
+                            Credits = 15000,
+                            Rush = 25,
+                            Time = 12,
+                            Parts = {{
+                                Name = "Cristal d'Argon",
+                                Type = "Ressource",
+                                Count = 2
+                            }, {
+                                Name = "Module de Contrôle",
+                                Type = "Ressource",
+                                Count = 5
+                            }, {
+                                Name = "Ferrite",
+                                Type = "Ressource",
+                                Count = 3500
+                            }, {
+                                Name = "Plaque d'Alliage",
+                                Type = "Ressource",
+                                Count = 3800
+                            }}
+                        },
+                        ["Châssis"] = {
+                            Credits = 15000,
+                            Rush = 25,
+                            Time = 12,
+                            Parts = {{
+                                Name = "Aile de Condroc",
+                                Type = "Ressource",
+                                Count = 25
+                            }, {
+                                Name = "Griffe Dorsale de Kuaka",
+                                Type = "Ressource",
+                                Count = 30
+                            }, {
+                                Name = "Yeux de Tralok",
+                                Type = "Ressource",
+                                Count = 20
+                            }, {
+                                Name = "Foie de Murkray",
+                                Type = "Ressource",
+                                Count = 15
+                            }}
+                        },
+                        ["Systèmes"] = {
+                            Credits = 15000,
+                            Rush = 25,
+                            Time = 12,
+                            Parts = {{
+                                Name = "Circuits",
+                                Type = "Ressource",
+                                Count = 1125
+                            }, {
+                                Name = "Morphics",
+                                Type = "Ressource",
+                                Count = 10
+                            }, {
+                                Name = "Viande de Poisson",
+                                Type = "Ressource",
+                                Count = 125
+                            }, {
+                                Name = "Huile de Poisson",
+                                Type = "Ressource",
+                                Count = 100
+                            }}
+                        }
+                    }
+                }
             }
+
         },
         ["Harrow"] = {
             Armor = 175,
@@ -2235,95 +2242,95 @@ local WarframeData = {
             Sex = "Mâle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    BPCost = nil,
-                    MarketCost = 375,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 1100
-                    }, {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 8750
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 12750
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Gallium",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 10500
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 6750
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 10
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 1300
-                    }, {
-                        Name = "Cryotique",
-                        Type = "Ressource",
-                        Count = 925
-                    }}
+                Credits = 25000,
+                BPCost = nil,
+                MarketCost = 375,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 5
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 1100
+                        }, {
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 8750
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 12750
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Gallium",
+                            Type = "Ressource",
+                            Count = 5
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 10500
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 6750
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 10
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 1300
+                        }, {
+                            Name = "Cryotique",
+                            Type = "Ressource",
+                            Count = 925
+                        }}
+                    }
                 }
             }
         },
@@ -2367,93 +2374,93 @@ local WarframeData = {
             Sex = "Mâle",
             Vaulted = false,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 5500
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 6
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 225
-                    }, {
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 4750
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 1400
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 8
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 10
-                    }, {
-                        Name = "Tellure",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 4300
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 1450
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 5500
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 6
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 225
+                        }, {
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 4750
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 1400
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 8
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 10
+                        }, {
+                            Name = "Tellure",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 4300
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 1450
+                        }}
+                    }
                 }
             }
         },
@@ -2493,95 +2500,95 @@ local WarframeData = {
             Sex = "Femelle",
             Vaulted = false,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    BPCost = nil,
-                    MarketCost = 375,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Cryotique",
-                        Type = "Ressource",
-                        Count = 600
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 750
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 4250
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 250
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 1800
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Neurodes",
-                        Type = "Ressource",
-                        Count = 4
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 9
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 175
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 3200
-                    }}
+                Credits = 25000,
+                BPCost = nil,
+                MarketCost = 375,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Cryotique",
+                            Type = "Ressource",
+                            Count = 600
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 750
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 4250
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 5
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 250
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 1800
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Neurodes",
+                            Type = "Ressource",
+                            Count = 4
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 9
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 175
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 3200
+                        }}
+                    }
                 }
             }
         },
@@ -2624,95 +2631,95 @@ local WarframeData = {
             ExilusPolarity = nil,
             Sex = "Mâle",
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    MarketCost = 325,
-                    Rush = 50,
-                    Time = 72,
-                    BPCost = nil,
-                    Parts = {{
-                        Name = "Neuroptiques",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Châssis",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Systèmes",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 3
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Xénorhast Trapèze",
-                        Type = "Ressource",
-                        Count = 6
-                    }, {
-                        Name = "Copernics",
-                        Type = "Ressource",
-                        Count = 3750
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 750
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 2750
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {
-                        Name = "Cryotique",
-                        Type = "Ressource",
-                        Count = 1500
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 5500
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cabochon Embolos",
-                        Type = "Ressource",
-                        Count = 6
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 5500
-                    }, {
-                        Name = "Hexenon",
-                        Type = "Ressource",
-                        Count = 550
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 3000
-                    }}
+                Credits = 25000,
+                MarketCost = 325,
+                Rush = 50,
+                Time = 72,
+                BPCost = nil,
+                Parts = {{
+                    Name = "Neuroptiques",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Systèmes",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 3
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Xénorhast Trapèze",
+                            Type = "Ressource",
+                            Count = 6
+                        }, {
+                            Name = "Copernics",
+                            Type = "Ressource",
+                            Count = 3750
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 750
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 2750
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 5
+                        }, {
+                            Name = "Cryotique",
+                            Type = "Ressource",
+                            Count = 1500
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 5500
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cabochon Embolos",
+                            Type = "Ressource",
+                            Count = 6
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 5500
+                        }, {
+                            Name = "Hexenon",
+                            Type = "Ressource",
+                            Count = 550
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 3000
+                        }}
+                    }
                 }
             }
         },
@@ -2753,95 +2760,95 @@ local WarframeData = {
             Sex = "Mâle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    BPCost = nil,
-                    MarketCost = 375,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Cryotique",
-                        Type = "Ressource",
-                        Count = 300
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 450
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 900
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 6
-                    }, {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 1675
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 550
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Tellure",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 3000
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 100
-                    }}
+                Credits = 25000,
+                BPCost = nil,
+                MarketCost = 375,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Cryotique",
+                            Type = "Ressource",
+                            Count = 300
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 450
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 900
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 6
+                        }, {
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 1675
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 550
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Tellure",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 3000
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 100
+                        }}
+                    }
                 }
             }
         },
@@ -2881,89 +2888,89 @@ local WarframeData = {
             Sex = "Mâle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 750
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Gallium",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 400
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 750
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Gallium",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 400
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Cellule Orokin",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    }
                 }
             }
         },
@@ -3003,91 +3010,91 @@ local WarframeData = {
             Sex = "Femelle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    BPCost = nil,
-                    MarketCost = 375,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 3
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 750
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 400
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 500
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
+                Credits = 25000,
+                BPCost = nil,
+                MarketCost = 375,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 3
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 750
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 400
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 500
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    }
                 }
             }
         },
@@ -3128,95 +3135,95 @@ local WarframeData = {
             Sex = "Femelle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    BPCost = nil,
-                    MarketCost = 375,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 350
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 1250
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Gallium",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 575
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 450
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 275
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 625
-                    }}
+                Credits = 25000,
+                BPCost = nil,
+                MarketCost = 375,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 350
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 1250
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Gallium",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 575
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 450
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 5
+                        }, {
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 275
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 625
+                        }}
+                    }
                 }
             }
         },
@@ -3257,95 +3264,95 @@ local WarframeData = {
             Sex = "Femelle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    BPCost = nil,
-                    MarketCost = 375,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Neurodes",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {
-                        Name = "Cryotique",
-                        Type = "Ressource",
-                        Count = 2000
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 2500
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 18000
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 20
-                    }, {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 26000
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 350
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 10
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 4500
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 23000
-                    }}
+                Credits = 25000,
+                BPCost = nil,
+                MarketCost = 375,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Neurodes",
+                            Type = "Ressource",
+                            Count = 5
+                        }, {
+                            Name = "Cryotique",
+                            Type = "Ressource",
+                            Count = 2000
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 2500
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 18000
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 20
+                        }, {
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 26000
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 350
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 10
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 4500
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 23000
+                        }}
+                    }
                 }
             }
         },
@@ -3385,95 +3392,95 @@ local WarframeData = {
             Sex = "Mâle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    BPCost = nil,
-                    MarketCost = 375,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 3
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 15000
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 12000
-                    }, {
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 18000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 6000
-                    }, {
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Tellure",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 15000
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
+                Credits = 25000,
+                BPCost = nil,
+                MarketCost = 375,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 3
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 15000
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 12000
+                        }, {
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 5
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 18000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 6000
+                        }, {
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Tellure",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 15000
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    }
                 }
             }
         },
@@ -3513,93 +3520,93 @@ local WarframeData = {
             Sex = "Mâle",
             Vaulted = false,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 5000
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 6
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 225
-                    }, {
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 4750
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 1400
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 8
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 10
-                    }, {
-                        Name = "Tellure",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 4300
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 1450
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 5000
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 6
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 225
+                        }, {
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 4750
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 1400
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 8
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 10
+                        }, {
+                            Name = "Tellure",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 4300
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 1450
+                        }}
+                    }
                 }
             }
         },
@@ -3658,89 +3665,89 @@ local WarframeData = {
             Sex = "Femelle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 200
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 400
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 300
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 600
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 200
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 200
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 400
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 300
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 600
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 200
+                        }}
+                    }
                 }
             }
         },
@@ -3780,89 +3787,89 @@ local WarframeData = {
             Sex = "Femelle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 750
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Gallium",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 400
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 750
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Gallium",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 400
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Cellule Orokin",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    }
                 }
             }
         },
@@ -3884,91 +3891,91 @@ local WarframeData = {
             Sex = "Mâle",
             Syndic = {"Méridien d'Acier", "Nouveau Loka"},
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    BPCost = 30000,
-                    MarketCost = 325,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Neuroptiques",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Châssis",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Systèmes",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Gallium",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 100
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 300
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Gallium",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 500
-                    }, {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 220
-                    }}
+                Credits = 25000,
+                BPCost = 30000,
+                MarketCost = 325,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Neuroptiques",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Systèmes",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Gallium",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 100
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 300
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cellule Orokin",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Gallium",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 500
+                        }, {
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 220
+                        }}
+                    }
                 }
             }
         },
@@ -3991,93 +3998,93 @@ local WarframeData = {
             Sex = "Mâle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 10
-                    }, {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 4000
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 1500
-                    }, {
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 2
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Gallium",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 100
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 1250
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 7500
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 250
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 6000
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 1250
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 10
+                        }, {
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 4000
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 1500
+                        }, {
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 2
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Gallium",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 100
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 1250
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 7500
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 250
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 6000
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 1250
+                        }}
+                    }
                 }
             }
         },
@@ -4116,93 +4123,93 @@ local WarframeData = {
             Sex = "Femelle",
             Vaulted = false,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 8
-                    }, {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 10
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 250
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 3750
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 8
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 1200
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 4250
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Cryotique",
-                        Type = "Ressource",
-                        Count = 370
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 875
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 4800
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 8
+                        }, {
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 10
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 250
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 3750
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 8
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 1200
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 4250
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Cryotique",
+                            Type = "Ressource",
+                            Count = 370
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 875
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 4800
+                        }}
+                    }
                 }
             }
         },
@@ -4224,95 +4231,95 @@ local WarframeData = {
             Themes = "Gadgets, Manipulation du Temps",
             Sex = "Femelle",
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    BPCost = 35000,
-                    MarketCost = 325,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Neuroptiques",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Châssis",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Systèmes",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 3
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 11500
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 5150
-                    }, {
-                        Name = "Diodes Cubiques",
-                        Type = "Ressource",
-                        Count = 1250
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 20000
-                    }, {
-                        Name = "Carbures",
-                        Type = "Ressource",
-                        Count = 2750
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 550
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 12
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 13400
-                    }, {
-                        Name = "Cryotique",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Titane",
-                        Type = "Ressource",
-                        Count = 1750
-                    }, {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 10
-                    }}
+                Credits = 25000,
+                BPCost = 35000,
+                MarketCost = 325,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Neuroptiques",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Systèmes",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 3
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 11500
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 5150
+                        }, {
+                            Name = "Diodes Cubiques",
+                            Type = "Ressource",
+                            Count = 1250
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 5
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 20000
+                        }, {
+                            Name = "Carbures",
+                            Type = "Ressource",
+                            Count = 2750
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 550
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 12
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 13400
+                        }, {
+                            Name = "Cryotique",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Titane",
+                            Type = "Ressource",
+                            Count = 1750
+                        }, {
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 10
+                        }}
+                    }
                 }
             }
         },
@@ -4333,7 +4340,7 @@ local WarframeData = {
             Introduced = "23.5",
             Themes = "Eidolon, Vampirisme",
             Syndic = {"Céphalon Suda", "La Séquence Perrin"},
-            MainCost = {
+            Cost = {
                 Credits = 25000,
                 MarketCost = 325,
                 Rush = 50,
@@ -4354,73 +4361,77 @@ local WarframeData = {
                     Name = "Cellule Orokin",
                     Type = "Ressource",
                     Count = 1
-                }}
-            },
-            NeuroCost = {
-                Credits = 15000,
-                Rush = 25,
-                Time = 12,
-                Parts = {{
-                    Name = "Capteurs Neuronaux",
-                    Type = "Ressource",
-                    Count = 3
-                }, {
-                    Name = "Cœur de Sentient Intact",
-                    Type = "Ressource",
-                    Count = 15
-                }, {
-                    Name = "Pack Polymère",
-                    Type = "Ressource",
-                    Count = 6000
-                }, {
-                    Name = "Rubedo",
-                    Type = "Ressource",
-                    Count = 2200
-                }}
-            },
-            ChassisCost = {
-                Credits = 15000,
-                Rush = 25,
-                Time = 12,
-                Parts = {{
-                    Name = "Morphics",
-                    Type = "Ressource",
-                    Count = 3
-                }, {
-                    Name = "Cœur de Sentient Intact",
-                    Type = "Ressource",
-                    Count = 10
-                }, {
-                    Name = "Rubedo",
-                    Type = "Ressource",
-                    Count = 1500
-                }, {
-                    Name = "Iradite",
-                    Type = "Ressource",
-                    Count = 50
-                }}
-            },
-            SystemCost = {
-                Credits = 15000,
-                Rush = 25,
-                Time = 12,
-                Parts = {{
-                    Name = "Module de Contrôle",
-                    Type = "Ressource",
-                    Count = 3
-                }, {
-                    Name = "Feu Follet de Cetus",
-                    Type = "Ressource",
-                    Count = 3
-                }, {
-                    Name = "Récupération",
-                    Type = "Ressource",
-                    Count = 8000
-                }, {
-                    Name = "Pack Polymère",
-                    Type = "Ressource",
-                    Count = 3000
-                }}
+                }},
+                PartsCost = {
+                    PartsCost = {
+                        ["Neuroptiques"] = {
+                            Credits = 15000,
+                            Rush = 25,
+                            Time = 12,
+                            Parts = {{
+                                Name = "Capteurs Neuronaux",
+                                Type = "Ressource",
+                                Count = 3
+                            }, {
+                                Name = "Cœur de Sentient Intact",
+                                Type = "Ressource",
+                                Count = 15
+                            }, {
+                                Name = "Pack Polymère",
+                                Type = "Ressource",
+                                Count = 6000
+                            }, {
+                                Name = "Rubedo",
+                                Type = "Ressource",
+                                Count = 2200
+                            }}
+                        },
+                        ["Châssis"] = {
+                            Credits = 15000,
+                            Rush = 25,
+                            Time = 12,
+                            Parts = {{
+                                Name = "Morphics",
+                                Type = "Ressource",
+                                Count = 3
+                            }, {
+                                Name = "Cœur de Sentient Intact",
+                                Type = "Ressource",
+                                Count = 10
+                            }, {
+                                Name = "Rubedo",
+                                Type = "Ressource",
+                                Count = 1500
+                            }, {
+                                Name = "Iradite",
+                                Type = "Ressource",
+                                Count = 50
+                            }}
+                        },
+                        ["Systèmes"] = {
+                            Credits = 15000,
+                            Rush = 25,
+                            Time = 12,
+                            Parts = {{
+                                Name = "Module de Contrôle",
+                                Type = "Ressource",
+                                Count = 3
+                            }, {
+                                Name = "Feu Follet de Cetus",
+                                Type = "Ressource",
+                                Count = 3
+                            }, {
+                                Name = "Récupération",
+                                Type = "Ressource",
+                                Count = 8000
+                            }, {
+                                Name = "Pack Polymère",
+                                Type = "Ressource",
+                                Count = 3000
+                            }}
+                        }
+                    }
+                }
             }
         },
         ["Rhino"] = {
@@ -4441,91 +4452,91 @@ local WarframeData = {
             Sex = "Mâle",
             Syndic = {"La Séquence Perrin", "Méridien d'Acier"},
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    BPCost = 35000,
-                    MarketCost = 375,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Neuroptiques",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Châssis",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Systèmes",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Gallium",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 300
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Gallium",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 500
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
+                Credits = 25000,
+                BPCost = 35000,
+                MarketCost = 375,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Neuroptiques",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Systèmes",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 300
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Gallium",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 500
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    }
                 }
             }
         },
@@ -4547,89 +4558,89 @@ local WarframeData = {
             Sex = "Mâle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 750
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 400
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 500
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 750
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 400
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 500
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    }
                 }
             }
         },
@@ -4669,89 +4680,89 @@ local WarframeData = {
             Sex = "Femelle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 1500
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 3500
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 750
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 4000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 1200
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 4000
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 1500
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 3500
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 750
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 4000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 1200
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Cellule Orokin",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 4000
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    }
                 }
             }
         },
@@ -4773,94 +4784,94 @@ local WarframeData = {
             Themes = "Fantôme, Faucheur, Élémentaire d'Ombre",
             Sex = "Mâle",
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    MarketCost = 375,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Neuroptiques",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Châssis",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Systèmes",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 3
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 6
-                    }, {
-                        Name = "Titane",
-                        Type = "Ressource",
-                        Count = 1200
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 750
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 2750
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 8
-                    }, {
-                        Name = "Cryotique",
-                        Type = "Ressource",
-                        Count = 650
-                    }, {
-                        Name = "Larmes du Néant",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Plaques d'Alliage",
-                        Type = "Ressource",
-                        Count = 3300
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 250
-                    }, {
-                        Name = "Astérite",
-                        Type = "Ressource",
-                        Count = 15
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 2950
-                    }}
+                Credits = 25000,
+                MarketCost = 375,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Neuroptiques",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Systèmes",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 3
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 6
+                        }, {
+                            Name = "Titane",
+                            Type = "Ressource",
+                            Count = 1200
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 750
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 2750
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 8
+                        }, {
+                            Name = "Cryotique",
+                            Type = "Ressource",
+                            Count = 650
+                        }, {
+                            Name = "Larmes du Néant",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Plaques d'Alliage",
+                            Type = "Ressource",
+                            Count = 3300
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 250
+                        }, {
+                            Name = "Astérite",
+                            Type = "Ressource",
+                            Count = 15
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 2950
+                        }}
+                    }
                 }
             }
         },
@@ -4918,93 +4929,93 @@ local WarframeData = {
             Themes = "Reine des Fées",
             Sex = "Femelle",
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 5500
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 6
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 225
-                    }, {
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 4750
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 1400
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 8
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 10
-                    }, {
-                        Name = "Tellure",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 4300
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 1450
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 5500
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 6
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 225
+                        }, {
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 4750
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 1400
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 8
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 10
+                        }, {
+                            Name = "Tellure",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 4300
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 1450
+                        }}
+                    }
                 }
             }
         },
@@ -5044,89 +5055,89 @@ local WarframeData = {
             Sex = "Femelle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 450
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 9000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 1100
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 500
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 1200
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Cryotique",
-                        Type = "Ressource",
-                        Count = 9000
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 1350
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 450
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 9000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 1100
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 500
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 1200
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Cellule Orokin",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Cryotique",
+                            Type = "Ressource",
+                            Count = 9000
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 1350
+                        }}
+                    }
                 }
             }
         },
@@ -5166,93 +5177,93 @@ local WarframeData = {
             Sex = "Femelle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 3
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 15000
-                    }, {
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 12000
-                    }, {
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 18000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 6000
-                    }, {
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Tellure",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 15000
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 3
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 15000
+                        }, {
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 12000
+                        }, {
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 5
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 18000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 6000
+                        }, {
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Tellure",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 15000
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    }
                 }
             }
         },
@@ -5292,93 +5303,93 @@ local WarframeData = {
             Sex = "Mâle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 16000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 8000
-                    }, {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 18000
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 7000
-                    }, {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 13000
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {
-                        Name = "Cryotique",
-                        Type = "Ressource",
-                        Count = 9000
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 5000
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Extrait de Nitain",
+                    Type = "Ressource",
+                    Count = 5
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 5
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 16000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 8000
+                        }, {
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 18000
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 5
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 7000
+                        }, {
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 13000
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 5
+                        }, {
+                            Name = "Cryotique",
+                            Type = "Ressource",
+                            Count = 9000
+                        }, {
+                            Name = "Cellule Orokin",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 5000
+                        }}
+                    }
                 }
             }
         },
@@ -5418,89 +5429,89 @@ local WarframeData = {
             Sex = "Mâle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Neurodes",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 750
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 400
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 1000
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Neurodes",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 750
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 400
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Cellule Orokin",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 1000
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    }
                 }
             }
         },
@@ -5521,94 +5532,94 @@ local WarframeData = {
             Themes = "Feux Follets, Manipulation de Portail",
             Sex = "Femelle",
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    MarketCost = 375,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 3
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Hexenon",
-                        Type = "Ressource",
-                        Count = 300
-                    }, {
-                        Name = "Tellure",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 950
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 2200
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Hexenon",
-                        Type = "Ressource",
-                        Count = 500
-                    }, {
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 700
-                    }, {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 2750
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Hexenon",
-                        Type = "Ressource",
-                        Count = 400
-                    }, {
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 950
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 10000
-                    }}
+                Credits = 25000,
+                MarketCost = 375,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 3
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Hexenon",
+                            Type = "Ressource",
+                            Count = 300
+                        }, {
+                            Name = "Tellure",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 950
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 2200
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Hexenon",
+                            Type = "Ressource",
+                            Count = 500
+                        }, {
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 700
+                        }, {
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 2750
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Hexenon",
+                            Type = "Ressource",
+                            Count = 400
+                        }, {
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 950
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 10000
+                        }}
+                    }
                 }
             }
         },
@@ -5648,93 +5659,93 @@ local WarframeData = {
             Sex = "Mâle",
             Vaulted = false,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Neuroptiques",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Châssis",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Systèmes",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Neurodes",
-                        Type = "Ressource",
-                        Count = 4
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 750
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 200
-                    }, {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 3550
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 6
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 825
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 2200
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Morphics",
-                        Type = "Ressource",
-                        Count = 7
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 1150
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 3800
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Neuroptiques",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Systèmes",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Neurodes",
+                            Type = "Ressource",
+                            Count = 4
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 750
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 200
+                        }, {
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 3550
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 6
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 825
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 2200
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Morphics",
+                            Type = "Ressource",
+                            Count = 7
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 1150
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 3800
+                        }}
+                    }
                 }
             }
         },
@@ -5757,94 +5768,94 @@ local WarframeData = {
             Themes = "Brisé, Manipulation du Néant",
             Vaulted = false,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    MarketCost = 325,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Neuroptiques",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Châssis",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Systèmes",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 3
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 10
-                    }, {
-                        Name = "Distillat Thaumique",
-                        Type = "Ressource",
-                        Count = 60
-                    }, {
-                        Name = "Dents de Sharrac",
-                        Type = "Ressource",
-                        Count = 20
-                    }, {
-                        Name = "Devar Esher",
-                        Type = "Ressource",
-                        Count = 40
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Systèmes Gyromag",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {
-                        Name = "Section de Noyau Spinal",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Alliage Venerdo",
-                        Type = "Ressource",
-                        Count = 50
-                    }, {
-                        Name = "Teroglobe Lumineux",
-                        Type = "Ressource",
-                        Count = 50
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Souffle d'Eidolon",
-                        Type = "Ressource",
-                        Count = 10
-                    }, {
-                        Name = "Scintillateur",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {
-                        Name = "Pustulite",
-                        Type = "Ressource",
-                        Count = 45
-                    }, {
-                        Name = "Ganglion",
-                        Type = "Ressource",
-                        Count = 60
-                    }}
+                Credits = 25000,
+                MarketCost = 325,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Neuroptiques",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Systèmes",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 3
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 10
+                        }, {
+                            Name = "Distillat Thaumique",
+                            Type = "Ressource",
+                            Count = 60
+                        }, {
+                            Name = "Dents de Sharrac",
+                            Type = "Ressource",
+                            Count = 20
+                        }, {
+                            Name = "Devar Esher",
+                            Type = "Ressource",
+                            Count = 40
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Systèmes Gyromag",
+                            Type = "Ressource",
+                            Count = 5
+                        }, {
+                            Name = "Section de Noyau Spinal",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Alliage Venerdo",
+                            Type = "Ressource",
+                            Count = 50
+                        }, {
+                            Name = "Teroglobe Lumineux",
+                            Type = "Ressource",
+                            Count = 50
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Souffle d'Eidolon",
+                            Type = "Ressource",
+                            Count = 10
+                        }, {
+                            Name = "Scintillateur",
+                            Type = "Ressource",
+                            Count = 5
+                        }, {
+                            Name = "Pustulite",
+                            Type = "Ressource",
+                            Count = 45
+                        }, {
+                            Name = "Ganglion",
+                            Type = "Ressource",
+                            Count = 60
+                        }}
+                    }
                 }
             }
         },
@@ -5866,94 +5877,94 @@ local WarframeData = {
             Introduced = "30.5",
             Themes = "Aquatique, Ballerine, Surfeur",
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    MarketCost = 325,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Neuroptiques",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Châssis",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Systèmes",
-                        Type = "Objet",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 3
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 875
-                    }, {
-                        Name = "Cœur de Noctrul",
-                        Type = "Ressource",
-                        Count = 10
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Tellure",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Alliage Venerdo",
-                        Type = "Ressource",
-                        Count = 20
-                    }, {
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 350
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 1500
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Cryotique",
-                        Type = "Ressource",
-                        Count = 350
-                    }, {
-                        Name = "Cerveau Exa",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 1750
-                    }}
+                Credits = 25000,
+                MarketCost = 325,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Neuroptiques",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Systèmes",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 3
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 875
+                        }, {
+                            Name = "Cœur de Noctrul",
+                            Type = "Ressource",
+                            Count = 10
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Tellure",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Alliage Venerdo",
+                            Type = "Ressource",
+                            Count = 20
+                        }, {
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 350
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 1500
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Cryotique",
+                            Type = "Ressource",
+                            Count = 350
+                        }, {
+                            Name = "Cerveau Exa",
+                            Type = "Ressource",
+                            Count = 5
+                        }, {
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 1750
+                        }}
+                    }
                 }
             }
         },
@@ -5975,91 +5986,91 @@ local WarframeData = {
             Sex = "Femelle",
             Syndic = {"Nouveau Loka", "Voile Rouge"},
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    BPCost = 35000,
-                    MarketCost = 275,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 1
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Circuits",
-                        Type = "Ressource",
-                        Count = 150
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 200
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 200
-                    }, {
-                        Name = "Récupération",
-                        Type = "Ressource",
-                        Count = 500
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 200
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 900
-                    }, {
-                        Name = "Rubedo",
-                        Type = "Ressource",
-                        Count = 50
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 200
-                    }, {
-                        Name = "Pack Polymère",
-                        Type = "Ressource",
-                        Count = 500
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 400
-                    }}
+                Credits = 25000,
+                BPCost = 35000,
+                MarketCost = 275,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Circuits",
+                            Type = "Ressource",
+                            Count = 150
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 200
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 200
+                        }, {
+                            Name = "Récupération",
+                            Type = "Ressource",
+                            Count = 500
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 200
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 900
+                        }, {
+                            Name = "Rubedo",
+                            Type = "Ressource",
+                            Count = 50
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Module de Contrôle",
+                            Type = "Ressource",
+                            Count = 1
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 200
+                        }, {
+                            Name = "Pack Polymère",
+                            Type = "Ressource",
+                            Count = 500
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 400
+                        }}
+                    }
                 }
             }
         },
@@ -6082,93 +6093,93 @@ local WarframeData = {
             Sex = "Femelle",
             Vaulted = true,
             Cost = {
-                Main = {
-                    Credits = 25000,
-                    Rush = 50,
-                    Time = 72,
-                    Parts = {{
-                        Name = "Schéma Neuroptiques",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Châssis",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Schéma Systèmes",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {
-                        Name = "Cellule Orokin",
-                        Type = "Ressource",
-                        Count = 5
-                    }}
-                },
-                Neuro = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Capteurs Neuronaux",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 250
-                    }, {
-                        Name = "Plastides",
-                        Type = "Ressource",
-                        Count = 350
-                    }, {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 4250
-                    }}
-                },
-                Chassis = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Extrait de Nitain",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Tellure",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Ferrite",
-                        Type = "Ressource",
-                        Count = 3600
-                    }, {
-                        Name = "Oxium",
-                        Type = "Ressource",
-                        Count = 300
-                    }}
-                },
-                System = {
-                    Credits = 15000,
-                    Rush = 25,
-                    Time = 12,
-                    Parts = {{
-                        Name = "Cristal d'Argon",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {
-                        Name = "Neurodes",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {
-                        Name = "Cryotique",
-                        Type = "Ressource",
-                        Count = 550
-                    }, {
-                        Name = "Nano Spores",
-                        Type = "Ressource",
-                        Count = 3175
-                    }}
+                Credits = 25000,
+                Rush = 50,
+                Time = 72,
+                Parts = {{
+                    Name = "Schéma Neuroptiques",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Châssis",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Schéma Systèmes",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }},
+                PartsCost = {
+                    ["Neuroptiques"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Capteurs Neuronaux",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 250
+                        }, {
+                            Name = "Plastides",
+                            Type = "Ressource",
+                            Count = 350
+                        }, {
+                            Name = "Plaque d'Alliage",
+                            Type = "Ressource",
+                            Count = 4250
+                        }}
+                    },
+                    ["Châssis"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Extrait de Nitain",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Tellure",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Ferrite",
+                            Type = "Ressource",
+                            Count = 3600
+                        }, {
+                            Name = "Oxium",
+                            Type = "Ressource",
+                            Count = 300
+                        }}
+                    },
+                    ["Systèmes"] = {
+                        Credits = 15000,
+                        Rush = 25,
+                        Time = 12,
+                        Parts = {{
+                            Name = "Cristal d'Argon",
+                            Type = "Ressource",
+                            Count = 2
+                        }, {
+                            Name = "Neurodes",
+                            Type = "Ressource",
+                            Count = 3
+                        }, {
+                            Name = "Cryotique",
+                            Type = "Ressource",
+                            Count = 550
+                        }, {
+                            Name = "Nano Spores",
+                            Type = "Ressource",
+                            Count = 3175
+                        }}
+                    }
                 }
             }
         }

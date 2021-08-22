@@ -1,19 +1,14 @@
 local WeaponData = {
-    ["IgnoreInCount"] = {
-        "Rempart", "Épées Versatiles Sombres (Doubles Épées)", "Cadus",
-        "Penta Carmin", "Machette Prisma", "Dargyn", "Arc d'Artémis",
-        "Chargeur Incandescent", "Dex Pixia", "Pacificateurs", "Diwata",
-        "Lame Exaltée", "Bâton de Fer", "Serres Valkyr", "Serres de Garuda",
-        "Vents du Désert", "Corvas (Atmosphère)", "Cyngas (Atmosphère)",
-        "Doubles Décurion (Atmosphère)",
-        "Doubles Décurion Prisma (Atmosphère)", "Fluctus (Atmosphère)",
-        "Grattler (Atmosphère)", "Imperator (Atmosphère)",
-        "Imperator Vandal (Atmosphère)", "Ayanga Kuva (Atmosphère)",
-        "Larkspur (Atmosphère)", "Phaedra (Atmosphère)",
-        "Velocitus (Atmosphère)", "Désarmé",
-        "Apoc", "Carcinnox", "Cryophon", "Glazio", "Laith", "Photor", "Pulsar", "Talyn", "Canon Tunguska", "Vort",
-		"Galvarc", "Milati", "Missile à Tête Chercheuse Tycho"
-    },
+    ["IgnoreInCount"] = {"Rempart", "Épées Versatiles Sombres (Doubles Épées)", "Cadus", "Penta Carmin",
+                         "Machette Prisma", "Dargyn", "Arc d'Artémis", "Chargeur Incandescent", "Dex Pixia",
+                         "Pacificateurs", "Diwata", "Lame Exaltée", "Bâton de Fer", "Serres Valkyr",
+                         "Serres de Garuda", "Vents du Désert", "Corvas (Atmosphère)", "Cyngas (Atmosphère)",
+                         "Doubles Décurion (Atmosphère)", "Doubles Décurion Prisma (Atmosphère)",
+                         "Fluctus (Atmosphère)", "Grattler (Atmosphère)", "Imperator (Atmosphère)",
+                         "Imperator Vandal (Atmosphère)", "Ayanga Kuva (Atmosphère)", "Larkspur (Atmosphère)",
+                         "Phaedra (Atmosphère)", "Velocitus (Atmosphère)", "Désarmé", "Apoc", "Carcinnox",
+                         "Cryophon", "Glazio", "Laith", "Photor", "Pulsar", "Talyn", "Canon Tunguska", "Vort",
+                         "Galvarc", "Milati", "Missile à Tête Chercheuse Tycho"},
     ["Weapons"] = {
         ["Ack & Brunt"] = {
             Name = "Ack & Brunt",
@@ -23,12 +18,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Injecteur de Détonite",Type = "Ressource",Count = 5},
-                    {Name = "Récupération", Type = "Ressource", Count = 7500},
-                    {Name = "Cryotique", Type = "Ressource", Count = 3300},
-                    {Name = "Forma", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Injecteur de Détonite",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 7500
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 3300
+                }, {
+                    Name = "Forma",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             BlockAngle = 70,
             Class = "Épée et Bouclier",
@@ -75,58 +81,70 @@ local WeaponData = {
             Users = {"[[Tyl Regor]]", "[[Bourreau Gorth]]"},
             WallAttack = 200
         },
-        
-    	["Ambassadeur"] = {
-			Accuracy = 111.1,
-			Class = "Fusil",
-			Conclave = true,
-			Disposition = 0.5,
-			ExilusPolarity = "Bar",
-			Introduced = "30.5",
-			Magazine = 96,
-			Mastery = 10,
-			MaxAmmo = 960,
-			Name = "Ambassadeur",
-			Cost = {
+
+        ["Ambassadeur"] = {
+            Accuracy = 111.1,
+            Class = "Fusil",
+            Conclave = true,
+            Disposition = 0.5,
+            ExilusPolarity = "Bar",
+            Introduced = "30.5",
+            Magazine = 96,
+            Mastery = 10,
+            MaxAmmo = 960,
+            Name = "Ambassadeur",
+            Cost = {
                 Credits = 20000,
                 BPCost = nil,
                 MarketCost = 225,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Canon",Type = "Objet",Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
-			Image = "Ambassadeur.png",
-			NormalAttack = {
-				AttackName = "Auto",
-				CritChance = 0.14,
-				CritMultiplier = 2.8,
-				Damage = {["Électrique"] = 24},
-				FireRate = 13.33,
-				ShotType = "Hit-Scan",
-				StatusChance = 0.26 
-			},
-			Polarities = {},
-			Reload = 2.6,
-			Attack2 = {
-				Accuracy = 100,
-				AttackName = "Charge",
-				CritChance = 0.16,
-				CritMultiplier = 2.8,
-				Damage = {["Électrique"] = 600},
-				FireRate = 1,
-				ShotType = "Hit-Scan",
-				StatusChance = 0.32,
-				Traits = {"Corpus"},
-				Trigger = "Charge" 
-			},
-			Trigger = "Auto / Charge",
-			Type = "Principale" 
-		},
-        
+            Image = "Ambassadeur.png",
+            NormalAttack = {
+                AttackName = "Auto",
+                CritChance = 0.14,
+                CritMultiplier = 2.8,
+                Damage = {
+                    ["Électrique"] = 24
+                },
+                FireRate = 13.33,
+                ShotType = "Hit-Scan",
+                StatusChance = 0.26
+            },
+            Polarities = {},
+            Reload = 2.6,
+            Attack2 = {
+                Accuracy = 100,
+                AttackName = "Charge",
+                CritChance = 0.16,
+                CritMultiplier = 2.8,
+                Damage = {
+                    ["Électrique"] = 600
+                },
+                FireRate = 1,
+                ShotType = "Hit-Scan",
+                StatusChance = 0.32,
+                Traits = {"Corpus"},
+                Trigger = "Charge"
+            },
+            Trigger = "Auto / Charge",
+            Type = "Principale"
+        },
+
         ["Amphis"] = {
             Class = "Bâton",
             Conclave = true,
@@ -136,12 +154,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 2},
-                    {Name = "Récupération", Type = "Ressource", Count = 500},
-                    {Name = "Circuits", Type = "Ressource", Count = 600},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 600}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 500
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 600
+                }}
             },
             Disposition = 1.5,
             Image = "Amphis.png",
@@ -198,12 +227,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Gallium", Type = "Ressource", Count = 2},
-                    {Name = "Récupération", Type = "Ressource", Count = 800},
-                    {Name = "Circuits", Type = "Ressource", Count = 200},
-                    {Name = "Morphics", Type = "Ressource", Count = 4}
-                }
+                Parts = {{
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 200
+                }, {
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 4
+                }}
             },
             Class = "Faux",
             Conclave = true,
@@ -261,7 +301,9 @@ local WeaponData = {
             Accuracy = 100,
             Reload = 30,
             NormalAttack = {
-                Damage = {["Néant"] = 3000},
+                Damage = {
+                    ["Néant"] = 3000
+                },
                 CritChance = 0.20,
                 CritMultiplier = 1.5,
                 StatusChance = 0.0,
@@ -281,12 +323,23 @@ local WeaponData = {
                 MarketCost = 125,
                 Rush = 30,
                 Time = 12,
-                Parts = {
-                    {Name = "Nano Spores", Type = "Ressource", Count = 900},
-                    {Name = "Récupération", Type = "Ressource", Count = 900},
-                    {Name = "Ferrite", Type = "Ressource", Count = 600},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 450}
-                }
+                Parts = {{
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 450
+                }}
             },
             Disposition = 1.45,
             Family = "Ankyros",
@@ -337,11 +390,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 2},
-                    {Name = "Gantelet", Type = "Partie Prime", Count = 2},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Gantelet",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Class = "Poings",
             Conclave = true,
@@ -399,12 +460,23 @@ local WeaponData = {
                 MarketCost = 180,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {Name = "Gallium", Type = "Ressource", Count = 6},
-                    {Name = "Circuits", Type = "Ressource", Count = 2150},
-                    {Name = "Ferrite", Type = "Ressource", Count = 1200}
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 6
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 2150
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 1200
+                }}
             },
             Disposition = 1.3,
             Image = "Arca_Titron.png",
@@ -412,7 +484,10 @@ local WeaponData = {
             Mastery = 10,
             Name = "Arca Titron",
             NormalAttack = {
-                Damage = {["Impact"] = 234, ["Tranchant"] = 126},
+                Damage = {
+                    ["Impact"] = 234,
+                    ["Tranchant"] = 126
+                },
                 CritChance = 0.24,
                 CritMultiplier = 2,
                 StatusChance = 0.38,
@@ -454,12 +529,23 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Garde", Type = "Objet", Count = 2},
-                    {Name = "Rivet", Type = "Objet", Count = 1},
-                    {Name = "Xénorhast Trapèze", Type = "Ressource", Count = 1},
-                    {Name = "Cabochon Embolos", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Garde",
+                    Type = "Objet",
+                    Count = 2
+                }, {
+                    Name = "Rivet",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Xénorhast Trapèze",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Cabochon Embolos",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Name = "Arum Spinosa",
             Image = "ArumSpinosa.png",
@@ -513,12 +599,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Récupération", Type = "Ressource", Count = 1500},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 800},
-                    {Name = "Rubedo", Type = "Ressource", Count = 200},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 1500
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 200
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.05,
             Image = "Atterax.png",
@@ -573,7 +670,10 @@ local WeaponData = {
             Name = "Ayanga Kuva",
             NoiseLevel = "Bruyant",
             NormalAttack = {
-                Damage = {["Impact"] = 87, ["Explosif"] = 187},
+                Damage = {
+                    ["Impact"] = 87,
+                    ["Explosif"] = 187
+                },
                 CritChance = 0.35,
                 CritMultiplier = 2,
                 StatusChance = 0.20,
@@ -595,7 +695,10 @@ local WeaponData = {
             Name = "Kuva Ayanga",
             NoiseLevel = "Bruyant",
             NormalAttack = {
-                Damage = {["Impact"] = 87, ["Explosif"] = 187},
+                Damage = {
+                    ["Impact"] = 87,
+                    ["Explosif"] = 187
+                },
                 CritChance = 0.35,
                 CritMultiplier = 2,
                 StatusChance = 0.20,
@@ -607,157 +710,206 @@ local WeaponData = {
             Type = "Arch-Fusil (Atmosphère)"
         },
         ["Grattler Kuva"] = {
-		Class = 'Arch-Fusil',
-		Accuracy = 16.7,
-		Attack5 = {
-			AttackName = "Explosion",
-			Damage = {["Explosif"] = 205},
-			Falloff = {EndRange = 9, Reduction = 0.7, StartRange = 0},
-			Radius = 9 
-		},
-		Disposition = 0.5,
-		Image = "Grattler Kuva.png",
-		Introduced = "30.5",
-		Magazine = 60,
-		Mastery = 15,
-		Name = "Grattler Kuva",
-		NormalAttack = {
-			AttackName = "Impact de Projectile",
-			CritChance = 0.27 ,
-			CritMultiplier = 2.1,
-			Damage = {["Impact"] = 10, ["Perforation"] = 80, ["Tranchant"] = 10},
-			Falloff = {EndRange = 2000, StartRange = 1000},
-			FireRate = 5.55,
-			ShotSpeed = "?",
-			ShotType = "Projectile",
-			StatusChance = 0.27 
-		},
-		Polarities = {"V","V","V"},
-		Reload = 10,
-		ReloadDelay = 1,
-		ReloadStyle = "Régénération",
-		Traits = {"Grineer"},
-		Family = "Grattler",
-		Trigger = "Auto",
-		Type = "Arch-Fusil" 
-	},
-	["Grattler Kuva (Atmosphère)"] = {
-		Accuracy = 25,
-		Attack5 = {
-			AttackName = "Explosion",
-			Damage = {["Explosif"] = 155},
-			Falloff = {EndRange = 9, Reduction = 0.7, StartRange = 0},
-			Radius = 9 
-		},
-		Disposition = 0.5,
-		Image = "Grattler Kuva.png",
-		Introduced = "30.5",
-		Link = "Grattler Kuva",
-		Magazine = 60,
-		Mastery = 15,
-		MaxAmmo = 180,
-		Name = "Grattler Kuva (Atmosphère)",
-		NormalAttack = {
-			AttackName = "Impact de Projectile",
-			CritChance = 0.27 ,
-			CritMultiplier = 2.1,
-			Damage = {["Impact"] = 5, ["Perforation"] = 40, ["Tranchant"] = 5},
-			FireRate = 5.55,
-			ShotSpeed = "?",
-			ShotType = "Projectile",
-			StatusChance = 0.27 
-		},
-		Polarities = {"V","V","V"},
-		Reload = 2.5,
-		Traits = {"Grineer"},
-		Trigger = "Auto",
-		Type = "Arch-Fusil (Atmosphère)" 
-	},
-	["Hek Kuva"] = {
-		Accuracy = 9.09,
-		Class = "Fusil à Pompe",
-		Conclave = true,
-		Disposition = 0.5,
-		ExilusPolarity = "Bar",
-		Family = "Hek",
-		Image = "Hek Kuva.png",
-		Introduced = "30.5",
-		Magazine = 4,
-		Mastery = 15,
-		MaxAmmo = 120,
-		Name = "Hek Kuva",
-		NoiseLevel = "Bruyant",
-		NormalAttack = {
-			CritChance = 0.23,
-			CritMultiplier = 2.1,
-			Damage = {["Impact"] = 13.1, ["Perforation"] = 56.5, ["Tranchant"] = 17.4},
-			Falloff = {EndRange = 30, Reduction = 0.8, StartRange = 15},
-			FireRate = 2.17,
-			Multishot = 7,
-			ShotType = "Hit-Scan",
-			StatusChance = 0.13
-		},
-		Reload = 2,
-		Traits = {"Grineer"},
-		Trigger = "Semi-Auto",
-		Type = "Principal",
-	},
-	["Zarr Kuva"] = {
-		Class = "Lanceur",
-		Conclave = false,
-		Disposition = 0.5,
-		ExilusPolarity = "V",
-		Image = "Zarr Kuva.png",
-		Introduced = "30.5",
-		Magazine = 5,
-		Mastery = 15,
-		MaxAmmo = 15,
-		Name = "Zarr Kuva",
-		Polarities = {"V","V","V"},
-		Reload = 4.8,
-		Traits = {"Grineer"},
-		Family = "Zarr",
-		Trigger = "Semi-Auto",
-		Type = "Principal",
-		NormalAttack = {
-			Accuracy = 100,
-			AttackName = "Cannon Mode Projectile",
-			CritChance = 0.25,
-			CritMultiplier = 2.5,
-			Damage = {["Impact"] = 50},
-			FireRate = 2.17,
-			ShotSpeed = "?",
-			ShotType = "Projectile",
-			StatusChance = 0.31 
-		},
-		Attack2 = {
-			AttackName = "Cannon Mode Explosion",
-			CritChance = 0.17,
-			Damage = {["Explosif"] = 673},
-			Falloff = {EndRange = 7, Reduction = 0.7, StartRange = 0},
-			Radius = 7,
-			StatusChance = 0.29 
-		},
-		Attack3 = {
-			AttackName = "Cannon Mode Cluster Bombs",
-			CritChance = 0.17,
-			Damage = {["Explosif"] = 50},
-			Multishot = 6,
-			PelletName = "Bombe",
-			StatusChance = 0.048 
-		},
-		Attack4 = {
-			AttackName = "Barrage Mode",
-			Accuracy = 4.3,
-			CritChance = 0.37,
-			Damage = {["Impact"] = 15, ["Perforation"] = 25, ["Tranchant"] = 10},
-			FireRate = 2.17,
-			Multishot = 10,
-			PunchThrough = 1.6,
-			Falloff = {EndRange = 40, Reduction = 0.98, StartRange = 20},
-			StatusChance = 0.097 
-		}
-	},
+            Class = 'Arch-Fusil',
+            Accuracy = 16.7,
+            Attack5 = {
+                AttackName = "Explosion",
+                Damage = {
+                    ["Explosif"] = 205
+                },
+                Falloff = {
+                    EndRange = 9,
+                    Reduction = 0.7,
+                    StartRange = 0
+                },
+                Radius = 9
+            },
+            Disposition = 0.5,
+            Image = "Grattler Kuva.png",
+            Introduced = "30.5",
+            Magazine = 60,
+            Mastery = 15,
+            Name = "Grattler Kuva",
+            NormalAttack = {
+                AttackName = "Impact de Projectile",
+                CritChance = 0.27,
+                CritMultiplier = 2.1,
+                Damage = {
+                    ["Impact"] = 10,
+                    ["Perforation"] = 80,
+                    ["Tranchant"] = 10
+                },
+                Falloff = {
+                    EndRange = 2000,
+                    StartRange = 1000
+                },
+                FireRate = 5.55,
+                ShotSpeed = "?",
+                ShotType = "Projectile",
+                StatusChance = 0.27
+            },
+            Polarities = {"V", "V", "V"},
+            Reload = 10,
+            ReloadDelay = 1,
+            ReloadStyle = "Régénération",
+            Traits = {"Grineer"},
+            Family = "Grattler",
+            Trigger = "Auto",
+            Type = "Arch-Fusil"
+        },
+        ["Grattler Kuva (Atmosphère)"] = {
+            Accuracy = 25,
+            Attack5 = {
+                AttackName = "Explosion",
+                Damage = {
+                    ["Explosif"] = 155
+                },
+                Falloff = {
+                    EndRange = 9,
+                    Reduction = 0.7,
+                    StartRange = 0
+                },
+                Radius = 9
+            },
+            Disposition = 0.5,
+            Image = "Grattler Kuva.png",
+            Introduced = "30.5",
+            Link = "Grattler Kuva",
+            Magazine = 60,
+            Mastery = 15,
+            MaxAmmo = 180,
+            Name = "Grattler Kuva (Atmosphère)",
+            NormalAttack = {
+                AttackName = "Impact de Projectile",
+                CritChance = 0.27,
+                CritMultiplier = 2.1,
+                Damage = {
+                    ["Impact"] = 5,
+                    ["Perforation"] = 40,
+                    ["Tranchant"] = 5
+                },
+                FireRate = 5.55,
+                ShotSpeed = "?",
+                ShotType = "Projectile",
+                StatusChance = 0.27
+            },
+            Polarities = {"V", "V", "V"},
+            Reload = 2.5,
+            Traits = {"Grineer"},
+            Trigger = "Auto",
+            Type = "Arch-Fusil (Atmosphère)"
+        },
+        ["Hek Kuva"] = {
+            Accuracy = 9.09,
+            Class = "Fusil à Pompe",
+            Conclave = true,
+            Disposition = 0.5,
+            ExilusPolarity = "Bar",
+            Family = "Hek",
+            Image = "Hek Kuva.png",
+            Introduced = "30.5",
+            Magazine = 4,
+            Mastery = 15,
+            MaxAmmo = 120,
+            Name = "Hek Kuva",
+            NoiseLevel = "Bruyant",
+            NormalAttack = {
+                CritChance = 0.23,
+                CritMultiplier = 2.1,
+                Damage = {
+                    ["Impact"] = 13.1,
+                    ["Perforation"] = 56.5,
+                    ["Tranchant"] = 17.4
+                },
+                Falloff = {
+                    EndRange = 30,
+                    Reduction = 0.8,
+                    StartRange = 15
+                },
+                FireRate = 2.17,
+                Multishot = 7,
+                ShotType = "Hit-Scan",
+                StatusChance = 0.13
+            },
+            Reload = 2,
+            Traits = {"Grineer"},
+            Trigger = "Semi-Auto",
+            Type = "Principal"
+        },
+        ["Zarr Kuva"] = {
+            Class = "Lanceur",
+            Conclave = false,
+            Disposition = 0.5,
+            ExilusPolarity = "V",
+            Image = "Zarr Kuva.png",
+            Introduced = "30.5",
+            Magazine = 5,
+            Mastery = 15,
+            MaxAmmo = 15,
+            Name = "Zarr Kuva",
+            Polarities = {"V", "V", "V"},
+            Reload = 4.8,
+            Traits = {"Grineer"},
+            Family = "Zarr",
+            Trigger = "Semi-Auto",
+            Type = "Principal",
+            NormalAttack = {
+                Accuracy = 100,
+                AttackName = "Cannon Mode Projectile",
+                CritChance = 0.25,
+                CritMultiplier = 2.5,
+                Damage = {
+                    ["Impact"] = 50
+                },
+                FireRate = 2.17,
+                ShotSpeed = "?",
+                ShotType = "Projectile",
+                StatusChance = 0.31
+            },
+            Attack2 = {
+                AttackName = "Cannon Mode Explosion",
+                CritChance = 0.17,
+                Damage = {
+                    ["Explosif"] = 673
+                },
+                Falloff = {
+                    EndRange = 7,
+                    Reduction = 0.7,
+                    StartRange = 0
+                },
+                Radius = 7,
+                StatusChance = 0.29
+            },
+            Attack3 = {
+                AttackName = "Cannon Mode Cluster Bombs",
+                CritChance = 0.17,
+                Damage = {
+                    ["Explosif"] = 50
+                },
+                Multishot = 6,
+                PelletName = "Bombe",
+                StatusChance = 0.048
+            },
+            Attack4 = {
+                AttackName = "Barrage Mode",
+                Accuracy = 4.3,
+                CritChance = 0.37,
+                Damage = {
+                    ["Impact"] = 15,
+                    ["Perforation"] = 25,
+                    ["Tranchant"] = 10
+                },
+                FireRate = 2.17,
+                Multishot = 10,
+                PunchThrough = 1.6,
+                Falloff = {
+                    EndRange = 40,
+                    Reduction = 0.98,
+                    StartRange = 20
+                },
+                StatusChance = 0.097
+            }
+        },
         ["Bo"] = {
             Class = "Bâton",
             Conclave = true,
@@ -767,12 +919,23 @@ local WeaponData = {
                 MarketCost = 65,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 1},
-                    {Name = "Récupération", Type = "Ressource", Count = 900},
-                    {Name = "Ferrite", Type = "Ressource", Count = 600},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 150}
-                }
+                Parts = {{
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 150
+                }}
             },
             Disposition = 1.29,
             Family = "Bo",
@@ -781,7 +944,10 @@ local WeaponData = {
             Mastery = 4,
             Name = "Bo",
             NormalAttack = {
-                Damage = {["Impact"] = 126, ["Perforation"] = 14},
+                Damage = {
+                    ["Impact"] = 126,
+                    ["Perforation"] = 14
+                },
                 CritChance = 0.125,
                 CritMultiplier = 2,
                 StatusChance = 0.2,
@@ -821,11 +987,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Ornement", Type = "Partie Prime", Count = 2},
-                    {Name = "Manche", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Ornement",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Manche",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Class = "Bâton",
             Conclave = true,
@@ -836,7 +1010,10 @@ local WeaponData = {
             Mastery = 10,
             Name = "Bo Prime",
             NormalAttack = {
-                Damage = {["Impact"] = 158.4, ["Perforation"] = 17.6},
+                Damage = {
+                    ["Impact"] = 158.4,
+                    ["Perforation"] = 17.6
+                },
                 CritChance = 0.24,
                 CritMultiplier = 2.6,
                 StatusChance = 0.32,
@@ -880,11 +1057,19 @@ local WeaponData = {
                 MarketCost = 200,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Boltor", Type = "Arme", Count = 1},
-                    {Name = "Kronen", Type = "Arme", Count = 1},
-                    {Name = "Gallium", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Boltor",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Kronen",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.0,
             Family = "Boltace",
@@ -940,16 +1125,23 @@ local WeaponData = {
                 MarketCost = 180,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {
-                        Name = "Trompe Parasitaire",
-                        Type = "Ressource",
-                        Count = 24
-                    },
-                    {Name = "Namalon Dévolu", Type = "Ressource", Count = 60},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 24000}
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Trompe Parasitaire",
+                    Type = "Ressource",
+                    Count = 24
+                }, {
+                    Name = "Namalon Dévolu",
+                    Type = "Ressource",
+                    Count = 60
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 24000
+                }}
             },
             Name = "Bursite",
             Family = "Bursite",
@@ -962,7 +1154,10 @@ local WeaponData = {
             StancePolarity = "D",
             Disposition = 1.05,
             NormalAttack = {
-                Damage = {["Impact"] = 193.0, ["Viral"] = 97.0},
+                Damage = {
+                    ["Impact"] = 193.0,
+                    ["Viral"] = 97.0
+                },
                 CritChance = 0.19,
                 CritMultiplier = 2.3,
                 StatusChance = 0.33,
@@ -1042,12 +1237,23 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Forma", Type = "Objet", Count = 1},
-                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 2},
-                    {Name = "Poignée", Type = "Objet", Count = 1},
-                    {Name = "Lame", Type = "Objet", Count = 2}
-                }
+                Parts = {{
+                    Name = "Forma",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Extrait de Nitain",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Poignée",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Lame",
+                    Type = "Objet",
+                    Count = 2
+                }}
             },
             Class = "Épée",
             Conclave = true,
@@ -1101,12 +1307,23 @@ local WeaponData = {
                 MarketCost = 65,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Capteurs Neuronaux", Type = "Ressource", Count = 2},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 3000},
-                    {Name = "Circuits", Type = "Ressource", Count = 1600},
-                    {Name = "Bo", Type = "Arme", Count = 1}
-                }
+                Parts = {{
+                    Name = "Capteurs Neuronaux",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 3000
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 1600
+                }, {
+                    Name = "Bo",
+                    Type = "Arme",
+                    Count = 1
+                }}
             },
             Class = "Bâton",
             Conclave = false,
@@ -1161,12 +1378,23 @@ local WeaponData = {
                 MarketCost = 180,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Forma", Type = "Objet", Count = 1},
-                    {Name = "Rubedo", Type = "Ressource", Count = 1000},
-                    {Name = "Récupération", Type = "Ressource", Count = 5700},
-                    {Name = "Oxium", Type = "Ressource", Count = 150}
-                }
+                Parts = {{
+                    Name = "Forma",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 5700
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 150
+                }}
             },
             Class = "Arme d'Hast",
             Conclave = true,
@@ -1221,12 +1449,23 @@ local WeaponData = {
                 MarketCost = 230,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 10},
-                    {Name = "Ferrite", Type = "Ressource", Count = 15000},
-                    {Name = "Plastides", Type = "Ressource", Count = 400},
-                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 5}
-                }
+                Parts = {{
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 15000
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 400
+                }, {
+                    Name = "Extrait de Nitain",
+                    Type = "Ressource",
+                    Count = 5
+                }}
             },
             Class = "Faux",
             Conclave = true,
@@ -1285,12 +1524,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Gallium", Type = "Ressource", Count = 4},
-                    {Name = "Ferrite", Type = "Ressource", Count = 500},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 500},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 600}
-                }
+                Parts = {{
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 500
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 500
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 600
+                }}
             },
             Disposition = 1.43,
             Image = "Dague en Céramique.png",
@@ -1299,7 +1549,10 @@ local WeaponData = {
             MeleeRange = 1.8,
             Name = "Dague en Céramique",
             NormalAttack = {
-                Damage = {["Impact"] = 14.0, ["Perforation"] = 126.0},
+                Damage = {
+                    ["Impact"] = 14.0,
+                    ["Perforation"] = 126.0
+                },
                 CritChance = 0.1,
                 CritMultiplier = 1.5,
                 StatusChance = 0.2,
@@ -1353,12 +1606,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 4},
-                    {Name = "Cryotique", Type = "Ressource", Count = 2500},
-                    {Name = "Plastides", Type = "Ressource", Count = 1200},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 2500
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.36,
             Image = "Cerata.png",
@@ -1425,7 +1689,9 @@ local WeaponData = {
             Accuracy = 100,
             AreaAttack = {
                 AttackName = "Explosion",
-                Damage = {["Explosif"] = 106},
+                Damage = {
+                    ["Explosif"] = 106
+                },
                 Radius = 5
             },
             Class = "Fusil",
@@ -1441,7 +1707,10 @@ local WeaponData = {
             Name = "Chakkhurr Kuva",
             NoiseLevel = "Bruyant",
             NormalAttack = {
-                Damage = {["Impact"] = 260, ["Explosif"] = 106},
+                Damage = {
+                    ["Impact"] = 260,
+                    ["Explosif"] = 106
+                },
                 CritChance = 0.5,
                 CritMultiplier = 2.3,
                 StatusChance = 0.27,
@@ -1467,12 +1736,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {Name = "Rubedo", Type = "Ressource", Count = 4000},
-                    {Name = "Plastides", Type = "Ressource", Count = 875},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 18750}
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 4000
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 875
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 18750
+                }}
             },
             Disposition = 1.0,
             Image = "Cobra & Crane.png",
@@ -1480,7 +1760,10 @@ local WeaponData = {
             Mastery = 10,
             Name = "Cobra & Crane",
             NormalAttack = {
-                Damage = {["Impact"] = 207.2, ["Perforation"] = 88.8},
+                Damage = {
+                    ["Impact"] = 207.2,
+                    ["Perforation"] = 88.8
+                },
                 CritChance = 0.15,
                 CritMultiplier = 1.5,
                 StatusChance = 0.36,
@@ -1519,11 +1802,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 1},
-                    {Name = "Ferrite", Type = "Ressource", Count = 500},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 75}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 500
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 75
+                }}
             },
             Disposition = 1.48,
             Image = "Cronus.png",
@@ -1574,11 +1865,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 1},
-                    {Name = "Poignée", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Class = "Épée",
             Conclave = true,
@@ -1634,12 +1933,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 2},
-                    {Name = "Ferrite", Type = "Ressource", Count = 500},
-                    {Name = "Plastides", Type = "Ressource", Count = 500},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 300}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 500
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 500
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 300
+                }}
             },
             Disposition = 0.52,
             Family = "Dague Sombre",
@@ -1695,12 +2005,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Doubles Skana", Type = "Arme", Count = 1},
-                    {Name = "Forma", Type = "Objet", Count = 1},
-                    {Name = "Rubedo", Type = "Ressource", Count = 1200},
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Doubles Skana",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Forma",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Type = "Mêlée",
             Image = "VersatilesSombres.png",
@@ -1714,12 +2035,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Doubles Skana", Type = "Arme", Count = 1},
-                    {Name = "Forma", Type = "Objet", Count = 1},
-                    {Name = "Rubedo", Type = "Ressource", Count = 1200},
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Doubles Skana",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Forma",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Class = "Doubles Épées",
             Conclave = true,
@@ -1819,12 +2151,23 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 2},
-                    {Name = "Ferrite", Type = "Ressource", Count = 800},
-                    {Name = "Plastides", Type = "Ressource", Count = 200},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 75}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 200
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 75
+                }}
             },
             Class = "Épée",
             Conclave = true,
@@ -1882,15 +2225,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 10000
-                    }, {Name = "Plastides", Type = "Ressource", Count = 1700},
-                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 5},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 10000
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 1700
+                }, {
+                    Name = "Extrait de Nitain",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Class = "Rapière",
             Conclave = true,
@@ -1945,11 +2296,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 1},
-                    {Name = "Poignée", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Class = "Rapière",
             Conclave = true,
@@ -2054,11 +2413,19 @@ local WeaponData = {
                 MarketCost = 275,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 1},
-                    {Name = "Oxium", Type = "Ressource", Count = 75},
-                    {Name = "Nikana", Type = "Arme", Count = 1}
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 75
+                }, {
+                    Name = "Nikana",
+                    Type = "Arme",
+                    Count = 1
+                }}
             },
             Disposition = 1.35,
             Family = "Nikana",
@@ -2114,16 +2481,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 40,
                 Time = 12,
-                Parts = {
-                    {Name = "Gallium", Type = "Ressource", Count = 5},
-                    {Name = "Récupération", Type = "Ressource", Count = 1000},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 800},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 1200
-                    }
-                }
+                Parts = {{
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 1200
+                }}
             },
             Disposition = 1.0,
             Family = "Doubles Hachoirs",
@@ -2169,10 +2543,7 @@ local WeaponData = {
             MeleeComboDur = 5.0,
             FollowThrough = 0.5,
             MeleeRange = 1.7,
-            Users = {
-                "[[Butcher]] (single blade)",
-                "[[Corrupted Butcher]] (single blade)"
-            },
+            Users = {"[[Butcher]] (single blade)", "[[Corrupted Butcher]] (single blade)"},
             WallAttack = 140
         },
         ["Doubles Ether"] = {
@@ -2184,12 +2555,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 3},
-                    {Name = "Récupération", Type = "Ressource", Count = 900},
-                    {Name = "Ferrite", Type = "Ressource", Count = 850},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 800}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 850
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 800
+                }}
             },
             Disposition = 1.45,
             Image = "DoubleEther.png",
@@ -2244,12 +2626,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 2},
-                    {Name = "Récupération", Type = "Ressource", Count = 900},
-                    {Name = "Ferrite", Type = "Ressource", Count = 1000},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 700}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 700
+                }}
             },
             Disposition = 1.44,
             Image = "Doubles Épées de Chaleur.png",
@@ -2304,12 +2697,23 @@ local WeaponData = {
                 BPCost = 50000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 4},
-                    {Name = "Circuits", Type = "Ressource", Count = 1200},
-                    {Name = "Récupération", Type = "Ressource", Count = 15000},
-                    {Name = "Forma", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 15000
+                }, {
+                    Name = "Forma",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 1.16,
             FinisherDamage = 55,
@@ -2369,11 +2773,19 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Kama", Type = "Arme", Count = 1},
-                    {Name = "Kama", Type = "Arme", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Kama",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Kama",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.3,
             Family = "Doubles Kamas",
@@ -2424,10 +2836,15 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 2},
-                    {Name = "Poignée", Type = "Partie Prime", Count = 2}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 2
+                }}
             },
             Class = "Doubles Épées",
             Conclave = true,
@@ -2483,12 +2900,23 @@ local WeaponData = {
                 MarketCost = 130,
                 Rush = 30,
                 Time = 12,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {Name = "Oxium", Type = "Ressource", Count = 230},
-                    {Name = "Récupération", Type = "Ressource", Count = 13250},
-                    {Name = "Tellure", Type = "Ressource", Count = 3}
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 230
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 13250
+                }, {
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 3
+                }}
             },
             Class = "Doubles Épées",
             Disposition = 1.48,
@@ -2541,12 +2969,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Doubles Kamas", Type = "Arme", Count = 1},
-                    {Name = "Cryotique", Type = "Ressource", Count = 200},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 200},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Doubles Kamas",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 200
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 200
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Class = "Doubles Épées",
             Conclave = true,
@@ -2603,12 +3042,23 @@ local WeaponData = {
                 MarketCost = 130,
                 Rush = 30,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 2},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 300},
-                    {Name = "Ferrite", Type = "Ressource", Count = 850},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 300}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 300
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 850
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 300
+                }}
             },
             Disposition = 1.48,
             Image = "Double_Skana.png",
@@ -2662,12 +3112,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 4},
-                    {Name = "Récupération", Type = "Ressource", Count = 900},
-                    {Name = "Ferrite", Type = "Ressource", Count = 1100},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 800}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 1100
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 800
+                }}
             },
             Disposition = 1.44,
             Image = "DualZoren.png",
@@ -2722,15 +3183,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 12000
-                    }, {Name = "Plastides", Type = "Ressource", Count = 1200},
-                    {Name = "Gallium", Type = "Ressource", Count = 2},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 12000
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.0,
             Image = "Endura.png",
@@ -2781,12 +3250,23 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 5},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 600},
-                    {Name = "Ferrite", Type = "Ressource", Count = 600},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 1200}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 1200
+                }}
             },
             Class = "Doubles Dagues",
             Conclave = true,
@@ -2844,12 +3324,23 @@ local WeaponData = {
                 MarketCost = 230,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 1000},
-                    {Name = "Rubedo", Type = "Ressource", Count = 1000},
-                    {Name = "Morphics", Type = "Ressource", Count = 10},
-                    {Name = "Ferrite", Type = "Ressource", Count = 1000}
-                }
+                Parts = {{
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 1000
+                }}
             },
             Disposition = 1.45,
             Image = "Reaper Ether.png",
@@ -2905,12 +3396,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 4},
-                    {Name = "Rubedo", Type = "Ressource", Count = 700},
-                    {Name = "Ferrite", Type = "Ressource", Count = 900},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 700}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 700
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 700
+                }}
             },
             Disposition = 1.44,
             Image = "EpeeEther.png",
@@ -2962,15 +3464,23 @@ local WeaponData = {
                 BPCost = 15000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 5},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 8500
-                    }, {Name = "Circuits", Type = "Ressource", Count = 1650},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 8500
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 1650
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             ChargedThrowAttack = {
                 Damage = {
@@ -3049,12 +3559,23 @@ local WeaponData = {
                 MarketCost = 135,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 600},
-                    {Name = "Ferrite", Type = "Ressource", Count = 600},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 900},
-                    {Name = "Morphics", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.36,
             Family = "Fang",
@@ -3106,10 +3627,15 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 2},
-                    {Name = "Poignée", Type = "Partie Prime", Count = 2}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 2
+                }}
             },
             Class = "Doubles Dagues",
             Conclave = true,
@@ -3168,12 +3694,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Gallium", Type = "Ressource", Count = 3},
-                    {Name = "Récupération", Type = "Ressource", Count = 750},
-                    {Name = "Rubedo", Type = "Ressource", Count = 300},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 80}
-                }
+                Parts = {{
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 750
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 300
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 80
+                }}
             },
             Disposition = 0.96,
             Family = "Fragor",
@@ -3218,9 +3755,7 @@ local WeaponData = {
             MeleeComboDur = 5.0,
             FollowThrough = 0.4,
             MeleeRange = 2.5,
-            Users = {
-                "[[Lieutenant Lech Kril]] (Aspect [[Aspect Marteau Brokk|Brokk]])"
-            },
+            Users = {"[[Lieutenant Lech Kril]] (Aspect [[Aspect Marteau Brokk|Brokk]])"},
             WallAttack = 230
         },
         ["Fragor Prime"] = {
@@ -3232,11 +3767,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Tête", Type = "Partie Prime", Count = 1},
-                    {Name = "Poignée", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Tête",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 0.96,
             Family = "Fragor",
@@ -3292,12 +3835,23 @@ local WeaponData = {
                 MarketCost = 125,
                 Rush = 30,
                 Time = 12,
-                Parts = {
-                    {Name = "Nano Spores", Type = "Ressource", Count = 1000},
-                    {Name = "Récupération", Type = "Ressource", Count = 900},
-                    {Name = "Ferrite", Type = "Ressource", Count = 600},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 500}
-                }
+                Parts = {{
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 500
+                }}
             },
             Disposition = 1.38,
             Family = "Furax",
@@ -3353,10 +3907,15 @@ local WeaponData = {
                 Credits = 25000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Gantelet Gauche", Type = "Objet", Count = 1},
-                    {Name = "Gantelet Droit", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Gantelet Gauche",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Gantelet Droit",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 1.38,
             Family = "Furax",
@@ -3410,12 +3969,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 30,
                 Time = 12,
-                Parts = {
-                    {Name = "Gallium", Type = "Ressource", Count = 4},
-                    {Name = "Récupération", Type = "Ressource", Count = 750},
-                    {Name = "Rubedo", Type = "Ressource", Count = 500},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 200}
-                }
+                Parts = {{
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 750
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 500
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 200
+                }}
             },
             Disposition = 1.05,
             Family = "Galatine",
@@ -3472,11 +4042,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 1},
-                    {Name = "Poignée", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Disposition = 0.8,
             Family = "Galatine",
@@ -3534,12 +4112,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {Name = "Systèmes Atmo", Type = "Ressource", Count = 5},
-                    {Name = "Ferrite", Type = "Ressource", Count = 3600},
-                    {Name = "Circuits", Type = "Ressource", Count = 1000}
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Systèmes Atmo",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 3600
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 1000
+                }}
             },
             Disposition = 1.0,
             Image = "Galvacord.png",
@@ -3591,15 +4180,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {Name = "Récupération", Type = "Ressource", Count = 2600},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 1900
-                    }, {Name = "Plastides", Type = "Ressource", Count = 1400}
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 2600
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 1900
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 1400
+                }}
             },
             Class = "Machette",
             Conclave = true,
@@ -3667,12 +4264,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 10},
-                    {Name = "Ferrite", Type = "Ressource", Count = 5000},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 6000},
-                    {Name = "Récupération", Type = "Ressource", Count = 4500}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 6000
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 4500
+                }}
             },
             Disposition = 1.22,
             Family = "Glaive",
@@ -3753,11 +4361,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 2},
-                    {Name = "Disque", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Disque",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 0.9,
             Family = "Glaive",
@@ -3827,12 +4443,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 30,
                 Time = 12,
-                Parts = {
-                    {Name = "Gallium", Type = "Ressource", Count = 3},
-                    {Name = "Récupération", Type = "Ressource", Count = 750},
-                    {Name = "Rubedo", Type = "Ressource", Count = 300},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 80}
-                }
+                Parts = {{
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 750
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 300
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 80
+                }}
             },
             Disposition = 0.75,
             Family = "Gram",
@@ -3886,11 +4513,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 1},
-                    {Name = "Poignée", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Disposition = 0.8,
             Family = "Gram",
@@ -3944,12 +4579,23 @@ local WeaponData = {
                 MarketCost = 180,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Gallium", Type = "Ressource", Count = 3},
-                    {Name = "Oxium", Type = "Ressource", Count = 65},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 750},
-                    {Name = "Ferrite", Type = "Ressource", Count = 2500}
-                }
+                Parts = {{
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 65
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 750
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 2500
+                }}
             },
             Class = "Arme d'Hast",
             Conclave = true,
@@ -4006,11 +4652,19 @@ local WeaponData = {
                 Credits = 5000,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 2},
-                    {Name = "Poignée", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Disposition = 0.65,
             Family = "Guandao",
@@ -4055,12 +4709,23 @@ local WeaponData = {
                 MarketCost = 190,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Oxium", Type = "Ressource", Count = 200},
-                    {Name = "Tellure", Type = "Ressource", Count = 3},
-                    {Name = "Plastides", Type = "Ressource", Count = 1150},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 19750}
-                }
+                Parts = {{
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 200
+                }, {
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 1150
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 19750
+                }}
             },
             Class = "Éventail de Guerre",
             Conclave = true,
@@ -4129,12 +4794,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {Name = "Ferrite", Type = "Ressource", Count = 4800},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 5000},
-                    {Name = "Oxium", Type = "Ressource", Count = 500}
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 4800
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 500
+                }}
             },
             Disposition = 1.44,
             Image = "GrnBoomerang.png",
@@ -4197,94 +4873,107 @@ local WeaponData = {
             WallAttack = 135
         },
         ["Halikar Wraith"] = {
-		BlockAngle = 55,
-		MeleeComboDur = 5,
-		FollowThrough = 0.7,
-		MeleeRange = 1.2,
-		ChargedThrowAttack = {
-			AttackName = "Lancer Chargé",
-			Damage = {
-				["Impact"] = 52.7,
-				["Perforation"] = 421.6,
-				["Tranchant"] = 22.7,},
-			CritChance = 0.21,
-			CritMultiplier = 2.5,
-			PunchThrough = 1,
-			StatusChance = 0.41,
-		},
-		SecondaryAreaAttack = {
-			AttackName = "Explosion du Lancer Chargé",
-			Damage = {
-				["Explosif"] = 1314,},
-			Falloff = {StartRange = 0,EndRange = 5.1,Reduction = 0,},
-			CritChance = 0.21,
-			CritMultiplier = 2.5,
-			Radius = 5.1,
-			StatusChance = 0.41,
-		},
-		Class = "Glaive",
-		Conclave = true,
-		Disposition = 0.75,
-		Image = "Halikar Wraith.png",
-		Introduced = "29.10.10",
-		Mastery = 13,
-		Name = "Halikar Wraith",
-		NormalAttack = {
-			Damage = {
-				["Impact"] = 22.5,
-				["Perforation"] = 180.0,
-				["Tranchant"] = 22.5,},
-			CritChance = 0.19,
-			CritMultiplier = 2.3,
-			StatusChance = 0.35,
-			FireRate = 1.17,
-			ShotType = "Thrown",
-			ShotSpeed = 30,
-			Range = 30,
-		},
-        MeleeSlam = {
-            Damage = 675.0,
-            Element = "Magnétique",
-            RadialDamage = 225.0,
-            RadialElement = nil,
-            Radius = 5.0
+            BlockAngle = 55,
+            MeleeComboDur = 5,
+            FollowThrough = 0.7,
+            MeleeRange = 1.2,
+            ChargedThrowAttack = {
+                AttackName = "Lancer Chargé",
+                Damage = {
+                    ["Impact"] = 52.7,
+                    ["Perforation"] = 421.6,
+                    ["Tranchant"] = 22.7
+                },
+                CritChance = 0.21,
+                CritMultiplier = 2.5,
+                PunchThrough = 1,
+                StatusChance = 0.41
+            },
+            SecondaryAreaAttack = {
+                AttackName = "Explosion du Lancer Chargé",
+                Damage = {
+                    ["Explosif"] = 1314
+                },
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 5.1,
+                    Reduction = 0
+                },
+                CritChance = 0.21,
+                CritMultiplier = 2.5,
+                Radius = 5.1,
+                StatusChance = 0.41
+            },
+            Class = "Glaive",
+            Conclave = true,
+            Disposition = 0.75,
+            Image = "Halikar Wraith.png",
+            Introduced = "29.10.10",
+            Mastery = 13,
+            Name = "Halikar Wraith",
+            NormalAttack = {
+                Damage = {
+                    ["Impact"] = 22.5,
+                    ["Perforation"] = 180.0,
+                    ["Tranchant"] = 22.5
+                },
+                CritChance = 0.19,
+                CritMultiplier = 2.3,
+                StatusChance = 0.35,
+                FireRate = 1.17,
+                ShotType = "Thrown",
+                ShotSpeed = 30,
+                Range = 30
+            },
+            MeleeSlam = {
+                Damage = 675.0,
+                Element = "Magnétique",
+                RadialDamage = 225.0,
+                RadialElement = nil,
+                Radius = 5.0
+            },
+            MeleeHeavy = {
+                Damage = nil,
+                Element = nil,
+                WindUp = 0.6,
+                SlamDamage = 900.0,
+                SlamElement = "Magnétique",
+                SlamRadialDamage = 900.0,
+                SlamRadialElement = nil,
+                SlamRadius = 6.0
+            },
+            Polarities = {"V", "Bar", "V"},
+            SlideAttack = 450,
+            StancePolarity = "Bar",
+            ThrowAttack = {
+                AttackName = "Lancer",
+                Damage = {
+                    ["Impact"] = 50.3,
+                    ["Perforation"] = 402.4,
+                    ["Tranchant"] = 50.3
+                },
+                CritChance = 0.21,
+                CritMultiplier = 2.3,
+                StatusChance = 0.39
+            },
+            AreaAttack = {
+                AttackName = "Explosion du Lancer",
+                Damage = {
+                    ["Explosif"] = 1242
+                },
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 5.1,
+                    Reduction = 0
+                },
+                CritChance = 0.21,
+                CritMultiplier = 2.3,
+                Radius = 5.1,
+                StatusChance = 0.39
+            },
+            Traits = {"Grineer", "Wraith", "Baro"},
+            Type = "Mêlée"
         },
-        MeleeHeavy = {
-            Damage = nil,
-            Element = nil,
-            WindUp = 0.6,
-            SlamDamage = 900.0,
-            SlamElement = "Magnétique",
-            SlamRadialDamage = 900.0,
-            SlamRadialElement = nil,
-            SlamRadius = 6.0
-        },
-		Polarities = {"V", "Bar", "V"},
-		SlideAttack = 450,
-		StancePolarity = "Bar",
-		ThrowAttack = {
-			AttackName = "Lancer",
-			Damage = {
-				["Impact"] = 50.3,
-				["Perforation"] = 402.4,
-				["Tranchant"] = 50.3,},
-			CritChance = 0.21,
-			CritMultiplier = 2.3,
-			StatusChance = 0.39,
-		},
-		AreaAttack = {
-			AttackName = "Explosion du Lancer",
-			Damage = {
-				["Explosif"] = 1242,},
-			Falloff = {StartRange = 0,EndRange = 5.1,Reduction = 0,},
-			CritChance = 0.21,
-			CritMultiplier = 2.3,
-			Radius = 5.1,
-			StatusChance = 0.39,
-		},
-		Traits = {"Grineer", "Wraith", "Baro"},
-		Type = "Mêlée",
-	},
         ["Hate"] = {
             Class = "Faux",
             Conclave = true,
@@ -4292,12 +4981,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 10},
-                    {Name = "Ferrite", Type = "Ressource", Count = 5000},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 6000},
-                    {Name = "Récupération", Type = "Ressource", Count = 4500}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 6000
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 4500
+                }}
             },
             Disposition = 1.1,
             Image = "Hate.png",
@@ -4348,12 +5048,23 @@ local WeaponData = {
                 MarketCost = 75,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Ferrite", Type = "Ressource", Count = 500},
-                    {Name = "Circuits", Type = "Ressource", Count = 150},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 75},
-                    {Name = "Capteurs Neuronaux", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 500
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 150
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 75
+                }, {
+                    Name = "Capteurs Neuronaux",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Class = "Dague",
             Conclave = true,
@@ -4409,12 +5120,23 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Capteurs Neuronaux", Type = "Ressource", Count = 1},
-                    {Name = "Ferrite", Type = "Ressource", Count = 500},
-                    {Name = "Circuits", Type = "Ressource", Count = 300},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 300}
-                }
+                Parts = {{
+                    Name = "Capteurs Neuronaux",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 500
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 300
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 300
+                }}
             },
             Class = "Épée",
             Conclave = true,
@@ -4472,12 +5194,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Gammacor", Type = "Arme", Count = 1},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 700},
-                    {Name = "Rubedo", Type = "Ressource", Count = 1200},
-                    {Name = "Morphics", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Gammacor",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 700
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             ChannelCost = 5,
             Class = "Marteau",
@@ -4533,12 +5266,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Kogake", Type = "Arme", Count = 1},
-                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 3},
-                    {Name = "Plastides", Type = "Ressource", Count = 1100},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 4600}
-                }
+                Parts = {{
+                    Name = "Kogake",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Extrait de Nitain",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 1100
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 4600
+                }}
             },
             Class = "Mains et Pieds",
             Conclave = true,
@@ -4595,16 +5339,23 @@ local WeaponData = {
                 MarketCost = 125,
                 Rush = 30,
                 Time = 24,
-                Parts = {
-                    {
-                        Name = "Injecteur de Détonite",
-                        Type = "Ressource",
-                        Count = 5
-                    },
-                    {Name = "Récupération", Type = "Ressource", Count = 5000},
-                    {Name = "Rubedo", Type = "Ressource", Count = 600},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Injecteur de Détonite",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.35,
             Image = "Jatkitag.png",
@@ -4650,9 +5401,7 @@ local WeaponData = {
             MeleeComboDur = 5.0,
             FollowThrough = 0.4,
             MeleeRange = 2.8,
-            Users = {
-                "[[Bailiff]]", "[[Bourreaux/Vay_Molta|Bourreau Vay Molta]]"
-            },
+            Users = {"[[Bailiff]]", "[[Bourreaux/Vay_Molta|Bourreau Vay Molta]]"},
             WallAttack = 260
         },
         ["Jat Kusar"] = {
@@ -4662,16 +5411,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 30,
                 Time = 24,
-                Parts = {
-                    {
-                        Name = "Injecteur de Détonite",
-                        Type = "Ressource",
-                        Count = 7
-                    },
-                    {Name = "Récupération", Type = "Ressource", Count = 7500},
-                    {Name = "Rubedo", Type = "Ressource", Count = 2000},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Injecteur de Détonite",
+                    Type = "Ressource",
+                    Count = 7
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 7500
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 2000
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Class = "Lame-Fouet",
             Conclave = true,
@@ -4729,12 +5485,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Ferrite", Type = "Ressource", Count = 500},
-                    {Name = "Morphics", Type = "Ressource", Count = 1},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 75},
-                    {Name = "Rubedo", Type = "Ressource", Count = 300}
-                }
+                Parts = {{
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 500
+                }, {
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 75
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 300
+                }}
             },
             Class = "Épée",
             Conclave = true,
@@ -4791,12 +5558,23 @@ local WeaponData = {
                 MarketCost = 160,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Capteurs Neuronaux", Type = "Ressource", Count = 5},
-                    {Name = "Ferrite", Type = "Ressource", Count = 1200},
-                    {Name = "Circuits", Type = "Ressource", Count = 900},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 1200}
-                }
+                Parts = {{
+                    Name = "Capteurs Neuronaux",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 1200
+                }}
             },
             Disposition = 1.47,
             Image = "Kama.png",
@@ -4851,12 +5629,23 @@ local WeaponData = {
                 MarketCost = 95,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Récupération", Type = "Ressource", Count = 1500},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 800},
-                    {Name = "Oxium", Type = "Ressource", Count = 100},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 1500
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 100
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.35,
             Family = "Karyst",
@@ -4916,11 +5705,19 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 1},
-                    {Name = "Poignée", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Disposition = 1.05,
             Family = "Karyst",
@@ -4979,10 +5776,15 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Objet", Count = 2},
-                    {Name = "Gantelet", Type = "Objet", Count = 2}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Objet",
+                    Count = 2
+                }, {
+                    Name = "Gantelet",
+                    Type = "Objet",
+                    Count = 2
+                }}
             },
             Disposition = 1,
             ExilusPolarity = "V",
@@ -5028,19 +5830,23 @@ local WeaponData = {
                 MarketCost = 180,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {
-                        Name = "Injecteur de Détonite",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {Name = "Kuva", Type = "Ressource", Count = 1400},
-                    {Name = "Ferrite", Type = "Ressource", Count = 6000},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 8000
-                    }
-                }
+                Parts = {{
+                    Name = "Injecteur de Détonite",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Kuva",
+                    Type = "Ressource",
+                    Count = 1400
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 6000
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 8000
+                }}
             },
             Disposition = 1.24,
             Image = "Kesheg.png",
@@ -5108,12 +5914,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 8},
-                    {Name = "Ferrite", Type = "Ressource", Count = 4800},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 5000},
-                    {Name = "Récupération", Type = "Ressource", Count = 4000}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 8
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 4800
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 4000
+                }}
             },
             Disposition = 1.45,
             Image = "Kestrel.png",
@@ -5182,12 +5999,23 @@ local WeaponData = {
                 MarketCost = 125,
                 Rush = 45,
                 Time = 12,
-                Parts = {
-                    {Name = "Rubedo", Type = "Ressource", Count = 400},
-                    {Name = "Morphics", Type = "Ressource", Count = 3},
-                    {Name = "Ferrite", Type = "Ressource", Count = 1200},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 500}
-                }
+                Parts = {{
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 400
+                }, {
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 500
+                }}
             },
             Disposition = 1.46,
             Family = "Kogake",
@@ -5283,11 +6111,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Gantelet", Type = "Partie Prime", Count = 2},
-                    {Name = "Botte", Type = "Partie Prime", Count = 2},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Gantelet",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Botte",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Disposition = 1.46,
             Family = "Kogake",
@@ -5334,42 +6170,114 @@ local WeaponData = {
             FollowThrough = 0.9,
             WallAttack = 210
         },
-        
+
         ["Kompressa"] = {
-			Accuracy = 3.8,
-			Class = "Pistolet",
-			Conclave = false,
-			Disposition = 0.5,
-			Image = "Kompressa.png",
-			ExilusPolarity = "V",
-			Introduced = "30.5",
-			Magazine = 12,
-			Mastery = 8,
-			MaxAmmo = 210,
-			Name = "Kompressa",
-			NormalAttack = {
-				CritChance = 0.06,
-				CritMultiplier = 1.8,
-				Damage = {["Viral"] = 2},
-				FireRate = 3.33,
-				Multishot = 4,
-				ShotType = "Hit-Scan",
-				StatusChance = 0.3
-			},
-			Attack5 = {
-				AttackName = "Explosion",
-				Damage = {["Viral"] = 42},
-				Falloff = {EndRange = 2.4, Reduction = 0.2, StartRange = 0},
-				Radius = 2.4,
-				ExplosionDelay = "0.6 - 0.8",
-			},
-			Polarities = { "D" },
-			Reload = 1.8,
-			Traits = {"Tenno"},
-			Trigger = "Auto",
-			Type = "Secondaire" 
-		},
-        
+            Accuracy = 3.8,
+            Class = "Pistolet",
+            Conclave = false,
+            Cost = {
+                Credits = 25000,
+                Rush = 35,
+                Time = 12,
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 3
+                }},
+                PartsCost = {
+                    ["Canon"] = {
+                        Credits = 15000,
+                        Parts = {{
+                            Name = "Alliage Hespazym",
+                            Type = "Ressource",
+                            Count = 10
+                        }, {
+                            Name = "Larmes de Goblite",
+                            Type = "Ressource",
+                            Count = 10
+                        }, {
+                            Name = "Tour Coagulant",
+                            Type = "Ressource",
+                            Count = 20
+                        }, {
+                            Name = "Nodule Tepa",
+                            Type = "Ressource",
+                            Count = 35
+                        }},
+                        Rush = 25,
+                        Time = 12
+                    },
+                    ["Culasse"] = {
+                        Credits = 15000,
+                        Parts = {{
+                            Name = "Alliage de Axidrol",
+                            Type = "Ressource",
+                            Count = 20
+                        }, {
+                            Name = "Amaraste étoilé",
+                            Type = "Ressource",
+                            Count = 6
+                        }, {
+                            Name = "Bobine Dissipatrice",
+                            Type = "Ressource",
+                            Count = 10
+                        }, {
+                            Name = "Spore Mytocardia",
+                            Type = "Ressource",
+                            Count = 40
+                        }},
+                        Rush = 25,
+                        Time = 12
+                    }
+                }
+            },
+            Disposition = 0.5,
+            Image = "Kompressa.png",
+            ExilusPolarity = "V",
+            Introduced = "30.5",
+            Magazine = 12,
+            Mastery = 8,
+            MaxAmmo = 210,
+            Name = "Kompressa",
+            NormalAttack = {
+                CritChance = 0.06,
+                CritMultiplier = 1.8,
+                Damage = {
+                    ["Viral"] = 2
+                },
+                FireRate = 3.33,
+                Multishot = 4,
+                ShotType = "Hit-Scan",
+                StatusChance = 0.3
+            },
+            Attack5 = {
+                AttackName = "Explosion",
+                Damage = {
+                    ["Viral"] = 42
+                },
+                Falloff = {
+                    EndRange = 2.4,
+                    Reduction = 0.2,
+                    StartRange = 0
+                },
+                Radius = 2.4,
+                ExplosionDelay = "0.6 - 0.8"
+            },
+            Polarities = {"D"},
+            Reload = 1.8,
+            Traits = {"Tenno"},
+            Trigger = "Auto",
+            Type = "Secondaire"
+        },
+
         ["Korrudo"] = {
             Class = "Mains et Pieds",
             Conclave = true,
@@ -5378,19 +6286,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 30,
                 Time = 12,
-                Parts = {
-                    {
-                        Name = "Alliage d'Auroxium",
-                        Type = "Ressource",
-                        Count = 25
-                    }, {Name = "Devar Esher", Type = "Ressource", Count = 15},
-                    {Name = "Souffle d'Eidolon", Type = "Ressource", Count = 5},
-                    {
-                        Name = "Arêtes de Mawfish",
-                        Type = "Ressource",
-                        Count = 20
-                    }
-                }
+                Parts = {{
+                    Name = "Alliage d'Auroxium",
+                    Type = "Ressource",
+                    Count = 25
+                }, {
+                    Name = "Devar Esher",
+                    Type = "Ressource",
+                    Count = 15
+                }, {
+                    Name = "Souffle d'Eidolon",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Arêtes de Mawfish",
+                    Type = "Ressource",
+                    Count = 20
+                }}
             },
             Disposition = 1.35,
             Family = "Korrudo",
@@ -5444,12 +6356,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 10},
-                    {Name = "Spore Mytocardia", Type = "Ressource", Count = 40},
-                    {Name = "Amaraste étoilé", Type = "Ressource", Count = 25},
-                    {Name = "Tour Coagulant", Type = "Ressource", Count = 20}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Spore Mytocardia",
+                    Type = "Ressource",
+                    Count = 40
+                }, {
+                    Name = "Amaraste étoilé",
+                    Type = "Ressource",
+                    Count = 25
+                }, {
+                    Name = "Tour Coagulant",
+                    Type = "Ressource",
+                    Count = 20
+                }}
             },
             Disposition = 1.0,
             Family = "Kreska",
@@ -5507,16 +6430,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 45,
                 Time = 24,
-                Parts = {
-                    {Name = "Tellure", Type = "Ressource", Count = 5},
-                    {Name = "Morphics", Type = "Ressource", Count = 8},
-                    {Name = "Oxium", Type = "Ressource", Count = 125},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 4375
-                    }
-                }
+                Parts = {{
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 8
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 125
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 4375
+                }}
             },
             Disposition = 1.22,
             Family = "Krohkur",
@@ -5571,12 +6501,23 @@ local WeaponData = {
                 MarketCost = 200,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Ferrite", Type = "Ressource", Count = 1500},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 2000},
-                    {Name = "Plastides", Type = "Ressource", Count = 1000},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 1500
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 2000
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.43,
             Family = "Kronen",
@@ -5629,11 +6570,19 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 2},
-                    {Name = "Poignée", Type = "Partie Prime", Count = 2},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Disposition = 0.65,
             Family = "Kronen",
@@ -5686,12 +6635,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 2},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 4200},
-                    {Name = "Rubedo", Type = "Ressource", Count = 1200},
-                    {Name = "Gallium", Type = "Ressource", Count = 20}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 4200
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 20
+                }}
             },
             Class = "Lame-Fouet",
             Conclave = true,
@@ -5755,12 +6715,23 @@ local WeaponData = {
                 Credits = 25000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Récupération", Type = "Ressource", Count = 8150},
-                    {Name = "Oxium", Type = "Ressource", Count = 400},
-                    {Name = "Rubedo", Type = "Ressource", Count = 5950},
-                    {Name = "Morphics", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 8150
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 400
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 5950
+                }, {
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Disposition = 1.0,
             Family = "Lacera",
@@ -5805,12 +6776,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 2},
-                    {Name = "Récupération", Type = "Ressource", Count = 900},
-                    {Name = "Ferrite", Type = "Ressource", Count = 1000},
-                    {Name = "Capteurs Neuronaux", Type = "Ressource", Count = 3}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Capteurs Neuronaux",
+                    Type = "Ressource",
+                    Count = 3
+                }}
             },
             Disposition = 1.25,
             Family = "Lecta",
@@ -5856,9 +6838,7 @@ local WeaponData = {
             MeleeComboDur = 5.0,
             FollowThrough = 0.5,
             MeleeRange = 2.5,
-            Users = {
-                "[[Scrambus]]", "[[Comba]]", "[[Pelna Cade]]", "[[Jad Teran]]"
-            },
+            Users = {"[[Scrambus]]", "[[Comba]]", "[[Pelna Cade]]", "[[Jad Teran]]"},
             WallAttack = 180
         },
         ["Lesion"] = {
@@ -5870,12 +6850,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Tipedo", Type = "Arme", Count = 1},
-                    {Name = "Plastides", Type = "Ressource", Count = 1400},
-                    {Name = "Neurodes", Type = "Ressource", Count = 4},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 2300}
-                }
+                Parts = {{
+                    Name = "Tipedo",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 1400
+                }, {
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 2300
+                }}
             },
             Disposition = 0.5,
             Image = "Lesion.png",
@@ -5926,12 +6917,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 40,
                 Time = 12,
-                Parts = {
-                    {Name = "Gallium", Type = "Ressource", Count = 4},
-                    {Name = "Récupération", Type = "Ressource", Count = 750},
-                    {Name = "Plastides", Type = "Ressource", Count = 800},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 900}
-                }
+                Parts = {{
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 750
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 900
+                }}
             },
             Class = "Machette",
             Conclave = true,
@@ -6037,12 +7039,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Gallium", Type = "Ressource", Count = 3},
-                    {Name = "Ferrite", Type = "Ressource", Count = 750},
-                    {Name = "Rubedo", Type = "Ressource", Count = 300},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 80}
-                }
+                Parts = {{
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 750
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 300
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 80
+                }}
             },
             Disposition = 1.09,
             Family = "Magistar",
@@ -6099,12 +7112,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {Name = "Cryotique", Type = "Ressource", Count = 650},
-                    {Name = "Oxium", Type = "Ressource", Count = 225},
-                    {Name = "Récupération", Type = "Ressource", Count = 8600}
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 650
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 225
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 8600
+                }}
             },
             Disposition = 1,
             FollowThrough = 0.6,
@@ -6132,7 +7156,10 @@ local WeaponData = {
             },
             Name = "Masseter",
             NormalAttack = {
-                Damage = {["Impact"] = 135, ["Tranchant"] = 106},
+                Damage = {
+                    ["Impact"] = 135,
+                    ["Tranchant"] = 106
+                },
                 CritChance = 0.24,
                 CritMultiplier = 2,
                 StatusChance = 0.28,
@@ -6152,12 +7179,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 4},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 15000},
-                    {Name = "Plastides", Type = "Ressource", Count = 1200},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 15000
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.25,
             Image = "Mios.png",
@@ -6212,16 +7250,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Capteurs Neuronaux", Type = "Ressource", Count = 2},
-                    {Name = "Ferrite", Type = "Ressource", Count = 1000},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 1500},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 2000
-                    }
-                }
+                Parts = {{
+                    Name = "Capteurs Neuronaux",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 1500
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 2000
+                }}
             },
             Disposition = 1.43,
             FinisherDamage = 75,
@@ -6279,7 +7324,10 @@ local WeaponData = {
             Mastery = 0,
             Name = "MK1-Bo",
             NormalAttack = {
-                Damage = {["Impact"] = 81, ["Perforation"] = 9},
+                Damage = {
+                    ["Impact"] = 81,
+                    ["Perforation"] = 9
+                },
                 CritChance = 0.125,
                 CritMultiplier = 2,
                 StatusChance = 0.2,
@@ -6371,12 +7419,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 2},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 800},
-                    {Name = "Rubedo", Type = "Ressource", Count = 200},
-                    {Name = "Gallium", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 200
+                }, {
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 1.175,
             Family = "Nami Skyla",
@@ -6427,11 +7486,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 2},
-                    {Name = "Poignée", Type = "Partie Prime", Count = 2},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Class = "Doubles Épées",
             Conclave = true,
@@ -6488,12 +7555,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Ferrite", Type = "Ressource", Count = 1500},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 800},
-                    {Name = "Rubedo", Type = "Ressource", Count = 200},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 1500
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 200
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.43,
             Image = "DENamiSolo.png",
@@ -6547,12 +7625,23 @@ local WeaponData = {
                 MarketCost = 275,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 3},
-                    {Name = "Oxium", Type = "Ressource", Count = 75},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 200},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 75
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 200
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Class = "Nikana",
             Conclave = true,
@@ -6608,11 +7697,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 1},
-                    {Name = "Poignée", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Disposition = 0.5,
             Family = "Nikana",
@@ -6669,12 +7766,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Ferrite", Type = "Ressource", Count = 4000},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 1200},
-                    {Name = "Plastides", Type = "Ressource", Count = 800},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 4000
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.41,
             Image = "Ninkondi.png",
@@ -6684,7 +7792,10 @@ local WeaponData = {
             MeleeRange = 2.31,
             Name = "Ninkondi",
             NormalAttack = {
-                Damage = {["Impact"] = 90, ["Électrique"] = 100},
+                Damage = {
+                    ["Impact"] = 90,
+                    ["Électrique"] = 100
+                },
                 CritChance = 0.1,
                 CritMultiplier = 2,
                 StatusChance = 0.35,
@@ -6725,11 +7836,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Poignée", Type = "Partie Prime", Count = 2},
-                    {Name = "Chaîne", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Chaîne",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Disposition = 1.41,
             Image = "Ninkondi Prime.png",
@@ -6785,12 +7904,23 @@ local WeaponData = {
                 MarketCost = 125,
                 Rush = 30,
                 Time = 12,
-                Parts = {
-                    {Name = "Circuits", Type = "Ressource", Count = 650},
-                    {Name = "Récupération", Type = "Ressource", Count = 900},
-                    {Name = "Ferrite", Type = "Ressource", Count = 700},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 300}
-                }
+                Parts = {{
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 650
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 700
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 300
+                }}
             },
             Disposition = 1.1,
             Family = "Obex",
@@ -6846,12 +7976,23 @@ local WeaponData = {
                 MarketCost = 200,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 4},
-                    {Name = "Ferrite", Type = "Ressource", Count = 15000},
-                    {Name = "Plastides", Type = "Ressource", Count = 1400},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Extrait de Nitain",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 15000
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 1400
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Class = "Tonfa",
             Conclave = true,
@@ -6909,16 +8050,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Tellure", Type = "Ressource", Count = 2},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 4200
-                    },
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 3400},
-                    {Name = "Oxium", Type = "Ressource", Count = 1800}
-                }
+                Parts = {{
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 4200
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 3400
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 1800
+                }}
             },
             ChannelCost = 5,
             Class = "Doubles Dagues",
@@ -6976,12 +8124,23 @@ local WeaponData = {
                 MarketCost = 180,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 4},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 500},
-                    {Name = "Ferrite", Type = "Ressource", Count = 850},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 700}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 500
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 850
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 700
+                }}
             },
             Disposition = 1,
             Family = "Orthos",
@@ -7035,11 +8194,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 2},
-                    {Name = "Poignée", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Class = "Arme d'Hast",
             Conclave = true,
@@ -7109,12 +8276,23 @@ local WeaponData = {
                 BPStanding = 100000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Objet", Count = 2},
-                    {Name = "Disque", Type = "Objet", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10},
-                    {Name = "Kuva", Type = "Ressource", Count = 4000}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Objet",
+                    Count = 2
+                }, {
+                    Name = "Disque",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Kuva",
+                    Type = "Ressource",
+                    Count = 4000
+                }}
             },
             Disposition = 1.15,
             Image = "Orvius.png",
@@ -7180,12 +8358,23 @@ local WeaponData = {
                 Credits = 30000,
                 Rush = 30,
                 Time = 12,
-                Parts = {
-                    {Name = "Ducats", Type = "Objet", Count = 1000},
-                    {Name = "Galatine", Type = "Arme", Count = 1},
-                    {Name = "Eclat d'Eidolon", Type = "Ressource", Count = 5},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Ducats",
+                    Type = "Objet",
+                    Count = 1000
+                }, {
+                    Name = "Galatine",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Eclat d'Eidolon",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Disposition = 1.0,
             Image = "Arme paracesis.png",
@@ -7238,11 +8427,19 @@ local WeaponData = {
                 Credits = 30000,
                 Rush = 30,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Objet", Count = 2},
-                    {Name = "Cortex Inférieur", Type = "Objet", Count = 1},
-                    {Name = "Neurodes", Type = "Ressource", Count = 5}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Objet",
+                    Count = 2
+                }, {
+                    Name = "Cortex Inférieur",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 5
+                }}
             },
             Disposition = 1.0,
             Image = "Pathocyst.png",
@@ -7307,15 +8504,23 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {Name = "Ferrite", Type = "Ressource", Count = 750},
-                    {Name = "Circuits", Type = "Ressource", Count = 300},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 80}
-                }
+                Parts = {{
+                    Name = "Module de Contrôle",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 750
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 300
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 80
+                }}
             },
             Class = "Épée",
             Conclave = true,
@@ -7374,11 +8579,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 1},
-                    {Name = "Poignée", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Disposition = 1.0,
             Family = "Épée Pangolin",
@@ -7427,12 +8640,23 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 1},
-                    {Name = "Ferrite", Type = "Ressource", Count = 500},
-                    {Name = "Récupération", Type = "Ressource", Count = 450},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 50}
-                }
+                Parts = {{
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 500
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 450
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 50
+                }}
             },
             Class = "Épée",
             Conclave = true,
@@ -7631,12 +8855,23 @@ local WeaponData = {
                 BPCost = 15000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 1},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 300},
-                    {Name = "Récupération", Type = "Ressource", Count = 1000},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 300
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Class = "Machette",
             Conclave = true,
@@ -7648,7 +8883,10 @@ local WeaponData = {
             Mastery = 3,
             Name = "Prova",
             NormalAttack = {
-                Damage = {["Impact"] = 52, ["Électrique"] = 76},
+                Damage = {
+                    ["Impact"] = 52,
+                    ["Électrique"] = 76
+                },
                 CritChance = 0.14,
                 CritMultiplier = 2.0,
                 StatusChance = 0.16,
@@ -7680,10 +8918,7 @@ local WeaponData = {
             MeleeComboDur = 5.0,
             FollowThrough = 0.7,
             MeleeRange = 2.5,
-            Users = {
-                "[[Homme d'Équipage Prod]]", "[[Nako Xol]]", "[[Ved Xol]]",
-                "[[John Prodman]]"
-            },
+            Users = {"[[Homme d'Équipage Prod]]", "[[Nako Xol]]", "[[Ved Xol]]", "[[John Prodman]]"},
             WallAttack = 140,
             WallElement = "Électrique"
         },
@@ -7698,7 +8933,10 @@ local WeaponData = {
             Mastery = 8,
             Name = "Prova Vandal",
             NormalAttack = {
-                Damage = {["Impact"] = 80, ["Électrique"] = 118},
+                Damage = {
+                    ["Impact"] = 80,
+                    ["Électrique"] = 118
+                },
                 CritChance = 0.14,
                 CritMultiplier = 2.0,
                 StatusChance = 0.32,
@@ -7742,12 +8980,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 5},
-                    {Name = "Récupération", Type = "Ressource", Count = 8750},
-                    {Name = "Rubedo", Type = "Ressource", Count = 2250},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 8750
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 2250
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.0,
             Image = "Pupacyst.png",
@@ -7755,7 +9004,10 @@ local WeaponData = {
             Mastery = 7,
             Name = "Pupacyst",
             NormalAttack = {
-                Damage = {["Impact"] = 139, ["Viral"] = 145},
+                Damage = {
+                    ["Impact"] = 139,
+                    ["Viral"] = 145
+                },
                 CritChance = 0.13,
                 CritMultiplier = 1.5,
                 StatusChance = 0.27,
@@ -7798,19 +9050,23 @@ local WeaponData = {
                 MarketCost = 190,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Namalon Dévolu", Type = "Ressource", Count = 60},
-                    {
-                        Name = "Section de Noyau Spinal",
-                        Type = "Ressource",
-                        Count = 15
-                    }, {Name = "Scintillateur", Type = "Ressource", Count = 5},
-                    {
-                        Name = "Éclat de Sériglas",
-                        Type = "Ressource",
-                        Count = 1
-                    }
-                }
+                Parts = {{
+                    Name = "Namalon Dévolu",
+                    Type = "Ressource",
+                    Count = 60
+                }, {
+                    Name = "Section de Noyau Spinal",
+                    Type = "Ressource",
+                    Count = 15
+                }, {
+                    Name = "Scintillateur",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Éclat de Sériglas",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1,
             Family = "Quassus",
@@ -7907,11 +9163,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 1},
-                    {Name = "Manche", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Manche",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Class = "Faux",
             Conclave = true,
@@ -7961,7 +9225,9 @@ local WeaponData = {
         ["Redeemer"] = {
             ChargeAttack = {
                 AttackName = "Tirs",
-                Damage = {["Explosif"] = 300},
+                Damage = {
+                    ["Explosif"] = 300
+                },
                 PelletCount = 10,
                 CritMultiplier = 2
             },
@@ -7973,11 +9239,19 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Vasto", Type = "Arme", Count = 1},
-                    {Name = "Doubles Skana", Type = "Arme", Count = 1},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Vasto",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Doubles Skana",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.05,
             Family = "Redeemer",
@@ -8027,7 +9301,9 @@ local WeaponData = {
         ["Redeemer Prime"] = {
             ChargeAttack = {
                 AttackName = "Tirs",
-                Damage = {["Explosif"] = 800},
+                Damage = {
+                    ["Explosif"] = 800
+                },
                 PelletCount = 10
             },
             Class = "Pistolame",
@@ -8036,11 +9312,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 1},
-                    {Name = "Poignée", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Disposition = 0.6,
             Family = "Redeemer",
@@ -8096,12 +9380,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Ankyros", Type = "Arme", Count = 1},
-                    {Name = "Doubles Hachoirs", Type = "Arme", Count = 1},
-                    {Name = "Tellure", Type = "Ressource", Count = 2},
-                    {Name = "Forma", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Ankyros",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Doubles Hachoirs",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Forma",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 1.38,
             Image = "Ripkas.png",
@@ -8146,10 +9441,7 @@ local WeaponData = {
             BlockAngle = 55,
             MeleeComboDur = 5.0,
             FollowThrough = 0.8,
-            Users = {
-                "[[Bourreaux/Zura|Zura]]", "[[Déchiqueteur Kuva]]",
-                "[[Déchiqueteur Nightwatch]]"
-            },
+            Users = {"[[Bourreaux/Zura|Zura]]", "[[Déchiqueteur Kuva]]", "[[Déchiqueteur Nightwatch]]"},
             WallAttack = 165
         },
         ["Magistar Sancti"] = {
@@ -8221,16 +9513,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Akstiletto", Type = "Arme", Count = 1},
-                    {Name = "Cryotique", Type = "Ressource", Count = 3300},
-                    {Name = "Plastides", Type = "Ressource", Count = 1000},
-                    {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 2
-                    }
-                }
+                Parts = {{
+                    Name = "Akstiletto",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 3300
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Module de Contrôle",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.24,
             Image = "Sarpa.png",
@@ -8285,12 +9584,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Gallium", Type = "Ressource", Count = 3},
-                    {Name = "Récupération", Type = "Ressource", Count = 750},
-                    {Name = "Circuits", Type = "Ressource", Count = 300},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 500}
-                }
+                Parts = {{
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 750
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 300
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 500
+                }}
             },
             Disposition = 1.0,
             Family = "Scindo",
@@ -8344,11 +9654,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 1},
-                    {Name = "Manche", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Manche",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Disposition = 1.0,
             Family = "Scindo",
@@ -8403,12 +9721,23 @@ local WeaponData = {
                 BPCost = 15000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 4},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 15000},
-                    {Name = "Plastides", Type = "Ressource", Count = 1200},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 15000
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.3,
             FinisherDamage = 75,
@@ -8514,12 +9843,23 @@ local WeaponData = {
                 MarketCost = 180,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 1},
-                    {Name = "Circuits", Type = "Ressource", Count = 400},
-                    {Name = "Récupération", Type = "Ressource", Count = 1000},
-                    {Name = "Capteurs Neuronaux", Type = "Ressource", Count = 3}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 400
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Capteurs Neuronaux",
+                    Type = "Ressource",
+                    Count = 3
+                }}
             },
             Class = "Arme d'Hast",
             Conclave = true,
@@ -8529,7 +9869,10 @@ local WeaponData = {
             Mastery = 6,
             Name = "Serro",
             NormalAttack = {
-                Damage = {["Tranchant"] = 96, ["Électrique"] = 138},
+                Damage = {
+                    ["Tranchant"] = 96,
+                    ["Électrique"] = 138
+                },
                 CritChance = 0.08,
                 CritMultiplier = 1.5,
                 StatusChance = 0.26,
@@ -8570,12 +9913,23 @@ local WeaponData = {
                 MarketCost = 180,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Ninkondi", Type = "Arme", Count = 1},
-                    {Name = "Forma", Type = "Ressource", Count = 1},
-                    {Name = "Plastides", Type = "Ressource", Count = 1100},
-                    {Name = "Morphics", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Ninkondi",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 1100
+                }, {
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Class = "Nunchaku",
             Conclave = true,
@@ -8586,7 +9940,9 @@ local WeaponData = {
             MeleeRange = 2.21,
             Name = "Shaku",
             NormalAttack = {
-                Damage = {["Impact"] = 180},
+                Damage = {
+                    ["Impact"] = 180
+                },
                 CritChance = 0.18,
                 CritMultiplier = 2,
                 StatusChance = 0.34,
@@ -8624,11 +9980,19 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Objet", Count = 1},
-                    {Name = "Dissipateur Thermique", Type = "Objet", Count = 1},
-                    {Name = "Poignée", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Dissipateur Thermique",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Class = "Dague",
             Conclave = true,
@@ -8674,10 +10038,8 @@ local WeaponData = {
             BlockAngle = 45,
             MeleeComboDur = 5.0,
             FollowThrough = 0.9,
-            Users = {
-                "[[Bourreaux/Harkonar|Harkonar]]", "[[Bourreaux/Nok|Nok]]",
-                "[[Bourreaux/Reth|Reth]]", "Soldats [[Grineer]] désarmés"
-            },
+            Users = {"[[Bourreaux/Harkonar|Harkonar]]", "[[Bourreaux/Nok|Nok]]", "[[Bourreaux/Reth|Reth]]",
+                     "Soldats [[Grineer]] désarmés"},
             WallAttack = 135
         },
         ["Shildeg Kuva"] = {
@@ -8735,15 +10097,19 @@ local WeaponData = {
                 MarketCost = 165,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Magistar", Type = "Arme", Count = 1},
-                    {Name = "Cryotique", Type = "Ressource", Count = 30000},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 50000
-                    }
-                }
+                Parts = {{
+                    Name = "Magistar",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 30000
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 50000
+                }}
             },
             Disposition = 1.35,
             Image = "IceHammer.png",
@@ -8844,12 +10210,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Gallium", Type = "Ressource", Count = 3},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 600},
-                    {Name = "Ferrite", Type = "Ressource", Count = 1200},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Class = "Épée et Bouclier",
             Conclave = true,
@@ -8862,7 +10239,9 @@ local WeaponData = {
             Mastery = 0,
             Name = "Silva & Aegis",
             NormalAttack = {
-                Damage = {["Feu"] = 98},
+                Damage = {
+                    ["Feu"] = 98
+                },
                 CritChance = 0.05,
                 CritMultiplier = 1.5,
                 StatusChance = 0.2,
@@ -8904,12 +10283,23 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 1},
-                    {Name = "Garde", Type = "Partie Prime", Count = 1},
-                    {Name = "Poignée", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Garde",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 1.0,
             Family = "Silva & Aegis",
@@ -8920,7 +10310,9 @@ local WeaponData = {
             Mastery = 12,
             Name = "Silva & Aegis Prime",
             NormalAttack = {
-                Damage = {["Feu"] = 318},
+                Damage = {
+                    ["Feu"] = 318
+                },
                 CritChance = 0.25,
                 CritMultiplier = 2,
                 StatusChance = 0.3,
@@ -8965,15 +10357,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Récupération", Type = "Ressource", Count = 750},
-                    {Name = "Plastides", Type = "Ressource", Count = 500},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 1100
-                    }, {Name = "Morphics", Type = "Ressource", Count = 3}
-                }
+                Parts = {{
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 750
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 500
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 1100
+                }, {
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 3
+                }}
             },
             Disposition = 1.22,
             Family = "Skana",
@@ -9166,11 +10566,17 @@ local WeaponData = {
             BlockResist = 0.6,
             ChargeAttack = {
                 AttackName = "Tirs",
-                Damage = {["Impact"] = 700},
+                Damage = {
+                    ["Impact"] = 700
+                },
                 CritChance = 0.3,
                 CritMultiplier = 2.4,
                 StatusChance = 0.14,
-                Falloff = {StartRange = 8, EndRange = 16, Reduction = 0.9}
+                Falloff = {
+                    StartRange = 8,
+                    EndRange = 16,
+                    Reduction = 0.9
+                }
             },
             Class = "Pistolame",
             Conclave = false,
@@ -9179,12 +10585,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Lame", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Lame",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 0.5,
             FollowThrough = 0.5,
@@ -9235,15 +10652,23 @@ local WeaponData = {
                 MarketCost = 180,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {
-                        Name = "Injecteur de Détonite",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {Name = "Circuits", Type = "Ressource", Count = 1100},
-                    {Name = "Récupération", Type = "Ressource", Count = 4000},
-                    {Name = "Amphis", Type = "Arme", Count = 1}
-                }
+                Parts = {{
+                    Name = "Injecteur de Détonite",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 1100
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 4000
+                }, {
+                    Name = "Amphis",
+                    Type = "Arme",
+                    Count = 1
+                }}
             },
             Class = "Arme d'Hast",
             Conclave = true,
@@ -9255,7 +10680,10 @@ local WeaponData = {
             Mastery = 5,
             Name = "Sydon",
             NormalAttack = {
-                Damage = {["Impact"] = 11.3, ["Perforation"] = 213.8},
+                Damage = {
+                    ["Impact"] = 11.3,
+                    ["Perforation"] = 213.8
+                },
                 CritChance = 0.1,
                 CritMultiplier = 2,
                 StatusChance = 0.25,
@@ -9346,16 +10774,23 @@ local WeaponData = {
                 MarketCost = 275,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {Name = "Kuva", Type = "Ressource", Count = 1200},
-                    {
-                        Name = "Alliage d'Auroxium",
-                        Type = "Ressource",
-                        Count = 100
-                    },
-                    {Name = "Alliage Hespazym", Type = "Ressource", Count = 100}
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Kuva",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Alliage d'Auroxium",
+                    Type = "Ressource",
+                    Count = 100
+                }, {
+                    Name = "Alliage Hespazym",
+                    Type = "Ressource",
+                    Count = 100
+                }}
             },
             Disposition = 1.0,
             Family = "Tatsu",
@@ -9412,12 +10847,23 @@ local WeaponData = {
                 MarketCost = 125,
                 Rush = 30,
                 Time = 12,
-                Parts = {
-                    {Name = "Gallium", Type = "Ressource", Count = 5},
-                    {Name = "Rubedo", Type = "Ressource", Count = 700},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 3300},
-                    {Name = "Ankyros", Type = "Arme", Count = 1}
-                }
+                Parts = {{
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 700
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 3300
+                }, {
+                    Name = "Ankyros",
+                    Type = "Arme",
+                    Count = 1
+                }}
             },
             Disposition = 1.4,
             Family = "Tekko",
@@ -9471,11 +10917,19 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 2},
-                    {Name = "Gantelet", Type = "Partie Prime", Count = 2},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Gantelet",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Disposition = 1.4,
             Family = "Tekko",
@@ -9579,12 +11033,23 @@ local WeaponData = {
                 MarketCost = 125,
                 Rush = 30,
                 Time = 12,
-                Parts = {
-                    {Name = "Capteurs Neuronaux", Type = "Ressource", Count = 2},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 1600},
-                    {Name = "Kunai", Type = "Arme", Count = 1},
-                    {Name = "Bo", Type = "Arme", Count = 1}
-                }
+                Parts = {{
+                    Name = "Capteurs Neuronaux",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 1600
+                }, {
+                    Name = "Kunai",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Bo",
+                    Type = "Arme",
+                    Count = 1
+                }}
             },
             Disposition = 1.31,
             Family = "Tipedo",
@@ -9637,15 +11102,23 @@ local WeaponData = {
             Conclave = true,
             Cost = {
                 Credits = 20000,
-                --BPCost = 50000,
-                --MarketCost = 180,
+                -- BPCost = 50000,
+                -- MarketCost = 180,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Manche", Type = "Partie Prime", Count = 1},
-                    {Name = "Ornement", Type = "Partie Prime", Count = 2},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Manche",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Ornement",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Name = "Tipedo Prime",
             Family = "Tipedo",
@@ -9686,7 +11159,7 @@ local WeaponData = {
                 SlamRadius = 7.0
             },
             SlideAttack = 163,
-		    BlockAngle = 60,
+            BlockAngle = 60,
             FollowThrough = 0.5,
             MeleeComboDur = 5.0,
             MeleeRange = 3.00
@@ -9698,15 +11171,23 @@ local WeaponData = {
                 MarketCost = 180,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {Name = "Plastides", Type = "Ressource", Count = 800},
-                    {Name = "Ferrite", Type = "Ressource", Count = 2000},
-                    {Name = "Oxium", Type = "Ressource", Count = 100}
-                }
+                Parts = {{
+                    Name = "Module de Contrôle",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 2000
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 100
+                }}
             },
             Class = "Arme d'Hast",
             Conclave = true,
@@ -9763,15 +11244,19 @@ local WeaponData = {
                 MarketCost = 185,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Doubles Zoren", Type = "Arme", Count = 1},
-                    {Name = "Atomos", Type = "Arme", Count = 1},
-                    {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 1
-                    }
-                }
+                Parts = {{
+                    Name = "Doubles Zoren",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Atomos",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Module de Contrôle",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.18,
             Image = "BasolkJumeaux.png",
@@ -9828,15 +11313,23 @@ local WeaponData = {
                 MarketCost = nil,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {
-                        Name = "Injecteur de Détonite",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {Name = "Forma", Type = "Objet", Count = 1},
-                    {Name = "Krohkur", Type = "Arme", Count = 1},
-                    {Name = "Krohkur", Type = "Arme", Count = 1}
-                }
+                Parts = {{
+                    Name = "Injecteur de Détonite",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Forma",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Krohkur",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Krohkur",
+                    Type = "Arme",
+                    Count = 1
+                }}
 
             },
             Disposition = 1.2,
@@ -9895,7 +11388,10 @@ local WeaponData = {
             Mastery = 11,
             Name = "Sydon Vaykor",
             NormalAttack = {
-                Damage = {["Impact"] = 10.7, ["Perforation"] = 202.3},
+                Damage = {
+                    ["Impact"] = 10.7,
+                    ["Perforation"] = 202.3
+                },
                 CritChance = 0.21,
                 CritMultiplier = 2.5,
                 StatusChance = 0.33,
@@ -9936,12 +11432,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Gallium", Type = "Ressource", Count = 4},
-                    {Name = "Récupération", Type = "Ressource", Count = 1000},
-                    {Name = "Plastides", Type = "Ressource", Count = 500},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 500
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Class = "Griffes",
             Conclave = true,
@@ -9995,11 +11502,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lames", Type = "Partie Prime", Count = 2},
-                    {Name = "Gantelet", Type = "Partie Prime", Count = 2},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Lames",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Gantelet",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Class = "Griffes",
             Conclave = true,
@@ -10055,20 +11570,23 @@ local WeaponData = {
                 MarketCost = nil,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15},
-                    {Name = "Oxium", Type = "Ressource", Count = 925},
-                    {
-                        Name = "Bapholite Trempée",
-                        Type = "Ressource",
-                        Count = 60
-                    },
-                    {
-                        Name = "Héciphron Purifié",
-                        Type = "Ressource",
-                        Count = 10
-                    }
-                }
+                Parts = {{
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 925
+                }, {
+                    Name = "Bapholite Trempée",
+                    Type = "Ressource",
+                    Count = 60
+                }, {
+                    Name = "Héciphron Purifié",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Class = "Lame Lourde",
             Conclave = false,
@@ -10105,7 +11623,11 @@ local WeaponData = {
                 CritMultiplier = 2.3,
                 StatusChance = 0.33,
                 Radius = 6.0,
-                Falloff = {StartRange = 0, EndRange = 6, Reduction = 0.9}
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 6,
+                    Reduction = 0.9
+                }
             },
             MeleeSlam = {
                 Damage = 999.0,
@@ -10139,15 +11661,23 @@ local WeaponData = {
                 MarketCost = 200,
                 Rush = 45,
                 Time = 12,
-                Parts = {
-                    {Name = "Oxium", Type = "Ressource", Count = 225},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 11000
-                    }, {Name = "Cryotique", Type = "Ressource", Count = 875}
-                }
+                Parts = {{
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 225
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 11000
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 875
+                }}
             },
             Disposition = 1.2,
             Family = "Volnus",
@@ -10199,11 +11729,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Partie Prime", Count = 1},
-                    {Name = "Poignée", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 15}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Class = "Marteau",
             Conclave = true,
@@ -10216,13 +11754,13 @@ local WeaponData = {
             NormalAttack = {
                 Damage = {
                     ["Impact"] = 55.0,
-					["Perforation"] = 80.0,
-					["Tranchant"] = 115.0
+                    ["Perforation"] = 80.0,
+                    ["Tranchant"] = 115.0
                 },
                 CritChance = 0.2,
                 CritMultiplier = 1.8,
                 StatusChance = 0.34,
-                FireRate = 1.2,
+                FireRate = 1.2
             },
             SlideAttack = 500.0,
             MeleeSlam = {
@@ -10249,19 +11787,30 @@ local WeaponData = {
             Polarities = {"V", "V"},
             StancePolarity = "V",
             Traits = {"Prime"},
-            Type = "Mêlée",
+            Type = "Mêlée"
         },
         ["War"] = {
             Cost = {
                 Credits = 20000,
                 Rush = 45,
                 Time = 12,
-                Parts = {
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 2300},
-                    {Name = "Rubedo", Type = "Ressource", Count = 1400},
-                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 5},
-                    {Name = "War Brisée", Type = "Arme", Count = 1}
-                }
+                Parts = {{
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 2300
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 1400
+                }, {
+                    Name = "Extrait de Nitain",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "War Brisée",
+                    Type = "Arme",
+                    Count = 1
+                }}
             },
             Class = "Lame Lourde",
             Conclave = true,
@@ -10313,12 +11862,23 @@ local WeaponData = {
                 Credits = 30000,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 5},
-                    {Name = "Poignée", Type = "Objet", Count = 1},
-                    {Name = "Tête", Type = "Objet", Count = 1},
-                    {Name = "Moteur", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Extrait de Nitain",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Poignée",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Tête",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Moteur",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Class = "Marteau",
             Conclave = true,
@@ -10367,12 +11927,18 @@ local WeaponData = {
         ["Xoris"] = {
             AreaAttack = {
                 AttackName = "Explosion Jet",
-                Damage = {["Électrique"] = 480.0},
+                Damage = {
+                    ["Électrique"] = 480.0
+                },
                 StatusChance = 0.18,
                 CritChance = 0.20,
                 CritMultiplier = 2.4,
                 Radius = 8,
-                Falloff = {StartRange = 0, EndRange = 8, Reduction = 0.7}
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 8,
+                    Reduction = 0.7
+                }
             },
             BlockAngle = 55,
             ChargedThrowAttack = {
@@ -10388,12 +11954,18 @@ local WeaponData = {
             },
             SecondaryAreaAttack = {
                 AttackName = "Explosion Jet Chargé",
-                Damage = {["Électrique"] = 480},
+                Damage = {
+                    ["Électrique"] = 480
+                },
                 CritChance = 0.22,
                 CritMultiplier = 2.4,
                 StatusChance = 0.2,
                 Radius = 9,
-                Falloff = {StartRange = 0, EndRange = 9, Reduction = 0.7}
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 9,
+                    Reduction = 0.7
+                }
             },
             Class = "Glaive",
             ComboDur = "Infini",
@@ -10402,11 +11974,19 @@ local WeaponData = {
                 Credits = 5000,
                 Rush = 0,
                 Time = 0,
-                Parts = {
-                    {Name = "Coeur", Type = "Objet", Count = 1},
-                    {Name = "Poignée", Type = "Objet", Count = 1},
-                    {Name = "Lame", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Coeur",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Lame",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 0.5,
             FollowThrough = 0.7,
@@ -10462,12 +12042,16 @@ local WeaponData = {
         ["Zenistar"] = {
             AreaAttack = {
                 AttackName = "Explosion Disque",
-                Damage = {["Feu"] = 350},
+                Damage = {
+                    ["Feu"] = 350
+                },
                 Radius = 4
             },
             ChargeAttack = {
                 AttackName = "Impact Disque",
-                Damage = {["Impact"] = 75},
+                Damage = {
+                    ["Impact"] = 75
+                },
                 Range = 9
             },
             Class = "Lame Lourde",
@@ -10478,7 +12062,11 @@ local WeaponData = {
             Mastery = 6,
             Name = "Zenistar",
             NormalAttack = {
-                Damage = {["Impact"] = 80, ["Tranchant"] = 68, ["Feu"] = 150},
+                Damage = {
+                    ["Impact"] = 80,
+                    ["Tranchant"] = 68,
+                    ["Feu"] = 150
+                },
                 CritChance = 0.1,
                 CritMultiplier = 2,
                 StatusChance = 0.3,
@@ -10487,7 +12075,9 @@ local WeaponData = {
             Polarities = {"V"},
             SecondaryAreaAttack = {
                 AttackName = "Aura Disque",
-                Damage = {["Feu"] = 50},
+                Damage = {
+                    ["Feu"] = 50
+                },
                 StatusChance = 0.5,
                 Duration = 45,
                 Radius = 4,
@@ -10537,12 +12127,23 @@ local WeaponData = {
                 BPCost = 15000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 5},
-                    {Name = "Récupération", Type = "Ressource", Count = 6000},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 5000},
-                    {Name = "Forma", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 6000
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Forma",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Accuracy = 100,
             Class = "Pistolet",
@@ -10555,7 +12156,9 @@ local WeaponData = {
             Name = "Acrid",
             NoiseLevel = "Bruyant",
             NormalAttack = {
-                Damage = {["Poison"] = 35},
+                Damage = {
+                    ["Poison"] = 35
+                },
                 CritChance = 0.05,
                 CritMultiplier = 2,
                 StatusChance = 0.1,
@@ -10578,11 +12181,19 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Furis", Type = "Arme", Count = 1},
-                    {Name = "Furis", Type = "Arme", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Furis",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Furis",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.39,
             Family = "Afuris",
@@ -10621,12 +12232,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 25,
                 Time = 24,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 3},
-                    {Name = "Hexenon", Type = "Ressource", Count = 150},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 1600},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 7500}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Hexenon",
+                    Type = "Ressource",
+                    Count = 150
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 1600
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 7500
+                }}
             },
             Disposition = 1.0,
             Image = "Akarius.png",
@@ -10637,7 +12259,10 @@ local WeaponData = {
             Name = "Akarius",
             NoiseLevel = "Bruyant",
             NormalAttack = {
-                Damage = {["Impact"] = 68.0, ["Explosif"] = 419.0},
+                Damage = {
+                    ["Impact"] = 68.0,
+                    ["Explosif"] = 419.0
+                },
                 CritChance = 0.06,
                 CritMultiplier = 1.8,
                 StatusChance = 0.28,
@@ -10663,11 +12288,19 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Bolto", Type = "Arme", Count = 1},
-                    {Name = "Bolto", Type = "Arme", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Bolto",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Bolto",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.3,
             Family = "Akbolto",
@@ -10679,7 +12312,10 @@ local WeaponData = {
             Name = "Akbolto",
             NoiseLevel = "Bruyant",
             NormalAttack = {
-                Damage = {["Impact"] = 4, ["Perforation"] = 36},
+                Damage = {
+                    ["Impact"] = 4,
+                    ["Perforation"] = 36
+                },
                 CritChance = 0.16,
                 CritMultiplier = 2.4,
                 StatusChance = 0.022,
@@ -10701,11 +12337,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 2},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 2},
-                    {Name = "Lien", Type = "Partie Prime", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Lien",
+                    Type = "Partie Prime",
+                    Count = 1
+                }}
             },
             Disposition = 1.15,
             Family = "Akbolto",
@@ -10743,11 +12387,19 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Bronco", Type = "Arme", Count = 1},
-                    {Name = "Bronco", Type = "Arme", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Bronco",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Bronco",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.25,
             Family = "Akbronco",
@@ -10769,7 +12421,11 @@ local WeaponData = {
                 StatusChance = 0.22,
                 PelletCount = 7,
                 FireRate = 8.33,
-                Falloff = {StartRange = 7, EndRange = 14, Reduction = 0.75},
+                Falloff = {
+                    StartRange = 7,
+                    EndRange = 14,
+                    Reduction = 0.75
+                },
                 ShotType = "Hit-Scan"
             },
             Polarities = {"V"},
@@ -10786,11 +12442,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Bronco Prime", Type = "Arme", Count = 1},
-                    {Name = "Bronco Prime", Type = "Arme", Count = 1},
-                    {Name = "Lien", Type = "Partie Prime", Count = 1}
-                }
+                Parts = {{
+                    Name = "Bronco Prime",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Bronco Prime",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Lien",
+                    Type = "Partie Prime",
+                    Count = 1
+                }}
             },
             Disposition = 1.25,
             Family = "Akbronco",
@@ -10812,7 +12476,11 @@ local WeaponData = {
                 StatusChance = 0.3,
                 PelletCount = 7,
                 FireRate = 4.33,
-                Falloff = {StartRange = 9, EndRange = 18, Reduction = 0.74},
+                Falloff = {
+                    StartRange = 9,
+                    EndRange = 18,
+                    Reduction = 0.74
+                },
                 ShotType = "Hit-Scan"
             },
             Polarities = {"V", "V"},
@@ -10831,11 +12499,19 @@ local WeaponData = {
                 MarketCost = 235,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Akbolto", Type = "Arme", Count = 1},
-                    {Name = "Doubles Skana", Type = "Arme", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Akbolto",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Doubles Skana",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.05,
             Family = "Akjagara",
@@ -10872,12 +12548,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 2},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 2},
-                    {Name = "Lien", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Lien",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 0.9,
             Family = "Akjagara",
@@ -10911,7 +12598,9 @@ local WeaponData = {
             Accuracy = 11.1,
             Class = "Doubles Pistolets",
             Conclave = true,
-            Cost = {Credits = 25000},
+            Cost = {
+                Credits = 25000
+            },
             Disposition = 1.52,
             Image = "Aklato.png",
             Introduced = "Vanilla",
@@ -10946,11 +12635,19 @@ local WeaponData = {
                 MarketCost = 190,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Lex", Type = "Arme", Count = 1},
-                    {Name = "Lex", Type = "Arme", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Lex",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Lex",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 0.85,
             Family = "Aklex",
@@ -10986,11 +12683,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lex Prime", Type = "Arme", Count = 1},
-                    {Name = "Lex Prime", Type = "Arme", Count = 1},
-                    {Name = "Lien", Type = "Partie Prime", Count = 1}
-                }
+                Parts = {{
+                    Name = "Lex Prime",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Lex Prime",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Lien",
+                    Type = "Partie Prime",
+                    Count = 1
+                }}
             },
             Disposition = 0.85,
             Family = "Aklex",
@@ -11027,11 +12732,19 @@ local WeaponData = {
                 MarketCost = 220,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Magnus", Type = "Arme", Count = 1},
-                    {Name = "Magnus", Type = "Arme", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Magnus",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Magnus",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.28,
             Image = "DEAkmagnus.png",
@@ -11066,11 +12779,19 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Akstiletto", Type = "Arme", Count = 1},
-                    {Name = "Cryotique", Type = "Ressource", Count = 200},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Akstiletto",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 200
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.2,
             Family = "Aksomati",
@@ -11106,11 +12827,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 2},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 2},
-                    {Name = "Lien", Type = "Partie Prime", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Lien",
+                    Type = "Partie Prime",
+                    Count = 1
+                }}
             },
             Disposition = 1,
             Family = "Aksomati",
@@ -11145,12 +12874,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Gallium", Type = "Ressource", Count = 2},
-                    {Name = "Récupération", Type = "Ressource", Count = 800},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 200},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 200
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 23.5,
             Class = "Doubles Pistolets",
@@ -11186,11 +12926,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 2},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 2},
-                    {Name = "Lien", Type = "Partie Prime", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Lien",
+                    Type = "Partie Prime",
+                    Count = 1
+                }}
             },
             Accuracy = 23.5,
             Class = "Doubles Pistolets",
@@ -11231,11 +12979,19 @@ local WeaponData = {
                 MarketCost = 220,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Vasto", Type = "Arme", Count = 1},
-                    {Name = "Vasto", Type = "Arme", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Vasto",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Vasto",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.2,
             Family = "Akvasto",
@@ -11271,11 +13027,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Vasto Prime", Type = "Arme", Count = 1},
-                    {Name = "Vasto Prime", Type = "Arme", Count = 1},
-                    {Name = "Lien", Type = "Partie Prime", Count = 1}
-                }
+                Parts = {{
+                    Name = "Vasto Prime",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Vasto Prime",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Lien",
+                    Type = "Partie Prime",
+                    Count = 1
+                }}
             },
             Disposition = 1.2,
             Family = "Akvasto",
@@ -11313,12 +13077,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Récupération", Type = "Ressource", Count = 1500},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 1000},
-                    {Name = "Morphics", Type = "Ressource", Count = 2},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 1500
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.52,
             Image = "AkZani.png",
@@ -11353,22 +13128,37 @@ local WeaponData = {
                 MarketCost = 190,
                 Rush = 25,
                 Time = 24,
-                Parts = {
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 600},
-                    {Name = "Circuits", Type = "Ressource", Count = 400},
-                    {Name = "Récupération", Type = "Ressource", Count = 900},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 400
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Accuracy = 26.7,
             AreaAttack = {
                 AttackName = "Single Rocket Explosion",
-                Damage = {["Explosif"] = 250},
+                Damage = {
+                    ["Explosif"] = 250
+                },
                 Radius = 3
             },
             ChargeAttack = {
                 AttackName = "Single Rocket Impact",
-                Damage = {["Explosif"] = 200},
+                Damage = {
+                    ["Explosif"] = 200
+                },
                 CritChance = 0.16,
                 CritMultiplier = 2,
                 StatusChance = 0.22,
@@ -11391,7 +13181,9 @@ local WeaponData = {
             Reload = 2.5,
             SecondaryAreaAttack = { -- wrong attack type for the sake of order
                 AttackName = "3-Rocket Barrage Impact",
-                Damage = {["Explosif"] = 600},
+                Damage = {
+                    ["Explosif"] = 600
+                },
                 CritChance = 0.16,
                 CritMultiplier = 2,
                 StatusChance = 0.525,
@@ -11404,7 +13196,9 @@ local WeaponData = {
             },
             SecondaryAttack = { -- wrong attack type for the sake of order
                 AttackName = "3-Rocket Barrage Explosion",
-                Damage = {["Explosif"] = 750},
+                Damage = {
+                    ["Explosif"] = 750
+                },
                 PelletName = "Rocket",
                 PelletCount = 3,
                 Radius = 3
@@ -11412,9 +13206,7 @@ local WeaponData = {
             Traits = {"Corpus"},
             Trigger = "Chargé",
             Type = "Secondaire",
-            Users = {
-                "[[Comba]]", "[[Scrambus]]", "[[Pelna Cade]]", "[[Jad Teran]]"
-            }
+            Users = {"[[Comba]]", "[[Scrambus]]", "[[Pelna Cade]]", "[[Jad Teran]]"}
         },
         ["Arca Scisco"] = {
             Cost = {
@@ -11423,12 +13215,23 @@ local WeaponData = {
                 MarketCost = 200,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 5},
-                    {Name = "Oxium", Type = "Ressource", Count = 250},
-                    {Name = "Récupération", Type = "Ressource", Count = 12500},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 250
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 12500
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 32,
             Class = "Pistolet",
@@ -11442,7 +13245,10 @@ local WeaponData = {
             MaxAmmo = 288,
             Name = "Arca Scisco",
             NormalAttack = {
-                Damage = {["Perforation"] = 36, ["Tranchant"] = 24},
+                Damage = {
+                    ["Perforation"] = 36,
+                    ["Tranchant"] = 24
+                },
                 CritChance = 0.18,
                 CritMultiplier = 1.6,
                 StatusChance = 0.26,
@@ -11458,17 +13264,25 @@ local WeaponData = {
             Zoom = {"2.0x", "4.0x"}
         },
         ["Athodai"] = {
-        	Cost = {
+            Cost = {
                 Credits = 30000,
                 BPCost = nil,
                 MarketCost = nil,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 5}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }}
             },
             Class = "Pistolet",
             Conclave = false,
@@ -11482,7 +13296,10 @@ local WeaponData = {
             Name = "Athodai",
             NormalAttack = {
                 Accuracy = 50,
-                Damage = {["Perforation"] = 22.0, ["Feu"] = 48.0},
+                Damage = {
+                    ["Perforation"] = 22.0,
+                    ["Feu"] = 48.0
+                },
                 CritChance = 0.32,
                 CritMultiplier = 2.0,
                 StatusChance = 0.08,
@@ -11493,7 +13310,9 @@ local WeaponData = {
             SecondaryAttack = {
                 AttackName = "Chargé",
                 Accuracy = 100,
-                Damage = {["Feu"] = 88},
+                Damage = {
+                    ["Feu"] = 88
+                },
                 CritChance = 0.18,
                 CritMultiplier = 2.0,
                 StatusChance = 0.24,
@@ -11518,12 +13337,23 @@ local WeaponData = {
                 MarketCost = 200,
                 Rush = 45,
                 Time = 24,
-                Parts = {
-                    {Name = "Récupération", Type = "Ressource", Count = 1500},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 1300},
-                    {Name = "Rubedo", Type = "Ressource", Count = 800},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 1500
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 1300
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 0.9,
             Image = "Atomos.png",
@@ -11533,7 +13363,9 @@ local WeaponData = {
             MaxAmmo = 350,
             Name = "Atomos",
             NormalAttack = {
-                Damage = {["Feu"] = 29},
+                Damage = {
+                    ["Feu"] = 29
+                },
                 CritChance = 0.15,
                 CritMultiplier = 1.7,
                 StatusChance = 0.21,
@@ -11574,7 +13406,9 @@ local WeaponData = {
             Reload = 1.4,
             SecondaryAttack = {
                 AttackName = "Launch Turret",
-                Damage = {["Explosif"] = 75},
+                Damage = {
+                    ["Explosif"] = 75
+                },
                 CritChance = 0.16,
                 StatusChance = 0.16,
                 AmmoCost = 75
@@ -11608,12 +13442,23 @@ local WeaponData = {
                 MarketCost = 240,
                 Rush = 25,
                 Time = 24,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 3},
-                    {Name = "Gallium", Type = "Ressource", Count = 4},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 3000},
-                    {Name = "Rubedo", Type = "Ressource", Count = 1200}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 3000
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 1200
+                }}
             },
             Disposition = 1.05,
             Family = "Ballistica",
@@ -11649,19 +13494,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {
-                        Name = "Partie Supérieure",
-                        Type = "Partie Prime",
-                        Count = 1
-                    },
-                    {
-                        Name = "Partie Inférieure",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {Name = "Corde", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1}
-                }
+                Parts = {{
+                    Name = "Partie Supérieure",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Partie Inférieure",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Corde",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }}
             },
             Accuracy = 4,
             ChargeAttack = {
@@ -11773,12 +13622,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Lato", Type = "Arme", Count = 1},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 800},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 2},
-                    {Name = "Neurodes", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Lato",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.51,
             Family = "Bolto",
@@ -11789,7 +13649,10 @@ local WeaponData = {
             MaxAmmo = 210,
             Name = "Bolto",
             NormalAttack = {
-                Damage = {["Impact"] = 4, ["Perforation"] = 36},
+                Damage = {
+                    ["Impact"] = 4,
+                    ["Perforation"] = 36
+                },
                 CritChance = 0.16,
                 CritMultiplier = 2.4,
                 StatusChance = 0.022,
@@ -11806,7 +13669,9 @@ local WeaponData = {
         ["Bramma Kuva"] = {
             Accuracy = 16.7,
             AreaAttack = {
-                Damage = {["Explosif"] = 839},
+                Damage = {
+                    ["Explosif"] = 839
+                },
                 Radius = 7,
                 AttackName = "Attaque Radial"
             },
@@ -11814,7 +13679,9 @@ local WeaponData = {
                 AttackName = "Tir Chargé",
                 CritChance = 0.35,
                 CritMultiplier = 2.1,
-                Damage = {["Impact"] = 187},
+                Damage = {
+                    ["Impact"] = 187
+                },
                 ChargeTime = 0.4,
                 StatusChance = 0.21,
                 FireRate = 1,
@@ -11823,7 +13690,9 @@ local WeaponData = {
             },
             SecondaryAreaAttack = {
                 AttackName = "Cluster Bombs",
-                Damage = {["Explosif"] = 1122},
+                Damage = {
+                    ["Explosif"] = 1122
+                },
                 PelletCount = 6,
                 PelletName = "Bomblet"
             },
@@ -11850,11 +13719,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Accuracy = 7.7,
             Class = "Fusil à Pompe de Poche",
@@ -11877,7 +13754,11 @@ local WeaponData = {
                 StatusChance = 0.17,
                 PelletCount = 10,
                 FireRate = 5,
-                Falloff = {StartRange = 11, EndRange = 22, Reduction = 0.6},
+                Falloff = {
+                    StartRange = 11,
+                    EndRange = 22,
+                    Reduction = 0.6
+                },
                 ShotType = "Hit-Scan"
             },
             Polarities = {"Bar", "V"},
@@ -11930,15 +13811,23 @@ local WeaponData = {
                 MarketCost = 190,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 2},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 1200
-                    }, {Name = "Ferrite", Type = "Ressource", Count = 700},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 800}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 700
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 800
+                }}
             },
             Disposition = 1.35,
             Family = "Bronco",
@@ -11958,7 +13847,11 @@ local WeaponData = {
                 StatusChance = 0.22,
                 PelletCount = 7,
                 FireRate = 5,
-                Falloff = {StartRange = 7, EndRange = 14, Reduction = 0.75},
+                Falloff = {
+                    StartRange = 7,
+                    EndRange = 14,
+                    Reduction = 0.75
+                },
                 ShotType = "Hit-Scan"
             },
             Reload = 1.05,
@@ -11974,11 +13867,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 1.35,
             Family = "Bronco",
@@ -12000,7 +13901,11 @@ local WeaponData = {
                 StatusChance = 0.3,
                 PelletCount = 7,
                 FireRate = 4.17,
-                Falloff = {StartRange = 9, EndRange = 18, Reduction = 0.74},
+                Falloff = {
+                    StartRange = 9,
+                    EndRange = 18,
+                    Reduction = 0.74
+                },
                 ShotType = "Hit-Scan"
             },
             Reload = 2,
@@ -12015,16 +13920,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 2
-                    },
-                    {Name = "Récupération", Type = "Ressource", Count = 800},
-                    {Name = "Circuits", Type = "Ressource", Count = 200},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Module de Contrôle",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 200
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 100,
             Class = "Arme de Lancer",
@@ -12038,7 +13950,9 @@ local WeaponData = {
             MaxAmmo = 18,
             Name = "Castanas",
             NormalAttack = {
-                Damage = {["Électrique"] = 160},
+                Damage = {
+                    ["Électrique"] = 160
+                },
                 CritChance = 0.08,
                 CritMultiplier = 1.5,
                 StatusChance = 0.22,
@@ -12065,7 +13979,9 @@ local WeaponData = {
             MaxAmmo = 18,
             Name = "Castanas Sancti",
             NormalAttack = {
-                Damage = {["Électrique"] = 300},
+                Damage = {
+                    ["Électrique"] = 300
+                },
                 CritChance = 0.24,
                 CritMultiplier = 2,
                 StatusChance = 0.34,
@@ -12086,39 +14002,54 @@ local WeaponData = {
         ["Catabolyste"] = {
             Accuracy = 6.3,
             ChargeAttack = {
-            	AttackName = "Impact Rechargement Partiel",
-            	Damage = {["Impact"] = 11},
-            	CritChance = 0.11,
-            	CritMultiplier = 2.9,
-            	StatusChance = 0.43
+                AttackName = "Impact Rechargement Partiel",
+                Damage = {
+                    ["Impact"] = 11
+                },
+                CritChance = 0.11,
+                CritMultiplier = 2.9,
+                StatusChance = 0.43
             },
             ChargeAreaAttack = {
-            	AttackName = "Explosion Rechargement Partiel",
-            	Damage = {["Corrosif"] = 203},
-            	CritChance = 0.11,
-            	CritMultiplier = 2.9,
-            	Falloff = {StartRange = 0, EndRange = 5, Reduction = 0.5},
-            	Radius = 5,
-            	StatusChance = 0.43
+                AttackName = "Explosion Rechargement Partiel",
+                Damage = {
+                    ["Corrosif"] = 203
+                },
+                CritChance = 0.11,
+                CritMultiplier = 2.9,
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 5,
+                    Reduction = 0.5
+                },
+                Radius = 5,
+                StatusChance = 0.43
             },
             Class = "Pistolet",
             Conclave = false,
             Cost = {
-            	BPCost = 50000,
+                BPCost = 50000,
                 Credits = 30000,
                 MarketCost = 190,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Scintillateur", Type = "Ressource", Count = 5},
-                    {Name = "Racine Oculaire", Type = "Ressource", Count = 4},
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 7},
-                    {
-                        Name = "Nécrathène Stellé",
-                        Type = "Ressource",
-                        Count = 10
-                    }
-                }
+                Parts = {{
+                    Name = "Scintillateur",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Racine Oculaire",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 7
+                }, {
+                    Name = "Nécrathène Stellé",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 1,
             ExilusPolarity = "V",
@@ -12131,12 +14062,18 @@ local WeaponData = {
             Name = "Catabolyste",
             NormalAttack = {
                 AttackName = "Principale",
-                Damage = {["Corrosif"] = 53},
+                Damage = {
+                    ["Corrosif"] = 53
+                },
                 CritChance = 0.11,
                 CritMultiplier = 2.9,
                 StatusChance = 0.43,
                 FireRate = 1.0,
-                Falloff = {StartRange = 9, EndRange = 19, Reduction = 0.2},
+                Falloff = {
+                    StartRange = 9,
+                    EndRange = 19,
+                    Reduction = 0.2
+                },
                 PunchThrough = 0.9,
                 ShotType = "Flux",
                 Trigger = "Maintenu"
@@ -12148,15 +14085,23 @@ local WeaponData = {
                 AttackName = "Explosion Rechargement Complet",
                 CritChance = 0.31,
                 CritMultiplier = 2.9,
-                Damage = {["Corrosif"] = 1997},
-                Falloff = {StartRange = 0, EndRange = 7, Reduction = 0.5},
-                StatusChance = 0.59,
+                Damage = {
+                    ["Corrosif"] = 1997
+                },
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 7,
+                    Reduction = 0.5
+                },
+                StatusChance = 0.59
             },
             SecondaryAttack = {
                 AttackName = "Impact Rechargement Complet",
                 CritChance = 0.31,
                 CritMultiplier = 2.9,
-                Damage = {["Impact"] = 11},
+                Damage = {
+                    ["Impact"] = 11
+                },
                 PunchThrough = 0.9,
                 Reload = 2.1,
                 StatusChance = 0.59
@@ -12176,12 +14121,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 25,
                 Time = 24,
-                Parts = {
-                    {Name = "Nano Spores", Type = "Ressource", Count = 3000},
-                    {Name = "Rubedo", Type = "Ressource", Count = 1200},
-                    {Name = "Gallium", Type = "Ressource", Count = 4},
-                    {Name = "Neurodes", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 3000
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.52,
             Image = "CorpusMinigun.png",
@@ -12191,7 +14147,10 @@ local WeaponData = {
             MaxAmmo = 420,
             Name = "Cestra",
             NormalAttack = {
-                Damage = {["Impact"] = 5.2, ["Perforation"] = 20.8},
+                Damage = {
+                    ["Impact"] = 5.2,
+                    ["Perforation"] = 20.8
+                },
                 CritChance = 0.06,
                 CritMultiplier = 1.6,
                 StatusChance = 0.20,
@@ -12213,12 +14172,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 5},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 8750},
-                    {Name = "Hexenon", Type = "Ressource", Count = 250},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 8750
+                }, {
+                    Name = "Hexenon",
+                    Type = "Ressource",
+                    Count = 250
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.0,
             Image = "Cyanex.png",
@@ -12229,7 +14199,10 @@ local WeaponData = {
             Name = "Cyanex",
             NormalAttack = {
                 AttackName = "Mode Automatique",
-                Damage = {["Impact"] = 50, ["Gaz"] = 41},
+                Damage = {
+                    ["Impact"] = 50,
+                    ["Gaz"] = 41
+                },
                 CritChance = 0.08,
                 CritMultiplier = 1.4,
                 StatusChance = 0.32,
@@ -12264,12 +14237,23 @@ local WeaponData = {
                 MarketCost = 200,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 4},
-                    {Name = "Ferrite", Type = "Ressource", Count = 9000},
-                    {Name = "Circuits", Type = "Ressource", Count = 1500},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 9000
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 1500
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 100,
             Class = "Pistolet",
@@ -12307,12 +14291,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 10},
-                    {Name = "Ferrite", Type = "Ressource", Count = 5000},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 800},
-                    {Name = "Récupération", Type = "Ressource", Count = 4500}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 4500
+                }}
             },
             Accuracy = 100,
             Class = "Arme de Lancer",
@@ -12348,11 +14343,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Accuracy = 7.1,
             Class = "Fusil à Pompe de Poche",
@@ -12366,13 +14369,19 @@ local WeaponData = {
             MaxAmmo = 210,
             Name = "Detron",
             NormalAttack = {
-                Damage = {["Radiation"] = 280},
+                Damage = {
+                    ["Radiation"] = 280
+                },
                 CritChance = 0.04,
                 CritMultiplier = 1.5,
                 StatusChance = 0.3,
                 PelletCount = 7,
                 FireRate = 3.33,
-                Falloff = {StartRange = 13, EndRange = 22, Reduction = 0.6231},
+                Falloff = {
+                    StartRange = 13,
+                    EndRange = 22,
+                    Reduction = 0.6231
+                },
                 ShotType = "Projectile",
                 ShotSpeed = 150
             },
@@ -12380,10 +14389,7 @@ local WeaponData = {
             Trigger = "Semi-Auto",
             Traits = {"Corpus"},
             Type = "Secondaire",
-            Users = {
-                "[[Detron Crewman]]", "[[Scrambus]]", "[[Comba]]",
-                "[[Pelna Cade]]", "[[Jad Teran]]"
-            }
+            Users = {"[[Detron Crewman]]", "[[Scrambus]]", "[[Comba]]", "[[Pelna Cade]]", "[[Jad Teran]]"}
         },
         ["Detron Mara"] = {
             Accuracy = 13.3,
@@ -12397,13 +14403,19 @@ local WeaponData = {
             Mastery = 9,
             Name = "Detron Mara",
             NormalAttack = {
-                Damage = {["Radiation"] = 280},
+                Damage = {
+                    ["Radiation"] = 280
+                },
                 CritChance = 0.08,
                 CritMultiplier = 1.5,
                 StatusChance = 0.32,
                 PelletCount = 7,
                 FireRate = 3.33,
-                Falloff = {StartRange = 16, EndRange = 30, Reduction = 0.625},
+                Falloff = {
+                    StartRange = 16,
+                    EndRange = 30,
+                    Reduction = 0.625
+                },
                 ShotType = "Projectile"
             },
             Reload = 1.05,
@@ -12448,12 +14460,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 25,
                 Time = 24,
-                Parts = {
-                    {Name = "Cestra", Type = "Arme", Count = 1},
-                    {Name = "Cestra", Type = "Arme", Count = 1},
-                    {Name = "Fieldron", Type = "Ressource", Count = 2},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Cestra",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Cestra",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 20,
             Class = "Doubles Pistolets",
@@ -12467,7 +14490,10 @@ local WeaponData = {
             MaxAmmo = 480,
             Name = "Doubles Cestra",
             NormalAttack = {
-                Damage = {["Impact"] = 5.2, ["Perforation"] = 20.8},
+                Damage = {
+                    ["Impact"] = 5.2,
+                    ["Perforation"] = 20.8
+                },
                 CritChance = 0.06,
                 CritMultiplier = 1.6,
                 StatusChance = 0.2,
@@ -12495,7 +14521,10 @@ local WeaponData = {
             MaxAmmo = 480,
             Name = "Doubles Cestra Secura",
             NormalAttack = {
-                Damage = {["Impact"] = 5.6, ["Perforation"] = 22.4},
+                Damage = {
+                    ["Impact"] = 5.6,
+                    ["Perforation"] = 22.4
+                },
                 CritChance = 0.16,
                 CritMultiplier = 1.6,
                 StatusChance = 0.28,
@@ -12521,12 +14550,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 4},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 6500},
-                    {Name = "Plastides", Type = "Ressource", Count = 1100},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 6500
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 1100
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.3,
             Image = "DoublesToxocyst.png",
@@ -12562,12 +14602,23 @@ local WeaponData = {
                 BPCost = 50000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 5},
-                    {Name = "Récupération", Type = "Ressource", Count = 15000},
-                    {Name = "Circuits", Type = "Ressource", Count = 1200},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 15000
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.45,
             Image = "Embolist.png",
@@ -12577,7 +14628,9 @@ local WeaponData = {
             MaxAmmo = 210,
             Name = "Embolist",
             NormalAttack = {
-                Damage = {["Poison"] = 35},
+                Damage = {
+                    ["Poison"] = 35
+                },
                 CritChance = 0.03,
                 CritMultiplier = 1.5,
                 StatusChance = 0.41,
@@ -12593,83 +14646,103 @@ local WeaponData = {
             Type = "Secondaire"
         },
         ["Épitaphe"] = {
-	      Accuracy = 80,
-	      Class = "Pistolet",
-	      Conclave = false,
-	      Cost = {
-	        Credits = 20000,
-	        MarketCost = 225,
-	        Rush = 35,
-	        Time = 12,
-	        Parts = {
-	          { Name = "Canon", Type = "Objet",Count = 1 },
-	          { Name = "Culasse", Type = "Objet", Count = 1 },
-	          { Name = "Cellule Orokin", Type = "Ressource", Count = 7 }
-	        }
-	      },
-	      Disposition = 0.5,
-	      ExilusPolarity = "Bar",
-	      Family = "Épitaphe",
-	      Image = "Épitaphe.png",
-	      Introduced = "30",
-	      Magazine = 1,
-	      Mastery = 8,
-	      MaxAmmo = 60,
-	      Name = "Épitaphe",
-	      NormalAttack = {
-      	        AttackName = "Tir Chargé",
-      	        ChargeTime = 0.36,
-      	        Damage = {
-        	        ["Impact"] = 120,
-        	        ["Perforation"] = 45,
-        	        ["Tranchant"] = 135
-    	        },
-	        CritChance = 0.48,
-	        CritMultiplier = 2.6,
-	        StatusChance = 0.04,
-	        PunchThrough = 2,
-	        ShotType = "Projectile",
-	        ShotSpeed = "?",
-	        Trigger = "Charge"
-	      },
-	      SecondaryAttack = {
-	      	    AttackName = "Tir non Chargé",
-	      	    Damage = {
-	      	    	["Impact"] = 40,
-        	        ["Perforation"] = 30,
-        	        ["Tranchant"] = 30
-	      	    },
-	      	CritChance = 0.02,
-	        CritMultiplier = 1.2,
-	        StatusChance = 0.5,
-	      FireRate = 1.5
-	      },
-	      SecondaryAreaAttack = {
-	      	    AttackName = "Explosion Tir non Chargé",
-	      	    Damage = {
-	      	    	["Explosif"] = 20
-	      	    },
-	      	CritChance = 0.02,
-	        CritMultiplier = 1.2,
-	        StatusChance = 0.5,
-	        Radius = 8.0,
-	        Falloff = {StartRange = 0, EndRange = 8, Reduction = 0.8}
-	      },
-	      NoiseLevel = "Bruyant",
-	      Polarities = { "V", "V" },
-	      Reload = 0.6,
-          Type = "Secondaire"
-	    },
+            Accuracy = 80,
+            Class = "Pistolet",
+            Conclave = false,
+            Cost = {
+                Credits = 20000,
+                MarketCost = 225,
+                Rush = 35,
+                Time = 12,
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 7
+                }}
+            },
+            Disposition = 0.5,
+            ExilusPolarity = "Bar",
+            Family = "Épitaphe",
+            Image = "Épitaphe.png",
+            Introduced = "30",
+            Magazine = 1,
+            Mastery = 8,
+            MaxAmmo = 60,
+            Name = "Épitaphe",
+            NormalAttack = {
+                AttackName = "Tir Chargé",
+                ChargeTime = 0.36,
+                Damage = {
+                    ["Impact"] = 120,
+                    ["Perforation"] = 45,
+                    ["Tranchant"] = 135
+                },
+                CritChance = 0.48,
+                CritMultiplier = 2.6,
+                StatusChance = 0.04,
+                PunchThrough = 2,
+                ShotType = "Projectile",
+                ShotSpeed = "?",
+                Trigger = "Charge"
+            },
+            SecondaryAttack = {
+                AttackName = "Tir non Chargé",
+                Damage = {
+                    ["Impact"] = 40,
+                    ["Perforation"] = 30,
+                    ["Tranchant"] = 30
+                },
+                CritChance = 0.02,
+                CritMultiplier = 1.2,
+                StatusChance = 0.5,
+                FireRate = 1.5
+            },
+            SecondaryAreaAttack = {
+                AttackName = "Explosion Tir non Chargé",
+                Damage = {
+                    ["Explosif"] = 20
+                },
+                CritChance = 0.02,
+                CritMultiplier = 1.2,
+                StatusChance = 0.5,
+                Radius = 8.0,
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 8,
+                    Reduction = 0.8
+                }
+            },
+            NoiseLevel = "Bruyant",
+            Polarities = {"V", "V"},
+            Reload = 0.6,
+            Type = "Secondaire"
+        },
         ["Euphona Prime"] = {
             Cost = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 5}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 5
+                }}
             },
             Accuracy = 100,
             Class = "Fusil à Pompe de Poche",
@@ -12706,7 +14779,11 @@ local WeaponData = {
                 CritMultiplier = 2,
                 StatusChance = 0.3,
                 PelletCount = 10,
-                Falloff = {StartRange = 6, EndRange = 12, Reduction = 0.9886}
+                Falloff = {
+                    StartRange = 6,
+                    EndRange = 12,
+                    Reduction = 0.9886
+                }
             },
             Traits = {"Prime", "Vaulted"},
             Trigger = "Semi-Auto",
@@ -12722,12 +14799,23 @@ local WeaponData = {
                 MarketCost = 120,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Ferrite", Type = "Ressource", Count = 750},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 300},
-                    {Name = "Récupération", Type = "Ressource", Count = 400},
-                    {Name = "Neurodes", Type = "Ressource", Count = 4}
-                }
+                Parts = {{
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 750
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 300
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 400
+                }, {
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 4
+                }}
             },
             Disposition = 1.35,
             Family = "Furis",
@@ -12762,12 +14850,23 @@ local WeaponData = {
                 MarketCost = 190,
                 Rush = 45,
                 Time = 12,
-                Parts = {
-                    {Name = "Rubedo", Type = "Ressource", Count = 2950},
-                    {Name = "Récupération", Type = "Ressource", Count = 10000},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 1350},
-                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 2950
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 10000
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 1350
+                }, {
+                    Name = "Extrait de Nitain",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Accuracy = 100,
             Class = "Arme de Lancer",
@@ -12783,7 +14882,10 @@ local WeaponData = {
             NoiseLevel = "Silencieux",
             NormalAttack = {
                 AttackName = "Mode Automatique",
-                Damage = {["Perforation"] = 30.8, ["Tranchant"] = 46.2},
+                Damage = {
+                    ["Perforation"] = 30.8,
+                    ["Tranchant"] = 46.2
+                },
                 CritChance = 0.23,
                 CritMultiplier = 1.7,
                 StatusChance = 0.29,
@@ -12794,7 +14896,10 @@ local WeaponData = {
             Polarities = {"V"},
             SecondaryAttack = {
                 AttackName = "Semi-Auto Mode",
-                Damage = {["Perforation"] = 92.4, ["Tranchant"] = 138.6},
+                Damage = {
+                    ["Perforation"] = 92.4,
+                    ["Tranchant"] = 138.6
+                },
                 CritChance = 0.03,
                 CritMultiplier = 1.5,
                 StatusChance = 0.37,
@@ -12821,15 +14926,23 @@ local WeaponData = {
                 MarketCost = 200,
                 Rush = 45,
                 Time = 12,
-                Parts = {
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 2500
-                    }, {Name = "Plastides", Type = "Ressource", Count = 650},
-                    {Name = "Circuits", Type = "Ressource", Count = 400},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 2500
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 650
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 400
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 0.8,
             Family = "Gammacor",
@@ -12840,7 +14953,9 @@ local WeaponData = {
             MaxAmmo = 240,
             Name = "Gammacor",
             NormalAttack = {
-                Damage = {["Magnétique"] = 16},
+                Damage = {
+                    ["Magnétique"] = 16
+                },
                 CritChance = 0.08,
                 CritMultiplier = 1.8,
                 StatusChance = 0.2,
@@ -12865,12 +14980,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 5},
-                    {Name = "Plastides", Type = "Ressource", Count = 500},
-                    {Name = "Rubedo", Type = "Ressource", Count = 600},
-                    {Name = "Récupération", Type = "Ressource", Count = 4000}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 500
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 4000
+                }}
             },
             Disposition = 0.95,
             Family = "Hikou",
@@ -12905,11 +15031,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Pochette", Type = "Partie Prime", Count = 2},
-                    {Name = "Etoiles", Type = "Partie Prime", Count = 2},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 8}
-                }
+                Parts = {{
+                    Name = "Pochette",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Etoiles",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 8
+                }}
             },
             Accuracy = 100,
             Class = "Arme de Lancer",
@@ -12950,16 +15084,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Bolto", Type = "Arme", Count = 1},
-                    {Name = "Viper", Type = "Arme", Count = 1},
-                    {Name = "Ferrite", Type = "Ressource", Count = 9750},
-                    {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 15
-                    }
-                }
+                Parts = {{
+                    Name = "Bolto",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Viper",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 9750
+                }, {
+                    Name = "Module de Contrôle",
+                    Type = "Ressource",
+                    Count = 15
+                }}
             },
             Disposition = 1.2,
             Image = "Hystrix.png",
@@ -13008,12 +15149,23 @@ local WeaponData = {
                 MarketCost = 190,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {Name = "Rubedo", Type = "Ressource", Count = 5200},
-                    {Name = "Cryotique", Type = "Ressource", Count = 3800},
-                    {Name = "Récupération", Type = "Ressource", Count = 20000}
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 5200
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 3800
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 20000
+                }}
             },
             Disposition = 1.15,
             Image = "Knell.png",
@@ -13062,15 +15214,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {
-                        Name = "Injecteur de Détonite",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {Name = "Ferrite", Type = "Ressource", Count = 5000},
-                    {Name = "Plastides", Type = "Ressource", Count = 5000},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Injecteur de Détonite",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.35,
             Image = "Kohmak.png",
@@ -13091,7 +15251,11 @@ local WeaponData = {
                 AttackName = "Single Pellet",
                 ShotType = "Hit-Scan",
                 FireRate = 5,
-                Falloff = {StartRange = 12, EndRange = 24, Reduction = 0.6667}
+                Falloff = {
+                    StartRange = 12,
+                    EndRange = 24,
+                    Reduction = 0.6667
+                }
             },
             Polarities = {"D"},
             Reload = 2,
@@ -13106,11 +15270,19 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Kohmak", Type = "Arme", Count = 1},
-                    {Name = "Kohmak", Type = "Arme", Count = 1},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Kohmak",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Kohmak",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 5.7,
             ChargeAttack = {
@@ -13146,7 +15318,11 @@ local WeaponData = {
                 AttackName = "Single Pellet",
                 ShotType = "Hit-Scan",
                 FireRate = 6.67,
-                Falloff = {StartRange = 12, EndRange = 24, Reduction = 0.6667}
+                Falloff = {
+                    StartRange = 12,
+                    EndRange = 24,
+                    Reduction = 0.6667
+                }
             },
             Polarities = {"D"},
             Reload = 2.2,
@@ -13166,12 +15342,23 @@ local WeaponData = {
                 MarketCost = 120,
                 Rush = 30,
                 Time = 24,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 2},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 200},
-                    {Name = "Récupération", Type = "Ressource", Count = 750},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 120}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 200
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 750
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 120
+                }}
             },
             Disposition = 1.53,
             Image = "Kraken.png",
@@ -13247,7 +15434,9 @@ local WeaponData = {
             Accuracy = 26.7,
             AreaAttack = {
                 AttackName = "Rocket Explosion",
-                Damage = {["Explosif"] = 300},
+                Damage = {
+                    ["Explosif"] = 300
+                },
                 ShotType = "Projectile",
                 ShotSpeed = "???"
             },
@@ -13257,12 +15446,23 @@ local WeaponData = {
                 BPCost = 40000,
                 MarketCost = 190,
                 Time = 24,
-                Parts = {
-                    {Name = "Kraken", Type = "Arme", Count = 1},
-                    {Name = "Tellure", Type = "Ressource", Count = 2},
-                    {Name = "Cryotique", Type = "Ressource", Count = 4800},
-                    {Name = "Plastides", Type = "Ressource", Count = 3600}
-                }
+                Parts = {{
+                    Name = "Kraken",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 4800
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 3600
+                }}
             },
             Disposition = 1.25,
             Image = "Kulstar.png",
@@ -13273,7 +15473,9 @@ local WeaponData = {
             Name = "Kulstar",
             NormalAttack = {
                 AttackName = "Rocket Impact",
-                Damage = {["Impact"] = 200},
+                Damage = {
+                    ["Impact"] = 200
+                },
                 CritChance = 0.17,
                 CritMultiplier = 2.3,
                 StatusChance = 0.19,
@@ -13285,7 +15487,9 @@ local WeaponData = {
             Reload = 2,
             SecondaryAreaAttack = {
                 AttackName = "Cluster Bombs",
-                Damage = {["Explosif"] = 225},
+                Damage = {
+                    ["Explosif"] = 225
+                },
                 CritChance = 0.17,
                 CritMultiplier = 2.3,
                 StatusChance = 0.19,
@@ -13307,12 +15511,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 40,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 5},
-                    {Name = "Ferrite", Type = "Ressource", Count = 3000},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 4000},
-                    {Name = "Récupération", Type = "Ressource", Count = 4000}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 3000
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 4000
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 4000
+                }}
             },
             Disposition = 1.51,
             Family = "Kunai",
@@ -13347,7 +15562,9 @@ local WeaponData = {
             Accuracy = 18.2,
             Class = "Pistolet",
             Conclave = true,
-            Cost = {Credits = 10000},
+            Cost = {
+                Credits = 10000
+            },
             Disposition = 1.35,
             Family = "Lato",
             Image = "Lato.png",
@@ -13413,10 +15630,15 @@ local WeaponData = {
                 Credits = 25000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 1.35,
             Family = "Lato",
@@ -13448,7 +15670,9 @@ local WeaponData = {
             Accuracy = 16,
             Class = "Pistolet",
             Conclave = true,
-            Cost = {Credits = 50000},
+            Cost = {
+                Credits = 50000
+            },
             Disposition = 0.7,
             Family = "Lex",
             Image = "Lex.png",
@@ -13485,11 +15709,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 0.7,
             Family = "Lex",
@@ -13528,12 +15760,23 @@ local WeaponData = {
                 MarketCost = 125,
                 Rush = 30,
                 Time = 24,
-                Parts = {
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 2},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 400},
-                    {Name = "Récupération", Type = "Ressource", Count = 900},
-                    {Name = "Ferrite", Type = "Ressource", Count = 100}
-                }
+                Parts = {{
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 400
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 100
+                }}
             },
             Disposition = 1.53,
             Image = "TennoMagnum.png",
@@ -13571,16 +15814,23 @@ local WeaponData = {
                 MarketCost = 125,
                 Rush = 30,
                 Time = 24,
-                Parts = {
-                    {
-                        Name = "Injecteur de Détonite",
-                        Type = "Ressource",
-                        Count = 2
-                    },
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 5000},
-                    {Name = "Récupération", Type = "Ressource", Count = 5000},
-                    {Name = "Forma", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Injecteur de Détonite",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Forma",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 0.8,
             Family = "Marelok",
@@ -13716,15 +15966,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {
-                        Name = "Injecteur de Détonite",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {Name = "Morphics", Type = "Ressource", Count = 2},
-                    {Name = "Récupération", Type = "Ressource", Count = 5500},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Injecteur de Détonite",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 5500
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.45,
             Image = "Nukor.png",
@@ -13734,7 +15992,9 @@ local WeaponData = {
             MaxAmmo = 210,
             Name = "Nukor",
             NormalAttack = {
-                Damage = {["Radiation"] = 22},
+                Damage = {
+                    ["Radiation"] = 22
+                },
                 CritChance = 0.03,
                 CritMultiplier = 4,
                 StatusChance = 0.29,
@@ -13747,9 +16007,7 @@ local WeaponData = {
             Traits = {"Grineer"},
             Trigger = "Maintenu",
             Type = "Secondaire",
-            Users = {
-                "[[Grineer Nightwatch Corps#Nightwatch Seeker|Nightwatch Seeker]]"
-            }
+            Users = {"[[Grineer Nightwatch Corps#Nightwatch Seeker|Nightwatch Seeker]]"}
         },
         ["Nukor Kuva"] = {
             Accuracy = 100,
@@ -13766,7 +16024,9 @@ local WeaponData = {
             Name = "Nukor Kuva",
             NoiseLevel = "Bruyant",
             NormalAttack = {
-                Damage = {["Radiation"] = 21},
+                Damage = {
+                    ["Radiation"] = 21
+                },
                 CritChance = 0.07,
                 CritMultiplier = 5,
                 StatusChance = 0.5,
@@ -13790,12 +16050,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 10},
-                    {Name = "Boue Thermique", Type = "Ressource", Count = 40},
-                    {Name = "Alliage Venerdo", Type = "Ressource", Count = 55},
-                    {Name = "Module Sagan", Type = "Ressource", Count = 20}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Boue Thermique",
+                    Type = "Ressource",
+                    Count = 40
+                }, {
+                    Name = "Alliage Venerdo",
+                    Type = "Ressource",
+                    Count = 55
+                }, {
+                    Name = "Module Sagan",
+                    Type = "Ressource",
+                    Count = 20
+                }}
             },
             Disposition = 1.1,
             Image = "Ocucor.png",
@@ -13805,7 +16076,10 @@ local WeaponData = {
             MaxAmmo = 300,
             Name = "Ocucor",
             NormalAttack = {
-                Damage = {["Perforation"] = 2.0, ["Radiation"] = 20.0},
+                Damage = {
+                    ["Perforation"] = 2.0,
+                    ["Radiation"] = 20.0
+                },
                 CritChance = 0.16,
                 CritMultiplier = 1.8,
                 StatusChance = 0.24,
@@ -13829,12 +16103,23 @@ local WeaponData = {
                 MarketCost = 190,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {Name = "Circuits", Type = "Ressource", Count = 4500},
-                    {Name = "Cryotique", Type = "Ressource", Count = 5500},
-                    {Name = "Récupération", Type = "Ressource", Count = 25000}
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 4500
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 5500
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 25000
+                }}
             },
             Disposition = 0.95,
             Image = "Pandero.png",
@@ -13872,57 +16157,68 @@ local WeaponData = {
             Type = "Secondaire"
         },
         ["Pandero Prime"] = {
-		Accuracy = 16,
-		Class = "Pistolet",
-		Conclave = true,
-		Cost = {
-			Credits = 20000,
-			Rush = 35,
-			Time = 12,
-			Parts = {
-				{ Name = "Canon",Type = "Partie Prime",Count = 1,},
-				{ Name = "Culasse",Type = "Partie Prime",Count = 1,},
-				{ Name = "Cellule Orokin",Type = "Ressource",Count = 10,},},
-		},
-		Disposition = 0.75,
-		ExilusPolarity = "V",
-		Image = "Pandero Prime.png",
-		Introduced = "29.9",
-		Family = "Pandero",
-		Magazine = 8,
-		Mastery = 14,
-		MaxAmmo = 210,
-		Name = "Pandero Prime",
-		NormalAttack = {
-			Damage = {
-				["Impact"] = 26,
-				["Perforation"] = 26,
-				["Tranchant"] = 52,},
-			CritChance = 0.3,
-			CritMultiplier = 2.8,
-			StatusChance = 0.24,
-			FireRate = 3,
-			ShotType = "Hit-Scan",
-		},
-		Polarities = {"V"},
-		Reload = 1,
-		SecondaryAttack = {
-			Damage = {
-				["Impact"] = 26,
-				["Perforation"] = 26,
-				["Tranchant"] = 52,},
-			Accuracy = 8.2,
-			CritChance = 0.3,
-			CritMultiplier = 2.8,
-			StatusChance = 0.24,
-			FireRate = 7.69,
-			AmmoCost = 8,
-			Trigger = "Burst",
-		},
-		Traits = {"Prime"},
-		Trigger = "Semi-Auto / Rafale",
-		Type = "Secondaire",
-	},
+            Accuracy = 16,
+            Class = "Pistolet",
+            Conclave = true,
+            Cost = {
+                Credits = 20000,
+                Rush = 35,
+                Time = 12,
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
+            },
+            Disposition = 0.75,
+            ExilusPolarity = "V",
+            Image = "Pandero Prime.png",
+            Introduced = "29.9",
+            Family = "Pandero",
+            Magazine = 8,
+            Mastery = 14,
+            MaxAmmo = 210,
+            Name = "Pandero Prime",
+            NormalAttack = {
+                Damage = {
+                    ["Impact"] = 26,
+                    ["Perforation"] = 26,
+                    ["Tranchant"] = 52
+                },
+                CritChance = 0.3,
+                CritMultiplier = 2.8,
+                StatusChance = 0.24,
+                FireRate = 3,
+                ShotType = "Hit-Scan"
+            },
+            Polarities = {"V"},
+            Reload = 1,
+            SecondaryAttack = {
+                Damage = {
+                    ["Impact"] = 26,
+                    ["Perforation"] = 26,
+                    ["Tranchant"] = 52
+                },
+                Accuracy = 8.2,
+                CritChance = 0.3,
+                CritMultiplier = 2.8,
+                StatusChance = 0.24,
+                FireRate = 7.69,
+                AmmoCost = 8,
+                Trigger = "Burst"
+            },
+            Traits = {"Prime"},
+            Trigger = "Semi-Auto / Rafale",
+            Type = "Secondaire"
+        },
         ["Plinx"] = {
             Accuracy = 50.0,
             Class = "Pistolet",
@@ -13933,15 +16229,23 @@ local WeaponData = {
                 MarketCost = 200,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 4375
-                    }, {Name = "Cryotique", Type = "Ressource", Count = 575},
-                    {Name = "Systèmes Gyromag", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 4375
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 575
+                }, {
+                    Name = "Systèmes Gyromag",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 1.1,
             Image = "Plinx.png",
@@ -13951,7 +16255,10 @@ local WeaponData = {
             MaxAmmo = 10,
             Name = "Plinx",
             NormalAttack = {
-                Damage = {["Perforation"] = 26, ["Feu"] = 20},
+                Damage = {
+                    ["Perforation"] = 26,
+                    ["Feu"] = 20
+                },
                 CritChance = 0.32,
                 CritMultiplier = 3,
                 StatusChance = 0.04,
@@ -13972,17 +16279,30 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 4},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 6500},
-                    {Name = "Rubedo", Type = "Ressource", Count = 1200},
-                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 6500
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Extrait de Nitain",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Accuracy = 100,
             AreaAttack = {
                 AttackName = "Poison Cloud",
-                Damage = {["Poison"] = 100},
+                Damage = {
+                    ["Poison"] = 100
+                },
                 Duration = 5
             },
             Class = "Arme de Lancer",
@@ -13997,7 +16317,9 @@ local WeaponData = {
             NoiseLevel = "Silencieux",
             NormalAttack = {
                 AttackName = "Spore Impact",
-                Damage = {["Poison"] = 50},
+                Damage = {
+                    ["Poison"] = 50
+                },
                 CritChance = 0.01,
                 CritMultiplier = 2,
                 StatusChance = 0.35,
@@ -14015,12 +16337,16 @@ local WeaponData = {
             Accuracy = 26.7,
             AreaAttack = {
                 AttackName = "Single Rocket Explosion",
-                Damage = {["Explosif"] = 250},
+                Damage = {
+                    ["Explosif"] = 250
+                },
                 Radius = 3
             },
             ChargeAttack = {
                 AttackName = "Single Rocket Impact",
-                Damage = {["Explosif"] = 200},
+                Damage = {
+                    ["Explosif"] = 200
+                },
                 CritChance = 0.18,
                 CritMultiplier = 2.2,
                 StatusChance = 0.26,
@@ -14043,7 +16369,9 @@ local WeaponData = {
             Reload = 1.8,
             SecondaryAreaAttack = { -- wrong attack type for the sake of order
                 AttackName = "3-Rocket Barrage Impact",
-                Damage = {["Explosif"] = 600},
+                Damage = {
+                    ["Explosif"] = 600
+                },
                 CritChance = 0.18,
                 CritMultiplier = 2.2,
                 StatusChance = 0.595,
@@ -14056,7 +16384,9 @@ local WeaponData = {
             },
             SecondaryAttack = { -- wrong attack type for the sake of order
                 AttackName = "3-Rocket Barrage Explosion",
-                Damage = {["Explosif"] = 750},
+                Damage = {
+                    ["Explosif"] = 750
+                },
                 PelletName = "Rocket",
                 PelletCount = 3,
                 Radius = 3
@@ -14074,12 +16404,23 @@ local WeaponData = {
                 MarketCost = 190,
                 Rush = 45,
                 Time = 24,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 5},
-                    {Name = "Circuits", Type = "Ressource", Count = 900},
-                    {Name = "Récupération", Type = "Ressource", Count = 1500},
-                    {Name = "Rubedo", Type = "Ressource", Count = 1200}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 1500
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 1200
+                }}
             },
             Disposition = 1.3,
             Family = "Gremlins Jumeaux",
@@ -14146,16 +16487,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 2
-                    },
-                    {Name = "Récupération", Type = "Ressource", Count = 800},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 200},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Module de Contrôle",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 200
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 5,
             Class = "Fusil à Pompe de Poche",
@@ -14179,7 +16527,11 @@ local WeaponData = {
                 StatusChance = 0.1,
                 PelletCount = 12,
                 FireRate = 4.17,
-                Falloff = {StartRange = 15, EndRange = 30, Reduction = 0.7273},
+                Falloff = {
+                    StartRange = 15,
+                    EndRange = 30,
+                    Reduction = 0.7273
+                },
                 ShotType = "Hit-Scan"
             },
             Reload = 2,
@@ -14192,11 +16544,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Accuracy = 6.1,
             Class = "Fusil à Pompe de Poche",
@@ -14220,7 +16580,11 @@ local WeaponData = {
                 StatusChance = 0.12,
                 PelletCount = 12,
                 FireRate = 4,
-                Falloff = {StartRange = 18, EndRange = 36, Reduction = 0.7273},
+                Falloff = {
+                    StartRange = 18,
+                    EndRange = 36,
+                    Reduction = 0.7273
+                },
                 ShotType = "Hit-Scan"
             },
             Polarities = {"V", "V"},
@@ -14237,16 +16601,23 @@ local WeaponData = {
                 BPCost = 40000,
                 Rush = 50,
                 Time = 24,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {Name = "Neurodes", Type = "Ressource", Count = 5},
-                    {Name = "Rubedo", Type = "Ressource", Count = 4200},
-                    {
-                        Name = "Récupérations",
-                        Type = "Ressource",
-                        Count = 12750
-                    }
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 4200
+                }, {
+                    Name = "Récupérations",
+                    Type = "Ressource",
+                    Count = 12750
+                }}
             },
             Disposition = 1.2,
             Image = "Quatz.png",
@@ -14296,11 +16667,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.5,
             Image = "Prophète.png",
@@ -14365,8 +16744,14 @@ local WeaponData = {
         ["Sepulcrum"] = {
             AreaAttack = {
                 AttackName = "Attaque Radial",
-                Damage = {["Feu"] = 46},
-                Falloff = {StartRange = 0, EndRange = 1.6, Reduction = 0.2},
+                Damage = {
+                    ["Feu"] = 46
+                },
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 1.6,
+                    Reduction = 0.2
+                },
                 Radius = 1.6
             },
             Class = "Pistolet",
@@ -14376,14 +16761,19 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {
-                        Name = "Éclat de Sériglas",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Éclat de Sériglas",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 0.95,
             ExilusPolarity = "V",
@@ -14412,8 +16802,14 @@ local WeaponData = {
             Reload = 4,
             SecondaryAreaAttack = {
                 AttackName = "Attaque Radial",
-                Damage = {["Feu"] = 480},
-                Falloff = {StartRange = 0, EndRange = 3, Reduction = 0.2},
+                Damage = {
+                    ["Feu"] = 480
+                },
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 3,
+                    Reduction = 0.2
+                },
                 Radius = 3
             },
             SecondaryAttack = {
@@ -14435,7 +16831,9 @@ local WeaponData = {
             BurstFireRate = 3.5,
             Class = "Pistolet",
             Conclave = true,
-            Cost = {Credits = 20000},
+            Cost = {
+                Credits = 20000
+            },
             Disposition = 1.15,
             Family = "Sicarus",
             Image = "Sicarus.png",
@@ -14466,11 +16864,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Accuracy = 25,
             BurstFireRate = 5,
@@ -14507,7 +16913,9 @@ local WeaponData = {
             Accuracy = 100,
             AreaAttack = {
                 AttackName = "Explosion",
-                Damage = {["Impact"] = 50},
+                Damage = {
+                    ["Impact"] = 50
+                },
                 CritChance = 0.1,
                 CritMultiplier = 2,
                 StatusChance = 0.25,
@@ -14521,15 +16929,23 @@ local WeaponData = {
                 MarketCost = 200,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 6500
-                    }, {Name = "Oxium", Type = "Ressource", Count = 600},
-                    {Name = "Plastides", Type = "Ressource", Count = 2600},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 6500
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 2600
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 0.8,
             Image = "Sonicor.png",
@@ -14540,14 +16956,20 @@ local WeaponData = {
             Name = "Sonicor",
             NormalAttack = {
                 AttackName = "Projectile Impact",
-                Damage = {["Impact"] = 150},
+                Damage = {
+                    ["Impact"] = 150
+                },
                 CritChance = 0,
                 StatusChance = 0,
                 FireRate = 1.25,
                 ShotType = "Projectile",
                 ShotSpeed = 80,
                 Range = 15,
-                Falloff = {StartRange = 0, EndRange = 20, Reduction = 0.8333}
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 20,
+                    Reduction = 0.8333
+                }
             },
             Polarities = {"D"},
             Reload = 3,
@@ -14562,12 +16984,23 @@ local WeaponData = {
                 BPCost = 15000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 3},
-                    {Name = "Circuits", Type = "Ressource", Count = 700},
-                    {Name = "Ferrite", Type = "Ressource", Count = 5000},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 700
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 100,
             Class = "Pistolet",
@@ -14580,7 +17013,10 @@ local WeaponData = {
             MaxAmmo = 360,
             Name = "Spectra",
             NormalAttack = {
-                Damage = {["Perforation"] = 7.6, ["Tranchant"] = 10.4},
+                Damage = {
+                    ["Perforation"] = 7.6,
+                    ["Tranchant"] = 10.4
+                },
                 CritChance = 0.14,
                 CritMultiplier = 2,
                 StatusChance = 0.22,
@@ -14607,18 +17043,29 @@ local WeaponData = {
                 Credits = 25000,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Poignée", Type = "Objet", Count = 1},
-                    {Name = "Châssis Arme", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis Arme",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Magazine = 80,
             Mastery = 10,
             MaxAmmo = 720,
             Name = "Spectra Vandal",
             NormalAttack = {
-                Damage = {["Tranchant"] = 12.8, ["Perforation"] = 9.2},
+                Damage = {
+                    ["Tranchant"] = 12.8,
+                    ["Perforation"] = 9.2
+                },
                 CritChance = 0.20,
                 CritMultiplier = 2.0,
                 StatusChance = 0.28,
@@ -14640,12 +17087,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 45,
                 Time = 12,
-                Parts = {
-                    {Name = "Gallium", Type = "Ressource", Count = 5},
-                    {Name = "Ferrite", Type = "Ressource", Count = 2500},
-                    {Name = "Plastides", Type = "Ressource", Count = 800},
-                    {Name = "Récupération", Type = "Ressource", Count = 4000}
-                }
+                Parts = {{
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 2500
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 4000
+                }}
             },
             Disposition = 1.0,
             Family = "Spira",
@@ -14679,11 +17137,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Pochette", Type = "Partie Prime", Count = 2},
-                    {Name = "Lame", Type = "Partie Prime", Count = 2},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 8}
-                }
+                Parts = {{
+                    Name = "Pochette",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Lame",
+                    Type = "Partie Prime",
+                    Count = 2
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 8
+                }}
             },
             Accuracy = 100,
             Class = "Arme de Lancer",
@@ -14722,26 +17188,38 @@ local WeaponData = {
                 MarketCost = 200,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 10},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 6000
-                    }, {Name = "Ferrite", Type = "Ressource", Count = 9000},
-                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 3}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 6000
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 9000
+                }, {
+                    Name = "Extrait de Nitain",
+                    Type = "Ressource",
+                    Count = 3
+                }}
             },
             Accuracy = 16.7,
             AreaAttack = {
                 AttackName = "Fully Charged Projectile",
-                Damage = {["Radiation"] = 176},
+                Damage = {
+                    ["Radiation"] = 176
+                },
                 ChargeTime = 1,
                 AmmoCost = 5
             },
             ChargeAttack = {
                 AttackName = "Uncharged Explosion",
-                Damage = {["Radiation"] = 88},
+                Damage = {
+                    ["Radiation"] = 88
+                },
                 ShotType = "Projectile",
                 ShotSpeed = "???",
                 Radius = 2
@@ -14757,7 +17235,9 @@ local WeaponData = {
             Name = "Staticor",
             NormalAttack = {
                 AttackName = "Uncharged Projectile",
-                Damage = {["Radiation"] = 44},
+                Damage = {
+                    ["Radiation"] = 44
+                },
                 CritChance = 0.14,
                 CritMultiplier = 2.2,
                 StatusChance = 0.28,
@@ -14769,7 +17249,9 @@ local WeaponData = {
             Reload = 1.5,
             SecondaryAreaAttack = {
                 AttackName = "Fully Charged Explosion",
-                Damage = {["Radiation"] = 352},
+                Damage = {
+                    ["Radiation"] = 352
+                },
                 Radius = 8
             },
             Traits = {"Corpus"},
@@ -14779,7 +17261,9 @@ local WeaponData = {
         ["Stug"] = {
             ChargeAttack = {
                 AttackName = "Tir chargé",
-                Damage = {["Corrosif"] = 936},
+                Damage = {
+                    ["Corrosif"] = 936
+                },
                 ShotType = "Projectile",
                 ShotSpeed = "???",
                 AmmoCost = 6,
@@ -14792,16 +17276,23 @@ local WeaponData = {
                 MarketCost = 120,
                 Rush = 25,
                 Time = 24,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 3},
-                    {Name = "Gallium", Type = "Ressource", Count = 4},
-                    {Name = "Récupération", Type = "Ressource", Count = 3000},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 1200
-                    }
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 3000
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 1200
+                }}
             },
             Disposition = 1.48,
             Image = "Stug.png",
@@ -14811,7 +17302,9 @@ local WeaponData = {
             Name = "Stug",
             NormalAttack = {
                 AttackName = "Tir Normal",
-                Damage = {["Corrosif"] = 156},
+                Damage = {
+                    ["Corrosif"] = 156
+                },
                 CritChance = 0.05,
                 CritMultiplier = 1.5,
                 StatusChance = 0,
@@ -14834,15 +17327,23 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Grokdrul", Type = "Ressource", Count = 45},
-                    {
-                        Name = "Alliage de Coprite",
-                        Type = "Ressource",
-                        Count = 25
-                    }, {Name = "Ferrite", Type = "Ressource", Count = 4485},
-                    {Name = "Neurodes", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Grokdrul",
+                    Type = "Ressource",
+                    Count = 45
+                }, {
+                    Name = "Alliage de Coprite",
+                    Type = "Ressource",
+                    Count = 25
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 4485
+                }, {
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.3,
             Image = "Stubba.png",
@@ -14911,7 +17412,9 @@ local WeaponData = {
             MaxAmmo = 400,
             Name = "Gammacor Synoid",
             NormalAttack = {
-                Damage = {["Magnétique"] = 20},
+                Damage = {
+                    ["Magnétique"] = 20
+                },
                 CritChance = 0.2,
                 CritMultiplier = 2,
                 StatusChance = 0.28,
@@ -14935,15 +17438,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {Name = "Ferrite", Type = "Ressource", Count = 1500},
-                    {Name = "Oxium", Type = "Ressource", Count = 1200},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Module de Contrôle",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 1500
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 100,
             Class = "Arme de Lancer",
@@ -14956,7 +17467,9 @@ local WeaponData = {
             MaxAmmo = 12,
             Name = "Talons",
             NormalAttack = {
-                Damage = {["Explosif"] = 120},
+                Damage = {
+                    ["Explosif"] = 120
+                },
                 CritChance = 0.22,
                 CritMultiplier = 2,
                 StatusChance = 0.26,
@@ -14983,7 +17496,10 @@ local WeaponData = {
             MaxAmmo = 210,
             Name = "Akbolto Telos",
             NormalAttack = {
-                Damage = {["Impact"] = 4.7, ["Perforation"] = 42.3},
+                Damage = {
+                    ["Impact"] = 4.7,
+                    ["Perforation"] = 42.3
+                },
                 CritChance = 0.13,
                 CritMultiplier = 2,
                 StatusChance = 0.29,
@@ -15009,15 +17525,23 @@ local WeaponData = {
                 MarketCost = 190,
                 Rush = 40,
                 Time = 24,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {Name = "Kuva", Type = "Ressource", Count = 1600},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 2600
-                    }, {Name = "Ferrite", Type = "Ressource", Count = 15000}
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Kuva",
+                    Type = "Ressource",
+                    Count = 1600
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 2600
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 15000
+                }}
             },
             Disposition = 1.2,
             Image = "TwinRogga.png",
@@ -15037,7 +17561,11 @@ local WeaponData = {
                 StatusChance = 0.33,
                 PelletCount = 15,
                 FireRate = 2.5,
-                Falloff = {StartRange = 10, EndRange = 20, Reduction = 0.7872},
+                Falloff = {
+                    StartRange = 10,
+                    EndRange = 20,
+                    Reduction = 0.7872
+                },
                 ShotType = "Hit-Scan"
             },
             Polarities = {"Bar", "V"},
@@ -15057,11 +17585,19 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Viper", Type = "Arme", Count = 1},
-                    {Name = "Viper", Type = "Arme", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Viper",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Viper",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.41,
             Family = "Vipers Jumeaux",
@@ -15097,11 +17633,19 @@ local WeaponData = {
                 Credits = 25000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Lien", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Lien",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 1.41,
             Family = "Vipers Jumeaux",
@@ -15136,12 +17680,23 @@ local WeaponData = {
                 MarketCost = 120,
                 Rush = 30,
                 Time = 24,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 2},
-                    {Name = "Plastides", Type = "Ressource", Count = 400},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 900},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 100}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 400
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 100
+                }}
             },
             Accuracy = 100,
             Class = "Pistolet",
@@ -15179,12 +17734,23 @@ local WeaponData = {
                 MarketCost = 65,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Capteurs Neuronaux", Type = "Ressource", Count = 2},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 3000},
-                    {Name = "Circuits", Type = "Ressource", Count = 1600},
-                    {Name = "Bo", Type = "Arme", Count = 1}
-                }
+                Parts = {{
+                    Name = "Capteurs Neuronaux",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 3000
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 1600
+                }, {
+                    Name = "Bo",
+                    Type = "Arme",
+                    Count = 1
+                }}
             },
             Class = "Pistolame",
             Conclave = false,
@@ -15198,7 +17764,7 @@ local WeaponData = {
                 Damage = {
                     ["Impact"] = 19.53,
                     ["Perforation"] = 25.11,
-					["Tranchant"] = 234.36
+                    ["Tranchant"] = 234.36
                 },
                 PelletCount = 1,
                 CritChance = 0.19,
@@ -15207,20 +17773,24 @@ local WeaponData = {
                 FireRate = 1,
                 ShotType = "Hit-Scan"
             },
-			SecondaryAttack = {
+            SecondaryAttack = {
                 AttackName = "Tirs",
                 Damage = {
                     ["Impact"] = 8.97,
-					["Perforation"] = 10.35,
-					["Tranchant"] = 49.68
-				},
+                    ["Perforation"] = 10.35,
+                    ["Tranchant"] = 49.68
+                },
                 PelletCount = 9,
                 CritChance = 0.19,
                 CritMultiplier = 1.7,
                 StatusChance = 0.1033,
                 FireRate = 2.5,
                 ChargeTime = 0.4,
-                Falloff = { EndRange = 49, StartRange = 24, Reduction = 1},
+                Falloff = {
+                    EndRange = 49,
+                    StartRange = 24,
+                    Reduction = 1
+                },
                 PunchThrough = 1.3
             },
             SlideAttack = 558,
@@ -15260,15 +17830,23 @@ local WeaponData = {
                 MarketCost = 190,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 4},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 1200
-                    }, {Name = "Ferrite", Type = "Ressource", Count = 700},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 1000}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 700
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 1000
+                }}
             },
             Disposition = 1.35,
             Family = "Vasto",
@@ -15301,11 +17879,19 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Accuracy = 16,
             Class = "Pistolet",
@@ -15345,12 +17931,23 @@ local WeaponData = {
                 MarketCost = 75,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Récupération", Type = "Ressource", Count = 300},
-                    {Name = "Ferrite", Type = "Ressource", Count = 600},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 900},
-                    {Name = "Morphics", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 300
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.45,
             Family = "Viper",
@@ -15419,11 +18016,19 @@ local WeaponData = {
                 MarketCost = 120,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 3}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 3
+                }}
             },
             Disposition = 1.15,
             ExilusPolarity = "V",
@@ -15461,23 +18066,30 @@ local WeaponData = {
                 MarketCost = 190,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 8
-                    }, {Name = "Plastides", Type = "Ressource", Count = 350},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 6500
-                    }, {Name = "Nano Spores", Type = "Ressource", Count = 5000}
-                }
+                Parts = {{
+                    Name = "Module de Contrôle",
+                    Type = "Ressource",
+                    Count = 8
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 350
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 6500
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 5000
+                }}
             },
             Accuracy = 26.7,
             AreaAttack = {
                 AttackName = "Nuage de Gaz",
-                Damage = {["Gaz"] = 80},
+                Damage = {
+                    ["Gaz"] = 80
+                },
                 Radius = 5
             },
             Class = "Pistolet",
@@ -15491,7 +18103,10 @@ local WeaponData = {
             Name = "Zakti",
             NormalAttack = {
                 AttackName = "Impact Fléchette",
-                Damage = {["Impact"] = 12, ["Perforation"] = 18},
+                Damage = {
+                    ["Impact"] = 12,
+                    ["Perforation"] = 18
+                },
                 CritChance = 0.02,
                 CritMultiplier = 1.5,
                 StatusChance = 0.2,
@@ -15509,7 +18124,9 @@ local WeaponData = {
             Accuracy = 26.7,
             AreaAttack = {
                 AttackName = "Nuage de Gaz",
-                Damage = {["Gas"] = 100},
+                Damage = {
+                    ["Gas"] = 100
+                },
                 Radius = 3.8
             },
             Class = "Pistolet",
@@ -15518,11 +18135,19 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 0.9,
             ExilusPolarity = "V",
@@ -15536,7 +18161,10 @@ local WeaponData = {
             NormalAttack = {
                 AttackName = "Normal",
                 AmmoCost = 1,
-                Damage = {["Impact"] = 12, ["Perforation"] = 18},
+                Damage = {
+                    ["Impact"] = 12,
+                    ["Perforation"] = 18
+                },
                 CritChance = 0.08,
                 CritMultiplier = 1.8,
                 StatusChance = 0.42,
@@ -15584,8 +18212,14 @@ local WeaponData = {
             Accuracy = 9.8,
             AreaAttack = {
                 AttackName = "Attaque Radial",
-                Damage = {["Poison"] = 61},
-                Falloff = {StartRange = 0, EndRange = 3.3, Reduction = 0.3},
+                Damage = {
+                    ["Poison"] = 61
+                },
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 3.3,
+                    Reduction = 0.3
+                },
                 Radius = 3.3
             },
             Class = "Lanceur de Poche",
@@ -15595,10 +18229,15 @@ local WeaponData = {
                 MarketCost = 190,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 1.05,
             ExilusPolarity = "Bar",
@@ -15612,7 +18251,10 @@ local WeaponData = {
             Name = "Zymos",
             NormalAttack = {
                 AttackName = "Normal",
-                Damage = {["Impact"] = 9.2, ["Perforation"] = 13.8},
+                Damage = {
+                    ["Impact"] = 9.2,
+                    ["Perforation"] = 13.8
+                },
                 CritChance = 0.05,
                 CritMultiplier = 2.3,
                 StatusChance = 0.3,
@@ -15638,12 +18280,23 @@ local WeaponData = {
                 MarketCost = 240,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 4},
-                    {Name = "Hexenon", Type = "Ressource", Count = 200},
-                    {Name = "Plastides", Type = "Ressource", Count = 925},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 8000}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Hexenon",
+                    Type = "Ressource",
+                    Count = 200
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 925
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 8000
+                }}
             },
             Disposition = 0.6,
             Image = "Acceltra.png",
@@ -15680,12 +18333,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 8},
-                    {Name = "Plastides", Type = "Ressource", Count = 600},
-                    {Name = "Ferrite", Type = "Ressource", Count = 9000},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 3}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 8
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 9000
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 3
+                }}
             },
             Accuracy = 12.5,
             Class = "Fusil",
@@ -15699,7 +18363,9 @@ local WeaponData = {
             Name = "Amprex",
             NoiseLevel = "Bruyant",
             NormalAttack = {
-                Damage = {["Électrique"] = 22},
+                Damage = {
+                    ["Électrique"] = 22
+                },
                 CritChance = 0.32,
                 CritMultiplier = 2.2,
                 StatusChance = 0.22,
@@ -15724,18 +18390,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {
-                        Name = "Injecteur de Détonite",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {Name = "Plastides", Type = "Ressource", Count = 700},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 9950
-                    }, {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Injecteur de Détonite",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 700
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 9950
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.2,
             Image = "Argonak.png",
@@ -15785,12 +18456,23 @@ local WeaponData = {
                 MarketCost = 125,
                 Rush = 30,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 2},
-                    {Name = "Ferrite", Type = "Ressource", Count = 800},
-                    {Name = "Rubedo", Type = "Ressource", Count = 200},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 200
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 40,
             Class = "Arbalète",
@@ -15831,12 +18513,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 10},
-                    {Name = "Nodule Tepa", Type = "Ressource", Count = 40},
-                    {Name = "Cœur de Noctrul", Type = "Ressource", Count = 25},
-                    {Name = "Entroplasma", Type = "Ressource", Count = 20}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Nodule Tepa",
+                    Type = "Ressource",
+                    Count = 40
+                }, {
+                    Name = "Cœur de Noctrul",
+                    Type = "Ressource",
+                    Count = 25
+                }, {
+                    Name = "Entroplasma",
+                    Type = "Ressource",
+                    Count = 20
+                }}
             },
             Disposition = 1.0,
             Image = "Battacor.png",
@@ -15847,7 +18540,10 @@ local WeaponData = {
             Name = "Battacor",
             NormalAttack = {
                 Accuracy = 25,
-                Damage = {["Perforation"] = 24.0, ["Magnétique"] = 42.0},
+                Damage = {
+                    ["Perforation"] = 24.0,
+                    ["Magnétique"] = 42.0
+                },
                 CritChance = 0.32,
                 CritMultiplier = 2.4,
                 StatusChance = 0.18,
@@ -15858,7 +18554,9 @@ local WeaponData = {
             },
             SecondaryAttack = {
                 Accuracy = 100,
-                Damage = {["Radiation"] = 208.0},
+                Damage = {
+                    ["Radiation"] = 208.0
+                },
                 CritChance = 0.34,
                 CritMultiplier = 3.0,
                 StatusChance = 0.08,
@@ -15878,9 +18576,15 @@ local WeaponData = {
             Accuracy = 20,
             AreaAttack = {
                 AttackName = "Attaque Radial",
-                Damage = {["Feu"] = 19},
+                Damage = {
+                    ["Feu"] = 19
+                },
                 Radius = 1.7,
-                Falloff = {StartRange = 0, EndRange = 1.7, Reduction = 0.2}
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 1.7,
+                    Reduction = 0.2
+                }
             },
             Class = "Fusil",
             Conclave = false,
@@ -15888,12 +18592,23 @@ local WeaponData = {
                 Credits = 25000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Titane", Type = "Ressource", Count = 1500},
-                    {Name = "Carbures", Type = "Ressource", Count = 800},
-                    {Name = "Isos", Type = "Ressource", Count = 450},
-                    {Name = "Larmes du Néant", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Titane",
+                    Type = "Ressource",
+                    Count = 1500
+                }, {
+                    Name = "Carbures",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Isos",
+                    Type = "Ressource",
+                    Count = 450
+                }, {
+                    Name = "Larmes du Néant",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.15,
             ExilusPolarity = "V",
@@ -15904,7 +18619,9 @@ local WeaponData = {
             Name = "Basmu",
             NormalAttack = {
                 AttackName = "Auto",
-                Damage = {["Électrique"] = 39},
+                Damage = {
+                    ["Électrique"] = 39
+                },
                 CritChance = 0.15,
                 CritMultiplier = 2,
                 StatusChance = 0.29,
@@ -15920,7 +18637,9 @@ local WeaponData = {
             SecondaryAttack = {
                 Accuracy = 3,
                 AttackName = "Maintenu",
-                Damage = {["Électrique"] = 12},
+                Damage = {
+                    ["Électrique"] = 12
+                },
                 CritChance = 0.02,
                 CritMultiplier = 4.8,
                 StatusChance = 0.3,
@@ -15942,15 +18661,23 @@ local WeaponData = {
                 MarketCost = 240,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Ferrite", Type = "Ressource", Count = 3500},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 4300
-                    }, {Name = "Cryotique", Type = "Ressource", Count = 575},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 3500
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 4300
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 575
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.05,
             Image = "Baza.png",
@@ -15970,7 +18697,11 @@ local WeaponData = {
                 StatusChance = 0.1,
                 FireRate = 16.67,
                 ShotType = "Hit-scan",
-                Falloff = {StartRange = 22, EndRange = 34, Reduction = 0.5}
+                Falloff = {
+                    StartRange = 22,
+                    EndRange = 34,
+                    Reduction = 0.5
+                }
             },
             NoiseLevel = "Silencieux",
             Polarities = {"V"},
@@ -15988,12 +18719,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Crosse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 0.95,
             Family = "Baza",
@@ -16014,7 +18756,11 @@ local WeaponData = {
                 StatusChance = 0.14,
                 FireRate = 16.67,
                 ShotType = "Hit-scan",
-                Falloff = {StartRange = 30, EndRange = 60, Reduction = 0.5}
+                Falloff = {
+                    StartRange = 30,
+                    EndRange = 60,
+                    Reduction = 0.5
+                }
             },
             NoiseLevel = "Silencieux",
             Polarities = {"V", "V"},
@@ -16033,12 +18779,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 2},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 100},
-                    {Name = "Récupération", Type = "Ressource", Count = 900},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 600}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 100
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 600
+                }}
             },
             Disposition = 1.25,
             Family = "Boltor",
@@ -16076,12 +18833,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Crosse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 1.15,
             ExilusPolarity = "Bar",
@@ -16094,7 +18862,10 @@ local WeaponData = {
             Name = "Boltor Prime",
             NoiseLevel = "Bruyant",
             NormalAttack = {
-                Damage = {["Impact"] = 4.6, ["Perforation"] = 41.4},
+                Damage = {
+                    ["Impact"] = 4.6,
+                    ["Perforation"] = 41.4
+                },
                 CritChance = 0.12,
                 CritMultiplier = 2,
                 StatusChance = 0.34,
@@ -16145,12 +18916,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Crosse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 1.1,
             Family = "Braton",
@@ -16185,11 +18967,19 @@ local WeaponData = {
                 Credits = 25000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 1.01,
             Family = "Braton",
@@ -16229,12 +19019,23 @@ local WeaponData = {
                 MarketCost = 265,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 10},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 3},
-                    {Name = "Plastides", Type = "Ressource", Count = 1200},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 22000}
-                }
+                Parts = {{
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 22000
+                }}
             },
             Disposition = 0.7,
             ExilusPolarity = "V",
@@ -16254,7 +19055,11 @@ local WeaponData = {
                 },
                 CritChance = 0.25,
                 CritMultiplier = 2.3,
-                Falloff = {StartRange = 19, EndRange = 41, Reduction = 0.5},
+                Falloff = {
+                    StartRange = 19,
+                    EndRange = 41,
+                    Reduction = 0.5
+                },
                 FireRate = 3.83,
                 PelletCount = 7,
                 ShotType = "Hit-Scan",
@@ -16267,14 +19072,22 @@ local WeaponData = {
             ReloadStyle = "Régénération",
             SecondaryAreaAttack = {
                 AttackName = "Attaque Radial",
-                Damage = {["Viral"] = 143},
-                Falloff = {StartRange = 0, EndRange = 7, Reduction = 0.5},
+                Damage = {
+                    ["Viral"] = 143
+                },
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 7,
+                    Reduction = 0.5
+                },
                 Radius = 7
             },
             SecondaryAttack = {
                 Accuracy = 100,
                 AttackName = "Burst",
-                Damage = {["Impact"] = 9},
+                Damage = {
+                    ["Impact"] = 9
+                },
                 CritChance = 0.03,
                 CritMultiplier = 3.5,
                 FireRate = 3.37,
@@ -16297,12 +19110,23 @@ local WeaponData = {
                 MarketCost = 120,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 1},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 400},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 150},
-                    {Name = "Ferrite", Type = "Ressource", Count = 600}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 400
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 150
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 600
+                }}
             },
             Disposition = 1.45,
             ExilusPolarity = "Bar",
@@ -16342,12 +19166,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Crosse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 1.35,
             ExilusPolarity = "V",
@@ -16384,16 +19219,23 @@ local WeaponData = {
                 MarketCost = 250,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {
-                        Name = "Injecteur de Détonite",
-                        Type = "Ressource",
-                        Count = 2
-                    },
-                    {Name = "Récupération", Type = "Ressource", Count = 5000},
-                    {Name = "Circuits", Type = "Ressource", Count = 600},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Injecteur de Détonite",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 13.3,
             Class = "Fusil",
@@ -16422,7 +19264,9 @@ local WeaponData = {
             SecondaryAttack = {
                 AttackName = "Beacon",
                 Accuracy = 16.7,
-                Damage = {["Perforation"] = 3},
+                Damage = {
+                    ["Perforation"] = 3
+                },
                 CritChance = 0,
                 CritMultiplier = 1,
                 StatusChance = 0,
@@ -16460,12 +19304,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 45,
                 Time = 12,
-                Parts = {
-                    {Name = "Gallium", Type = "Ressource", Count = 3},
-                    {Name = "Plastides", Type = "Ressource", Count = 700},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 600},
-                    {Name = "Ferrite", Type = "Ressource", Count = 1750}
-                }
+                Parts = {{
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 700
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 1750
+                }}
             },
             Class = "Arc",
             Conclave = true,
@@ -16495,10 +19350,13 @@ local WeaponData = {
             Traits = {"Tenno"},
             Trigger = "Chargé",
             Type = "Principale",
-            ComparisonDisplay = {
-                {Name = "[NAME] (Déchargé)", Attacks = {"NormalAttack"}},
-                {Name = "[NAME] (Chargé)", Attacks = {"ChargeAttack"}}
-            }
+            ComparisonDisplay = {{
+                Name = "[NAME] (Déchargé)",
+                Attacks = {"NormalAttack"}
+            }, {
+                Name = "[NAME] (Chargé)",
+                Attacks = {"ChargeAttack"}
+            }}
         },
         ["Cernos Mutaliste"] = {
             Cost = {
@@ -16507,17 +19365,30 @@ local WeaponData = {
                 MarketCost = 250,
                 Rush = 45,
                 Time = 12,
-                Parts = {
-                    {Name = "Cernos", Type = "Arme", Count = 1},
-                    {Name = "Plastides", Type = "Ressource", Count = 1400},
-                    {Name = "Cryotique", Type = "Ressource", Count = 1200},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 2300}
-                }
+                Parts = {{
+                    Name = "Cernos",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 1400
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 2300
+                }}
             },
             Accuracy = "16.7 (100 aimed)",
             AreaAttack = {
                 AttackName = "Poison Cloud",
-                Damage = {["Poison"] = 50},
+                Damage = {
+                    ["Poison"] = 50
+                },
                 Duration = 10
             },
             ChargeAttack = {
@@ -16587,19 +19458,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {
-                        Name = "Partie Supérieure",
-                        Type = "Partie Prime",
-                        Count = 1
-                    },
-                    {
-                        Name = "Partie Inférieure",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {Name = "Poignée", Type = "Partie Prime", Count = 1},
-                    {Name = "Corde", Type = "Partie Prime", Count = 1}
-                }
+                Parts = {{
+                    Name = "Partie Supérieure",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Partie Inférieure",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Corde",
+                    Type = "Partie Prime",
+                    Count = 1
+                }}
             },
             Class = "Arc",
             Conclave = true,
@@ -16631,25 +19506,36 @@ local WeaponData = {
             Traits = {"Prime"},
             Trigger = "Chargé",
             Type = "Principale",
-            ComparisonDisplay = {
-                {Name = "[NAME] (Déchargé)", Attacks = {"NormalAttack"}},
-                {Name = "[NAME] (Chargé)", Attacks = {"ChargeAttack"}}
-            }
+            ComparisonDisplay = {{
+                Name = "[NAME] (Déchargé)",
+                Attacks = {"NormalAttack"}
+            }, {
+                Name = "[NAME] (Chargé)",
+                Attacks = {"ChargeAttack"}
+            }}
         },
         ["Cernos Proboscis"] = {
             Accuracy = 16.7,
             AreaAttack = {
                 AttackName = "Explosion Tir Chargé",
-                Damage = {["Viral"] = 1003},
+                Damage = {
+                    ["Viral"] = 1003
+                },
                 ExplosionDelay = 1.7,
                 Radius = 7,
-                Falloff = {StartRange = 0,EndRange = 7,Reduction = 0.5,},
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 7,
+                    Reduction = 0.5
+                }
             },
             Class = "Arc",
             Conclave = false,
             ChargeAreaAttack = {
                 Attackame = "Tir Chargé Explosif",
-                Damage = {["Viral"] = 1},
+                Damage = {
+                    ["Viral"] = 1
+                },
                 Radius = 7,
                 ExplosionDelay = 1.7
             },
@@ -16673,12 +19559,23 @@ local WeaponData = {
                 MarketCost = 245,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Cernos Mutaliste", Type = "Arme", Count = 1},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 1600},
-                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 5},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 25000},
-                }
+                Parts = {{
+                    Name = "Cernos Mutaliste",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 1600
+                }, {
+                    Name = "Extrait de Nitain",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 25000
+                }}
             },
             Disposition = 0.55,
             ExilusPolarity = "Bar",
@@ -16742,10 +19639,13 @@ local WeaponData = {
             Traits = {"Syndicat", "Voile Rouge"},
             Trigger = "Chargé",
             Type = "Principale",
-            ComparisonDisplay = {
-                {Name = "[NAME] (Déchargé)", Attacks = {"NormalAttack"}},
-                {Name = "[NAME] (Chargé)", Attacks = {"ChargeAttack"}}
-            }
+            ComparisonDisplay = {{
+                Name = "[NAME] (Déchargé)",
+                Attacks = {"NormalAttack"}
+            }, {
+                Name = "[NAME] (Chargé)",
+                Attacks = {"ChargeAttack"}
+            }}
         },
         ["Daikyu"] = {
             Cost = {
@@ -16754,12 +19654,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 2},
-                    {Name = "Forma", Type = "Ressource", Count = 1},
-                    {Name = "Rubedo", Type = "Ressource", Count = 300},
-                    {Name = "Récupération", Type = "Ressource", Count = 1200}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 300
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 1200
+                }}
             },
             Accuracy = 16.7,
             ChargeAttack = {
@@ -16799,12 +19710,23 @@ local WeaponData = {
                 BPCost = 15000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 2},
-                    {Name = "Circuits", Type = "Ressource", Count = 600},
-                    {Name = "Ferrite", Type = "Ressource", Count = 4500},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 4500
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 100,
             Class = "Fusil",
@@ -16834,20 +19756,26 @@ local WeaponData = {
             Reload = 1.8,
             Trigger = "Auto",
             Type = "Principale",
-            Users = {
-                "[[Homme d'Équipage]]", "[[Lancier Corrompu]]", "[[Ranger]]"
-            }
+            Users = {"[[Homme d'Équipage]]", "[[Lancier Corrompu]]", "[[Ranger]]"}
         },
         ["Dera Vandal"] = {
             Cost = {
                 Credits = 25000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Accuracy = 100,
             Class = "Fusil",
@@ -16916,12 +19844,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 45,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 6},
-                    {Name = "Circuits", Type = "Ressource", Count = 900},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 750},
-                    {Name = "Plastides", Type = "Ressource", Count = 900}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 6
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 750
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 900
+                }}
             },
             Accuracy = 16.7,
             ChargeAttack = {
@@ -16967,21 +19906,30 @@ local WeaponData = {
             Trigger = "Chargé",
             Type = "Principale",
             Users = {"[[Stalker]]"},
-            ComparisonDisplay = {
-                {Name = "[NAME] (Déchargé)", Attacks = {"NormalAttack"}},
-                {Name = "[NAME] (Chargé)", Attacks = {"ChargeAttack"}}
-            }
+            ComparisonDisplay = {{
+                Name = "[NAME] (Déchargé)",
+                Attacks = {"NormalAttack"}
+            }, {
+                Name = "[NAME] (Chargé)",
+                Attacks = {"ChargeAttack"}
+            }}
         },
         ["Ferrox"] = {
             Accuracy = 16.7,
             AreaAttack = {
                 AttackName = "Effet de Zone",
-                Damage = {["Impact"] = 100},
+                Damage = {
+                    ["Impact"] = 100
+                },
                 CritChance = 0.32,
                 CritMultiplier = 2.8,
                 StatusChance = 0.1,
                 Radius = 3.6,
-                Falloff = {StartRange = 0, EndRange = 3.6, Reduction = 0.4}
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 3.6,
+                    Reduction = 0.4
+                }
             },
             ChargeAttack = {
                 AttackName = "Tir Chargé",
@@ -17006,16 +19954,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 5},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 30000
-                    },
-                    {Name = "Récupération", Type = "Ressource", Count = 35000},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 30000
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 35000
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.15,
             ExilusPolarity = "Bar",
@@ -17066,12 +20021,23 @@ local WeaponData = {
                 BPCost = 15000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 5},
-                    {Name = "Circuits", Type = "Ressource", Count = 900},
-                    {Name = "Ferrite", Type = "Ressource", Count = 6000},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 6000
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 100,
             Class = "Fusil",
@@ -17085,7 +20051,10 @@ local WeaponData = {
             MaxAmmo = 50,
             Name = "Fusil à Flux",
             NormalAttack = {
-                Damage = {["Perforation"] = 4.8, ["Tranchant"] = 17.2},
+                Damage = {
+                    ["Perforation"] = 4.8,
+                    ["Tranchant"] = 17.2
+                },
                 CritChance = 0.1,
                 CritMultiplier = 2,
                 StatusChance = 0.24,
@@ -17111,12 +20080,23 @@ local WeaponData = {
                 MarketCost = 265,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Rubedo", Type = "Ressource", Count = 2100},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 7500},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {Name = "Hexenon", Type = "Ressource", Count = 350}
-                }
+                Parts = {{
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 2100
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 7500
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Hexenon",
+                    Type = "Ressource",
+                    Count = 350
+                }}
             },
             Disposition = 0.65,
             Image = "Fulmin.png",
@@ -17127,7 +20107,10 @@ local WeaponData = {
             Name = "Fulmin",
             NormalAttack = {
                 AttackName = "Mode Semi-Automatique",
-                Damage = {["Impact"] = 100, ["Électrique"] = 400},
+                Damage = {
+                    ["Impact"] = 100,
+                    ["Électrique"] = 400
+                },
                 CritChance = 0.30,
                 CritMultiplier = 2.2,
                 StatusChance = 0.16,
@@ -17139,7 +20122,10 @@ local WeaponData = {
             SecondaryAttack = {
                 AttackName = "Mode Automatique",
                 Accuracy = 111.1,
-                Damage = {["Perforation"] = 8, ["Électrique"] = 25},
+                Damage = {
+                    ["Perforation"] = 8,
+                    ["Électrique"] = 25
+                },
                 CritChance = 0.28,
                 CritMultiplier = 2.4,
                 StatusChance = 0.10,
@@ -17159,12 +20145,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 1},
-                    {Name = "Circuits", Type = "Ressource", Count = 550},
-                    {Name = "Cryotique", Type = "Ressource", Count = 2500},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 550
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 2500
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.35,
             Image = "Glaxion.png",
@@ -17174,7 +20171,9 @@ local WeaponData = {
             MaxAmmo = 720,
             Name = "Glaxion",
             NormalAttack = {
-                Damage = {["Glace"] = 26},
+                Damage = {
+                    ["Glace"] = 26
+                },
                 CritChance = 0.08,
                 CritMultiplier = 2,
                 StatusChance = 0.34,
@@ -17187,10 +20186,7 @@ local WeaponData = {
             Traits = {"Corpus"},
             Trigger = "Maintenu",
             Type = "Principale",
-            Users = {
-                "[[Capture|Corpus Target]]", "[[Armis Ulta]]", "[[Dru Pesfor]]",
-                "[[Rana Del]]", "[[M-W.A.M.]]"
-            }
+            Users = {"[[Capture|Corpus Target]]", "[[Armis Ulta]]", "[[Dru Pesfor]]", "[[Rana Del]]", "[[M-W.A.M.]]"}
         },
         ["Glaxion Vandal"] = {
             Accuracy = 100,
@@ -17205,7 +20201,9 @@ local WeaponData = {
             MaxAmmo = 1000,
             Name = "Glaxion Vandal",
             NormalAttack = {
-                Damage = {["Glace"] = 29},
+                Damage = {
+                    ["Glace"] = 29
+                },
                 CritChance = 0.14,
                 CritMultiplier = 2.0,
                 StatusChance = 0.38,
@@ -17225,12 +20223,23 @@ local WeaponData = {
                 Credits = 25000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 5},
-                    {Name = "Ferrite", Type = "Ressource", Count = 5000},
-                    {Name = "Récupération", Type = "Ressource", Count = 6000},
-                    {Name = "Circuits", Type = "Ressource", Count = 1000}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 6000
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 1000
+                }}
             },
             Disposition = 1.4,
             ExilusPolarity = "Madurai",
@@ -17258,11 +20267,8 @@ local WeaponData = {
             Traits = {"Grineer"},
             Trigger = "Auto à Chauffe",
             Type = "Principale",
-            Users = {
-                "[[Lieutenant Lech Kril]]", "[[Artilleuse Lourde]] + Variantes",
-                "[[Artilleuse Lourde Corrompue]]",
-                "[[Bombardier Maniaque]] + Variantes"
-            }
+            Users = {"[[Lieutenant Lech Kril]]", "[[Artilleuse Lourde]] + Variantes", "[[Artilleuse Lourde Corrompue]]",
+                     "[[Bombardier Maniaque]] + Variantes"}
         },
         ["Gorgon Wraith"] = {
             Accuracy = 16.7,
@@ -17272,11 +20278,19 @@ local WeaponData = {
                 Credits = 25000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 1.35,
             ExilusPolarity = "V",
@@ -17315,12 +20329,23 @@ local WeaponData = {
                 MarketCost = 125,
                 Rush = 30,
                 Time = 24,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 2},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 400},
-                    {Name = "Récupération", Type = "Ressource", Count = 900},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 100}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 400
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 100
+                }}
             },
             Disposition = 1.2,
             Family = "Grakata",
@@ -17346,11 +20371,8 @@ local WeaponData = {
             Traits = {"Grineer"},
             Trigger = "Auto",
             Type = "Principale",
-            Users = {
-                "[[Lancer]]", "[[Hellion]]", "[[Commander]]",
-                "[[Méridien d'Acier]] [[Operative]]s",
-                "[[Bourreaux/Vay Molta|Vay Molta]]"
-            }
+            Users = {"[[Lancer]]", "[[Hellion]]", "[[Commander]]", "[[Méridien d'Acier]] [[Operative]]s",
+                     "[[Bourreaux/Vay Molta|Vay Molta]]"}
         },
         ["Grakatas Jumeaux"] = {
             Accuracy = 28.6,
@@ -17362,11 +20384,19 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Grakata", Type = "Arme", Count = 1},
-                    {Name = "Grakata", Type = "Arme", Count = 1},
-                    {Name = "Forma", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Grakata",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Grakata",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Forma",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 1.0,
             Image = "GrakatasJumelles.png",
@@ -17404,16 +20434,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {
-                        Name = "Injecteur de Détonite",
-                        Type = "Ressource",
-                        Count = 2
-                    },
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 5000},
-                    {Name = "Ferrite", Type = "Ressource", Count = 5000},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Injecteur de Détonite",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 44.4,
             Class = "Fusil",
@@ -17443,10 +20480,7 @@ local WeaponData = {
             Traits = {"Grineer"},
             Trigger = "Semi-Auto",
             Type = "Principale",
-            Users = {
-                "[[Nightwatch Lancer]]", "[[Kuva Elite Lancer]]",
-                "[[Elite Lancer#Variants|Tusk Elite Lancer]]"
-            }
+            Users = {"[[Nightwatch Lancer]]", "[[Kuva Elite Lancer]]", "[[Elite Lancer#Variants|Tusk Elite Lancer]]"}
         },
         ["Harpak"] = {
             BurstFireRate = 5,
@@ -17458,12 +20492,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 25,
                 Time = 24,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {Name = "Gallium", Type = "Ressource", Count = 5},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 6000},
-                    {Name = "Rubedo", Type = "Ressource", Count = 3600}
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 6000
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 3600
+                }}
             },
             Disposition = 1.55,
             Image = "Harpak.png",
@@ -17520,12 +20565,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 5},
-                    {Name = "Récupération", Type = "Ressource", Count = 50000},
-                    {Name = "Circuits", Type = "Ressource", Count = 5000},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 50000
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.2,
             Image = "Hema.png",
@@ -17535,7 +20591,9 @@ local WeaponData = {
             MaxAmmo = 60,
             Name = "Hema",
             NormalAttack = {
-                Damage = {["Viral"] = 47},
+                Damage = {
+                    ["Viral"] = 47
+                },
                 CritChance = 0.11,
                 CritMultiplier = 2,
                 StatusChance = 0.25,
@@ -17560,12 +20618,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 25,
                 Time = 24,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 6},
-                    {Name = "Circuits", Type = "Ressource", Count = 700},
-                    {Name = "Récupération", Type = "Ressource", Count = 1000},
-                    {Name = "Rubedo", Type = "Ressource", Count = 1200}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 6
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 700
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 1200
+                }}
             },
             Disposition = 1.42,
             Image = "Hind.png",
@@ -17680,15 +20749,23 @@ local WeaponData = {
                 BPCost = 15000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {
-                        Name = "Injecteur de Détonite",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {Name = "Nano Spores", Type = "Ressource", Count = 5000},
-                    {Name = "Ferrite", Type = "Ressource", Count = 5000},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Injecteur de Détonite",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 100,
             Class = "Fusil",
@@ -17702,8 +20779,10 @@ local WeaponData = {
             MaxAmmo = 750,
             Name = "Ignis",
             NormalAttack = {
-		AmmoCost = 0.5,
-                Damage = {["Feu"] = 33},
+                AmmoCost = 0.5,
+                Damage = {
+                    ["Feu"] = 33
+                },
                 CritChance = 0.11,
                 CritMultiplier = 2,
                 StatusChance = 0.27,
@@ -17715,9 +20794,7 @@ local WeaponData = {
             Traits = {"Grineer"},
             Trigger = "Maintenu",
             Type = "Principale",
-            Users = {
-                "[[Scorch]]", "[[Hyekka Master]]", "[[Bourreaux/Zura|Zura]]"
-            }
+            Users = {"[[Scorch]]", "[[Hyekka Master]]", "[[Bourreaux/Zura|Zura]]"}
         },
         ["Ignis Wraith"] = {
             Cost = {
@@ -17725,15 +20802,23 @@ local WeaponData = {
                 BPCost = 15000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {
-                        Name = "Injecteur de Détonite",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {Name = "Ferrite", Type = "Ressource", Count = 10000},
-                    {Name = "Rubedo", Type = "Ressource", Count = 5000},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 3}
-                }
+                Parts = {{
+                    Name = "Injecteur de Détonite",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 10000
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 3
+                }}
             },
             Accuracy = 100,
             Class = "Fusil",
@@ -17749,7 +20834,9 @@ local WeaponData = {
             Name = "Ignis Wraith",
             NormalAttack = {
                 AmmoCost = 0.5,
-                Damage = {["Feu"] = 35},
+                Damage = {
+                    ["Feu"] = 35
+                },
                 CritChance = 0.17,
                 CritMultiplier = 2.5,
                 StatusChance = 0.29,
@@ -17769,28 +20856,29 @@ local WeaponData = {
                 MarketCost = 240,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {
-                        Name = "Injecteur de Détonite",
-                        Type = "Ressource",
-                        Count = 5
-                    },
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 10000
-                    },
-                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 5},
-                    {
-                        Name = "Condensateur Javlok",
-                        Type = "Ressource",
-                        Count = 6
-                    }
-                }
+                Parts = {{
+                    Name = "Injecteur de Détonite",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 10000
+                }, {
+                    Name = "Extrait de Nitain",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Condensateur Javlok",
+                    Type = "Ressource",
+                    Count = 6
+                }}
             },
             AreaAttack = {
                 AttackName = "Explosion",
-                Damage = {["Feu"] = 50},
+                Damage = {
+                    ["Feu"] = 50
+                },
                 CritChance = 0.2,
                 CritMultiplier = 2,
                 StatusChance = 0.25,
@@ -17799,7 +20887,9 @@ local WeaponData = {
             ChargeAttack = {
                 AttackName = "Projectile Impact",
                 Accuracy = 100,
-                Damage = {["Feu"] = 230},
+                Damage = {
+                    ["Feu"] = 230
+                },
                 CritChance = 0.2,
                 CritMultiplier = 2,
                 StatusChance = 0.25,
@@ -17820,7 +20910,9 @@ local WeaponData = {
             Reload = 1.9,
             SecondaryAreaAttack = {
                 AttackName = "Spear Explosion",
-                Damage = {["Feu"] = 300},
+                Damage = {
+                    ["Feu"] = 300
+                },
                 CritChance = 0.2,
                 CritMultiplier = 2,
                 StatusChance = 0.25,
@@ -17857,12 +20949,23 @@ local WeaponData = {
                 MarketCost = 125,
                 Rush = 30,
                 Time = 24,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 2},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 400},
-                    {Name = "Récupération", Type = "Ressource", Count = 900},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 100}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 400
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 100
+                }}
             },
             Disposition = 1.28,
             Family = "Karak",
@@ -17931,11 +21034,19 @@ local WeaponData = {
                 Credits = 25000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Class = "Fusil",
             Conclave = true,
@@ -17977,12 +21088,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 5},
-                    {Name = "Ferrite", Type = "Ressource", Count = 6200},
-                    {Name = "Hexenon", Type = "Ressource", Count = 300},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 6200
+                }, {
+                    Name = "Hexenon",
+                    Type = "Ressource",
+                    Count = 300
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.0,
             Image = "Komorex.png",
@@ -18002,7 +21124,10 @@ local WeaponData = {
                 CritMultiplier = 2.1,
                 StatusChance = 0.35,
                 FireRate = 6.0,
-                Falloff = {StartRange = 400, EndRange = 600},
+                Falloff = {
+                    StartRange = 400,
+                    EndRange = 600
+                },
                 ShotType = "Hit-Scan",
                 Trigger = "Semi-Auto"
             },
@@ -18017,7 +21142,9 @@ local WeaponData = {
                 FireRate = 1.5
             },
             AreaAttack = {
-                Damage = {["Viral"] = 66},
+                Damage = {
+                    ["Viral"] = 66
+                },
                 Radius = 3.5,
                 FireRate = 1.5
             },
@@ -18028,10 +21155,8 @@ local WeaponData = {
             Trigger = "Semi-Auto",
             Type = "Principale",
             Users = {"[[Heqet Amalgame]]"},
-            Zoom = {
-                "Zoom 2x (-50% Recul, +2m Pénétration)",
-                "Zoom 3.5x (+100% Dégâts, +3.5m Rayon d'Explosion, -75% Cadence de Tir)"
-            }
+            Zoom = {"Zoom 2x (-50% Recul, +2m Pénétration)",
+                    "Zoom 3.5x (+100% Dégâts, +3.5m Rayon d'Explosion, -75% Cadence de Tir)"}
         },
         ["Lanka"] = {
             Cost = {
@@ -18039,17 +21164,30 @@ local WeaponData = {
                 BPCost = 15000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 5},
-                    {Name = "Gallium", Type = "Ressource", Count = 20},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 600},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 20
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 100,
             ChargeAttack = {
                 AttackName = "Tir Chargé",
-                Damage = {["Électrique"] = 525},
+                Damage = {
+                    ["Électrique"] = 525
+                },
                 ChargeTime = 1,
                 CritChance = 0.25,
                 CritMultiplier = 2,
@@ -18069,13 +21207,18 @@ local WeaponData = {
             Name = "Lanka",
             NormalAttack = {
                 AttackName = "Tir non chargé",
-                Damage = {["Électrique"] = 200},
+                Damage = {
+                    ["Électrique"] = 200
+                },
                 CritChance = 0.25,
                 CritMultiplier = 2,
                 StatusChance = 0.25,
                 ChargeTime = 0.33,
                 FireRate = 1,
-                Falloff = {StartRange = 400, EndRange = 600},
+                Falloff = {
+                    StartRange = 400,
+                    EndRange = 600
+                },
                 ShotType = "Projectile",
                 ShotSpeed = 200
             },
@@ -18085,16 +21228,10 @@ local WeaponData = {
             Traits = {"Corpus"},
             Trigger = "Chargé",
             Type = "Principale",
-            Users = {
-                "[[Homme d'Équipage Sniper]]", "[[Le Sergent]]",
-                "[[Homme d'Équipage Zéro]]", "[[Zéro Corrompu]]",
-                "Agents de [[La Séquence Perrin]]"
-            },
-            Zoom = {
-                "3x (+20% Chance de Coup Critique)",
-                "5x (+30% Chance de Coup Critique)",
-                "8x (+50% Chance de Coup Critique)"
-            }
+            Users = {"[[Homme d'Équipage Sniper]]", "[[Le Sergent]]", "[[Homme d'Équipage Zéro]]",
+                     "[[Zéro Corrompu]]", "Agents de [[La Séquence Perrin]]"},
+            Zoom = {"3x (+20% Chance de Coup Critique)", "5x (+30% Chance de Coup Critique)",
+                    "8x (+50% Chance de Coup Critique)"}
         },
         ["Latron"] = {
             Accuracy = 28.6,
@@ -18106,16 +21243,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 5},
-                    {Name = "Plastides", Type = "Ressource", Count = 800},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 1000
-                    },
-                    {Name = "Récupération", Type = "Ressource", Count = 900}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 900
+                }}
             },
             Disposition = 1.4,
             Family = "Latron",
@@ -18152,12 +21296,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Crosse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 1.3,
             ExilusPolarity = "V",
@@ -18194,11 +21349,19 @@ local WeaponData = {
                 Credits = 25000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 1.35,
             ExilusPolarity = "Bar",
@@ -18234,19 +21397,29 @@ local WeaponData = {
                 MarketCost = 235,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 10},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 8200
-                    }, {Name = "Cryotique", Type = "Ressource", Count = 2400},
-                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 3}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 8200
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 2400
+                }, {
+                    Name = "Extrait de Nitain",
+                    Type = "Ressource",
+                    Count = 3
+                }}
             },
             Accuracy = 16.7,
             AreaAttack = {
-                Damage = {["Glace"] = 10},
+                Damage = {
+                    ["Glace"] = 10
+                },
                 Radius = 8,
                 AttackName = "Initial Burst"
             },
@@ -18254,7 +21427,9 @@ local WeaponData = {
                 AttackName = "Tir Chargé",
                 CritChance = 0.5,
                 CritMultiplier = 2,
-                Damage = {["Impact"] = 50},
+                Damage = {
+                    ["Impact"] = 50
+                },
                 ChargeTime = 1.2,
                 StatusChance = 0.05,
                 FireRate = 1,
@@ -18274,21 +21449,19 @@ local WeaponData = {
             Polarities = {"Bar", "Bar"},
             Reload = 0.6,
             SecondaryAreaAttack = {
-                Damage = {["Explosif"] = 660},
+                Damage = {
+                    ["Explosif"] = 660
+                },
                 Radius = 6,
                 AttackName = "Bubble Collapse"
             },
             Traits = {"Corpus"},
             Trigger = "Chargé",
             Type = "Principale",
-            ComparisonDisplay = {
-                {
-                    Name = "Lenz",
-                    Attacks = {
-                        "ChargeAttack", "AreaAttack", "SecondaryAreaAttack"
-                    }
-                }
-            }
+            ComparisonDisplay = {{
+                Name = "Lenz",
+                Attacks = {"ChargeAttack", "AreaAttack", "SecondaryAreaAttack"}
+            }}
         },
         ["Miter"] = {
             Accuracy = 100,
@@ -18315,12 +21488,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Lame", Type = "Objet", Count = 1},
-                    {Name = "Poignée", Type = "Objet", Count = 1},
-                    {Name = "Châssis Arme", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Lame",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis Arme",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 1.55,
             Image = "miter.png",
@@ -18430,7 +21614,9 @@ local WeaponData = {
         ["Quanta Mutaliste"] = {
             AreaAttack = {
                 AttackName = "Orbe Infesté",
-                Damage = {["Radiation"] = 20},
+                Damage = {
+                    ["Radiation"] = 20
+                },
                 StatusChance = 1,
                 AmmoCost = 5,
                 ShotType = "Projectile",
@@ -18444,12 +21630,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 5},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 15000},
-                    {Name = "Circuits", Type = "Ressource", Count = 1200},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 15000
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.55,
             Family = "Quanta",
@@ -18479,7 +21676,9 @@ local WeaponData = {
                 Accuracy = 25,
                 Reload = 3.0,
                 AttackName = "Explosion Orbe",
-                Damage = {["Poison"] = 100},
+                Damage = {
+                    ["Poison"] = 100
+                },
                 CritChance = 0.05,
                 CritMultiplier = 1.5,
                 StatusChance = 0.0,
@@ -18499,12 +21698,23 @@ local WeaponData = {
                 MarketCost = 125,
                 Rush = 25,
                 Time = 24,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 3},
-                    {Name = "Gallium", Type = "Ressource", Count = 4},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 3000},
-                    {Name = "Rubedo", Type = "Ressource", Count = 1200}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 3000
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 1200
+                }}
             },
             Disposition = 1.05,
             Family = "Nagantaka",
@@ -18561,23 +21771,32 @@ local WeaponData = {
                 BPCost = 15000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {
-                        Name = "Injecteur de Détonite",
-                        Type = "Ressource",
-                        Count = 5
-                    },
-                    {Name = "Récupération", Type = "Ressource", Count = 5000},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 600},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Injecteur de Détonite",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 5000
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Image = "OgrisNew.png",
             Introduced = "8.0",
             Accuracy = 100,
             ChargeAttack = {
                 AttackName = "Rocket Impact",
-                Damage = {["Explosif"] = 100},
+                Damage = {
+                    ["Explosif"] = 100
+                },
                 CritChance = 0.05,
                 CritMultiplier = 2,
                 StatusChance = 0.35,
@@ -18588,7 +21807,9 @@ local WeaponData = {
             },
             AreaAttack = {
                 AttackName = "Rocket Explosion",
-                Damage = {["Explosif"] = 600},
+                Damage = {
+                    ["Explosif"] = 600
+                },
                 Radius = 6
             },
             Disposition = 1.3,
@@ -18601,10 +21822,7 @@ local WeaponData = {
             Traits = {"Grineer"},
             Trigger = "Chargé",
             Type = "Principale",
-            Users = {
-                "[[Bombard]]", "[[Corrupted Bombard]]", "[[Executioner Gorth]]",
-                "[[Nightwatch Bombard]]"
-            }
+            Users = {"[[Bombard]]", "[[Corrupted Bombard]]", "[[Executioner Gorth]]", "[[Nightwatch Bombard]]"}
         },
         ["Ogris Kuva"] = {
             Accuracy = 100,
@@ -18635,7 +21853,9 @@ local WeaponData = {
             },
             AreaAttack = {
                 AttackName = "Rocket Explosion",
-                Damage = {["Explosif"] = 600},
+                Damage = {
+                    ["Explosif"] = 600
+                },
                 Radius = 6
             },
             Polarities = {"V"},
@@ -18652,15 +21872,31 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 5},
-                    {Name = "Gallium", Type = "Ressource", Count = 20},
-                    {Name = "Cryotique", Type = "Ressource", Count = 600},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 20
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 100,
-            AreaAttack = {Damage = {["Magnétique"] = 400}, Radius = 5},
+            AreaAttack = {
+                Damage = {
+                    ["Magnétique"] = 400
+                },
+                Radius = 5
+            },
             ChargeAttack = {
                 AttackName = "Tir Chargé",
                 Damage = {
@@ -18696,7 +21932,12 @@ local WeaponData = {
         },
         ["Opticor Vandal"] = {
             Accuracy = 100,
-            AreaAttack = {Damage = {["Magnétique"] = 200}, Radius = 5},
+            AreaAttack = {
+                Damage = {
+                    ["Magnétique"] = 200
+                },
+                Radius = 5
+            },
             ChargeAttack = {
                 AttackName = "Tir Chargé",
                 Damage = {
@@ -18739,12 +21980,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 1},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 600},
-                    {Name = "Hikou", Type = "Arme", Count = 1},
-                    {Name = "Miter", Type = "Arme", Count = 1}
-                }
+                Parts = {{
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Hikou",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Miter",
+                    Type = "Arme",
+                    Count = 1
+                }}
             },
             Disposition = 1.4,
             Image = "Panthera.png",
@@ -18791,8 +22043,14 @@ local WeaponData = {
             Accuracy = 80,
             AreaAttack = {
                 AttackName = "Attaque Radial",
-                Damage = {["Tranchant"] = 20},
-                Falloff = {StartRange = 0, EndRange = 1.6, Reduction = 0.2},
+                Damage = {
+                    ["Tranchant"] = 20
+                },
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 1.6,
+                    Reduction = 0.2
+                },
                 Radius = 1.6
             },
             Class = "Fusil",
@@ -18801,12 +22059,23 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Crosse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 1.15,
             ExilusPolarity = "V",
@@ -18835,7 +22104,9 @@ local WeaponData = {
             Reload = 2.4,
             SecondaryAttack = {
                 Accuracy = 100,
-                Damage = {["Tranchant"] = 100},
+                Damage = {
+                    ["Tranchant"] = 100
+                },
                 CritChance = 0.26,
                 CritMultiplier = 2,
                 StatusChance = 0.38,
@@ -18858,12 +22129,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 5},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 15000},
-                    {Name = "Circuits", Type = "Ressource", Count = 1200},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 15000
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.315,
             ExilusPolarity = "Bar",
@@ -18874,7 +22156,9 @@ local WeaponData = {
             Name = "Paracyst",
             NormalAttack = {
                 Accuracy = 50,
-                Damage = {["Poison"] = 33},
+                Damage = {
+                    ["Poison"] = 33
+                },
                 CritChance = 0.1,
                 CritMultiplier = 2,
                 StatusChance = 0.3,
@@ -18888,7 +22172,9 @@ local WeaponData = {
             SecondaryAttack = {
                 AttackName = "Harpon Infesté",
                 Accuracy = 50,
-                Damage = {["Poison"] = 33},
+                Damage = {
+                    ["Poison"] = 33
+                },
                 CritChance = 0.1,
                 CritMultiplier = 2,
                 StatusChance = 0.3,
@@ -18927,12 +22213,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 45,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 3},
-                    {Name = "Plastides", Type = "Ressource", Count = 600},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 700},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 2000}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 700
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 2000
+                }}
             },
             Disposition = 1.2,
             Family = "Paris",
@@ -18961,29 +22258,36 @@ local WeaponData = {
             Trigger = "Chargé",
             Type = "Principale",
             Users = {"[[Junction|Trinity Specter]]"},
-            ComparisonDisplay = {
-                {Name = "[NAME] (Déchargé)", Attacks = {"NormalAttack"}},
-                {Name = "[NAME] (Chargé)", Attacks = {"ChargeAttack"}}
-            }
+            ComparisonDisplay = {{
+                Name = "[NAME] (Déchargé)",
+                Attacks = {"NormalAttack"}
+            }, {
+                Name = "[NAME] (Chargé)",
+                Attacks = {"ChargeAttack"}
+            }}
         },
         ["Paris Prime"] = {
             Cost = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {
-                        Name = "Partie Supérieure",
-                        Type = "Partie Prime",
-                        Count = 1
-                    },
-                    {
-                        Name = "Partie Inférieure",
-                        Type = "Partie Prime",
-                        Count = 1
-                    }, {Name = "Poignée", Type = "Partie Prime", Count = 1},
-                    {Name = "Crosse", Type = "Partie Prime", Count = 1}
-                }
+                Parts = {{
+                    Name = "Partie Supérieure",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Partie Inférieure",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }}
             },
             Accuracy = "16.7 (100 aimed)",
             ChargeAttack = {
@@ -19029,10 +22333,13 @@ local WeaponData = {
             Traits = {"Prime", "Never Vaulted"},
             Trigger = "Chargé",
             Type = "Principale",
-            ComparisonDisplay = {
-                {Name = "[NAME] (Déchargé)", Attacks = {"NormalAttack"}},
-                {Name = "[NAME] (Chargé)", Attacks = {"ChargeAttack"}}
-            }
+            ComparisonDisplay = {{
+                Name = "[NAME] (Déchargé)",
+                Attacks = {"NormalAttack"}
+            }, {
+                Name = "[NAME] (Chargé)",
+                Attacks = {"ChargeAttack"}
+            }}
         },
         ["Pennant"] = {
             BlockAngle = 55,
@@ -19054,12 +22361,23 @@ local WeaponData = {
                 MarketCost = 275,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Tellure", Type = "Ressource", Count = 2},
-                    {Name = "Rubedo", Type = "Ressource", Count = 2100},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 1550},
-                    {Name = "Ferrite", Type = "Ressource", Count = 5300}
-                }
+                Parts = {{
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 2100
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 1550
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 5300
+                }}
             },
             Disposition = 1.0,
             Family = "Pennant",
@@ -19094,15 +22412,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 3
-                    }, {Name = "Circuits", Type = "Ressource", Count = 1000},
-                    {Name = "Ferrite", Type = "Ressource", Count = 1200},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 400}
-                }
+                Parts = {{
+                    Name = "Module de Contrôle",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 400
+                }}
             },
             Disposition = 1.3,
             Family = "Penta",
@@ -19115,7 +22441,10 @@ local WeaponData = {
             NoiseLevel = "Silencieux",
             NormalAttack = {
                 AttackName = "Grenade Impact",
-                Damage = {["Impact"] = 75, ["Explosif"] = 350},
+                Damage = {
+                    ["Impact"] = 75,
+                    ["Explosif"] = 350
+                },
                 CritChance = 0.1,
                 CritMultiplier = 2,
                 StatusChance = 0.1,
@@ -19126,7 +22455,9 @@ local WeaponData = {
             Reload = 2.5,
             SecondaryAttack = {
                 AttackName = "Grenade Detonation",
-                Damage = {["Explosif"] = 350},
+                Damage = {
+                    ["Explosif"] = 350
+                },
                 Radius = 5,
                 Trigger = "Detonate"
             },
@@ -19136,17 +22467,25 @@ local WeaponData = {
             Users = {"[[Penta Ranger]]", "[[M-W.A.M.]]"}
         },
         ["Penta Carmine"] = {
-        	Cost = {
+            Cost = {
                 Credits = 20000,
                 BPCost = nil,
                 MarketCost = nil,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 100,
             Class = "Lanceur",
@@ -19161,7 +22500,10 @@ local WeaponData = {
             NoiseLevel = "Silencieux",
             NormalAttack = {
                 AttackName = "Impact de Grenade",
-                Damage = {["Impact"] = 75, ["Explosif"] = 350},
+                Damage = {
+                    ["Impact"] = 75,
+                    ["Explosif"] = 350
+                },
                 CritChance = 0.1,
                 CritMultiplier = 2,
                 StatusChance = 0.1,
@@ -19172,7 +22514,9 @@ local WeaponData = {
             Reload = 2.5,
             SecondaryAttack = {
                 AttackName = "Détonation de Grenade",
-                Damage = {["Explosif"] = 350},
+                Damage = {
+                    ["Explosif"] = 350
+                },
                 Radius = 5,
                 Trigger = "Détonation"
             },
@@ -19199,7 +22543,10 @@ local WeaponData = {
             NoiseLevel = "Silencieux",
             NormalAttack = {
                 AttackName = "Grenade Impact",
-                Damage = {["Impact"] = 75, ["Explosif"] = 300},
+                Damage = {
+                    ["Impact"] = 75,
+                    ["Explosif"] = 300
+                },
                 CritChance = 0.26,
                 CritMultiplier = 2,
                 StatusChance = 0.26,
@@ -19211,7 +22558,9 @@ local WeaponData = {
             Reload = 2.5,
             SecondaryAttack = {
                 AttackName = "Grenade Detonation",
-                Damage = {["Explosif"] = 300},
+                Damage = {
+                    ["Explosif"] = 300
+                },
                 CritChance = 0.26,
                 CritMultiplier = 2,
                 StatusChance = 0.26,
@@ -19233,12 +22582,23 @@ local WeaponData = {
                 MarketCost = 195,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {Name = "Coeur de Sentient Intact",Type = "Ressource",Count = 10}, 
-                    {Name = "Plastides", Type = "Ressource", Count = 650},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 12500}
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Coeur de Sentient Intact",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 650
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 12500
+                }}
             },
             Disposition = 1.0,
             Image = "Phantasma.png",
@@ -19248,7 +22608,10 @@ local WeaponData = {
             MaxAmmo = 275,
             Name = "Phantasma",
             NormalAttack = {
-                Damage = {["Impact"] = 25, ["Radiation"] = 50},
+                Damage = {
+                    ["Impact"] = 25,
+                    ["Radiation"] = 50
+                },
                 CritChance = 0.03,
                 CritMultiplier = 1.5,
                 StatusChance = 0.37,
@@ -19260,7 +22623,10 @@ local WeaponData = {
             },
             ChargeAttack = {
                 AttackName = "Bombe de Plasma",
-                Damage = {["Impact"] = 15, ["Radiation"] = 73},
+                Damage = {
+                    ["Impact"] = 15,
+                    ["Radiation"] = 73
+                },
                 FireRate = 2.00,
                 AmmoCost = 11,
                 Radius = 5,
@@ -19376,7 +22742,10 @@ local WeaponData = {
             MaxAmmo = 540,
             Name = "Tetra Prisma",
             NormalAttack = {
-                Damage = {["Impact"] = 7.6, ["Perforation"] = 30.4},
+                Damage = {
+                    ["Impact"] = 7.6,
+                    ["Perforation"] = 30.4
+                },
                 CritChance = 0.1,
                 CritMultiplier = 2,
                 StatusChance = 0.24,
@@ -19396,17 +22765,30 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 7},
-                    {Name = "Circuits", Type = "Ressource", Count = 1000},
-                    {Name = "Récupération", Type = "Ressource", Count = 7000},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 7
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 7000
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 100,
             AreaAttack = {
                 AttackName = "Cube (Hits enemy)",
-                Damage = {["Explosif"] = 250},
+                Damage = {
+                    ["Explosif"] = 250
+                },
                 AmmoCost = 10,
                 ShotType = "Projectile",
                 ShotSpeed = "???",
@@ -19423,7 +22805,9 @@ local WeaponData = {
             MaxAmmo = 540,
             Name = "Quanta",
             NormalAttack = {
-                Damage = {["Électrique"] = 20},
+                Damage = {
+                    ["Électrique"] = 20
+                },
                 CritChance = 0.16,
                 CritMultiplier = 2.2,
                 StatusChance = 0.16,
@@ -19436,7 +22820,9 @@ local WeaponData = {
             Reload = 2,
             SecondaryAreaAttack = {
                 AttackName = "Cube (Shot by player)",
-                Damage = {["Explosif"] = 600}
+                Damage = {
+                    ["Explosif"] = 600
+                }
             },
             Traits = {"Corpus"},
             Trigger = "Maintenu",
@@ -19447,7 +22833,9 @@ local WeaponData = {
             AreaAttack = {
                 AttackName = "Cube (Hits enemy)",
                 Accuracy = 25,
-                Damage = {["Explosif"] = 250},
+                Damage = {
+                    ["Explosif"] = 250
+                },
                 CritChance = 0.05,
                 CritMultiplier = 1.5,
                 StatusChance = 0.26,
@@ -19467,7 +22855,9 @@ local WeaponData = {
             MaxAmmo = 560,
             Name = "Quanta Vandal",
             NormalAttack = {
-                Damage = {["Électrique"] = 26},
+                Damage = {
+                    ["Électrique"] = 26
+                },
                 CritChance = 0.22,
                 CritMultiplier = 2.4,
                 StatusChance = 0.3,
@@ -19481,7 +22871,9 @@ local WeaponData = {
             SecondaryAreaAttack = {
                 AttackName = "Cube (Tir par le joueur)",
                 Accuracy = 25,
-                Damage = {["Explosif"] = 600},
+                Damage = {
+                    ["Explosif"] = 600
+                },
                 CritChance = 0.05,
                 CritMultiplier = 1.5,
                 StatusChance = 0.26,
@@ -19500,16 +22892,23 @@ local WeaponData = {
                 MarketCost = 210,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Grokdrul", Type = "Ressource", Count = 75},
-                    {
-                        Name = "Alliage de Fersteel",
-                        Type = "Ressource",
-                        Count = 15
-                    },
-                    {Name = "Récupération", Type = "Ressource", Count = 12450},
-                    {Name = "Capteurs Neuronaux", Type = "Ressource", Count = 5}
-                }
+                Parts = {{
+                    Name = "Grokdrul",
+                    Type = "Ressource",
+                    Count = 75
+                }, {
+                    Name = "Alliage de Fersteel",
+                    Type = "Ressource",
+                    Count = 15
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 12450
+                }, {
+                    Name = "Capteurs Neuronaux",
+                    Type = "Ressource",
+                    Count = 5
+                }}
             },
             Disposition = 1.25,
             Image = "Quartakk.png",
@@ -19596,16 +22995,23 @@ local WeaponData = {
                 MarketCost = 240,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Tellure", Type = "Ressource", Count = 4},
-                    {Name = "Rubedo", Type = "Ressource", Count = 6250},
-                    {Name = "Circuits", Type = "Ressource", Count = 3600},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 15350
-                    }
-                }
+                Parts = {{
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 6250
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 3600
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 15350
+                }}
             },
             Disposition = 1.1,
             Image = "Quellor.png",
@@ -19629,7 +23035,10 @@ local WeaponData = {
                 ShotType = "?"
             },
             SecondaryAttack = {
-                Damage = {["Impact"] = 600, ["Glace"] = 800},
+                Damage = {
+                    ["Impact"] = 600,
+                    ["Glace"] = 800
+                },
                 CritChance = 0.4,
                 CritMultiplier = 2.2,
                 StatusChance = 0.1,
@@ -19654,12 +23063,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Récupération", Type = "Ressource", Count = 3800},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 1300},
-                    {Name = "Rubedo", Type = "Ressource", Count = 900},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 3800
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 1300
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Accuracy = 13.3,
             Class = "Fusil de Sniper",
@@ -19684,7 +23104,10 @@ local WeaponData = {
                 StatusChance = 0.12,
                 PunchThrough = 1.0,
                 FireRate = 2.67,
-                Falloff = {StartRange = 400, EndRange = 600},
+                Falloff = {
+                    StartRange = 400,
+                    EndRange = 600
+                },
                 ShotType = "Hit-Scan"
             },
             Reload = 2.4,
@@ -19693,22 +23116,30 @@ local WeaponData = {
             Traits = {"Tenno"},
             Trigger = "Semi-Auto",
             Type = "Principale",
-            Zoom = {
-                "3.5x (+35% Multiplicateur de Critique)",
-                "6x (+50% Multiplicateur de Critique)"
-            }
+            Zoom = {"3.5x (+35% Multiplicateur de Critique)", "6x (+50% Multiplicateur de Critique)"}
         },
         ["Rubico Prime"] = {
             Cost = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Crosse", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Crosse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Accuracy = 13.3,
             Class = "Fusil de Sniper",
@@ -19732,7 +23163,10 @@ local WeaponData = {
                 StatusChance = 0.16,
                 PunchThrough = 1.0,
                 FireRate = 3.67,
-                Falloff = {StartRange = 400, EndRange = 600},
+                Falloff = {
+                    StartRange = 400,
+                    EndRange = 600
+                },
                 ShotType = "Hit-Scan"
             },
             Reload = 2.0,
@@ -19742,10 +23176,7 @@ local WeaponData = {
             Traits = {"Prime"},
             Trigger = "Semi-Auto",
             Type = "Principale",
-            Zoom = {
-                "2.5x (+35% Multiplicateur de Critique)",
-                "5.0x (+50% Multiplicateur de Critique)"
-            }
+            Zoom = {"2.5x (+35% Multiplicateur de Critique)", "5.0x (+50% Multiplicateur de Critique)"}
         },
         ["Scourge"] = {
             Cost = {
@@ -19754,16 +23185,29 @@ local WeaponData = {
                 MarketCost = 240,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 2},
-                    {Name = "Circuits", Type = "Ressource", Count = 2500},
-                    {Name = "Oxium", Type = "Ressource", Count = 350},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 2500}
-                }
+                Parts = {{
+                    Name = "Extrait de Nitain",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 2500
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 350
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 2500
+                }}
             },
             AreaAttack = {
                 AttackName = "Explosion",
-                Damage = {["Corrosif"] = 30},
+                Damage = {
+                    ["Corrosif"] = 30
+                },
                 CritChance = 0.02,
                 CritMultiplier = 1.5,
                 StatusChance = 0.3
@@ -19780,7 +23224,9 @@ local WeaponData = {
             NormalAttack = {
                 AttackName = "Projectile Impact",
                 Accuracy = 100,
-                Damage = {["Corrosif"] = 70},
+                Damage = {
+                    ["Corrosif"] = 70
+                },
                 CritChance = 0.02,
                 CritMultiplier = 1.5,
                 StatusChance = 0.3,
@@ -19818,12 +23264,23 @@ local WeaponData = {
                 Credits = 30000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Châssis Arme", Type = "Objet", Count = 1},
-                    {Name = "Poignée", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Châssis Arme",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 1.0,
             Image = "Shedu.png",
@@ -19833,7 +23290,9 @@ local WeaponData = {
             MaxAmmo = 0,
             Name = "Shedu",
             NormalAttack = {
-                Damage = {["Feu"] = 71},
+                Damage = {
+                    ["Feu"] = 71
+                },
                 CritChance = 0.25,
                 CritMultiplier = 2.1,
                 StatusChance = 0.23,
@@ -19842,7 +23301,9 @@ local WeaponData = {
             },
             SecondaryAttack = {
                 AttackName = "Attaque Radiale",
-                Damage = {["Électrique"] = 87},
+                Damage = {
+                    ["Électrique"] = 87
+                },
                 Range = 5.5
             },
             Reload = 1,
@@ -19855,7 +23316,9 @@ local WeaponData = {
             Accuracy = 100,
             AreaAttack = {
                 AttackName = "Orb Merge",
-                Damage = {["Magnétique"] = 75}
+                Damage = {
+                    ["Magnétique"] = 75
+                }
             },
             Class = "Lanceur",
             Conclave = true,
@@ -19865,12 +23328,23 @@ local WeaponData = {
                 MarketCost = 210,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Ferrite", Type = "Ressource", Count = 1200},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 850},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 1},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 850
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 0.85,
             Family = "Simulor",
@@ -19881,7 +23355,9 @@ local WeaponData = {
             MaxAmmo = 72,
             Name = "Simulor",
             NormalAttack = {
-                Damage = {["Magnétique"] = 50},
+                Damage = {
+                    ["Magnétique"] = 50
+                },
                 AttackName = "Orb Damage",
                 FireRate = 3,
                 ShotType = "Projectile",
@@ -19892,7 +23368,9 @@ local WeaponData = {
             Reload = 3,
             SecondaryAttack = {
                 AttackName = "Orb Explosion",
-                Damage = {["Électrique"] = 75},
+                Damage = {
+                    ["Électrique"] = 75
+                },
                 StatusChance = 0.3,
                 CritChance = 0.12,
                 CritMultiplier = 2,
@@ -19907,12 +23385,23 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 5},
-                    {Name = "Plastides", Type = "Ressource", Count = 900},
-                    {Name = "Récupération", Type = "Ressource", Count = 1200},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 900}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 900
+                }}
             },
             Accuracy = 13.3,
             Class = "Fusil de Sniper",
@@ -19937,7 +23426,10 @@ local WeaponData = {
                 StatusChance = 0.12,
                 PunchThrough = 2.5,
                 FireRate = 2,
-                Falloff = {StartRange = 400, EndRange = 600},
+                Falloff = {
+                    StartRange = 400,
+                    EndRange = 600
+                },
                 ShotType = "Hit-Scan"
             },
             Polarities = {"V"},
@@ -19947,21 +23439,26 @@ local WeaponData = {
             Traits = {"Corpus"},
             Trigger = "Semi-Auto",
             Type = "Principale",
-            Zoom = {
-                "2.5x (+30% Dégâts Tir à la Tête)",
-                "6x (+50% Dégâts Tir à la Tête)"
-            }
+            Zoom = {"2.5x (+30% Dégâts Tir à la Tête)", "6x (+50% Dégâts Tir à la Tête)"}
         },
         ["Snipetron Vandal"] = {
             Cost = {
                 Credits = 25000,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Accuracy = 13.3,
             Class = "Fusil de Sniper",
@@ -19986,7 +23483,10 @@ local WeaponData = {
                 StatusChance = 0.16,
                 PunchThrough = 3,
                 FireRate = 2,
-                Falloff = {StartRange = 400, EndRange = 600},
+                Falloff = {
+                    StartRange = 400,
+                    EndRange = 600
+                },
                 ShotType = "Hit-Scan"
             },
             Polarities = {"V"},
@@ -19996,10 +23496,7 @@ local WeaponData = {
             Traits = {"Corpus", "Vandal"},
             Trigger = "Semi-Auto",
             Type = "Principale",
-            Zoom = {
-                "2.5x (+30% Dégâts Tir à la Tête)",
-                "6x (+50% Dégâts Tir à la Tête)"
-            }
+            Zoom = {"2.5x (+30% Dégâts Tir à la Tête)", "6x (+50% Dégâts Tir à la Tête)"}
         },
         ["Soma"] = {
             Accuracy = 28.6,
@@ -20011,12 +23508,23 @@ local WeaponData = {
                 MarketCost = 265,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 7},
-                    {Name = "Plastides", Type = "Ressource", Count = 850},
-                    {Name = "Rubedo", Type = "Ressource", Count = 1200},
-                    {Name = "Récupération", Type = "Ressource", Count = 8000}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 7
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 850
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 8000
+                }}
             },
             Disposition = 1.1,
             ExilusPolarity = "V",
@@ -20055,12 +23563,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Crosse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 0.75,
             Family = "Soma",
@@ -20093,13 +23612,20 @@ local WeaponData = {
         ["Sporothrix"] = {
             Accuracy = 100,
             AreaAttack = {
-            	CritChance = 0.01,
-            	CritMultiplier = 3,
-                Damage = {["Tranchant"] = 22, ["Viral"] = 19},
+                CritChance = 0.01,
+                CritMultiplier = 3,
+                Damage = {
+                    ["Tranchant"] = 22,
+                    ["Viral"] = 19
+                },
                 ExplosionDelay = 0.9,
-                Falloff = {StartRange = 0, EndRange = 1.7, Reduction = 0.1},
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 1.7,
+                    Reduction = 0.1
+                },
                 Radius = 1.7,
-                StatusChance = 0.53,
+                StatusChance = 0.53
             },
             Class = "Fusil de Sniper",
             Conclave = false,
@@ -20107,12 +23633,23 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1},
-                    {Name = "Support Crânien", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Support Crânien",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.1,
             ExilusPolarity = "Bar",
@@ -20132,7 +23669,11 @@ local WeaponData = {
                 },
                 CritChance = 0.01,
                 CritMultiplier = 3,
-                Falloff = {StartRange = 400, EndRange = 600, Reduction = 0.5},
+                Falloff = {
+                    StartRange = 400,
+                    EndRange = 600,
+                    Reduction = 0.5
+                },
                 FireRate = 1.83,
                 StatusChance = 0.53,
                 ShotType = "Hit-Scan",
@@ -20145,21 +23686,25 @@ local WeaponData = {
             Traits = {"Infesté"},
             Trigger = "Semi-Auto",
             Type = "Principale",
-            Zoom = {
-                "2.7x Zoom (+50% Dégâts Tir à la Tête)"
-            }
+            Zoom = {"2.7x Zoom (+50% Dégâts Tir à la Tête)"}
         },
 
         ["Stahlta"] = {
             Accuracy = 50,
             AreaAttack = {
                 AttackName = "Explosion Tir Chargé",
-                Damage = {["Radiation"] = 1200},
+                Damage = {
+                    ["Radiation"] = 1200
+                },
                 CritChance = 0.4,
                 CritMultiplier = 3,
                 StatusChance = 0.5,
                 FireRate = 0.667,
-                Falloff = {StartRange = 0, EndRange = 7.2, Reduction = 0.7},
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 7.2,
+                    Reduction = 0.7
+                },
                 Radius = 7.2
             },
             Class = "Fusil",
@@ -20186,11 +23731,19 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 0.85,
             ExilusPolarity = "V",
@@ -20231,12 +23784,23 @@ local WeaponData = {
                 MarketCost = 230,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Ferrite", Type = "Ressource", Count = 15000},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 8000},
-                    {Name = "Capteurs Neuronaux", Type = "Ressource", Count = 3},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 15000
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 8000
+                }, {
+                    Name = "Capteurs Neuronaux",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.1,
             ExilusPolarity = "Bar",
@@ -20290,12 +23854,23 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Crosse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 1,
             ExilusPolarity = "V",
@@ -20348,16 +23923,23 @@ local WeaponData = {
                 BPCost = 15000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 7},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 1000
-                    },
-                    {Name = "Récupération", Type = "Ressource", Count = 7000},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 7
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 1000
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 7000
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 14.3,
             Class = "Fusil",
@@ -20428,12 +24010,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 2},
-                    {Name = "Récupération", Type = "Ressource", Count = 800},
-                    {Name = "Rubedo", Type = "Ressource", Count = 200},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 200
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 28.6,
             BurstFireRate = 3.33,
@@ -20474,12 +24067,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Crosse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 1.0,
             Family = "Sybaris",
@@ -20518,12 +24122,23 @@ local WeaponData = {
                 BPCost = 50000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 5},
-                    {Name = "Récupération", Type = "Ressource", Count = 30000},
-                    {Name = "Circuits", Type = "Ressource", Count = 3500},
-                    {Name = "Forma", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 30000
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 3500
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.31,
             ExilusPolarity = "V",
@@ -20534,7 +24149,9 @@ local WeaponData = {
             MaxAmmo = 540,
             Name = "Synapse",
             NormalAttack = {
-                Damage = {["Corrosif"] = 20},
+                Damage = {
+                    ["Corrosif"] = 20
+                },
                 CritChance = 0.39,
                 CritMultiplier = 2.7,
                 StatusChance = 0.13,
@@ -20552,7 +24169,9 @@ local WeaponData = {
             Accuracy = 100,
             AreaAttack = {
                 AttackName = "Orb Merge",
-                Damage = {["Magnétique"] = 50}
+                Damage = {
+                    ["Magnétique"] = 50
+                }
             },
             Class = "Lanceur",
             Conclave = true,
@@ -20565,7 +24184,9 @@ local WeaponData = {
             MaxAmmo = 96,
             Name = "Simulor Synoid",
             NormalAttack = {
-                Damage = {["Magnétique"] = 20},
+                Damage = {
+                    ["Magnétique"] = 20
+                },
                 AttackName = "Orb Damage",
                 FireRate = 3.33,
                 ShotType = "Projectile",
@@ -20575,7 +24196,9 @@ local WeaponData = {
             Reload = 2,
             SecondaryAttack = {
                 AttackName = "Orb Explosion",
-                Damage = {["Électrique"] = 75},
+                Damage = {
+                    ["Électrique"] = 75
+                },
                 StatusChance = 0.35,
                 CritChance = 0.14,
                 CritMultiplier = 2,
@@ -20599,7 +24222,10 @@ local WeaponData = {
             MaxAmmo = 540,
             Name = "Boltor Telos",
             NormalAttack = {
-                Damage = {["Impact"] = 3, ["Perforation"] = 27},
+                Damage = {
+                    ["Impact"] = 3,
+                    ["Perforation"] = 27
+                },
                 CritChance = 0.3,
                 CritMultiplier = 2.4,
                 StatusChance = 0.16,
@@ -20614,392 +24240,457 @@ local WeaponData = {
             Trigger = "Auto",
             Type = "Principale"
         },
-        
+
         ["Agendus - Principe"] = {
-		Introduced = "30.5",
-		BlockAngle = 90,
-		Class = "Épée et Bouclier",
-		ComboDur = 5,
-		Conclave = true,
-		Disposition = 0.5,
-		FollowThrough = 0.6,
-		HeavyAttack = 1300,
-		HeavyRadialDmg = 1040,
-		HeavySlamAttack = 1040,
-		HeavySlamRadius = 10,
-		Mastery = 0,
-		MeleeRange = 2.6,
-		Name = "Agendus - Principe",
-		Image = "Agendus - Principe.png",
-		NormalAttack = {
-			CritChance = 0.24,
-			CritMultiplier = 2,
-			Damage = {["Impact"] = 120, ["Électrique"] = 140},
-			FireRate = 0.92,
-			StatusChance = 0.3
-		},
-		Polarities = {},
-		SlamAttack = 780,
-		SlamElement = "Impact",
-		SlamRadialDmg = 260,
-		SlamRadialElement = "Impact",
-		SlamRadialProc = "Impact",
-		SlamRadius = 6,
-		SlideAttack = 260,
-		StancePolarity = "Madurai",
-		Traits = {"Corpus", "Principe"},
-		Type = "Mêlée",
-		WindUp = 1 
-	},
-	["Arca Plasmor - Principe"] = {
-		Accuracy = 9.1,
-		Class = "Fusil à Pompe",
-		Disposition = 0.5,
-		ExilusPolarity = "V",
-		Introduced = "30.5",
-		Magazine = 10,
-		Mastery = 16,
-		MaxAmmo = 40,
-		Name = "Arca Plasmor - Principe",
-		Image = "Arca Plasmor - Principe.png",
-		NormalAttack = {
-			CritChance = 0.22,
-			CritMultiplier = 2.0,
-			Damage = {["Radiation"] = 760},
-			Falloff = {EndRange = 36, Reduction = 0.6667, StartRange = 18},
-			FireRate = 1.0,
-			Range = 36,
-			ShotSpeed = 60,
-			ShotType = "Projectile",
-			StatusChance = 0.34 
-		},
-		Polarities = { "V", "V" },
-		Reload = 3.0,
-		Traits = {"Corpus", "Principe"},
-		Family = "Arca Plasmor",
-		Trigger = "Semi-Auto",
-		Type = "Principale",
-	},
-	["Cycron - Principe"] = {
-		Accuracy = 100,
-		Class = "Pistolet",
-		Disposition = 0.5,
-		Introduced = "30.5",
-		Magazine = 40,
-		Mastery = 14,
-		ExilusPolarity = "Bar",
-		Polarities = {"Bar", "Bar"},
-		Name = "Cycron - Principe",
-		Image = "Cycron - Principe.png",
-		NormalAttack = {
-			AmmoCost = 0.5,
-			CritChance = 0.20,
-			CritMultiplier = 1.8,
-			Damage = {["Feu"] = 22},
-			FireRate = 12,
-			PunchThrough = 1,
-			Range = 28,
-			ShotType = "Décharge",
-			StatusChance = 0.4 
-		},
-		Reload = 40,
-		ReloadDelay = 1,
-		ReloadStyle = "Régénération",
-		Traits = {"Corpus", "Principe"},
-		Family = "Cycron",
-		Trigger = "Continue",
-		Type = "Secondaire" 
-	},
-	["Detron - Principe"] = {
-		Accuracy = 20,
-		Class = "Sidearm Fusil à Pompe",
-		Disposition = 0.5,
-		ExilusPolarity = "V",
-		Family = "Detron",
-		Introduced = "30.5",
-		Magazine = 6,
-		Mastery = 16,
-		MaxAmmo = 210,
-		Name = "Detron - Principe",
-		Image = "Detron - Principe.png",
-		NormalAttack = {
-			CritChance = 0.18,
-			CritMultiplier = 2.0,
-			Damage = {["Radiation"] = 26},
-			Falloff = {EndRange = 22, Reduction = 0.625, StartRange = 13},
-			FireRate = 3.33,
-			Multishot = 10,
-			ShotType = "Projectile",
-			StatusChance = 0.10 
-		},
-		Polarities = {},
-		Reload = 1.05,
-		Traits = {"Corpus", "Principe"},
-		Trigger = "Semi-Auto",
-		Type = "Secondaire" 
-	},
-	["Diplos - Principe"] = {
-		Introduced = "30.5",
-		Accuracy = 100,
-		Class = "Doubles Pistolets",
-		Conclave = true,
-		Disposition = 0.5,
-		ExilusPolarity = "V",
-		Magazine = 92,
-		Mastery = 16,
-		MaxAmmo = 460,
-		Name = "Diplos - Principe",
-		Image = "Diplos - Principe.png",
-		NoiseLevel = "Bruyant",
-		NormalAttack = {
-			CritChance = 0.36,
-			CritMultiplier = 2.2,
-			Damage = {["Impact"] = 11.2, ["Perforation"]= 9, ["Tranchant"] = 7.8},
-			FireRate = 9.67,
-			ShotType = "Projectile",
-			StatusChance = 0.14
-		},
-		Polarities = { "V" },
-		Reload = 2.8,
-		Traits = {"Corpus", "Principe"},
-		Trigger = "Auto",
-		Type = "Secondaire" 
-	},
-	["Envoi - Principe"] = {
-		Accuracy = 100,
-		Attack5 = {
-			AttackName = "Explosion de Roquette",
-			Damage = {["Glace"] = 640},
-			Falloff = {EndRange = 8, Reduction = 0.8, StartRange = 0},
-			Radius = 8 
-		},
-		Class = "Lanceur",
-		Disposition = 0.5,
-		ExilusPolarity = "Bar",
-		Magazine = 8,
-		Mastery = 16,
-		MaxAmmo = 32,
-		Name = "Envoi - Principe",
-		Image = "Envoi - Principe.png",
-		NormalAttack = {
-			AttackName = "Impact de Grenade",
-			CritChance = 0.28,
-			CritMultiplier = 2.6,
-			Damage = {Impact = 100},
-			FireRate = 0.83,
-			ShotSpeed = "?",
-			ShotType = "Projectile",
-			StatusChance = 0.24 
-		},
-		Reload = 4,
-		ReloadStyle = "ByRound",
-		Traits = {"Corpus", "Principe"},
-		Trigger = "Auto",
-		Type = "Principale",
-	},
-	["Exec - Principe"] = {
-		Introduced = "30.5",
-		BlockAngle = 55,
-		Class = "Lame Lourde",
-		ComboDur = 5,
-		Conclave = true,
-		Disposition = 0.5,
-		FollowThrough = 0.4,
-		HeavyAttack = 1140,
-		HeavyRadialDmg = 950,
-		HeavySlamAttack = 950,
-		HeavySlamRadius = 4,
-		Mastery = 16,
-		MeleeRange = 2.8,
-		Name = "Exec - Principe",
-		Image = "Exec - Principe.png",
-		NormalAttack = {
-			CritChance = 0.38,
-			CritMultiplier = 2.4,
-			Damage = {["Impact"] = 102.6, ["Tranchant"] = 87.4},
-			FireRate = 1,
-			StatusChance = 0.22
-		},
-		Polarities = {},
-		SlamAttack = 570,
-		SlamRadialDmg = 190,
-		SlamRadialElement = "Impact",
-		SlamRadialProc = "Impact",
-		SlamRadius = 4,
-		SlideAttack = 380,
-		StancePolarity = "Madurai",
-		Traits = {"Corpus", "Principe"},
-		Type = "Mêlée",
-		WindUp = 1.1 
-	},
-	["Fusil à Flux - Principe"] = {
-		Accuracy = 200,
-		Class = "Fusil",
-		Disposition = 0.5,
-		ExilusPolarity = "Bar",
-		Introduced = "30.5",
-		Magazine = 120,
-		Mastery = 15,
-		Name = "Fusil à Flux - Principe",
-		Image = "Fusil à Flux - Principe.png",
-		NormalAttack = {
-			CritChance = 0.2,
-			CritMultiplier = 1.8,
-			Damage = {["Perforation"] = 4.8, ["Tranchant"] = 17.2},
-			FireRate = 15,
-			StatusChance = 0.26 
-		},
-		Polarities = {},
-		Reload = 1.8,
-		Traits = {"Corpus", "Principe"},
-		Family = "Fusil à Flux",
-		Trigger = "Auto",
-		Type = "Principale",
-	},
-	["Grigori - Principe"] = {
-		Introduced = "30.5",
-		BlockAngle = 90,
-		Class = "Faux",
-		ComboDur = 5,
-		Conclave = true,
-		Disposition = 0.5,
-		FollowThrough = 0.35,
-		HeavyAttack = 1368,
-		HeavyRadialDmg = 1140,
-		HeavySlamAttack = 1140,
-		HeavySlamRadius = 8,
-		Mastery = 14,
-		MeleeRange = 2.5,
-		Name = "Grigori - Principe",
-		Image = "Grigori - Principe.png",
-		NormalAttack = {
-			CritChance = 0.24,
-			CritMultiplier = 1.6,
-			Damage = {["Impact"] = 9.1, ["Perforation"] = 82.1, ["Tranchant"] = 136.8},
-			FireRate = 1.08,
-			StatusChance = 0.38
-		},
-		Polarities = { "V" },
-		SlamAttack = 684,
-		SlamRadialDmg = 228,
-		SlamRadialElement = "Impact",
-		SlamRadialProc = "Impact",
-		SlamRadius = 8,
-		SlideAttack = 465,
-		StancePolarity = "Zenurik",
-		Traits = {"Corpus", "Principe"},
-		Type = "Mêlée",
-		WindUp = 1 
-	},
-	["Livia - Principe"] = {
-		Introduced = "30.5",
-		BlockAngle = 55,
-		Class = "Nikana à deux mains",
-		ComboDur = 5, 
-		Conclave = true,
-		Disposition = 0.5,
-		FollowThrough = 0.7,
-		HeavyAttack = 1188,
-		HeavyRadialDmg = 792,
-		HeavySlamAttack = 792,
-		HeavySlamRadius = 8,
-		Mastery = 14,
-		MeleeRange = 2.5,
-		Name = "Livia - Principe",
-		Image = "Livia - Principe.png",
-		NormalAttack = {
-			CritChance = 0.28,
-			CritMultiplier = 2.4,
-			Damage = {["Impact"] = 9.9, ["Perforation"] = 9.9, ["Tranchant"] = 178.2},
-			FireRate = 1.08,
-			StatusChance = 0.28 
-		},
-		Polarities = {},
-		SlamAttack = 594,
-		SlamRadialDmg = 198,
-		SlamRadialElement = "Impact",
-		SlamRadialProc = "Impact",
-		SlamRadius = 6,
-		SlideAttack = 396,
-		StancePolarity = "Madurai",
-		Traits = {"Corpus", "Principe"},
-		Type = "Mêlée",
-		WindUp = 0.7 
-	},
-	["Spirex - Principe"] = {
-		Introduced = "30.5",
-		Attack5 = {
-			AttackName = "Rocket Explosion",
-			Damage = {["Feu"] = 80},
-			Falloff = {EndRange = 2, Reduction = 0.2, StartRange = 0},
-			Radius = 2 
-		},
-		Accuracy = 12.5,
-		Class = "Pistolet",
-		Conclave = true,
-		Disposition = 0.5,
-		Polarities = {"V", "V"},
-		Magazine = 8,
-		Mastery = 14,
-		MaxAmmo = 210,
-		Name = "Spirex - Principe",
-		Image = "Spirex - Principe.png",
-		NoiseLevel = "Bruyant",
-		NormalAttack = {
-			CritChance = 0.26,
-			CritMultiplier = 2.4,
-			Damage = {["Impact"] = 40, ["Perforation"] = 20, ["Feu"] = 60},
-			FireRate = 2.33,
-			ShotSpeed = "?",
-			ShotType = "Projectile",
-			StatusChance = 0.40 
-		},
-		Reload = 2.4,
-		Traits = {"Corpus", "Principe"},
-		Trigger = "Semi-Auto",
-		Type = "Secondaire",
-	},
-		["Tetra - Principe"] = {
-		Accuracy = 18.2,
-		Class = "Fusil",
-		Disposition = 1,
-		ExilusPolarity = "V",
-		Family = "Tetra",
-		Introduced = "30.5",
-		Magazine = 80,
-		Mastery = 15,
-		MaxAmmo = 540,
-		Name = "Tetra - Principe",
-		Image = "Tetra - Principe.png",
-		NormalAttack = {
-			CritChance = 0.28,
-			CritMultiplier = 2.2,
-			Damage = {["Impact"] = 13.2, ["Perforation"] = 33.6, ["Tranchant"] = 13.2},
-			FireRate = 5,
-			ShotSpeed = 100,
-			ShotType = "Projectile",
-			StatusChance = 0.30 
-		},
-		Attack2 = {
-			AttackName = "Secondaire",
-			Damage = {Impact = 200},
-			Reload = 1.8,
-			FireRate = 1.33,
-			ShotSpeed = "?",
-			ShotType = "Projectile",
-		},
-		Attack5 = {
-			AttackName = "Explosion de Grenade",
-			Damage = {Blast = 1000},
-			Falloff = {EndRange = 8, Reduction = 0, StartRange = 0},
-			Radius = 8 
-		},
-		Polarities = {},
-		Reload = 2.2,
-		Traits = {"Corpus", "Principe"},
-		Trigger = "Auto",
-		Type = "Principale" 
-	},
+            Introduced = "30.5",
+            BlockAngle = 90,
+            Class = "Épée et Bouclier",
+            ComboDur = 5,
+            Conclave = true,
+            Disposition = 0.5,
+            FollowThrough = 0.6,
+            HeavyAttack = 1300,
+            HeavyRadialDmg = 1040,
+            HeavySlamAttack = 1040,
+            HeavySlamRadius = 10,
+            Mastery = 0,
+            MeleeRange = 2.6,
+            Name = "Agendus - Principe",
+            Image = "Agendus - Principe.png",
+            NormalAttack = {
+                CritChance = 0.24,
+                CritMultiplier = 2,
+                Damage = {
+                    ["Impact"] = 120,
+                    ["Électrique"] = 140
+                },
+                FireRate = 0.92,
+                StatusChance = 0.3
+            },
+            Polarities = {},
+            SlamAttack = 780,
+            SlamElement = "Impact",
+            SlamRadialDmg = 260,
+            SlamRadialElement = "Impact",
+            SlamRadialProc = "Impact",
+            SlamRadius = 6,
+            SlideAttack = 260,
+            StancePolarity = "Madurai",
+            Traits = {"Corpus", "Principe"},
+            Type = "Mêlée",
+            WindUp = 1
+        },
+        ["Arca Plasmor - Principe"] = {
+            Accuracy = 9.1,
+            Class = "Fusil à Pompe",
+            Disposition = 0.5,
+            ExilusPolarity = "V",
+            Introduced = "30.5",
+            Magazine = 10,
+            Mastery = 16,
+            MaxAmmo = 40,
+            Name = "Arca Plasmor - Principe",
+            Image = "Arca Plasmor - Principe.png",
+            NormalAttack = {
+                CritChance = 0.22,
+                CritMultiplier = 2.0,
+                Damage = {
+                    ["Radiation"] = 760
+                },
+                Falloff = {
+                    EndRange = 36,
+                    Reduction = 0.6667,
+                    StartRange = 18
+                },
+                FireRate = 1.0,
+                Range = 36,
+                ShotSpeed = 60,
+                ShotType = "Projectile",
+                StatusChance = 0.34
+            },
+            Polarities = {"V", "V"},
+            Reload = 3.0,
+            Traits = {"Corpus", "Principe"},
+            Family = "Arca Plasmor",
+            Trigger = "Semi-Auto",
+            Type = "Principale"
+        },
+        ["Cycron - Principe"] = {
+            Accuracy = 100,
+            Class = "Pistolet",
+            Disposition = 0.5,
+            Introduced = "30.5",
+            Magazine = 40,
+            Mastery = 14,
+            ExilusPolarity = "Bar",
+            Polarities = {"Bar", "Bar"},
+            Name = "Cycron - Principe",
+            Image = "Cycron - Principe.png",
+            NormalAttack = {
+                AmmoCost = 0.5,
+                CritChance = 0.20,
+                CritMultiplier = 1.8,
+                Damage = {
+                    ["Feu"] = 22
+                },
+                FireRate = 12,
+                PunchThrough = 1,
+                Range = 28,
+                ShotType = "Décharge",
+                StatusChance = 0.4
+            },
+            Reload = 40,
+            ReloadDelay = 1,
+            ReloadStyle = "Régénération",
+            Traits = {"Corpus", "Principe"},
+            Family = "Cycron",
+            Trigger = "Continue",
+            Type = "Secondaire"
+        },
+        ["Detron - Principe"] = {
+            Accuracy = 20,
+            Class = "Sidearm Fusil à Pompe",
+            Disposition = 0.5,
+            ExilusPolarity = "V",
+            Family = "Detron",
+            Introduced = "30.5",
+            Magazine = 6,
+            Mastery = 16,
+            MaxAmmo = 210,
+            Name = "Detron - Principe",
+            Image = "Detron - Principe.png",
+            NormalAttack = {
+                CritChance = 0.18,
+                CritMultiplier = 2.0,
+                Damage = {
+                    ["Radiation"] = 26
+                },
+                Falloff = {
+                    EndRange = 22,
+                    Reduction = 0.625,
+                    StartRange = 13
+                },
+                FireRate = 3.33,
+                Multishot = 10,
+                ShotType = "Projectile",
+                StatusChance = 0.10
+            },
+            Polarities = {},
+            Reload = 1.05,
+            Traits = {"Corpus", "Principe"},
+            Trigger = "Semi-Auto",
+            Type = "Secondaire"
+        },
+        ["Diplos - Principe"] = {
+            Introduced = "30.5",
+            Accuracy = 100,
+            Class = "Doubles Pistolets",
+            Conclave = true,
+            Disposition = 0.5,
+            ExilusPolarity = "V",
+            Magazine = 92,
+            Mastery = 16,
+            MaxAmmo = 460,
+            Name = "Diplos - Principe",
+            Image = "Diplos - Principe.png",
+            NoiseLevel = "Bruyant",
+            NormalAttack = {
+                CritChance = 0.36,
+                CritMultiplier = 2.2,
+                Damage = {
+                    ["Impact"] = 11.2,
+                    ["Perforation"] = 9,
+                    ["Tranchant"] = 7.8
+                },
+                FireRate = 9.67,
+                ShotType = "Projectile",
+                StatusChance = 0.14
+            },
+            Polarities = {"V"},
+            Reload = 2.8,
+            Traits = {"Corpus", "Principe"},
+            Trigger = "Auto",
+            Type = "Secondaire"
+        },
+        ["Envoi - Principe"] = {
+            Accuracy = 100,
+            Attack5 = {
+                AttackName = "Explosion de Roquette",
+                Damage = {
+                    ["Glace"] = 640
+                },
+                Falloff = {
+                    EndRange = 8,
+                    Reduction = 0.8,
+                    StartRange = 0
+                },
+                Radius = 8
+            },
+            Class = "Lanceur",
+            Disposition = 0.5,
+            ExilusPolarity = "Bar",
+            Magazine = 8,
+            Mastery = 16,
+            MaxAmmo = 32,
+            Name = "Envoi - Principe",
+            Image = "Envoi - Principe.png",
+            NormalAttack = {
+                AttackName = "Impact de Grenade",
+                CritChance = 0.28,
+                CritMultiplier = 2.6,
+                Damage = {
+                    Impact = 100
+                },
+                FireRate = 0.83,
+                ShotSpeed = "?",
+                ShotType = "Projectile",
+                StatusChance = 0.24
+            },
+            Reload = 4,
+            ReloadStyle = "ByRound",
+            Traits = {"Corpus", "Principe"},
+            Trigger = "Auto",
+            Type = "Principale"
+        },
+        ["Exec - Principe"] = {
+            Introduced = "30.5",
+            BlockAngle = 55,
+            Class = "Lame Lourde",
+            ComboDur = 5,
+            Conclave = true,
+            Disposition = 0.5,
+            FollowThrough = 0.4,
+            HeavyAttack = 1140,
+            HeavyRadialDmg = 950,
+            HeavySlamAttack = 950,
+            HeavySlamRadius = 4,
+            Mastery = 16,
+            MeleeRange = 2.8,
+            Name = "Exec - Principe",
+            Image = "Exec - Principe.png",
+            NormalAttack = {
+                CritChance = 0.38,
+                CritMultiplier = 2.4,
+                Damage = {
+                    ["Impact"] = 102.6,
+                    ["Tranchant"] = 87.4
+                },
+                FireRate = 1,
+                StatusChance = 0.22
+            },
+            Polarities = {},
+            SlamAttack = 570,
+            SlamRadialDmg = 190,
+            SlamRadialElement = "Impact",
+            SlamRadialProc = "Impact",
+            SlamRadius = 4,
+            SlideAttack = 380,
+            StancePolarity = "Madurai",
+            Traits = {"Corpus", "Principe"},
+            Type = "Mêlée",
+            WindUp = 1.1
+        },
+        ["Fusil à Flux - Principe"] = {
+            Accuracy = 200,
+            Class = "Fusil",
+            Disposition = 0.5,
+            ExilusPolarity = "Bar",
+            Introduced = "30.5",
+            Magazine = 120,
+            Mastery = 15,
+            Name = "Fusil à Flux - Principe",
+            Image = "Fusil à Flux - Principe.png",
+            NormalAttack = {
+                CritChance = 0.2,
+                CritMultiplier = 1.8,
+                Damage = {
+                    ["Perforation"] = 4.8,
+                    ["Tranchant"] = 17.2
+                },
+                FireRate = 15,
+                StatusChance = 0.26
+            },
+            Polarities = {},
+            Reload = 1.8,
+            Traits = {"Corpus", "Principe"},
+            Family = "Fusil à Flux",
+            Trigger = "Auto",
+            Type = "Principale"
+        },
+        ["Grigori - Principe"] = {
+            Introduced = "30.5",
+            BlockAngle = 90,
+            Class = "Faux",
+            ComboDur = 5,
+            Conclave = true,
+            Disposition = 0.5,
+            FollowThrough = 0.35,
+            HeavyAttack = 1368,
+            HeavyRadialDmg = 1140,
+            HeavySlamAttack = 1140,
+            HeavySlamRadius = 8,
+            Mastery = 14,
+            MeleeRange = 2.5,
+            Name = "Grigori - Principe",
+            Image = "Grigori - Principe.png",
+            NormalAttack = {
+                CritChance = 0.24,
+                CritMultiplier = 1.6,
+                Damage = {
+                    ["Impact"] = 9.1,
+                    ["Perforation"] = 82.1,
+                    ["Tranchant"] = 136.8
+                },
+                FireRate = 1.08,
+                StatusChance = 0.38
+            },
+            Polarities = {"V"},
+            SlamAttack = 684,
+            SlamRadialDmg = 228,
+            SlamRadialElement = "Impact",
+            SlamRadialProc = "Impact",
+            SlamRadius = 8,
+            SlideAttack = 465,
+            StancePolarity = "Zenurik",
+            Traits = {"Corpus", "Principe"},
+            Type = "Mêlée",
+            WindUp = 1
+        },
+        ["Livia - Principe"] = {
+            Introduced = "30.5",
+            BlockAngle = 55,
+            Class = "Nikana à deux mains",
+            ComboDur = 5,
+            Conclave = true,
+            Disposition = 0.5,
+            FollowThrough = 0.7,
+            HeavyAttack = 1188,
+            HeavyRadialDmg = 792,
+            HeavySlamAttack = 792,
+            HeavySlamRadius = 8,
+            Mastery = 14,
+            MeleeRange = 2.5,
+            Name = "Livia - Principe",
+            Image = "Livia - Principe.png",
+            NormalAttack = {
+                CritChance = 0.28,
+                CritMultiplier = 2.4,
+                Damage = {
+                    ["Impact"] = 9.9,
+                    ["Perforation"] = 9.9,
+                    ["Tranchant"] = 178.2
+                },
+                FireRate = 1.08,
+                StatusChance = 0.28
+            },
+            Polarities = {},
+            SlamAttack = 594,
+            SlamRadialDmg = 198,
+            SlamRadialElement = "Impact",
+            SlamRadialProc = "Impact",
+            SlamRadius = 6,
+            SlideAttack = 396,
+            StancePolarity = "Madurai",
+            Traits = {"Corpus", "Principe"},
+            Type = "Mêlée",
+            WindUp = 0.7
+        },
+        ["Spirex - Principe"] = {
+            Introduced = "30.5",
+            Attack5 = {
+                AttackName = "Rocket Explosion",
+                Damage = {
+                    ["Feu"] = 80
+                },
+                Falloff = {
+                    EndRange = 2,
+                    Reduction = 0.2,
+                    StartRange = 0
+                },
+                Radius = 2
+            },
+            Accuracy = 12.5,
+            Class = "Pistolet",
+            Conclave = true,
+            Disposition = 0.5,
+            Polarities = {"V", "V"},
+            Magazine = 8,
+            Mastery = 14,
+            MaxAmmo = 210,
+            Name = "Spirex - Principe",
+            Image = "Spirex - Principe.png",
+            NoiseLevel = "Bruyant",
+            NormalAttack = {
+                CritChance = 0.26,
+                CritMultiplier = 2.4,
+                Damage = {
+                    ["Impact"] = 40,
+                    ["Perforation"] = 20,
+                    ["Feu"] = 60
+                },
+                FireRate = 2.33,
+                ShotSpeed = "?",
+                ShotType = "Projectile",
+                StatusChance = 0.40
+            },
+            Reload = 2.4,
+            Traits = {"Corpus", "Principe"},
+            Trigger = "Semi-Auto",
+            Type = "Secondaire"
+        },
+        ["Tetra - Principe"] = {
+            Accuracy = 18.2,
+            Class = "Fusil",
+            Disposition = 1,
+            ExilusPolarity = "V",
+            Family = "Tetra",
+            Introduced = "30.5",
+            Magazine = 80,
+            Mastery = 15,
+            MaxAmmo = 540,
+            Name = "Tetra - Principe",
+            Image = "Tetra - Principe.png",
+            NormalAttack = {
+                CritChance = 0.28,
+                CritMultiplier = 2.2,
+                Damage = {
+                    ["Impact"] = 13.2,
+                    ["Perforation"] = 33.6,
+                    ["Tranchant"] = 13.2
+                },
+                FireRate = 5,
+                ShotSpeed = 100,
+                ShotType = "Projectile",
+                StatusChance = 0.30
+            },
+            Attack2 = {
+                AttackName = "Secondaire",
+                Damage = {
+                    Impact = 200
+                },
+                Reload = 1.8,
+                FireRate = 1.33,
+                ShotSpeed = "?",
+                ShotType = "Projectile"
+            },
+            Attack5 = {
+                AttackName = "Explosion de Grenade",
+                Damage = {
+                    Blast = 1000
+                },
+                Falloff = {
+                    EndRange = 8,
+                    Reduction = 0,
+                    StartRange = 0
+                },
+                Radius = 8
+            },
+            Polarities = {},
+            Reload = 2.2,
+            Traits = {"Corpus", "Principe"},
+            Trigger = "Auto",
+            Type = "Principale"
+        },
         ["Tenora"] = {
             Accuracy = 12.5,
             Class = "Fusil",
@@ -21010,12 +24701,23 @@ local WeaponData = {
                 MarketCost = 265,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 5},
-                    {Name = "Récupération", Type = "Ressource", Count = 15000},
-                    {Name = "Rubedo", Type = "Ressource", Count = 4000},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 15000
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 4000
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.1,
             ExilusPolarity = "V",
@@ -21061,62 +24763,76 @@ local WeaponData = {
             Type = "Principale"
         },
         ["Tenora Prime"] = {
-		Accuracy = 12.5,
-		Class = "Fusil",
-		Conclave = true,
-		Cost = {
-			Credits = 20000,
-			Rush = 35,
-			Time = 12,
-			Parts = {
-				{ Name = "Canon",Type = "Partie Prime",Count = 1,},
-				{ Name = "Culasse",Type = "Partie Prime",Count = 1,},
-				{ Name = "Crosse",Type = "Partie Prime",Count = 1,},
-				{ Name = "Cellule Orokin",Type = "Ressource",Count = 10,},},
-		},
-		Disposition = 0.5,
-		ExilusPolarity = "V",
-		Family = "Tenora",
-		Image = "Tenora Prime.png",
-		Introduced = "29.9",
-		Magazine = 200,
-		Mastery = 14,
-		MaxAmmo = 900,
-		Name = "Tenora Prime",
-		NormalAttack = {
-			Damage = {
-				["Impact"] = 8.4,
-				["Perforation"] = 11.2,
-				["Tranchant"] = 8.4,},
-			CritChance = 0.3,
-			CritMultiplier = 2.2,
-			StatusChance = 0.24,
-			FireRate = 12.67,
-			ShotType = "Hit-Scan",
-		},
-		SecondaryAttack = {
-			Damage = {
-				["Impact"] = 56,
-				["Perforation"] = 168,
-				["Tranchant"] = 56,},
-			CritChance = 0.4,
-			CritMultiplier = 3,
-			StatusChance = 0.2,
-			FireRate = 2,
-			ChargeTime = 0.8,
-			PunchThrough = 1,
-			Trigger = "Charge",
-			AmmoCost = 10,
-			ShotType = "Projectile",
-			ShotSpeed = "?",
-		},
-		Polarities = {"V", "V"},
-		Reload = 2.5,
-		Spool = 9,
-		Traits = {"Prime"},
-		Trigger = "Auto à Chauffe / Chargé",
-		Type = "Principale",
-	},
+            Accuracy = 12.5,
+            Class = "Fusil",
+            Conclave = true,
+            Cost = {
+                Credits = 20000,
+                Rush = 35,
+                Time = 12,
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
+            },
+            Disposition = 0.5,
+            ExilusPolarity = "V",
+            Family = "Tenora",
+            Image = "Tenora Prime.png",
+            Introduced = "29.9",
+            Magazine = 200,
+            Mastery = 14,
+            MaxAmmo = 900,
+            Name = "Tenora Prime",
+            NormalAttack = {
+                Damage = {
+                    ["Impact"] = 8.4,
+                    ["Perforation"] = 11.2,
+                    ["Tranchant"] = 8.4
+                },
+                CritChance = 0.3,
+                CritMultiplier = 2.2,
+                StatusChance = 0.24,
+                FireRate = 12.67,
+                ShotType = "Hit-Scan"
+            },
+            SecondaryAttack = {
+                Damage = {
+                    ["Impact"] = 56,
+                    ["Perforation"] = 168,
+                    ["Tranchant"] = 56
+                },
+                CritChance = 0.4,
+                CritMultiplier = 3,
+                StatusChance = 0.2,
+                FireRate = 2,
+                ChargeTime = 0.8,
+                PunchThrough = 1,
+                Trigger = "Charge",
+                AmmoCost = 10,
+                ShotType = "Projectile",
+                ShotSpeed = "?"
+            },
+            Polarities = {"V", "V"},
+            Reload = 2.5,
+            Spool = 9,
+            Traits = {"Prime"},
+            Trigger = "Auto à Chauffe / Chargé",
+            Type = "Principale"
+        },
         ["Tetra"] = {
             Accuracy = 18.2,
             Class = "Fusil",
@@ -21127,16 +24843,23 @@ local WeaponData = {
                 MarketCost = 125,
                 Rush = 40,
                 Time = 24,
-                Parts = {
-                    {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 2
-                    },
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 400},
-                    {Name = "Ferrite", Type = "Ressource", Count = 900},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 100}
-                }
+                Parts = {{
+                    Name = "Module de Contrôle",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 400
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 100
+                }}
             },
             Disposition = 1.5,
             ExilusPolarity = "V",
@@ -21148,7 +24871,10 @@ local WeaponData = {
             MaxAmmo = 540,
             Name = "Tetra",
             NormalAttack = {
-                Damage = {["Impact"] = 6.4, ["Perforation"] = 25.6},
+                Damage = {
+                    ["Impact"] = 6.4,
+                    ["Perforation"] = 25.6
+                },
                 CritChance = 0.04,
                 CritMultiplier = 1.5,
                 StatusChance = 0.2,
@@ -21160,10 +24886,8 @@ local WeaponData = {
             Trigger = "Auto",
             Traits = {"Corpus"},
             Type = "Principale",
-            Users = {
-                "[[Nako Xol]]", "[[Pourvoyeur Terra]]",
-                "[[Homme d'Équipage Terra|Homme d'Équipage d'Élite Terra]]"
-            }
+            Users = {"[[Nako Xol]]", "[[Pourvoyeur Terra]]",
+                     "[[Homme d'Équipage Terra|Homme d'Équipage d'Élite Terra]]"}
         },
         ["Tiberon"] = {
             Accuracy = 33.3,
@@ -21176,12 +24900,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Latron", Type = "Arme", Count = 1},
-                    {Name = "Plastides", Type = "Ressource", Count = 650},
-                    {Name = "Rubedo", Type = "Ressource", Count = 600},
-                    {Name = "Forma", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Latron",
+                    Type = "Arme",
+                    Count = 1
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 650
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Forma",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 1.05,
             ExilusPolarity = "Bar",
@@ -21245,12 +24980,23 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Crosse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 0.85,
             ExilusPolarity = "V",
@@ -21289,12 +25035,23 @@ local WeaponData = {
                 MarketCost = 200,
                 Rush = 45,
                 Time = 24,
-                Parts = {
-                    {Name = "Récupération", Type = "Ressource", Count = 1500},
-                    {Name = "Oxium", Type = "Ressource", Count = 200},
-                    {Name = "Cryotique", Type = "Ressource", Count = 800},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 1500
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 200
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.3,
             Family = "Tonkor",
@@ -21306,7 +25063,9 @@ local WeaponData = {
             Name = "Tonkor",
             NormalAttack = {
                 AttackName = "Grenade Impact",
-                Damage = {["Perforation"] = 75},
+                Damage = {
+                    ["Perforation"] = 75
+                },
                 CritChance = 0.25,
                 CritMultiplier = 2.5,
                 StatusChance = 0.1,
@@ -21316,7 +25075,9 @@ local WeaponData = {
             },
             AreaAttack = {
                 AttackName = "Grenade Explosion",
-                Damage = {["Explosif"] = 650},
+                Damage = {
+                    ["Explosif"] = 650
+                },
                 Radius = 6
             },
             Reload = 1.7,
@@ -21350,7 +25111,9 @@ local WeaponData = {
             NoiseLevel = "Bruyant",
             NormalAttack = {
                 AttackName = "Grenade Impact",
-                Damage = {["Perforation"] = 59},
+                Damage = {
+                    ["Perforation"] = 59
+                },
                 CritChance = 0.3,
                 CritMultiplier = 2.5,
                 StatusChance = 0.17,
@@ -21370,17 +25133,30 @@ local WeaponData = {
                 BPCost = 15000,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 2},
-                    {Name = "Récupération", Type = "Ressource", Count = 4500},
-                    {Name = "Circuits", Type = "Ressource", Count = 600},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 4500
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 100,
             AreaAttack = {
                 AttackName = "Poison Cloud",
-                Damage = {["Poison"] = 400},
+                Damage = {
+                    ["Poison"] = 400
+                },
                 Duration = 10,
                 CritChance = 0.15,
                 CritMultiplier = 2
@@ -21396,7 +25172,9 @@ local WeaponData = {
             Name = "Torid",
             NormalAttack = {
                 AttackName = "Grenade Impact",
-                Damage = {["Poison"] = 100},
+                Damage = {
+                    ["Poison"] = 100
+                },
                 CritChance = 0.15,
                 CritMultiplier = 2,
                 StatusChance = 0.23,
@@ -21413,8 +25191,14 @@ local WeaponData = {
             Accuracy = 200,
             AreaAttack = {
                 AttackName = "Attaque Radial Auto",
-                Damage = {["Feu"] = 50},
-                Falloff = {StartRange = 0, EndRange = 1.6, Reduction = 0.15},
+                Damage = {
+                    ["Feu"] = 50
+                },
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 1.6,
+                    Reduction = 0.15
+                },
                 Radius = 1.6
             },
             Class = "Fusil",
@@ -21423,15 +25207,23 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {
-                        Name = "Éclat de Sériglas",
-                        Type = "Ressource",
-                        Count = 1
-                    }, {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Éclat de Sériglas",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 0.75,
             ExilusPolarity = "V",
@@ -21444,7 +25236,10 @@ local WeaponData = {
             Name = "Trumna",
             NormalAttack = {
                 AttackName = "Auto",
-                Damage = {["Impact"] = 29, ["Feu"] = 53},
+                Damage = {
+                    ["Impact"] = 29,
+                    ["Feu"] = 53
+                },
                 CritChance = 0.24,
                 CritMultiplier = 2.2,
                 StatusChance = 0.3,
@@ -21457,14 +25252,22 @@ local WeaponData = {
             Reload = 5,
             SecondaryAreaAttack = {
                 AttackName = "Semi Attaque Radial",
-                Damage = {["Feu"] = 1000},
-                Falloff = {StartRange = 0, EndRange = 6, Reduction = 0.4},
+                Damage = {
+                    ["Feu"] = 1000
+                },
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 6,
+                    Reduction = 0.4
+                },
                 Radius = 6
             },
             SecondaryAttack = {
                 Accuracy = 9.1,
                 AttackName = "Semi-Auto",
-                Damage = {["Impact"] = 100},
+                Damage = {
+                    ["Impact"] = 100
+                },
                 FireRate = 1.33,
                 CritChance = 0.38,
                 CritMultiplier = 2.4,
@@ -21485,12 +25288,23 @@ local WeaponData = {
                 MarketCost = 250,
                 Rush = 25,
                 Time = 24,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 4},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 4},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 3000},
-                    {Name = "Rubedo", Type = "Ressource", Count = 2500}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 3000
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 2500
+                }}
             },
             Disposition = 0.85,
             Family = "Vectis",
@@ -21511,7 +25325,10 @@ local WeaponData = {
                 StatusChance = 0.3,
                 PunchThrough = 1,
                 FireRate = 1.5,
-                Falloff = {StartRange = 400, EndRange = 600},
+                Falloff = {
+                    StartRange = 400,
+                    EndRange = 600
+                },
                 ShotType = "Hit-Scan"
             },
             Polarities = {"V"},
@@ -21522,10 +25339,7 @@ local WeaponData = {
             Trigger = "Semi-Auto",
             Type = "Principale",
             Users = {"[[Spectre Saryn]]"},
-            Zoom = {
-                "3x Zoom (+30% Dégâts Tir à la Tête)",
-                "4.5x Zoom (+50% Dégâts Tir à la Tête)"
-            }
+            Zoom = {"3x Zoom (+30% Dégâts Tir à la Tête)", "4.5x Zoom (+50% Dégâts Tir à la Tête)"}
         },
         ["Vectis Prime"] = {
             Accuracy = 13.3,
@@ -21535,12 +25349,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Crosse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 0.85,
             ExilusPolarity = "Bar",
@@ -21562,7 +25387,10 @@ local WeaponData = {
                 StatusChance = 0.3,
                 PunchThrough = 1,
                 FireRate = 2.67,
-                Falloff = {StartRange = 400, EndRange = 600},
+                Falloff = {
+                    StartRange = 400,
+                    EndRange = 600
+                },
                 ShotType = "Hit-Scan"
             },
             Polarities = {"V", "Bar"},
@@ -21572,10 +25400,7 @@ local WeaponData = {
             Traits = {"Prime", "Vaulted"},
             Trigger = "Semi-Auto",
             Type = "Principale",
-            Zoom = {
-                "3.5x (+40% Dégâts Tir à la Tête)",
-                "6x (+60% Dégâts Tir à la Tête)"
-            }
+            Zoom = {"3.5x (+40% Dégâts Tir à la Tête)", "6x (+60% Dégâts Tir à la Tête)"}
         },
         ["Veldt"] = {
             Accuracy = 32,
@@ -21587,12 +25412,23 @@ local WeaponData = {
                 MarketCost = 240,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 10},
-                    {Name = "Cryotique", Type = "Ressource", Count = 600},
-                    {Name = "Ferrite", Type = "Ressource", Count = 7250},
-                    {Name = "Forma", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 600
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 7250
+                }, {
+                    Name = "Forma",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 1.25,
             Family = "Veldt",
@@ -21626,12 +25462,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 5},
-                    {Name = "Circuits", Type = "Ressource", Count = 800},
-                    {Name = "Récupération", Type = "Ressource", Count = 1200},
-                    {Name = "Plastides", Type = "Ressource", Count = 800}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 800
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 800
+                }}
             },
             Accuracy = 13.3,
             Class = "Fusil de Sniper",
@@ -21656,7 +25503,10 @@ local WeaponData = {
                 StatusChance = 0.25,
                 PunchThrough = 1,
                 FireRate = 1.5,
-                Falloff = {StartRange = 400, EndRange = 600},
+                Falloff = {
+                    StartRange = 400,
+                    EndRange = 600
+                },
                 ShotType = "Hit-Scan"
             },
             Reload = 3,
@@ -21665,15 +25515,9 @@ local WeaponData = {
             Traits = {"Grineer"},
             Trigger = "Semi-Auto",
             Type = "Principale",
-            Users = {
-                "[[Ballista]]", "[[Gardien|Gardien Grineer]]",
-                "[[Bourreau/Harkonar|Bourreau Harkonar]]"
-            },
-            Zoom = {
-                "2.5x zoom (+35% Dégâts Tir à la Tête)",
-                "4x zoom (+55% Dégâts Tir à la Tête)",
-                "8x zoom (+70% Dégâts Tir à la Tête)"
-            }
+            Users = {"[[Ballista]]", "[[Gardien|Gardien Grineer]]", "[[Bourreau/Harkonar|Bourreau Harkonar]]"},
+            Zoom = {"2.5x zoom (+35% Dégâts Tir à la Tête)", "4x zoom (+55% Dégâts Tir à la Tête)",
+                    "8x zoom (+70% Dégâts Tir à la Tête)"}
         },
         ["Vulkar Wraith"] = {
             Accuracy = 13.3,
@@ -21689,13 +25533,19 @@ local WeaponData = {
             MaxAmmo = 72,
             Name = "Vulkar Wraith",
             NormalAttack = {
-                Damage = {["Impact"] = 245.7, ["Perforation"] = 27.3},
+                Damage = {
+                    ["Impact"] = 245.7,
+                    ["Perforation"] = 27.3
+                },
                 CritChance = 0.2,
                 CritMultiplier = 2,
                 StatusChance = 0.25,
                 PunchThrough = 1,
                 FireRate = 2,
-                Falloff = {StartRange = 400, EndRange = 600},
+                Falloff = {
+                    StartRange = 400,
+                    EndRange = 600
+                },
                 ShotType = "Hit-Scan"
             },
             Polarities = {"V"},
@@ -21705,11 +25555,8 @@ local WeaponData = {
             Traits = {"Wraith", "Baro", "Grineer"},
             Trigger = "Semi-Auto",
             Type = "Principale",
-            Zoom = {
-                "2.5x zoom (+35% Dégâts Tir à la Tête)",
-                "4x zoom (+55% Dégâts Tir à la Tête)",
-                "8x zoom (+70% Dégâts Tir à la Tête)"
-            }
+            Zoom = {"2.5x zoom (+35% Dégâts Tir à la Tête)", "4x zoom (+55% Dégâts Tir à la Tête)",
+                    "8x zoom (+70% Dégâts Tir à la Tête)"}
         },
         ["Zarr"] = {
             Cost = {
@@ -21718,24 +25565,37 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 40,
                 Time = 24,
-                Parts = {
-                    {Name = "Kuva", Type = "Ressource", Count = 1800},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 2400
-                    },
-                    {Name = "Récupération", Type = "Ressource", Count = 5500},
-                    {Name = "Drakgoon", Type = "Arme", Count = 1}
-                }
+                Parts = {{
+                    Name = "Kuva",
+                    Type = "Ressource",
+                    Count = 1800
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 2400
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 5500
+                }, {
+                    Name = "Drakgoon",
+                    Type = "Arme",
+                    Count = 1
+                }}
             },
             AreaAttack = {
                 AttackName = "Cannon Mode Explosion",
-                Damage = {["Explosif"] = 175},
+                Damage = {
+                    ["Explosif"] = 175
+                },
                 CritChance = 0.17,
                 StatusChance = 0.29,
                 Radius = 4,
-                Falloff = {StartRange = 0,EndRange = 4.0,Reduction = 0.5,}
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 4.0,
+                    Reduction = 0.5
+                }
             },
             Class = "Lanceur",
             Conclave = true,
@@ -21749,7 +25609,9 @@ local WeaponData = {
             NormalAttack = {
                 Accuracy = 100,
                 AttackName = "Cannon Mode Projectile",
-                Damage = {["Impact"] = 25},
+                Damage = {
+                    ["Impact"] = 25
+                },
                 CritChance = 0.17,
                 CritMultiplier = 2.5,
                 StatusChance = 0.29,
@@ -21762,7 +25624,9 @@ local WeaponData = {
             Reload = 2.25,
             SecondaryAreaAttack = {
                 AttackName = "Cannon Mode Bombes à Fragmenation",
-                Damage = {["Explosif"] = 300},
+                Damage = {
+                    ["Explosif"] = 300
+                },
                 CritChance = 0.17,
                 StatusChance = 4.80,
                 PelletCount = 6,
@@ -21839,12 +25703,23 @@ local WeaponData = {
                 MarketCost = 125,
                 Rush = 30,
                 Time = 12,
-                Parts = {
-                    {Name = "Cryotique", Type = "Ressource", Count = 2800},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 900},
-                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 2},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 2800
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Extrait de Nitain",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Accuracy = 40,
             Class = "Arbalète",
@@ -21880,12 +25755,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Corde", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Poignée", Type = "Partie Prime", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Corde",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Partie Prime",
+                    Count = 1
+                }}
             },
             Accuracy = 40,
             AreaAttack = {
@@ -21935,15 +25821,23 @@ local WeaponData = {
                 MarketCost = 190,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 5},
-                    {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 25
-                    }, {Name = "Cryotique", Type = "Ressource", Count = 925},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Module de Contrôle",
+                    Type = "Ressource",
+                    Count = 25
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 925
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 9.1,
             Class = "Fusil à Pompe",
@@ -21956,12 +25850,18 @@ local WeaponData = {
             MaxAmmo = 48,
             Name = "Arca Plasmor",
             NormalAttack = {
-                Damage = {["Radiation"] = 600},
+                Damage = {
+                    ["Radiation"] = 600
+                },
                 CritChance = 0.22,
                 CritMultiplier = 1.6,
                 StatusChance = 0.28,
                 FireRate = 1.1,
-                Falloff = {StartRange = 10, EndRange = 20, Reduction = 0.6667},
+                Falloff = {
+                    StartRange = 10,
+                    EndRange = 20,
+                    Reduction = 0.6667
+                },
                 ShotType = "Projectile",
                 ShotSpeed = 60,
                 Range = 30
@@ -21994,12 +25894,23 @@ local WeaponData = {
                 MarketCost = 240,
                 Rush = 45,
                 Time = 12,
-                Parts = {
-                    {Name = "Tellure", Type = "Ressource", Count = 4},
-                    {Name = "Plastides", Type = "Ressource", Count = 875},
-                    {Name = "Oxium", Type = "Ressource", Count = 175},
-                    {Name = "Ferrite", Type = "Ressource", Count = 7500}
-                }
+                Parts = {{
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 875
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 175
+                }, {
+                    Name = "Ferrite",
+                    Type = "Ressource",
+                    Count = 7500
+                }}
             },
             Disposition = 1.1,
             Image = "Astilla.png",
@@ -22019,7 +25930,11 @@ local WeaponData = {
                 CritMultiplier = 1.9,
                 StatusChance = 0.33,
                 FireRate = 4.33,
-                Falloff = {StartRange = 30, EndRange = 60, Reduction = 0.5},
+                Falloff = {
+                    StartRange = 30,
+                    EndRange = 60,
+                    Reduction = 0.5
+                },
                 ShotType = "Projectile",
                 ShotSpeed = "75"
             },
@@ -22034,12 +25949,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Crosse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Accuracy = 25,
             Class = "Fusil à Pompe",
@@ -22059,11 +25985,15 @@ local WeaponData = {
                 CritChance = 0.21,
                 CritMultiplier = 1.9,
                 StatusChance = 0.37,
---                PelletCount = 8,
+                --                PelletCount = 8,
                 FireRate = 4.33,
-                Falloff = {StartRange = 30, EndRange = 60, Reduction = 0.5},
+                Falloff = {
+                    StartRange = 30,
+                    EndRange = 60,
+                    Reduction = 0.5
+                },
                 ShotType = "Projectile",
-				ShotSpeed = "75"
+                ShotSpeed = "75"
             },
             AreaAttack = {
                 AttackName = "Explosion de Verre",
@@ -22091,12 +26021,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 6},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 900},
-                    {Name = "Récupération", Type = "Ressource", Count = 750},
-                    {Name = "Plastides", Type = "Ressource", Count = 900}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 6
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 750
+                }, {
+                    Name = "Plastides",
+                    Type = "Ressource",
+                    Count = 900
+                }}
             },
             Disposition = 1.34,
             Family = "Boar",
@@ -22115,7 +26056,11 @@ local WeaponData = {
                 CritChance = 0.1,
                 CritMultiplier = 1.5,
                 StatusChance = 0.2,
-                Falloff = {StartRange = 15, EndRange = 25, Reduction = 0.5},
+                Falloff = {
+                    StartRange = 15,
+                    EndRange = 25,
+                    Reduction = 0.5
+                },
                 PelletCount = 8,
                 FireRate = 4.17,
                 ShotType = "Hit-Scan"
@@ -22134,12 +26079,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Crosse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 1.34,
             Family = "Boar",
@@ -22160,7 +26116,11 @@ local WeaponData = {
                 StatusChance = 0.3,
                 PelletCount = 8,
                 FireRate = 4.67,
-                Falloff = {StartRange = 18, EndRange = 25, Reduction = 0.7},
+                Falloff = {
+                    StartRange = 18,
+                    EndRange = 25,
+                    Reduction = 0.7
+                },
                 ShotType = "Hit-Scan"
             },
             Reload = 2.75,
@@ -22177,12 +26137,23 @@ local WeaponData = {
                 MarketCost = 240,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 0.6,
             ExilusPolarity = "V",
@@ -22194,12 +26165,18 @@ local WeaponData = {
             Name = "Cedo",
             NormalAttack = {
                 AttackName = "Normal",
-                Damage = {["Perforation"] = 180},
+                Damage = {
+                    ["Perforation"] = 180
+                },
                 CritChance = 0.2,
                 CritMultiplier = 2.4,
                 StatusChance = 0.003,
                 FireRate = 3.83,
-                Falloff = {StartRange = 26, EndRange = 52, Reduction = 0.2},
+                Falloff = {
+                    StartRange = 26,
+                    EndRange = 52,
+                    Reduction = 0.2
+                },
                 PelletCount = 6,
                 ShotType = "Hit-Scan",
                 Trigger = "Auto"
@@ -22209,14 +26186,22 @@ local WeaponData = {
             Reload = 2.2,
             SecondaryAreaAttack = {
                 AttackName = "Attaque Radial",
-                Damage = {["Explosif"] = 10},
-                Falloff = {StartRange = 0, EndRange = 6, MaxReduction = 0},
+                Damage = {
+                    ["Explosif"] = 10
+                },
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 6,
+                    MaxReduction = 0
+                },
                 Radius = 6
             },
             SecondaryAttack = {
                 Accuracy = 80,
                 AttackName = "Lancer de Glaive",
-                Damage = {["Tranchant"] = 20},
+                Damage = {
+                    ["Tranchant"] = 20
+                },
                 CritChance = 0.02,
                 CritMultiplier = 1.4,
                 StatusChance = 0.5
@@ -22232,15 +26217,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Fieldron", Type = "Ressource", Count = 5},
-                    {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 10
-                    }, {Name = "Oxium", Type = "Ressource", Count = 900},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Fieldron",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Module de Contrôle",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Accuracy = 50,
             Class = "Fusil à Pompe",
@@ -22281,15 +26274,23 @@ local WeaponData = {
                 MarketCost = 240,
                 Rush = 40,
                 Time = 12,
-                Parts = {
-                    {Name = "Extrait de Nitain", Type = "Ressource", Count = 2},
-                    {
-                        Name = "Plaque d'Alliage",
-                        Type = "Ressource",
-                        Count = 13000
-                    }, {Name = "Gallium", Type = "Ressource", Count = 6},
-                    {Name = "Cryotique", Type = "Ressource", Count = 725}
-                }
+                Parts = {{
+                    Name = "Extrait de Nitain",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 13000
+                }, {
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 6
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 725
+                }}
             },
             Accuracy = 9.1,
             Class = "Fusil à Pompe",
@@ -22314,12 +26315,18 @@ local WeaponData = {
                 FireRate = 1.17,
                 PelletCount = 6,
                 ShotType = "Hit-Scan",
-                Falloff = {StartRange = 18, EndRange = 36, Reduction = 0.6667}
+                Falloff = {
+                    StartRange = 18,
+                    EndRange = 36,
+                    Reduction = 0.6667
+                }
             },
             Reload = 2.3,
             SecondaryAreaAttack = {
                 AttackName = "Explosion Grenade Aérienne",
-                Damage = {["Explosif"] = 404},
+                Damage = {
+                    ["Explosif"] = 404
+                },
                 CritChance = 0.04,
                 CritMultiplier = 1.6,
                 StatusChance = 0.28,
@@ -22327,7 +26334,9 @@ local WeaponData = {
             },
             SecondaryAttack = {
                 AttackName = "Impact Grenade Aérienne",
-                Damage = {["Impact"] = 100},
+                Damage = {
+                    ["Impact"] = 100
+                },
                 CritChance = 0.04,
                 CritMultiplier = 1.6,
                 StatusChance = 0.28,
@@ -22347,12 +26356,23 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Crosse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Disposition = 1,
             ExilusPolarity = "V",
@@ -22375,7 +26395,11 @@ local WeaponData = {
                 StatusChance = 0.09,
                 FireRate = 1.42,
                 PelletCount = 6,
-                Falloff = {StartRange = 18, EndRange = 36, Reduction = 0.6667},
+                Falloff = {
+                    StartRange = 18,
+                    EndRange = 36,
+                    Reduction = 0.6667
+                },
                 ShotType = "Hit-Scan",
                 Trigger = "Semi-Auto"
             },
@@ -22384,7 +26408,9 @@ local WeaponData = {
             Reload = 3,
             SecondaryAttack = {
                 AttackName = "Impact Grenade Aérienne",
-                Damage = {["Impact"] = 100},
+                Damage = {
+                    ["Impact"] = 100
+                },
                 CritChance = 0.04,
                 CritMultiplier = 1.6,
                 FireRate = 0.667,
@@ -22394,8 +26420,14 @@ local WeaponData = {
             },
             SecondaryAreaAttack = {
                 AttackName = "Explosion Grenade Aérienne",
-                Damage = {["Explosif"] = 2200},
-                Falloff = {StartRange = 0, EndRange = 9.8, Reduction = 0.9},
+                Damage = {
+                    ["Explosif"] = 2200
+                },
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 9.8,
+                    Reduction = 0.9
+                },
                 CritChance = 0.04,
                 CritMultiplier = 1.6,
                 StatusChance = 0.5
@@ -22428,12 +26460,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 40,
                 Time = 24,
-                Parts = {
-                    {Name = "Morphics", Type = "Ressource", Count = 5},
-                    {Name = "Plaque d'Alliage", Type = "Ressource", Count = 950},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 5500},
-                    {Name = "Circuits", Type = "Ressource", Count = 1100}
-                }
+                Parts = {{
+                    Name = "Morphics",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Plaque d'Alliage",
+                    Type = "Ressource",
+                    Count = 950
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 5500
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 1100
+                }}
             },
             Disposition = 1.48,
             Family = "Drakgoon",
@@ -22525,15 +26568,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2},
-                    {
-                        Name = "Systèmes Répulseurs",
-                        Type = "Ressource",
-                        Count = 2
-                    }, {Name = "Oxium", Type = "Ressource", Count = 175},
-                    {Name = "Récupération", Type = "Ressource", Count = 8500}
-                }
+                Parts = {{
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Systèmes Répulseurs",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 175
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 8500
+                }}
             },
             Disposition = 1.1,
             Image = "Exergis.png",
@@ -22557,7 +26608,11 @@ local WeaponData = {
                 FireRate = 3.33,
                 ShotType = "Projectile",
 
-                Falloff = {StartRange = 30, EndRange = 60, Reduction = 0.508}
+                Falloff = {
+                    StartRange = 30,
+                    EndRange = 60,
+                    Reduction = 0.508
+                }
             },
             NoiseLevel = "Bruyant",
             Reload = 1.6,
@@ -22574,12 +26629,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 25,
                 Time = 24,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 5},
-                    {Name = "Circuits", Type = "Ressource", Count = 900},
-                    {Name = "Récupération", Type = "Ressource", Count = 1200},
-                    {Name = "Rubedo", Type = "Ressource", Count = 1100}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 1100
+                }}
             },
             Disposition = 0.85,
             Family = "Hek",
@@ -22600,7 +26666,11 @@ local WeaponData = {
                 CritMultiplier = 2,
                 StatusChance = 0.25,
                 PelletCount = 7,
-                Falloff = {StartRange = 10, EndRange = 20, Reduction = 0.8},
+                Falloff = {
+                    StartRange = 10,
+                    EndRange = 20,
+                    Reduction = 0.8
+                },
                 FireRate = 2.17,
                 ShotType = "Hit-Scan"
             },
@@ -22608,10 +26678,8 @@ local WeaponData = {
             Traits = {"Grineer"},
             Trigger = "Semi-Auto",
             Type = "Principale",
-            Users = {
-                "[[The Grustrag Three/Vem Tabook|Vem Tabook]] (Modified)",
-                "[[Bourreaux/Dhurnam|Dhurnam]](Twin)", "[[Kuva Trooper]]"
-            }
+            Users = {"[[The Grustrag Three/Vem Tabook|Vem Tabook]] (Modified)", "[[Bourreaux/Dhurnam|Dhurnam]](Twin)",
+                     "[[Kuva Trooper]]"}
         },
         ["Hek Vaykor"] = {
             Accuracy = 9.1,
@@ -22641,7 +26709,11 @@ local WeaponData = {
                 StatusChance = 0.25,
                 PelletCount = 7,
                 FireRate = 3,
-                Falloff = {StartRange = 10, EndRange = 25, Reduction = 0.7333},
+                Falloff = {
+                    StartRange = 10,
+                    EndRange = 25,
+                    Reduction = 0.7333
+                },
                 ShotType = "Hit-Scan"
             },
             Polarities = {"D", "V"},
@@ -22673,12 +26745,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Récupération", Type = "Ressource", Count = 2500},
-                    {Name = "Oxium", Type = "Ressource", Count = 500},
-                    {Name = "Cryotique", Type = "Ressource", Count = 500},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 2500
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 500
+                }, {
+                    Name = "Cryotique",
+                    Type = "Ressource",
+                    Count = 500
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Disposition = 1.4,
             Image = "Kohm.png",
@@ -22699,7 +26782,11 @@ local WeaponData = {
                 PunchThrough = 1.5,
                 AttackName = "Cadence de Chauffe",
                 FireRate = 3.67,
-                Falloff = {StartRange = 15, EndRange = 25, Reduction = 0.4667},
+                Falloff = {
+                    StartRange = 15,
+                    EndRange = 25,
+                    Reduction = 0.4667
+                },
                 ShotType = "Hit-Scan"
             },
             Polarities = {"D"},
@@ -22745,7 +26832,11 @@ local WeaponData = {
                 CritChance = 0.19,
                 CritMultiplier = 2.3,
                 StatusChance = 0.31,
-                Falloff = {StartRange = 13, EndRange = 26, Reduction = 0.4667},
+                Falloff = {
+                    StartRange = 13,
+                    EndRange = 26,
+                    Reduction = 0.4667
+                },
                 FireRate = 4.17,
                 PunchThrough = 1.5,
                 ShotType = "Hit-Scan"
@@ -22780,7 +26871,11 @@ local WeaponData = {
                 StatusChance = 0.2,
                 PelletCount = 10,
                 FireRate = 2.08,
-                Falloff = {StartRange = 15, EndRange = 25, Reduction = 0.5},
+                Falloff = {
+                    StartRange = 15,
+                    EndRange = 25,
+                    Reduction = 0.5
+                },
                 ShotType = "Hit-Scan"
             },
             Polarities = {"Bar"},
@@ -22800,12 +26895,23 @@ local WeaponData = {
                 MarketCost = 175,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Masse Mutagène", Type = "Ressource", Count = 4},
-                    {Name = "Circuits", Type = "Ressource", Count = 1500},
-                    {Name = "Nano Spores", Type = "Ressource", Count = 6000},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Masse Mutagène",
+                    Type = "Ressource",
+                    Count = 4
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 1500
+                }, {
+                    Name = "Nano Spores",
+                    Type = "Ressource",
+                    Count = 6000
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Disposition = 1.46,
             Image = "Phage.png",
@@ -22815,7 +26921,9 @@ local WeaponData = {
             MaxAmmo = 720,
             Name = "Phage",
             NormalAttack = {
-                Damage = {["Viral"] = 35},
+                Damage = {
+                    ["Viral"] = 35
+                },
                 CritChance = 0.19,
                 CritMultiplier = 2,
                 StatusChance = 0.31,
@@ -22842,12 +26950,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 25,
                 Time = 24,
-                Parts = {
-                    {Name = "Neurodes", Type = "Ressource", Count = 5},
-                    {Name = "Circuits", Type = "Ressource", Count = 500},
-                    {Name = "Récupération", Type = "Ressource", Count = 900},
-                    {Name = "Pack Polymère", Type = "Ressource", Count = 400}
-                }
+                Parts = {{
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 500
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Pack Polymère",
+                    Type = "Ressource",
+                    Count = 400
+                }}
             },
             Disposition = 1.33,
             Image = "Sobek.png",
@@ -22865,7 +26984,11 @@ local WeaponData = {
                 CritChance = 0.11,
                 CritMultiplier = 2,
                 StatusChance = 0.27,
-                Falloff = {StartRange = 20, EndRange = 30, Reduction = 0.5},
+                Falloff = {
+                    StartRange = 20,
+                    EndRange = 30,
+                    Reduction = 0.5
+                },
                 PelletCount = 5,
                 FireRate = 2.5,
                 ShotType = "Hit-Scan"
@@ -22898,7 +27021,11 @@ local WeaponData = {
                 StatusChance = 0.2,
                 PelletCount = 12,
                 FireRate = 2.5,
-                Falloff = {StartRange = 12, EndRange = 25, Reduction = 0.4},
+                Falloff = {
+                    StartRange = 12,
+                    EndRange = 25,
+                    Reduction = 0.4
+                },
                 ShotType = "Hit-Scan"
             },
             Polarities = {"Bar"},
@@ -22917,11 +27044,19 @@ local WeaponData = {
                 Credits = 25000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 1.35,
             Family = "Strun",
@@ -22941,7 +27076,11 @@ local WeaponData = {
                 CritMultiplier = 2.2,
                 StatusChance = 0.4,
                 PelletCount = 10,
-                Falloff = {StartRange = 15, EndRange = 30, Reduction = 0.5},
+                Falloff = {
+                    StartRange = 15,
+                    EndRange = 30,
+                    Reduction = 0.5
+                },
                 FireRate = 2.5,
                 ShotType = "Hit-Scan"
             },
@@ -22962,12 +27101,23 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 25,
                 Time = 24,
-                Parts = {
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 3},
-                    {Name = "Circuits", Type = "Ressource", Count = 900},
-                    {Name = "Récupération", Type = "Ressource", Count = 1200},
-                    {Name = "Rubedo", Type = "Ressource", Count = 1200}
-                }
+                Parts = {{
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 3
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 900
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 1200
+                }, {
+                    Name = "Rubedo",
+                    Type = "Ressource",
+                    Count = 1200
+                }}
             },
             Disposition = 0.5,
             Family = "Tigris",
@@ -22988,7 +27138,11 @@ local WeaponData = {
                 StatusChance = 0.28,
                 PelletCount = 5,
                 FireRate = 2,
-                Falloff = {StartRange = 10, EndRange = 20, Reduction = 0.5238},
+                Falloff = {
+                    StartRange = 10,
+                    EndRange = 20,
+                    Reduction = 0.5238
+                },
                 ShotType = "Hit-Scan"
             },
             Reload = 1.8,
@@ -23002,12 +27156,23 @@ local WeaponData = {
                 Credits = 15000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Partie Prime", Count = 1},
-                    {Name = "Culasse", Type = "Partie Prime", Count = 1},
-                    {Name = "Crosse", Type = "Partie Prime", Count = 1},
-                    {Name = "Cellule Orokin", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Accuracy = 9.1,
             Class = "Fusil à Pompe",
@@ -23031,7 +27196,11 @@ local WeaponData = {
                 StatusChance = 0.1125,
                 PelletCount = 8,
                 FireRate = 2,
-                Falloff = {StartRange = 10, EndRange = 20, Reduction = 0.4872},
+                Falloff = {
+                    StartRange = 10,
+                    EndRange = 20,
+                    Reduction = 0.4872
+                },
                 ShotType = "Hit-Scan"
             },
             Polarities = {"V", "Bar"},
@@ -23062,7 +27231,11 @@ local WeaponData = {
                 StatusChance = 0.28,
                 PelletCount = 6,
                 FireRate = 2,
-                Falloff = {StartRange = 8, EndRange = 20, Reduction = 0.5714},
+                Falloff = {
+                    StartRange = 8,
+                    EndRange = 20,
+                    Reduction = 0.5714
+                },
                 ShotType = "Hit-Scan"
             },
             Polarities = {"D", "Bar", "V"},
@@ -23082,7 +27255,9 @@ local WeaponData = {
             Mastery = 0,
             Name = "Artax",
             NormalAttack = {
-                Damage = {["Glace"] = 5},
+                Damage = {
+                    ["Glace"] = 5
+                },
                 CritChance = 0.02,
                 CritMultiplier = 1.5,
                 StatusChance = 0.03,
@@ -23130,12 +27305,23 @@ local WeaponData = {
                 MarketCost = nil,
                 Rush = 25,
                 Time = 24,
-                Parts = {
-                    {Name = "Cœur de Noctrul", Type = "Ressource", Count = 10},
-                    {Name = "Devar Esher", Type = "Ressource", Count = 10},
-                    {Name = "Rotolame", Type = "Ressource", Count = 10},
-                    {Name = "Module Sagan", Type = "Ressource", Count = 5}
-                }
+                Parts = {{
+                    Name = "Cœur de Noctrul",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Devar Esher",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Rotolame",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Module Sagan",
+                    Type = "Ressource",
+                    Count = 5
+                }}
             },
             Accuracy = 12.5,
             Class = "Fusil",
@@ -23147,7 +27333,9 @@ local WeaponData = {
             Name = "Cryotra",
             NormalAttack = {
                 Range = 30,
-                Damage = {["Glace"] = 10},
+                Damage = {
+                    ["Glace"] = 10
+                },
                 CritChance = 0.05,
                 CritMultiplier = 2,
                 StatusChance = 0.35,
@@ -23163,8 +27351,14 @@ local WeaponData = {
             Accuracy = 100,
             AreaAttack = {
                 AttackName = "Explosion",
-                Damage = {["Impact"] = 3, ["Feu"] = 3.5},
-                Falloff = {StartRange = 0, EndRange = 2},
+                Damage = {
+                    ["Impact"] = 3,
+                    ["Feu"] = 3.5
+                },
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 2
+                },
                 Radius = 2
             },
             Class = "Fusil",
@@ -23178,7 +27372,10 @@ local WeaponData = {
             NormalAttack = {
                 AttackName = "Normal",
                 BurstCount = 1,
-                Damage = {["Impact"] = 5, ["Perforation"] = 4.5},
+                Damage = {
+                    ["Impact"] = 5,
+                    ["Perforation"] = 4.5
+                },
                 CritChance = 0.05,
                 CritMultiplier = 1.5,
                 StatusChance = 0.3,
@@ -23257,7 +27454,9 @@ local WeaponData = {
             Mastery = 0,
             Name = "Déconstructeur",
             NormalAttack = {
-                Damage = {["Impact"] = 50},
+                Damage = {
+                    ["Impact"] = 50
+                },
                 CritChance = 0,
                 StatusChance = 0.25,
                 FireRate = 1.3,
@@ -23280,7 +27479,9 @@ local WeaponData = {
             Mastery = 8,
             Name = "Déconstructeur Prime",
             NormalAttack = {
-                Damage = {["Impact"] = 75},
+                Damage = {
+                    ["Impact"] = 75
+                },
                 CritChance = 0,
                 StatusChance = 0.25,
                 FireRate = 1.33,
@@ -23330,7 +27531,10 @@ local WeaponData = {
             Mastery = 3,
             Name = "Multron",
             NormalAttack = {
-                Damage = {["Impact"] = 1.3, ["Perforation"] = 3.8},
+                Damage = {
+                    ["Impact"] = 1.3,
+                    ["Perforation"] = 3.8
+                },
                 CritChance = 0.125,
                 CritMultiplier = 1.8,
                 StatusChance = 0.05,
@@ -23412,7 +27616,9 @@ local WeaponData = {
             Mastery = 0,
             Name = "Stinger",
             NormalAttack = {
-                Damage = {["Poison"] = 15},
+                Damage = {
+                    ["Poison"] = 15
+                },
                 CritChance = 0.025,
                 CritMultiplier = 1.5,
                 StatusChance = 0.05,
@@ -23493,7 +27699,9 @@ local WeaponData = {
             Mastery = 3,
             Name = "Tazicor",
             NormalAttack = {
-                Damage = {["Électrique"] = 6},
+                Damage = {
+                    ["Électrique"] = 6
+                },
                 CritChance = 0.02,
                 CritMultiplier = 1.5,
                 StatusChance = 0.15,
@@ -23506,34 +27714,37 @@ local WeaponData = {
             Type = "Robotique"
         },
         ["Verglas"] = {
-		Accuracy = 100,
-		Class = "Fusil",
-		Disposition = 0.5,
-		Family = "Verglas",
-		Image = "Verglas.png",
-		Introduced = "29.10",
-		Magazine = 80,
-		Mastery = 0,
-		Name = "Verglas",
-		NormalAttack = {
-			Damage = {
-				["Glace"] = 26,},
-			CritChance = 0.08,
-			CritMultiplier = 2,
-			StatusChance = 0.34,
-			FireRate = 12,
-			ShotType = "Décharge",
-		},
-		Reload = 2.2,
-		Traits = {"Tenno"},
-		Trigger = "Continue",
-		Type = "Robotique",
-	},
+            Accuracy = 100,
+            Class = "Fusil",
+            Disposition = 0.5,
+            Family = "Verglas",
+            Image = "Verglas.png",
+            Introduced = "29.10",
+            Magazine = 80,
+            Mastery = 0,
+            Name = "Verglas",
+            NormalAttack = {
+                Damage = {
+                    ["Glace"] = 26
+                },
+                CritChance = 0.08,
+                CritMultiplier = 2,
+                StatusChance = 0.34,
+                FireRate = 12,
+                ShotType = "Décharge"
+            },
+            Reload = 2.2,
+            Traits = {"Tenno"},
+            Trigger = "Continue",
+            Type = "Robotique"
+        },
         ["Vulcax"] = {
             Accuracy = 100,
             Class = "Fusil",
             ChargeAttack = {
-                Damage = {["Feu"] = 35},
+                Damage = {
+                    ["Feu"] = 35
+                },
                 CritChance = 0.2,
                 CritMultiplier = 2.5,
                 StatusChance = 0.1,
@@ -23563,7 +27774,9 @@ local WeaponData = {
             Mastery = 0,
             Name = "Vulklok",
             NormalAttack = {
-                Damage = {["Électrique"] = 85},
+                Damage = {
+                    ["Électrique"] = 85
+                },
                 CritChance = 0.35,
                 CritMultiplier = 2.5,
                 StatusChance = 0.25,
@@ -23583,11 +27796,19 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Cortège Canon", Type = "Objet", Count = 1},
-                    {Name = "Cortège Culasse", Type = "Objet", Count = 1},
-                    {Name = "Cortège Crosse", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Cortège Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cortège Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cortège Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 1,
             Family = "Cortège",
@@ -23598,7 +27819,9 @@ local WeaponData = {
             Name = "Cortège",
             NormalAttack = {
                 AttackName = "Maintenu",
-                Damage = {["Feu"] = 90},
+                Damage = {
+                    ["Feu"] = 90
+                },
                 CritChance = 0.2,
                 CritMultiplier = 1.9,
                 StatusChance = 0.4,
@@ -23611,13 +27834,21 @@ local WeaponData = {
             Reload = 1,
             SecondaryAreaAttack = {
                 AttackName = "Attaque Radiale",
-                Damage = {["Explosif"] = 1000},
-                Falloff = {StartRange = 0, EndRange = 4, Reduction = 0.3},
+                Damage = {
+                    ["Explosif"] = 1000
+                },
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 4,
+                    Reduction = 0.3
+                },
                 Radius = 4
             },
             SecondaryAttack = {
                 AttackName = "Impact de Grenade",
-                Damage = {["Impact"] = 10},
+                Damage = {
+                    ["Impact"] = 10
+                },
                 FireRate = 0.25,
                 CritChance = 0.3,
                 CritMultiplier = 2.4,
@@ -23635,11 +27866,19 @@ local WeaponData = {
                 Credits = 20000,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Disposition = 1,
             Image = "Cortège.png",
@@ -23651,7 +27890,9 @@ local WeaponData = {
             Name = "Cortège (Atmosphère)",
             NormalAttack = {
                 AttackName = "Maintenu",
-                Damage = {["Feu"] = 90},
+                Damage = {
+                    ["Feu"] = 90
+                },
                 CritChance = 0.2,
                 CritMultiplier = 1.9,
                 StatusChance = 0.4,
@@ -23664,8 +27905,14 @@ local WeaponData = {
             Reload = 2.5,
             AreaAttack = {
                 AttackName = "Attaque Radiale",
-                Damage = {["Explosif"] = 3000},
-                Falloff = {StartRange = 0, EndRange = 4, Reduction = 0.3},
+                Damage = {
+                    ["Explosif"] = 3000
+                },
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 4,
+                    Reduction = 0.3
+                },
                 Radius = 4,
                 FireRate = 0.25,
                 CritChance = 0.3,
@@ -23676,7 +27923,9 @@ local WeaponData = {
             },
             ChargeAttack = {
                 AttackName = "Impact de Grenade",
-                Damage = {["Impact"] = 30},
+                Damage = {
+                    ["Impact"] = 30
+                },
                 FireRate = 0.25,
                 CritChance = 0.3,
                 CritMultiplier = 2.4,
@@ -23713,12 +27962,23 @@ local WeaponData = {
                 MarketCost = 210,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Image = "Corvas.png",
             Introduced = "15.0",
@@ -23771,12 +28031,23 @@ local WeaponData = {
                 MarketCost = 210,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Image = "Corvas.png",
             Introduced = "24.2",
@@ -23813,12 +28084,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1},
-                    {Name = "Tellure", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Image = "Cyngas.png",
             Introduced = "SotR",
@@ -23853,12 +28135,23 @@ local WeaponData = {
                 MarketCost = 225,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1},
-                    {Name = "Tellure", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Image = "Cyngas.png",
             Introduced = "24.2",
@@ -23885,84 +28178,110 @@ local WeaponData = {
             Type = "Arch-Fusil (Atmosphère)"
         },
         ["Doubles Décurion"] = {
-		Accuracy = 12.5,
-		Cost = {
-			Credits = 45000,
-			BPCost = 35000,
-			MarketCost = 225,
-			Rush = 50,
-			Time = 12,
-			Parts = {
-				{ Name = "Canon",Type = "Objet",Count = 2,},
-				{ Name = "Culasse",Type = "Objet",Count = 2,},
-				{ Name = "Module de Contrôle",Type = "Ressource",Count = 2,},},
-		},
-		Disposition = 1.3,
-		Family = "Doubles Décurion",
-		Image = "DoublesDecurion.png",
-		Introduced = "15.5",
-		Magazine = 32,
-		Mastery = 1,
-		Name = "Doubles Décurion",
-		NormalAttack = {
-			Damage = {
-				["Impact"] = 49.5,
-				["Puncture"] = 30.3,
-				["Slash"] = 30.2,},
-			CritChance = 0.28,
-			CritMultiplier = 2.2,
-			StatusChance = 0.14,
-			FireRate = 8.33,
-			ShotType = "Projectile",
-			ShotSpeed = "?",
-			Falloff = {StartRange = 1500,EndRange = 3000,Reduction = 0.5,},
-		},
-		Reload = 50,
-		ReloadStyle = "Régénération",
-		Traits = {"Tenno"},
-		Trigger = "Auto",
-		Type = "Arch-Fusil",
-	},
-		["Doubles Décurion (Atmosphère)"] = {
-		Accuracy = 100,
-		Cost = {
-			Credits = 45000,
-			BPCost = 35000,
-			MarketCost = 225,
-			Rush = 50,
-			Time = 12,
-			Parts = {
-				{ Name = "Canon",Type = "Objet",Count = 2,},
-				{ Name = "Culasse",Type = "Objet",Count = 2,},
-				{ Name = "Module de Contrôle",Type = "Ressource",Count = 2,},},
-		},
-		Disposition = 1.25,
-		Image = "DoublesDecurion.png",
-		Introduced = "24.2",
-		Link = "Doubles Décurion",
-		Magazine = 32,
-		Mastery = 1,
-		MaxAmmo = 512,
-		Name = "Doubles Décurion (Atmosphère)",
-		NormalAttack = {
-			Damage = {
-				["Impact"] = 49.5,
-				["Perforation"] = 30.3,
-				["Tranchant"] = 30.2,},
-			CritChance = 0.28,
-			CritMultiplier = 2.2,
-			StatusChance = 0.14,
-			FireRate = 8.33,
-			ShotType = "Hit-scan",
-		},
-		Reload = 1.4,
-		Traits = {"Tenno"},
-		Trigger = "Auto",
-		Type = "Arch-Fusil (Atmosphère)",
-	},
+            Accuracy = 12.5,
+            Cost = {
+                Credits = 45000,
+                BPCost = 35000,
+                MarketCost = 225,
+                Rush = 50,
+                Time = 12,
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 2
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 2
+                }, {
+                    Name = "Module de Contrôle",
+                    Type = "Ressource",
+                    Count = 2
+                }}
+            },
+            Disposition = 1.3,
+            Family = "Doubles Décurion",
+            Image = "DoublesDecurion.png",
+            Introduced = "15.5",
+            Magazine = 32,
+            Mastery = 1,
+            Name = "Doubles Décurion",
+            NormalAttack = {
+                Damage = {
+                    ["Impact"] = 49.5,
+                    ["Puncture"] = 30.3,
+                    ["Slash"] = 30.2
+                },
+                CritChance = 0.28,
+                CritMultiplier = 2.2,
+                StatusChance = 0.14,
+                FireRate = 8.33,
+                ShotType = "Projectile",
+                ShotSpeed = "?",
+                Falloff = {
+                    StartRange = 1500,
+                    EndRange = 3000,
+                    Reduction = 0.5
+                }
+            },
+            Reload = 50,
+            ReloadStyle = "Régénération",
+            Traits = {"Tenno"},
+            Trigger = "Auto",
+            Type = "Arch-Fusil"
+        },
+        ["Doubles Décurion (Atmosphère)"] = {
+            Accuracy = 100,
+            Cost = {
+                Credits = 45000,
+                BPCost = 35000,
+                MarketCost = 225,
+                Rush = 50,
+                Time = 12,
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 2
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 2
+                }, {
+                    Name = "Module de Contrôle",
+                    Type = "Ressource",
+                    Count = 2
+                }}
+            },
+            Disposition = 1.25,
+            Image = "DoublesDecurion.png",
+            Introduced = "24.2",
+            Link = "Doubles Décurion",
+            Magazine = 32,
+            Mastery = 1,
+            MaxAmmo = 512,
+            Name = "Doubles Décurion (Atmosphère)",
+            NormalAttack = {
+                Damage = {
+                    ["Impact"] = 49.5,
+                    ["Perforation"] = 30.3,
+                    ["Tranchant"] = 30.2
+                },
+                CritChance = 0.28,
+                CritMultiplier = 2.2,
+                StatusChance = 0.14,
+                FireRate = 8.33,
+                ShotType = "Hit-scan"
+            },
+            Reload = 1.4,
+            Traits = {"Tenno"},
+            Trigger = "Auto",
+            Type = "Arch-Fusil (Atmosphère)"
+        },
         ["Doubles Decurion Prisma"] = {
             Accuracy = 16,
-            Cost = {BPCost = 35000},
+            Cost = {
+                BPCost = 35000
+            },
             Disposition = 1.05,
             Family = "Doubles Décurion",
             Image = "Doubles Decurion Prisma.png",
@@ -23997,7 +28316,9 @@ local WeaponData = {
         },
         ["Doubles Décurion Prisma (Atmosphère)"] = {
             Accuracy = 100,
-            Cost = {BPCost = 35000},
+            Cost = {
+                BPCost = 35000
+            },
             Disposition = 1.05,
             Image = "Doubles Decurion Prisma.png",
             Introduced = "29.5.8",
@@ -24031,12 +28352,23 @@ local WeaponData = {
                 MarketCost = 210,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Accuracy = 100,
             Image = "250px-ArchRocketCrossbow.png",
@@ -24072,12 +28404,23 @@ local WeaponData = {
                 MarketCost = 210,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1},
-                    {Name = "Cristal d'Argon", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Cristal d'Argon",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Accuracy = 100,
             Image = "250px-ArchRocketCrossbow.png",
@@ -24122,12 +28465,23 @@ local WeaponData = {
                 MarketCost = 250,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Tellure", Type = "Ressource", Count = 5},
-                    {Name = "Récupération", Type = "Ressource", Count = 6000},
-                    {Name = "Oxium", Type = "Ressource", Count = 3500},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 6000
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 3500
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Image = "Grattler.png",
             Introduced = "17.0",
@@ -24171,12 +28525,23 @@ local WeaponData = {
                 MarketCost = 250,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {Name = "Tellure", Type = "Ressource", Count = 5},
-                    {Name = "Récupération", Type = "Ressource", Count = 6000},
-                    {Name = "Oxium", Type = "Ressource", Count = 3500},
-                    {Name = "Forma", Type = "Ressource", Count = 1}
-                }
+                Parts = {{
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Récupération",
+                    Type = "Ressource",
+                    Count = 6000
+                }, {
+                    Name = "Oxium",
+                    Type = "Ressource",
+                    Count = 3500
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Image = "Grattler.png",
             Introduced = "24.2",
@@ -24265,11 +28630,19 @@ local WeaponData = {
                 Credits = 25000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Tellure", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Family = "Imperator",
             Image = "ImperatorVandal.png",
@@ -24302,11 +28675,19 @@ local WeaponData = {
                 Credits = 25000,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Tellure", Type = "Ressource", Count = 10}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 10
+                }}
             },
             Image = "ImperatorVandal.png",
             Introduced = "24.2",
@@ -24338,12 +28719,23 @@ local WeaponData = {
                 MarketCost = 125,
                 Rush = 35,
                 Time = 12,
-                Parts = {
-                    {Name = "Crisma Toroid", Type = "Ressource", Count = 2},
-                    {Name = "Alliage Venerdo", Type = "Ressource", Count = 80},
-                    {Name = "Radiant Zodian", Type = "Ressource", Count = 5},
-                    {Name = "Ecosynth Analyzer", Type = "Ressource", Count = 5}
-                }
+                Parts = {{
+                    Name = "Crisma Toroid",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Alliage Venerdo",
+                    Type = "Ressource",
+                    Count = 80
+                }, {
+                    Name = "Radiant Zodian",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Ecosynth Analyzer",
+                    Type = "Ressource",
+                    Count = 5
+                }}
             },
             Accuracy = 8.3,
             Image = "Larkspur.png",
@@ -24353,7 +28745,10 @@ local WeaponData = {
             Name = "Larkspur",
             Disposition = 0.8,
             NormalAttack = {
-                Damage = {["Impact"] = 10, ["Radiation"] = 80},
+                Damage = {
+                    ["Impact"] = 10,
+                    ["Radiation"] = 80
+                },
                 CritChance = 0.10,
                 CritMultiplier = 1.4,
                 StatusChance = 0.50,
@@ -24385,12 +28780,23 @@ local WeaponData = {
                 MarketCost = 125,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Crisma Toroid", Type = "Ressource", Count = 2},
-                    {Name = "Alliage Venerdo", Type = "Ressource", Count = 80},
-                    {Name = "Radiant Zodian", Type = "Ressource", Count = 5},
-                    {Name = "Ecosynth Analyzer", Type = "Ressource", Count = 5}
-                }
+                Parts = {{
+                    Name = "Crisma Toroid",
+                    Type = "Ressource",
+                    Count = 2
+                }, {
+                    Name = "Alliage Venerdo",
+                    Type = "Ressource",
+                    Count = 80
+                }, {
+                    Name = "Radiant Zodian",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Ecosynth Analyzer",
+                    Type = "Ressource",
+                    Count = 5
+                }}
             },
             Accuracy = 8.3,
             Image = "Larkspur.png",
@@ -24400,7 +28806,10 @@ local WeaponData = {
             Mastery = 8,
             Name = "Larkspur (Atmosphère)",
             NormalAttack = {
-                Damage = {["Impact"] = 10, ["Radiation"] = 80},
+                Damage = {
+                    ["Impact"] = 10,
+                    ["Radiation"] = 80
+                },
                 CritChance = 0.10,
                 CritMultiplier = 1.4,
                 StatusChance = 0.50,
@@ -24428,9 +28837,15 @@ local WeaponData = {
             Accuracy = 80,
             AreaAttack = {
                 AttackName = "Explosion Tir Auto",
-                Damage = {["Feu"] = 48},
+                Damage = {
+                    ["Feu"] = 48
+                },
                 Radius = 1.8,
-                Falloff = {StartRange = 0, EndRange = 1.8, Reduction = 0.1}
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 1.8,
+                    Reduction = 0.1
+                }
             },
             ChargeAttack = {
                 AttackName = "Tir Chargé",
@@ -24456,11 +28871,18 @@ local WeaponData = {
             Name = "Mausolon",
             NormalAttack = {
                 AttackName = "Auto",
-                Damage = {["Impact"] = 24, ["Perforation"] = 46, ["Feu"] = 50},
+                Damage = {
+                    ["Impact"] = 24,
+                    ["Perforation"] = 46,
+                    ["Feu"] = 50
+                },
                 CritChance = 0.3,
                 CritMultiplier = 2.2,
                 StatusChance = 0.26,
-                Falloff = {StartRange = 100, EndRange = 350},
+                Falloff = {
+                    StartRange = 100,
+                    EndRange = 350
+                },
                 FireRate = 8.33,
                 ShotType = "Hitscan"
             },
@@ -24469,9 +28891,15 @@ local WeaponData = {
             Reload = 5.5,
             SecondaryAreaAttack = {
                 AttackName = "Explosion Tir Chargé",
-                Damage = {["Feu"] = 3000},
+                Damage = {
+                    ["Feu"] = 3000
+                },
                 Radius = 8,
-                Falloff = {StartRange = 0, EndRange = 8, Reduction = 0.4}
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 8,
+                    Reduction = 0.4
+                }
             },
             Traits = {"Entrati"},
             Trigger = "Auto / Semi",
@@ -24481,17 +28909,29 @@ local WeaponData = {
             Accuracy = 80,
             AreaAttack = {
                 AttackName = "Auto Radial Attack",
-                Damage = {["Feu"] = 48},
+                Damage = {
+                    ["Feu"] = 48
+                },
                 Radius = 1.8,
-                Falloff = {StartRange = 0, EndRange = 1.8, Reduction = 0.1}
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 1.8,
+                    Reduction = 0.1
+                }
             },
             ChargeAttack = {
                 AttackName = "Charged Shot",
-                Damage = {["Feu"] = 3000},
+                Damage = {
+                    ["Feu"] = 3000
+                },
                 ChargeTime = 4,
                 CritChance = 0.5,
                 CritMultiplier = 3.5,
-                Falloff = {StartRange = 0, EndRange = 8, Reduction = 0.4},
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 8,
+                    Reduction = 0.4
+                },
                 ShotType = "Projectile",
                 ShotSpeed = "?",
                 StatusChance = 0.5
@@ -24506,7 +28946,11 @@ local WeaponData = {
             Name = "Mausolon (Atmosphere)",
             NormalAttack = {
                 AttackName = "Auto",
-                Damage = {["Impact"] = 24, ["Perforation"] = 46, ["Feu"] = 50},
+                Damage = {
+                    ["Impact"] = 24,
+                    ["Perforation"] = 46,
+                    ["Feu"] = 50
+                },
                 CritChance = 0.3,
                 CritMultiplier = 2.2,
                 StatusChance = 0.26,
@@ -24518,7 +28962,9 @@ local WeaponData = {
             Reload = 2.0,
             SecondaryAttack = {
                 AttackName = "Active",
-                Damage = {["Feu"] = 1000},
+                Damage = {
+                    ["Feu"] = 1000
+                },
                 FireRate = 0.25,
                 CritChance = 0.3,
                 CritMultiplier = 2.4,
@@ -24537,11 +28983,19 @@ local WeaponData = {
                 BPStanding = 8000,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Item", Count = 1},
-                    {Name = "Culasse", Type = "Item", Count = 1},
-                    {Name = "Crosse", Type = "Item", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Item",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Item",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Item",
+                    Count = 1
+                }}
             },
             Disposition = 0.85,
             Image = "Morgha.png",
@@ -24552,7 +29006,9 @@ local WeaponData = {
             NormalAttack = {
                 AttackName = "Auto",
                 BurstCount = 2,
-                Damage = {["Impact"] = 32},
+                Damage = {
+                    ["Impact"] = 32
+                },
                 CritChance = 0.3,
                 CritMultiplier = 2.2,
                 StatusChance = 0.28,
@@ -24562,8 +29018,14 @@ local WeaponData = {
             },
             AreaAttack = {
                 AttackName = "Attaque Radiale",
-                Damage = {["Explosif"] = 164},
-                Falloff = {StartRange = 0, EndRange = 3, Reduction = 0.3},
+                Damage = {
+                    ["Explosif"] = 164
+                },
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 3,
+                    Reduction = 0.3
+                },
                 Radius = 3
             },
             NoiseLevel = "Bruyant",
@@ -24573,7 +29035,9 @@ local WeaponData = {
             SecondaryAttack = {
                 Accuracy = 6.7,
                 AttackName = "Tir Chargé",
-                Damage = {["Impact"] = 100},
+                Damage = {
+                    ["Impact"] = 100
+                },
                 FireRate = 0.833,
                 CritChance = 0.4,
                 CritMultiplier = 3,
@@ -24588,7 +29052,11 @@ local WeaponData = {
                     ["Tranchant"] = 1000,
                     ["Explosif"] = 1200
                 },
-                Falloff = {StartRange = 0, EndRange = 20, Reduction = 0.6},
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 20,
+                    Reduction = 0.6
+                },
                 Radius = 12
             },
             Traits = {"Entrati"},
@@ -24603,11 +29071,19 @@ local WeaponData = {
                 BPStanding = 8000,
                 Rush = 25,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Item", Count = 1},
-                    {Name = "Culasse", Type = "Item", Count = 1},
-                    {Name = "Crosse", Type = "Item", Count = 1}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Item",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Item",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Item",
+                    Count = 1
+                }}
             },
             Disposition = 0.85,
             Image = "Morgha.png",
@@ -24618,7 +29094,9 @@ local WeaponData = {
             NormalAttack = {
                 AttackName = "Auto",
                 BurstCount = 2,
-                Damage = {["Impact"] = 32},
+                Damage = {
+                    ["Impact"] = 32
+                },
                 CritChance = 0.3,
                 CritMultiplier = 2.2,
                 StatusChance = 0.28,
@@ -24628,8 +29106,14 @@ local WeaponData = {
             },
             AreaAttack = {
                 AttackName = "Attaque Radiale",
-                Damage = {["Explosif"] = 164},
-                Falloff = {StartRange = 0, EndRange = 3, Reduction = 0.3},
+                Damage = {
+                    ["Explosif"] = 164
+                },
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 3,
+                    Reduction = 0.3
+                },
                 Radius = 3
             },
             NoiseLevel = "Bruyant",
@@ -24639,7 +29123,9 @@ local WeaponData = {
             SecondaryAttack = {
                 Accuracy = 6.7,
                 AttackName = "Tir Chargé",
-                Damage = {["Impact"] = 100},
+                Damage = {
+                    ["Impact"] = 100
+                },
                 FireRate = 0.833,
                 CritChance = 0.4,
                 CritMultiplier = 3,
@@ -24654,7 +29140,11 @@ local WeaponData = {
                     ["Tranchant"] = 1000,
                     ["Explosif"] = 1200
                 },
-                Falloff = {StartRange = 0, EndRange = 20, Reduction = 0.6},
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 20,
+                    Reduction = 0.6
+                },
                 Radius = 12
             },
             Traits = {"Entrati"},
@@ -24669,12 +29159,23 @@ local WeaponData = {
                 MarketCost = 220,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1},
-                    {Name = "Tellure", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Image = "Phaedra.png",
             Introduced = "17.5",
@@ -24708,12 +29209,23 @@ local WeaponData = {
                 MarketCost = 220,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1},
-                    {Name = "Tellure", Type = "Ressource", Count = 2}
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Image = "Phaedra.png",
             Introduced = "24.2",
@@ -24746,21 +29258,30 @@ local WeaponData = {
                 MarketCost = 200,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1},
-                    {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 2
-                    }
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Module de Contrôle",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Accuracy = 28.6,
             ChargeAttack = {
                 AttackName = "Tir Chargé",
-                Damage = {["Magnétique"] = 1800},
+                Damage = {
+                    ["Magnétique"] = 1800
+                },
                 ChargeTime = 1,
                 CritChance = 0.25,
                 CritMultiplier = 3,
@@ -24776,7 +29297,9 @@ local WeaponData = {
             Name = "Velocitus",
             NormalAttack = {
                 AttackName = "Uncharged Shot",
-                Damage = {["Magnétique"] = 200},
+                Damage = {
+                    ["Magnétique"] = 200
+                },
                 FireRate = 5
             },
             Reload = 25,
@@ -24792,21 +29315,30 @@ local WeaponData = {
                 MarketCost = 200,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Canon", Type = "Objet", Count = 1},
-                    {Name = "Culasse", Type = "Objet", Count = 1},
-                    {Name = "Crosse", Type = "Objet", Count = 1},
-                    {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 2
-                    }
-                }
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Crosse",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Module de Contrôle",
+                    Type = "Ressource",
+                    Count = 2
+                }}
             },
             Accuracy = 28.6,
             ChargeAttack = {
                 AttackName = "Tir Chargé",
-                Damage = {["Magnétique"] = 1200},
+                Damage = {
+                    ["Magnétique"] = 1200
+                },
                 ChargeTime = 1,
                 CritChance = 0.3,
                 CritMultiplier = 3,
@@ -24823,7 +29355,9 @@ local WeaponData = {
             Name = "Velocitus (Atmosphère)",
             NormalAttack = {
                 AttackName = "Uncharged Shot",
-                Damage = {["Magnétique"] = 133},
+                Damage = {
+                    ["Magnétique"] = 133
+                },
                 FireRate = 5
             },
             Reload = 2,
@@ -24838,11 +29372,19 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Objet", Count = 1},
-                    {Name = "Poignée", Type = "Objet", Count = 1},
-                    {Name = "Tellure", Type = "Ressource", Count = 3}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 3
+                }}
             },
             Image = "Agkuza.png",
             Introduced = "SotR",
@@ -24872,11 +29414,19 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Objet", Count = 1},
-                    {Name = "Poignée", Type = "Objet", Count = 1},
-                    {Name = "Aegis", Type = "Objet", Count = 1}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Aegis",
+                    Type = "Objet",
+                    Count = 1
+                }}
             },
             Image = "Centaur.png",
             Introduced = "15.7.2",
@@ -24906,11 +29456,19 @@ local WeaponData = {
                 MarketCost = 150,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Objet", Count = 1},
-                    {Name = "Poignée", Type = "Objet", Count = 1},
-                    {Name = "Tellure", Type = "Ressource", Count = 3}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Poignée",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Tellure",
+                    Type = "Ressource",
+                    Count = 3
+                }}
             },
             Image = "Kaszas.png",
             Introduced = "17.5",
@@ -24939,15 +29497,23 @@ local WeaponData = {
                 MarketCost = 170,
                 Rush = 35,
                 Time = 24,
-                Parts = {
-                    {
-                        Name = "Injecteur de Détonite",
-                        Type = "Ressource",
-                        Count = 5
-                    }, {Name = "Gallium", Type = "Ressource", Count = 10},
-                    {Name = "Forma", Type = "Ressource", Count = 1},
-                    {Name = "Furax", Type = "Arme", Count = 1}
-                }
+                Parts = {{
+                    Name = "Injecteur de Détonite",
+                    Type = "Ressource",
+                    Count = 5
+                }, {
+                    Name = "Gallium",
+                    Type = "Ressource",
+                    Count = 10
+                }, {
+                    Name = "Forma",
+                    Type = "Ressource",
+                    Count = 1
+                }, {
+                    Name = "Furax",
+                    Type = "Arme",
+                    Count = 1
+                }}
             },
             Image = "Knux.png",
             Introduced = "17.2",
@@ -24978,11 +29544,19 @@ local WeaponData = {
                 MarketCost = 190,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Objet", Count = 2},
-                    {Name = "Poignée", Type = "Objet", Count = 1},
-                    {Name = "Neurodes", Type = "Ressource", Count = 3}
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Objet",
+                    Count = 2
+                }, {
+                    Name = "Poignée",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Neurodes",
+                    Type = "Ressource",
+                    Count = 3
+                }}
             },
             Image = "Onorix.png",
             Introduced = "15.0",
@@ -25012,16 +29586,23 @@ local WeaponData = {
                 MarketCost = 160,
                 Rush = 50,
                 Time = 12,
-                Parts = {
-                    {Name = "Lame", Type = "Objet", Count = 2},
-                    {Name = "Poignée", Type = "Objet", Count = 1},
-                    {Name = "Circuits", Type = "Ressource", Count = 300},
-                    {
-                        Name = "Module de Contrôle",
-                        Type = "Ressource",
-                        Count = 1
-                    }
-                }
+                Parts = {{
+                    Name = "Lame",
+                    Type = "Objet",
+                    Count = 2
+                }, {
+                    Name = "Poignée",
+                    Type = "Objet",
+                    Count = 1
+                }, {
+                    Name = "Circuits",
+                    Type = "Ressource",
+                    Count = 300
+                }, {
+                    Name = "Module de Contrôle",
+                    Type = "Ressource",
+                    Count = 1
+                }}
             },
             Image = "Rathbone.png",
             Introduced = "15.2",
@@ -25111,9 +29692,7 @@ local WeaponData = {
             Trigger = "Auto",
             Traits = {"Grineer"},
             Type = "Emplacement",
-            Users = {
-                "[[Lancer]]", "[[Elite Lancer]]", "[[Trooper]]", "[[Seeker]]"
-            }
+            Users = {"[[Lancer]]", "[[Elite Lancer]]", "[[Trooper]]", "[[Seeker]]"}
         },
         ["Dargyn"] = {
             Class = "Turret",
@@ -25148,7 +29727,9 @@ local WeaponData = {
             Image = "Harpon_Lanzo.png",
             Range = 20,
             NormalAttack = {
-                Damage = {["Impact"] = 10.0},
+                Damage = {
+                    ["Impact"] = 10.0
+                },
                 CritMultiplier = 2.0,
                 StatusChance = 0.0
             },
@@ -25164,7 +29745,9 @@ local WeaponData = {
             Image = "Harpon_Tulok.png",
             Range = 20,
             NormalAttack = {
-                Damage = {["Perforation"] = 10.0},
+                Damage = {
+                    ["Perforation"] = 10.0
+                },
                 CritMultiplier = 2.0,
                 StatusChance = 0.0
             },
@@ -25180,7 +29763,9 @@ local WeaponData = {
             Image = "Harpon_Peram.png",
             Range = 20,
             NormalAttack = {
-                Damage = {["Tranchant"] = 10.0},
+                Damage = {
+                    ["Tranchant"] = 10.0
+                },
                 CritMultiplier = 2.0,
                 StatusChance = 0.0
             },
@@ -25223,155 +29808,173 @@ local WeaponData = {
         },
         -- Armement du Railjack --
         ["Apoc"] = {
-		Accuracy = 16.7,
-		NormalAttack = {
-			CritChance = 0.2,
-			CritMultiplier = 2,
-			Damage = { ["Perforation"] = 432.6, ["Tranchant"] = 185.4 },
-			Falloff = { EndRange = 4000, Reduction = 0.6667, StartRange = 2000 },
-			FireRate = 8.33,
-			ShotSpeed = "?",
-			ShotType = "Projectile",
-			StatusChance = 0.1 
-		},
-		Class = "Armement du Railjack",
-		Image = "Apoc.png",
-		Introduced = "27",
-		Link = "Apoc",
-		Name = "Apoc",
-		Reload = 3,
-		Trigger = "Auto",
-		Type = "Tourelle de Railjack" 
-	},
+            Accuracy = 16.7,
+            NormalAttack = {
+                CritChance = 0.2,
+                CritMultiplier = 2,
+                Damage = {
+                    ["Perforation"] = 432.6,
+                    ["Tranchant"] = 185.4
+                },
+                Falloff = {
+                    EndRange = 4000,
+                    Reduction = 0.6667,
+                    StartRange = 2000
+                },
+                FireRate = 8.33,
+                ShotSpeed = "?",
+                ShotType = "Projectile",
+                StatusChance = 0.1
+            },
+            Class = "Armement du Railjack",
+            Image = "Apoc.png",
+            Introduced = "27",
+            Link = "Apoc",
+            Name = "Apoc",
+            Reload = 3,
+            Trigger = "Auto",
+            Type = "Tourelle de Railjack"
+        },
         ["Tunguska Cannon"] = {
-		Accuracy = 100,
-		NormalAttack = {
-			ChargeTime = 4,
-			CritChance = 3,
-			CritMultiplier = 2,
-			Damage = { ["Impact"] = 5650, ["Perforation"] = 48025, ["Tranchant"] = 2825 },
-			FireRate = 1,
-			ShotType = "Hit-Scan",
-			StatusChance = 0 
-		},
-		Class = "Armement du Railjack",
-		Image = "TunguskaCannon.png",
-		Introduced = "27",
-		Link = "Canon Tunguska",
-		Magazine = 1,
-		Mastery = 14,
-		MaxAmmo = 2,
-		Name = "Canon Tunguska",
-		Reload = 1,
-		Trigger = "Chargé",
-		Type = "Armement du Railjack" 
-	},
+            Accuracy = 100,
+            NormalAttack = {
+                ChargeTime = 4,
+                CritChance = 3,
+                CritMultiplier = 2,
+                Damage = {
+                    ["Impact"] = 5650,
+                    ["Perforation"] = 48025,
+                    ["Tranchant"] = 2825
+                },
+                FireRate = 1,
+                ShotType = "Hit-Scan",
+                StatusChance = 0
+            },
+            Class = "Armement du Railjack",
+            Image = "TunguskaCannon.png",
+            Introduced = "27",
+            Link = "Canon Tunguska",
+            Magazine = 1,
+            Mastery = 14,
+            MaxAmmo = 2,
+            Name = "Canon Tunguska",
+            Reload = 1,
+            Trigger = "Chargé",
+            Type = "Armement du Railjack"
+        },
         ["Carcinnox"] = {
-		Class = "Armement du Railjack",
-		Image = "Carcinnox.png",
-		Introduced = "27",
-		Link = "Carcinnox",
-		Name = "Carcinnox",
-		Trigger = "Auto",
-		Type = "Tourelle de Railjack" 
-	},
+            Class = "Armement du Railjack",
+            Image = "Carcinnox.png",
+            Introduced = "27",
+            Link = "Carcinnox",
+            Name = "Carcinnox",
+            Trigger = "Auto",
+            Type = "Tourelle de Railjack"
+        },
         ["Cryophon"] = {
-		Class = "Armement du Railjack",
-		Image = "Cryophon.png",
-		Introduced = "27",
-		Link = "Cryophon",
-		Name = "Cryophon",
-		Trigger = "Semi-Auto",
-		Type = "Tourelle de Railjack" 
-	},
-		["Galvarc"] = {
-		Class = "Armement du Railjack",
-		Image = "Galvarc.png",
-		Introduced = "29.10",
-		Link = "Galvarc",
-		Name = "Galvarc",
-		Trigger = "Semi-Auto",
-		Type = "Calamité de Railjack" 
-	},
+            Class = "Armement du Railjack",
+            Image = "Cryophon.png",
+            Introduced = "27",
+            Link = "Cryophon",
+            Name = "Cryophon",
+            Trigger = "Semi-Auto",
+            Type = "Tourelle de Railjack"
+        },
+        ["Galvarc"] = {
+            Class = "Armement du Railjack",
+            Image = "Galvarc.png",
+            Introduced = "29.10",
+            Link = "Galvarc",
+            Name = "Galvarc",
+            Trigger = "Semi-Auto",
+            Type = "Calamité de Railjack"
+        },
         ["Glazio"] = {
-		Class = "Armement du Railjack",
-		Image = "Glazio.png",
-		Introduced = "29.10",
-		Link = "Glazio",
-		Name = "Glazio",
-		Trigger = "Auto",
-		Type = "Tourelle de Railjack" 
-	},
+            Class = "Armement du Railjack",
+            Image = "Glazio.png",
+            Introduced = "29.10",
+            Link = "Glazio",
+            Name = "Glazio",
+            Trigger = "Auto",
+            Type = "Tourelle de Railjack"
+        },
         ["Laith"] = {
-		Class = "Armement du Railjack",
-		Image = "Laith.png",
-		Introduced = "29.10",
-		Link = "Laith",
-		Name = "Laith",
-		Trigger = "Auto",
-		Type = "Tourelle de Railjack" 
-	},
-		["Milati"] = {
-		Class = "Armement du Railjack",
-		Image = "Milati.png",
-		Introduced = "29.10",
-		Link = "Milati",
-		Name = "Milati",
-		Trigger = "Semi-Auto",
-		Type = "Calamité de Railjack" 
-	},
-		["Missile à Tête Chercheuse Tycho"] = {
-		Class = "Armement du Railjack",
-		Image = "Missile-a-tete-chercheuse.png",
-		Introduced = "29.10",
-		Link = "Tycho Seeker",
-		Name = "Tycho Seeker",
-		Trigger = "Semi-Auto",
-		Type = "Calamité de Railjack" 
-	},
+            Class = "Armement du Railjack",
+            Image = "Laith.png",
+            Introduced = "29.10",
+            Link = "Laith",
+            Name = "Laith",
+            Trigger = "Auto",
+            Type = "Tourelle de Railjack"
+        },
+        ["Milati"] = {
+            Class = "Armement du Railjack",
+            Image = "Milati.png",
+            Introduced = "29.10",
+            Link = "Milati",
+            Name = "Milati",
+            Trigger = "Semi-Auto",
+            Type = "Calamité de Railjack"
+        },
+        ["Missile à Tête Chercheuse Tycho"] = {
+            Class = "Armement du Railjack",
+            Image = "Missile-a-tete-chercheuse.png",
+            Introduced = "29.10",
+            Link = "Tycho Seeker",
+            Name = "Tycho Seeker",
+            Trigger = "Semi-Auto",
+            Type = "Calamité de Railjack"
+        },
         ["Photor"] = {
-		Class = "Armement du Railjack",
-		Image = "Photor.png",
-		Introduced = "27",
-		Link = "Photor",
-		Name = "Photor",
-		Trigger = "Continue",
-		Type = "Tourelle de Railjack" 
-		},
+            Class = "Armement du Railjack",
+            Image = "Photor.png",
+            Introduced = "27",
+            Link = "Photor",
+            Name = "Photor",
+            Trigger = "Continue",
+            Type = "Tourelle de Railjack"
+        },
         ["Pulsar"] = {
-		Class = "Armement du Railjack",
-		Image = "Pulsar.png",
-		Introduced = "27",
-		Link = "Pulsar",
-		Name = "Pulsar",
-		Trigger = "Auto Burst",
-		Type = "Tourelle de Railjack" 
-		},
+            Class = "Armement du Railjack",
+            Image = "Pulsar.png",
+            Introduced = "27",
+            Link = "Pulsar",
+            Name = "Pulsar",
+            Trigger = "Auto Burst",
+            Type = "Tourelle de Railjack"
+        },
         ["Talyn"] = {
-		Class = "Armement du Railjack",
-		Image = "Talyn.png",
-		Introduced = "29.10",
-		Link = "Talyn",
-		Name = "Talyn",
-		Trigger = "Auto",
-		Type = "Tourelle de Railjack" 
-		},
+            Class = "Armement du Railjack",
+            Image = "Talyn.png",
+            Introduced = "29.10",
+            Link = "Talyn",
+            Name = "Talyn",
+            Trigger = "Auto",
+            Type = "Tourelle de Railjack"
+        },
         ["Vort"] = {
-		Class = "Armement du Railjack",
-		Image = "Vort.png",
-		Introduced = "29.10",
-		Link = "Vort",
-		Name = "Vort",
-		Trigger = "Auto",
-		Type = "Tourelle de Railjack" 
-		},
+            Class = "Armement du Railjack",
+            Image = "Vort.png",
+            Introduced = "29.10",
+            Link = "Vort",
+            Name = "Vort",
+            Trigger = "Auto",
+            Type = "Tourelle de Railjack"
+        },
         -- Exalted Weapons --
         ["Arquebex"] = {
             Accuracy = 16.7,
             AreaAttack = {
                 AttackName = "Attaque Radial",
-                Damage = {["Explosif"] = 9000, ["Feu"] = 3000},
-                Falloff = {StartRange = 0, EndRange = 6, Reduction = 0},
+                Damage = {
+                    ["Explosif"] = 9000,
+                    ["Feu"] = 3000
+                },
+                Falloff = {
+                    StartRange = 0,
+                    EndRange = 6,
+                    Reduction = 0
+                },
                 Radius = 6
             },
             Class = "Arme Exaltée",
@@ -25383,7 +29986,9 @@ local WeaponData = {
             Name = "Arquebex",
             NormalAttack = {
                 AttackName = "Normal",
-                Damage = {["Impact"] = 10},
+                Damage = {
+                    ["Impact"] = 10
+                },
                 CritChance = 0.5,
                 CritMultiplier = 3,
                 StatusChance = 0.5,
@@ -25457,7 +30062,9 @@ local WeaponData = {
             Introduced = "24.4",
             MaxAmmo = 0,
             NormalAttack = {
-                Damage = {["Électrique"] = 500},
+                Damage = {
+                    ["Électrique"] = 500
+                },
                 CritChance = 0.05,
                 CritMultiplier = 1.5,
                 StatusChance = 0.1,
@@ -25634,63 +30241,9 @@ local WeaponData = {
             MeleeComboDur = 5.0,
             FollowThrough = 1.0,
             MeleeRange = 2.8,
-            Users = {
-                "[[Excalibur]]", "[[Excalibur Prime]]", "[[Excalibur Umbra]]"
-            },
+            Users = {"[[Excalibur]]", "[[Excalibur Prime]]", "[[Excalibur Umbra]]"},
             WallAttack = 1000
         },
-        --[===[ Exactement la meme arme que la version classique, pas besoin de faire plusieurs pages ou comparaisons
-    ["Lame Exaltée Umbra (Arme)"] = {
-          Name = "Lame Exaltée",
-      --BlockResist = 0.6,
-      Class = "Arme Exaltée",
-      Conclave = true,
-      Image = "EWExaltedBlade.png",
-      Introduced = "23.0",
-      Link = "Lame Exaltée (Arme)",
-      --JumpAttack = 500,
-      JumpRadius = 5,
-      NormalAttack = {
-        Damage = {
-          ["Impact"] = 37.5,
-          ["Perforation"] = 37.5,
-          ["Tranchant"] = 175,},
-        CritChance = 0.15,
-        CritMultiplier = 2,
-        StatusChance = 0.1,
-        FireRate = 0.833,
-        ShotSpeed = 15,
-        Range = 40,
-      },
-      Polarities = {"Q", "Q"},
-      SlideAttack = 536,
-      Traits = { "Tenno"},
-      Type = "Mêlée",
-      MeleeSlam = {
-        Damage = 0,
-        Element = nil,
-        RadialDamage = 0,
-        RadialElement = nil,
-        Radius = 0,
-      },
-      MeleeHeavy = {
-        Damage = 0,
-        Element = nil,
-        WindUp = 0,
-        SlamDamage = 0,
-        SlamElement = nil,
-        SlamRadialDamage = 0,
-        SlamRadialElement = nil,
-        SlamRadius = 0,
-      },
-      BlockAngle = 0,
-      MeleeComboDur = 5.0,
-      FollowThrough = 0,
-      MeleeRange = 0,
-      Users = {"[[Exalibur Umbra]]"},
-      WallAttack = 1000,
-    },
-    ]===]
         ["Pacificateurs"] = {
             Class = "Arme Exaltée",
             Conclave = true,
@@ -25725,7 +30278,9 @@ local WeaponData = {
             Image = "Desert_Wind.png",
             Introduced = "24.2",
             NormalAttack = {
-                Damage = {["Impact"] = 250},
+                Damage = {
+                    ["Impact"] = 250
+                },
                 CritChance = 0.5,
                 CritMultiplier = 2,
                 StatusChance = 0.1,
@@ -25812,7 +30367,10 @@ local WeaponData = {
             Introduced = "23.0",
             JumpRadius = 3,
             NormalAttack = {
-                Damage = {["Impact"] = 170.0, ["Tranchant"] = 80.0},
+                Damage = {
+                    ["Impact"] = 170.0,
+                    ["Tranchant"] = 80.0
+                },
                 CritChance = 0.25,
                 CritMultiplier = 2,
                 StatusChance = 0.3,
