@@ -1448,9 +1448,7 @@ local ModData = {
             Polarity = "Naramon",
             PvP = true,
             Rarity = "Rare",
-            Traits = {
-                "SECONDAIRE", "MUNITIONS", "-%TAILLE_CHARGEUR", "CONCLAVE"
-            },
+            Traits = {"SECONDAIRE", "MUNITIONS", "-%TAILLE_CHARGEUR", "CONCLAVE"},
             Transmutable = false
         },
         ["Canon Plaqué Rubedo"] = {
@@ -4680,7 +4678,7 @@ local ModData = {
             Rarity = "Inhabituel"
         },
         ["Furie Accrue"] = {
-            Image = "PrimedFury.png",
+            Image = "Furie Accrue.png",
             Name = "Furie Accrue",
             NameEN = "Primed Fury",
             Polarity = "Madurai",
@@ -4743,7 +4741,7 @@ local ModData = {
             Transmutable = false
         },
         ["Fusion des Réservoirs"] = {
-            AugmentType = "Warframe",	
+            AugmentType = "Warframe",
             Image = "Fusion des Réservoirs.png",
             Introduced = "30.2",
             Name = "Fusion des Réservoirs",
@@ -7304,9 +7302,7 @@ local ModData = {
             Polarity = "Naramon",
             PvP = true,
             Rarity = "Commun",
-            Traits = {
-                "SECONDAIRE", "MUNITIONS", "+%TAILLE_CHARGEUR", "CONCLAVE"
-            },
+            Traits = {"SECONDAIRE", "MUNITIONS", "+%TAILLE_CHARGEUR", "CONCLAVE"},
             Transmutable = false
         },
         ["Pluie Mafique"] = {
@@ -7321,7 +7317,7 @@ local ModData = {
             Transmutable = false
         },
         ["Plumes Tranchantes"] = {
-        	Image = "Plumes Tranchantes.png",
+            Image = "Plumes Tranchantes.png",
             Name = "Plumes Tranchantes",
             NameEN = "Slicing Feathers",
             Polarity = "Naramon",
@@ -7464,7 +7460,7 @@ local ModData = {
             Rarity = "Inhabituel"
         },
         ["Portion Copieuse"] = {
-            AugmentType = "Warframe",	
+            AugmentType = "Warframe",
             Image = "Portion Copieuse.png",
             Introduced = "30.2",
             Name = "Portion Copieuse",
@@ -7889,7 +7885,7 @@ local ModData = {
             Transmutable = false
         },
         ["Rafale de Coups"] = {
-            AugmentType = "Warframe",	
+            AugmentType = "Warframe",
             Image = "Rafale de Coups.png",
             Introduced = "30.2",
             Name = "Rafale de Coups",
@@ -8553,7 +8549,7 @@ local ModData = {
             Transmutable = false
         },
         ["Réflexe de Défense"] = {
-        	Image = "Réflexe de Défense.png",
+            Image = "Réflexe de Défense.png",
             Name = "Réflexe de Défense",
             NameEN = "Reflex Guard",
             Polarity = "Vazarin",
@@ -9524,9 +9520,7 @@ local ModData = {
             NameEN = "Ice Storm",
             Polarity = "Madurai",
             Rarity = "Rare",
-            Traits = {
-                "NIGHTMARE", "SECONDAIRE", "MUNITIONS", "+%TAILLE_CHARGEUR"
-            }
+            Traits = {"NIGHTMARE", "SECONDAIRE", "MUNITIONS", "+%TAILLE_CHARGEUR"}
         },
         ["Tempête de Sable Élémentaire"] = {
             AugmentType = "Warframe",
@@ -11044,7 +11038,7 @@ local ModData = {
             Traits = {"GALVANISE", "SECONDAIRE"},
             Transmutable = false
         },
-        
+
         ["Éventail Harcelant"] = {
             Image = "Éventail_Harcelant.png",
             Name = "Éventail Harcelant",
@@ -11055,761 +11049,1566 @@ local ModData = {
         }
     },
 
-    ["Postures"] = {
-        {Name = "Phénix de Fer", Class = "Épée"},
-        {Name = "Derviche Cramoisi", Class = "Épée"},
-        {Name = "Esprit Vengeur", Class = "Épée"},
-        {Name = "Attaque de faucon", Class = "Épée"},
-        {Name = "Serpents Croisés", Class = "Doubles Épées"},
-        {Name = "Tigre Tourbillonnant", Class = "Doubles Épées"},
-        {Name = "Taillade de Mante", Class = "Doubles Épées"},
-        {Name = "Fente Tranquille", Class = "Nikana"},
-        {Name = "Jugement Décisif", Class = "Nikana"},
-        {Name = "Justice Aveugle", Class = "Nikana"},
-        {Name = "Vent Tranchant", Class = "Dague"},
-        {Name = "Crocs Autoguidés", Class = "Dague"},
-        {Name = "Épine Cinglante", Class = "Dague"},
-        {Name = "Grincement du Payara", Class = "Doubles Dagues"},
-        {Name = "Serres Acérées", Class = "Doubles Dagues"},
-        {Name = "Aiguille Tourbillonnante", Class = "Doubles Dagues"},
-        {Name = "Tresse Scindante", Class = "Machette"},
-        {Name = "Kraken Cyclonique", Class = "Machette"},
-        {Name = "Paume Sismique", Class = "Poings"},
-        {Name = "Vent Fracturant", Class = "Poings"},
-        {Name = "Tragédie de Gaïa", Class = "Poings"},
-        {Name = "Fureur Sombre", Class = "Mains et Pieds"},
-        {Name = "Marée Brutale", Class = "Mains et Pieds"},
-        {Name = "Serre Étincelante", Class = "Glaive"},
-        {Name = "Crépuscule Astral", Class = "Glaive"},
-        {Name = "Affrontement de la Forêt", Class = "Bâton"},
-        {Name = "Branche Battante", Class = "Bâton"},
-        {Name = "Fléau Chatoyant", Class = "Arme d'Hast"},
-        {Name = "Saule Saignant", Class = "Arme d'Hast"},
-        {Name = "Flèche Virevoltante", Class = "Arme d'Hast"},
-        {Name = "Guêpe Brûlante", Class = "Fouet"},
-        {Name = "Étreinte de la Vipère", Class = "Fouet"},
-        {Name = "Fauchage Tournoyant", Class = "Faux"},
-        {Name = "Éventail Harcelant", Class = "Faux"},
-        {Name = "Entaille Tornade", Class = "Lame Lourde"},
-        {Name = "Grue Déchirante", Class = "Lame Lourde"},
-        {Name = "Tempo Royal", Class = "Lame Lourde"},
-        {Name = "Tempête Fracassante", Class = "Marteau"},
-        {Name = "Ruine Dévastatrice", Class = "Marteau"},
-        {Name = "Quatre Cavaliers", Class = "Griffes"},
-        {Name = "Rapace Malicieux", Class = "Griffes"},
-        {Name = "Tempête Vermillon", Class = "Griffes"},
-        {Name = "Onzième Tempête", Class = "Épée et Bouclier"},
-        {Name = "Dernier Présage", Class = "Épée et Bouclier"},
-        {Name = "Croisement des Gémeaux", Class = "Tonfa"},
-        {Name = "Souverain Proscrit", Class = "Tonfa"},
-        {Name = "Haut Zénith", Class = "Pistolame"},
-        {Name = "Valse de Balles", Class = "Pistolame"},
-        {Name = "Vulcain d'Atlantis", Class = "Nunchaku"},
-        {Name = "Ire Souillée du Dragon", Class = "Lame-Fouet"},
-        {Name = "Masque Vulpin", Class = "Rapière"},
-        {Name = "Plumes Tranchantes", Class = "Éventail de Guerre"},
-        {Name = "Massacre Votif", Class = "Éventail de Guerre"},
-        {Name = "Rasoir Lucide", Class = "Nikana à Deux Mains"},
-        {Name = "Vérité Fatidique", Class = "Nikana"},
-        {Name = "Acier Montant", Class = "Épée"},
-        {Name = "Lames Scindantes", Class = "Doubles Épées"},
-        {Name = "Dernier Héraut", Class = "Épée et Bouclier"},
-        {Name = "Rondin Écrasant", Class = "Bâton"},
-        {Name = "Fléau d'Argent", Class = "Arme d'Hast"},
-        {Name = "Furie Perforante", Class = "Dague"},
-        {Name = "Piranha Mordant", Class = "Doubles Dagues"},
-        {Name = "Vent Violent", Class = "Machette"},
-        {Name = "Pluie Mafique", Class = "Nunchaku"},
-        {Name = "Aspect Rusé", Class = "Rapière"},
-        {Name = "Cadence Noble", Class = "Lame Lourde"},
-        {Name = "Ravage Tonitruant", Class = "Marteau"},
-        {Name = "Faucheuse d'Ombre", Class = "Faux"},
-        {Name = "Main Traumatique", Class = "Poings"},
-        {Name = "Approche Vicieuse", Class = "Mains et Pieds"},
-        {Name = "Crépuscule Céleste", Class = "Glaive"},
-        {Name = "Volute Fustigeante", Class = "Fouet"},
-        {Name = "Tornade Écarlate", Class = "Griffes"},
-        {Name = "Dichotomie Stellaire", Class = "Tonfa"},
-        {Name = "Hydre Entachée", Class = "Lame-Fouet"},
+    ["Postures"] = {{
+        Name = "Phénix de Fer",
+        Class = "Épée"
+    }, {
+        Name = "Derviche Cramoisi",
+        Class = "Épée"
+    }, {
+        Name = "Esprit Vengeur",
+        Class = "Épée"
+    }, {
+        Name = "Attaque de faucon",
+        Class = "Épée"
+    }, {
+        Name = "Serpents Croisés",
+        Class = "Doubles Épées"
+    }, {
+        Name = "Tigre Tourbillonnant",
+        Class = "Doubles Épées"
+    }, {
+        Name = "Taillade de Mante",
+        Class = "Doubles Épées"
+    }, {
+        Name = "Fente Tranquille",
+        Class = "Nikana"
+    }, {
+        Name = "Jugement Décisif",
+        Class = "Nikana"
+    }, {
+        Name = "Justice Aveugle",
+        Class = "Nikana"
+    }, {
+        Name = "Vent Tranchant",
+        Class = "Dague"
+    }, {
+        Name = "Crocs Autoguidés",
+        Class = "Dague"
+    }, {
+        Name = "Épine Cinglante",
+        Class = "Dague"
+    }, {
+        Name = "Grincement du Payara",
+        Class = "Doubles Dagues"
+    }, {
+        Name = "Serres Acérées",
+        Class = "Doubles Dagues"
+    }, {
+        Name = "Aiguille Tourbillonnante",
+        Class = "Doubles Dagues"
+    }, {
+        Name = "Tresse Scindante",
+        Class = "Machette"
+    }, {
+        Name = "Kraken Cyclonique",
+        Class = "Machette"
+    }, {
+        Name = "Paume Sismique",
+        Class = "Poings"
+    }, {
+        Name = "Vent Fracturant",
+        Class = "Poings"
+    }, {
+        Name = "Tragédie de Gaïa",
+        Class = "Poings"
+    }, {
+        Name = "Fureur Sombre",
+        Class = "Mains et Pieds"
+    }, {
+        Name = "Marée Brutale",
+        Class = "Mains et Pieds"
+    }, {
+        Name = "Serre Étincelante",
+        Class = "Glaive"
+    }, {
+        Name = "Crépuscule Astral",
+        Class = "Glaive"
+    }, {
+        Name = "Affrontement de la Forêt",
+        Class = "Bâton"
+    }, {
+        Name = "Branche Battante",
+        Class = "Bâton"
+    }, {
+        Name = "Fléau Chatoyant",
+        Class = "Arme d'Hast"
+    }, {
+        Name = "Saule Saignant",
+        Class = "Arme d'Hast"
+    }, {
+        Name = "Flèche Virevoltante",
+        Class = "Arme d'Hast"
+    }, {
+        Name = "Guêpe Brûlante",
+        Class = "Fouet"
+    }, {
+        Name = "Étreinte de la Vipère",
+        Class = "Fouet"
+    }, {
+        Name = "Fauchage Tournoyant",
+        Class = "Faux"
+    }, {
+        Name = "Éventail Harcelant",
+        Class = "Faux"
+    }, {
+        Name = "Entaille Tornade",
+        Class = "Lame Lourde"
+    }, {
+        Name = "Grue Déchirante",
+        Class = "Lame Lourde"
+    }, {
+        Name = "Tempo Royal",
+        Class = "Lame Lourde"
+    }, {
+        Name = "Tempête Fracassante",
+        Class = "Marteau"
+    }, {
+        Name = "Ruine Dévastatrice",
+        Class = "Marteau"
+    }, {
+        Name = "Quatre Cavaliers",
+        Class = "Griffes"
+    }, {
+        Name = "Rapace Malicieux",
+        Class = "Griffes"
+    }, {
+        Name = "Tempête Vermillon",
+        Class = "Griffes"
+    }, {
+        Name = "Onzième Tempête",
+        Class = "Épée et Bouclier"
+    }, {
+        Name = "Dernier Présage",
+        Class = "Épée et Bouclier"
+    }, {
+        Name = "Croisement des Gémeaux",
+        Class = "Tonfa"
+    }, {
+        Name = "Souverain Proscrit",
+        Class = "Tonfa"
+    }, {
+        Name = "Haut Zénith",
+        Class = "Pistolame"
+    }, {
+        Name = "Valse de Balles",
+        Class = "Pistolame"
+    }, {
+        Name = "Vulcain d'Atlantis",
+        Class = "Nunchaku"
+    }, {
+        Name = "Ire Souillée du Dragon",
+        Class = "Lame-Fouet"
+    }, {
+        Name = "Masque Vulpin",
+        Class = "Rapière"
+    }, {
+        Name = "Plumes Tranchantes",
+        Class = "Éventail de Guerre"
+    }, {
+        Name = "Massacre Votif",
+        Class = "Éventail de Guerre"
+    }, {
+        Name = "Rasoir Lucide",
+        Class = "Nikana à Deux Mains"
+    }, {
+        Name = "Vérité Fatidique",
+        Class = "Nikana"
+    }, {
+        Name = "Acier Montant",
+        Class = "Épée"
+    }, {
+        Name = "Lames Scindantes",
+        Class = "Doubles Épées"
+    }, {
+        Name = "Dernier Héraut",
+        Class = "Épée et Bouclier"
+    }, {
+        Name = "Rondin Écrasant",
+        Class = "Bâton"
+    }, {
+        Name = "Fléau d'Argent",
+        Class = "Arme d'Hast"
+    }, {
+        Name = "Furie Perforante",
+        Class = "Dague"
+    }, {
+        Name = "Piranha Mordant",
+        Class = "Doubles Dagues"
+    }, {
+        Name = "Vent Violent",
+        Class = "Machette"
+    }, {
+        Name = "Pluie Mafique",
+        Class = "Nunchaku"
+    }, {
+        Name = "Aspect Rusé",
+        Class = "Rapière"
+    }, {
+        Name = "Cadence Noble",
+        Class = "Lame Lourde"
+    }, {
+        Name = "Ravage Tonitruant",
+        Class = "Marteau"
+    }, {
+        Name = "Faucheuse d'Ombre",
+        Class = "Faux"
+    }, {
+        Name = "Main Traumatique",
+        Class = "Poings"
+    }, {
+        Name = "Approche Vicieuse",
+        Class = "Mains et Pieds"
+    }, {
+        Name = "Crépuscule Céleste",
+        Class = "Glaive"
+    }, {
+        Name = "Volute Fustigeante",
+        Class = "Fouet"
+    }, {
+        Name = "Tornade Écarlate",
+        Class = "Griffes"
+    }, {
+        Name = "Dichotomie Stellaire",
+        Class = "Tonfa"
+    }, {
+        Name = "Hydre Entachée",
+        Class = "Lame-Fouet"
+    }, {
+        Name = "Ailes Rasoirs",
+        Class = "Arme Exaltée",
+        Weapon = "Diwata"
+    }, {
+        Name = "Lame Exaltée",
+        Class = "Arme Exaltée",
+        Weapon = "Lame Exaltée"
+    }, {
+        Name = "Hystérie",
+        Class = "Arme Exaltée",
+        Weapon = "Serres Valkyr"
+    }, {
+        Name = "Fureur Primale",
+        Class = "Arme Exaltée",
+        Weapon = "Bâton de Fer"
+    }, {
+        Name = "Tempête Reposante",
+        Class = "Arme Exaltée",
+        Weapon = "Vents du Désert"
+    }, {
+        Name = "Spectre Vorace",
+        Class = "Arme Exaltée",
+        Weapon = "Griffes de l'Ombre"
+    }},
 
-        {Name = "Ailes Rasoirs", Class = "Arme Exaltée", Weapon = "Diwata"},
-        {Name = "Lame Exaltée", Class = "Arme Exaltée", Weapon = "Lame Exaltée"},
-        {Name = "Hystérie", Class = "Arme Exaltée", Weapon = "Serres Valkyr"},
-        {Name = "Fureur Primale", Class = "Arme Exaltée", Weapon = "Bâton de Fer"},
-        {Name = "Tempête Reposante", Class = "Arme Exaltée", Weapon = "Vents du Désert"},
-        {Name = "Spectre Vorace", Class = "Arme Exaltée", Weapon = "Griffes de l'Ombre"}
-    },
-
-    ["ArchwingAugments"] = {
-        -- Itzal
-        {
-            Name = "Coup de Froid",
-            Archwing = "Itzal",
-            Ability = "Compression Cosmique"
-        }, -- Odonata
-        {
-            Name = "Champ d'Énergie",
-            Archwing = "Odonata",
-            Ability = "Bouclier d'Énergie"
-        }, -- Elytron
-        {
-            Name = "Postcombustion",
-            Archwing = "Elytron",
-            Ability = "Purge de Noyau"
-        }
-
-    },
-    ["CompagnonAugments"] = {
-        -- Carrier
-        {Name = "Caisse à Munitions", Compagnon = "Carrier"},
-        {Name = "Pilleur", Compagnon = "Carrier"}, -- Chargeur Helminth
-        {Name = "Proboscis", Compagnon = "Chargeur Helminth"},
-        {Name = "Piétine", Compagnon = "Chargeur Helminth"}, -- Dethcube
-        {Name = "Générateur d'Énergie", Compagnon = "Dethcube"},
-        {Name = "Mort brusque", Compagnon = "Dethcube"},
-        {Name = "Vaporisation", Compagnon = "Dethcube"}, -- Diriga
-        {Name = "Bobine Foudroyante", Compagnon = "Diriga"},
-        {Name = "Pulsation Électrique", Compagnon = "Diriga"},
-        {Name = "Tir Calculé", Compagnon = "Diriga"}, -- Djinn
-        {Name = "Attraction Fatale", Compagnon = "Djinn"},
-        {Name = "Cogneur", Compagnon = "Djinn"},
-        {Name = "Renaissance", Compagnon = "Djinn"}, -- Helios
-        {Name = "Détection de Vulnérabilité", Compagnon = "Helios"},
-        {Name = "Inspecteur", Compagnon = "Helios"},
-        {Name = "Récepteur de Ciblage", Compagnon = "Helios"}, -- Kavat Adarza
-        {Name = "Oeil de Chat", Compagnon = "Kavat Adarza"},
-        {Name = "Reflet", Compagnon = "Kavat Adarza"}, -- Kavat Smeeta
-        {Name = "Charme", Compagnon = "Kavat Smeeta"},
-        {Name = "Malice", Compagnon = "Kavat Smeeta"}, -- Kavat Vasca
-        {Name = "Morsure Vampirique", Compagnon = "Kavat Vasca"},
-        {Name = "Transfusion", Compagnon = "Kavat Vasca"}, -- Kubrow Chesa
-        {Name = "Flair", Compagnon = "Kubrow Chesa"},
-        {Name = "Neutralisation", Compagnon = "Kubrow Chesa"}, -- Kubrow Huras
-        {Name = "Chasse", Compagnon = "Kubrow Huras"},
-        {Name = "Traque", Compagnon = "Kubrow Huras"}, -- Kubrow Raksa
-        {Name = "Hurlement", Compagnon = "Kubrow Raksa"},
-        {Name = "Protection", Compagnon = "Kubrow Raksa"}, -- Kubrow Sahasa
-        {Name = "Déterrement", Compagnon = "Kubrow Sahasa"},
-        {Name = "Férocité", Compagnon = "Kubrow Sahasa"}, -- Kubrow Sunika
-        {Name = "Déchaînement", Compagnon = "Kubrow Sunika"},
-        {Name = "Sauvagerie", Compagnon = "Kubrow Sunika"}, -- Oxylus
-        {Name = "Botaniste", Compagnon = "Oxylus"},
-        {Name = "Détecteur de Matière", Compagnon = "Oxylus"},
-        {Name = "Détecteur Formes de Vie Aquatiques", Compagnon = "Oxylus"},
-        -- Prédasite Medjaÿ
-        {Name = "Morsure Infectieuse", Compagnon = "Prédasite Medjaÿ"},
-        {Name = "Spores Paralysantes", Compagnon = "Prédasite Medjaÿ"},
-        -- Prédasite Pharaon
-        {Name = "Pollinisation Anabolique", Compagnon = "Prédasite Pharaon"},
-        {Name = "Vecteur Endoparasite", Compagnon = "Prédasite Pharaon"},
-        -- Prédasite Vizir
-        {Name = "Mycélium Latrique", Compagnon = "Prédasite Vizir"},
-        {Name = "Synovie Acide", Compagnon = "Prédasite Vizir"}, -- Shade
-        {Name = "Embuscade", Compagnon = "Shade"},
-        {Name = "Fantôme", Compagnon = "Shade"},
-        {Name = "Vengeance", Compagnon = "Shade"}, -- Taxon
-        {Name = "Conversion Moléculaire", Compagnon = "Taxon"},
-        {Name = "Reciblage", Compagnon = "Taxon"}, -- Vulpaphyla Panzer
-        {Name = "Piques Virales", Compagnon = "Vulpaphyla Panzer"},
-        {Name = "Régression Panzer", Compagnon = "Vulpaphyla Panzer"},
-        -- Vulpaphyla Nocturne
-        {Name = "Charge Ascendante", Compagnon = "Vulpaphyla Nocturne"},
-        {Name = "Régression Nocturne", Compagnon = "Vulpaphyla Nocturne"},
-        -- Vulpaphyla Rusé
-        {Name = "Instinct de Survie", Compagnon = "Vulpaphyla Rusé"},
-        {Name = "Régression Sournoise", Compagnon = "Vulpaphyla Rusé"},
-        -- Wyrm
-        {Name = "Dispersion des foules", Compagnon = "Wyrm"},
-        {Name = "Guerrier", Compagnon = "Wyrm"},
-        {Name = "Négation", Compagnon = "Wyrm"}
-    },
-    ["WarframeAugments"] = {
-        -- Ash
-        {Name = "Shuriken Chercheur", Warframe = "Ash", Ability = "Shuriken"},
-        {Name = "Gaz Lacrymogène", Warframe = "Ash", Ability = "Écran de Fumée"},
-        {Name = "Ombre de Fumée", Warframe = "Ash", Ability = "Écran de Fumée"},
-        {Name = "Téléportation Fatale", Warframe = "Ash", Ability = "Téléportation"},
-        {Name = "Longue Tempête", Warframe = "Ash", Ability = "Tempête de Lames"},
-        -- Atlas
-        {Name = "Tas de Gravats", Warframe = "Atlas", Ability = "Passif"},
-        {Name = "Allée de Statues", Warframe = "Atlas", Ability = "Éboulement"},
-        {Name = "Fracture Tectonique", Warframe = "Atlas", Ability = "Tectonique"},
-        {Name = "Regard Minéral", Warframe = "Atlas", Ability = "Pétrification"},
-        {Name = "Gargouille", Warframe = "Atlas", Ability = "Golems"},
-        {Name = "Golem Titanesque", Warframe = "Atlas", Ability = "Golems"},
-        -- Banshee
-        {Name = "Fracture Sonique", Warframe = "Banshee", Ability = "Explosion Sonique"},
-        {Name = "Silence Sauvage", Warframe = "Banshee", Ability = "Silence"},
-        {Name = "Résonance", Warframe = "Banshee", Ability = "Sonar"},
-        {Name = "Secousse Résonnante", Warframe = "Banshee", Ability = "Secousse Sonique"},
-        -- Baruuk
-        {Name = "Accalmie Infinie", Warframe = "Baruuk", Ability = "Accalmie"},
-        {Name = "Tempête Réactive", Warframe = "Baruuk", Ability = "Tempête Reposante"},
-        -- Chroma
-        {Name = "Ire Spectrale", Warframe = "Chroma", Ability = "Hurlement Spectral"},
-        {Name = "Protection Éternelle", Warframe = "Chroma", Ability = "Protection Élémentaire"},
-        {Name = "Vengeance Épineuse", Warframe = "Chroma", Ability = "Armure d'Épines"},
-        {Name = "Effigie Guidée", Warframe = "Chroma", Ability = "Effigie"},
-        -- Ember
-        {Name = "Feu Frénétique", Warframe = "Ember", Ability = "Boule de Feu"},
-        {Name = "Poudre Flash", Warframe = "Ember", Ability = "Poudre"},
-        {Name = "Radiance Immolante", Warframe = "Ember", Ability = "Immolation"},
-        {Name = "Flamme Guérisseuse", Warframe = "Ember", Ability = "Souffle de Feu"},
-        {Name = "Flammes Purifiantes", Warframe = "Ember", Ability = "Souffle de Feu"},
-        {Name = "Monde en Fer", Warframe = "Ember", Ability = "Monde en Feu"},
-        {Name = "Exothermique", Warframe = "Ember", Ability = "Inferno"},
-        {Name = "Peur du Feu", Warframe = "Ember", Ability = "Souffle de Feu"},
-        -- Equinox
-        {Name = "Collision & Attraction", Warframe = "Equinox", Ability = "Métamorphose"},
-        {Name = "Dualité", Warframe = "Equinox", Ability = "Métamorphose"},
-        {Name = "Calme & Frénésie", Warframe = "Equinox", Ability = "Obnubilation & Fulmination"},
-        {Name = "Provocation Pacifique", Warframe = "Equinox", Ability = "Pacification & Provocation"},
-        {Name = "Transfert d'Énergie", Warframe = "Equinox", Ability = "Réparation & Mutilation"},
-        -- Excalibur
-        {Name = "Élan Déferlant", Warframe = "Excalibur", Ability = "Élan Tranchant"},
-        {Name = "Saignée d'Urgence", Warframe = "Excalibur", Ability = "Élan Tranchant"},
-        {Name = "Bouquet Radial", Warframe = "Excalibur", Ability = "Aveuglement Radial"},
-        {Name = "Fusée de Marquage", Warframe = "Excalibur", Ability = "Aveuglement Radial"},
-        {Name = "Javelot Furieux", Warframe = "Excalibur", Ability = "Javelot Radial"},
-        {Name = "Lame Chromatique", Warframe = "Excalibur", Ability = "Lame Exaltée"},
-        -- Frost
-        {Name = "Force de Gel", Warframe = "Frost", Ability = "Gel"},
-        {Name = "Vague de Glace Persistante", Warframe = "Frost", Ability = "Vague de Glace"},
-        {Name = "Boule de Glas", Warframe = "Frost", Ability = "Boule de Neige"},
-        {Name = "Avalanche Gelée", Warframe = "Frost", Ability = "Avalanche"},
-        -- Gara
-        {Name = "Éclats Guérisseurs", Warframe = "Gara", Ability = "Tempête d'Éclats"},
-        {Name = "Spectrosiphon", Warframe = "Gara", Ability = "Spectrage"},
-        -- Garuda
-        {Name = "Protection de l'Angoisse", Warframe = "Garuda", Ability = "Miroir de l'Angoisse"},
-        {Name = "Forge Ensanglantée", Warframe = "Garuda", Ability = "Saignée"},
-        {Name = "Serres Composées", Warframe = "Garuda", Ability = "Serres Possédées"},
-        -- Gauss
-        {Name = "Superbang", Warframe = "Gauss", Ability = "Supersonique"},
-        -- Grendel
-        {Name = "Portion Copieuse", Warframe = "Grendel", Ability = "Ravitaillement"},
-        {Name = "Catapulte", Warframe = "Grendel", Ability = "Pulvérisation"},
-        -- Harrow
-        {Name = "Tribunal", Warframe = "Harrow", Ability = "Condamnation"},
-        {Name = "Encensoir Protecteur", Warframe = "Harrow", Ability = "Encensoir"},
-        {Name = "Pacte Interminable", Warframe = "Harrow", Ability = "Pacte"},
-        -- Hildryn
-        {Name = "Surcharge Incandescente", Warframe = "Hildryn", Ability = "Incandescence"},
-        {Name = "Pillage Ardent", Warframe = "Hildryn", Ability = "Pillage Défensif"},
-        -- Hydroid
-        {Name = "Barrage Corrosif", Warframe = "Hydroid", Ability = "Barrage Tempête"},
-        {Name = "Marée Immunisante", Warframe = "Hydroid", Ability = "Raz de Marée"},
-        {Name = "Courant Curatif", Warframe = "Hydroid", Ability = "Contre-Courant"},
-        {Name = "Déluge Chapardeur", Warframe = "Hydroid", Ability = "Déluge de Tentacules"},
-        -- Inaros
-        {Name = "Malédiction de la Dessiccation", Warframe = "Inaros", Ability = "Dessiccation"},
-        {Name = "Tempête de Sable Élémentaire", Warframe = "Inaros", Ability = "Tempête de Sable"},
-        {Name = "Nuée Réfléchissante", Warframe = "Inaros", Ability = "Nuée de Scarabées"},
-        -- Ivara
-        {Name = "Carquois Surchargé", Warframe = "Ivara", Ability = "Carquois"},
-        {Name = "Le Pouvoir des Trois", Warframe = "Ivara", Ability = "Carquois"},
-        {Name = "Navigatrice Perçante", Warframe = "Ivara", Ability = "Navigatrice"},
-        {Name = "Infiltration", Warframe = "Ivara", Ability = "Maraude"},
-        {Name = "Flèche Concentrée", Warframe = "Ivara", Ability = "Arc d'Artémis"},
-        -- Khora
-        {Name = "Fouet Acéré Accumulé", Warframe = "Khora", Ability = "Fouet Acéré"},
-        {Name = "Garde du Corps Venari", Warframe = "Khora", Ability = "Venari"},
-        {Name = "Dôme Glouton", Warframe = "Khora", Ability = "Cage de Fer"},
-        -- Limbo
-        {Name = "Havre de Faille", Warframe = "Limbo", Ability = "Exil"},
-        {Name = "Torrent Dimensionnel", Warframe = "Limbo", Ability = "Déferlement Dimensionnel"},
-        {Name = "Continuum Cataclysmique", Warframe = "Limbo", Ability = "Cataclysme"},
-        -- Loki
-        {Name = "Lien Trompeur", Warframe = "Loki", Ability = "Leurre"},
-        {Name = "Leurre Protecteur", Warframe = "Loki", Ability = "Leurre"},
-        {Name = "Invisibilité Feutrée", Warframe = "Loki", Ability = "Invisibilité"},
-        {Name = "Transposition de Sauvegarde", Warframe = "Loki", Ability = "Transposition"},
-        {Name = "Désarmement Irradiant", Warframe = "Loki", Ability = "Désarmement Radial"},
-        -- Mag
-        {Name = "Atteinte Épuisante", Warframe = "Mag", Ability = "Attraction"},
-        {Name = "Attraction Avide", Warframe = "Mag", Ability = "Attraction"},
-        {Name = "Décharge Magnétisée", Warframe = "Mag", Ability = "Magnétisation"},
-        {Name = "Polarisation Inversée", Warframe = "Mag", Ability = "Polarisation"},
-        {Name = "Surcharge de Boucliers", Warframe = "Mag", Ability = "Polarisation"},
-        {Name = "Transfert de Bouclier", Warframe = "Mag", Ability = "Polarisation"},
-        {Name = "Écrasement Fracturant", Warframe = "Mag", Ability = "Écrasement"},
-        -- Mesa
-        {Name = "Cible Balistique", Warframe = "Mesa", Ability = "Batterie Balistique"},
-        {Name = "Tir Flash", Warframe = "Mesa", Ability = "Salle de tir"},
-        {Name = "Bouclier Déstabilisant", Warframe = "Mesa", Ability = "Bouclier Scélérat"},
-        {Name = "Valse de Mesa", Warframe = "Mesa", Ability = "Pacificateurs"},
-        -- Mirage
-        {Name = "Galerie de la Malveillance", Warframe = "Mirage", Ability = "Galerie des Glaces"},
-        {Name = "Prestidigitation Explosive", Warframe = "Mirage", Ability = "Tour de Passe-Passe"},
-        {Name = "Éclipse Totale", Warframe = "Mirage", Ability = "Éclipse"},
-        {Name = "Garde Prismatique", Warframe = "Mirage", Ability = "Prisme"},
-        -- Nekros
-        {Name = "Âme Survivante", Warframe = "Nekros", Ability = "Perforation d'Âme"},
-        {Name = "Frappe Spoliante", Warframe = "Nekros", Ability = "Perforation d'Âme"},
-        {Name = "Terreur Insidieuse", Warframe = "Nekros", Ability = "Terreur"},
-        {Name = "Exhumation", Warframe = "Nekros", Ability = "Profanation"},
-        {Name = "Rempart d'Ombres", Warframe = "Nekros", Ability = "Ombres des Morts"},
-        -- Nezha
-        {Name = "Glissade Contrôlée", Warframe = "Nezha", Ability = "Passif"},
-        {Name = "Flux Pyroclastique", Warframe = "Nezha", Ability = "Danse du Feu"},
-        {Name = "Chakram Faucheur", Warframe = "Nezha", Ability = "Chakram Flamboyant"},
-        {Name = "Récupération de Protection", Warframe = "Nezha", Ability = "Halo Protecteur"},
-        {Name = "Sauvegarde", Warframe = "Nezha", Ability = "Halo Protecteur"},
-        -- Nidus
-        {Name = "Mutation Abondante", Warframe = "Nidus", Ability = "Passif"},
-        {Name = "Virulence Grouillante", Warframe = "Nidus", Ability = "Virulence"},
-        {Name = "Éclatement de Larve", Warframe = "Nidus", Ability = "Larve"},
-        {Name = "Insatiable", Warframe = "Nidus", Ability = "Voracité"},
-        -- Nova
-        {Name = "Étoile à Neutron", Warframe = "Nova", Ability = "Étoile Vide"},
-        {Name = "Absorption d'Antimatière", Warframe = "Nova", Ability = "Lâché d'Antimatière"},
-        {Name = "Mine à Antimatière", Warframe = "Nova", Ability = "Lâché d'Antimatière"},
-        {Name = "Terrier de Lapin", Warframe = "Nova", Ability = "Trou de Ver"},
-        {Name = "Fission Moléculaire", Warframe = "Nova", Ability = "Amorce Moléculaire"},
-        -- Nyx
-        {Name = "Caprice Mental", Warframe = "Nyx", Ability = "Contrôle Mental"},
-        {Name = "Carreaux Pacificateurs", Warframe = "Nyx", Ability = "Carreaux Psychiques"},
-        {Name = "Sphère de Chaos", Warframe = "Nyx", Ability = "Chaos"},
-        {Name = "Assimilation", Warframe = "Nyx", Ability = "Absorption"},
-        {Name = "Singularité", Warframe = "Nyx", Ability = "Absorption"},
-        -- Oberon
-        {Name = "Infusion de Châtiment", Warframe = "Oberon", Ability = "Châtiment"},
-        {Name = "Éruption Terrestre", Warframe = "Oberon", Ability = "Bénédiction Terrestre"},
-        {Name = "Renouveau du Phénix", Warframe = "Oberon", Ability = "Renouveau"},
-        {Name = "Jugement Béni", Warframe = "Oberon", Ability = "Jugement"},
-        {Name = "Jugement Profané", Warframe = "Oberon", Ability = "Jugement"},
-        -- Octavia
-        {Name = "Maillet Partitionné", Warframe = "Octavia", Ability = "Maillet"},
-        {Name = "Chef d'Orchestre", Warframe = "Octavia", Ability = "Résonateur"},
-        -- Protea
-        {Name = "Dispensaire de Réparation", Warframe = "Protea", Ability = "Dispensaire"},
-        -- Revenant
-        {Name = "Pacte des Serfs", Warframe = "Revenant", Ability = "Servitude"},
-        {Name = "Pillage Aveuglant", Warframe = "Revenant", Ability = "Pillage"},
-        -- Rhino
-        {Name = "Charge Cuirassée", Warframe = "Rhino", Ability = "Charge Rhino"},
-        {Name = "Shrapnel de Fer", Warframe = "Rhino", Ability = "Peau de Fer"},
-        {Name = "Rugissement Perçant", Warframe = "Rhino", Ability = "Rugissement"},
-        {Name = "Piétinement Renforçant", Warframe = "Rhino", Ability = "Piétinement Rhino"},
-        -- Saryn
-        {Name = "Spores Révélatrices", Warframe = "Saryn", Ability = "Spores"},
-        {Name = "Dose de Venin", Warframe = "Saryn", Ability = "Spores"},
-        {Name = "Mue Régénérante", Warframe = "Saryn", Ability = "Mue"},
-        {Name = "Brume de Contagion", Warframe = "Saryn", Ability = "Revers Toxique"},
-        -- Titania
-        {Name = "Vol Blindé", Warframe = "Titania", Ability = "Passif"},
-        {Name = "Moisson Enchanteresse", Warframe = "Titania", Ability = "Enchantement"},
-        {Name = "Lanterne Séduisante", Warframe = "Titania", Ability = "Lanterne"},
-        {Name = "Rasoirs Zélés", Warframe = "Titania", Ability = "Ailes Rasoirs"},
-        -- Trinity
-        {Name = "Bassin de Vie", Warframe = "Trinity", Ability = "Puits de Vie"},
-        {Name = "Vampire Insatiable", Warframe = "Trinity", Ability = "Vampire d'Énergie"},
-        {Name = "Lien Dégradant", Warframe = "Trinity", Ability = "Lien"},
-        -- Valkyr
-        {Name = "Ligne Pivotante", Warframe = "Valkyr", Ability = "Ligne d'Arrachage"},
-        {Name = "Guerre Éternelle", Warframe = "Valkyr", Ability = "Cri de Guerre"},
-        {Name = "Paralysie Prolongée", Warframe = "Valkyr", Ability = "Paralysie"},
-        {Name = "Enragée", Warframe = "Valkyr", Ability = "Hystérie"},
-        {Name = "Assaut Hystérique", Warframe = "Valkyr", Ability = "Hystérie"},
-        {Name = "Fixation Hystérique", Warframe = "Valkyr", Ability = "Hystérie"},
-        -- Vauban
-        {Name = "Lien de Tesla", Warframe = "Vauban", Ability = "Tesla"},
-        {Name = "Tesla Bank", Warframe = "Vauban", Ability = "Nervos Tesla"},
-        {Name = "Répétition photonique", Warframe = "Vauban", Ability = "Frappe à Photons"},
-        {Name = "Bastille Repoussante", Warframe = "Vauban", Ability = "Bastille"},
-        {Name = "Vortex Perpétuel", Warframe = "Vauban", Ability = "Vortex"},
-        -- Volt
-        {Name = "Unité de Choc", Warframe = "Volt", Ability = "Choc"},
-        {Name = "Collision Cinétique", Warframe = "Volt", Ability = "Vitesse"},
-        {Name = "Vitesse Choquante", Warframe = "Volt", Ability = "Vitesse"},
-        {Name = "Barrière de Recharge", Warframe = "Volt", Ability = "Bouclier Électrique"},
-        {Name = "Bouclier Transistor", Warframe = "Volt", Ability = "Bouclier Électrique"},
-        {Name = "Surtension", Warframe = "Volt", Ability = "Décharge"},
-        -- Wisp
-        {Name = "Surcharge Critique", Warframe = "Wisp", Ability = "Surcharge de Faille"},
-        {Name = "Fusion des Réservoirs", Warframe = "Wisp", Ability = "Réservoirs"},
-        -- Wukong
-        {Name = "Impact Céleste", Warframe = "Wukong", Ability = "Jumeau Céleste"},
-        {Name = "Nuage Enveloppant", Warframe = "Wukong", Ability = "Évaporation"},
-        {Name = "Rage Primale", Warframe = "Wukong", Ability = "Fureur Primale"},
-        {Name = "Perche de Fer", Warframe = "Wukong", Ability = "Frappe de Fer"},
-        -- Zephyr
-        {Name = "Planeur Ancré", Warframe = "Zephyr", Ability = "Passif"},
-        {Name = "Fixation Ciblée", Warframe = "Zephyr", Ability = "Vent Contraire"},
-        {Name = "Rafale de Coups", Warframe = "Zephyr", Ability = "Rafale"},
-        {Name = "Courant-Jet", Warframe = "Zephyr", Ability = "Turbulence"},
-        {Name = "Tourbillons", Warframe = "Zephyr", Ability = "Tornades"},
-        {Name = "Vortex Plongeant", Warframe = "Zephyr", Ability = "Bombe Plongeante"}
-    },
-    ["WeaponAugments"] = {
-        -- Syndicats
-        {
-            Name = "Lames Justicières",
-            Category = "Syndicat",
-            Source = "Méridien d'Acier",
-            Weapons = {"Doubles Hachoirs", "Doubles Hachoirs Prisma"}
-        }, {
-            Name = "Justice Accablante",
-            Category = "Syndicat",
-            Source = "Méridien d'Acier",
-            Weapons = {"Sobek"}
-        }, {
-            Name = "Justice Écartée",
-            Category = "Syndicat",
-            Source = "Méridien d'Acier",
-            Weapons = {"Hek"}
-        }, {
-            Name = "Justice Neutralisante",
-            Category = "Syndicat",
-            Source = "Méridien d'Acier",
-            Weapons = {"Miter"}
-        }, {
-            Name = "Lames de la Vérité",
-            Category = "Syndicat",
-            Source = "Arbitres d'Hexis",
-            Weapons = {"Épée Jaw"}
-        }, {
-            Name = "Vérité Dorée",
-            Category = "Syndicat",
-            Source = "Arbitres d'Hexis",
-            Weapons = {"Burston Prime"}
-        }, {
-            Name = "Vérité Piquante",
-            Category = "Syndicat",
-            Source = "Arbitres d'Hexis",
-            Weapons = {"Viper", "Viper Wraith"}
-        }, {
-            Name = "Vérité Vengeresse",
-            Category = "Syndicat",
-            Source = "Arbitres d'Hexis",
-            Weapons = {"Silva & Aegis", "Silva & Aegis Prime"}
-        }, {
-            Name = "Rafale Entropique",
-            Category = "Syndicat",
-            Source = "Céphalon Suda",
-            Weapons = {"Supra", "Supra Vandal"}
-        }, {
-            Name = "Vol Entropique",
-            Category = "Syndicat",
-            Source = "Céphalon Suda",
-            Weapons = {"Kestrel"}
-        }, {
-            Name = "Pointe Entropique",
-            Category = "Syndicat",
-            Source = "Céphalon Suda",
-            Weapons = {"Bolto"}
-        }, {
-            Name = "Détonation Entropique",
-            Category = "Syndicat",
-            Source = "Céphalon Suda",
-            Weapons = {"Obex", "Obex Prisma"}
-        }, {
-            Name = "Séquence Meurtrière",
-            Category = "Syndicat",
-            Source = "La Séquence Perrin",
-            Weapons = {"Grinlok", "Grinlok Prisma"}
-        }, {
-            Name = "Séquence Brûlante",
-            Category = "Syndicat",
-            Source = "La Séquence Perrin",
-            Weapons = {"Spectra", "Spectra Vandal"}
-        }, {
-            Name = "Séquence Toxique",
-            Category = "Syndicat",
-            Source = "La Séquence Perrin",
-            Weapons = {"Acrid"}
-        }, {
-            Name = "Séquence Électrifiée",
-            Category = "Syndicat",
-            Source = "La Séquence Perrin",
-            Weapons = {"Lanka"}
-        }, {
-            Name = "Fléau Érodant",
-            Category = "Syndicat",
-            Source = "Voile Rouge",
-            Weapons = {"Embolist"}
-        }, {
-            Name = "Fléau Brillant",
-            Category = "Syndicat",
-            Source = "Voile Rouge",
-            Weapons = {"Dague Sombre", "Dague Sombre Rakta"}
-        }, {
-            Name = "Fléau Toxique",
-            Category = "Syndicat",
-            Source = "Voile Rouge",
-            Weapons = {"Mire"}
-        }, {
-            Name = "Fléau Accumulé",
-            Category = "Syndicat",
-            Source = "Voile Rouge",
-            Weapons = {"Kunai", "MK1-Kunai"}
-        }, {
-            Name = "Pureté Lumineuse",
-            Category = "Syndicat",
-            Source = "Nouveau Loka",
-            Weapons = {"Skana", "Skana Prisma", "Skana Prime"}
-        }, {
-            Name = "Pureté Éternelle",
-            Category = "Syndicat",
-            Source = "Nouveau Loka",
-            Weapons = {"Vulkar", "Vulkar Wraith"}
-        }, {
-            Name = "Vents Purs",
-            Category = "Syndicat",
-            Source = "Nouveau Loka",
-            Weapons = {"Furis", "MK1-Furis"}
-        }, {
-            Name = "Pureté Désarmante",
-            Category = "Syndicat",
-            Source = "Nouveau Loka",
-            Weapons = {"Panthera", "Panthera Prime"}
-        }, {
-            Name = "Damzav-Vati",
-            Category = "Syndicat",
-            Source = 'Entrati',
-            Weapons = {'Akbronco Prime'}
-        }, {
-            Name = "Zazvat-Kar",
-            Category = "Syndicat",
-            Source = 'Entrati',
-            Weapons = {'Akstiletto Prime'}
-        }, {
-            Name = "Bhisaj-Bal",
-            Category = "Syndicat",
-            Source = 'Entrati',
-            Weapons = {'Paris Prime'}
-        }, {
-            Name = "Hata-Satya",
-            Category = "Syndicat",
-            Source = 'Entrati',
-            Weapons = {'Soma Prime'}
-        }, -- Arene
-        {
-            Name = "Grenades Liantes",
-            Category = "Arène",
-            Source = "L'Index",
-            Weapons = {"Penta", "Penta Secura"}
-        }, {
-            Name = "Surcharge de Flux",
-            Category = "Arène",
-            Source = "L'Index",
-            Weapons = {"Fusil à Flux"}
-        }, {
-            Name = "Cartouches Thermagnétiques",
-            Category = "Arène",
-            Source = "L'Index",
-            Weapons = {"Detron", "Detron Mara"}
-        }, {
-            Name = "Décharge Statique",
-            Category = "Arène",
-            Source = "L'Index",
-            Weapons = {"Prova", "Prova Vandal"}
-        }, {
-            Name = "Ricochet Kinétique",
-            Category = "Arène",
-            Source = "L'Index",
-            Weapons = {"Tetra", "Tetra Prisma"}
-        }, {
-            Name = "Bouclier Électromagnétique",
-            Category = "Arène",
-            Source = "Kela De Thaym",
-            Weapons = {"Ack & Brunt"}
-        }, {
-            Name = "Blitz Vulcain",
-            Category = "Arène",
-            Source = "Kela De Thaym",
-            Weapons = {"Jat Kittag"}
-        }, {
-            Name = "Cartouches Acides",
-            Category = "Arène",
-            Source = "Kela De Thaym",
-            Weapons = {"Sobek"}
-        }, {
-            Name = "Frappe Dimensionnelle",
-            Category = "Arène",
-            Source = "Kela De Thaym",
-            Weapons = {"Basolk Jumeaux"}
-        }, {
-            Name = "Napalm du Nightwatch",
-            Category = "Arène",
-            Source = "Kela De Thaym",
-            Weapons = {"Ogris"}
-        }, {
-            Name = "Poudre Fomorienne",
-            Category = "Arène",
-            Source = "Kela De Thaym",
-            Weapons = {"Drakgoon", "Drakgoon Kuva"}
-        }, {
-            Name = "Scie à Os",
-            Category = "Arène",
-            Source = "Kela De Thaym",
-            Weapons = {"Ripkas"}
-        }, -- Ondes Nocturnes
-        {
-            Name = "Masse Éclatante",
-            Category = "Ondes Nocturnes",
-            Source = "Acte 1",
-            Weapons = {"Quanta Mutaliste"}
-        }, {
-            Name = "Grenades au Napalm",
-            Category = "Ondes Nocturnes",
-            Source = "Acte 1",
-            Weapons = {"Penta", "Penta Secura", "Penta Carmin"}
-        }, {
-            Name = "Frénésie Sauvage",
-            Category = "Ondes Nocturnes",
-            Source = "Acte 1",
-            Weapons = {"Grakata", "Grakata Prisma"}
-        }, {
-            Name = "Rayons Efficaces",
-            Category = "Ondes Nocturnes",
-            Source = "Acte 2",
-            Weapons = {"Convectrix"}
-        }, {
-            Name = "Harpon Inquisiteur",
-            Category = "Ondes Nocturnes",
-            Source = "Acte 2",
-            Weapons = {"Harpak"}
-        }, {
-            Name = "Visée Méticuleuse",
-            Category = "Ondes Nocturnes",
-            Source = "Acte 2",
-            Weapons = {"Vulkar", "Vulkar Wraith"}
-        }, {
-            Name = "Manoeuvres Mortelles",
-            Category = "Ondes Nocturnes",
-            Source = "Acte 3",
-            Weapons = {"Magnus"}
-        }, {
-            Name = "Tirs Déroutants",
-            Category = "Ondes Nocturnes",
-            Source = "Acte 3",
-            Weapons = {"Bronco", "Bronco Prime"}
-        }, {
-            Name = "Frappe de Précision",
-            Category = "Ondes Nocturnes",
-            Source = "Acte 3",
-            Weapons = {"Tonkor", "Tonkor Kuva"}
-        }, -- Amalgame
-        {
-            Name = "Acier Véritable Ripkas Amalgame",
-            Category = "Amalgame",
-            Source = "Ropalolyst",
-            Weapons = {"Ripkas"}
-        }, {
-            Name = "Cible Acquise Daikyu Amalgame",
-            Category = "Amalgame",
-            Source = "Ropalolyst",
-            Weapons = {"Daikyu"},
-            Traits = {"MUNITS_PICKUP"}
-        }, {
-            Name = "Décompte des Morts Furax Amalgame",
-            Category = "Amalgame",
-            Source = "Ropalolyst",
-            Weapons = {"Furax", "MK1-Furax", "Furax Wraith"}
-        }, {
-            Name = "Mutation de Chargeur Javlok Amalgame",
-            Category = "Amalgame",
-            Source = "Ropalolyst",
-            Weapons = {"Javlok"}
-        }, {
-            Name = "Pointe Métallique Argonak Amalgame",
-            Category = "Amalgame",
-            Source = "Ropalolyst",
-            Weapons = {"Argonak"}
-        }, -- Conclave
-        {
-            Name = "Viseur d'Embuscade",
-            Category = "Conclave",
-            Source = "Conclave",
-            Weapons = {"Rubico", "Rubico Prime"}
-        }, {
-            Name = "Tempête Cérébrale",
-            Category = "Conclave",
-            Source = "Conclave",
-            Weapons = {"Grakata", "Grakata Prisma"}
-        }, {
-            Name = "Convergence Maîtrisée",
-            Category = "Conclave",
-            Source = "Conclave",
-            Weapons = {"Supra", "Supra Vandal"}
-        }, {
-            Name = "Double Coup",
-            Category = "Conclave",
-            Source = "Conclave",
-            Weapons = {"Latron", "Latron Prime", "Latron Wraith"}
-        }, {
-            Name = "Morosité Épuisante",
-            Category = "Conclave",
-            Source = "Conclave",
-            Weapons = {"Despair"}
-        }, {
-            Name = "Coup Final",
-            Category = "Conclave",
-            Source = "Conclave",
-            Weapons = {"Hind"}
-        }, {
-            Name = "Accélération Convergente",
-            Category = "Conclave",
-            Source = "Conclave",
-            Weapons = {"Tetra", "Tetra Prisma"}
-        }, {
-            Name = "Frénésie de Gorgone",
-            Category = "Conclave",
-            Source = "Conclave",
-            Weapons = {"Gorgon", "Gorgon Prisma", "Gorgon Wraith"}
-        }, {
-            Name = "Grinloké",
-            Category = "Conclave",
-            Source = "Conclave",
-            Weapons = {"Grinlok"}
-        }, {
-            Name = "Rafale Contrôlée",
-            Category = "Conclave",
-            Source = "Conclave",
-            Weapons = {"Tiberon", "Tiberon Prime"}
-        }, {
-            Name = "Munitions de Précision",
-            Category = "Conclave",
-            Source = "Conclave",
-            Weapons = {"Tonkor"}
-        }, {
-            Name = "Munitions à Éclats",
-            Category = "Conclave",
-            Source = "Conclave",
-            Weapons = {"Marelok", "Marelok Vaykor"}
-        }, {
-            Name = "Tirs Crâniens",
-            Category = "Conclave",
-            Source = "Conclave",
-            Weapons = {"Viper", "Viper Wraith"}
-        }, {
-            Name = "Pointe de Flèche à Ressort",
-            Category = "Conclave",
-            Source = "Conclave",
-            Weapons = {"Daikyu"}
-        }, {
-            Name = "Alacrité Statique",
-            Category = "Conclave",
-            Source = "Conclave",
-            Weapons = {"Staticor"}
-        }, {
-            Name = "Justice Soudaine",
-            Category = "Conclave",
-            Source = "Conclave",
-            Weapons = {"Sybaris", "Dex Sybaris", "Sybaris Prime"}
-        }, {
-            Name = "DynaMiter",
-            Category = "Conclave",
-            Source = "Conclave",
-            Weapons = {"Miter"}
-        }, {
-            Name = "Triple Coup",
-            Category = "Conclave",
-            Source = "Conclave",
-            Weapons = {"Burston", "Burston Prime"}
-        }
-    },
+    ["ArchwingAugments"] = { -- Itzal
+    {
+        Name = "Coup de Froid",
+        Archwing = "Itzal",
+        Ability = "Compression Cosmique"
+    }, -- Odonata
+    {
+        Name = "Champ d'Énergie",
+        Archwing = "Odonata",
+        Ability = "Bouclier d'Énergie"
+    }, -- Elytron
+    {
+        Name = "Postcombustion",
+        Archwing = "Elytron",
+        Ability = "Purge de Noyau"
+    }},
+    ["CompagnonAugments"] = { -- Carrier
+    {
+        Name = "Caisse à Munitions",
+        Compagnon = "Carrier"
+    }, {
+        Name = "Pilleur",
+        Compagnon = "Carrier"
+    }, -- Chargeur Helminth
+    {
+        Name = "Proboscis",
+        Compagnon = "Chargeur Helminth"
+    }, {
+        Name = "Piétine",
+        Compagnon = "Chargeur Helminth"
+    }, -- Dethcube
+    {
+        Name = "Générateur d'Énergie",
+        Compagnon = "Dethcube"
+    }, {
+        Name = "Mort brusque",
+        Compagnon = "Dethcube"
+    }, {
+        Name = "Vaporisation",
+        Compagnon = "Dethcube"
+    }, -- Diriga
+    {
+        Name = "Bobine Foudroyante",
+        Compagnon = "Diriga"
+    }, {
+        Name = "Pulsation Électrique",
+        Compagnon = "Diriga"
+    }, {
+        Name = "Tir Calculé",
+        Compagnon = "Diriga"
+    }, -- Djinn
+    {
+        Name = "Attraction Fatale",
+        Compagnon = "Djinn"
+    }, {
+        Name = "Cogneur",
+        Compagnon = "Djinn"
+    }, {
+        Name = "Renaissance",
+        Compagnon = "Djinn"
+    }, -- Helios
+    {
+        Name = "Détection de Vulnérabilité",
+        Compagnon = "Helios"
+    }, {
+        Name = "Inspecteur",
+        Compagnon = "Helios"
+    }, {
+        Name = "Récepteur de Ciblage",
+        Compagnon = "Helios"
+    }, -- Kavat Adarza
+    {
+        Name = "Oeil de Chat",
+        Compagnon = "Kavat Adarza"
+    }, {
+        Name = "Reflet",
+        Compagnon = "Kavat Adarza"
+    }, -- Kavat Smeeta
+    {
+        Name = "Charme",
+        Compagnon = "Kavat Smeeta"
+    }, {
+        Name = "Malice",
+        Compagnon = "Kavat Smeeta"
+    }, -- Kavat Vasca
+    {
+        Name = "Morsure Vampirique",
+        Compagnon = "Kavat Vasca"
+    }, {
+        Name = "Transfusion",
+        Compagnon = "Kavat Vasca"
+    }, -- Kubrow Chesa
+    {
+        Name = "Flair",
+        Compagnon = "Kubrow Chesa"
+    }, {
+        Name = "Neutralisation",
+        Compagnon = "Kubrow Chesa"
+    }, -- Kubrow Huras
+    {
+        Name = "Chasse",
+        Compagnon = "Kubrow Huras"
+    }, {
+        Name = "Traque",
+        Compagnon = "Kubrow Huras"
+    }, -- Kubrow Raksa
+    {
+        Name = "Hurlement",
+        Compagnon = "Kubrow Raksa"
+    }, {
+        Name = "Protection",
+        Compagnon = "Kubrow Raksa"
+    }, -- Kubrow Sahasa
+    {
+        Name = "Déterrement",
+        Compagnon = "Kubrow Sahasa"
+    }, {
+        Name = "Férocité",
+        Compagnon = "Kubrow Sahasa"
+    }, -- Kubrow Sunika
+    {
+        Name = "Déchaînement",
+        Compagnon = "Kubrow Sunika"
+    }, {
+        Name = "Sauvagerie",
+        Compagnon = "Kubrow Sunika"
+    }, -- Oxylus
+    {
+        Name = "Botaniste",
+        Compagnon = "Oxylus"
+    }, {
+        Name = "Détecteur de Matière",
+        Compagnon = "Oxylus"
+    }, {
+        Name = "Détecteur Formes de Vie Aquatiques",
+        Compagnon = "Oxylus"
+    }, -- Prédasite Medjaÿ
+    {
+        Name = "Morsure Infectieuse",
+        Compagnon = "Prédasite Medjaÿ"
+    }, {
+        Name = "Spores Paralysantes",
+        Compagnon = "Prédasite Medjaÿ"
+    }, -- Prédasite Pharaon
+    {
+        Name = "Pollinisation Anabolique",
+        Compagnon = "Prédasite Pharaon"
+    }, {
+        Name = "Vecteur Endoparasite",
+        Compagnon = "Prédasite Pharaon"
+    }, -- Prédasite Vizir
+    {
+        Name = "Mycélium Latrique",
+        Compagnon = "Prédasite Vizir"
+    }, {
+        Name = "Synovie Acide",
+        Compagnon = "Prédasite Vizir"
+    }, -- Shade
+    {
+        Name = "Embuscade",
+        Compagnon = "Shade"
+    }, {
+        Name = "Fantôme",
+        Compagnon = "Shade"
+    }, {
+        Name = "Vengeance",
+        Compagnon = "Shade"
+    }, -- Taxon
+    {
+        Name = "Conversion Moléculaire",
+        Compagnon = "Taxon"
+    }, {
+        Name = "Reciblage",
+        Compagnon = "Taxon"
+    }, -- Vulpaphyla Panzer
+    {
+        Name = "Piques Virales",
+        Compagnon = "Vulpaphyla Panzer"
+    }, {
+        Name = "Régression Panzer",
+        Compagnon = "Vulpaphyla Panzer"
+    }, -- Vulpaphyla Nocturne
+    {
+        Name = "Charge Ascendante",
+        Compagnon = "Vulpaphyla Nocturne"
+    }, {
+        Name = "Régression Nocturne",
+        Compagnon = "Vulpaphyla Nocturne"
+    }, -- Vulpaphyla Rusé
+    {
+        Name = "Instinct de Survie",
+        Compagnon = "Vulpaphyla Rusé"
+    }, {
+        Name = "Régression Sournoise",
+        Compagnon = "Vulpaphyla Rusé"
+    }, -- Wyrm
+    {
+        Name = "Dispersion des foules",
+        Compagnon = "Wyrm"
+    }, {
+        Name = "Guerrier",
+        Compagnon = "Wyrm"
+    }, {
+        Name = "Négation",
+        Compagnon = "Wyrm"
+    }},
+    ["WarframeAugments"] = { -- Ash
+    {
+        Name = "Shuriken Chercheur",
+        Warframe = "Ash",
+        Ability = "Shuriken"
+    }, {
+        Name = "Gaz Lacrymogène",
+        Warframe = "Ash",
+        Ability = "Écran de Fumée"
+    }, {
+        Name = "Ombre de Fumée",
+        Warframe = "Ash",
+        Ability = "Écran de Fumée"
+    }, {
+        Name = "Téléportation Fatale",
+        Warframe = "Ash",
+        Ability = "Téléportation"
+    }, {
+        Name = "Longue Tempête",
+        Warframe = "Ash",
+        Ability = "Tempête de Lames"
+    }, -- Atlas
+    {
+        Name = "Tas de Gravats",
+        Warframe = "Atlas",
+        Ability = "Passif"
+    }, {
+        Name = "Allée de Statues",
+        Warframe = "Atlas",
+        Ability = "Éboulement"
+    }, {
+        Name = "Fracture Tectonique",
+        Warframe = "Atlas",
+        Ability = "Tectonique"
+    }, {
+        Name = "Regard Minéral",
+        Warframe = "Atlas",
+        Ability = "Pétrification"
+    }, {
+        Name = "Gargouille",
+        Warframe = "Atlas",
+        Ability = "Golems"
+    }, {
+        Name = "Golem Titanesque",
+        Warframe = "Atlas",
+        Ability = "Golems"
+    }, -- Banshee
+    {
+        Name = "Fracture Sonique",
+        Warframe = "Banshee",
+        Ability = "Explosion Sonique"
+    }, {
+        Name = "Silence Sauvage",
+        Warframe = "Banshee",
+        Ability = "Silence"
+    }, {
+        Name = "Résonance",
+        Warframe = "Banshee",
+        Ability = "Sonar"
+    }, {
+        Name = "Secousse Résonnante",
+        Warframe = "Banshee",
+        Ability = "Secousse Sonique"
+    }, -- Baruuk
+    {
+        Name = "Accalmie Infinie",
+        Warframe = "Baruuk",
+        Ability = "Accalmie"
+    }, {
+        Name = "Tempête Réactive",
+        Warframe = "Baruuk",
+        Ability = "Tempête Reposante"
+    }, -- Chroma
+    {
+        Name = "Ire Spectrale",
+        Warframe = "Chroma",
+        Ability = "Hurlement Spectral"
+    }, {
+        Name = "Protection Éternelle",
+        Warframe = "Chroma",
+        Ability = "Protection Élémentaire"
+    }, {
+        Name = "Vengeance Épineuse",
+        Warframe = "Chroma",
+        Ability = "Armure d'Épines"
+    }, {
+        Name = "Effigie Guidée",
+        Warframe = "Chroma",
+        Ability = "Effigie"
+    }, -- Ember
+    {
+        Name = "Feu Frénétique",
+        Warframe = "Ember",
+        Ability = "Boule de Feu"
+    }, {
+        Name = "Poudre Flash",
+        Warframe = "Ember",
+        Ability = "Poudre"
+    }, {
+        Name = "Radiance Immolante",
+        Warframe = "Ember",
+        Ability = "Immolation"
+    }, {
+        Name = "Flamme Guérisseuse",
+        Warframe = "Ember",
+        Ability = "Souffle de Feu"
+    }, {
+        Name = "Flammes Purifiantes",
+        Warframe = "Ember",
+        Ability = "Souffle de Feu"
+    }, {
+        Name = "Monde en Fer",
+        Warframe = "Ember",
+        Ability = "Monde en Feu"
+    }, {
+        Name = "Exothermique",
+        Warframe = "Ember",
+        Ability = "Inferno"
+    }, {
+        Name = "Peur du Feu",
+        Warframe = "Ember",
+        Ability = "Souffle de Feu"
+    }, -- Equinox
+    {
+        Name = "Collision & Attraction",
+        Warframe = "Equinox",
+        Ability = "Métamorphose"
+    }, {
+        Name = "Dualité",
+        Warframe = "Equinox",
+        Ability = "Métamorphose"
+    }, {
+        Name = "Calme & Frénésie",
+        Warframe = "Equinox",
+        Ability = "Obnubilation & Fulmination"
+    }, {
+        Name = "Provocation Pacifique",
+        Warframe = "Equinox",
+        Ability = "Pacification & Provocation"
+    }, {
+        Name = "Transfert d'Énergie",
+        Warframe = "Equinox",
+        Ability = "Réparation & Mutilation"
+    }, -- Excalibur
+    {
+        Name = "Élan Déferlant",
+        Warframe = "Excalibur",
+        Ability = "Élan Tranchant"
+    }, {
+        Name = "Saignée d'Urgence",
+        Warframe = "Excalibur",
+        Ability = "Élan Tranchant"
+    }, {
+        Name = "Bouquet Radial",
+        Warframe = "Excalibur",
+        Ability = "Aveuglement Radial"
+    }, {
+        Name = "Fusée de Marquage",
+        Warframe = "Excalibur",
+        Ability = "Aveuglement Radial"
+    }, {
+        Name = "Javelot Furieux",
+        Warframe = "Excalibur",
+        Ability = "Javelot Radial"
+    }, {
+        Name = "Lame Chromatique",
+        Warframe = "Excalibur",
+        Ability = "Lame Exaltée"
+    }, -- Frost
+    {
+        Name = "Force de Gel",
+        Warframe = "Frost",
+        Ability = "Gel"
+    }, {
+        Name = "Vague de Glace Persistante",
+        Warframe = "Frost",
+        Ability = "Vague de Glace"
+    }, {
+        Name = "Boule de Glas",
+        Warframe = "Frost",
+        Ability = "Boule de Neige"
+    }, {
+        Name = "Avalanche Gelée",
+        Warframe = "Frost",
+        Ability = "Avalanche"
+    }, -- Gara
+    {
+        Name = "Éclats Guérisseurs",
+        Warframe = "Gara",
+        Ability = "Tempête d'Éclats"
+    }, {
+        Name = "Spectrosiphon",
+        Warframe = "Gara",
+        Ability = "Spectrage"
+    }, -- Garuda
+    {
+        Name = "Protection de l'Angoisse",
+        Warframe = "Garuda",
+        Ability = "Miroir de l'Angoisse"
+    }, {
+        Name = "Forge Ensanglantée",
+        Warframe = "Garuda",
+        Ability = "Saignée"
+    }, {
+        Name = "Serres Composées",
+        Warframe = "Garuda",
+        Ability = "Serres Possédées"
+    }, -- Gauss
+    {
+        Name = "Superbang",
+        Warframe = "Gauss",
+        Ability = "Supersonique"
+    }, -- Grendel
+    {
+        Name = "Portion Copieuse",
+        Warframe = "Grendel",
+        Ability = "Ravitaillement"
+    }, {
+        Name = "Catapulte",
+        Warframe = "Grendel",
+        Ability = "Pulvérisation"
+    }, -- Harrow
+    {
+        Name = "Tribunal",
+        Warframe = "Harrow",
+        Ability = "Condamnation"
+    }, {
+        Name = "Encensoir Protecteur",
+        Warframe = "Harrow",
+        Ability = "Encensoir"
+    }, {
+        Name = "Pacte Interminable",
+        Warframe = "Harrow",
+        Ability = "Pacte"
+    }, -- Hildryn
+    {
+        Name = "Surcharge Incandescente",
+        Warframe = "Hildryn",
+        Ability = "Incandescence"
+    }, {
+        Name = "Pillage Ardent",
+        Warframe = "Hildryn",
+        Ability = "Pillage Défensif"
+    }, -- Hydroid
+    {
+        Name = "Barrage Corrosif",
+        Warframe = "Hydroid",
+        Ability = "Barrage Tempête"
+    }, {
+        Name = "Marée Immunisante",
+        Warframe = "Hydroid",
+        Ability = "Raz de Marée"
+    }, {
+        Name = "Courant Curatif",
+        Warframe = "Hydroid",
+        Ability = "Contre-Courant"
+    }, {
+        Name = "Déluge Chapardeur",
+        Warframe = "Hydroid",
+        Ability = "Déluge de Tentacules"
+    }, -- Inaros
+    {
+        Name = "Malédiction de la Dessiccation",
+        Warframe = "Inaros",
+        Ability = "Dessiccation"
+    }, {
+        Name = "Tempête de Sable Élémentaire",
+        Warframe = "Inaros",
+        Ability = "Tempête de Sable"
+    }, {
+        Name = "Nuée Réfléchissante",
+        Warframe = "Inaros",
+        Ability = "Nuée de Scarabées"
+    }, -- Ivara
+    {
+        Name = "Carquois Surchargé",
+        Warframe = "Ivara",
+        Ability = "Carquois"
+    }, {
+        Name = "Le Pouvoir des Trois",
+        Warframe = "Ivara",
+        Ability = "Carquois"
+    }, {
+        Name = "Navigatrice Perçante",
+        Warframe = "Ivara",
+        Ability = "Navigatrice"
+    }, {
+        Name = "Infiltration",
+        Warframe = "Ivara",
+        Ability = "Maraude"
+    }, {
+        Name = "Flèche Concentrée",
+        Warframe = "Ivara",
+        Ability = "Arc d'Artémis"
+    }, -- Khora
+    {
+        Name = "Fouet Acéré Accumulé",
+        Warframe = "Khora",
+        Ability = "Fouet Acéré"
+    }, {
+        Name = "Garde du Corps Venari",
+        Warframe = "Khora",
+        Ability = "Venari"
+    }, {
+        Name = "Dôme Glouton",
+        Warframe = "Khora",
+        Ability = "Cage de Fer"
+    }, -- Limbo
+    {
+        Name = "Havre de Faille",
+        Warframe = "Limbo",
+        Ability = "Exil"
+    }, {
+        Name = "Torrent Dimensionnel",
+        Warframe = "Limbo",
+        Ability = "Déferlement Dimensionnel"
+    }, {
+        Name = "Continuum Cataclysmique",
+        Warframe = "Limbo",
+        Ability = "Cataclysme"
+    }, -- Loki
+    {
+        Name = "Lien Trompeur",
+        Warframe = "Loki",
+        Ability = "Leurre"
+    }, {
+        Name = "Leurre Protecteur",
+        Warframe = "Loki",
+        Ability = "Leurre"
+    }, {
+        Name = "Invisibilité Feutrée",
+        Warframe = "Loki",
+        Ability = "Invisibilité"
+    }, {
+        Name = "Transposition de Sauvegarde",
+        Warframe = "Loki",
+        Ability = "Transposition"
+    }, {
+        Name = "Désarmement Irradiant",
+        Warframe = "Loki",
+        Ability = "Désarmement Radial"
+    }, -- Mag
+    {
+        Name = "Atteinte Épuisante",
+        Warframe = "Mag",
+        Ability = "Attraction"
+    }, {
+        Name = "Attraction Avide",
+        Warframe = "Mag",
+        Ability = "Attraction"
+    }, {
+        Name = "Décharge Magnétisée",
+        Warframe = "Mag",
+        Ability = "Magnétisation"
+    }, {
+        Name = "Polarisation Inversée",
+        Warframe = "Mag",
+        Ability = "Polarisation"
+    }, {
+        Name = "Surcharge de Boucliers",
+        Warframe = "Mag",
+        Ability = "Polarisation"
+    }, {
+        Name = "Transfert de Bouclier",
+        Warframe = "Mag",
+        Ability = "Polarisation"
+    }, {
+        Name = "Écrasement Fracturant",
+        Warframe = "Mag",
+        Ability = "Écrasement"
+    }, -- Mesa
+    {
+        Name = "Cible Balistique",
+        Warframe = "Mesa",
+        Ability = "Batterie Balistique"
+    }, {
+        Name = "Tir Flash",
+        Warframe = "Mesa",
+        Ability = "Salle de tir"
+    }, {
+        Name = "Bouclier Déstabilisant",
+        Warframe = "Mesa",
+        Ability = "Bouclier Scélérat"
+    }, {
+        Name = "Valse de Mesa",
+        Warframe = "Mesa",
+        Ability = "Pacificateurs"
+    }, -- Mirage
+    {
+        Name = "Galerie de la Malveillance",
+        Warframe = "Mirage",
+        Ability = "Galerie des Glaces"
+    }, {
+        Name = "Prestidigitation Explosive",
+        Warframe = "Mirage",
+        Ability = "Tour de Passe-Passe"
+    }, {
+        Name = "Éclipse Totale",
+        Warframe = "Mirage",
+        Ability = "Éclipse"
+    }, {
+        Name = "Garde Prismatique",
+        Warframe = "Mirage",
+        Ability = "Prisme"
+    }, -- Nekros
+    {
+        Name = "Âme Survivante",
+        Warframe = "Nekros",
+        Ability = "Perforation d'Âme"
+    }, {
+        Name = "Frappe Spoliante",
+        Warframe = "Nekros",
+        Ability = "Perforation d'Âme"
+    }, {
+        Name = "Terreur Insidieuse",
+        Warframe = "Nekros",
+        Ability = "Terreur"
+    }, {
+        Name = "Exhumation",
+        Warframe = "Nekros",
+        Ability = "Profanation"
+    }, {
+        Name = "Rempart d'Ombres",
+        Warframe = "Nekros",
+        Ability = "Ombres des Morts"
+    }, -- Nezha
+    {
+        Name = "Glissade Contrôlée",
+        Warframe = "Nezha",
+        Ability = "Passif"
+    }, {
+        Name = "Flux Pyroclastique",
+        Warframe = "Nezha",
+        Ability = "Danse du Feu"
+    }, {
+        Name = "Chakram Faucheur",
+        Warframe = "Nezha",
+        Ability = "Chakram Flamboyant"
+    }, {
+        Name = "Récupération de Protection",
+        Warframe = "Nezha",
+        Ability = "Halo Protecteur"
+    }, {
+        Name = "Sauvegarde",
+        Warframe = "Nezha",
+        Ability = "Halo Protecteur"
+    }, -- Nidus
+    {
+        Name = "Mutation Abondante",
+        Warframe = "Nidus",
+        Ability = "Passif"
+    }, {
+        Name = "Virulence Grouillante",
+        Warframe = "Nidus",
+        Ability = "Virulence"
+    }, {
+        Name = "Éclatement de Larve",
+        Warframe = "Nidus",
+        Ability = "Larve"
+    }, {
+        Name = "Insatiable",
+        Warframe = "Nidus",
+        Ability = "Voracité"
+    }, -- Nova
+    {
+        Name = "Étoile à Neutron",
+        Warframe = "Nova",
+        Ability = "Étoile Vide"
+    }, {
+        Name = "Absorption d'Antimatière",
+        Warframe = "Nova",
+        Ability = "Lâché d'Antimatière"
+    }, {
+        Name = "Mine à Antimatière",
+        Warframe = "Nova",
+        Ability = "Lâché d'Antimatière"
+    }, {
+        Name = "Terrier de Lapin",
+        Warframe = "Nova",
+        Ability = "Trou de Ver"
+    }, {
+        Name = "Fission Moléculaire",
+        Warframe = "Nova",
+        Ability = "Amorce Moléculaire"
+    }, -- Nyx
+    {
+        Name = "Caprice Mental",
+        Warframe = "Nyx",
+        Ability = "Contrôle Mental"
+    }, {
+        Name = "Carreaux Pacificateurs",
+        Warframe = "Nyx",
+        Ability = "Carreaux Psychiques"
+    }, {
+        Name = "Sphère de Chaos",
+        Warframe = "Nyx",
+        Ability = "Chaos"
+    }, {
+        Name = "Assimilation",
+        Warframe = "Nyx",
+        Ability = "Absorption"
+    }, {
+        Name = "Singularité",
+        Warframe = "Nyx",
+        Ability = "Absorption"
+    }, -- Oberon
+    {
+        Name = "Infusion de Châtiment",
+        Warframe = "Oberon",
+        Ability = "Châtiment"
+    }, {
+        Name = "Éruption Terrestre",
+        Warframe = "Oberon",
+        Ability = "Bénédiction Terrestre"
+    }, {
+        Name = "Renouveau du Phénix",
+        Warframe = "Oberon",
+        Ability = "Renouveau"
+    }, {
+        Name = "Jugement Béni",
+        Warframe = "Oberon",
+        Ability = "Jugement"
+    }, {
+        Name = "Jugement Profané",
+        Warframe = "Oberon",
+        Ability = "Jugement"
+    }, -- Octavia
+    {
+        Name = "Maillet Partitionné",
+        Warframe = "Octavia",
+        Ability = "Maillet"
+    }, {
+        Name = "Chef d'Orchestre",
+        Warframe = "Octavia",
+        Ability = "Résonateur"
+    }, -- Protea
+    {
+        Name = "Dispensaire de Réparation",
+        Warframe = "Protea",
+        Ability = "Dispensaire"
+    }, -- Revenant
+    {
+        Name = "Pacte des Serfs",
+        Warframe = "Revenant",
+        Ability = "Servitude"
+    }, {
+        Name = "Pillage Aveuglant",
+        Warframe = "Revenant",
+        Ability = "Pillage"
+    }, -- Rhino
+    {
+        Name = "Charge Cuirassée",
+        Warframe = "Rhino",
+        Ability = "Charge Rhino"
+    }, {
+        Name = "Shrapnel de Fer",
+        Warframe = "Rhino",
+        Ability = "Peau de Fer"
+    }, {
+        Name = "Rugissement Perçant",
+        Warframe = "Rhino",
+        Ability = "Rugissement"
+    }, {
+        Name = "Piétinement Renforçant",
+        Warframe = "Rhino",
+        Ability = "Piétinement Rhino"
+    }, -- Saryn
+    {
+        Name = "Spores Révélatrices",
+        Warframe = "Saryn",
+        Ability = "Spores"
+    }, {
+        Name = "Dose de Venin",
+        Warframe = "Saryn",
+        Ability = "Spores"
+    }, {
+        Name = "Mue Régénérante",
+        Warframe = "Saryn",
+        Ability = "Mue"
+    }, {
+        Name = "Brume de Contagion",
+        Warframe = "Saryn",
+        Ability = "Revers Toxique"
+    }, -- Titania
+    {
+        Name = "Vol Blindé",
+        Warframe = "Titania",
+        Ability = "Passif"
+    }, {
+        Name = "Moisson Enchanteresse",
+        Warframe = "Titania",
+        Ability = "Enchantement"
+    }, {
+        Name = "Lanterne Séduisante",
+        Warframe = "Titania",
+        Ability = "Lanterne"
+    }, {
+        Name = "Rasoirs Zélés",
+        Warframe = "Titania",
+        Ability = "Ailes Rasoirs"
+    }, -- Trinity
+    {
+        Name = "Bassin de Vie",
+        Warframe = "Trinity",
+        Ability = "Puits de Vie"
+    }, {
+        Name = "Vampire Insatiable",
+        Warframe = "Trinity",
+        Ability = "Vampire d'Énergie"
+    }, {
+        Name = "Lien Dégradant",
+        Warframe = "Trinity",
+        Ability = "Lien"
+    }, -- Valkyr
+    {
+        Name = "Ligne Pivotante",
+        Warframe = "Valkyr",
+        Ability = "Ligne d'Arrachage"
+    }, {
+        Name = "Guerre Éternelle",
+        Warframe = "Valkyr",
+        Ability = "Cri de Guerre"
+    }, {
+        Name = "Paralysie Prolongée",
+        Warframe = "Valkyr",
+        Ability = "Paralysie"
+    }, {
+        Name = "Enragée",
+        Warframe = "Valkyr",
+        Ability = "Hystérie"
+    }, {
+        Name = "Assaut Hystérique",
+        Warframe = "Valkyr",
+        Ability = "Hystérie"
+    }, {
+        Name = "Fixation Hystérique",
+        Warframe = "Valkyr",
+        Ability = "Hystérie"
+    }, -- Vauban
+    {
+        Name = "Lien de Tesla",
+        Warframe = "Vauban",
+        Ability = "Tesla"
+    }, {
+        Name = "Tesla Bank",
+        Warframe = "Vauban",
+        Ability = "Nervos Tesla"
+    }, {
+        Name = "Répétition photonique",
+        Warframe = "Vauban",
+        Ability = "Frappe à Photons"
+    }, {
+        Name = "Bastille Repoussante",
+        Warframe = "Vauban",
+        Ability = "Bastille"
+    }, {
+        Name = "Vortex Perpétuel",
+        Warframe = "Vauban",
+        Ability = "Vortex"
+    }, -- Volt
+    {
+        Name = "Unité de Choc",
+        Warframe = "Volt",
+        Ability = "Choc"
+    }, {
+        Name = "Collision Cinétique",
+        Warframe = "Volt",
+        Ability = "Vitesse"
+    }, {
+        Name = "Vitesse Choquante",
+        Warframe = "Volt",
+        Ability = "Vitesse"
+    }, {
+        Name = "Barrière de Recharge",
+        Warframe = "Volt",
+        Ability = "Bouclier Électrique"
+    }, {
+        Name = "Bouclier Transistor",
+        Warframe = "Volt",
+        Ability = "Bouclier Électrique"
+    }, {
+        Name = "Surtension",
+        Warframe = "Volt",
+        Ability = "Décharge"
+    }, -- Wisp
+    {
+        Name = "Surcharge Critique",
+        Warframe = "Wisp",
+        Ability = "Surcharge de Faille"
+    }, {
+        Name = "Fusion des Réservoirs",
+        Warframe = "Wisp",
+        Ability = "Réservoirs"
+    }, -- Wukong
+    {
+        Name = "Impact Céleste",
+        Warframe = "Wukong",
+        Ability = "Jumeau Céleste"
+    }, {
+        Name = "Nuage Enveloppant",
+        Warframe = "Wukong",
+        Ability = "Évaporation"
+    }, {
+        Name = "Rage Primale",
+        Warframe = "Wukong",
+        Ability = "Fureur Primale"
+    }, {
+        Name = "Perche de Fer",
+        Warframe = "Wukong",
+        Ability = "Frappe de Fer"
+    }, -- Zephyr
+    {
+        Name = "Planeur Ancré",
+        Warframe = "Zephyr",
+        Ability = "Passif"
+    }, {
+        Name = "Fixation Ciblée",
+        Warframe = "Zephyr",
+        Ability = "Vent Contraire"
+    }, {
+        Name = "Rafale de Coups",
+        Warframe = "Zephyr",
+        Ability = "Rafale"
+    }, {
+        Name = "Courant-Jet",
+        Warframe = "Zephyr",
+        Ability = "Turbulence"
+    }, {
+        Name = "Tourbillons",
+        Warframe = "Zephyr",
+        Ability = "Tornades"
+    }, {
+        Name = "Vortex Plongeant",
+        Warframe = "Zephyr",
+        Ability = "Bombe Plongeante"
+    }},
+    ["WeaponAugments"] = { -- Syndicats
+    {
+        Name = "Lames Justicières",
+        Category = "Syndicat",
+        Source = "Méridien d'Acier",
+        Weapons = {"Doubles Hachoirs", "Doubles Hachoirs Prisma"}
+    }, {
+        Name = "Justice Accablante",
+        Category = "Syndicat",
+        Source = "Méridien d'Acier",
+        Weapons = {"Sobek"}
+    }, {
+        Name = "Justice Écartée",
+        Category = "Syndicat",
+        Source = "Méridien d'Acier",
+        Weapons = {"Hek"}
+    }, {
+        Name = "Justice Neutralisante",
+        Category = "Syndicat",
+        Source = "Méridien d'Acier",
+        Weapons = {"Miter"}
+    }, {
+        Name = "Lames de la Vérité",
+        Category = "Syndicat",
+        Source = "Arbitres d'Hexis",
+        Weapons = {"Épée Jaw"}
+    }, {
+        Name = "Vérité Dorée",
+        Category = "Syndicat",
+        Source = "Arbitres d'Hexis",
+        Weapons = {"Burston Prime"}
+    }, {
+        Name = "Vérité Piquante",
+        Category = "Syndicat",
+        Source = "Arbitres d'Hexis",
+        Weapons = {"Viper", "Viper Wraith"}
+    }, {
+        Name = "Vérité Vengeresse",
+        Category = "Syndicat",
+        Source = "Arbitres d'Hexis",
+        Weapons = {"Silva & Aegis", "Silva & Aegis Prime"}
+    }, {
+        Name = "Rafale Entropique",
+        Category = "Syndicat",
+        Source = "Céphalon Suda",
+        Weapons = {"Supra", "Supra Vandal"}
+    }, {
+        Name = "Vol Entropique",
+        Category = "Syndicat",
+        Source = "Céphalon Suda",
+        Weapons = {"Kestrel"}
+    }, {
+        Name = "Pointe Entropique",
+        Category = "Syndicat",
+        Source = "Céphalon Suda",
+        Weapons = {"Bolto"}
+    }, {
+        Name = "Détonation Entropique",
+        Category = "Syndicat",
+        Source = "Céphalon Suda",
+        Weapons = {"Obex", "Obex Prisma"}
+    }, {
+        Name = "Séquence Meurtrière",
+        Category = "Syndicat",
+        Source = "La Séquence Perrin",
+        Weapons = {"Grinlok", "Grinlok Prisma"}
+    }, {
+        Name = "Séquence Brûlante",
+        Category = "Syndicat",
+        Source = "La Séquence Perrin",
+        Weapons = {"Spectra", "Spectra Vandal"}
+    }, {
+        Name = "Séquence Toxique",
+        Category = "Syndicat",
+        Source = "La Séquence Perrin",
+        Weapons = {"Acrid"}
+    }, {
+        Name = "Séquence Électrifiée",
+        Category = "Syndicat",
+        Source = "La Séquence Perrin",
+        Weapons = {"Lanka"}
+    }, {
+        Name = "Fléau Érodant",
+        Category = "Syndicat",
+        Source = "Voile Rouge",
+        Weapons = {"Embolist"}
+    }, {
+        Name = "Fléau Brillant",
+        Category = "Syndicat",
+        Source = "Voile Rouge",
+        Weapons = {"Dague Sombre", "Dague Sombre Rakta"}
+    }, {
+        Name = "Fléau Toxique",
+        Category = "Syndicat",
+        Source = "Voile Rouge",
+        Weapons = {"Mire"}
+    }, {
+        Name = "Fléau Accumulé",
+        Category = "Syndicat",
+        Source = "Voile Rouge",
+        Weapons = {"Kunai", "MK1-Kunai"}
+    }, {
+        Name = "Pureté Lumineuse",
+        Category = "Syndicat",
+        Source = "Nouveau Loka",
+        Weapons = {"Skana", "Skana Prisma", "Skana Prime"}
+    }, {
+        Name = "Pureté Éternelle",
+        Category = "Syndicat",
+        Source = "Nouveau Loka",
+        Weapons = {"Vulkar", "Vulkar Wraith"}
+    }, {
+        Name = "Vents Purs",
+        Category = "Syndicat",
+        Source = "Nouveau Loka",
+        Weapons = {"Furis", "MK1-Furis"}
+    }, {
+        Name = "Pureté Désarmante",
+        Category = "Syndicat",
+        Source = "Nouveau Loka",
+        Weapons = {"Panthera", "Panthera Prime"}
+    }, {
+        Name = "Damzav-Vati",
+        Category = "Syndicat",
+        Source = 'Entrati',
+        Weapons = {'Akbronco Prime'}
+    }, {
+        Name = "Zazvat-Kar",
+        Category = "Syndicat",
+        Source = 'Entrati',
+        Weapons = {'Akstiletto Prime'}
+    }, {
+        Name = "Bhisaj-Bal",
+        Category = "Syndicat",
+        Source = 'Entrati',
+        Weapons = {'Paris Prime'}
+    }, {
+        Name = "Hata-Satya",
+        Category = "Syndicat",
+        Source = 'Entrati',
+        Weapons = {'Soma Prime'}
+    }, -- Arene
+    {
+        Name = "Grenades Liantes",
+        Category = "Arène",
+        Source = "L'Index",
+        Weapons = {"Penta", "Penta Secura"}
+    }, {
+        Name = "Surcharge de Flux",
+        Category = "Arène",
+        Source = "L'Index",
+        Weapons = {"Fusil à Flux"}
+    }, {
+        Name = "Cartouches Thermagnétiques",
+        Category = "Arène",
+        Source = "L'Index",
+        Weapons = {"Detron", "Detron Mara"}
+    }, {
+        Name = "Décharge Statique",
+        Category = "Arène",
+        Source = "L'Index",
+        Weapons = {"Prova", "Prova Vandal"}
+    }, {
+        Name = "Ricochet Kinétique",
+        Category = "Arène",
+        Source = "L'Index",
+        Weapons = {"Tetra", "Tetra Prisma"}
+    }, {
+        Name = "Bouclier Électromagnétique",
+        Category = "Arène",
+        Source = "Kela De Thaym",
+        Weapons = {"Ack & Brunt"}
+    }, {
+        Name = "Blitz Vulcain",
+        Category = "Arène",
+        Source = "Kela De Thaym",
+        Weapons = {"Jat Kittag"}
+    }, {
+        Name = "Cartouches Acides",
+        Category = "Arène",
+        Source = "Kela De Thaym",
+        Weapons = {"Sobek"}
+    }, {
+        Name = "Frappe Dimensionnelle",
+        Category = "Arène",
+        Source = "Kela De Thaym",
+        Weapons = {"Basolk Jumeaux"}
+    }, {
+        Name = "Napalm du Nightwatch",
+        Category = "Arène",
+        Source = "Kela De Thaym",
+        Weapons = {"Ogris"}
+    }, {
+        Name = "Poudre Fomorienne",
+        Category = "Arène",
+        Source = "Kela De Thaym",
+        Weapons = {"Drakgoon", "Drakgoon Kuva"}
+    }, {
+        Name = "Scie à Os",
+        Category = "Arène",
+        Source = "Kela De Thaym",
+        Weapons = {"Ripkas"}
+    }, -- Ondes Nocturnes
+    {
+        Name = "Masse Éclatante",
+        Category = "Ondes Nocturnes",
+        Source = "Acte 1",
+        Weapons = {"Quanta Mutaliste"}
+    }, {
+        Name = "Grenades au Napalm",
+        Category = "Ondes Nocturnes",
+        Source = "Acte 1",
+        Weapons = {"Penta", "Penta Secura", "Penta Carmine"}
+    }, {
+        Name = "Frénésie Sauvage",
+        Category = "Ondes Nocturnes",
+        Source = "Acte 1",
+        Weapons = {"Grakata", "Grakata Prisma"}
+    }, {
+        Name = "Rayons Efficaces",
+        Category = "Ondes Nocturnes",
+        Source = "Acte 2",
+        Weapons = {"Convectrix"}
+    }, {
+        Name = "Harpon Inquisiteur",
+        Category = "Ondes Nocturnes",
+        Source = "Acte 2",
+        Weapons = {"Harpak"}
+    }, {
+        Name = "Visée Méticuleuse",
+        Category = "Ondes Nocturnes",
+        Source = "Acte 2",
+        Weapons = {"Vulkar", "Vulkar Wraith"}
+    }, {
+        Name = "Manoeuvres Mortelles",
+        Category = "Ondes Nocturnes",
+        Source = "Acte 3",
+        Weapons = {"Magnus"}
+    }, {
+        Name = "Tirs Déroutants",
+        Category = "Ondes Nocturnes",
+        Source = "Acte 3",
+        Weapons = {"Bronco", "Bronco Prime"}
+    }, {
+        Name = "Frappe de Précision",
+        Category = "Ondes Nocturnes",
+        Source = "Acte 3",
+        Weapons = {"Tonkor", "Tonkor Kuva"}
+    }, -- Amalgame
+    {
+        Name = "Acier Véritable Ripkas Amalgame",
+        Category = "Amalgame",
+        Source = "Ropalolyst",
+        Weapons = {"Ripkas"}
+    }, {
+        Name = "Cible Acquise Daikyu Amalgame",
+        Category = "Amalgame",
+        Source = "Ropalolyst",
+        Weapons = {"Daikyu"},
+        Traits = {"MUNITS_PICKUP"}
+    }, {
+        Name = "Décompte des Morts Furax Amalgame",
+        Category = "Amalgame",
+        Source = "Ropalolyst",
+        Weapons = {"Furax", "MK1-Furax", "Furax Wraith"}
+    }, {
+        Name = "Mutation de Chargeur Javlok Amalgame",
+        Category = "Amalgame",
+        Source = "Ropalolyst",
+        Weapons = {"Javlok"}
+    }, {
+        Name = "Pointe Métallique Argonak Amalgame",
+        Category = "Amalgame",
+        Source = "Ropalolyst",
+        Weapons = {"Argonak"}
+    }, -- Conclave
+    {
+        Name = "Viseur d'Embuscade",
+        Category = "Conclave",
+        Source = "Conclave",
+        Weapons = {"Rubico", "Rubico Prime"}
+    }, {
+        Name = "Tempête Cérébrale",
+        Category = "Conclave",
+        Source = "Conclave",
+        Weapons = {"Grakata", "Grakata Prisma"}
+    }, {
+        Name = "Convergence Maîtrisée",
+        Category = "Conclave",
+        Source = "Conclave",
+        Weapons = {"Supra", "Supra Vandal"}
+    }, {
+        Name = "Double Coup",
+        Category = "Conclave",
+        Source = "Conclave",
+        Weapons = {"Latron", "Latron Prime", "Latron Wraith"}
+    }, {
+        Name = "Morosité Épuisante",
+        Category = "Conclave",
+        Source = "Conclave",
+        Weapons = {"Despair"}
+    }, {
+        Name = "Coup Final",
+        Category = "Conclave",
+        Source = "Conclave",
+        Weapons = {"Hind"}
+    }, {
+        Name = "Accélération Convergente",
+        Category = "Conclave",
+        Source = "Conclave",
+        Weapons = {"Tetra", "Tetra Prisma"}
+    }, {
+        Name = "Frénésie de Gorgone",
+        Category = "Conclave",
+        Source = "Conclave",
+        Weapons = {"Gorgon", "Gorgon Prisma", "Gorgon Wraith"}
+    }, {
+        Name = "Grinloké",
+        Category = "Conclave",
+        Source = "Conclave",
+        Weapons = {"Grinlok"}
+    }, {
+        Name = "Rafale Contrôlée",
+        Category = "Conclave",
+        Source = "Conclave",
+        Weapons = {"Tiberon", "Tiberon Prime"}
+    }, {
+        Name = "Munitions de Précision",
+        Category = "Conclave",
+        Source = "Conclave",
+        Weapons = {"Tonkor"}
+    }, {
+        Name = "Munitions à Éclats",
+        Category = "Conclave",
+        Source = "Conclave",
+        Weapons = {"Marelok", "Marelok Vaykor"}
+    }, {
+        Name = "Tirs Crâniens",
+        Category = "Conclave",
+        Source = "Conclave",
+        Weapons = {"Viper", "Viper Wraith"}
+    }, {
+        Name = "Pointe de Flèche à Ressort",
+        Category = "Conclave",
+        Source = "Conclave",
+        Weapons = {"Daikyu"}
+    }, {
+        Name = "Alacrité Statique",
+        Category = "Conclave",
+        Source = "Conclave",
+        Weapons = {"Staticor"}
+    }, {
+        Name = "Justice Soudaine",
+        Category = "Conclave",
+        Source = "Conclave",
+        Weapons = {"Sybaris", "Dex Sybaris", "Sybaris Prime"}
+    }, {
+        Name = "DynaMiter",
+        Category = "Conclave",
+        Source = "Conclave",
+        Weapons = {"Miter"}
+    }, {
+        Name = "Triple Coup",
+        Category = "Conclave",
+        Source = "Conclave",
+        Weapons = {"Burston", "Burston Prime"}
+    }},
     ["SetsImage"] = {
         ["Aéro"] = "AeroSetIcon.png",
         ["Augure"] = "AugurSetIcon.png",

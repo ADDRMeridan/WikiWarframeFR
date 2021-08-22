@@ -3876,8 +3876,8 @@ local DropData = {
             ["C"] = {{"Endo", "Endo", 31.25, 450}, {"Réacteur Vidar Mk II", "Schéma", 12.50},
                      {"Réseau de Bouclier Vidar Mk II", "Schéma", 12.50},
                      {"Revêtement Vidar Mk II", "Schéma", 12.50}, {"Ambassador Stock", "Schéma", 8.33},
-                     {"{{WF|Ash}} - Neuroptiques", "Schéma", 8.33}, {"Meso D6", "Relique", 6.25}, {"Meso Z4", "Relique", 6.25},
-                     {"Brisure Riven", "Ressource", 2.08, 2}}
+                     {"{{WF|Ash}} - Neuroptiques", "Schéma", 8.33}, {"Meso D6", "Relique", 6.25},
+                     {"Meso Z4", "Relique", 6.25}, {"Brisure Riven", "Ressource", 2.08, 2}}
         }
     }, {
         Type = "Empyrée",
@@ -4005,8 +4005,8 @@ local DropData = {
             ["C"] = {{"Endo", "Endo", 31.25, 450}, {"Réacteur Vidar Mk III", "Schéma", 12.50},
                      {"Réseau de Bouclier Vidar Mk III", "Schéma", 12.50},
                      {"Revêtement Vidar Mk III", "Schéma", 12.50}, {"Ambassadeur Culasse", "Schéma", 8.33},
-                     {"{{WF|Ash}} - Châssis", "Schéma", 8.33}, {"Neo B7", "Relique", 6.25}, {"Neo N15", "Relique", 6.25},
-                     {"Brisure Riven", "Ressource", 2.08, 2}}
+                     {"{{WF|Ash}} - Châssis", "Schéma", 8.33}, {"Neo B7", "Relique", 6.25},
+                     {"Neo N15", "Relique", 6.25}, {"Brisure Riven", "Ressource", 2.08, 2}}
         }
     }, {
         Type = "Empyrée",
@@ -4047,7 +4047,8 @@ local DropData = {
             ["B"] = {{"Endo", "Endo", 18.18, 400}, {"Endo", "Endo", 12.12, 600}, {"Hémorragie Interne", "Mod", 9.09},
                      {"Hémorragie", "Mod", 9.09}, {"Massacre Votif", "Mod", 9.09}, {"Axi V10", "Relique", 9.09},
                      {"Axi S8", "Relique", 9.09}, {"{{Weapon|Penta Carmine}}", "Schéma", 6.06},
-                     {"{{Weapon|Penta Carmine}} - Canon", "Schéma", 6.06}, {"{{Weapon|Penta Carmine}} - Culasse", "Schéma", 6.06},
+                     {"{{Weapon|Penta Carmine}} - Canon", "Schéma", 6.06},
+                     {"{{Weapon|Penta Carmine}} - Culasse", "Schéma", 6.06},
                      {"{{Weapon|Penta Carmine}} - Crosse", "Schéma", 6.06}},
             ["C"] = {}
         }
@@ -4243,350 +4244,176 @@ local DropData = {
             ["B"] = {},
             ["C"] = {}
         }
-    },
-    {
+    }, {
         Type = "Empyrée",
         Tier = "GrineerVoile",
         Alias = "GrineerVoileProxima",
         Rewards = {
-				["A"] = {
-					{ "Drone de Réparation Accélérée", "Ressource", 0.5 },
-					{ "Endo", "Endo", 20, 400 },
-					{ "Endo", "Endo", 10, 600 },
-					{ "Brisure Riven", "Ressource", 5, 3 },
-					{ "Forma", "Schéma", 2.5 },
-					{ "Moteur Lavan Mk III", "Schéma", 6 },
-					{ "Reacteur Lavan Mk III", "Schéma", 6 },
-					{ "Réseau de Boucliers Lavan Mk III", "Schéma", 6 },
-					{ "Revêtement Lavan Mk III", "Schéma", 6 },
-					{ "Moteur Vidar Mk III", "Schéma", 6 },
-					{ "Reacteur Vidar Mk III", "Schéma", 6 },
-					{ "Réseau de Boucliers Vidar Mk III", "Schéma", 6 },
-					{ "Revêtement Vidar Mk III", "Schéma", 6 },
-					{ "Neo D3", "Relique", 2 },
-					{ "Neo T4", "Relique", 2 },
-					{ "Neo A5", "Relique", 2 },
-					{ "Neo V10", "Relique", 2 },
-					{ "Neo P2", "Relique", 2 },
-					{ "Neo B7", "Relique", 2 },
-					{ "Neo N15", "Relique", 2 } 
-				} 
-			},
-    },
-    {
+            ["A"] = {{"Drone de Réparation Accélérée", "Ressource", 0.5}, {"Endo", "Endo", 20, 400},
+                     {"Endo", "Endo", 10, 600}, {"Brisure Riven", "Ressource", 5, 3}, {"Forma", "Schéma", 2.5},
+                     {"Moteur Lavan Mk III", "Schéma", 6}, {"Reacteur Lavan Mk III", "Schéma", 6},
+                     {"Réseau de Boucliers Lavan Mk III", "Schéma", 6}, {"Revêtement Lavan Mk III", "Schéma", 6},
+                     {"Moteur Vidar Mk III", "Schéma", 6}, {"Reacteur Vidar Mk III", "Schéma", 6},
+                     {"Réseau de Boucliers Vidar Mk III", "Schéma", 6}, {"Revêtement Vidar Mk III", "Schéma", 6},
+                     {"Neo D3", "Relique", 2}, {"Neo T4", "Relique", 2}, {"Neo A5", "Relique", 2},
+                     {"Neo V10", "Relique", 2}, {"Neo P2", "Relique", 2}, {"Neo B7", "Relique", 2},
+                     {"Neo N15", "Relique", 2}}
+        }
+    }, {
         Type = "Empyrée",
         Tier = "GrineerVoileExtra",
         Alias = "GrineerVoileProximaExtra",
         Rewards = {
-				["A"] = {
-					{ "Carbides", "Resource", 28.57, 200 },
-					{ "Titanium", "Resource", 28.57, 200 },
-					{ "Gallos Rods", "Resource", 14.29, 5 },
-					{ "Asterite", "Resource", 14.29, 5 },
-					{ "Komms", "Resource", 7.14 },
-					{ "Nullstones", "Resource", 7.14 } 
-				} 
-			},
-    },
-    {
+            ["A"] = {{"Carbides", "Resource", 28.57, 200}, {"Titanium", "Resource", 28.57, 200},
+                     {"Gallos Rods", "Resource", 14.29, 5}, {"Asterite", "Resource", 14.29, 5},
+                     {"Komms", "Resource", 7.14}, {"Nullstones", "Resource", 7.14}}
+        }
+    }, {
         Type = "Empyrée",
         Tier = "GrineerVoileCaches",
         Alias = "GrineerVoileProximaCaches",
         Rewards = {
-				["A"] = {
-					{ "Endo", "Endo", 20, 400 },
-					{ "Endo", "Endo", 10, 600 },
-					{ "Oberon Neuroptics Blueprint", "Blueprint", 10 },
-					{ "Seeker Volley", "Mod", 4 },
-					{ "Void Hole", "Mod", 4 },
-					{ "Phoenix Blaze", "Mod", 4 },
-					{ "Neo D3", "Relic", 4.8 },
-					{ "Neo T4", "Relic", 4.8 },
-					{ "Neo A5", "Relic", 4.8 },
-					{ "Neo V10", "Relic", 4.8 },
-					{ "Neo P2", "Relic", 4.8 },
-					{ "Neo B7", "Relic", 4.8 },
-					{ "Neo N15", "Relic", 4.8 },
-					{ "Neo V9", "Relic", 4.8 },
-					{ "Axi V10", "Relic", 4.8 },
-					{ "Axi S8", "Relic", 4.8 } 
-				},
-				["B"] = {
-					{ "Spectra Vandal Blueprint", "Blueprint", 8.7 },
-					{ "Spectra Vandal Barrel", "Blueprint", 6.52 },
-					{ "Spectra Vandal Chassis", "Blueprint", 6.52 },
-					{ "Spectra Vandal Handle", "Blueprint", 6.52 },
-					{ "Endo", "Endo", 17.39, 450 },
-					{ "Endo", "Endo", 13.04, 1200 },
-					{ "Endo", "Endo", 8.7, 450 },
-					{ "Endo", "Endo", 4.35, 600 },
-					{ "Ignis Wraith Blueprint", "Blueprint", 8.7 },
-					{ "Neo V9", "Relic", 6.52 },
-					{ "Axi V10", "Relic", 6.52 },
-					{ "Axi S8", "Relic", 6.52 } 
-				},
-				["C"] = {  } 
-			},
-    },
-    {
+            ["A"] = {{"Endo", "Endo", 20, 400}, {"Endo", "Endo", 10, 600},
+                     {"Oberon Neuroptics Blueprint", "Blueprint", 10}, {"Seeker Volley", "Mod", 4},
+                     {"Void Hole", "Mod", 4}, {"Phoenix Blaze", "Mod", 4}, {"Neo D3", "Relic", 4.8},
+                     {"Neo T4", "Relic", 4.8}, {"Neo A5", "Relic", 4.8}, {"Neo V10", "Relic", 4.8},
+                     {"Neo P2", "Relic", 4.8}, {"Neo B7", "Relic", 4.8}, {"Neo N15", "Relic", 4.8},
+                     {"Neo V9", "Relic", 4.8}, {"Axi V10", "Relic", 4.8}, {"Axi S8", "Relic", 4.8}},
+            ["B"] = {{"Spectra Vandal Blueprint", "Blueprint", 8.7}, {"Spectra Vandal Barrel", "Blueprint", 6.52},
+                     {"Spectra Vandal Chassis", "Blueprint", 6.52}, {"Spectra Vandal Handle", "Blueprint", 6.52},
+                     {"Endo", "Endo", 17.39, 450}, {"Endo", "Endo", 13.04, 1200}, {"Endo", "Endo", 8.7, 450},
+                     {"Endo", "Endo", 4.35, 600}, {"Ignis Wraith Blueprint", "Blueprint", 8.7},
+                     {"Neo V9", "Relic", 6.52}, {"Axi V10", "Relic", 6.52}, {"Axi S8", "Relic", 6.52}},
+            ["C"] = {}
+        }
+    }, {
         Type = "Empyrée",
         Tier = "CorpusVoileExtermination",
         Alias = "GrineerVoileProximaExtermination",
         Rewards = {
-				["A"] = {
-					{ "Endo", "Endo", 14.46, 400 },
-					{ "Endo", "Endo", 9.64, 600 },
-					{ "Vidar Engines Mk III", "Blueprint", 7.23 },
-					{ "Vidar Reactor Mk III", "Blueprint", 7.23 },
-					{ "Vidar Shield Array Mk III", "Blueprint", 7.23 },
-					{ "Vidar Plating Mk III", "Blueprint", 7.23 },
-					{ "Zetki Engines Mk III", "Blueprint", 7.23 },
-					{ "Zetki Reactor Mk III", "Blueprint", 7.23 },
-					{ "Zetki Shield Array Mk III", "Blueprint", 7.23 },
-					{ "Zetki Plating Mk III", "Blueprint", 7.23 },
-					{ "Axi O5", "Relic", 2.41 },
-					{ "Axi A13", "Relic", 2.41 },
-					{ "Axi N7", "Relic", 2.41 },
-					{ "Axi T7", "Relic", 2.41 },
-					{ "Axi G6", "Relic", 2.41 },
-					{ "Axi C6", "Relic", 2.41 },
-					{ "Axi I1", "Relic", 2.41 },
-					{ "Riven Sliver", "Resource", 1.2, 3 } 
-				} 
-			},
-    },
-    {
+            ["A"] = {{"Endo", "Endo", 14.46, 400}, {"Endo", "Endo", 9.64, 600},
+                     {"Vidar Engines Mk III", "Blueprint", 7.23}, {"Vidar Reactor Mk III", "Blueprint", 7.23},
+                     {"Vidar Shield Array Mk III", "Blueprint", 7.23}, {"Vidar Plating Mk III", "Blueprint", 7.23},
+                     {"Zetki Engines Mk III", "Blueprint", 7.23}, {"Zetki Reactor Mk III", "Blueprint", 7.23},
+                     {"Zetki Shield Array Mk III", "Blueprint", 7.23}, {"Zetki Plating Mk III", "Blueprint", 7.23},
+                     {"Axi O5", "Relic", 2.41}, {"Axi A13", "Relic", 2.41}, {"Axi N7", "Relic", 2.41},
+                     {"Axi T7", "Relic", 2.41}, {"Axi G6", "Relic", 2.41}, {"Axi C6", "Relic", 2.41},
+                     {"Axi I1", "Relic", 2.41}, {"Riven Sliver", "Resource", 1.2, 3}}
+        }
+    }, {
         Type = "Empyrée",
         Tier = "CorpusVoileVolatile",
         Alias = "GrineerVoileProximaVolatile",
         Rewards = {
-				["A"] = {
-					{ "Endo", "Endo", 14.46, 400 },
-					{ "Endo", "Endo", 9.64, 600 },
-					{ "Vidar Engines Mk III", "Blueprint", 7.23 },
-					{ "Vidar Reactor Mk III", "Blueprint", 7.23 },
-					{ "Vidar Shield Array Mk III", "Blueprint", 7.23 },
-					{ "Vidar Plating Mk III", "Blueprint", 7.23 },
-					{ "Zetki Engines Mk III", "Blueprint", 7.23 },
-					{ "Zetki Reactor Mk III", "Blueprint", 7.23 },
-					{ "Zetki Shield Array Mk III", "Blueprint", 7.23 },
-					{ "Zetki Plating Mk III", "Blueprint", 7.23 },
-					{ "Axi O5", "Relic", 2.41 },
-					{ "Axi A13", "Relic", 2.41 },
-					{ "Axi N7", "Relic", 2.41 },
-					{ "Axi T7", "Relic", 2.41 },
-					{ "Axi G6", "Relic", 2.41 },
-					{ "Axi C6", "Relic", 2.41 },
-					{ "Axi I1", "Relic", 2.41 },
-					{ "Riven Sliver", "Resource", 1.2, 2 } 
-				} 
-			},
-	},
-	{   Type = "Empyrée",
+            ["A"] = {{"Endo", "Endo", 14.46, 400}, {"Endo", "Endo", 9.64, 600},
+                     {"Vidar Engines Mk III", "Blueprint", 7.23}, {"Vidar Reactor Mk III", "Blueprint", 7.23},
+                     {"Vidar Shield Array Mk III", "Blueprint", 7.23}, {"Vidar Plating Mk III", "Blueprint", 7.23},
+                     {"Zetki Engines Mk III", "Blueprint", 7.23}, {"Zetki Reactor Mk III", "Blueprint", 7.23},
+                     {"Zetki Shield Array Mk III", "Blueprint", 7.23}, {"Zetki Plating Mk III", "Blueprint", 7.23},
+                     {"Axi O5", "Relic", 2.41}, {"Axi A13", "Relic", 2.41}, {"Axi N7", "Relic", 2.41},
+                     {"Axi T7", "Relic", 2.41}, {"Axi G6", "Relic", 2.41}, {"Axi C6", "Relic", 2.41},
+                     {"Axi I1", "Relic", 2.41}, {"Riven Sliver", "Resource", 1.2, 2}}
+        }
+    }, {
+        Type = "Empyrée",
         Tier = "CorpusVoileDefense",
         Alias = "GrineerVoileProximaDefense",
         Rewards = {
-				["A"] = {
-					{ "Endo", "Endo", 42.86, 400 },
-					{ "Vidar Engines Mk III", "Blueprint", 21.43 },
-					{ "Vidar Reactor Mk III", "Blueprint", 21.43 },
-					{ "Axi O5", "Relic", 4.29 },
-					{ "Axi A13", "Relic", 4.29 },
-					{ "Axi N7", "Relic", 5.71 } 
-				},
-				["B"] = {
-					{ "Endo", "Endo", 34.29, 400 },
-					{ "Vidar Shield Array Mk III", "Blueprint", 17.14 },
-					{ "Zetki Engines Mk III", "Blueprint", 17.14 },
-					{ "Vidar Plating Mk III", "Blueprint", 17.14 },
-					{ "Axi T7", "Relic", 5.71 },
-					{ "Axi G6", "Relic", 5.71 },
-					{ "Riven Sliver", "Resource", 2.86, 3 } 
-				},
-				["C"] = {
-					{ "Endo", "Endo", 34.29, 600 },
-					{ "Zetki Reactor Mk III", "Blueprint", 17.14 },
-					{ "Zetki Shield Array Mk III", "Blueprint", 17.14 },
-					{ "Zetki Plating Mk III", "Blueprint", 17.14 },
-					{ "Axi C6", "Relic", 5.71 },
-					{ "Axi I1", "Relic", 5.71 },
-					{ "Riven Sliver", "Resource", 2.86, 3 } 
-				} 
-			},
-    },
-    {   Type = "Empyrée",
+            ["A"] = {{"Endo", "Endo", 42.86, 400}, {"Vidar Engines Mk III", "Blueprint", 21.43},
+                     {"Vidar Reactor Mk III", "Blueprint", 21.43}, {"Axi O5", "Relic", 4.29},
+                     {"Axi A13", "Relic", 4.29}, {"Axi N7", "Relic", 5.71}},
+            ["B"] = {{"Endo", "Endo", 34.29, 400}, {"Vidar Shield Array Mk III", "Blueprint", 17.14},
+                     {"Zetki Engines Mk III", "Blueprint", 17.14}, {"Vidar Plating Mk III", "Blueprint", 17.14},
+                     {"Axi T7", "Relic", 5.71}, {"Axi G6", "Relic", 5.71}, {"Riven Sliver", "Resource", 2.86, 3}},
+            ["C"] = {{"Endo", "Endo", 34.29, 600}, {"Zetki Reactor Mk III", "Blueprint", 17.14},
+                     {"Zetki Shield Array Mk III", "Blueprint", 17.14}, {"Zetki Plating Mk III", "Blueprint", 17.14},
+                     {"Axi C6", "Relic", 5.71}, {"Axi I1", "Relic", 5.71}, {"Riven Sliver", "Resource", 2.86, 3}}
+        }
+    }, {
+        Type = "Empyrée",
         Tier = "CorpusVoileOrphix",
         Alias = "GrineerVoileProximaOrphix",
         Rewards = {
-				["A"] = {
-					{ "Endo", "Endo", 28.57, 400 },
-					{ "Vidar Engines Mk III", "Blueprint", 14.29 },
-					{ "Vidar Reactor Mk III", "Blueprint", 14.29 },
-					{ "Vidar Shield Array Mk III", "Blueprint", 14.29 },
-					{ "Vidar Plating Mk III", "Blueprint", 14.29 },
-					{ "Axi O5", "Relic", 4.76 },
-					{ "Axi A13", "Relic", 4.76 },
-					{ "Axi N7", "Relic", 4.76 } 
-				},
-				["B"] = {
-					{ "Endo", "Endo", 27.27, 600 },
-					{ "Zetki Engines Mk III", "Blueprint", 13.64 },
-					{ "Zetki Reactor Mk III", "Blueprint", 13.64 },
-					{ "Zetki Shield Array Mk III", "Blueprint", 13.64 },
-					{ "Zetki Plating Mk III", "Blueprint", 13.64 },
-					{ "Axi T7", "Relic", 4.55 },
-					{ "Axi G6", "Relic", 4.55 },
-					{ "Axi C6", "Relic", 4.55 },
-					{ "Axi I1", "Relic", 4.55 } 
-				},
-				["C"] = {
-					{ "Arcane Resistance", "Resource", 5.63 },
-					{ "Arcane Healing", "Resource", 5.63 },
-					{ "Arcane Deflection", "Resource", 5.63 },
-					{ "Arcane Victory", "Resource", 5.63 },
-					{ "Arcane Strike", "Resource", 5.63 },
-					{ "Arcane Awakening", "Resource", 5.63 },
-					{ "Arcane Guardian", "Resource", 5.63 },
-					{ "Arcane Phantasm", "Resource", 5.63 },
-					{ "Arcane Eruption", "Resource", 5.63 },
-					{ "Arcane Acceleration", "Resource", 5.63 },
-					{ "Arcane Trickery", "Resource", 5.63 },
-					{ "Arcane Velocity", "Resource", 5.63 },
-					{ "Arcane Agility", "Resource", 5.63 },
-					{ "Arcane Aegis", "Resource", 2.82 },
-					{ "Arcane Precision", "Resource", 2.82 },
-					{ "Arcane Pulse", "Resource", 2.82 },
-					{ "Arcane Ultimatum", "Resource", 2.82 },
-					{ "Arcane Rage", "Resource", 2.82 },
-					{ "Arcane Fury", "Resource", 2.82 },
-					{ "Arcane Avenger", "Resource", 2.82 },
-					{ "Arcane Arachne", "Resource", 2.82 },
-					{ "Arcane Grace", "Resource", 1.41 },
-					{ "Arcane Energize", "Resource", 1.41 },
-					{ "Arcane Barrier", "Resource", 1.41 } 
-				}
-			},
-    },
-    {   Type = "Empyrée",
+            ["A"] = {{"Endo", "Endo", 28.57, 400}, {"Vidar Engines Mk III", "Blueprint", 14.29},
+                     {"Vidar Reactor Mk III", "Blueprint", 14.29}, {"Vidar Shield Array Mk III", "Blueprint", 14.29},
+                     {"Vidar Plating Mk III", "Blueprint", 14.29}, {"Axi O5", "Relic", 4.76},
+                     {"Axi A13", "Relic", 4.76}, {"Axi N7", "Relic", 4.76}},
+            ["B"] = {{"Endo", "Endo", 27.27, 600}, {"Zetki Engines Mk III", "Blueprint", 13.64},
+                     {"Zetki Reactor Mk III", "Blueprint", 13.64}, {"Zetki Shield Array Mk III", "Blueprint", 13.64},
+                     {"Zetki Plating Mk III", "Blueprint", 13.64}, {"Axi T7", "Relic", 4.55}, {"Axi G6", "Relic", 4.55},
+                     {"Axi C6", "Relic", 4.55}, {"Axi I1", "Relic", 4.55}},
+            ["C"] = {{"Arcane Resistance", "Resource", 5.63}, {"Arcane Healing", "Resource", 5.63},
+                     {"Arcane Deflection", "Resource", 5.63}, {"Arcane Victory", "Resource", 5.63},
+                     {"Arcane Strike", "Resource", 5.63}, {"Arcane Awakening", "Resource", 5.63},
+                     {"Arcane Guardian", "Resource", 5.63}, {"Arcane Phantasm", "Resource", 5.63},
+                     {"Arcane Eruption", "Resource", 5.63}, {"Arcane Acceleration", "Resource", 5.63},
+                     {"Arcane Trickery", "Resource", 5.63}, {"Arcane Velocity", "Resource", 5.63},
+                     {"Arcane Agility", "Resource", 5.63}, {"Arcane Aegis", "Resource", 2.82},
+                     {"Arcane Precision", "Resource", 2.82}, {"Arcane Pulse", "Resource", 2.82},
+                     {"Arcane Ultimatum", "Resource", 2.82}, {"Arcane Rage", "Resource", 2.82},
+                     {"Arcane Fury", "Resource", 2.82}, {"Arcane Avenger", "Resource", 2.82},
+                     {"Arcane Arachne", "Resource", 2.82}, {"Arcane Grace", "Resource", 1.41},
+                     {"Arcane Energize", "Resource", 1.41}, {"Arcane Barrier", "Resource", 1.41}}
+        }
+    }, {
+        Type = "Empyrée",
         Tier = "CorpusVoileSurvie",
         Alias = "GrineerVoileProximaSurvie",
         Rewards = {
-				["A"] = {
-					{ "Endo", "Endo", 42.86, 400 },
-					{ "Vidar Engines Mk III", "Blueprint", 21.43 },
-					{ "Vidar Reactor Mk III", "Blueprint", 21.43 },
-					{ "Axi O5", "Relic", 4.29 },
-					{ "Axi A13", "Relic", 4.29 },
-					{ "Axi N7", "Relic", 5.71 } 
-				},
-				["B"] = {
-					{ "Endo", "Endo", 34.29, 400 },
-					{ "Vidar Shield Array Mk III", "Blueprint", 17.14 },
-					{ "Zetki Engines Mk III", "Blueprint", 17.14 },
-					{ "Vidar Plating Mk III", "Blueprint", 17.14 },
-					{ "Axi T7", "Relic", 5.71 },
-					{ "Axi G6", "Relic", 5.71 },
-					{ "Riven Sliver", "Resource", 2.86, 3 } 
-				},
-				["C"] = {
-					{ "Endo", "Endo", 31.25, 600 },
-					{ "Ambassador Blueprint", "Blueprint", 16.67 },
-					{ "Zetki Reactor Mk III", "Blueprint", 12.5 },
-					{ "Zetki Shield Array Mk III", "Blueprint", 12.5 },
-					{ "Zetki Plating Mk III", "Blueprint", 12.5 },
-					{ "Axi C6", "Relic", 6.25 },
-					{ "Axi I1", "Relic", 6.25 },
-					{ "Riven Sliver", "Resource", 2.08, 3 } 
-				} 
-			},
-    },
-    {   Type = "Empyrée",
+            ["A"] = {{"Endo", "Endo", 42.86, 400}, {"Vidar Engines Mk III", "Blueprint", 21.43},
+                     {"Vidar Reactor Mk III", "Blueprint", 21.43}, {"Axi O5", "Relic", 4.29},
+                     {"Axi A13", "Relic", 4.29}, {"Axi N7", "Relic", 5.71}},
+            ["B"] = {{"Endo", "Endo", 34.29, 400}, {"Vidar Shield Array Mk III", "Blueprint", 17.14},
+                     {"Zetki Engines Mk III", "Blueprint", 17.14}, {"Vidar Plating Mk III", "Blueprint", 17.14},
+                     {"Axi T7", "Relic", 5.71}, {"Axi G6", "Relic", 5.71}, {"Riven Sliver", "Resource", 2.86, 3}},
+            ["C"] = {{"Endo", "Endo", 31.25, 600}, {"Ambassador Blueprint", "Blueprint", 16.67},
+                     {"Zetki Reactor Mk III", "Blueprint", 12.5}, {"Zetki Shield Array Mk III", "Blueprint", 12.5},
+                     {"Zetki Plating Mk III", "Blueprint", 12.5}, {"Axi C6", "Relic", 6.25}, {"Axi I1", "Relic", 6.25},
+                     {"Riven Sliver", "Resource", 2.08, 3}}
+        }
+    }, {
+        Type = "Empyrée",
         Tier = "CorpusVoileEspionnage",
         Alias = "GrineerVoileProximaEspionnage",
         Rewards = {
-				["A"] = {
-					{ "Endo", "Endo", 30, 400 },
-					{ "Endo", "Endo", 16.67, 600 },
-					{ "Swift Mercy", "Mod", 16.67 },
-					{ "Power Drain", "Mod", 10 },
-					{ "Firewall", "Mod", 10 },
-					{ "Malicious Code", "Mod", 6.67 },
-					{ "Hard Reset", "Mod", 6.67 },
-					{ "Riven Sliver", "Resource", 3.33, 2 } 
-				},
-				["B"] = {
-					{ "Endo", "Endo", 30, 400 },
-					{ "Axi O5", "Relic", 10 },
-					{ "Axi A13", "Relic", 10 },
-					{ "Axi N7", "Relic", 10 },
-					{ "Axi T7", "Relic", 10 },
-					{ "Axi G6", "Relic", 10 },
-					{ "Axi C6", "Relic", 10 },
-					{ "Axi I1", "Relic", 10 } 
-				},
-				["C"] = {
-					{ "Endo", "Endo", 24, 600 },
-					{ "Ivara Blueprint", "Blueprint", 12 },
-					{ "Vidar Engines Mk III", "Blueprint", 8 },
-					{ "Vidar Reactor Mk III", "Blueprint", 8 },
-					{ "Vidar Shield Array Mk III", "Blueprint", 8 },
-					{ "Zetki Engines Mk III", "Blueprint", 8 },
-					{ "Vidar Plating Mk III", "Blueprint", 8 },
-					{ "Zetki Reactor Mk III", "Blueprint", 8 },
-					{ "Zetki Shield Array Mk III", "Blueprint", 8 },
-					{ "Zetki Plating Mk III", "Blueprint", 8 } 
-				} 
-			},
-    },
-    {   Type = "Empyrée",
+            ["A"] = {{"Endo", "Endo", 30, 400}, {"Endo", "Endo", 16.67, 600}, {"Swift Mercy", "Mod", 16.67},
+                     {"Power Drain", "Mod", 10}, {"Firewall", "Mod", 10}, {"Malicious Code", "Mod", 6.67},
+                     {"Hard Reset", "Mod", 6.67}, {"Riven Sliver", "Resource", 3.33, 2}},
+            ["B"] = {{"Endo", "Endo", 30, 400}, {"Axi O5", "Relic", 10}, {"Axi A13", "Relic", 10},
+                     {"Axi N7", "Relic", 10}, {"Axi T7", "Relic", 10}, {"Axi G6", "Relic", 10}, {"Axi C6", "Relic", 10},
+                     {"Axi I1", "Relic", 10}},
+            ["C"] = {{"Endo", "Endo", 24, 600}, {"Ivara Blueprint", "Blueprint", 12},
+                     {"Vidar Engines Mk III", "Blueprint", 8}, {"Vidar Reactor Mk III", "Blueprint", 8},
+                     {"Vidar Shield Array Mk III", "Blueprint", 8}, {"Zetki Engines Mk III", "Blueprint", 8},
+                     {"Vidar Plating Mk III", "Blueprint", 8}, {"Zetki Reactor Mk III", "Blueprint", 8},
+                     {"Zetki Shield Array Mk III", "Blueprint", 8}, {"Zetki Plating Mk III", "Blueprint", 8}}
+        }
+    }, {
+        Type = "Empyrée",
         Tier = "CorpusVoileExtra",
         Alias = "GrineerVoileProximaExtra",
         Rewards = {
-				["A"] = {
-					{ "Cubic Diodes", "Resource", 28.57, 200 },
-					{ "Titanium", "Resource", 28.57, 200 },
-					{ "Isos", "Resource", 14.29, 5 },
-					{ "Asterite", "Resource", 14.29, 5 },
-					{ "Aucrux Capacitors", "Resource", 7.14 },
-					{ "Nullstones", "Resource", 7.14 } 
-				} 
-			},
-    },
-    {   Type = "Empyrée",
+            ["A"] = {{"Cubic Diodes", "Resource", 28.57, 200}, {"Titanium", "Resource", 28.57, 200},
+                     {"Isos", "Resource", 14.29, 5}, {"Asterite", "Resource", 14.29, 5},
+                     {"Aucrux Capacitors", "Resource", 7.14}, {"Nullstones", "Resource", 7.14}}
+        }
+    }, {
+        Type = "Empyrée",
         Tier = "CorpusVoileCaches",
         Alias = "GrineerVoileProximaCaches",
         Rewards = {
-				["A"] = {
-					{ "Endo", "Endo", 26.09, 400 },
-					{ "Endo", "Endo", 17.39, 600 },
-					{ "Seeker Volley", "Mod", 8.7 },
-					{ "Void Hole", "Mod", 8.7 },
-					{ "Phoenix Blaze", "Mod", 8.7 },
-					{ "Neo D3", "Relic", 4.35 },
-					{ "Neo T4", "Relic", 4.35 },
-					{ "Neo A5", "Relic", 4.35 },
-					{ "Neo V10", "Relic", 4.35 },
-					{ "Neo P2", "Relic", 4.35 },
-					{ "Neo B7", "Relic", 4.35 },
-					{ "Neo N15", "Relic", 4.35 } 
-				},
-				["B"] = {
-					{ "Endo", "Endo", 18.18, 400 },
-					{ "Endo", "Endo", 12.12, 600 },
-					{ "Internal Bleeding", "Mod", 9.09 },
-					{ "Hemorrhage", "Mod", 9.09 },
-					{ "Votive Onslaught", "Mod", 9.09 },
-					{ "Axi V10", "Relic", 9.09 },
-					{ "Axi S8", "Relic", 9.09 },
-					{ "Carmine Penta Blueprint", "Blueprint", 6.06 },
-					{ "Carmine Penta Barrel", "Blueprint", 6.06 },
-					{ "Carmine Penta Receiver", "Blueprint", 6.06 },
-					{ "Carmine Penta Stock", "Blueprint", 6.06 } 
-				},
-				["C"] = {  } 
-			},
-    },
-    {
+            ["A"] = {{"Endo", "Endo", 26.09, 400}, {"Endo", "Endo", 17.39, 600}, {"Seeker Volley", "Mod", 8.7},
+                     {"Void Hole", "Mod", 8.7}, {"Phoenix Blaze", "Mod", 8.7}, {"Neo D3", "Relic", 4.35},
+                     {"Neo T4", "Relic", 4.35}, {"Neo A5", "Relic", 4.35}, {"Neo V10", "Relic", 4.35},
+                     {"Neo P2", "Relic", 4.35}, {"Neo B7", "Relic", 4.35}, {"Neo N15", "Relic", 4.35}},
+            ["B"] = {{"Endo", "Endo", 18.18, 400}, {"Endo", "Endo", 12.12, 600}, {"Internal Bleeding", "Mod", 9.09},
+                     {"Hemorrhage", "Mod", 9.09}, {"Votive Onslaught", "Mod", 9.09}, {"Axi V10", "Relic", 9.09},
+                     {"Axi S8", "Relic", 9.09}, {"Carmine Penta Blueprint", "Blueprint", 6.06},
+                     {"Carmine Penta Barrel", "Blueprint", 6.06}, {"Carmine Penta Receiver", "Blueprint", 6.06},
+                     {"Carmine Penta Stock", "Blueprint", 6.06}},
+            ["C"] = {}
+        }
+    }, {
         Type = "Tempête du Néant",
         Tier = "Tier1A",
         Alias = "VoidStorm1",
@@ -5170,7 +4997,8 @@ local DropData = {
     }, {
         Name = "Mesa Infestée",
         ModChance = 3,
-        Mods = {{"Rage", 20}, {"Berserk", 20}, {"Flux", 20}, {"Maître Voleur", 20}, {"Jugement Décisif", 20}}
+        Mods = {{"Rage", 20}, {"Furie du Berserker", 20}, {"Flux", 20}, {"Maître Voleur", 20},
+                {"Jugement Décisif", 20}}
     }, {
         Name = "Chercheur",
         ModChance = 3,
@@ -5735,7 +5563,7 @@ local DropData = {
     }, {
         Name = "Ancien Corrompu",
         ModChance = 3,
-        Mods = {{"Berserk", 1.01}, {"Réflexion", 5.53}, {"Pensée Rapide", 1.01}, {"Maglev", 7.37},
+        Mods = {{"Furie du Berserker", 1.01}, {"Réflexion", 5.53}, {"Pensée Rapide", 1.01}, {"Maglev", 7.37},
                 {"Affrontement de la Forêt", 7.37}, {"Endo", 37.94, 15}, {"Endo", 7.37, 50}}
     }, {
         Name = "Artilleuse Lourde Corrompue",
@@ -5997,7 +5825,8 @@ local DropData = {
     }, {
         Name = "Chroma Infesté",
         ModChance = 3,
-        Mods = {{"Rage", 20}, {"Berserk", 20}, {"Flux", 20}, {"Maître Voleur", 20}, {"Jugement Décisif", 20}}
+        Mods = {{"Rage", 20}, {"Furie du Berserker", 20}, {"Flux", 20}, {"Maître Voleur", 20},
+                {"Jugement Décisif", 20}}
     }, {
         Name = "Spectre Valet",
         ModChance = 100,
@@ -6463,7 +6292,8 @@ local DropData = {
     }, {
         Name = "Spectre",
         ModChance = 3,
-        Mods = {{"Rage", 20}, {"Berserk", 20}, {"Flux", 20}, {"Maître Voleur", 20}, {"Jugement Décisif", 20}}
+        Mods = {{"Rage", 20}, {"Furie du Berserker", 20}, {"Flux", 20}, {"Maître Voleur", 20},
+                {"Jugement Décisif", 20}}
     }, {
         Name = "Dargyn Kuva",
         ModChance = 12.5,

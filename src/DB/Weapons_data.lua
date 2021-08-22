@@ -1,5 +1,5 @@
 local WeaponData = {
-    ["IgnoreInCount"] = {"Rempart", "Épées Versatiles Sombres (Doubles Épées)", "Cadus", "Penta Carmin",
+    ["IgnoreInCount"] = {"Rempart", "Épées Versatiles Sombres (Doubles Épées)", "Cadus", "Penta Carmine",
                          "Machette Prisma", "Dargyn", "Arc d'Artémis", "Chargeur Incandescent", "Dex Pixia",
                          "Pacificateurs", "Diwata", "Lame Exaltée", "Bâton de Fer", "Serres Valkyr",
                          "Serres de Garuda", "Vents du Désert", "Corvas (Atmosphère)", "Cyngas (Atmosphère)",

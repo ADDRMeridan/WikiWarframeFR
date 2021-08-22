@@ -240,6 +240,8 @@ function p.getItemIconForDrop(drop)
     local icon = nil
     if (TT.checkItemExist(iName, 'Warframe', false)) then
         icon = TT._tooltipIcon(iName, 'Warframe', iconSize)
+    elseif (TT.checkItemExist(iName, 'Weapon', false)) then
+        icon = TT._tooltipIcon(iName, 'Weapon', iconSize)
     else
         icon = ICON._Prime(Shared.titleCase(drop.Item), nil, iconSize)
     end
