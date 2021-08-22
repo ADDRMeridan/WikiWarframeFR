@@ -2149,10 +2149,6 @@ local IconData = {
             icon = "SamplesNightCommon.png",
             link = "Threshcone de Nuit"
         },
-        ["Mandaccord"] = {
-            icon = "Mandaccord.png",
-            link = "Mandaccord"
-        },
         ["Cryotique"] = {
             icon = "Cryotic.png",
             link = "Cryotique"
