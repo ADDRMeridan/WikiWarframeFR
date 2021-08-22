@@ -24,7 +24,9 @@ function p._Item(itemName, textExist, imgSize)
                 table.insert(ret, '|')
             end
             table.insert(ret, itemName)
-            if (item.link ~= nil) then table.insert(ret, ']]') end
+            if (item.link ~= nil) then
+                table.insert(ret, ']]')
+            end
             table.insert(ret, ' ')
         end
         if (item.icon ~= nil) then
@@ -33,7 +35,9 @@ function p._Item(itemName, textExist, imgSize)
             table.insert(ret, item.icon)
             -- Image size
             table.insert(ret, '|')
-            if (imgSize == nil or imgSize == "") then imgSize = 'x26' end
+            if (imgSize == nil or imgSize == "") then
+                imgSize = 'x26'
+            end
             table.insert(ret, imgSize)
             table.insert(ret, 'px')
             -- Image Link
@@ -44,12 +48,11 @@ function p._Item(itemName, textExist, imgSize)
             -- Close Image
             table.insert(ret, ']]')
         else
-            table.insert(ret, Shared.printModuleError('Aucun icon trouvé.',
-                                                      '_Item'))
+            table.insert(ret, Shared.printModuleError('Aucun icon trouvé.', '_Item'))
         end
     else
         table.insert(ret, Shared.printModuleError(
-                         "Item introuvable dans [[Module:Icon/data]].", "_Item"))
+            string.format("Item '%s' introuvable dans [[Module:Icon/data]].", itemName), "_Item"))
     end
 
     return table.concat(ret)
@@ -64,29 +67,34 @@ end
 
 function p._Pol(iconname, color, imagesize)
 
-    if (iconname == "Aucune") then return end
+    if (iconname == "Aucune") then
+        return
+    end
     if IconData["Polarités"][iconname] == nil then
-        return "<span style=\"color:red;\">Invalid pol: \"" .. iconname ..
-                   "\"</span>"
+        return "<span style=\"color:red;\">Invalid pol: \"" .. iconname .. "\"</span>"
     else
         if color == 'black' then
             iconname = IconData["Polarités"][iconname]["icon"][1] -- black icon
         else
             iconname = IconData["Polarités"][iconname]["icon"][2] -- white icon
         end
-        if (imagesize == nil or imagesize == '') then imagesize = 'x20' end
-        return '[[File:' .. iconname .. '|' .. imagesize ..
-                   'px|link=Polarité]]'
+        if (imagesize == nil or imagesize == '') then
+            imagesize = 'x20'
+        end
+        return '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=Polarité]]'
     end
 end
 
 function p.PolList(polList)
 
-    if (polList == nil or type(polList) ~= "table" or Shared.tableCount(polList) ==
-        0) then return "Aucune" end
+    if (polList == nil or type(polList) ~= "table" or Shared.tableCount(polList) == 0) then
+        return "Aucune"
+    end
 
     local ret = {}
-    for i, pol in pairs(polList) do table.insert(ret, p._Pol(pol)) end
+    for i, pol in pairs(polList) do
+        table.insert(ret, p._Pol(pol))
+    end
     return table.concat(ret)
 end
 
@@ -99,31 +107,30 @@ end
 
 function p._Dis(name, color, size)
     local link = 'Mod Riven#Disposition'
-    if (color == nil or color == '') then color = 'white' end
-    if (size == nil or size == '') then size = 27 end
+    if (color == nil or color == '') then
+        color = 'white'
+    end
+    if (size == nil or size == '') then
+        size = 27
+    end
     if name == nil then
         return "<span style=\"color:red;\">Invalid</span>"
     else
         name = tonumber(name)
         if (name < 0.7) then
-            return '[[' .. link .. '|<span style="font-size:' .. size ..
-                       'px; color:' .. color ..
+            return '[[' .. link .. '|<span style="font-size:' .. size .. 'px; color:' .. color ..
                        '; display:inline; position:relative; top:2px">●○○○○</span>]]'
         elseif (name < 0.9) then
-            return '[[' .. link .. '|<span style="font-size:' .. size ..
-                       'px; color:' .. color ..
+            return '[[' .. link .. '|<span style="font-size:' .. size .. 'px; color:' .. color ..
                        '; display:inline; position:relative; top:2px">●●○○○</span>]]'
         elseif (name <= 1.1) then
-            return '[[' .. link .. '|<span style="font-size:' .. size ..
-                       'px; color:' .. color ..
+            return '[[' .. link .. '|<span style="font-size:' .. size .. 'px; color:' .. color ..
                        '; display:inline; position:relative; top:2px">●●●○○</span>]]'
         elseif (name <= 1.3) then
-            return '[[' .. link .. '|<span style="font-size:' .. size ..
-                       'px; color:' .. color ..
+            return '[[' .. link .. '|<span style="font-size:' .. size .. 'px; color:' .. color ..
                        '; display:inline; position:relative; top:2px">●●●●○</span>]]'
         else
-            return '[[' .. link .. '|<span style="font-size:' .. size ..
-                       'px; color:' .. color ..
+            return '[[' .. link .. '|<span style="font-size:' .. size .. 'px; color:' .. color ..
                        '; display:inline; position:relative; top:2px">●●●●●</span>]]'
         end
     end
@@ -143,13 +150,15 @@ function p._Affinity(iconname, textexist, imagesize)
     else
         link = IconData["Affinite"][iconname]["link"]
         local imgname = IconData["Affinite"][iconname]["icon"]
-        if (imagesize == nil or imagesize == '') then imagesize = 'x26' end
-        if (textexist == 'text' or textexist == 'Text') then
-            return '[[File:' .. imgname .. '|' .. imagesize .. 'px|link=' ..
-                       link .. ']] [[' .. link .. '|' .. iconname .. ']]'
+        if (imagesize == nil or imagesize == '') then
+            imagesize = 'x26'
         end
-        return '[[File:' .. imgname .. '|' .. imagesize .. 'px|link=' .. link ..
-                   ']]'
+        if (textexist == 'text' or textexist == 'Text') then
+            return
+                '[[File:' .. imgname .. '|' .. imagesize .. 'px|link=' .. link .. ']] [[' .. link .. '|' .. iconname ..
+                    ']]'
+        end
+        return '[[File:' .. imgname .. '|' .. imagesize .. 'px|link=' .. link .. ']]'
     end
 end
 
@@ -175,16 +184,17 @@ function p._Faction(factionName, textexist, color, imagesize, pureData)
             iconname = IconData["Factions"][factionName]["icon"][2] -- white icon
         end
         local link = IconData["Factions"][factionName]["link"]
-        if (pureData) then return iconname, link end
-
-        if (imagesize == nil or imagesize == '') then imagesize = 'x25' end
-        if (textexist == 'text' or textexist == 'Text') then
-            return '[[' .. factionName .. ']] [[File:' .. iconname .. '|' ..
-                       imagesize .. 'px|link=' .. link .. ']]'
+        if (pureData) then
+            return iconname, link
         end
-        return
-            '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link ..
-                ']]'
+
+        if (imagesize == nil or imagesize == '') then
+            imagesize = 'x25'
+        end
+        if (textexist == 'text' or textexist == 'Text') then
+            return '[[' .. factionName .. ']] [[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link .. ']]'
+        end
+        return '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link .. ']]'
     end
 end
 
@@ -210,16 +220,14 @@ function p._Syndicat(iconname, textexist, color, imagesize)
         else
             iconname = IconData["Syndicats"][iconname]["icon"][2] -- white icon
         end
-        if (imagesize == nil or imagesize == '') then imagesize = 'x26' end
+        if (imagesize == nil or imagesize == '') then
+            imagesize = 'x26'
+        end
 
         if (textexist == 'text' or textexist == 'Text') then
-            return
-                '[[' .. link .. ']] [[File:' .. iconname .. '|' .. imagesize ..
-                    'px|link=' .. link .. ']]'
+            return '[[' .. link .. ']] [[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link .. ']]'
         end
-        return
-            '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link ..
-                ']]'
+        return '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link .. ']]'
     end
 end
 
@@ -239,28 +247,25 @@ function p._Prime(primename, partname, imagesize)
         link = IconData["Primes"][primename]["link"]
         local iconname = IconData["Primes"][primename]["icon"]
         local name = IconData["Primes"][primename]["name"]
-        if (name ~= nil) then primename = name end
-        if (imagesize == nil or imagesize == '') then imagesize = 'x32' end
+        if (name ~= nil) then
+            primename = name
+        end
+        if (imagesize == nil or imagesize == '') then
+            imagesize = 'x32'
+        end
         if partname ~= nil then
             -- partname = string.gsub(" "..string.lower( partname ), "%W%l", string.upper):sub(2)
             if primename == "Forma" then
-                return
-                    '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' ..
-                        link .. ']] [[' .. link .. '#Acquisition|' .. primename ..
-                        " " .. partname .. ']]'
+                return '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link .. ']] [[' .. link ..
+                           '#Acquisition|' .. primename .. " " .. partname .. ']]'
             elseif partname == "Part" then
-                return '[[File:' .. iconname .. '|' .. imagesize .. 'px' ..
-                           ']] ' .. primename
+                return '[[File:' .. iconname .. '|' .. imagesize .. 'px' .. ']] ' .. primename
             else
-                return
-                    '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' ..
-                        link .. ']] [[' .. link .. '#Acquisition|' .. primename ..
-                        ' Prime ' .. partname .. ']]'
+                return '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link .. ']] [[' .. link ..
+                           '#Acquisition|' .. primename .. ' Prime ' .. partname .. ']]'
             end
         end
-        return
-            '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link ..
-                ']]'
+        return '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link .. ']]'
     end
 end
 
@@ -283,17 +288,15 @@ function p._Ressource(ressName, textWanted, imgSizeWanted)
     end
 
     if (ress == nil) then
-        if (textWanted) then table.insert(ret, '[[' .. ressName .. ']]') end
-        table.insert(ret,
-                     '[[File:' .. Shared.getDefaultImg() .. '|' .. imgSize ..
-                         'px|link=' .. ressName .. ']]')
+        if (textWanted) then
+            table.insert(ret, '[[' .. ressName .. ']]')
+        end
+        table.insert(ret, '[[File:' .. Shared.getDefaultImg() .. '|' .. imgSize .. 'px|link=' .. ressName .. ']]')
     else
         if (textWanted) then
             table.insert(ret, '[[' .. ress.link .. '|' .. ressName .. ']]')
         end
-        table.insert(ret,
-                     '[[File:' .. ress.icon .. '|' .. imgSize .. 'px|link=' ..
-                         ress.link .. ']]')
+        table.insert(ret, '[[File:' .. ress.icon .. '|' .. imgSize .. 'px|link=' .. ress.link .. ']]')
     end
 
     return table.concat(ret, ' ')
@@ -309,14 +312,14 @@ function p.Personnage(frame)
     else
         link = IconData["Personnages"][iconname]["link"]
         iconname = IconData["Personnages"][iconname]["icon"]
-        if (imagesize == nil or imagesize == '') then imagesize = 'x32' end
-        if (textexist == 'text' or textexist == 'Text') then
-            return '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' ..
-                       link .. ']] [[' .. link .. '|' .. frame.args[1] .. ']]'
+        if (imagesize == nil or imagesize == '') then
+            imagesize = 'x32'
         end
-        return
-            '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link ..
-                ']]'
+        if (textexist == 'text' or textexist == 'Text') then
+            return '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link .. ']] [[' .. link .. '|' ..
+                       frame.args[1] .. ']]'
+        end
+        return '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link .. ']]'
     end
 end
 
@@ -331,14 +334,14 @@ function p.Poisson(frame)
     else
         link = IconData["Poisson"][iconname]["link"]
         iconname = IconData["Poisson"][iconname]["icon"]
-        if (imagesize == nil or imagesize == '') then imagesize = 'x32' end
-        if (textexist == 'text' or textexist == 'Text') then
-            return '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' ..
-                       link .. ']] [[' .. link .. '|' .. frame.args[1] .. ']]'
+        if (imagesize == nil or imagesize == '') then
+            imagesize = 'x32'
         end
-        return
-            '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link ..
-                ']]'
+        if (textexist == 'text' or textexist == 'Text') then
+            return '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link .. ']] [[' .. link .. '|' ..
+                       frame.args[1] .. ']]'
+        end
+        return '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link .. ']]'
     end
 end
 
@@ -353,25 +356,22 @@ function p.KDrive(frame)
     else
         link = IconData["K-Drive"][iconname]["link"]
         iconname = IconData["K-Drive"][iconname]["icon"]
-        if (imagesize == nil or imagesize == '') then imagesize = 'x32' end
-        if (textexist == 'text' or textexist == 'Text') then
-            return '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' ..
-                       link .. ']] [[' .. link .. '|' .. frame.args[1] .. ']]'
+        if (imagesize == nil or imagesize == '') then
+            imagesize = 'x32'
         end
-        return
-            '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link ..
-                ']]'
+        if (textexist == 'text' or textexist == 'Text') then
+            return '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link .. ']] [[' .. link .. '|' ..
+                       frame.args[1] .. ']]'
+        end
+        return '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=' .. link .. ']]'
     end
 end
 
 local function tooltipCheck(name, typename)
-    local procList = {
-        "Impact", "Perforation", "Tranchant", {"Glace", "Froid"},
-        {"Électrique", "Électricité"}, {"Feu", "Chaleur"},
-        {"Poison", "Toxique"}, "Néant", "Explosif", "Corrosif", "Gaz",
-        "Magnétique", "Radiation", "Viral", "Brut", "Particule", "Balistique",
-        "Plasma", "Ionique", "Incendiaire", "Chimique", "Givre"
-    }
+    local procList = {"Impact", "Perforation", "Tranchant", {"Glace", "Froid"}, {"Électrique", "Électricité"},
+                      {"Feu", "Chaleur"}, {"Poison", "Toxique"}, "Néant", "Explosif", "Corrosif", "Gaz", "Magnétique",
+                      "Radiation", "Viral", "Brut", "Particule", "Balistique", "Plasma", "Ionique", "Incendiaire",
+                      "Chimique", "Givre"}
     if typename == "Proc" then
         for i, Name in pairs(procList) do
             if type(Name) == 'table' then
@@ -380,7 +380,9 @@ local function tooltipCheck(name, typename)
                     return name
                 end
             elseif type(Name) == 'string' then
-                if Name == name then return name end
+                if Name == name then
+                    return name
+                end
             end
         end
     end
@@ -392,8 +394,7 @@ local function tooltipSpan(name, typename)
     local iconName = tooltipCheck(name, typename)
     local span = {}
     if iconName and typename == 'Proc' then
-        span[1] = '<span class="damagetype-tooltip" data-param="' .. iconName ..
-                      '" style="white-space:nowrap;">'
+        span[1] = '<span class="damagetype-tooltip" data-param="' .. iconName .. '" style="white-space:nowrap;">'
         span[2] = '</span>'
         return span
     end
@@ -437,40 +438,37 @@ function p._Proc(iconname, textexist, color, imagesize, ignoreTextColor)
             iconFile = IconData["Procs"][iconname]["icon"][2] -- white icon
         end
 
-        if (imagesize == nil or imagesize == '') then imagesize = 'x18' end
+        if (imagesize == nil or imagesize == '') then
+            imagesize = 'x18'
+        end
         if (textexist == 'text' or textexist == 'Text') then
             textcolor = IconData["Procs"][iconname]["color"] or ''
             if (ignoreTextColor == nil or not ignoreTextColor) then
                 if (tooltip ~= nil and tooltip ~= '') then
-                    return span1 .. '[[' .. link .. '|<span style=\"color:' ..
-                               textcolor .. ';\">' .. iconname ..
-                               '</span>]] [[File:' .. iconFile .. '|' ..
-                               imagesize .. 'px|link=' .. link .. '|' .. tooltip ..
-                               ']]' .. span2
+                    return span1 .. '[[' .. link .. '|<span style=\"color:' .. textcolor .. ';\">' .. iconname ..
+                               '</span>]] [[File:' .. iconFile .. '|' .. imagesize .. 'px|link=' .. link .. '|' ..
+                               tooltip .. ']]' .. span2
                 else
-                    return span1 .. '[[' .. link .. '|<span style=\"color:' ..
-                               textcolor .. ';\">' .. iconname ..
-                               '</span>]] [[File:' .. iconFile .. '|' ..
-                               imagesize .. 'px|link=' .. link .. ']]' .. span2
+                    return span1 .. '[[' .. link .. '|<span style=\"color:' .. textcolor .. ';\">' .. iconname ..
+                               '</span>]] [[File:' .. iconFile .. '|' .. imagesize .. 'px|link=' .. link .. ']]' ..
+                               span2
                 end
             else
                 if (tooltip ~= nil and tooltip ~= '') then
-                    return span1 .. '[[File:' .. iconFile .. '|' .. imagesize ..
-                               'px|link=' .. link .. '|' .. tooltip .. ']] [[' ..
-                               link .. '|' .. iconname .. ']]' .. span2
+                    return span1 .. '[[File:' .. iconFile .. '|' .. imagesize .. 'px|link=' .. link .. '|' .. tooltip ..
+                               ']] [[' .. link .. '|' .. iconname .. ']]' .. span2
                 else
-                    return span1 .. '[[File:' .. iconFile .. '|' .. imagesize ..
-                               'px|link=' .. link .. ']] [[' .. link .. '|' ..
-                               iconname .. ']]' .. span2
+                    return
+                        span1 .. '[[File:' .. iconFile .. '|' .. imagesize .. 'px|link=' .. link .. ']] [[' .. link ..
+                            '|' .. iconname .. ']]' .. span2
                 end
             end
         end
         if (tooltip ~= nil and tooltip ~= '') then
-            return span1 .. '[[File:' .. iconFile .. '|' .. imagesize ..
-                       'px|link=' .. link .. '|' .. tooltip .. ']]' .. span2
+            return span1 .. '[[File:' .. iconFile .. '|' .. imagesize .. 'px|link=' .. link .. '|' .. tooltip .. ']]' ..
+                       span2
         else
-            return span1 .. '[[File:' .. iconFile .. '|' .. imagesize ..
-                       'px|link=' .. link .. ']]' .. span2
+            return span1 .. '[[File:' .. iconFile .. '|' .. imagesize .. 'px|link=' .. link .. ']]' .. span2
         end
     end
 end
@@ -497,10 +495,11 @@ function p.Focus(frame)
                 iconname = IconData["Focus"][iconname]["icon"][1]
             end
         end
-        if (imagesize == nil or imagesize == '') then imagesize = 'x20' end
+        if (imagesize == nil or imagesize == '') then
+            imagesize = 'x20'
+        end
         if (textexist == 'text' or textexist == 'Text') then
-            return '[[File:' .. iconname .. '|' .. imagesize ..
-                       'px|sub|link=Focus]][[Focus|' .. frame.args[1] .. ']]'
+            return '[[File:' .. iconname .. '|' .. imagesize .. 'px|sub|link=Focus]][[Focus|' .. frame.args[1] .. ']]'
         end
         return '[[File:' .. iconname .. '|' .. imagesize .. 'px|link=Focus]]'
     end
@@ -515,15 +514,18 @@ function p.Drapeau(frame)
         return "<span style=\"color:red;\">Non valide</span>"
     else
         iconname = IconData["Drapeaux"][iconname]
-        if tooltip == nil then tooltip = '' end
-        if dest == nil then dest = '' end
-        if (textexist == 'text' or textexist == 'Text') then
-            return '[[File:' .. iconname .. '|' .. tooltip .. '|16px|link=' ..
-                       dest .. ']] [[' .. dest .. '|' .. tooltip .. ']]'
+        if tooltip == nil then
+            tooltip = ''
         end
-        return
-            '[[File:' .. iconname .. '|' .. tooltip .. '|16px|link=' .. dest ..
-                ']]'
+        if dest == nil then
+            dest = ''
+        end
+        if (textexist == 'text' or textexist == 'Text') then
+            return
+                '[[File:' .. iconname .. '|' .. tooltip .. '|16px|link=' .. dest .. ']] [[' .. dest .. '|' .. tooltip ..
+                    ']]'
+        end
+        return '[[File:' .. iconname .. '|' .. tooltip .. '|16px|link=' .. dest .. ']]'
     end
 end
 
@@ -537,8 +539,7 @@ end
 
 function p._Manuf(manufName, color, text, imagesize)
     if IconData["Fabricants"][manufName] == nil then
-        return "<span style=\"color:red;\">Invalid manufacturer: \"" ..
-                   manufName .. "\"</span>"
+        return "<span style=\"color:red;\">Invalid manufacturer: \"" .. manufName .. "\"</span>"
     else
         local iconname = nil
         if color == 'black' then
@@ -546,12 +547,13 @@ function p._Manuf(manufName, color, text, imagesize)
         else
             iconname = IconData["Fabricants"][manufName]["icon"][2] -- white icon
         end
-        if (imagesize == nil or imagesize == '') then imagesize = 'x20' end
+        if (imagesize == nil or imagesize == '') then
+            imagesize = 'x20'
+        end
         if (text == nil) then
             return '[[File:' .. iconname .. '|' .. imagesize .. 'px]]'
         else
-            return manufName .. ' [[File:' .. iconname .. '|' .. imagesize ..
-                       'px]]'
+            return manufName .. ' [[File:' .. iconname .. '|' .. imagesize .. 'px]]'
         end
     end
 end
@@ -562,15 +564,16 @@ function p._Void(voidItemName, noText)
     local iconSize = 'x32px'
     local icon = IconData["Void"][voidItemName]
     if (icon ~= nil) then
-        if (not noText) then table.insert(ret, icon.Name) end
+        if (not noText) then
+            table.insert(ret, icon.Name)
+        end
         table.insert(ret, ' [[File:')
         table.insert(ret, icon.Icon)
         table.insert(ret, '|')
         table.insert(ret, iconSize)
         table.insert(ret, ']]')
     else
-        table.insert(ret, Shared.printModuleError(
-                         "Icon " .. voidItemName .. " introuvable", "Icon._Void"))
+        table.insert(ret, Shared.printModuleError("Icon " .. voidItemName .. " introuvable", "Icon._Void"))
     end
 
     return table.concat(ret)
@@ -594,10 +597,11 @@ function p._Melee(AttackType, ProcType, imagesize)
     else
         ProcType = string.upper(ProcType)
     end
-    if (imagesize == nil or imagesize == '') then imagesize = 'x22' end
+    if (imagesize == nil or imagesize == '') then
+        imagesize = 'x22'
+    end
 
-    if (IconData["Melee"][ProcType] == nil or
-        IconData["Melee"][ProcType][AttackType] == nil) then
+    if (IconData["Melee"][ProcType] == nil or IconData["Melee"][ProcType][AttackType] == nil) then
         return (iconname or '') .. " <span style=\"color:red;\">Invalid</span>"
     end
 
@@ -614,8 +618,12 @@ function p._Melee(AttackType, ProcType, imagesize)
         result = result .. '|' .. tooltip
     end
     result = result .. '|' .. imagesize .. 'px'
-    if link ~= nil then result = result .. '|link=' .. link end
-    if title ~= nil then result = result .. '|' .. title end
+    if link ~= nil then
+        result = result .. '|link=' .. link
+    end
+    if title ~= nil then
+        result = result .. '|' .. title
+    end
     result = result .. ']]'
     return result
 end

@@ -19,7 +19,9 @@ local tooltipEnd = "</span>"
 -- Gets the relic with the appropriate name
 function p._getRelic(Tier, Name)
     for _, relic in pairs(VoidData["Relics"]) do
-        if (relic.Tier == Tier and relic.Name == Name) then return relic end
+        if (relic.Tier == Tier and relic.Name == Name) then
+            return relic
+        end
     end
     return nil
 end
@@ -31,7 +33,9 @@ function p.getRelic(fullName)
     local name = tokens[2]
 
     local ret = nil
-    if (tier ~= nil and name ~= nil) then ret = p._getRelic(tier, name) end
+    if (tier ~= nil and name ~= nil) then
+        ret = p._getRelic(tier, name)
+    end
 
     return ret
 end
@@ -48,7 +52,9 @@ local function _getValue(relicFullName, valueName)
 
     if (relic ~= nil) then
         local upCaseVal = string.upper(valueName)
-        if (upCaseVal == "IMAGE") then ret = getTierImage(relic.Tier) end
+        if (upCaseVal == "IMAGE") then
+            ret = getTierImage(relic.Tier)
+        end
     end
 
     return ret
@@ -124,16 +130,17 @@ end
 -- So for example 'LATRON' becomes 'Latron Prime'
 function p.getItemName(itemStr)
 
-    local ignoreList = {
-        "FORMA", "ADAPTATEUR EXILUS POUR ARME", "BRISURE RIVEN", "KUVA", "VOME",
-        "JAHU", "LOHK", "XATA", "FASS", "RIS", "KHRA", "NETRA",
-        "ÉTOILE AYATAN AMBRE"
-    }
+    local ignoreList = {"FORMA", "ADAPTATEUR EXILUS POUR ARME", "BRISURE RIVEN", "KUVA", "VOME", "JAHU", "LOHK", "XATA",
+                        "FASS", "RIS", "KHRA", "NETRA", "ÉTOILE AYATAN AMBRE"}
     local caseItem = nil
-    if (caseItem ~= "ÉTOILE AYATAN AMBRE") then
+    if (itemStr ~= "ÉTOILE AYATAN AMBRE" and itemStr ~= "ADAPTATEUR EXILUS POUR ARME") then
         caseItem = string.gsub(itemStr, "(%a)([%w_']*)", Shared.titleCase)
     else
-        caseItem = "Étoile Ayatan Ambre"
+        local itemSwitch = {
+            ["ÉTOILE AYATAN AMBRE"] = "Étoile Ayatan Ambre",
+            ["ADAPTATEUR EXILUS POUR ARME"] = "Adaptateur Exilus pour Arme"
+        }
+        caseItem = itemSwitch[itemStr]
     end
     if (not Shared.contains(ignoreList, itemStr)) then
         caseItem = caseItem .. " Prime"
@@ -146,7 +153,9 @@ function p.getPartName(partStr, keepBlueprint)
     -- User:Falterfire 6/19/2018:
     --      New parameter to remove ' Blueprint' if wanted
     --      IE returns 'Neuroptics' instead of 'Neuroptics Blueprint'
-    if keepBlueprint == nil then keepBlueprint = true end
+    if keepBlueprint == nil then
+        keepBlueprint = true
+    end
     local result = string.gsub(partStr, "(%a)([%w_']*)", Shared.titleCase)
     if not keepBlueprint and Shared.contains(result, ' Schema') then
         result = string.gsub(result, ' Schema', '')
@@ -165,7 +174,9 @@ function p.isRelicOnPlatform(Relic, Platform)
     else
         local foundIt = false
         for i, plat in pairs(Platforms) do
-            if (plat == Platform) then foundIt = true end
+            if (plat == Platform) then
+                foundIt = true
+            end
         end
         return foundIt
     end
@@ -186,6 +197,7 @@ end
 -- Returns the part icon for a drop
 -- (IE Braton Prime Barrel returns the Prime Barrel icon)
 function p.getPartIconForDrop(drop)
+
     local iName = p.getItemName(drop.Item)
     local pName = p.getPartName(drop.Part)
     local iconSize = ''
@@ -197,8 +209,9 @@ function p.getPartIconForDrop(drop)
     end
 
     if iName == 'Odonata Prime' then
-        if pName == 'Schéma Harnais' or pName == 'Schéma Systèmes' or pName ==
-            'Schéma Ailes' then primeToggle = ' Archwing Prime' end
+        if pName == 'Schéma Harnais' or pName == 'Schéma Systèmes' or pName == 'Schéma Ailes' then
+            primeToggle = ' Archwing Prime'
+        end
     elseif pName == 'Carapace' or pName == 'Cerveau' or pName == 'Systèmes' then
         primeToggle = ' Sentinelle Prime'
     end
@@ -208,6 +221,8 @@ function p.getPartIconForDrop(drop)
         icon = ICON._Prime(Shared.titleCase(drop.Item), nil, iconSize)
     elseif iName == 'Kavasa Prime' then
         icon = ICON._Prime('Kavasa', nil, iconSize)
+    elseif (iName == 'Étoile Ayatan Ambre' or iName == "Adapteur Exilus Pour Arme") then
+        icon = ICON._Item(iName, nil, iconSize)
     else
         icon = ICON._Prime(pName .. primeToggle, nil, iconSize)
     end
@@ -244,19 +259,18 @@ end
 function p._item(item_type, item_part, relic_tier, platform)
     item_type = string.upper(item_type)
     item_part = p.frenchUpCase(item_part)
-    if (item_part == "SCHEMA CASQUE") then item_part = "SCHEMA NEUROPTIQUES" end
+    if (item_part == "SCHEMA CASQUE") then
+        item_part = "SCHEMA NEUROPTIQUES"
+    end
     local locations = {}
     local vaultLocations = {}
     local i
     for i, relic in pairs(VoidData["Relics"]) do
-        if (p.isRelicOnPlatform(relic, platform) and
-            (relic_tier == nil or relic.Tier == relic_tier)) then
+        if (p.isRelicOnPlatform(relic, platform) and (relic_tier == nil or relic.Tier == relic_tier)) then
             local dropRarity = p.getRelicDropRarity(relic, item_type, item_part)
             if (dropRarity ~= nil) then
                 local relicText = relic.Tier .. " " .. relic.Name
-                local relicString = TT._tooltipText(relicText, 'Relic',
-                                                    relicText .. " &ndash; " ..
-                                                        dropRarity)
+                local relicString = TT._tooltipText(relicText, 'Relic', relicText .. " &ndash; " .. dropRarity)
                 if (relic.IsVaulted == 1) then
                     relicString = relicString .. " ([[Soute Prime|V]])"
                     table.insert(vaultLocations, relicString)
@@ -270,29 +284,40 @@ function p._item(item_type, item_part, relic_tier, platform)
         end
     end
 
-    for _, i in pairs(vaultLocations) do table.insert(locations, i) end
+    for _, i in pairs(vaultLocations) do
+        table.insert(locations, i)
+    end
     return table.concat(locations, "<br/>")
 end
 
 function p.relicTooltip(frame)
-    local relicName = frame.args ~= nil and frame.args[1] or frame
+
+    local relicName = frame.args ~= nil and frame.args[1]
     local platform = frame.args ~= nil and frame.args[2]
-    if (platform == nil) then platform = 'PC' end
-    if (relicName == nil) then return nil end
+    if (platform == nil) then
+        platform = 'PC'
+    end
+    if (relicName == nil) then
+        return nil
+    end
 
     local bits = Shared.splitString(relicName, ' ')
     local Tier = bits[1]
     local RName = bits[2]
 
     local theRelic = p._getRelic(Tier, RName)
-    if (theRelic == nil) then return 'ERREUR : Aucune relique trouvée' end
+    if (theRelic == nil) then
+        return 'ERREUR : Aucune relique trouvée'
+    end
     if (not p.isRelicOnPlatform(theRelic, platform)) then
         return "ERREUR : Cette relique n'est pas sur cette plateforme"
     end
 
-    local result = '{|'
-
-    local rareTxt = {Commune = '', Inhabituelle = '', Rare = ''}
+    local rareTxt = {
+        Commune = '',
+        Inhabituelle = '',
+        Rare = ''
+    }
 
     for i, drop in pairs(theRelic.Drops) do
         local rarity = drop.Rarity
@@ -300,7 +325,9 @@ function p.relicTooltip(frame)
             if (rareTxt[rarity] ~= '') then
                 rareTxt[rarity] = rareTxt[rarity] .. '\n'
             end
-            if (i > 1) then rareTxt[rarity] = rareTxt[rarity] .. '|-' end
+            if (i > 1) then
+                rareTxt[rarity] = rareTxt[rarity] .. '|-'
+            end
 
             local iName = drop.Item
             local pName = drop.Part
@@ -309,49 +336,42 @@ function p.relicTooltip(frame)
             if (Tier ~= "Requiem") then
                 iName = p.getItemName(iName)
                 pName = p.getPartName(pName)
-                if pName == "Grip" then pName = "Poignée" end
+                if pName == "Grip" then
+                    pName = "Poignée"
+                end
                 icon = p.getPartIconForDrop(drop)
             else
                 if (pName == "ITEM") then
-                    local dbName = string.gsub(iName, "(%a)([%w_']*)",
-                                               Shared.titleCase)
+                    local dbName = p.getItemName(iName)
                     icon = ICON._Item(dbName, nil, "32px")
                 elseif (pName == "MOD") then
-                    local dbName = string.gsub(iName, "(%a)([%w_']*)",
-                                               Shared.titleCase)
+                    local dbName = string.gsub(iName, "(%a)([%w_']*)", Shared.titleCase)
                     icon = TT._tooltipIcon(dbName, 'Mod', "32px")
                 elseif (pName == "RESSOURCE") then
                     local dbName = nil
                     if (type(iName) == "table") then
-                        dbName = string.gsub(iName[1], "(%a)([%w_']*)",
-                                             Shared.titleCase)
+                        dbName = string.gsub(iName[1], "(%a)([%w_']*)", Shared.titleCase)
                         iName = iName[2] .. " " .. iName[1]
                     else
-                        dbName = string.gsub(iName, "(%a)([%w_']*)",
-                                             Shared.titleCase)
+                        dbName = string.gsub(iName, "(%a)([%w_']*)", Shared.titleCase)
                     end
                     icon = ICON._Ressource(dbName, nil, "32px")
                 end
                 pName = ""
             end
 
-            rareTxt[rarity] = rareTxt[rarity] ..
-                                  '\n| rowspan=2 class=\"Image\" | ' .. icon
+            rareTxt[rarity] = rareTxt[rarity] .. '\n| rowspan=2 class=\"Image\" | ' .. icon
 
-            rareTxt[rarity] = rareTxt[rarity] ..
-                                  '\n| class = "gradientText" style = "vertical-align:bottom; color:' ..
+            rareTxt[rarity] = rareTxt[rarity] .. '\n| class = "gradientText" style = "vertical-align:bottom; color:' ..
                                   TxtColors[rarity] .. ';" | ' .. iName
-            rareTxt[rarity] = rareTxt[rarity] ..
-                                  '\n|-\n| class = "gradientText" style = "vertical-align:top; color:' ..
+            rareTxt[rarity] = rareTxt[rarity] .. '\n|-\n| class = "gradientText" style = "vertical-align:top; color:' ..
                                   TxtColors[rarity] .. ';" | ' .. pName
         end
     end
 
-    result = result .. rareTxt['Commune'] .. '\n' .. rareTxt['Inhabituelle']
-    result = result .. '\n' .. rareTxt['Rare']
-    result = result .. '\n|}'
+    local ret = {'{|', rareTxt['Commune'], '\n', rareTxt['Inhabituelle'], '\n', rareTxt['Rare'], '\n|}'}
 
-    return result
+    return table.concat(ret)
 end
 
 function p.getRelicDrop(frame)
@@ -368,7 +388,9 @@ function p.getRelicDrop(frame)
 
     -- Platform comes from a special argument. Defaults to PC if not set
     local platform = frame.args ~= nil and frame.args.platform or nil
-    if platform == nil then platform = 'PC' end
+    if platform == nil then
+        platform = 'PC'
+    end
 
     -- Return an error if any arguments are missing
     if relicName == nil or relicName == '' then
@@ -399,16 +421,13 @@ function p.getRelicDrop(frame)
                 local pName = p.getPartName(drop.Part, false)
                 local icon = p.getItemIconForDrop(drop)
 
-                return
-                    icon .. ' [[' .. iName .. '|' .. iName .. ' - ' .. pName ..
-                        ']]'
+                return icon .. ' [[' .. iName .. '|' .. iName .. ' - ' .. pName .. ']]'
             end
         end
     end
 
     -- If we got to here, there weren't enough drops of that rarity for this relic.
-    return "ERROR: Only found " .. count .. " drops of " .. rarity ..
-               " rarity for " .. relicName
+    return "ERROR: Only found " .. count .. " drops of " .. rarity .. " rarity for " .. relicName
 end
 
 function p.getRelicTotal(frame)
@@ -416,17 +435,23 @@ function p.getRelicTotal(frame)
 
     if (Shared.contains(frame.args, "unvaulted")) then
         for _, relic in pairs(VoidData["Relics"]) do
-            if (relic.IsVaulted == 0) then total = total + 1 end
+            if (relic.IsVaulted == 0) then
+                total = total + 1
+            end
         end
     end
     if (Shared.contains(frame.args, "vaulted")) then
         for _, relic in pairs(VoidData["Relics"]) do
-            if (relic.IsVaulted == 1) then total = total + 1 end
+            if (relic.IsVaulted == 1) then
+                total = total + 1
+            end
         end
     end
     if (Shared.contains(frame.args, "baro")) then
         for _, relic in pairs(VoidData["Relics"]) do
-            if (relic.IsBaro == 1) then total = total + 1 end
+            if (relic.IsBaro == 1) then
+                total = total + 1
+            end
         end
     end
     if (frame.args[1] == nil) then
@@ -449,7 +474,9 @@ local function relicData()
                 IsVaulted = relic.IsVaulted == 1,
                 IsBaro = relic.IsBaro == 1
             }
-            if (data[drop.Item] == nil) then data[drop.Item] = {} end
+            if (data[drop.Item] == nil) then
+                data[drop.Item] = {}
+            end
             if (data[drop.Item][drop.Part] == nil) then
                 data[drop.Item][drop.Part] = {}
             end
@@ -504,7 +531,9 @@ function p._getDucatValue(itemName, partName, data)
     -- Calculating the ducat value of an item. A few don't follow the rule of (common=15, uncommon=45, rare=100, common+uncommon=25, uncommon+rare=65) so they are handled before calling "getItemRarities" for a slight efficiency gain.
     -- A small local function for checking if the two strings match.
     local function uCheck(name, expected)
-        if string.upper(name) == string.upper(expected) then return true end
+        if string.upper(name) == string.upper(expected) then
+            return true
+        end
         return false
     end
 
@@ -529,7 +558,9 @@ function p._getDucatValue(itemName, partName, data)
     -- For checking whether the table contains a dictionary of the particular rarity.
     local function tableContains(table, rarity)
         for rar, value in pairs(table) do
-            if rar == rarity then return true end
+            if rar == rarity then
+                return true
+            end
         end
         return false
     end
@@ -599,33 +630,24 @@ function p.getTotalDucats(frame)
     end
 
     if tierName then
-        result = "'''Average Ducats Value'''&#58; " .. ICON._Item('Ducats') ..
-                     "'''" .. Shared.round((totalDucats / totalItemCount), 2) ..
-                     "''' (" .. totalItemCount .. ' rewards with ' ..
+        result = "'''Average Ducats Value'''&#58; " .. ICON._Item('Ducats') .. "'''" ..
+                     Shared.round((totalDucats / totalItemCount), 2) .. "''' (" .. totalItemCount .. ' rewards with ' ..
                      withoutFormaCount .. ' parts)'
-        result =
-            result .. "<br>'''Available'''&#58; " .. ICON._Item('Ducats') ..
-                "'''" .. Shared.round((availableDucats / availableItems), 2) ..
-                "''' (" .. availableItems .. ' rewards with ' ..
-                availableItemsEF .. ' parts)'
-        result = result .. " | '''Vaulted'''&#58; " .. ICON._Item('Ducats') ..
-                     "'''" .. Shared.round((vaultedDucats / vaultedItems), 2) ..
-                     "''' (" .. vaultedItems .. ' rewards with ' ..
+        result = result .. "<br>'''Available'''&#58; " .. ICON._Item('Ducats') .. "'''" ..
+                     Shared.round((availableDucats / availableItems), 2) .. "''' (" .. availableItems ..
+                     ' rewards with ' .. availableItemsEF .. ' parts)'
+        result = result .. " | '''Vaulted'''&#58; " .. ICON._Item('Ducats') .. "'''" ..
+                     Shared.round((vaultedDucats / vaultedItems), 2) .. "''' (" .. vaultedItems .. ' rewards with ' ..
                      vaultedItemsEF .. ' parts)'
     else
-        result = "'''Total Ducats Value'''&#58; " .. ICON._Item('Ducats') ..
-                     "'''" .. Shared.formatnum(totalDucats) .. "''' (" ..
-                     totalItemCount .. ' rewards with ' .. withoutFormaCount ..
-                     ' parts)'
+        result = "'''Total Ducats Value'''&#58; " .. ICON._Item('Ducats') .. "'''" .. Shared.formatnum(totalDucats) ..
+                     "''' (" .. totalItemCount .. ' rewards with ' .. withoutFormaCount .. ' parts)'
+        result = result .. "<br>'''Available'''&#58; " .. ICON._Item('Ducats') .. "'''" ..
+                     Shared.formatnum(availableDucats) .. "''' (" .. availableItems .. ' rewards with ' ..
+                     availableItemsEF .. ' parts)'
         result =
-            result .. "<br>'''Available'''&#58; " .. ICON._Item('Ducats') ..
-                "'''" .. Shared.formatnum(availableDucats) .. "''' (" ..
-                availableItems .. ' rewards with ' .. availableItemsEF ..
-                ' parts)'
-        result = result .. " | '''Vaulted'''&#58; " .. ICON._Item('Ducats') ..
-                     "'''" .. Shared.formatnum(vaultedDucats) .. "''' (" ..
-                     vaultedItems .. ' rewards with ' .. vaultedItemsEF ..
-                     ' parts)'
+            result .. " | '''Vaulted'''&#58; " .. ICON._Item('Ducats') .. "'''" .. Shared.formatnum(vaultedDucats) ..
+                "''' (" .. vaultedItems .. ' rewards with ' .. vaultedItemsEF .. ' parts)'
     end
 
     return result
@@ -646,17 +668,14 @@ local function ducatPriceRow(itemName, partName, tierName, data)
                 local dropRarity = drop.Rarity
                 if dropRarity ~= nil then
                     local relicText = drop.Tier .. " " .. drop.Name
-                    local relicString = tooltipStart .. relicText ..
-                                            tooltipCenter .. "[[" .. relicText ..
-                                            "]]" .. tooltipEnd .. " " ..
-                                            dropRarity
+                    local relicString = tooltipStart .. relicText .. tooltipCenter .. "[[" .. relicText .. "]]" ..
+                                            tooltipEnd .. " " .. dropRarity
                     if drop.IsVaulted then
                         relicString = relicString .. " ([[Soute Prime|V]])"
                         table.insert(vaultLocations, relicString)
                     else
                         if drop.IsBaro then
-                            relicString =
-                                relicString .. " ([[Baro Ki%27Teer|B]])"
+                            relicString = relicString .. " ([[Baro Ki%27Teer|B]])"
                         end
                         table.insert(locations, relicString)
                     end
@@ -664,7 +683,9 @@ local function ducatPriceRow(itemName, partName, tierName, data)
             end
         end
 
-        for _, i in pairs(vaultLocations) do table.insert(locations, i) end
+        for _, i in pairs(vaultLocations) do
+            table.insert(locations, i)
+        end
 
         return table.concat(locations, "<br/>")
     end
@@ -679,11 +700,10 @@ local function ducatPriceRow(itemName, partName, tierName, data)
     else
         sortValue = itemName .. ' ' .. partName
     end
-    local cell1 = '\n|data-sort-value="' .. sortValue .. '"|' ..
-                      ICON._Prime(itemName, partName)
+    local cell1 = '\n|data-sort-value="' .. sortValue .. '"|' .. ICON._Prime(itemName, partName)
     local cell2 = '\n|' .. createRelicText(itemName, partName, tierName, data)
-    local cell3 = '\n|data-sort-value="' .. ducatValue .. '"|' ..
-                      ICON._Item('Ducats') .. "'''" .. ducatValue .. "'''\n|-"
+    local cell3 = '\n|data-sort-value="' .. ducatValue .. '"|' .. ICON._Item('Ducats') .. "'''" .. ducatValue ..
+                      "'''\n|-"
 
     return cell1 .. cell2 .. cell3
 end
@@ -785,7 +805,9 @@ function p.getItemRelics(itemName)
             i = i + 1
         end
         if (partFound ~= nil) then
-            if (ret[partFound] == nil) then ret[partFound] = {} end
+            if (ret[partFound] == nil) then
+                ret[partFound] = {}
+            end
             table.insert(ret[partFound], relic)
         end
     end
@@ -798,7 +820,9 @@ local function groupDropsByRarity(relicDrops)
     local ret = {}
     if (relicDrops ~= nil) then
         for _, drop in ipairs(relicDrops) do
-            if (ret[drop.Rarity] == nil) then ret[drop.Rarity] = {} end
+            if (ret[drop.Rarity] == nil) then
+                ret[drop.Rarity] = {}
+            end
             table.insert(ret[drop.Rarity], drop)
         end
     end
@@ -843,10 +867,8 @@ local function _buildRelicDrops(relicFullName)
     local ret = {}
     local relic = p.getRelic(relicFullName)
     if (relic ~= nil) then
-        ret = {
-            '\n{| class="article-table"\n! Composant\n! Valeur en<br/>',
-            ICON._Item("Ducats", true), '\n!Rareté<br/>(Chance)\n'
-        }
+        ret = {'\n{| class="article-table"\n! Composant\n! Valeur en<br/>', ICON._Item("Ducats", true),
+               '\n!Rareté<br/>(Chance)\n'}
         local dropsArray = groupDropsByRarity(relic.Drops)
         local tmpRarity = nil
         local raritySpanSwitch = {
@@ -885,7 +907,7 @@ local function _buildRelicDrops(relicFullName)
             end
         end
         table.insert(ret,
-                     '\n|-\n| colspan="3" | <span class="button" id="relic-intact-button">Intacte</span> <span class="button" id="relic-exceptional-button">Exceptionnelle</span> <span class="button" id="relic-flawless-button">Parfaite</span> <span class="button" id="relic-radiant-button">Éclatante</span>')
+            '\n|-\n| colspan="3" | <span class="button" id="relic-intact-button">Intacte</span> <span class="button" id="relic-exceptional-button">Exceptionnelle</span> <span class="button" id="relic-flawless-button">Parfaite</span> <span class="button" id="relic-radiant-button">Éclatante</span>')
         table.insert(ret, '\n|}')
     end
     return table.concat(ret)
@@ -895,7 +917,9 @@ function p.buildRelicDrops(frame)
 
     local ret = nil
     local relicFullName = frame.args ~= nil and frame.args[1] or nil
-    if (relicFullName ~= nil) then ret = _buildRelicDrops(relicFullName) end
+    if (relicFullName ~= nil) then
+        ret = _buildRelicDrops(relicFullName)
+    end
     return ret
 end
 
