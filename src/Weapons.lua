@@ -2671,10 +2671,10 @@ local function buildGunComparisonString(Weapon1, Weapon2, Conclave)
             end
         end
         if (dontHasAttack(Weapon1, "Normal") and dontHasAttack(Weapon2, "Normal")) then
-            table.insert(ret, buildCompareString(Att1.CritMultiplier, Att2.CritMultiplier, "[[Multiplicateur de Critique]]", 2, "x"))
+            table.insert(ret, buildCompareString(Att1.CritMultiplier, Att2.CritMultiplier, "[[Multiplicateur de Critique]]", 2, "x", {"Plus de", "Moins de"}))
         end
         if (hasAttack(Weapon1, "Normal") and hasAttack(Weapon2, "Normal")) then
-            table.insert(ret, buildCompareString(Att1.CritMultiplier, Att2.CritMultiplier, "[[Multiplicateur de Critique]] avec un tir chargé", 2, "x"))
+            table.insert(ret, buildCompareString(Att1.CritMultiplier, Att2.CritMultiplier, "[[Multiplicateur de Critique]] avec un tir chargé", 2, "x", {"Plus de", "Moins de"}))
         end
         if (Att1.StatusChance ~= nil and Att2.StatusChance ~= nil) then
             if (dontHasAttack(Weapon1, "Normal") and
@@ -2704,7 +2704,7 @@ local function buildGunComparisonString(Weapon1, Weapon2, Conclave)
         if (Att1.CritChance ~= nil and Att2.CritChance ~= nil) then
             table.insert(ret, buildCompareString((Att1.CritChance * 100), (Att2.CritChance * 100), "[[Chance de Coup Critique]] sur le [[Tir Alternatif]]", 2, "%"))
         end
-        table.insert(ret, buildCompareString(Att1.CritMultiplier, Att2.CritMultiplier, "[[Multiplicateur de Critique]] sur le [[Tir Alternatif]]", 2, "x"))
+        table.insert(ret, buildCompareString(Att1.CritMultiplier, Att2.CritMultiplier, "[[Multiplicateur de Critique]] sur le [[Tir Alternatif]]", 2, "x", {"Plus de", "Moins de"}))
         if (Att1.StatusChance ~= nil and Att2.StatusChance ~= nil) then
             table.insert(ret, buildCompareString((Att1.StatusChance * 100), (Att2.StatusChance * 100), "[[Chance de Statut]] sur le [[Tir Alternatif]]", 2, "%"))
         end
@@ -2723,7 +2723,7 @@ local function buildGunComparisonString(Weapon1, Weapon2, Conclave)
                 (Att2.CritChance * 100), "[[Chance de Coup Critique]]", 2, "%"))
         end
         table.insert(ret, buildCompareString(Att1.CritMultiplier, Att2.CritMultiplier,
-        "[[Multiplicateur de Critique]]", 2, "x"))
+        "[[Multiplicateur de Critique]]", 2, "x", {"Plus de", "Moins de"}))
 
         if (Att1.StatusChance ~= nil and Att2.StatusChance ~= nil) then
             table.insert(ret, buildCompareString((Att1.StatusChance * 100),
@@ -2754,15 +2754,15 @@ local function buildGunComparisonString(Weapon1, Weapon2, Conclave)
         if (dontHasAttack(Weapon1, "Charge") and dontHasAttack(Weapon2, "Charge")
         and dontHasAttack(Weapon1, "Secondary") and dontHasAttack(Weapon2, "Secondary")) then
             table.insert(ret, buildCompareString(Att1.CritMultiplier,
-                Att2.CritMultiplier, "[[Multiplicateur de Critique]]", 2, "x"))
+                Att2.CritMultiplier, "[[Multiplicateur de Critique]]", 2, "x", {"Plus de", "Moins de"}))
         end
         if (hasAttack(Weapon1, "Charge") and hasAttack(Weapon2, "Charge")) then
             table.insert(ret, buildCompareString(Att1.CritMultiplier,
-                Att2.CritMultiplier, "base [[Multiplicateur de Critique]]", 2, "x"))
+                Att2.CritMultiplier, "base [[Multiplicateur de Critique]]", 2, "x", {"Plus de", "Moins de"}))
         end
         if (hasAttack(Weapon1, "Secondary") and hasAttack(Weapon2, "Secondary")) then
             table.insert(ret, buildCompareString(Att1.CritMultiplier,
-                Att2.CritMultiplier, "[[Multiplicateur de Critique]] sur le tir principal", 2, "x"))
+                Att2.CritMultiplier, "[[Multiplicateur de Critique]] sur le tir principal", 2, "x", {"Plus de", "Moins de"}))
         end
         if (Att1.StatusChance ~= nil and Att2.StatusChance ~= nil) then
             if (dontHasAttack(Weapon1, "Charge") and dontHasAttack(Weapon2, "Charge")
@@ -2806,10 +2806,10 @@ local function buildGunComparisonString(Weapon1, Weapon2, Conclave)
             end
         elseif (Att1.Falloff ~= nil and Att2.Falloff ~= nil) then
             table.insert(ret, buildCompareString(Att1.Falloff.StartRange,
-                Att2.Falloff.StartRange, "porté avant que la dégradation des dégâts ne commence",
+                Att2.Falloff.StartRange, "portée avant que la dégradation des dégâts ne commence",
                 2, "m", {"Plus grande", "Plus courte"}))
             table.insert(ret, buildCompareString(Att1.Falloff.EndRange,
-                Att2.Falloff.EndRange, "porté avant que la dégradation des dégâts ne se termine",
+                Att2.Falloff.EndRange, "portée avant que la dégradation des dégâts ne se termine",
                 2, "m", {"Plus grande", "Plus courte"}))
             if (Att1.Falloff.Reduction ~= nil and Att2.Falloff.Reduction ~= nil) then
                 table.insert(ret, buildCompareString(Att1.Falloff.Reduction * 100,
@@ -2822,7 +2822,7 @@ local function buildGunComparisonString(Weapon1, Weapon2, Conclave)
     table.insert(ret, buildCompareString(Weapon1.Magazine,
         Weapon2.Magazine, "chargeur", 0, " balle<s>", {"Plus gros", "Plus petit"}))
     table.insert(ret, buildCompareString(Weapon1.MaxAmmo,
-        Weapon2.MaxAmmo, "Réserve de munition", 0, " balle<s>", {"", ""}, nil, {"plus grande", "plus petite"}))
+        Weapon2.MaxAmmo, "Réserve de munitions", 0, " balle<s>", {"", ""}, nil, {"plus grande", "plus petite"}))
     -- If this is a weapon that regenerates ammo, flip the comparison
     if (Weapon1.ReloadStyle ~= nil and Weapon1.ReloadStyle == "Regenerate") then
         table.insert(ret, buildCompareString(Weapon1.Reload,
@@ -2938,7 +2938,7 @@ local function buildMeleeComparisonString(Weapon1, Weapon2, Conclave)
     result = result ..
                  buildCompareString(Att1.CritMultiplier, Att2.CritMultiplier,
                                     "[[Multiplicateur de Critique]]", {2, 1},
-                                    "x")
+                                    "x", {"Plus de", "Moins de"})
 
     if (Att1.StatusChance ~= nil and Att2.StatusChance ~= nil) then
         result = result ..
