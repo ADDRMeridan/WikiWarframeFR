@@ -2628,192 +2628,106 @@ local function buildCompareString(Val1, Val2, ValName, Digits, Addon, Words,
 end
 
 local function buildGunComparisonString(Weapon1, Weapon2, Conclave)
-    local result = ""
-    if (Conclave) then
-        result = "* " .. Weapon1.Name .. ", comparé au [[Conclave:" ..
-                     Weapon2.Name .. "|" .. Weapon2.Name .. "]]:"
-    else
-        result = "* " .. Weapon1.Name .. ", comparé au [[" .. Weapon2.Name ..
-                     "]]:"
-    end
+
+    local ret = {}
+
+    table.insert(ret, '* ')
+    table.insert(ret, TT._tooltipText(Weapon1.Name, 'Weapon', nil, Conclave))
+    table.insert(ret, ' vs. ')
+    table.insert(ret, TT._tooltipText(Weapon2.Name, 'Weapon', nil, Conclave))
+    table.insert(ret, ':')
 
     if (hasAttack(Weapon1, "Normal") and hasAttack(Weapon2, "Normal")) then
         local Att1 = getAttack(Weapon1, "Normal")
         local Att2 = getAttack(Weapon2, "Normal")
-        local dmgString = ""
-        dmgString = dmgString ..
-                        buildCompareString(GetDamage(Att1), GetDamage(Att2),
-                                           "dégâts de base", {2, 1})
-        dmgString = dmgString ..
-                        buildCompareString(Att1.Damage["Impact"],
-                                           Att2.Damage["Impact"],
-                                           " dégâts " ..
-                                               Icon._Proc("Impact", "text"),
-                                           {2, 1}, nil, {"Plus de", "Moins de"},
-                                           "\n***")
-        dmgString = dmgString ..
-                        buildCompareString(Att1.Damage["Perforation"],
-                                           Att2.Damage["Perforation"],
-                                           " dégâts " ..
-                                               Icon._Proc("Perforation", "text"),
-                                           {2, 1}, nil, {"Plus de", "Moins de"},
-                                           "\n***")
-        dmgString = dmgString ..
-                        buildCompareString(Att1.Damage["Tranchant"],
-                                           Att2.Damage["Tranchant"],
-                                           " dégâts " ..
-                                               Icon._Proc("Tranchant", "text"),
-                                           {2, 1}, nil, {"Plus de", "Moins de"},
-                                           "\n***")
+        --Comparaison dégâts
+        local dmgString = {
+            buildCompareString(GetDamage(Att1), GetDamage(Att2), "dégâts de base", {2, 1}),
+            buildCompareString(Att1.Damage["Impact"], Att2.Damage["Impact"], " dégâts " .. Icon._Proc("Impact", "text"), {2, 1}, nil, {"Plus de", "Moins de"}, "\n***"),
+            buildCompareString(Att1.Damage["Perforation"], Att2.Damage["Perforation"], " dégâts " .. Icon._Proc("Perforation", "text"), {2, 1}, nil, {"Plus de", "Moins de"}, "\n***"),
+            buildCompareString(Att1.Damage["Perforation"], Att2.Damage["Perforation"], " dégâts " .. Icon._Proc("Perforation", "text"), {2, 1}, nil, {"Plus de", "Moins de"}, "\n***"),
+            buildCompareString(Att1.Damage["Tranchant"], Att2.Damage["Tranchant"], " dégâts " .. Icon._Proc("Tranchant", "text"), {2, 1}, nil, {"Plus de", "Moins de"}, "\n***")
+        }
+
+        dmgString = table.concat(dmgString)
         if (string.len(dmgString) > 0 and GetDamage(Att1) == GetDamage(Att2)) then
             dmgString =
                 "\n**Dégâts de base équivalent, mais composition différente:" ..
                     dmgString
         end
-        result = result .. dmgString
+        table.insert(ret, dmgString)
     end
+
     if (hasAttack(Weapon1, "Charge") and hasAttack(Weapon2, "Charge")) then
         local Att1 = getAttack(Weapon1, "Charge")
         local Att2 = getAttack(Weapon2, "Charge")
-        --        local addedString = ""
-        --        if(dontHasAttack(Weapon1, "Normal")and dontHasAttack(Weapon2, "Normal")) then
-        --            addedString = "charged test"
-        --        end
+
         if (Att1.CritChance ~= nil and Att2.CritChance ~= nil) then
-            if (dontHasAttack(Weapon1, "Normal") and
-                dontHasAttack(Weapon2, "Normal")) then
-                result = result ..
-                             buildCompareString((Att1.CritChance * 100),
-                                                (Att2.CritChance * 100),
-                                                "[[Chance de Coup Critique]]",
-                                                2, "%")
+            if (dontHasAttack(Weapon1, "Normal") and dontHasAttack(Weapon2, "Normal")) then
+                table.insert(ret, buildCompareString((Att1.CritChance * 100), (Att2.CritChance * 100), "[[Chance de Coup Critique]]", 2, "%"))
             end
             if (hasAttack(Weapon1, "Normal") and hasAttack(Weapon2, "Normal")) then
-                result = result ..
-                             buildCompareString((Att1.CritChance * 100),
-                                                (Att2.CritChance * 100),
-                                                "[[Chance de Coup Critique]] avec un tir chargé",
-                                                2, "%")
+                table.insert(ret, buildCompareString((Att1.CritChance * 100), (Att2.CritChance * 100), "[[Chance de Coup Critique]] avec un tir chargé", 2, "%"))
             end
         end
-        if (dontHasAttack(Weapon1, "Normal") and
-            dontHasAttack(Weapon2, "Normal")) then
-            result = result ..
-                         buildCompareString(Att1.CritMultiplier,
-                                            Att2.CritMultiplier,
-                                            "[[Multiplicateur de Critique]]", 2,
-                                            "x")
+        if (dontHasAttack(Weapon1, "Normal") and dontHasAttack(Weapon2, "Normal")) then
+            table.insert(ret, buildCompareString(Att1.CritMultiplier, Att2.CritMultiplier, "[[Multiplicateur de Critique]]", 2, "x"))
         end
         if (hasAttack(Weapon1, "Normal") and hasAttack(Weapon2, "Normal")) then
-            result = result ..
-                         buildCompareString(Att1.CritMultiplier,
-                                            Att2.CritMultiplier,
-                                            "[[Multiplicateur de Critique]] avec un tir chargé",
-                                            2, "x")
+            table.insert(ret, buildCompareString(Att1.CritMultiplier, Att2.CritMultiplier, "[[Multiplicateur de Critique]] avec un tir chargé", 2, "x"))
         end
         if (Att1.StatusChance ~= nil and Att2.StatusChance ~= nil) then
             if (dontHasAttack(Weapon1, "Normal") and
                 dontHasAttack(Weapon2, "Normal")) then
-                result = result ..
-                             buildCompareString((Att1.StatusChance * 100),
-                                                (Att2.StatusChance * 100),
-                                                "[[Chance de Statut]]", 2, "%")
+                table.insert(ret, buildCompareString((Att1.StatusChance * 100), (Att2.StatusChance * 100), "[[Chance de Statut]]", 2, "%"))
             end
             if (hasAttack(Weapon1, "Normal") and hasAttack(Weapon2, "Normal")) then
-                result = result ..
-                             buildCompareString((Att1.StatusChance * 100),
-                                                (Att2.StatusChance * 100),
-                                                "[[Chance de Statut]] avec un tir chargé",
-                                                2, "%")
+                table.insert(ret, buildCompareString((Att1.StatusChance * 100), (Att2.StatusChance * 100), "[[Chance de Statut]] avec un tir chargé", 2, "%"))
             end
         end
-        if (dontHasAttack(Weapon1, "Normal") and
-            dontHasAttack(Weapon2, "Normal")) then
-            result = result ..
-                         buildCompareString(GetDamage(Weapon1.ChargeAttack),
-                                            GetDamage(Weapon2.ChargeAttack),
-                                            "dégâts", {2, 1})
+        if (dontHasAttack(Weapon1, "Normal") and dontHasAttack(Weapon2, "Normal")) then
+            table.insert(ret, buildCompareString(GetDamage(Weapon1.ChargeAttack), GetDamage(Weapon2.ChargeAttack), "dégâts", {2, 1}))
         end
         if (hasAttack(Weapon1, "Normal") and hasAttack(Weapon2, "Normal")) then
-            result = result ..
-                         buildCompareString(GetDamage(Weapon1.ChargeAttack),
-                                            GetDamage(Weapon2.ChargeAttack),
-                                            "dégâts avec un tir chargé",
-                                            {2, 1})
+            table.insert(ret, buildCompareString(GetDamage(Weapon1.ChargeAttack), GetDamage(Weapon2.ChargeAttack), "dégâts avec un tir chargé", {2, 1}))
         end
-        result = result ..
-                     buildCompareString(getValue(Weapon1,
-                                                 {"Charge", "ChargeTime"}),
-                                        getValue(Weapon2,
-                                                 {"Charge", "ChargeTime"}),
-                                        "Temps de charge", {2, 1}, " s",
-                                        {"", ""}, nil,
-                                        {"plus lent", "plus rapide"})
+        table.insert(ret, buildCompareString(getValue(Weapon1, {"Charge", "ChargeTime"}), getValue(Weapon2, {"Charge", "ChargeTime"}), "Temps de charge", {2, 1}, " s", {"", ""}, nil, {"plus lent", "plus rapide"}))
     end
     if (hasAttack(Weapon1, "Area") and hasAttack(Weapon2, "Area")) then
-        result = result ..
-                     buildCompareString(GetDamage(Weapon1.AreaAttack),
-                                        GetDamage(Weapon2.AreaAttack),
-                                        "dégâts de zone", {2, 1})
+        table.insert(ret, buildCompareString(GetDamage(Weapon1.AreaAttack), GetDamage(Weapon2.AreaAttack), "dégâts de zone", {2, 1}))
     end
     if (hasAttack(Weapon1, "Secondary") and hasAttack(Weapon2, "Secondary")) then
-        result = result ..
-                     buildCompareString(GetDamage(Weapon1.SecondaryAttack),
-                                        GetDamage(Weapon2.SecondaryAttack),
-                                        "secondary attack damage", {2, 1})
+        table.insert(ret, buildCompareString(GetDamage(Weapon1.SecondaryAttack), GetDamage(Weapon2.SecondaryAttack), "secondary attack damage", {2, 1}))
         -- test code to fix stradavar wrong comparison
         local Att1 = getAttack(Weapon1, "Secondary")
         local Att2 = getAttack(Weapon2, "Secondary")
         if (Att1.CritChance ~= nil and Att2.CritChance ~= nil) then
-            result = result ..
-                         buildCompareString((Att1.CritChance * 100),
-                                            (Att2.CritChance * 100),
-                                            "[[Chance de Coup Critique]] sur le [[Tir Alternatif]]",
-                                            2, "%")
+            table.insert(ret, buildCompareString((Att1.CritChance * 100), (Att2.CritChance * 100), "[[Chance de Coup Critique]] sur le [[Tir Alternatif]]", 2, "%"))
         end
-        result = result ..
-                     buildCompareString(Att1.CritMultiplier,
-                                        Att2.CritMultiplier,
-                                        "[[Multiplicateur de Critique]] sur le [[Tir Alternatif]]",
-                                        2, "x")
+        table.insert(ret, buildCompareString(Att1.CritMultiplier, Att2.CritMultiplier, "[[Multiplicateur de Critique]] sur le [[Tir Alternatif]]", 2, "x"))
         if (Att1.StatusChance ~= nil and Att2.StatusChance ~= nil) then
-            result = result ..
-                         buildCompareString((Att1.StatusChance * 100),
-                                            (Att2.StatusChance * 100),
-                                            "[[Chance de Statut]] sur le [[Tir Alternatif]]",
-                                            2, "%")
+            table.insert(ret, buildCompareString((Att1.StatusChance * 100), (Att2.StatusChance * 100), "[[Chance de Statut]] sur le [[Tir Alternatif]]", 2, "%"))
         end
-        result = result .. buildCompareString(Att1.FireRate, Att2.FireRate,
-                                              "[[Cadence de Tir]] sur le [[Tir Alternatif]]",
-                                              2, " balle<s>/s")
+        table.insert(ret, buildCompareString(Att1.FireRate, Att2.FireRate, "[[Cadence de Tir]] sur le [[Tir Alternatif]]", 2, " balle<s>/s"))
         -- end of test code
     end
 
     -- test code to fix tiberon prime comparison
 
-    if ((hasAttack(Weapon1, "Normal") and hasAttack(Weapon2, "Secondary") and
-        dontHasAttack(Weapon1, "Secondary")) or
-        (hasAttack(Weapon1, "Secondary") and hasAttack(Weapon2, "Normal") and
-            dontHasAttack(Weapon2, "Secondary"))) then
+    if ((hasAttack(Weapon1, "Normal") and hasAttack(Weapon2, "Secondary") and dontHasAttack(Weapon1, "Secondary")) or
+        (hasAttack(Weapon1, "Secondary") and hasAttack(Weapon2, "Normal") and dontHasAttack(Weapon2, "Secondary"))) then
         local Att1 = getAttack(Weapon1, "Normal")
         local Att2 = getAttack(Weapon2, "Normal")
         if (Att1.CritChance ~= nil and Att2.CritChance ~= nil) then
-            result = result ..
-                         buildCompareString((Att1.CritChance * 100),
-                                            (Att2.CritChance * 100),
-                                            "[[Chance de Coup Critique]]", 2,
-                                            "%")
+            table.insert(ret, buildCompareString((Att1.CritChance * 100),
+                (Att2.CritChance * 100), "[[Chance de Coup Critique]]", 2, "%"))
         end
-        result = result ..
-                     buildCompareString(Att1.CritMultiplier,
-                                        Att2.CritMultiplier,
-                                        "[[Multiplicateur de Critique]]", 2, "x")
+        table.insert(ret, buildCompareString(Att1.CritMultiplier, Att2.CritMultiplier,
+        "[[Multiplicateur de Critique]]", 2, "x"))
 
         if (Att1.StatusChance ~= nil and Att2.StatusChance ~= nil) then
-            result = result ..
-                         buildCompareString((Att1.StatusChance * 100),
-                                            (Att2.StatusChance * 100),
-                                            "[[Chance de Statut]]", 2, "%")
+            table.insert(ret, buildCompareString((Att1.StatusChance * 100),
+                (Att2.StatusChance * 100), "[[Chance de Statut]]", 2, "%"))
         end
     end
 
@@ -2823,173 +2737,124 @@ local function buildGunComparisonString(Weapon1, Weapon2, Conclave)
         local Att1 = getAttack(Weapon1, "Normal")
         local Att2 = getAttack(Weapon2, "Normal")
         if (Att1.CritChance ~= nil and Att2.CritChance ~= nil) then
-            if (dontHasAttack(Weapon1, "Charge") and
-                dontHasAttack(Weapon2, "Charge") and
-                dontHasAttack(Weapon1, "Secondary") and
-                dontHasAttack(Weapon2, "Secondary")) then
-                result = result ..
-                             buildCompareString((Att1.CritChance * 100),
-                                                (Att2.CritChance * 100),
-                                                "[[Chance de Coup Critique]]",
-                                                2, "%")
+            if (dontHasAttack(Weapon1, "Charge") and dontHasAttack(Weapon2, "Charge")
+            and dontHasAttack(Weapon1, "Secondary") and dontHasAttack(Weapon2, "Secondary")) then
+                table.insert(ret, buildCompareString((Att1.CritChance * 100),
+                    (Att2.CritChance * 100), "[[Chance de Coup Critique]]", 2, "%"))
             end
             if (hasAttack(Weapon1, "Charge") and hasAttack(Weapon2, "Charge")) then
-                result = result ..
-                             buildCompareString((Att1.CritChance * 100),
-                                                (Att2.CritChance * 100),
-                                                "base [[Chance de Coup Critique]]",
-                                                2, "%")
+                table.insert(ret, buildCompareString((Att1.CritChance * 100),
+                    (Att2.CritChance * 100), "base [[Chance de Coup Critique]]", 2, "%"))
             end
-            if (hasAttack(Weapon1, "Secondary") and
-                hasAttack(Weapon2, "Secondary")) then
-                result = result ..
-                             buildCompareString((Att1.CritChance * 100),
-                                                (Att2.CritChance * 100),
-                                                "[[Chance de Coup Critique]] sur le tir principal",
-                                                2, "%")
+            if (hasAttack(Weapon1, "Secondary") and hasAttack(Weapon2, "Secondary")) then
+                table.insert(ret, buildCompareString((Att1.CritChance * 100),
+                    (Att2.CritChance * 100), "[[Chance de Coup Critique]] sur le tir principal", 2, "%"))
             end
         end
-        if (dontHasAttack(Weapon1, "Charge") and
-            dontHasAttack(Weapon2, "Charge") and
-            dontHasAttack(Weapon1, "Secondary") and
-            dontHasAttack(Weapon2, "Secondary")) then
-            result = result ..
-                         buildCompareString(Att1.CritMultiplier,
-                                            Att2.CritMultiplier,
-                                            "[[Multiplicateur de Critique]]", 2,
-                                            "x")
+        if (dontHasAttack(Weapon1, "Charge") and dontHasAttack(Weapon2, "Charge")
+        and dontHasAttack(Weapon1, "Secondary") and dontHasAttack(Weapon2, "Secondary")) then
+            table.insert(ret, buildCompareString(Att1.CritMultiplier,
+                Att2.CritMultiplier, "[[Multiplicateur de Critique]]", 2, "x"))
         end
         if (hasAttack(Weapon1, "Charge") and hasAttack(Weapon2, "Charge")) then
-            result = result ..
-                         buildCompareString(Att1.CritMultiplier,
-                                            Att2.CritMultiplier,
-                                            "base [[Multiplicateur de Critique]]",
-                                            2, "x")
+            table.insert(ret, buildCompareString(Att1.CritMultiplier,
+                Att2.CritMultiplier, "base [[Multiplicateur de Critique]]", 2, "x"))
         end
         if (hasAttack(Weapon1, "Secondary") and hasAttack(Weapon2, "Secondary")) then
-            result = result ..
-                         buildCompareString(Att1.CritMultiplier,
-                                            Att2.CritMultiplier,
-                                            "[[Multiplicateur de Critique]] sur le tir principal",
-                                            2, "x")
+            table.insert(ret, buildCompareString(Att1.CritMultiplier,
+                Att2.CritMultiplier, "[[Multiplicateur de Critique]] sur le tir principal", 2, "x"))
         end
         if (Att1.StatusChance ~= nil and Att2.StatusChance ~= nil) then
-            if (dontHasAttack(Weapon1, "Charge") and
-                dontHasAttack(Weapon2, "Charge") and
-                dontHasAttack(Weapon1, "Secondary") and
-                dontHasAttack(Weapon2, "Secondary")) then
-                result = result ..
-                             buildCompareString((Att1.StatusChance * 100),
-                                                (Att2.StatusChance * 100),
-                                                "[[Chance de Statut]]", 2, "%")
+            if (dontHasAttack(Weapon1, "Charge") and dontHasAttack(Weapon2, "Charge")
+            and dontHasAttack(Weapon1, "Secondary") and dontHasAttack(Weapon2, "Secondary")) then
+                table.insert(ret, buildCompareString((Att1.StatusChance * 100),
+                    (Att2.StatusChance * 100), "[[Chance de Statut]]", 2, "%"))
             end
             if (hasAttack(Weapon1, "Charge") and hasAttack(Weapon2, "Charge")) then
-                result = result ..
-                             buildCompareString((Att1.StatusChance * 100),
-                                                (Att2.StatusChance * 100),
-                                                "base [[Chance de Statut]]", 2,
-                                                "%")
+                table.insert(ret, buildCompareString((Att1.StatusChance * 100),
+                    (Att2.StatusChance * 100), "base [[Chance de Statut]]", 2, "%"))
             end
-            if (hasAttack(Weapon1, "Secondary") and
-                hasAttack(Weapon2, "Secondary")) then
-                result = result ..
-                             buildCompareString((Att1.StatusChance * 100),
-                                                (Att2.StatusChance * 100),
-                                                "[[Chance de Statut]] sur le tir principal",
-                                                2, "%")
+            if (hasAttack(Weapon1, "Secondary") and hasAttack(Weapon2, "Secondary")) then
+                table.insert(ret, buildCompareString((Att1.StatusChance * 100),
+                    (Att2.StatusChance * 100), "[[Chance de Statut]] sur le tir principal", 2, "%"))
             end
         end
-        result = result ..
-                     buildCompareString(Att1.FireRate, Att2.FireRate,
-                                        "[[Cadence de Tir]]", 2, " balle<s>/s")
+        table.insert(ret, buildCompareString(Att1.FireRate, Att2.FireRate, "[[Cadence de Tir]]", 2, " balle<s>/s"))
 
         -- Handling Damage Falloff
         if (Att1.Falloff ~= nil and Att2.Falloff == nil) then
-            result = result .. "\n** " .. Att1.Falloff.StartRange .. "m - " ..
-                         Att1.Falloff.EndRange .. "m dégradation dégâts"
+            table.insert(ret, "\n** ")
+            table.insert(ret, Att1.Falloff.StartRange)
+            table.insert(ret, "m - ")
+            table.insert(ret, Att1.Falloff.EndRange)
+            table.insert(ret, "m dégradation dégâts")
             if (Att1.Falloff.Reduction ~= nil) then
-                result = result .. " avec jusqu'à " ..
-                             (Att1.Falloff.Reduction * 100) ..
-                             "% réduction dégâts"
+                table.insert(ret, " avec jusqu'à ")
+                table.insert(ret, Att1.Falloff.Reduction * 100)
+                table.insert(ret, "% réduction dégâts")
             end
         elseif (Att2.Falloff ~= nil and Att1.Falloff == nil) then
-            result =
-                result .. "\n** No " .. Att2.Falloff.StartRange .. "m - " ..
-                    Att2.Falloff.EndRange .. "m damage falloff"
+            table.insert(ret, "\n** No ")
+            table.insert(ret, Att2.Falloff.StartRange)
+            table.insert(ret, "m - ")
+            table.insert(ret, Att2.Falloff.EndRange)
+            table.insert(ret, "m damage falloff")
             if (Att2.Falloff.Reduction ~= nil) then
-                result = result .. " with up to " ..
-                             (Att2.Falloff.Reduction * 100) ..
-                             "% réduction dégâts"
+                table.insert(ret, " with up to ")
+                table.insert(ret, Att2.Falloff.Reduction * 100)
+                table.insert(ret, "% réduction dégâts")
             end
         elseif (Att1.Falloff ~= nil and Att2.Falloff ~= nil) then
-            result = result ..
-                         buildCompareString(Att1.Falloff.StartRange,
-                                            Att2.Falloff.StartRange,
-                                            "range before damage falloff starts",
-                                            2, "m", {"Longer", "Shorter"})
-            result = result ..
-                         buildCompareString(Att1.Falloff.EndRange,
-                                            Att2.Falloff.EndRange,
-                                            "range before damage falloff ends",
-                                            2, "m", {"Longer", "Shorter"})
+            table.insert(ret, buildCompareString(Att1.Falloff.StartRange,
+                Att2.Falloff.StartRange, "porté avant que la dégradation des dégâts ne commence",
+                2, "m", {"Plus grande", "Plus courte"}))
+            table.insert(ret, buildCompareString(Att1.Falloff.EndRange,
+                Att2.Falloff.EndRange, "porté avant que la dégradation des dégâts ne se termine",
+                2, "m", {"Plus grande", "Plus courte"}))
             if (Att1.Falloff.Reduction ~= nil and Att2.Falloff.Reduction ~= nil) then
-                result = result ..
-                             buildCompareString(Att1.Falloff.Reduction * 100,
-                                                Att2.Falloff.Reduction * 100,
-                                                "max damage reduction due to falloff",
-                                                2, "%",
-                                                {"Plus grand", "Plus petit"})
+                table.insert(ret, buildCompareString(Att1.Falloff.Reduction * 100,
+                    Att2.Falloff.Reduction * 100, "max damage reduction due to falloff",
+                    2, "%", {"Plus grand", "Plus petit"}))
             end
         end
     end
 
-    result = result ..
-                 buildCompareString(Weapon1.Magazine, Weapon2.Magazine,
-                                    "chargeur", 0, " balle<s>",
-                                    {"Plus gros", "Plus petit"})
-    result = result ..
-                 buildCompareString(Weapon1.MaxAmmo, Weapon2.MaxAmmo,
-                                    "Réserve de munition", 0, " balle<s>",
-                                    {"", ""}, nil,
-                                    {"plus grande", "plus petite"})
+    table.insert(ret, buildCompareString(Weapon1.Magazine,
+        Weapon2.Magazine, "chargeur", 0, " balle<s>", {"Plus gros", "Plus petit"}))
+    table.insert(ret, buildCompareString(Weapon1.MaxAmmo,
+        Weapon2.MaxAmmo, "Réserve de munition", 0, " balle<s>", {"", ""}, nil, {"plus grande", "plus petite"}))
     -- If this is a weapon that regenerates ammo, flip the comparison
     if (Weapon1.ReloadStyle ~= nil and Weapon1.ReloadStyle == "Regenerate") then
-        result = result ..
-                     buildCompareString(Weapon1.Reload, Weapon2.Reload,
-                                        "[[Rechargement]]", 2, " balle<s>/s",
-                                        {"", ""}, nil,
-                                        {"plus lent", "plus rapide"})
+        table.insert(ret, buildCompareString(Weapon1.Reload,
+            Weapon2.Reload, "[[Rechargement]]", 2, " balle<s>/s", {"", ""}, nil, {"plus lent", "plus rapide"}))
     else
-        result = result ..
-                     buildCompareString(Weapon1.Reload, Weapon2.Reload,
-                                        "[[Rechargement]]", 2, " s", {"", ""},
-                                        nil, {"plus lent", "plus rapide"})
+        table.insert(ret, buildCompareString(Weapon1.Reload,
+            Weapon2.Reload, "[[Rechargement]]", 2, " s", {"", ""}, nil, {"plus lent", "plus rapide"}))
     end
-    result = result ..
-                 buildCompareString(Weapon1.Spool, Weapon2.Spool,
-                                    "Temps de chauffe", 0, " balle<s>",
-                                    {"", ""}, nil, {"plus lent", "plus rapide"})
+    table.insert(ret, buildCompareString(Weapon1.Spool,
+        Weapon2.Spool, "Temps de chauffe", 0, " balle<s>", {"", ""}, nil, {"plus lent", "plus rapide"}))
     local Acc1 = getValue(Weapon1, "Accuracy")
     local Acc2 = getValue(Weapon2, "Accuracy")
     if (type(Acc1) == "number" and type(Acc2) == "number") then
-        result = result ..
-                     buildCompareString(Acc1, Acc2, "[[Précision]]", 0, nil,
-                                        {"Meilleure", "Moins bonne"})
+        table.insert(ret, buildCompareString(Acc1, Acc2, "[[Précision]]", 0, nil, {"Meilleure", "Moins bonne"}))
     end
 
     -- Handling Syndicate radial effects
     if (Weapon1.SyndicateEffect ~= nil and Weapon2.SyndicateEffect == nil) then
-        result = result .. "\n** Innate [[" .. Weapon1.SyndicateEffect ..
-                     "]] effect"
+        table.insert(ret, "\n** Innate [[")
+        table.insert(ret,  Weapon1.SyndicateEffect)
+        table.insert(ret, "]] effect")
     elseif (Weapon2.SyndicateEffect ~= nil and Weapon1.SyndicateEffect == nil) then
-        result = result .. "\n** Lack of an innate [[" ..
-                     Weapon2.SyndicateEffect .. "]] effect"
+        table.insert(ret, "\n** Lack of an innate [[")
+        table.insert(ret, Weapon2.SyndicateEffect)
+        table.insert(ret, "]] effect")
     elseif (Weapon1.SyndicateEffect ~= nil and Weapon2.SyndicateEffect ~= nil and
         Weapon1.SyndicateEffect ~= Weapon2.SyndicateEffect2) then
-        result = result ..
-                     "\n** Different innate [[Syndicate Radial Effects|Syndicate Effect]]: [[" ..
-                     Weapon1.SyndicateEffect .. "]] vs. [[" ..
-                     Weapon2.SyndicateEffect .. "]]"
+            table.insert(ret, "\n** Different innate [[Syndicate Radial Effects|Syndicate Effect]]: [[")
+            table.insert(ret, Weapon1.SyndicateEffect)
+            table.insert(ret, "]] vs. [[")
+            table.insert(ret, Weapon2.SyndicateEffect)
+            table.insert(ret, "]]")
     end
 
     -- Handling Polarities
@@ -3007,19 +2872,19 @@ local function buildGunComparisonString(Weapon1, Weapon2, Conclave)
     end
 
     if (isDifferent) then
-        result = result .. "\n** Différentes polarités (" ..
-                     p.GetPolarityString(Weapon1) .. " vs. " ..
-                     p.GetPolarityString(Weapon2) .. ")"
+        table.insert(ret, "\n** Différentes polarités (")
+        table.insert(ret, p.GetPolarityString(Weapon1))
+        table.insert(ret, " vs. ")
+        table.insert(ret, p.GetPolarityString(Weapon2))
+        table.insert(ret, ")")
     end
 
-    result = result .. buildCompareString(Weapon1.Mastery, Weapon2.Mastery,
-                                          "[[Rang de Maîtrise]] requis", 0,
-                                          nil, {"", ""}, nil,
-                                          {"supérieur", "inférieur"})
-    result = result ..
-                 buildCompareString(Weapon1.Disposition, Weapon2.Disposition,
-                                    "[[Mod_Riven#Disposition|disposition]]", 2)
-    return result
+    table.insert(ret, buildCompareString(Weapon1.Mastery, Weapon2.Mastery,
+        "[[Rang de Maîtrise]] requis", 0, nil, {"", ""}, nil, {"supérieur", "inférieur"}))
+    table.insert(ret, buildCompareString(Weapon1.Disposition, Weapon2.Disposition,
+        "[[Mod_Riven#Disposition|Disposition]]", 2, nil, {"", ""}, nil, {"plus élevée", "plus faible"}))
+    
+    return table.concat(ret)
 end
 
 local function buildMeleeComparisonString(Weapon1, Weapon2, Conclave)
