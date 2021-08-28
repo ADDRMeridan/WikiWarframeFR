@@ -6,9 +6,9 @@
 --	@module		baro
 --	@alias		p
 --  @author     [[User:ADDRMeridan|ADDRMeridan]]
---	@attribution    [[User:Cephalon Scientia|Cephalon Scientia]]
---	@attribution	[[User:Anexera|Anexera]]
---	@attribution	[[User:FINNER|FINNER]]
+--	@attribution    [[User:Cephalon Scientia|Cephalon Scientia]] (EN)
+--	@attribution	[[User:Anexera|Anexera]] (EN)
+--	@attribution	[[User:FINNER|FINNER]] (EN)
 --	@image		PrismaSigil.png
 --  @require    [[Module:Shared]]
 --	@release	beta
@@ -76,9 +76,9 @@ local function buildGallery(currentOfferings, wikiClientPlateform)
                 table.insert(itemLine, string.format('{{Dc|%s}} + {{Cc|%s}}', SHARED.formatnum(baroItem.DucatCost),
                     SHARED.formatnum(baroItem.CreditCost)))
             elseif (hasDc) then
-                table.insert(itemLine, string.format('{{Dc|%s}}'), SHARED.formatnum(baroItem.DucatCost))
+                table.insert(itemLine, string.format('{{Dc|%s}}', SHARED.formatnum(baroItem.DucatCost)))
             elseif (hasCc) then
-                table.insert(itemLine, string.format('{{Cc|%s}}'), SHARED.formatnum(baroItem.CreditCost))
+                table.insert(itemLine, string.format('{{Cc|%s}}', SHARED.formatnum(baroItem.CreditCost)))
             else
                 table.insert(itemLine, 'Prix Inconnu')
             end
