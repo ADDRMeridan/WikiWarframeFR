@@ -14,6 +14,10 @@ local IconData = {
             icon = "Adaptateur Exilus pour Arme.png",
             link = "Adaptateur Exilus pour Arme"
         },
+        ["Adaptateur Exilus Pour Arme"] = {
+            icon = "Adaptateur Exilus pour Arme.png",
+            link = "Adaptateur Exilus pour Arme"
+        },
         ["Adaptateur d'Arcane Principal"] = {
             icon = "Adaptateur d'Arcane Principal.png",
             link = "Adaptateur d'Arcane Principal"
@@ -22,19 +26,9 @@ local IconData = {
             icon = "Adaptateur d'Arcane Secondaire.png",
             link = "Adaptateur d'Arcane Secondaire"
         },
-
-        -- requis pour tooltip Relique
-        ["Affinity"] = {
-            icon = "Orb_affinite.png",
-            link = "Ramassables#Orbes"
-        },
         ["Affinité"] = {
             icon = "Orb_affinite.png",
             link = "Ramassables#Orbes"
-        },
-        ["Agilité Arcane"] = {
-            icon = "Arcane_Agility_160.png",
-            link = "Agilité Arcane"
         },
         ["Ailes Archwing"] = {
             icon = "AilesArchwing.png",
@@ -48,10 +42,6 @@ local IconData = {
             icon = "Arcane_Nullifier_160.png",
             link = "Arcane Nullifier"
         },
-        ["Attaque Arcane"] = {
-            icon = "Arcane_Strike_160.png",
-            link = "Attaque Arcane"
-        },
         ["Avioniques"] = {
             icon = "GenericLandingCraftSystems.png",
             link = "Vaisseau"
@@ -61,13 +51,20 @@ local IconData = {
             icon = "AnimoNavBeacon.png",
             link = "Balise de Navigation Animo"
         },
-        ["Barrière Arcane"] = {
-            icon = "Arcane_Barrière_160.png",
-            link = "Barrière Arcane"
-        },
         ["Booster d'Affinité"] = {
             icon = "BoosterAffinité.png",
             link = "Booster d'Affinité"
+        },
+        ["Botte Prime"] = {
+            icon = "GenericWeaponPrimeGuard.png",
+            Name = "Botte"
+        },
+        ["Bottes Prime"] = {
+            icon = "GenericWeaponPrimeGuard.png",
+        },
+        ["Boucle Prime"] = {
+            icon = "Icon_genericPrimePlug.png",
+            Name = "Boucle"
         },
         ["Boîte de Munition Omni"] = {
             icon = "Ammo Box.png",
@@ -77,8 +74,16 @@ local IconData = {
         ["Canon"] = {
             icon = "Canon.png"
         },
+        ["Canon Prime"] = {
+            icon = "Canon Prime.png",
+            Name = "Canon"
+        },
         ["Carapace"] = {
             icon = "Chassis.png"
+        },
+        ["Carapace Prime"] = {
+            icon = "Châssis Prime.png",
+            Name = "Carapace"
         },
         ["Catalyseur Orokin"] = {
             icon = "OrokinCatalyst64.png",
@@ -91,9 +96,13 @@ local IconData = {
         ["Cerveau"] = {
             icon = "Helmet.png"
         },
-        ["Chaleur Arcane"] = {
-            icon = "Arcane_Warmth_160.png",
-            link = "Chaleur Arcane"
+        ["Cerveau Prime"] = {
+            icon = "Neuroptiques Prime.png",
+            Name = "Cerveau"
+        },
+        ["Chaîne Prime"] = {
+            icon = "Crosse Prime.png",
+            Name = "Chaîne"
         },
         ["Châssis"] = {
             icon = "Chassis.png",
@@ -114,6 +123,14 @@ local IconData = {
             icon = "FusionCorePackSilversingle.png",
             link = "Coeur de Fusion"
         },
+        ["Collier Kavasa Prime"] = {
+            icon = "KubrowCollarPrimeA.png",
+            link = "Collier Kavasa Prime",
+        },
+        ["Corde Prime"] = {
+            icon = "Crosse Prime.png",
+            Name = "Corde"
+        },
         ["Cortège Canon"] = {
             icon = "Cortège Canon.png",
             link = ""
@@ -133,11 +150,18 @@ local IconData = {
         ["Crosse"] = {
             icon = "Crosse.png"
         },
+        ["Crosse Prime"] = {
+            icon = "Crosse Prime.png",
+            Name = "Crosse"
+        },
         ["Culasse"] = {
             icon = "Culasse.png"
         },
+        ["Culasse Prime"] = {
+            icon = "Culasse Prime.png",
+            Name = "Culasse"
+        },
         -- D
-
         ["Décoration Couronne Granum"] = {
             icon = "Couronne Granum.png",
             link = "Orbiteur"
@@ -153,6 +177,10 @@ local IconData = {
         ["Déviation Arcane"] = {
             icon = "Arcane_Deflection_160.png",
             link = "Déviation Arcane"
+        },
+        ["Disque Prime"] = {
+            icon = "LamePrime.png",
+            Name = "Disque"
         },
         ["Ducats"] = {
             icon = "PrimeBucks.png",
@@ -175,10 +203,6 @@ local IconData = {
             icon = "OrbeEndurance.png",
             link = "Endurance"
         },
-        ["Éruption Arcane"] = {
-            icon = "Arcane_Eruption_160.png",
-            link = "Éruption Arcane"
-        },
         ["Étoile Ayatan Ambre"] = {
             icon = "OroFusexOrnamentB.png",
             link = "Sculpture Ayatan#Étoiles"
@@ -187,6 +211,14 @@ local IconData = {
             icon = "OroFusexOrnamentA.png",
             link = "Sculpture Ayatan#Étoiles"
         },
+        ["Étoile Prime"] = {
+            icon = "LamePrime.png",
+            Name = "Étoiles"
+        },
+        ["Étoiles Prime"] = {
+            icon = "LamePrime.png",
+            Name = "Étoiles"
+        },
         ["Épaulières Mortuus"] = {
             icon = "Épaulières Mortuus.png",
             link = "Cosmétiques de Warframe"
@@ -194,10 +226,6 @@ local IconData = {
         ["Essence d'Acier"] = {
             icon = "Essence d'Acier.png",
             link = "Essence d'Acier"
-        },
-        ["Eveil Arcane"] = {
-            icon = "Arcane_Awakening_160.png",
-            link = "Eveil Arcane"
         },
         -- F
         ["Fantasme Arcane"] = {
@@ -240,20 +268,16 @@ local IconData = {
         ["Gantelet"] = {
             icon = "Lame.png"
         },
+        ["Gantelet Prime"] = {
+            icon = "icon_poigneePrime.png",
+            Name = "Gantelet"
+        },
         ["Garde"] = {
             icon = "Lame.png"
         },
-        ["Gardien Arcane"] = {
-            icon = "Arcane_Guardian_160.png",
-            link = "Gardien Arcane"
-        },
-        ["Glace Arcane"] = {
-            icon = "Arcane_Ice_160.png",
-            link = "Glace Arcane"
-        },
-        ["Grâce Arcane"] = {
-            icon = "Arcane_Grâce_160.png",
-            link = "Grâce Arcane"
+        ["Garde Prime"] = {
+            icon = "GenericWeaponPrimeGuard.png",
+            Name = "Garde"
         },
         ["Gravimag"] = {
             icon = "Gravimag.png",
@@ -313,7 +337,29 @@ local IconData = {
         },
         -- K
         -- L
+        ["Lame"] = {
+            icon = "Lame.png"
+        },
+        ["Lame Prime"] = {
+            icon = "LamePrime.png",
+            Name = "Lame"
+        },
+        ["Lames Prime"] = { --Cas spécifique des griffes
+            icon = "LamePrime.png",
+            Name = "Lames"
+        },
+        ["Lanière Prime"] = {
+            icon = "GenericComponentPrimeLatch.png"
+        },
+        ["Lien Prime"] = {
+            icon = "Icon_genericPrimePlug.png",
+            Name = "Lien"
+        },
         -- M
+        ["Manche Prime"] = {
+            icon = "icon_poigneePrime.png",
+            Name = "Manche"
+        },
         ["Marché"] = {
             icon = "MarketIcon2.png",
             link = "Marché"
@@ -348,6 +394,10 @@ local IconData = {
             link = "Volt"
         },
         -- O
+        ["Odonata Prime"] = {
+            icon = "OdonataPrime.png",
+            link = "Odonata#Prime"
+        },
         ["Orbe d'Énergie"] = {
             icon = "Orbe_d'énergie.png",
             link = "Orbes#Énergie"
@@ -368,10 +418,22 @@ local IconData = {
             icon = "Orb_affinite.png",
             link = "Ramassables#Orbes"
         },
+        ["Ornement Prime"] = {
+            icon = "Icon_genericPrimePlug.png",
+            Name = "Ornement"
+        },
         -- P
         ["Partie"] = {
             icon = "Weapon Part 32px.png",
             link = "Armes"
+        },
+        ["Partie Inférieure Prime"] = {
+            icon = "LamePrime.png",
+            Name = "Partie Inférieure"
+        },
+        ["Partie Supérieure Prime"] = {
+            icon = "LamePrime.png",
+            Name = "Partie Supérieure"
         },
         ["Platinum"] = {
             icon = "Platinum64.png",
@@ -381,20 +443,20 @@ local IconData = {
             icon = "Platinum64.png",
             link = "Platine"
         },
+        ["Pochette Prime"] = {
+            icon = "Pochette_Prime.png",
+            Name = "Pochette"
+        },
+        ["Poignée Prime"] = {
+            icon = "icon_poigneePrime.png",
+            Name = "Poignée"
+        },
         ["Posture"] = {
             icon = "PostureModIcon.png",
             link = "Posture"
         },
-        ["Pulsation Arcane"] = {
-            icon = "Arcane_Pulse_160.png",
-            link = "Pulsation Arcane"
-        },
         -- Q
         -- R
-        ["Rage Arcane"] = {
-            icon = "Arcane_Rage_160.png",
-            link = "Rage Arcane"
-        },
         ["Relique Axi"] = {
             icon = "VoidProjectionsGoldD.png",
             link = "Reliques du Néant"
@@ -418,10 +480,6 @@ local IconData = {
         ["Réputation"] = {
             icon = "ReputationBlancx64.png",
             link = "Influence"
-        },
-        ["Résistance Arcane"] = {
-            icon = "Arcane_Resistance_160.png",
-            link = "Résistance Arcane"
         },
         ["Restauration de Munitions d'Équipe"] = {
             icon = "Warframe_-_Team_Ammo_Restore_Picture.png",
@@ -448,6 +506,24 @@ local IconData = {
             icon = "Blueprint2.png",
             link = "Schéma"
         },
+        ["Schéma Ailes Prime"] = {
+            icon = "AilesArchwing.png",
+        },
+        ["Schéma Châssis Prime"] = {
+            icon = "Châssis Prime.png",
+            Name = "Schéma Châssis"
+        },
+        ["Schéma Harnais Prime"] = {
+            icon = "HarnaisArchwing.png",
+        },
+        ["Schéma Neuroptiques Prime"] = {
+            icon = "Neuroptiques Prime.png",
+            Name = "Schéma Neuroptiques"
+        },
+        ["Schéma Systèmes Prime"] = {
+            icon = "Systèmes Prime.png",
+            Name = "Schéma Systèmes"
+        },
         ["Schémas"] = {
             icon = "Blueprint_Orb.png",
             link = "Schémas"
@@ -460,18 +536,22 @@ local IconData = {
             icon = "SystemesArchwing.png",
             link = "Schéma Systèmes Archwing"
         },
+        ["Systèmes Prime"] = {
+            icon = "Systèmes Prime.png",
+            Name = "Systèmes"
+        },
         ["Systèmes Saryn"] = {
             icon = "Systems.png",
             link = "Saryn"
         },
         -- T
+        ["Tête Prime"] = {
+            icon = "LamePrime.png",
+            Name = "Tête"
+        },
         ["Théorème de Contagion"] = {
             icon = "Théorème de Contagion.png",
             link = "Théorème de Contagion"
-        },
-        ["Tromperie Arcane"] = {
-            icon = "Arcane_Trickery_160.png",
-            link = "Tromperie Arcane"
         },
         -- U
         -- V
@@ -508,9 +588,7 @@ local IconData = {
         ["Gantelet Droit"] = {
             icon = "Lame.png"
         },
-        ["Lame"] = {
-            icon = "Lame.png"
-        },
+        
         ["Manche"] = {
             icon = "Poignée.png"
         },
@@ -1091,593 +1169,11 @@ local IconData = {
         }
     },
 
-    -- Armes et Warframes Prime
-    ["Primes"] = {
-
-        -- Warframes Prime
-        ["Ash"] = {
-            icon = "Ash_Prime_Icon.png",
-            link = "Ash/Prime"
-        },
-        ["Atlas"] = {
-            icon = "Atlas Prime.png",
-            link = "Atlas/Prime"
-        },
-        ["Banshee"] = {
-            icon = "BansheePrime.png",
-            link = "Banshee/Prime"
-        },
-        ["Chroma"] = {
-            icon = "ChromaPrime.png",
-            link = "Chroma/Prime"
-        },
-        ["Ember"] = {
-            icon = "Ember_Prime_Icon.png",
-            link = "Ember/Prime"
-        },
-        ["Equinox"] = {
-            icon = "EquinoxPrimeIcon.png",
-            link = "Equinox/Prime"
-        },
-        ["Frost"] = {
-            icon = "FrostPrimecropped.png",
-            link = "Frost/Prime"
-        },
-        ["Gara"] = {
-            icon = "Gara Prime.png",
-            link = "Gara/Prime"
-        },
-        ["Hydroid"] = {
-            icon = "Hydroid_Prime_Icon.png",
-            link = "Hydroid/Prime"
-        },
-        ["Inaros"] = {
-            icon = " Inaros PrimeIcon272.png",
-            link = "Inaros/Prime"
-        },
-        ["Ivara"] = {
-            icon = " Ivara PrimeIcon272.png",
-            link = "Ivara/Prime"
-        },
-        ["Limbo"] = {
-            icon = "LimboPrime.png",
-            link = "Limbo/Prime"
-        },
-        ["Loki"] = {
-            icon = "LokiPrime.png",
-            link = "Loki/Prime"
-        },
-        ["Mag"] = {
-            icon = "MagPrimecropped.png",
-            link = "Mag/Prime"
-        },
-        ["Mesa"] = {
-            icon = "MesaPrime.png",
-            link = "Mesa/Prime"
-        },
-        ["Mirage"] = {
-            icon = "MiragePrime-0.png",
-            link = "Mirage/Prime"
-        },
-        ["Nekros"] = {
-            icon = "NekrosPrime.png",
-            link = "Nekros/Prime"
-        },
-        ["Nezha"] = {
-            icon = "Nezha Prime.png",
-            link = "Nezha/Prime"
-        },
-        ["Nova"] = {
-            icon = "NovaPrime.png",
-            link = "Nova/Prime"
-        },
-        ["Nyx"] = {
-            icon = "NyxPrime.png",
-            link = "Nyx/Prime"
-        },
-        ["Oberon"] = {
-            icon = "Oberon_Prime_Icon.png",
-            link = "Oberon/Prime"
-        },
-        ["Rhino"] = {
-            icon = "DERhinoPrime.png",
-            link = "Rhino/Prime"
-        },
-        ["Saryn"] = {
-            icon = "SarynPrime.png",
-            link = "Saryn (Prime) Tab"
-        },
-        ["Titania"] = {
-            icon = "Titania Prime.png",
-            link = "Titania/Prime"
-        },
-        ["Trinity"] = {
-            icon = "Trinity_Prime_Icon.png",
-            link = "Trinity/Prime"
-        },
-        ["Valkyr"] = {
-            icon = "ValkyrPrimeProfilePicture.png",
-            link = "Valkyr/Prime"
-        },
-        ["Vauban"] = {
-            icon = "Vauban_Prime_Icon.png",
-            link = "Vauban/Prime"
-        },
-        ["Volt"] = {
-            icon = "VoltPrime2.png",
-            link = "Volt (Prime) Tab"
-        },
-        ["Wukong"] = {
-            icon = "Wukong Prime.png",
-            link = "Wukong/Prime"
-        },
-        ["Zephyr"] = {
-            icon = "ZephyrPrimeIcon.png",
-            link = "Zephyr/Prime"
-        },
-
-        -- Archwing Prime
-        ["Odonata Prime"] = {
-            icon = "OdonataPrime.png",
-            link = "Odonata/Prime"
-        },
-
-        -- Sentinelles Prime
-        ["Carrier"] = {
-            icon = "PrimeCarrier.png",
-            link = "Carrier Prime"
-        },
-        ["Dethcube"] = {
-            icon = "Dethcube Prime.png",
-            link = "Dethcube/Prime"
-        },
-        ["Déconstructeur"] = {
-            icon = "DéconstructeurPrime.png",
-            link = "Déconstructeur Prime"
-        },
-        ["Fusil Laser"] = {
-            icon = "FusilLaserPrime.png",
-            link = "Fusil Laser Prime"
-        },
-        ["Helios"] = {
-            icon = "HeliosPrime.png",
-            link = "Helios Prime"
-        },
-        ["Fusil Machine de Mort Prime"] = {
-            icon = "FusilMachinedeMortPrime.png",
-            link = "Fusil Machine de Mort Prime"
-        },
-        ["Sweeper"] = {
-            icon = "SweeperPrime.png",
-            link = "Sweeper Prime"
-        },
-        ["Wyrm"] = {
-            icon = "WyrmPrime.png",
-            link = "Wyrm Prime"
-        },
-
-        -- Armes Prime
-        ["Akbronco"] = {
-            icon = "DEPrimeDualBroncos.png",
-            link = "Akbronco Prime"
-        },
-        ["Akbolto"] = {
-            icon = "PrimeAkbolto.png",
-            link = "Akbolto Prime"
-        },
-        ["Akjagara"] = {
-            icon = "AkjagaraPrime.png",
-            link = "Akjagara Prime"
-        },
-        ["Aklex"] = {
-            icon = "Aklex_Prime.png",
-            link = "Aklex Prime"
-        },
-        ["Aksomati"] = {
-            icon = "Aksomati Prime.png",
-            link = "Aksomati Prime"
-        },
-        ["Akstiletto"] = {
-            icon = "AkstilettoPrime.png",
-            link = "Akstiletto Prime"
-        },
-        ["Akvasto"] = {
-            icon = "AkvastoPrime.png",
-            link = "Akvasto Prime"
-        },
-        ["Ankyros"] = {
-            icon = "DEPrimeAnkyros.png",
-            link = "Ankyros Prime"
-        },
-        ["Astilla"] = {
-            icon = "AstillaPrime.png",
-            link = "Astilla Prime"
-        },
-        ["Baza"] = {
-            icon = "Baza Prime.png",
-            link = "Baza Prime"
-        },
-        ["Bo"] = {
-            icon = "PrimeBo.png",
-            link = "Bo Prime"
-        },
-        ["Boar"] = {
-            icon = "Boar Prime.png",
-            link = "Boar Prime"
-        },
-        ["Boltor"] = {
-            icon = "DEPrimeBoltor.png",
-            link = "Boltor Prime"
-        },
-        ["Ballistica"] = {
-            icon = "BallisticaPrime.png",
-            link = "Ballistica Prime"
-        },
-        ["Braton"] = {
-            icon = "PrimeBraton.png",
-            link = "Braton Prime"
-        },
-        ["Bronco"] = {
-            icon = "BroncoPrime.png",
-            link = "Bronco Prime"
-        },
-        ["Burston"] = {
-            icon = "PrimeBurston.png",
-            link = "Burston Prime"
-        },
-        ["Collier Kavasa Prime"] = {
-            icon = "KubrowCollarPrimeA.png",
-            link = "Collier Kavasa Prime"
-        },
-        ["Cernos"] = {
-            icon = "Cernos_Prime.png",
-            link = "Cernos Prime"
-        },
-        ["Corinth"] = {
-            icon = "Corinth Prime.png",
-            link = "Corinth Prime"
-        },
-        ["Dakra"] = {
-            icon = "SwordPrime.png",
-            link = "Dakra Prime"
-        },
-        ["Destreza"] = {
-            icon = "DestrezaPrime.png",
-            link = "Destreza Prime"
-        },
-        ["Doubles Kamas"] = {
-            icon = "DoublesKamasPrime.png",
-            link = "Doubles Kamas Prime"
-        },
-        ["Euphona"] = {
-            icon = "Euphona_Prime.png",
-            link = "Euphona Prime"
-        },
-        ["Fang"] = {
-            icon = "Fang_Prime.png",
-            link = "Fang Prime"
-        },
-        ["Fragor"] = {
-            icon = "FragorPrime.png",
-            link = "Fragor Prime"
-        },
-        ["Galatine"] = {
-            icon = "PrimeGalatine342.png",
-            link = "Galatine Prime"
-        },
-        ["Glaive"] = {
-            icon = "PrimeGlaive.png",
-            link = "Glaive Prime"
-        },
-        ["Guandao"] = {
-            icon = "Guandao Prime.png",
-            link = "Guandao Prime"
-        },
-        ["Gram"] = {
-            icon = "Arme gramPrime.png",
-            link = "Gram Prime"
-        },
-        ["Hikou"] = {
-            icon = "PrimeHikou.png",
-            link = "Hikou Prime"
-        },
-        ["Karyst"] = {
-            icon = "Karyst Prime.png",
-            link = "Karyst Prime"
-        },
-        ["Kavasa"] = {
-            icon = "KubrowCollarPrimeA.png",
-            link = "Collier Kavasa Prime"
-        },
-        ["Kogake"] = {
-            icon = "MirageKogakePrime.png",
-            link = "Kogake Prime"
-        },
-        ["Kronen"] = {
-            icon = "KronenPrime.png",
-            link = "Kronen Prime"
-        },
-        ["Latron"] = {
-            icon = "Latron_Prime_32px.png",
-            link = "Latron Prime"
-        },
-        ["Lex"] = {
-            icon = "PrimeLex.png",
-            link = "Lex Prime"
-        },
-        ["Nami Skyla"] = {
-            icon = "PrimeNamiSkyla.png",
-            link = "Nami Skyla Prime"
-        },
-        ["Nikana"] = {
-            icon = "NikanaPrime.png",
-            link = "Nikana Prime"
-        },
-        ["Ninkondi"] = {
-            icon = "Ninkondi Prime.png",
-            link = "Ninkondi Prime"
-        },
-        ["Orthos"] = {
-            icon = "Orthos_Prime.png",
-            link = "Orthos Prime"
-        },
-        ["Pangolin"] = {
-            icon = "Pangolin Prime.png",
-            link = "Pangolin Prime"
-        },
-        ["Panthera"] = {
-            icon = "Panthera Prime.png",
-            link = "Panthera Prime"
-        },
-        ["Paris"] = {
-            icon = "ParisPrime.png",
-            link = "Paris Prime"
-        },
-        ["Pyrana"] = {
-            icon = "PyranaPrime.png",
-            link = "Pyrana Prime"
-        },
-        ["Reaper"] = {
-            icon = "Reaper_Prime.png",
-            link = "Reaper Prime"
-        },
-        ["Redeemer"] = {
-            icon = "RedeemerPrime.png",
-            link = "Redeemer Prime"
-        },
-        ["Rubico"] = {
-            icon = "RubicoPrime.png",
-            link = "Rubico Prime"
-        },
-        ["Scindo"] = {
-            icon = "PrimeScindo.png",
-            link = "Scindo Prime"
-        },
-        ["Sicarus"] = {
-            icon = "PrimeSicarus.png",
-            link = "Sicarus Prime"
-        },
-        ["Silva & Aegis"] = {
-            icon = "SilvaAegisPrime.png",
-            link = "Silva & Aegis Prime"
-        },
-        ["Soma"] = {
-            icon = "SomaPrime.png",
-            link = "Soma Prime"
-        },
-        ["Spira"] = {
-            icon = "SpiraPrime.png",
-            link = "Spira Prime"
-        },
-        ["Stradavar"] = {
-            icon = "Stradavar_Prime.png",
-            link = "Stradavar Prime"
-        },
-        ["Sybaris"] = {
-            icon = "Sybaris_Prime.png",
-            link = "Sybaris Prime"
-        },
-        ["Tenora"] = {
-            icon = "Tenora Prime.png",
-            link = "Tenora Prime"
-        },
-        ["Tiberon"] = {
-            icon = "TiberonPrime.png",
-            link = "Tiberon Prime"
-        },
-        ["Tigris"] = {
-            icon = "PrimeTigris342.png",
-            link = "Tigris Prime"
-        },
-        ["Tipedo"] = {
-            icon = "Tipedo_Prime.png",
-            link = "Tipedo Prime"
-        },
-        ["Tekko"] = {
-            icon = "Tekko Prime.png",
-            link = "Tekko Prime"
-        },
-        ["Vasto"] = {
-            icon = "PrimeVasto.png",
-            link = "Vasto Prime"
-        },
-        ["Vectis"] = {
-            icon = "VectisPrime.png",
-            link = "Vectis Prime"
-        },
-        ["Venka"] = {
-            icon = "Venka_Prime.png",
-            link = "Venka Prime"
-        },
-        ["Volnus"] = {
-            icon = "VolnusPrime.png",
-            link = "Volnus Prime"
-        },
-        ["Zakti"] = {
-            icon = "Zakti Prime.png",
-            link = "Zakti Prime"
-        },
-        ["Zhuge"] = {
-            icon = "Zhuge Prime.png",
-            link = "Zhuge Prime"
-        },
-
-        -- Composants Primes
-        ["Botte Prime"] = {
-            icon = "GenericWeaponPrimeGuard.png",
-            link = ""
-        },
-        ["Canon Prime"] = {
-            icon = "Canon Prime.png",
-            link = ""
-        },
-        ["Carapace Sentinelle Prime"] = {
-            icon = "Chassis.png",
-            link = ""
-        },
-        ["Cerveau Sentinelle Prime"] = {
-            icon = "Helmet.png",
-            link = ""
-        },
-        ["Chaîne Prime"] = {
-            icon = "Crosse Prime.png",
-            link = ""
-        },
-        ["Châssis Prime"] = {
-            icon = "Châssis Prime.png",
-            link = "Châssis"
-        },
-        ["Corde Prime"] = {
-            icon = "Crosse Prime.png",
-            link = ""
-        },
-        ["Crosse Prime"] = {
-            icon = "Crosse Prime.png",
-            link = ""
-        },
-        ["Culasse Prime"] = {
-            icon = "Culasse Prime.png",
-            link = ""
-        },
-        ["Disque Prime"] = {
-            icon = "LamePrime.png",
-            link = ""
-        },
-        ["Etoiles Prime"] = {
-            icon = "LamePrime.png",
-            link = ""
-        },
-        ["Gantelet Prime"] = {
-            icon = "icon_poigneePrime.png",
-            link = ""
-        },
-        ["Garde Prime"] = {
-            icon = "GenericWeaponPrimeGuard.png",
-            link = ""
-        },
-        ["Lame Prime"] = {
-            icon = "LamePrime.png",
-            link = ""
-        },
-        ["Lames Prime"] = {
-            icon = "LamePrime.png",
-            link = ""
-        },
-        ["Lien Prime"] = {
-            icon = "Icon_genericPrimePlug.png",
-            link = ""
-        },
-        ["Manche Prime"] = {
-            icon = "icon_poigneePrime.png",
-            link = ""
-        },
-        ["Neuroptiques Prime"] = {
-            icon = "Neuroptiques Prime.png",
-            link = "Neuroptiques"
-        },
-        ["Ornement Prime"] = {
-            icon = "Icon_genericPrimePlug.png",
-            link = ""
-        },
-        ["Poignée Prime"] = {
-            icon = "icon_poigneePrime.png",
-            link = ""
-        },
-        ["Partie Inférieure Prime"] = {
-            icon = "LamePrime.png",
-            link = ""
-        },
-        ["Partie Supérieure Prime"] = {
-            icon = "LamePrime.png",
-            link = ""
-        },
-        ["Pochette Prime"] = {
-            icon = "Pochette_Prime.png",
-            link = ""
-        },
-        ["Schéma Ailes Archwing Prime"] = {
-            icon = "AilesArchwing.png",
-            link = ""
-        },
-        ["Schéma Châssis Prime"] = {
-            icon = "Châssis Prime.png",
-            link = ""
-        },
-        ["Schéma Harnais Archwing Prime"] = {
-            icon = "HarnaisArchwing.png",
-            link = ""
-        },
-        ["Schéma Neuroptiques Prime"] = {
-            icon = "Neuroptiques Prime.png",
-            link = ""
-        },
-        ["Schéma Systèmes Archwing Prime"] = {
-            icon = "SystemesArchwing.png",
-            link = ""
-        },
-        ["Schéma Systèmes Prime"] = {
-            icon = "Systèmes Prime.png",
-            link = ""
-        },
-        ["Systèmes Prime"] = {
-            icon = "Systèmes Prime.png",
-            link = "Systèmes"
-        },
-        ["Systèmes Sentinelle Prime"] = {
-            icon = "systems.png",
-            link = ""
-        },
-        ["Tête Prime"] = {
-            icon = "LamePrime.png",
-            link = ""
-        },
-
-        -- Autres
-        ["Forma"] = {
-            icon = "Forma.png",
-            link = "Forma"
-        },
-        ["Forma Aura"] = {
-            icon = "Forma_Aura.png",
-            link = "Forma Aura"
-        },
-        ["Forma Posture"] = {
-            icon = "Forma Posture.png",
-            link = "Forma Posture"
-        },
-        ["Forma Umbra"] = {
-            icon = "Forma_Umbra.png",
-            link = "Forma Umbra"
-        }
-
-    },
-
     ["Ressources"] = {
         -- A
         -- B
         ["Botte"] = {
             icon = "GenericWeaponPrimeGuard.png",
-            link = "Botte"
         },
         -- C
         ["Capteurs Neuronaux"] = {
@@ -3411,117 +2907,6 @@ local IconData = {
 
     },
 
-    ["Void"] = {
-        ["BOTTE"] = {
-            Icon = "GenericWeaponPrimeGuard.png",
-            Name = "Botte"
-        },
-        ["CANON"] = {
-            Icon = "Canon Prime.png",
-            Name = "Canon"
-        },
-        ["CARAPACE"] = {
-            Icon = "Châssis Prime.png",
-            Name = "Carapace"
-        },
-        ["CERVEAU"] = {
-            Icon = "Neuroptiques Prime.png",
-            Name = "Cerveau"
-        },
-        ["CHAINE"] = {
-            Icon = "Crosse Prime.png",
-            Name = "Chaîne"
-        },
-        ["CORDE"] = {
-            Icon = "Crosse Prime.png",
-            Name = "Corde"
-        },
-        ["CROSSE"] = {
-            Icon = "Crosse Prime.png",
-            Name = "Crosse"
-        },
-        ["CULASSE"] = {
-            Icon = "Culasse Prime.png",
-            Name = "Culasse"
-        },
-        ["DISQUE"] = {
-            Icon = "LamePrime.png",
-            Name = "Disque"
-        },
-        ["ETOILES"] = {
-            Icon = "LamePrime.png",
-            Name = "Étoiles"
-        },
-        ["GANTELET"] = {
-            Icon = "icon_poigneePrime.png",
-            Name = "Gantelet"
-        },
-        ["GARDE"] = {
-            Icon = "GenericWeaponPrimeGuard.png",
-            Name = "Garde"
-        },
-        ["LAME"] = {
-            Icon = "LamePrime.png",
-            Name = "Lame"
-        },
-        ["LAMES"] = {
-            Icon = "LamePrime.png",
-            Name = "Lames"
-        },
-        ["LIEN"] = {
-            Icon = "Icon_genericPrimePlug.png",
-            Name = "Lien"
-        },
-        ["MANCHE"] = {
-            Icon = "icon_poigneePrime.png",
-            Name = "Manche"
-        },
-        ["ORNEMENT"] = {
-            Icon = "Icon_genericPrimePlug.png",
-            Name = "Ornement"
-        },
-        ["PARTIE INFERIEURE"] = {
-            Icon = "LamePrime.png",
-            Name = "Partie Inférieure"
-        },
-        ["PARTIE SUPERIEURE"] = {
-            Icon = "LamePrime.png",
-            Name = "Partie Supérieure"
-        },
-        ["POCHETTE"] = {
-            Icon = "Pochette_Prime.png",
-            Name = "Pochette"
-        },
-        ["POIGNEE"] = {
-            Icon = "icon_poigneePrime.png",
-            Name = "Poignée"
-        },
-        ["SCHEMA"] = {
-            Icon = "Blueprint2.png",
-            Name = "Schéma"
-        },
-        ["SCHEMA CHASSIS"] = {
-            Icon = "Châssis Prime.png",
-            Name = "Schéma Châssis"
-        },
-        ["SCHEMA NEUROPTIQUES"] = {
-            Icon = "Neuroptiques Prime.png",
-            Name = "Schéma Neuroptiques"
-        },
-        ["SCHEMA SYSTEMES"] = {
-            Icon = "Systèmes Prime.png",
-            Name = "Schéma Systèmes"
-        },
-        ["SYSTEMES"] = {
-            Icon = "Systèmes Prime.png",
-            Name = "Systèmes"
-        },
-        ["TETE"] = {
-            Icon = "LamePrime.png",
-            Name = "Tête"
-        }
-    },
-
     ["Melee"] = {
         ["DEFAULT"] = {
             ["DEFAULT"] = {
@@ -3660,6 +3045,122 @@ local IconData = {
                 link = "Melee#Heavy Attacks"
             }
         }
-    }
+    },
+
+    --TODELETE
+    ["Void"] = {
+        ["BOTTE"] = {
+            Icon = "GenericWeaponPrimeGuard.png",
+            Name = "Botte"
+        },
+        ["CANON"] = {
+            Icon = "Canon Prime.png",
+            Name = "Canon"
+        },
+        ["Canon"] = {
+            Icon = "Canon Prime.png",
+            Name = "Canon"
+        },
+        ["CARAPACE"] = {
+            Icon = "Châssis Prime.png",
+            Name = "Carapace"
+        },
+        ["CERVEAU"] = {
+            Icon = "Neuroptiques Prime.png",
+            Name = "Cerveau"
+        },
+        ["CHAINE"] = {
+            Icon = "Crosse Prime.png",
+            Name = "Chaîne"
+        },
+        ["CORDE"] = {
+            Icon = "Crosse Prime.png",
+            Name = "Corde"
+        },
+        ["CROSSE"] = {
+            Icon = "Crosse Prime.png",
+            Name = "Crosse"
+        },
+        ["CULASSE"] = {
+            Icon = "Culasse Prime.png",
+            Name = "Culasse"
+        },
+        ["DISQUE"] = {
+            Icon = "LamePrime.png",
+            Name = "Disque"
+        },
+        ["ETOILES"] = {
+            Icon = "LamePrime.png",
+            Name = "Étoiles"
+        },
+        ["GANTELET"] = {
+            Icon = "icon_poigneePrime.png",
+            Name = "Gantelet"
+        },
+        ["GARDE"] = {
+            Icon = "GenericWeaponPrimeGuard.png",
+            Name = "Garde"
+        },
+        ["LAME"] = {
+            Icon = "LamePrime.png",
+            Name = "Lame"
+        },
+        ["LAMES"] = {
+            Icon = "LamePrime.png",
+            Name = "Lames"
+        },
+        ["LIEN"] = {
+            Icon = "Icon_genericPrimePlug.png",
+            Name = "Lien"
+        },
+        ["MANCHE"] = {
+            Icon = "icon_poigneePrime.png",
+            Name = "Manche"
+        },
+        ["ORNEMENT"] = {
+            Icon = "Icon_genericPrimePlug.png",
+            Name = "Ornement"
+        },
+        ["PARTIE INFERIEURE"] = {
+            Icon = "LamePrime.png",
+            Name = "Partie Inférieure"
+        },
+        ["PARTIE SUPERIEURE"] = {
+            Icon = "LamePrime.png",
+            Name = "Partie Supérieure"
+        },
+        ["POCHETTE"] = {
+            Icon = "Pochette_Prime.png",
+            Name = "Pochette"
+        },
+        ["POIGNEE"] = {
+            Icon = "icon_poigneePrime.png",
+            Name = "Poignée"
+        },
+        ["SCHEMA"] = {
+            Icon = "Blueprint2.png",
+            Name = "Schéma"
+        },
+        ["SCHEMA CHASSIS"] = {
+            Icon = "Châssis Prime.png",
+            Name = "Schéma Châssis"
+        },
+        ["SCHEMA NEUROPTIQUES"] = {
+            Icon = "Neuroptiques Prime.png",
+            Name = "Schéma Neuroptiques"
+        },
+        ["SCHEMA SYSTEMES"] = {
+            Icon = "Systèmes Prime.png",
+            Name = "Schéma Systèmes"
+        },
+        ["SYSTEMES"] = {
+            Icon = "Systèmes Prime.png",
+            Name = "Systèmes"
+        },
+        ["TETE"] = {
+            Icon = "LamePrime.png",
+            Name = "Tête"
+        }
+    },
 }
 return IconData

@@ -36,10 +36,9 @@ function p._Item(itemName, textExist, imgSize)
             -- Image size
             table.insert(ret, '|')
             if (imgSize == nil or imgSize == "") then
-                imgSize = 'x26'
+                imgSize = 'x26px'
             end
             table.insert(ret, imgSize)
-            table.insert(ret, 'px')
             -- Image Link
             if (item.link ~= nil) then
                 table.insert(ret, '|link=')

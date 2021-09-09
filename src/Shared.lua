@@ -1,25 +1,37 @@
 local p = {}
 
+-- Constantes Globales Wiki
+function p.getRarityList()
+
+    return {"Commune", "Inhabituelle", "Rare"}
+end
+
 function p.getDefaultImg()
+
     return 'Panel.png'
 end
 
 function p.getColor()
+
     return "white"
 end
 
 function p.getBgColor()
+
     return "#061D40D6"
 end
 
 function p.getListSep()
+
     return ' • '
 end
 
 function p.getClr()
+
     return '<div style="clear:both; margin:0; padding:0;"></div>'
 end
 
+-- Fonctions Globales Wiki
 function p.getKeySet(table)
 
     local ret = {}
@@ -126,7 +138,7 @@ function p.titleCase(head, tail)
         local result = string.gsub(head, "(%a)([%w_']*)", p.titleCase)
         return result
     else
-        return string.upper(head) .. string.lower(tail)
+        return mw.ustring.upper(head) .. mw.ustring.lower(tail)
     end
 end
 
@@ -230,9 +242,9 @@ function p.contains(List, Item, IgnoreCase)
     if (type(List) == "table") then
         for i, listI in pairs(List) do
             if (listI == Item) then
-                return true
+                return true, i
             elseif (IgnoreCase and string.upper(listI) == string.upper(Item)) then
-                return true
+                return true, i
             end
         end
     else
@@ -362,6 +374,86 @@ function p.checkImage(fileName)
     end
 
     return ret
+end
+
+-- Sub-function for table2String
+local function insertTab(nbTab)
+
+    local ret = {'\n'}
+    for i = 1, nbTab, 1 do
+        table.insert(ret, '\t')
+    end
+
+    return table.concat(ret)
+end
+
+-- Used for mass editing database modules
+function p.table2String(t, nbTab)
+
+    -- nbTab
+    if (nbTab == nil) then
+        nbTab = 1
+    else
+        nbTab = nbTab + 1
+    end
+    -- Switch Case for different types of values
+    local switchVType = {
+        ["boolean"] = function(value)
+            return tostring(value)
+        end,
+        ["nil"] = function(value)
+            return 'nil'
+        end,
+        ["number"] = function(value)
+            return tostring(value)
+        end,
+        ["table"] = function(value)
+            return p.table2String(value, nbTab + 1)
+        end,
+        ["string"] = function(value)
+            return string.format('"%s"', value)
+        end
+    }
+
+    local ret = {'{'}
+    for k, v in p.skpairs(t) do
+        table.insert(ret, insertTab(nbTab))
+        if (type(k) == "string") then
+            table.insert(ret, k)
+            table.insert(ret, ' = ')
+        end
+        table.insert(ret, switchVType[type(v)](v))
+        table.insert(ret, ',')
+    end
+    table.insert(ret, insertTab(nbTab - 1))
+    table.insert(ret, '}')
+    return table.concat(ret)
+end
+
+-- Only works with ipairs tables
+function p.getKeyFromStringValue(string2Search, table2Process)
+
+    local ret = nil
+    local i = 0
+    while (ret == nil and i < #table2Process) do
+        i = i + 1
+        if (table2Process[i] == string2Search) then
+            ret = i
+        end
+    end
+
+    return ret
+end
+
+-- Only works with ipairs tables
+function p.getDocK2V(t)
+
+    local ret = {}
+    for k, v in ipairs(t) do
+        table.insert(ret, string.format('*%s = %s', tostring(k), v))
+    end
+
+    return table.concat(ret, '\n')
 end
 
 return p

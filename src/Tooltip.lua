@@ -224,7 +224,7 @@ local function getObjIcon(obj, objType, conclave, imgSize)
     return table.concat(ret)
 end
 
-local function getObjImage(obj, objType, conclave, imgSize)
+function p.getObjImage(obj, objType, conclave, imgSize)
 
     -- Recover image
     local image = nil
@@ -232,7 +232,7 @@ local function getObjImage(obj, objType, conclave, imgSize)
         ["Ability"] = function() return obj.Icon end,
         ["Relics"] = function()
             return mw.loadData('Module:Icon/data')["Objets"]["Relique " ..
-                       obj.Tier].icon
+            obj.Tier].icon
         end,
         ["Warframe"] = function() return obj.Portrait end
     }
@@ -391,7 +391,7 @@ function p._tooltipText(objName, objType, newName, conclave, iconless, imgOnly,
             table.insert(ret, ' ')
             table.insert(ret, getObjIcon(obj, objType, conclave, imgSize))
         else
-            table.insert(ret, getObjImage(obj, objType, conclave, imgSize))
+            table.insert(ret, p.getObjImage(obj, objType, conclave, imgSize))
         end
     end
     table.insert(ret, '</span>')
@@ -419,7 +419,7 @@ function p.checkItemExist(itemName, itemType, conclave)
     -- Search object
     local obj = getObj(objDB, itemName, itemType)
     -- Check if an object was found
-    return obj ~= nil
+    return obj
 end
 
 return p
