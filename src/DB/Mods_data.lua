@@ -6457,6 +6457,8 @@ local ModData = {
         },
         ["Munitions Météores"] = {
             Image = "Munitions Météores.png",
+            Incompatible = {"Munitions Empalantes", "Munitions Rasoir"},
+            Introduced = "17.0",
             Name = "Munitions Météores",
             NameEN = "Meteor Munitions",
             Polarity = "Madurai",
@@ -9027,7 +9029,8 @@ local ModData = {
             Name = "Souffrances Continues",
             NameEN = "Continuous Misery",
             Polarity = "Madurai",
-            Rarity = "Commun"
+            Rarity = "Commun",
+            Transmutable = true
         },
         ["Sourcier de l'Augure"] = {
             Image = "Sourcier_de_l'Augure.jpg",
