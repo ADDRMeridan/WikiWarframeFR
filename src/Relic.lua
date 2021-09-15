@@ -16,6 +16,7 @@
 local p = {}
 
 local RELICDATA = mw.loadData("Module:Relic/data")
+local DROPTABLES = require("Module:DropTables")
 local ICON = require("Module:Icon")
 local SHARED = require("Module:Shared")
 local TT = require("Module:Tooltip")
@@ -136,6 +137,44 @@ local function groupBy_Tier(relicArray)
     return ret
 end
 
+local function groupBy_DropPart(relicArray, isolateDrop)
+
+    local ret = {}
+    for _, relic in ipairs(relicArray) do
+        for _, drop in ipairs(relic.Drops) do
+            local key = drop.Part or drop.Type
+            if(ret[key] == nil) then
+                ret[key] = {}
+            end
+            if(isolateDrop) then
+                local tmp = SHARED.shallow_copy(relic)
+                tmp.Drops = {drop}
+                table.insert(ret[key], tmp)
+            else
+                table.insert(ret[key], relic)
+            end
+        end
+    end
+
+    return ret
+end
+
+local function groupBy_DropItem(relicArray)
+
+    local ret = {}
+    for _, relic in ipairs(relicArray) do
+        for _, drop in ipairs(relic.Drops) do
+            local key = drop.Item
+            if(ret[key] == nil) then
+                ret[key] = {}
+            end
+            table.insert(ret[key], relic)
+        end
+    end
+
+    return ret
+end
+
 --********************
 -- printBy Functions
 --********************
@@ -184,6 +223,13 @@ function p.getRelicImage(relicName)
     return RELICS_IMAGES[relic.Tier][1] or SHARED.getDefaultImg()
 end
 
+local function isRelicVaulted(relicName)
+
+    local relic = p.getRelic(relicName)
+
+    return relic.Vaulted ~= nil
+end
+
 local function getIBData(relic, relicVal)
     local ret = nil
     if (relic ~= nil and relicVal ~= nil and relicVal ~= "") then
@@ -228,23 +274,39 @@ local function getIBData(relic, relicVal)
     return ret
 end
 
+local function getAugmentedTT(relic, customText)
+
+    local ret = {TT._tooltipText(relic.Name, TT_TYPE, customText)}
+    if(relic.Vaulted ~= nil) then
+        table.insert(ret, '([[Soute Prime|V]])')
+    end
+
+    return table.concat(ret, ' ')
+end
+
 --********************
 -- ReliquePage Functions
 --********************
 
-local function buildAmBoxs(relic)
+local function buildAmBoxs(relic, dropLocsIsNull)
+
     local ret = nil
-    if (relic.isBaro) then
+    if (relic.IsBaro) then
         ret =
             string.format(
-            "{{ambox\n|image = Voidtraderplaceholderthumb.png\n|link = Baro Ki'Teer|quote = Peut être la prochaine fois.\n|type = La [[Reliques du Néant|Relique]] '''%s''' est une offre exclusive de [[Baro Ki'Teer]] et peut ne pas être disponible à l'achat pour le moment.\nLes joueurs peuvent cependant se l'échanger entre-eux.\n}}",
+            "{{ambox\n|image = Voidtraderplaceholderthumb.png\n|link = Baro Ki'Teer|quote = Peut être la prochaine fois.\n|type = La [[Reliques du Néant|relique]] '''%s''' est une offre exclusive de [[Baro Ki'Teer]] et peut ne pas être disponible à l'achat pour le moment.<br/>Les joueurs peuvent cependant se l'échanger entre-eux.}}",
             relic.Name
         )
     elseif (relic.Vaulted ~= nil) then
         ret =
             string.format(
-            "{{ambox\n|image = AladVPortrait_d.png\n|link = Alad V\n|quote = Le Marché impose que vous évoluiez ou mourrez.\n| type = La [[Reliques du Néant|Relique]] '''%s''' n'est plus actuellement obtenable.\nLes joueurs peuvent cependant se l'échanger entre-eux.\n}}",
+            "{{ambox\n|image = AladVPortrait_d.png\n|link = Alad V\n|quote = Le Marché impose que vous évoluiez ou mourrez.\n| type = La [[Reliques du Néant|relique]] '''%s''' n'est plus actuellement obtenable.<br/>Les joueurs peuvent cependant se l'échanger entre-eux.}}",
             relic.Name
+        )
+    elseif(relic.Vaulted == nil and relic.Tier ~= 5 and (not relic.IsBaro) and dropLocsIsNull) then
+        ret = string.format(
+            "{{ambox\n|image = OrdisArchwingtrailer.png\n|quote = Il me manque des données opérateur.\n| type = La [[Reliques du Néant|relique]] '''%s''' n'a pas été trouvée dans la base de données [[Module:DropTables/data]] alors qu'elle n'est pas verrouillée.[[Category:Module Error]]}}",
+        relic.Name
         )
     end
 
@@ -276,25 +338,27 @@ local function buildInfobox(relic)
     return tostring(ret)
 end
 
+local function getInfosFromTT(objName, ttType, rename, ttImageSize)
+
+    local dropImage = nil
+    local dropText = nil
+    local tmpObj = TT.checkItemExist(objName, ttType, false)
+    if (tmpObj ~= nil) then
+        dropImage = TT.getObjImage(tmpObj, ttType, false, ttImageSize)
+        dropText = TT._tooltipText(objName, ttType, rename, false, true)
+    end
+
+    return dropText, dropImage
+end
+
 local function getDropImageAndText(drop, imgSizeWanted, linkNotWanted)
 
     local imgSize = imgSizeWanted or "100px"
 
     local itemName = nil
     local fullDropName = {}
-    local dropImage = nil
     local dropText = nil
-
-    local function getInfosFromTT(objName, ttType, rename, ttImageSize)
-        
-        local tmpObj = TT.checkItemExist(objName, ttType, false)
-        if (tmpObj ~= nil) then
-            dropImage = TT.getObjImage(tmpObj, ttType, false, ttImageSize)
-            dropText = TT._tooltipText(objName, ttType, rename, false, true)
-        end
-
-        return dropText, dropImage
-    end
+    local dropImage = nil
 
     if (drop ~= nil) then
         itemName = DROPS_ITEM[drop.Item]
@@ -560,13 +624,23 @@ function p.buildRelicPage(frame)
         if (relic == nil) then
             table.insert(ret, string.format(ERROR_NOTFOUND, relicName))
         else
+            local dropLocs = nil
+            if(relic.Vaulted == nil) then
+                dropLocs = DROPTABLES.getRelicDropLoc(relicName)
+            end
             table.insert(ret, '<div class="reliquepage_container">')
-            table.insert(ret, buildAmBoxs(relic))
+            table.insert(ret, buildAmBoxs(relic, dropLocs == nil))
             table.insert(ret, buildInfobox(relic))
             table.insert(ret, "\nLa [[Reliques du Néant|relique]] '''")
             table.insert(ret, relic.Name)
             table.insert(ret, "''' peut contenir l'une des récompenses suivantes en cas d'ouverture réussie:\n")
             table.insert(ret, buildRewardsTable(relic))
+            --Obtention
+            if(dropLocs ~= nil) then
+                table.insert(ret, '\n==Lieux d\'Obtention==')
+                table.insert(ret, dropLocs)
+            end
+            --Navbox
             table.insert(ret, '\n==Voir Aussi==')
             table.insert(ret, _buildRelicNav(false, true))
             table.insert(ret, '</div>')
@@ -624,6 +698,249 @@ function p.tooltip(frame)
     
     return table.concat(ret)
 end
+
+--********************
+-- Acquisition Functions
+--********************
+
+--- TODO
+--  @function       p.printVoidAcquisition
+--  @param          {string} itemName nom de l'objet a chercher
+--  @return         {string}
+function p.printVoidAcquisition(itemName)
+    
+    local relics = {}
+    --Get relics for item
+    for _, relic in pairs(RELICDATA["Relics"]) do
+        local foundItem = false
+        for _, drop in ipairs(relic.Drops) do
+            foundItem = DROPS_ITEM[drop.Item] == itemName
+            if(foundItem) then
+                local tmpRelic = SHARED.shallow_copy(relic)
+                tmpRelic.Drops = {drop}
+                table.insert(relics, tmpRelic)
+                break
+            end
+        end
+    end
+
+    local relicsByParts = groupBy_DropPart(relics)
+    
+    local keysOrder = {}
+    for k, _ in pairs(relicsByParts) do
+        if(k == 6) then -- Dans le cas d'un Schéma mettre en premier de l'ordre
+            table.insert(keysOrder, 1, k)
+        else
+            table.insert(keysOrder, k)
+        end
+    end
+
+    local ret = {'\n{| class="article-table"'}
+    for _, headerKey in ipairs(keysOrder) do
+        table.insert(ret, '\n! ')
+        local partName = DROPS_PART[headerKey]
+        table.insert(ret, partName)
+        if(headerKey == 6) then -- Si Schema
+            table.insert(ret, ICON._Item(partName))
+        else
+            table.insert(ret, ICON._Item(partName .. ' Prime'))
+        end
+    end
+    table.insert(ret, '\n|-')
+    for _, headerKey in ipairs(keysOrder) do
+        table.insert(ret, '\n| ')
+        local strB = {}
+        for _, relic in ipairs(relicsByParts[headerKey]) do
+            table.insert(strB, getAugmentedTT(relic))
+        end
+        table.insert(ret, table.concat(strB, '<br/>'))
+    end
+    table.insert(ret, '\n|}')
+    return table.concat(ret)
+end
+
+--- TODO
+--  @function       p.printItemRelics
+--  @param          {table} frame environnement de l'appel wiki
+--  @return         {string}
+function p.printItemRelics(frame)
+
+    local itemName = frame.args ~= nil and frame.args[1]
+
+    local ret = nil
+    if(itemName ~= nil) then
+        ret = p.printVoidAcquisition(itemName)
+    end
+
+    return ret
+end
+
+--- TODO
+--  @function       p.printRelicsByRewards
+--  @param          {table} frame environnement de l'appel wiki
+--  @return         {string}
+function p.printRelicsByRewards(frame)
+
+    local dataTable = {}
+    -- GET data
+    for _, relic in pairs(RELICDATA["Relics"]) do
+        for _, drop in pairs(relic.Drops) do
+            local key = drop.Item
+            if(dataTable[key] == nil) then
+                dataTable[key] = {}
+            end
+            local subKey = drop.Part or drop.Type
+            if(dataTable[key][subKey] == nil) then
+                dataTable[key][subKey] = {}
+            end
+            table.insert(dataTable[key][subKey], {relic, drop})
+        end
+    end
+
+    -- SORT item data
+    local primaryKeySet = {}
+    for key, _ in pairs(dataTable) do
+        table.insert(primaryKeySet, key)
+    end
+    table.sort(primaryKeySet, function (a, b)
+        return DROPS_ITEM[a] < DROPS_ITEM[b]
+    end)
+
+    local ret = {'\n{| class="article-table"', '! Objet', '! Partie', '! Reliques'}
+    for _, itemId in pairs(primaryKeySet) do
+        table.insert(ret, '|-')
+        local itemData = dataTable[itemId]
+        local rowspan = SHARED.tableCount(itemData)
+        local itemRowBuilder = {'| rowspan="', rowspan, '" | '}
+        --Get Item data
+        local itemName = DROPS_ITEM[itemId]
+        local imgSize = "100px"
+        local itemText, itemImage = nil, nil
+        local i = 0
+        local tt2Test = {"Weapon", "Warframe", "Pet", "Mod"}
+        while(itemImage == nil and itemText == nil and i < #tt2Test) do
+            i = i + 1
+            itemText, itemImage = getInfosFromTT(DROPS_ITEM[itemId], tt2Test[i], nil, imgSize)
+        end
+        --If no TT, get Item
+        if(itemImage == nil and itemText == nil) then
+            itemImage = ICON._Item(itemName, false, imgSize)
+            itemText = '[[' .. itemName .. ']]'
+            -- If no Item, get Ressource
+            if(string.find(itemImage, 'Error:') ~= nil) then
+                itemImage = ICON._Ressource(itemName, false, imgSize)
+                itemText = '[[' .. itemName .. ']]'
+            end
+        end
+        
+        table.insert(itemRowBuilder, itemImage)
+        table.insert(itemRowBuilder, '<br/>')
+        table.insert(itemRowBuilder, itemText)
+
+        -- SORT part data
+        local secondaryKeySet = {}
+        local hasBP = false
+        local moreThanOnePart = 0
+        for key, _ in pairs(itemData) do
+            moreThanOnePart = moreThanOnePart + 1
+            if(key == 6) then -- Si Schéma
+                hasBP = true
+            else
+                table.insert(secondaryKeySet, key)
+            end
+        end
+        moreThanOnePart = moreThanOnePart > 1
+        if(moreThanOnePart) then
+            table.sort(secondaryKeySet, function (a, b)
+                return DROPS_PART[a] < DROPS_PART[b]
+            end)
+        end
+        if(hasBP) then
+            table.insert(secondaryKeySet, 1, 6) -- Insert Schema in first
+        end
+
+        local firstPart = true
+        for _, partId in ipairs(secondaryKeySet) do
+            local partData = itemData[partId]
+            if(firstPart) then
+                table.insert(itemRowBuilder, ' || ')
+                firstPart = false
+            else
+                table.insert(itemRowBuilder, '\n|-\n| ')
+            end
+            if(moreThanOnePart) then
+                table.insert(itemRowBuilder, DROPS_PART[partId])
+            else
+                table.insert(itemRowBuilder, 'N/A')
+            end
+            
+            table.insert(itemRowBuilder, ' || ')
+            local cellB = {}
+            for _, tmpData in ipairs(partData) do
+                local relic = tmpData[1]
+                local drop = tmpData[2]
+                local relictxt = getAugmentedTT(relic, relic.Name .. ' - ' .. DROPS_RARITY[drop.Rarity])
+                table.insert(cellB, relictxt)
+            end
+            table.insert(itemRowBuilder, table.concat(cellB, '<br/>'))
+        end
+        table.insert(ret, table.concat(itemRowBuilder))
+    end
+    table.insert(ret, '|}')
+
+    return table.concat(ret, '\n')
+end
+
+--********************
+-- Ducats Functions
+--********************
+
+--- TODO
+--  @function       p.printDucatsPrice
+--  @param          {table} frame environnement de l'appel wiki
+--  @return         {string}
+function p.printDucatsPrice(frame)
+
+    local tmpArray = {}
+    --Get data
+    for _, relic in ipairs(p.getRelics()) do
+        for _, drop in ipairs(relic.Drops) do
+            local ducatPrice = getDropDucatCost(drop)
+            if(ducatPrice > 0) then
+                local dropTxt, dropImg = getDropImageAndText(drop, 'x26px')
+                local key = dropTxt .. ' ' .. dropImg
+                if(tmpArray[key] == nil) then
+                    tmpArray[key] = {key, {}, ducatPrice}
+                end
+                table.insert(tmpArray[key][2], {relic.Name, drop.Rarity})
+            end
+        end
+    end
+
+    local ret = {'\n{| class="article-table sortable"', '|-', '! Partie', '! Relique d\'Obtention', '! Ducats'}
+    for _, tmpLineData in pairs(tmpArray) do
+        local strB = {'|-\n|'}
+        table.insert(strB, tmpLineData[1])
+        table.insert(strB, ' || ')
+        local tmpDataArray = {}
+        for _, tmpData in ipairs(tmpLineData[2]) do
+            local tmpString = TT._tooltipText(tmpData[1], TT_TYPE, tmpData[1] .. ' - ' .. DROPS_RARITY[tmpData[2]])
+            if(isRelicVaulted(tmpData[1])) then
+                tmpString = tmpString .. ' ([[Soute Prime|V]])'
+            end
+            table.insert(tmpDataArray, tmpString)
+        end
+        table.insert(strB, table.concat(tmpDataArray, '<br/>'))
+        table.insert(strB, ' || ')
+        table.insert(strB, tmpLineData[3])
+        table.insert(strB, ICON._Item('Ducats'))
+        table.insert(ret, table.concat(strB))
+    end
+    table.insert(ret, '|}')
+
+    return table.concat(ret, '\n')
+end
+
 
 --********************
 -- Documentation Functions

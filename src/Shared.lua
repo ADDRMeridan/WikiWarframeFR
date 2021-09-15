@@ -456,4 +456,14 @@ function p.getDocK2V(t)
     return table.concat(ret, '\n')
 end
 
+function p.shallow_copy(t)
+    
+    local t2 = {}
+    for k,v in pairs(t) do
+      t2[k] = v
+    end
+    
+    return t2
+end
+
 return p

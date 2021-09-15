@@ -15,15 +15,12 @@ local synRankCol = 4 -- The required Syndicate Rank to purchase the offering
 local p = {}
 
 local DropData = mw.loadData('Module:DropTables/data')
-local RelicData = mw.loadData('Module:Void/data')['RelicData']
 local Missions = require("Module:Missions")
 local MissionData = mw.loadData('Module:Missions/data')
 local ModsData = mw.loadData('Module:Mods/data')
 local Icon = require("Module:Icon")
 local Shared = require("Module:Shared")
-local Void = require("Module:Void")
 local TT = require("Module:Tooltip")
-local Void = require('Module:Void')
 
 local RELICSORDER = {"Lith", "Meso", "Neo", "Axi", "Requiem"}
 
@@ -134,22 +131,6 @@ local function buildSyndicateDrop(theSyndicate, Item)
     drop.Type = Item[synTypeCol]
     drop.Cost = Item[synCostCol]
     drop.Rank = Item[synRankCol]
-    return drop
-end
-
--- Like above, but for Avionics
--- TODO: Remove unused function as avionics are now considered as mods
-local function buildAvionicDrop(Enemy, Avionic)
-    local drop = {
-        EName = Enemy.Name,
-        IName = Avionic[aviNameCol]
-    }
-    drop.Chance = (Enemy.ModChance * Avionic[aviChanceCol]) / 100
-    drop.Count = 1
-    drop.Type = 'Avionic'
-    if (Avionic[aviHouseCol] ~= nil) then
-        drop.House = Avionic[aviHouseCol]
-    end
     return drop
 end
 
@@ -293,11 +274,9 @@ local function formatDropString(drop, frame)
                     TT._tooltipText(dropContent[2], "Weapon"))
             end,
             ["Relique"] = function(dropContent)
-                local tmpRelicTokens = Shared.splitString(dropContent, ' ')
+                local tmpRelicTokens = Shared.splitString(dropContent, ' ') -- Split pour recuperer uniquement le nom de base quand il y a un raffinage
                 local tmpRelicName = tmpRelicTokens[1] .. ' ' .. tmpRelicTokens[2]
-                if (Void.getRelic(tmpRelicName).isVaulted ~= 1) then
-                    return TT._tooltipText(tmpRelicName, "Relic", dropContent)
-                end
+                return TT._tooltipText(tmpRelicName, "Relic", dropContent)
             end,
             ["Ressource"] = function(dropContent)
                 return Icon._Ressource(dropContent, "text", nil)
@@ -771,6 +750,91 @@ function p.getRelicByPlanet(frame)
     return table.concat(ret)
 end
 
+local function findItemInDrops(itemName, itemType, drops)
+
+    local ret = {}
+    if(itemName ~= nil and itemType ~= nil) then
+        for _, drop in ipairs(drops) do
+            if(drop[1] == itemName and drop[2] == itemType) then
+                table.insert(ret, drop)
+            end
+        end
+    end
+
+    return ret
+end
+
+local function getItemMissionsDropLoc(itemName, itemType)
+
+    local ret = {}
+    if(itemName ~= nil and itemType ~= nil) then
+        for _, mission in ipairs(DropData["Missions"]) do
+            if(mission.Rewards ~= nil and (not mission.Ignore)) then
+                for rotation, rotationDrops in pairs(mission.Rewards) do
+                    local dropsFound = findItemInDrops(itemName, itemType, rotationDrops)
+                    if(#dropsFound > 0) then
+                        table.insert(ret, {mission, rotation})
+                    end
+                end
+            end
+        end
+    end
+
+    return ret
+end
+
+local function getMissionName(mission)
+
+    return mission.Name or mission.ShortName or mission.Alias
+end
+
+local function sort_MissionsDropLoc(a, b) 
+
+    local aMission = a[1]
+    local bMission = b[1]
+    if(aMission.Type == bMission.Type) then
+        if(aMission.Name == bMission.Name) then
+            local aRot = a[2]
+            local bRot = b[2]
+            return aRot < bRot
+        else
+            return getMissionName(aMission) < getMissionName(bMission)
+        end
+    else
+        return aMission.Type < bMission.Type
+    end
+end
+
+function p.getRelicDropLoc(relicName)
+
+    local ret = nil
+    if(relicName ~= nil) then
+        local itemType = 'Relique'
+        local dropLocs = getItemMissionsDropLoc(relicName, itemType)
+        if(#dropLocs > 0) then
+            table.sort(dropLocs, sort_MissionsDropLoc)
+            ret = {'\n{| class="article-table sortable"', '! Type', '! Catégorie', '! Rotation', '! Chance'}
+            for _, dropLoc in ipairs(dropLocs) do
+                table.insert(ret, '|-')
+                local mission = dropLoc[1]
+                local rotation = dropLoc[2]
+                local strB = {'| [[', mission.Type, ']] || ', getMissionName(mission), ' || ', rotation, ' || '}
+                local pourcent = {}
+                for _, drop in ipairs(findItemInDrops(relicName, itemType, mission.Rewards[rotation])) do
+                    table.insert(pourcent, asPercent(drop[3]))
+                end
+                table.insert(strB, table.concat(pourcent, '\n'))
+                table.insert(ret, table.concat(strB))
+            end
+            table.insert(ret, '|}')
+            ret = table.concat(ret, '\n')
+        end
+    end
+
+    return ret
+end
+
+--[=[
 -- Function used for building Void Relic/DropLocation table
 function p.getRelicByLocation(frame)
     local tier = frame.args ~= nil and frame.args[1] or frame
@@ -1003,6 +1067,7 @@ function p.getSingleRelicByLocation(tier, name)
 
     return result
 end
+--]=]
 
 function p.getItemByMissionTable(frame)
     local theDrop = frame.args ~= nil and frame.args[1] or frame

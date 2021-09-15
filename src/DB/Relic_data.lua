@@ -13,7 +13,7 @@ local p = {
             [5] = {"RequiemR0.png", "RequiemR1.png", "RequiemR2.png", "RequiemR3.png"}
         },
         ["Drops"] ={
-            ["Items"] = {"Trinity Prime", "Fragor Prime", "Braton Prime", "Akstiletto Prime", "Doubles Kamas Prime", "Nikana Prime", "Akbronco Prime", "Forma", "Stradavar Prime", "Paris Prime", "Wukong Prime", "Aksomati Prime", "Burston Prime", "Fang Prime", "Zhuge Prime", "Pangolin Prime", "Atlas Prime", "Kogake Prime", "Mirage Prime", "Banshee Prime", "Helios Prime", "Akbolto Prime", "Inaros Prime", "Orthos Prime", "Lex Prime", "Aklex Prime", "Cernos Prime", "Hydroid Prime", "Zephyr Prime", "Ballistica Prime", "Vasto Prime", "Akvasto Prime", "Chroma Prime", "Tipedo Prime", "Carrier Prime", "Ash Prime", "Equinox Prime", "Pyrana Prime", "Gram Prime", "Rubico Prime", "Ivara Prime", "Euphona Prime", "Collier Kavasa Prime", "Sybaris Prime", "Baza Prime", "Akjagara Prime", "Karyst Prime", "Vectis Prime", "Silva & Aegis Prime", "Panthera Prime", "Tekko Prime", "Corinth Prime", "Pandero Prime", "Tiberon Prime", "Destreza Prime", "Latron Prime", "Sicarus Prime", "Frost Prime", "Glaive Prime", "Ember Prime", "Bronco Prime", "Nekros Prime", "Saryn Prime", "Galatine Prime", "Redeemer Prime", "Ninkondi Prime", "Kronen Prime", "Nezha Prime", "Gara Prime", "Oberon Prime", "Mesa Prime", "Dethcube Prime", "Volnus Prime", "Odonata Prime", "Hikou Prime", "Reaper Prime", "Wyrm Prime", "Loki Prime", "Nami Skyla Prime", "Limbo Prime", "Bo Prime", "Volt Prime", "Octavia Prime", "Astilla Prime", "Venka Prime", "Boltor Prime", "Mag Prime", "Boar Prime", "Dakra Prime", "Ankyros Prime", "Rhino Prime", "Scindo Prime", "Nyx Prime", "Nova Prime", "Soma Prime", "Spira Prime", "Tigris Prime", "Titania Prime", "Zakti Prime", "Tenora Prime", "Vauban Prime", "Valkyr Prime", "Guandao Prime", "Brisure Riven", "Étoile Ayatan Ambre", "Xata", "Lohk", "Adaptateur Exilus Pour Arme", "Vome", "Jahu", "Fass", "Ris", "Khra", "Netra", "Kuva"},
+            ["Items"] = {"Trinity Prime", "Fragor Prime", "Braton Prime", "Akstiletto Prime", "Doubles Kamas Prime", "Nikana Prime", "Akbronco Prime", "Forma", "Stradavar Prime", "Paris Prime", "Wukong Prime", "Aksomati Prime", "Burston Prime", "Fang Prime", "Zhuge Prime", "Pangolin Prime", "Atlas Prime", "Kogake Prime", "Mirage Prime", "Banshee Prime", "Helios Prime", "Akbolto Prime", "Inaros Prime", "Orthos Prime", "Lex Prime", "Aklex Prime", "Cernos Prime", "Hydroid Prime", "Zephyr Prime", "Ballistica Prime", "Vasto Prime", "Akvasto Prime", "Chroma Prime", "Tipedo Prime", "Carrier Prime", "Ash Prime", "Equinox Prime", "Pyrana Prime", "Gram Prime", "Rubico Prime", "Ivara Prime", "Euphona Prime", "Collier Kavasa Prime", "Sybaris Prime", "Baza Prime", "Akjagara Prime", "Karyst Prime", "Vectis Prime", "Silva & Aegis Prime", "Panthera Prime", "Tekko Prime", "Corinth Prime", "Pandero Prime", "Tiberon Prime", "Destreza Prime", "Latron Prime", "Sicarus Prime", "Frost Prime", "Glaive Prime", "Ember Prime", "Bronco Prime", "Nekros Prime", "Saryn Prime", "Galatine Prime", "Redeemer Prime", "Ninkondi Prime", "Kronen Prime", "Nezha Prime", "Gara Prime", "Oberon Prime", "Mesa Prime", "Dethcube Prime", "Volnus Prime", "Odonata Prime", "Hikou Prime", "Reaper Prime", "Wyrm Prime", "Loki Prime", "Nami Skyla Prime", "Limbo Prime", "Bo Prime", "Volt Prime", "Octavia Prime", "Astilla Prime", "Venka Prime", "Boltor Prime", "Mag Prime", "Boar Prime", "Dakra Prime", "Ankyros Prime", "Rhino Prime", "Scindo Prime", "Nyx Prime", "Nova Prime", "Soma Prime", "Spira Prime", "Tigris Prime", "Titania Prime", "Zakti Prime", "Tenora Prime", "Vauban Prime", "Valkyr Prime", "Guandao Prime", "Brisure Riven", "Étoile Ayatan Ambre", "Xata", "Lohk", "Adaptateur Exilus Pour Arme", "Vome", "Jahu", "Fass", "Ris", "Khra", "Netra", "Kuva", "Nidus Prime", "Magnus Prime", "Strun Prime"},
             ["Parts"] = {"Schéma Systèmes", "Tête", "Crosse", "Canon", "Poignée", "Schéma", "Culasse", "Schéma Châssis", "Lien", "Corde", "Lame", "Schéma Neuroptiques", "Botte", "Systèmes", "Carapace", "Ornement", "Boucle", "Partie Inférieure", "Manche", "Gantelet", "Schéma Collier", "Cerveau", "Partie Supérieure", "Schéma Harnais", "Pochette", "Schéma Ailes", "Chaîne", "Étoiles", "Lames", "Lanière", "Bottes", "Ailes", "Garde", "Neuroptiques", "Disque"},
 			["Types"] = {"RESSOURCE", "MOD", "OBJET"}
 		}
@@ -720,6 +720,20 @@ local p = {
 			Name = "Axi M1",
 			Tier = 4,
 			Vaulted = "25.8",
+        },
+        ["Axi M2"] = {
+			Drops = {
+				{Item = 13, Part = 6, Rarity = 1},
+				{Item = 61, Part = 7, Rarity = 1},
+				{Item = 98, Part = 8, Rarity = 1},
+				{Item = 68, Part = 6, Rarity = 2},
+				{Item = 50, Part = 3, Rarity = 2},
+				{Item = 117, Part = 4, Rarity = 3},
+			},
+			Introduced = "30.7",
+			Name = "Axi M2",
+			Tier = 4,
+			Vaulted = nil,
         },
         ["Axi N1"] = {
 			Drops = {

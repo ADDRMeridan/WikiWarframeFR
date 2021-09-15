@@ -115,6 +115,9 @@ local IconData = {
             icon = "Chassis.png",
             link = "Frost"
         },
+        ["Châssis Prime"] = {
+            icon = "Châssis Prime.png"
+        },
         ["Clé du Néant"] = {
             icon = "DEVoid Key.png",
             link = "Clés du Néant"
@@ -388,6 +391,9 @@ local IconData = {
         ["Neuroptiques Ember"] = {
             icon = "Helmet.png",
             link = "Ember"
+        },
+        ["Neuroptiques Prime"] = {
+            icon = "Neuroptiques Prime.png",
         },
         ["Neuroptiques Volt"] = {
             icon = "Helmet.png",
@@ -3044,122 +3050,6 @@ local IconData = {
                 title = "Ranged",
                 link = "Melee#Heavy Attacks"
             }
-        }
-    },
-
-    --TODELETE
-    ["Void"] = {
-        ["BOTTE"] = {
-            Icon = "GenericWeaponPrimeGuard.png",
-            Name = "Botte"
-        },
-        ["CANON"] = {
-            Icon = "Canon Prime.png",
-            Name = "Canon"
-        },
-        ["Canon"] = {
-            Icon = "Canon Prime.png",
-            Name = "Canon"
-        },
-        ["CARAPACE"] = {
-            Icon = "Châssis Prime.png",
-            Name = "Carapace"
-        },
-        ["CERVEAU"] = {
-            Icon = "Neuroptiques Prime.png",
-            Name = "Cerveau"
-        },
-        ["CHAINE"] = {
-            Icon = "Crosse Prime.png",
-            Name = "Chaîne"
-        },
-        ["CORDE"] = {
-            Icon = "Crosse Prime.png",
-            Name = "Corde"
-        },
-        ["CROSSE"] = {
-            Icon = "Crosse Prime.png",
-            Name = "Crosse"
-        },
-        ["CULASSE"] = {
-            Icon = "Culasse Prime.png",
-            Name = "Culasse"
-        },
-        ["DISQUE"] = {
-            Icon = "LamePrime.png",
-            Name = "Disque"
-        },
-        ["ETOILES"] = {
-            Icon = "LamePrime.png",
-            Name = "Étoiles"
-        },
-        ["GANTELET"] = {
-            Icon = "icon_poigneePrime.png",
-            Name = "Gantelet"
-        },
-        ["GARDE"] = {
-            Icon = "GenericWeaponPrimeGuard.png",
-            Name = "Garde"
-        },
-        ["LAME"] = {
-            Icon = "LamePrime.png",
-            Name = "Lame"
-        },
-        ["LAMES"] = {
-            Icon = "LamePrime.png",
-            Name = "Lames"
-        },
-        ["LIEN"] = {
-            Icon = "Icon_genericPrimePlug.png",
-            Name = "Lien"
-        },
-        ["MANCHE"] = {
-            Icon = "icon_poigneePrime.png",
-            Name = "Manche"
-        },
-        ["ORNEMENT"] = {
-            Icon = "Icon_genericPrimePlug.png",
-            Name = "Ornement"
-        },
-        ["PARTIE INFERIEURE"] = {
-            Icon = "LamePrime.png",
-            Name = "Partie Inférieure"
-        },
-        ["PARTIE SUPERIEURE"] = {
-            Icon = "LamePrime.png",
-            Name = "Partie Supérieure"
-        },
-        ["POCHETTE"] = {
-            Icon = "Pochette_Prime.png",
-            Name = "Pochette"
-        },
-        ["POIGNEE"] = {
-            Icon = "icon_poigneePrime.png",
-            Name = "Poignée"
-        },
-        ["SCHEMA"] = {
-            Icon = "Blueprint2.png",
-            Name = "Schéma"
-        },
-        ["SCHEMA CHASSIS"] = {
-            Icon = "Châssis Prime.png",
-            Name = "Schéma Châssis"
-        },
-        ["SCHEMA NEUROPTIQUES"] = {
-            Icon = "Neuroptiques Prime.png",
-            Name = "Schéma Neuroptiques"
-        },
-        ["SCHEMA SYSTEMES"] = {
-            Icon = "Systèmes Prime.png",
-            Name = "Schéma Systèmes"
-        },
-        ["SYSTEMES"] = {
-            Icon = "Systèmes Prime.png",
-            Name = "Systèmes"
-        },
-        ["TETE"] = {
-            Icon = "LamePrime.png",
-            Name = "Tête"
         }
     },
 }

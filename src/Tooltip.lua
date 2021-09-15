@@ -139,7 +139,7 @@ local function getObjDB(objType, conclave)
             retTooltipClass = 'pet-tooltip'
         end,
         ["Relic"] = function()
-            retDBName = 'Module:Void/data'
+            retDBName = 'Module:Relic/data'
             objDB = mw.loadData(retDBName)
             retTable = objDB['Relics']
             retTooltipClass = 'relic-tooltip'
@@ -184,8 +184,7 @@ local function getObjIcon(obj, objType, conclave, imgSize)
         ["Mod"] = function() return 'Icon Mods.png' end,
         ["Pet"] = function() return obj.Icon or obj.Image end,
         ["Relic"] = function()
-            return mw.loadData('Module:Icon/data')["Objets"]["Relique " ..
-                       obj.Tier].icon
+            return mw.loadData('Module:Relic/data')["REF"]["ImageTier"][obj.Tier][1]
         end,
         ["Warframe"] = function() return obj.Portrait end
     }
@@ -207,17 +206,11 @@ local function getObjIcon(obj, objType, conclave, imgSize)
     table.insert(ret, '|')
     table.insert(ret, imgSize)
     table.insert(ret, '|link=')
-    if (objType == 'Relic') then
-        table.insert(ret, obj.Tier)
-        table.insert(ret, " ")
-        table.insert(ret, obj.Name)
+    if (conclave) then table.insert(ret, 'Conclave:') end
+    if (obj.Link ~= nil) then
+        table.insert(ret, obj.Link)
     else
-        if (conclave) then table.insert(ret, 'Conclave:') end
-        if (obj.Link ~= nil) then
-            table.insert(ret, obj.Link)
-        else
-            table.insert(ret, obj.Name)
-        end
+        table.insert(ret, obj.Name)
     end
     table.insert(ret, ']]')
 
@@ -259,15 +252,11 @@ function p.getObjImage(obj, objType, conclave, imgSize)
     table.insert(ret, '|')
     table.insert(ret, imgSize)
     table.insert(ret, '|link=')
-    if (objType == 'Relic') then
-        table.insert(ret, obj.Tier .. " " .. obj.Name)
+    if (conclave) then table.insert(ret, 'Conclave:') end
+    if (obj.Link ~= nil) then
+        table.insert(ret, obj.Link)
     else
-        if (conclave) then table.insert(ret, 'Conclave:') end
-        if (obj.Link ~= nil) then
-            table.insert(ret, obj.Link)
-        else
-            table.insert(ret, obj.Name)
-        end
+        table.insert(ret, obj.Name)
     end
     table.insert(ret, ']]')
 
@@ -283,25 +272,11 @@ local function getObj(objDB, objName, objType)
         local keySet = SHARED.getKeySet(objDB)
         local nbObjects = #keySet
         local i = 1
-        if (objType ~= 'Relic') then
-            -- Classic management
-            while (i <= nbObjects and obj == nil) do
-                local tmp = objDB[keySet[i]]
-                if (tmp.Name == objName) then obj = tmp end
-                i = i + 1
-            end
-        else
-            -- Specific management for Relics
-            local tmp = SHARED.splitString(objName, " ")
-            local relicTier = tmp[1]
-            local relicName = tmp[2]
-            while (i <= nbObjects and obj == nil) do
-                local tmp = objDB[keySet[i]]
-                if (tmp.Name == relicName and tmp.Tier == relicTier) then
-                    obj = tmp
-                end
-                i = i + 1
-            end
+        -- Classic management
+        while (i <= nbObjects and obj == nil) do
+            local tmp = objDB[keySet[i]]
+            if (tmp.Name == objName) then obj = tmp end
+            i = i + 1
         end
     end
     return obj
@@ -366,23 +341,11 @@ function p._tooltipText(objName, objType, newName, conclave, iconless, imgOnly,
     table.insert(ret, ' style="white-space:pre;">')
     if (not imgOnly) then
         -- Build link text
-        local textLink = nil
         if (conclave) then
-            textLink = getObjLink(obj, newName, 'Conclave')
+            table.insert(ret, getObjLink(obj, newName, 'Conclave'))
         else
-            if (objType ~= 'Relic') then
-                -- Classic management
-                table.insert(ret, getObjLink(obj, newName, nil))
-            else
-                -- Specific management for Relics
-                table.insert(ret, '[[')
-                table.insert(ret, objName)
-                if (newName ~= nil) then
-                    table.insert(ret, '|')
-                    table.insert(ret, newName)
-                end
-                table.insert(ret, ']]')
-            end
+            -- Classic management
+            table.insert(ret, getObjLink(obj, newName, nil))
         end
     end
     -- Add image

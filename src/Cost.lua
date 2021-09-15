@@ -16,8 +16,8 @@
 --  @require        [[Module:Warframes]]
 --  @require        [[Module:Icon]]
 --  @require        [[Module:Math]]
+--  @require        [[Module:Relic]]
 --  @require        [[Module:Shared]]
---  @require        [[Module:Void]]
 --  @require        [[Module:Tooltip]]
 --  @release		stable
 --  <nowiki>
@@ -30,8 +30,8 @@ local WeaponModule = require('Module:Weapons')
 local WarframeModule = require('Module:Warframes')
 local Icon = require("Module:Icon")
 local Math = require('Module:Math')
+local RELIC = require('Module:Relic')
 local SHARED = require("Module:Shared")
-local Void = require("Module:Void")
 local TT = require('Module:Tooltip')
 
 -- Utilitaire Recherchem a voir pour deplacer dans un nouveau module:Research dans le futur
@@ -125,7 +125,7 @@ local function buildPartText(part)
             return Icon._Item(part.Name, nil, iconSize)
         end,
         ["Partie Prime"] = function()
-            return Icon._Void(string.upper(SHARED.removeFRAccent(part.Name)), true)
+            return Icon._Item(part.Name .. ' Prime', nil, iconSize)
         end,
         ["Ressource"] = function()
             return Icon._Ressource(part.Name, nil, iconSize)
@@ -267,7 +267,7 @@ local function buildCostBox(itemType, itemName, itemCost)
         end
     end
     -- Print Prime parts
-    if (#primeParts > 0) then
+    --[=[if (#primeParts > 0) then
         local iconSize = 'x32px'
         local tmpItemName = string.gsub(itemName, " Prime", "")
         table.insert(ret, '\n|-')
@@ -287,7 +287,7 @@ local function buildCostBox(itemType, itemName, itemCost)
         end
         table.insert(ret,
             "\n|}\n<span style=\"text-align: justify; display: block; line-height: initial; padding: 10px;\">Lith / Meso / Neo / Axi font référence aux [[Reliques du Néant]]<br><br>'''([[Soute Prime|V]])''' marque les reliques retirées en [[Soute Prime]], mais pouvant toujours être jouées, échangées par ceux qui les possèdent<br><br>'''([[Baro Ki'Teer|B]])''' marque les reliques exclusives de [[Baro Ki'Teer]]</span></div></div>")
-    end
+    end--]=]
     -- Print research
     local isResearch, itemRes = p.isResearch(itemName)
     if (isResearch) then
@@ -338,7 +338,7 @@ local function buildCostBox(itemType, itemName, itemCost)
                         table.insert(ret, Icon._Affinity("Clan"))
                     end
                     table.insert(ret, '\n|-')
-                    tmpResearchLine = buildPartsLine(tmpItemRes.Credits, tmpItemRes.Resources, tmpItemRes.Time, nil,
+                    local tmpResearchLine = buildPartsLine(tmpItemRes.Credits, tmpItemRes.Resources, tmpItemRes.Time, nil,
                         tmpItemRes.Prereq)
                     table.insert(ret, tmpResearchLine)
                     table.insert(ret, '\n|-\n| colspan="6" |<small>Prix duplication ')
@@ -385,46 +385,6 @@ end
 
 local DROPLOCTABLEINIT =
     'class="article-table" style="width:100%" cellspacing="1" cellpadding="1" border="0" align="left"'
-
-local function buildVoidDropLoc(itemName)
-
-    local ret = {}
-    local relicsPerPart = Void.getItemRelics(itemName)
-    if (not SHARED.isTableEmpty(relicsPerPart)) then
-        -- Ordre particulier pour mettre le schema devant
-        local keys = {}
-        for k, _ in SHARED.skpairs(relicsPerPart) do
-            if (k == "SCHEMA") then
-                table.insert(keys, 1, k)
-            else
-                table.insert(keys, k)
-            end
-        end
-        -- Construction du tableau
-        table.insert(ret, '{|')
-        table.insert(ret, DROPLOCTABLEINIT)
-        for _, k in ipairs(keys) do
-            table.insert(ret, '\n! style="text-align:center;" | ')
-            table.insert(ret, Icon._Void(k))
-        end
-        table.insert(ret, '\n|-')
-        for _, k in ipairs(keys) do
-            table.insert(ret, '\n| style="text-align:center;" | ')
-            local relicsCol = {}
-            for _, relic in ipairs(relicsPerPart[k]) do
-                local relicName = relic.Tier .. ' ' .. relic.Name
-                if (relic.IsVaulted == 1) then
-                    table.insert(relicsCol, TT._tooltipText(relicName, 'Relic') .. ' ([[Soute Prime|V]])')
-                else
-                    table.insert(relicsCol, TT._tooltipText(relicName, 'Relic'))
-                end
-            end
-            table.insert(ret, table.concat(relicsCol, '<br/>'))
-        end
-        table.insert(ret, '\n|}')
-    end
-    return table.concat(ret)
-end
 
 local function buildFormaDropLoc()
 
@@ -544,7 +504,7 @@ function p.dropLoc(frame)
     local itemName = (frame.args ~= nil and frame.args[1]) or nil
     if (itemName ~= nil) then
         if (string.find(itemName, "Prime")) then
-            ret = buildVoidDropLoc(itemName)
+            ret = RELIC.printVoidAcquisition(itemName)
         elseif (itemName == "Forma") then
             ret = buildFormaDropLoc()
         else
