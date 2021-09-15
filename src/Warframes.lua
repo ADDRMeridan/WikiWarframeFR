@@ -8,7 +8,7 @@ local SHARED = require("Module:Shared")
 local Ability = require("Module:Ability")
 local UseDefaultList = {"AURAPOLARITY", "EXILUSPOLARITY", "MASTERY"}
 local Tooltip = require('Module:Tooltip')
-local Void = require('Module:Void')
+--local Void = require('Module:Void')
 
 function p.getWarframe(FrameName) -- NOTE: Copied to Module:Ability. Apparently two modules can't `require` each other. That causes infinite loop.
     local warframe = WarframeData["Warframes"][FrameName]
@@ -632,7 +632,7 @@ function p._getValue(Warframe, Value, giveDefault, asString)
             return nil
         end
     elseif (ValName == "VAULTED") then
-        if (string.match(Warframe.Name, " Prime")) then
+        --[=[if (string.match(Warframe.Name, " Prime")) then
             local tmp = Void.isItemVaulted(string.gsub(Warframe.Name, " Prime", ""))
             if (asString) then
                 if (tmp) then
@@ -645,8 +645,8 @@ function p._getValue(Warframe, Value, giveDefault, asString)
             end
         else
             return nil
-        end
-
+        end--]=]
+        return nil
     end
 end
 
