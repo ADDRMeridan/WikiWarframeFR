@@ -67,8 +67,8 @@ local function buildGallery(currentOfferings, wikiClientPlateform)
                 'BARO.buildGallery: "%s" (sensible à la casse) n\'est pas dans [[Module:Baro/data]]', itemName))
         else
             local itemLine = {}
-            table.insert(itemLine, string.format('%s|link=%s|[[%s|%s]]<br/>', mw.title.new(baroItem.Image, 'File')
-                .fileExists and baroItem.Image or SHARED.getDefaultImg(), baroItem.Link, baroItem.Link, itemName))
+            local itemLink = baroItem.Link or itemName
+            table.insert(itemLine, string.format('%s|link=%s|[[%s|%s]]<br/>', SHARED.checkImage(baroItem.Image), itemLink, itemLink, itemName))
             -- Cost Management
             local hasDc = baroItem.DucatCost ~= nil and baroItem.DucatCost > 0
             local hasCc = baroItem.CreditCost ~= nil and baroItem.CreditCost > 0
