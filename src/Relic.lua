@@ -108,6 +108,21 @@ local function filter_vaultedRelic(r)
     return r.Vaulted ~= nil
 end
 
+local function filter_isBaroRelics(r)
+
+    return r.IsBaro
+end
+
+local function filter_missionsRelics(r)
+
+    return filter_availableRelic(r) and (not filter_isBaroRelics(r)) and (r.Tier ~= 5)
+end
+
+local function filter_KuvaRelics(r)
+
+    return r.Tier == 5
+end
+
 --********************
 -- sortBy Functions
 --********************
@@ -183,12 +198,12 @@ local function printBy_Tier(relicArrayGroupedByTier, noSort)
 
     local ret = {'\n{| class="navbox'}
     for i, relicTier in ipairs(RELICS_TIER) do
-        table.insert(ret, '\n|-\n| class="navboxgroup" | ')
-        table.insert(ret, relicTier)
-        table.insert(ret, '\n|')
-        local tmpTTArray = {}
         local toPrint = relicArrayGroupedByTier[i]
-        if(toPrint ~= nil) then
+        local tmpTTArray = {}
+        if(toPrint ~= nil and #toPrint > 0) then
+            table.insert(ret, '\n|-\n| class="navboxgroup" | ')
+            table.insert(ret, relicTier)
+            table.insert(ret, '\n|')
             if(not noSort) then
                 toPrint = sortBy_Name(toPrint)
             end
@@ -221,6 +236,152 @@ function p.getRelicImage(relicName)
     end
 
     return RELICS_IMAGES[relic.Tier][1] or SHARED.getDefaultImg()
+end
+
+--- Affiche un tableau regroupant les différentes images de reliques en fonction de leur raffinage
+--	@function		p.printRelicImages
+--	@return			{string} tableau en wikitext
+function p.printRelicImages()
+
+    local ret = {
+        --Header
+        '\n{| class="article-table"\n|\n! colspan="', SHARED.tableCount(RELICS_RAFFINAGE), '" | Raffinages',
+        --Subheader
+        '\n|-\n! Tier'
+    }
+    local raffCost = 0
+    for _, raffinage in ipairs(RELICS_RAFFINAGE) do
+        table.insert(ret, '\n! ')
+        table.insert(ret, raffinage)
+        
+        if(raffCost == 0) then
+            raffCost = 25
+        else
+            table.insert(ret, ' (')
+            table.insert(ret, raffCost)
+            table.insert(ret, ICON._Ressource("Vestiges du Néant"))
+            table.insert(ret, ')')
+            raffCost = raffCost * 2
+        end
+    end
+    -- Tier Rows
+    for tierId, tierName in ipairs(RELICS_TIER) do
+        --Build row
+        table.insert(ret, '\n|-\n! ')
+        table.insert(ret, tierName)
+        for _, img in ipairs(RELICS_IMAGES[tierId]) do
+            table.insert(ret, '\n| ')
+            table.insert(ret, '[[File:')
+            table.insert(ret, img)
+            table.insert(ret, '|100px]]')
+        end
+    end
+    table.insert(ret, '\n|}')
+
+    return table.concat(ret)
+end
+
+--- Compte le nombre de tiers de reliques différents
+-- @function        p.nbTiers()
+-- @return          {number} nombre de tiers
+function p.nbTiers()
+
+    return SHARED.tableCount(RELICS_TIER)
+end
+
+--- Imprime la table des tiers de relique
+--	@function		p.getTiers
+--  @param          {table} frame environnement de l'appel wiki
+--  @return         {string}
+function p.getTiers(frame)
+
+    local sep = frame.args ~= nil and frame.args[1] or ', '
+    local data = SHARED.shallow_copy(RELICS_TIER)
+
+    return table.concat(data, sep)
+end
+
+--- Imprime la gallerie des reliques intacts
+--	@function		p.printGallery_FirstTierImg
+--  @return         {string} html gallery
+function p.printGallery_FirstTierImg(frame)
+
+    local galleryText = {}
+    for tierId, tier in ipairs(RELICS_TIER) do
+        table.insert(galleryText, '\n')
+        table.insert(galleryText, RELICS_IMAGES[tierId][1])
+        table.insert(galleryText, '|')
+        table.insert(galleryText, tier)
+    end
+
+    local ret = mw.html.create("gallery")
+        :wikitext(table.concat(galleryText))
+    :done()
+
+    return frame:preprocess(tostring(ret))
+end
+
+--- Imprime la section reliques disponible en mission de la page Relique
+--	@function		p.printAvailableVoidRelics
+--  @return         {string} paragraphe html
+function p.printAvailableVoidRelics()
+
+    local relicsArray = p.getRelics(filter_missionsRelics)
+    local ret = {'Il y a actuellement ', #relicsArray, ' [[relique]]s du néant obtenables en récompenses de [[mission]]s.'}
+
+    relicsArray = groupBy_Tier(relicsArray)
+    table.insert(ret, printBy_Tier(relicsArray))
+
+    return table.concat(ret)
+end
+
+--- Imprime la section reliques verrouillées de la page Relique
+--	@function		p.getMissionAvailableRelics
+--  @return         {string} paragraphe html
+function p.printVaultedRelics(frame)
+
+    local relicsArray = p.getRelics(filter_vaultedRelic)
+    local ret = {'Il y a actuellement ',
+        #relicsArray,
+        ' [[relique]]s du néant dans la [[Soute Prime]].',
+        '<div align="center">',
+        '<div class="mw-customtoggle-vaultedRelics" style="cursor:pointer; position:relative; width:60%; background: radial-gradient(#5288DD63, #5288DD63); display:inline-block; padding:4px 2px; margin:2px; line-height:20px; color:white; font-size:13px; border-radius: 3px;">Voir la liste Reliques Verrouillées</div></div>',
+        '<div id="mw-customcollapsible-vaultedRelics" class="mw-collapsible mw-collapsed" style="display:flow-root;">'
+    }
+
+    relicsArray = groupBy_Tier(relicsArray)
+    table.insert(ret, printBy_Tier(relicsArray))
+    table.insert(ret, '</div>')
+
+    return frame:preprocess(table.concat(ret))
+end
+
+--- Imprime la section reliques de baro ki'teer de la page Relique
+--	@function		p.getMissionAvailableRelics
+--  @return         {string} paragraphe html
+function p.printBaroRelics()
+
+    local relicsArray = p.getRelics(filter_isBaroRelics)
+    local ret = {'Il y a actuellement ', #relicsArray, ' [[relique]]s du néant vendues par [[Baro Ki\'Teer]].'}
+
+    relicsArray = groupBy_Tier(relicsArray)
+    table.insert(ret, printBy_Tier(relicsArray))
+
+    return table.concat(ret)
+end
+
+--- Imprime la section reliques requiem de la page Relique
+--	@function		p.printKuvaRelics
+--  @return         {string} paragraphe html
+function p.printKuvaRelics()
+
+    local relicsArray = p.getRelics(filter_KuvaRelics)
+    local ret = {'Il y a actuellement ', #relicsArray, ' [[relique]]s [[kuva]].'}
+
+    relicsArray = groupBy_Tier(relicsArray)
+    table.insert(ret, printBy_Tier(relicsArray))
+
+    return table.concat(ret)
 end
 
 local function isRelicVaulted(relicName)
@@ -606,7 +767,7 @@ function p.buildRelicNav(frame)
     local collapsed = frame.args ~= nil and frame.args[2] ~= nil and frame.args[2] ~= ""
         or false
 
-    return _buildRelicNav(noCat, collapsed)
+    return frame:preprocess(_buildRelicNav(noCat, collapsed))
 end
 
 --- TODO
