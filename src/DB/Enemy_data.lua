@@ -7440,6 +7440,26 @@ local EnemyData = {
         Scans = 10,
         Weapons = nil
     },
+    ["Siphon à Kuva"] = {
+        Affinity = nil,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Grineer",
+        Family = nil,
+        HealthTypes = {
+            ["Bouclier"] = 1,
+            ["Machines"] = 1000,
+        },
+        Icon = nil,
+        Image = "KuvaSiphon.png",
+        Introduced = "19.0",
+        Link = "Siphon à Kuva (Ennemi)",
+        Name = "Siphon à Kuva",
+        NameEN = "Kuva Siphon",
+        Regions = nil,
+        Scans = 20,
+        Weapons = nil
+    },
     ["Soldat"] = {
         Affinity = 100,
         BaseLevel = 1,
