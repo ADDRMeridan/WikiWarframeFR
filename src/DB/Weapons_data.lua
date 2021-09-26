@@ -15804,6 +15804,58 @@ local WeaponData = {
             Type = "Secondaire",
             Users = {"[[Junction|Volt Specter]]", "[[Junction|Ember Specter]]"}
         },
+        ["Magnus Prime"] = {
+            Accuracy = 16,
+            Class = "Pistolet",
+            Conclave = false,
+            Cost = {
+                Credits = 15000,
+                Rush = 50,
+                Time = 12,
+                Parts = {{
+                    Name = "Canon",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Culasse",
+                    Type = "Partie Prime",
+                    Count = 1
+                }, {
+                    Name = "Cellule Orokin",
+                    Type = "Ressource",
+                    Count = 10
+                }}
+            },
+            NormalAttack = {
+                Damage = {
+                    ["Impact"] = 34.2,
+                    ["Perforation"] = 20.9,
+                    ["Tranchant"] = 20.9
+                },
+                CritChance = 0.28,
+                CritMultiplier = 2.8,
+                StatusChance = 0.28,
+                FireRate = 5.83,
+                ShotType = "Hit-Scan",
+                ShotSpeed = 75
+            },
+            Disposition = 0.5,
+            ExilusPolarity = "Naramon",
+            IgnoreEntry = true,	-- TODO: Remove this once Prime releases
+            Image = "Magnus_Prime.png",
+            InternalName = "/Lotus/Weapons/Tenno/Pistols/PrimeMagnus/MagnusPrimeWeapon",
+            Introduced = "30.7",
+            Link = "Magnus_Prime",
+            Magazine = 8,
+            Mastery = 0,
+            MaxAmmo = 210,
+            Name = "Magnus Prime",
+            Polarities = { },
+            Reload = 1.2,
+            Type = "Secondaire",
+            Traits = {"Tenno", "Prime"},
+            Trigger = "Semi-Auto", 
+        },
         ["Marelok"] = {
             Accuracy = 10,
             Class = "Pistolet",
@@ -24253,7 +24305,7 @@ local WeaponData = {
             HeavyRadialDmg = 1040,
             HeavySlamAttack = 1040,
             HeavySlamRadius = 10,
-            Mastery = 0,
+            Mastery = 14,
             MeleeRange = 2.6,
             Name = "Agendus - Principe",
             Image = "Agendus - Principe.png",
@@ -27036,6 +27088,52 @@ local WeaponData = {
             Type = "Principale",
             Users = {"[[Corrupted Crewman]]"}
         },
+        
+        ["Strun Prime"] = {
+			Accuracy = 9.1,
+			NormalAttack = {
+				CritChance = 0.24,
+				CritMultiplier = 2.2,
+				Damage = { ["Impact"] = 19.8, ["Perforation"] = 6.6, ["Tranchant"] = 17.6 },
+				Falloff = { StartRange = 26, EndRange = 52, Reduction = 0.5 },
+				FireRate = 3.33,
+				Multishot = 12,
+				PunchThrough = 0.8,
+				ShotType = "Hit-Scan",
+				StatusChance = 0.0667 
+			},
+			Class = "Fusil à Pompe",
+			Conclave = false,
+			Cost = {
+				Credits = 20000,
+				Parts = {
+					{ Count = 1, Name = "Canon", Type = "Partie Prime" },
+					{ Count = 1, Name = "Culasse", Type = "Partie Prime" },
+					{ Count = 1, Name = "Crosse", Type = "Partie Prime" },
+					{ Count = 10, Name = "Cellule Orokin", Type = "Ressource" } 
+				},
+				Rush = 50,
+				Time = 12 
+			},
+			Disposition = 0.5,
+			ExilusPolarity = "Madurai",
+			Family = "Strun",
+			Image = "Strun Prime.png",
+			InternalName = "/Lotus/Weapons/Tenno/LongGuns/PrimeStrun/PrimeStrunWeapon",
+			Introduced = "30.7",
+			Link = "Strun Prime",
+			Magazine = 10,
+			Mastery = 14,
+			MaxAmmo = 120,
+			Name = "Strun Prime",
+			Polarities = { "Bar", "V", "V" },
+			Reload = 4.6,
+			ReloadStyle = "ByRound",
+			Slot = "Principale",
+			Traits = { "Prime" },
+			Trigger = "Semi-Auto" 
+		},
+        
         ["Strun Wraith"] = {
             Accuracy = 6.7,
             Class = "Fusil à Pompe",
@@ -29863,13 +29961,34 @@ local WeaponData = {
             Type = "Armement du Railjack"
         },
         ["Carcinnox"] = {
-            Class = "Armement du Railjack",
-            Image = "Carcinnox.png",
-            Introduced = "27",
-            Link = "Carcinnox",
-            Name = "Carcinnox",
-            Trigger = "Auto",
-            Type = "Tourelle de Railjack"
+            Accuracy = 16.7,
+			AmmoType = "Cumulation de Chaleur",
+			NormalAttack = {
+				AmmoCost = 8,
+				AttackName = "Normal",
+				CritChance = 0.06,
+				CritMultiplier = 2,
+				Damage = { ["Perforation"] = 35, ["Poison"] = 45 },
+				Falloff = { EndRange = 4000, Reduction = 1, StartRange = 2000 },
+				FireRate = 15,
+				ShotSpeed = "?",
+				ShotType = "Projectile",
+				StatusChance = 0.08 
+			},
+			Class = "Armement du Railjack",
+			Family = "Carcinnox",
+			Image = "Carcinnox.png",
+			Introduced = "27",
+			Link = "Carcinnox",
+			Magazine = 1000,
+			MaxAmmo = math.huge,
+			Name = "Carcinnox",
+			Reload = 2,
+			ReloadDelay = 0,
+			ReloadRate = 500,
+			ReloadStyle = "Régénération/Recharge",
+			Slot = "Tourelle de Railjack",
+			Trigger = "Auto" 
         },
         ["Cryophon"] = {
             Class = "Armement du Railjack",
@@ -30127,7 +30246,7 @@ local WeaponData = {
                 StatusChance = 0.24,
                 FireRate = 1.0
             },
-            Polarities = none,
+            Polarities = nil,
             SlideAttack = 500,
             MeleeSlam = {
                 Damage = 750,
