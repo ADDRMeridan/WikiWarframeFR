@@ -691,7 +691,7 @@ function p.getConclaveValue(frame)
     return p._getValue(theFrame, vName, useDefault, true)
 end
 
-function getWarframeComparisonRow(wframe, useRank30)
+local function getWarframeComparisonRow(wframe, useRank30)
     if (useRank30 == nil) then
         useRank30 = false
     end
@@ -711,7 +711,7 @@ function getWarframeComparisonRow(wframe, useRank30)
     return result
 end
 
-function getWarframeComparisonTable(Warframes, useRank30)
+local function getWarframeComparisonTable(Warframes, useRank30)
     local styleString = "border: 1px solid black;border-collapse: collapse;" -- "background-color:transparent;color:black;border: 1px solid black;border-collapse: collapse;"
     local tHeader = ""
     tHeader = tHeader .. '\n{| cellpadding="1" cellspacing="0" class="listtable sortable" style="font-size:11px;"' -- style="margin:auto;text-align:center;border:1px solid black;font-size:11px;"'
@@ -1012,7 +1012,7 @@ function p._tooltip(wfName, conclave)
 
     local portrait = warframe.Portrait
     if portrait == nil and conclave == true then
-        tempWF = p.getWarframe(wfName)
+        local tempWF = p.getWarframe(wfName)
         portrait = tempWF.Portrait
     end
     if portrait == nil then
