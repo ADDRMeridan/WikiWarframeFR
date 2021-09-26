@@ -2382,6 +2382,22 @@ local EnemyData = {
         Scans = 10,
         Weapons = nil
     },
+    ["Drone Orokin"] = {
+        Affinity = 57,
+        BaseLevel = 1,
+        Capacities = nil,
+        Faction = "Orokin",
+        Family = "Drone Orokin",
+        HealthTypes = {["Bouclier"] = 50, ["Robot"] = 35},
+        Image = "Drone Orokin.png",
+        Introduced = "8.0",
+        Link = "Drone Orokin",
+        Name = "Drone Orokin",
+        NameEN = "Orokin Drone",
+        Regions = {"Néant"},
+        Scans = 20,
+        Weapons = nil
+    },
     ["Drone Scavenger"] = {
         Affinity = 100,
         BaseLevel = 1,
@@ -4711,7 +4727,7 @@ local EnemyData = {
         Scans = 5,
         Weapons = nil
     },
-    ["Maître de Drahk"] = {
+    ["Maître Drahk"] = {
         Affinity = 150,
         BaseLevel = 12,
         Capacities = nil,
@@ -4720,8 +4736,8 @@ local EnemyData = {
         HealthTypes = {["Armure en Ferrite"] = 200, ["Chair Clonée"] = 500},
         Image = "MaitreDrahk.png",
         Introduced = "15.0",
-        Link = nil,
-        Name = "Maître de Drahk",
+        Link = "Maître Drahk",
+        Name = "Maître Drahk",
         NameEN = "Drahk Master",
         Regions = nil,
         Scans = 5,
@@ -7834,7 +7850,7 @@ local EnemyData = {
         Weapons = {"Lance-glace"}
     },
     -- T
-    ["Technicien Corpus"] = {
+    ["Technicien"] = {
         Affinity = 500,
         BaseLevel = 15,
         Capacities = nil,
@@ -7843,8 +7859,8 @@ local EnemyData = {
         HealthTypes = {["Proto-Bouclier"] = 250, ["Chair"] = 700},
         Image = "CrewmanTech.png",
         Introduced = nil,
-        Link = nil,
-        Name = "Technicien Corpus",
+        Link = "Technicien",
+        Name = "Technicien",
         NameEN = "Corpus Tech",
         Regions = {
             "Vénus", "Terre", "Mars", "Jupiter", "Neptune", "Pluton", "Eris",
