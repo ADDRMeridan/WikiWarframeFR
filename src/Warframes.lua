@@ -191,7 +191,7 @@ function p._getValue(Warframe, Value, giveDefault, asString)
         return nil
     end
 
-    ValName = string.upper(Value)
+    local ValName = string.upper(Value)
     if (ValName == "NAME") then
         if (Warframe.Name ~= nil) then
             return Warframe.Name
@@ -855,7 +855,13 @@ function p.getReleaseDateRow(warframe, prime)
     end
 
     if (prime) then
-        result = result .. ' || ' .. p._getValue(warframe, "VAULTED", true, true)
+        result = result .. ' || '
+        local tmp = p._getValue(warframe, "VAULTED", true, true)
+        if(tmp ~= nil) then
+            result = result .. tmp
+        else
+            result = result .. 'N/A'
+        end
     end
 
     return result
