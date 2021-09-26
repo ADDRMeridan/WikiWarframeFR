@@ -27131,9 +27131,9 @@ local WeaponData = {
 			ReloadStyle = "ByRound",
 			Slot = "Principale",
 			Traits = { "Prime" },
-			Trigger = "Semi-Auto" 
-		},
-        
+			Trigger = "Semi-Auto",
+            Type = "Principale"
+        },
         ["Strun Wraith"] = {
             Accuracy = 6.7,
             Class = "Fusil à Pompe",
