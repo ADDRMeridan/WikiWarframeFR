@@ -1327,6 +1327,10 @@ local IconData = {
         -- T
         -- U
         -- V
+        ["Vestiges du Néant"] = {
+            icon = "LuminousIconLarge.png",
+            link = "Vestiges du Néant"
+        },
         -- W
         -- X
         -- Y
@@ -1562,10 +1566,6 @@ local IconData = {
         ["Fibres Somatiques"] = {
             icon = "Fibres Somatiques.png",
             link = "Fibres Somatiques"
-        },
-        ["Vestiges du Néant"] = {
-            icon = "LuminousIconLarge.png",
-            link = "Vestiges du Néant"
         },
         ["Condensateur Javlok"] = {
             icon = "Condensateur_Javlok.png",
