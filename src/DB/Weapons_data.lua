@@ -29988,7 +29988,8 @@ local WeaponData = {
 			ReloadRate = 500,
 			ReloadStyle = "Régénération/Recharge",
 			Slot = "Tourelle de Railjack",
-			Trigger = "Auto" 
+			Trigger = "Auto",
+            Type = "Railjack"
         },
         ["Cryophon"] = {
             Class = "Armement du Railjack",
