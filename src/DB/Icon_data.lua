@@ -214,11 +214,7 @@ local IconData = {
             icon = "OroFusexOrnamentA.png",
             link = "Sculpture Ayatan#Étoiles"
         },
-        ["Étoile Prime"] = {
-            icon = "LamePrime.png",
-            Name = "Étoiles"
-        },
-        ["Étoiles Prime"] = {
+        ["Etoiles Prime"] = {
             icon = "LamePrime.png",
             Name = "Étoiles"
         },
