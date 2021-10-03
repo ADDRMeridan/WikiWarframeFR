@@ -1631,55 +1631,29 @@ local DropData = {
         Alias = "Onslaught",
         ShortName = "Assaut du Sanctuaire Élite",
         Rewards = {
-            ["A"] = {
-                {"Endo", "Endo", 9.48, 400},
-                {"Lato Vandal Culasse", "Schéma", 2.01},
-                {"Scène Fente Forteresse Kuva", "Scène", 5.53},
-                {"Scène du Balcon de Lua", "Scène", 5.53},
-                {"Meso C6 (Éclatante)", "Relique", 5.53},
-                {"Lith D4 (Éclatante)", "Relique", 9.48},
-                {"Lith B8 (Éclatante)", "Relique", 9.48},
-                {"Lith G3 (Éclatante)", "Relique", 9.48},
-                {"Lith P5 (Éclatante)", "Relique", 9.48},
-                {"Lith T5 (Éclatante)", "Relique", 9.48},
-                {"Lith I1 (Éclatante)", "Relique", 9.48},
-                {"Meso K3 (Éclatante)", "Relique", 5.53},
-                {"Lith T4 (Éclatante)", "Relique", 9.48}
-            },
-            ["B"] = {
-                {"Éclat d'Eidolon Synthétique", "Ressource", 10.84},
-                {"Endo", "Endo", 10.84, 400},
-                {"Meso P4 (Éclatante)", "Relique", 10.84},
-                {"Braton Vandal Canon", "Schéma", 4.42},
-                {"Braton Vandal Culasse", "Schéma", 4.42},
-                {"Lato Vandal Schéma", "Schéma", 2.01},
-                {"Meso I1 (Éclatante)", "Relique", 10.84},
-                {"Meso P2 (Éclatante)", "Relique", 10.84},
-                {"Neo N14 (Éclatante)", "Relique", 4.42},
-                {"Neo Z7 (Éclatante)", "Relique", 4.42},
-                {"Meso D6 (Éclatante)", "Relique", 10.84},
-                {"Meso T4 (Éclatante)", "Relique", 10.84},
-                {"Neo N13 (Éclatante)", "Relique", 4.42}
-            },
-            ["C"] = {
-                {"Endo", "Endo", 15.18, 750},
-                {"Braton Vandal Crosse", "Schéma", 2.01},
-                {"Braton Vandal Schéma", "Schéma", 2.01},
-                {"Lato Vandal Canon", "Schéma", 2.01},
-                {"Floraison Atypique", "Mod", 2.01},
-                {"Boursouflure Atypique", "Mod", 2.01},
-                {"Axi O5 (Éclatante)", "Relique", 2.01},
-                {"Axi Z1 (Éclatante)", "Relique", 2.01},
-                {"Neo T2 (Éclatante)", "Relique", 15.18},
-                {"Neo P2 (Éclatante)", "Relique", 15.18},
-                {"Axi A11 (Éclatante)", "Relique", 2.01},
-                {"Axi A13 (Éclatante)", "Relique", 2.01},
-                {"Axi W2 (Éclatante)", "Relique", 2.01},
-                {"Neo B7 (Éclatante)", "Relique", 15.18},
-                {"Axi C6 (Éclatante)", "Relique", 2.01},
-                {"Axi T6 (Éclatante)", "Relique", 2.01},
-                {"Neo N15 (Éclatante)", "Relique", 15.18}
-            }
+            ["A"] = {{"Endo", "Endo", 9.48, 400}, {"Lato Vandal Culasse", "Schéma", 2.01},
+                     {"Scène Fente Forteresse Kuva", "Scène", 5.53}, {"Scène du Balcon de Lua", "Scène", 5.53},
+                     {"Meso C6 (Éclatante)", "Relique", 5.53}, {"Lith D4 (Éclatante)", "Relique", 9.48},
+                     {"Lith B8 (Éclatante)", "Relique", 9.48}, {"Lith G3 (Éclatante)", "Relique", 9.48},
+                     {"Lith P5 (Éclatante)", "Relique", 9.48}, {"Lith T5 (Éclatante)", "Relique", 9.48},
+                     {"Lith I1 (Éclatante)", "Relique", 9.48}, {"Meso K3 (Éclatante)", "Relique", 5.53},
+                     {"Lith T4 (Éclatante)", "Relique", 9.48}},
+            ["B"] = {{"Éclat d'Eidolon Synthétique", "Ressource", 10.84}, {"Endo", "Endo", 10.84, 400},
+                     {"Meso P4 (Éclatante)", "Relique", 10.84}, {"Braton Vandal Canon", "Schéma", 4.42},
+                     {"Braton Vandal Culasse", "Schéma", 4.42}, {"Lato Vandal Schéma", "Schéma", 2.01},
+                     {"Meso I1 (Éclatante)", "Relique", 10.84}, {"Meso P2 (Éclatante)", "Relique", 10.84},
+                     {"Neo N14 (Éclatante)", "Relique", 4.42}, {"Neo Z7 (Éclatante)", "Relique", 4.42},
+                     {"Meso D6 (Éclatante)", "Relique", 10.84}, {"Meso T4 (Éclatante)", "Relique", 10.84},
+                     {"Neo N13 (Éclatante)", "Relique", 4.42}},
+            ["C"] = {{"Endo", "Endo", 15.18, 750}, {"Braton Vandal Crosse", "Schéma", 2.01},
+                     {"Braton Vandal Schéma", "Schéma", 2.01}, {"Lato Vandal Canon", "Schéma", 2.01},
+                     {"Floraison Atypique", "Mod", 2.01}, {"Boursouflure Atypique", "Mod", 2.01},
+                     {"Axi O5 (Éclatante)", "Relique", 2.01}, {"Axi Z1 (Éclatante)", "Relique", 2.01},
+                     {"Neo T2 (Éclatante)", "Relique", 15.18}, {"Neo P2 (Éclatante)", "Relique", 15.18},
+                     {"Axi A11 (Éclatante)", "Relique", 2.01}, {"Axi A13 (Éclatante)", "Relique", 2.01},
+                     {"Axi W2 (Éclatante)", "Relique", 2.01}, {"Neo B7 (Éclatante)", "Relique", 15.18},
+                     {"Axi C6 (Éclatante)", "Relique", 2.01}, {"Axi T6 (Éclatante)", "Relique", 2.01},
+                     {"Neo N15 (Éclatante)", "Relique", 15.18}}
         }
     }, {
         Type = "Arbitrage",
@@ -4231,8 +4205,8 @@ local DropData = {
         }
     }, {
         Type = "Empyrée",
-        Tier = "Venus",
-        Alias = "VenusProxima",
+        Tier = "Vénus",
+        Alias = "VénusProxima",
         Rewards = {
             ["A"] = {{"Endo", "Endo", 14.63, 100}, {"Endo", "Endo", 9.76, 150}, {"Moteur Lavan Mk I", "Schéma", 7.32},
                      {"Réacteur Lavan Mk I", "Schéma", 7.32}, {"Réseau de Boucliers Lavan Mk I", "Schéma", 7.32},
@@ -4244,8 +4218,8 @@ local DropData = {
         }
     }, {
         Type = "Empyrée",
-        Tier = "VenusVolatile",
-        Alias = "VenusProximaVolatile",
+        Tier = "VénusVolatile",
+        Alias = "VénusProximaVolatile",
         Rewards = {
             ["A"] = {{"Endo", "Endo", 14.63, 100}, {"Endo", "Endo", 9.76, 150}, {"Moteurs Lavan Mk I", "Schéma", 7.32},
                      {"Réacteur Lavan Mk I", "Schéma", 7.32}, {"Réseau de Bouclier Lavan Mk I", "Schéma", 7.32},
@@ -4257,8 +4231,8 @@ local DropData = {
         }
     }, {
         Type = "Empyrée",
-        Tier = "VenusDefense",
-        Alias = "VenusProximaDefense",
+        Tier = "VénusDefense",
+        Alias = "VénusProximaDefense",
         Rewards = {
             ["A"] = {{"Endo", "Endo", 40, 100}, {"Moteur Lavan Mk I", "Schéma", 20},
                      {"Réacteur Lavan Mk I", "Schéma", 20}, {"Lith G4", "Relique", 6.67},
@@ -4273,8 +4247,8 @@ local DropData = {
         }
     }, {
         Type = "Empyrée",
-        Tier = "VenusOrphix",
-        Alias = "VenusProximaOrphix",
+        Tier = "VénusOrphix",
+        Alias = "VénusProximaOrphix",
         Rewards = {
             ["A"] = {{"Endo", "Endo", 28.57, 100}, {"Moteurs Lavan Mk I", "Schéma", 14.29},
                      {"Réacteur Lavan Mk I", "Schéma", 14.29}, {"Réseau de Bouclier Lavan Mk I", "Schéma", 14.29},
@@ -4294,8 +4268,8 @@ local DropData = {
         }
     }, {
         Type = "Empyrée",
-        Tier = "VenusSurvie",
-        Alias = "VenusProximaSurvie",
+        Tier = "VénusSurvie",
+        Alias = "VénusProximaSurvie",
         Rewards = {
             ["A"] = {{"Endo", "Endo", 40, 100}, {"Moteur Lavan Mk I", "Schéma", 20},
                      {"Réacteur Lavan Mk I", "Schéma", 20}, {"Lith G4", "Relique", 6.67},
@@ -4310,8 +4284,8 @@ local DropData = {
         }
     }, {
         Type = "Empyrée",
-        Tier = "VenusEspionnage",
-        Alias = "VenusProximaEspionnage",
+        Tier = "VénusEspionnage",
+        Alias = "VénusProximaEspionnage",
         Rewards = {
             ["A"] = {{"Endo", "Endo", 30, 100}, {"Endo", "Endo", 16.67, 150}, {"Miséricorde Rapide", "Mod", 16.67},
                      {"Drain de Puissance", "Mod", 10}, {"Pare-Feu", "Mod", 10}, {"Code Malicieux", "Mod", 6.67},
@@ -4327,8 +4301,8 @@ local DropData = {
         }
     }, {
         Type = "Empyrée",
-        Tier = "VenusExtra",
-        Alias = "VenusProximaExtra",
+        Tier = "VénusExtra",
+        Alias = "VénusProximaExtra",
         Rewards = {
             ["A"] = {{"Diodes Cubiques", "Ressource", 28.57, 200}, {"Titane", "Ressource", 28.57, 200},
                      {"Isos", "Ressource", 14.29, 5}, {"Astérite", "Ressource", 14.29, 5},
@@ -4336,8 +4310,8 @@ local DropData = {
         }
     }, {
         Type = "Empyrée",
-        Tier = "VenusCaches",
-        Alias = "VenusProximaCaches",
+        Tier = "VénusCaches",
+        Alias = "VénusProximaCaches",
         Rewards = {
             ["A"] = {{"Endo", "Endo", 26.09, 100}, {"Endo", "Endo", 17.39, 150}, {"Grelin", "Mod", 8.70},
                      {"Bélier à Particules", "Mod", 8.70}, {"Explosion Éclatante", "Mod", 8.70},
