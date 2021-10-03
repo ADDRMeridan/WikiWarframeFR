@@ -218,6 +218,10 @@ local IconData = {
             icon = "LamePrime.png",
             Name = "Étoiles"
         },
+        ["Étoiles Prime"] = {
+            icon = "LamePrime.png",
+            Name = "Étoiles"
+        },
         ["Épaulières Mortuus"] = {
             icon = "Épaulières Mortuus.png",
             link = "Cosmétiques de Warframe"
