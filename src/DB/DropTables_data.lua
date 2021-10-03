@@ -4453,7 +4453,7 @@ local DropData = {
         }
     }, {
         Type = "Empyrée",
-        Tier = "CorpusVoileVolatile",
+        Tier = "VoileVolatile",
         Alias = "GrineerVoileProximaVolatile",
         Rewards = {
             ["A"] = {{"Endo", "Endo", 14.46, 400}, {"Endo", "Endo", 9.64, 600},
