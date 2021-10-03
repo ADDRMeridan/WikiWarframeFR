@@ -770,7 +770,7 @@ local function findItemInDrops(itemName, itemType, drops)
     return ret
 end
 
-local function getItemMissionsDropLoc(itemName, itemType)
+function p.getItemMissionsDropLoc(itemName, itemType)
 
     local ret = {}
     if(itemName ~= nil and itemType ~= nil) then
@@ -802,8 +802,7 @@ function p.getRelicDropLoc(relicName)
 
     local ret = nil
     if(relicName ~= nil) then
-        local itemType = 'Relique'
-        local dropLocs = getItemMissionsDropLoc(relicName, itemType)
+        local dropLocs = p.getItemMissionsDropLoc(relicName, 'Relique')
         if(#dropLocs > 0) then
             --Organize data (groupby)
             local tmpArray = {}

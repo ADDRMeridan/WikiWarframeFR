@@ -1,6 +1,8 @@
 -- Map pour les reliques
 local RELICMAP = {
-    [1] = "Axi A14"
+    [1] = "Axi A14",
+    [2] = "Lith B4",
+    [3] = "Lith N7"
 }
 
 -- Constantes pour les warframes de bases
@@ -33,11 +35,17 @@ local DropData = {
         Type = "Capture",
         Tier = "Néant T1",
         Alias = "NéantCapture1",
-        ShortName = "[[Néant]]",
         Rewards = {
-            ["A"] = {{"Lith D4", "Relique", 11.11}, {"Lith B8", "Relique", 11.11}, {"Lith G3", "Relique", 11.11},
-                     {"Lith P5", "Relique", 11.11}, {"Lith T5", "Relique", 11.11}, {"Lith I1", "Relique", 11.11},
-                     {"Lith K5", "Relique", 11.11}, {"Lith M7", "Relique", 11.11}, {"Lith T4", "Relique", 11.11}}
+            ["A"] = {
+                {"Lith G4", "Relique", 12.50},
+		        {"Lith T7", "Relique", 12.50},
+		        {"Lith K7", "Relique", 12.50},
+                {RELICMAP[3], "Relique", 12.50},
+		        {"Lith A4", "Relique", 12.50},
+		        {"Lith I1", "Relique", 12.50},
+                {"Lith N8", "Relique", 12.50},
+		        {RELICMAP[2], "Relique", 12.50}
+            }
         }
     }, {
         Type = "Capture",
@@ -59,19 +67,42 @@ local DropData = {
         Alias = "Defection1",
         ShortName = "[[Récompense de Mission#Tier de Mission|T1]]",
         Rewards = {
-            ["A"] = {{"Cache de Crédits", "Credits", 13.92, 2000}, {"Cache de Crédits", "Credits", 13.92, 2000},
-                     {"Cache de Crédits", "Credits", 13.92, 2000}, {"Cache de Crédits", "Credits", 13.92, 2000},
-                     {"Endo", "Endo", 13.92, 100}, {"Endo", "Endo", 13.92, 100}, {"Endo", "Endo", 13.92, 100},
-                     {"Châtie-Corrompu", "Mod", 2.58}},
-            ["B"] = {{"Expulse-Corrompu", "Mod", 5.53}, {"{{WF|Harrow}} - Systèmes", "Schéma", 2.01},
-                     {"Purifie-Corrompu", "Mod", 5.53}, {"Fléau des Corrompus", "Mod", 5.53},
-                     {"Intensité", "Mod", 5.53}, {"Lith D4", "Relique", 10.84}, {"Lith B8", "Relique", 10.84},
-                     {"Lith G3", "Relique", 10.84}, {"Lith P5", "Relique", 10.84}, {"Lith T5", "Relique", 10.84},
-                     {"Lith I1", "Relique", 10.84}, {"Lith T4", "Relique", 10.84}},
-            ["C"] = {{"Accélération", "Mod", 7.52}, {"Frappe Durable", "Mod", 7.52},
-                     {"{{WF|Harrow}} - Systèmes", "Schéma", 7.52}, {"Lith D4", "Relique", 11.06},
-                     {"Lith B8", "Relique", 11.06}, {"Lith G3", "Relique", 11.06}, {"Lith P5", "Relique", 11.06},
-                     {"Lith T5", "Relique", 11.06}, {"Lith I1", "Relique", 11.06}, {"Lith T4", "Relique", 11.06}}
+            ["A"] = {
+                {"Cache de Crédits", "Credits", 13.92, 2000},
+                {"Cache de Crédits", "Credits", 13.92, 2000},
+                {"Cache de Crédits", "Credits", 13.92, 2000},
+                {"Cache de Crédits", "Credits", 13.92, 2000},
+                {"Endo", "Endo", 13.92, 100},
+                {"Endo", "Endo", 13.92, 100},
+                {"Endo", "Endo", 13.92, 100},
+                {"Châtie-Corrompu", "Mod", 2.58}
+            },
+            ["B"] = {
+                {"Expulse-Corrompu", "Mod", 5.53},
+                {"{{WF|Harrow}} - Systèmes", "Schéma", 2.01},
+                {"Purifie-Corrompu", "Mod", 5.53},
+                {"Fléau des Corrompus", "Mod", 5.53},
+                {"Intensité", "Mod", 5.53},
+                {"Lith D4", "Relique", 10.84},
+                {"Lith B8", "Relique", 10.84},
+                {"Lith G3", "Relique", 10.84},
+                {RELICMAP[3], "Relique", 10.84},
+                {"Lith T5", "Relique", 10.84},
+                {"Lith I1", "Relique", 10.84},
+                {"Lith T4", "Relique", 10.84}
+            },
+            ["C"] = {
+                {"Accélération", "Mod", 7.52},
+                {"Frappe Durable", "Mod", 7.52},
+                {"{{WF|Harrow}} - Systèmes", "Schéma", 7.52},
+                {"Lith D4", "Relique", 11.06},
+                {"Lith B8", "Relique", 11.06},
+                {"Lith G3", "Relique", 11.06},
+                {RELICMAP[3], "Relique", 11.06},
+                {"Lith T5", "Relique", 11.06},
+                {"Lith I1", "Relique", 11.06},
+                {"Lith T4", "Relique", 11.06}
+            }
         }
     }, {
         Type = "Désertion",
@@ -140,7 +171,7 @@ local DropData = {
             ["A"] = {{"Mutation de Chargeur", "Mod", 9.09}, {"Chargeur Trafiqué", "Mod", 9.09},
                      {"Point de Pression", "Mod", 9.09}, {"Tambour de Munitions", "Mod", 9.09},
                      {"Lith D4", "Relique", 9.09}, {"Lith B8", "Relique", 9.09}, {"Lith G3", "Relique", 9.09},
-                     {"Lith P5", "Relique", 9.09}, {"Lith T5", "Relique", 9.09}, {"Lith I1", "Relique", 9.09},
+                     {RELICMAP[3], "Relique", 9.09}, {"Lith T5", "Relique", 9.09}, {"Lith I1", "Relique", 9.09},
                      {"Lith T4", "Relique", 9.09}},
             ["B"] = {{"Bobine Réflexe", "Mod", 8.33}, {"Balles Cryogéniques", "Mod", 8.33},
                      {"Antre de l'Enfer", "Mod", 8.33}, {"Toucher Choquant", "Mod", 8.33}, {"Endo", "Endo", 8.33, 100},
@@ -240,7 +271,7 @@ local DropData = {
                      {"Mutation de Chargeur", "Mod", 6.90}, {"Chargeur Trafiqué", "Mod", 6.90},
                      {"Point de Pression", "Mod", 1.01}, {"Tambour de Munitions", "Mod", 7.37},
                      {"Mains Rapides", "Mod", 7.37}, {"Véritable Punition", "Mod", 1.01}, {"Lith D4", "Relique", 6.90},
-                     {"Lith B8", "Relique", 6.90}, {"Lith G3", "Relique", 6.90}, {"Lith P5", "Relique", 6.90},
+                     {"Lith B8", "Relique", 6.90}, {"Lith G3", "Relique", 6.90}, {RELICMAP[3], "Relique", 6.90},
                      {"Lith T5", "Relique", 6.90}, {"Lith I1", "Relique", 6.90}, {"Lith T4", "Relique", 6.90}},
             ["B"] = {{"Détente Rapide", "Mod", 8.43}, {"Mains Rapides", "Mod", 1.58}, {"Frappe Tendue", "Mod", 8.43},
                      {"Perception Vitale", "Mod", 8.43}, {"Coup Perforant", "Mod", 1.58},
@@ -270,7 +301,7 @@ local DropData = {
         ShortName = "[[Épave Orokin DeReliquet|Épave]]",
         Rewards = {
             ["A"] = {{"Endo", "Endo", 11.11, 250}, {"Endo", "Endo", 11.11, 250}, {"Lith D4", "Relique", 11.11},
-                     {"Lith B8", "Relique", 11.11}, {"Lith G3", "Relique", 11.11}, {"Lith P5", "Relique", 11.11},
+                     {"Lith B8", "Relique", 11.11}, {"Lith G3", "Relique", 11.11}, {RELICMAP[3], "Relique", 11.11},
                      {"Lith T5", "Relique", 11.11}, {"Lith I1", "Relique", 11.11}, {"Lith T4", "Relique", 11.11}},
             ["B"] = {{"Endo", "Endo", 38.72, 250}, {"Endo", "Endo", 38.72, 250},
                      {"Coord. Nav Alad V Mutaliste", "Ressource", 22.56}},
@@ -282,23 +313,53 @@ local DropData = {
         Type = "Défense",
         Tier = "Néant T1",
         Alias = "NéantDéfense1",
-        ShortName = "[[Néant]]",
         Rewards = {
-            ["A"] = {{"Lith D4", "Relique", 11.11}, {"Lith B8", "Relique", 11.11}, {"Lith G3", "Relique", 11.11},
-                     {"Lith P5", "Relique", 11.11}, {"Lith T5", "Relique", 11.11}, {"Lith I1", "Relique", 11.11},
-                     {"Lith K5", "Relique", 11.11}, {"Lith M7", "Relique", 11.11}, {"Lith T4", "Relique", 11.11}},
-            ["B"] = {{"Meso P4", "Relique", 2.82}, {"Meso C6", "Relique", 2.82}, {"Meso I1", "Relique", 2.82},
-                     {"Meso P2", "Relique", 2.82}, {"Lith D4", "Relique", 8.60}, {"Lith B8", "Relique", 8.60},
-                     {"Lith G3", "Relique", 8.60}, {"Lith P5", "Relique", 8.60}, {"Lith T5", "Relique", 8.60},
-                     {"Lith I1", "Relique", 8.60}, {"Meso K3", "Relique", 2.82}, {"Meso D6", "Relique", 2.82},
-                     {"Meso T4", "Relique", 2.82}, {"Lith T4", "Relique", 8.60}, {"Lith K5", "Relique", 8.60},
-                     {"Lith M7", "Relique", 8.60}, {"Meso E5", "Relique", 2.82}},
-            ["C"] = {{"Meso P4", "Relique", 5.88}, {"Meso C6", "Relique", 5.88}, {"Meso I1", "Relique", 5.88},
-                     {"Meso P2", "Relique", 5.88}, {"Lith D4", "Relique", 5.88}, {"Lith B8", "Relique", 5.88},
-                     {"Lith G3", "Relique", 5.88}, {"Lith P5", "Relique", 5.88}, {"Lith T5", "Relique", 5.88},
-                     {"Lith I1", "Relique", 5.88}, {"Meso K3", "Relique", 5.88}, {"Meso D6", "Relique", 5.88},
-                     {"Meso T4", "Relique", 5.88}, {"Lith K5", "Relique", 5.88}, {"Lith M7", "Relique", 5.88},
-                     {"Meso E5", "Relique", 5.88}, {"Lith T4", "Relique", 5.88}}
+            ["A"] = {
+                {"Lith G4", "Relique", 12.50},
+                {"Lith T7", "Relique", 12.50},
+                {"Lith K7", "Relique", 12.50},
+                {RELICMAP[3], "Relique", 12.50},
+                {"Lith A4", "Relique", 12.50},
+                {"Lith I1", "Relique", 12.50},
+                {RELICMAP[2], "Relique", 12.50},
+                {"Lith N8", "Relique", 12.50},
+            },
+            ["B"] = {
+                {"Meso P4", "Relique", 2.82},
+				{"Meso C6", "Relique", 2.82},
+				{"Meso B6", "Relique", 2.82},
+				{"Meso B5", "Relique", 2.82},
+				{"Lith G4", "Relique", 9.68},
+				{"Lith T7", "Relique", 9.68},
+				{"Lith K7", "Relique", 9.68},
+				{RELICMAP[3], "Relique", 9.68},
+				{"Lith A4", "Relique", 9.68},
+				{"Lith I1", "Relique", 9.68},
+				{"Meso P5", "Relique", 2.82},
+				{"Meso S10", "Relique", 2.82},
+				{"Meso Z4", "Relique", 2.82},
+				{"Lith N8", "Relique", 9.68},
+				{RELICMAP[2], "Relique", 9.68},
+				{"Meso N6", "Relique", 2.82},
+            },
+            ["C"] = {
+                {"Meso P4", "Relique", 6.25},
+                {"Meso C6", "Relique", 6.25},
+                {"Meso B6", "Relique", 6.25},
+                {"Meso B5", "Relique", 6.25},
+                {"Lith G4", "Relique", 6.25},
+                {"Lith T7", "Relique", 6.25},
+                {"Lith K7", "Relique", 6.25},
+                {RELICMAP[3], "Relique", 6.25},
+                {"Lith A4", "Relique", 6.25},
+                {"Lith I1", "Relique", 6.25},
+                {"Meso P5", "Relique", 6.25},
+                {"Meso S10", "Relique", 6.25},
+                {"Meso Z4", "Relique", 6.25},
+                {RELICMAP[2], "Relique", 6.25},
+                {"Meso N6", "Relique", 6.25},
+                {"Lith N8", "Relique", 6.25},
+            }
         }
     }, {
         Type = "Défense",
@@ -360,10 +421,10 @@ local DropData = {
         ShortName = "[[Mars]]",
         Rewards = {
             ["A"] = {{"Lith D4", "Relique", 14.29}, {"Lith B8", "Relique", 14.29}, {"Lith G3", "Relique", 14.29},
-                     {"Lith P5", "Relique", 14.29}, {"Lith T5", "Relique", 14.29}, {"Lith I1", "Relique", 14.29},
+                     {RELICMAP[3], "Relique", 14.29}, {"Lith T5", "Relique", 14.29}, {"Lith I1", "Relique", 14.29},
                      {"Lith T4", "Relique", 14.29}},
             ["B"] = {{"Lith D4", "Relique", 14.29}, {"Lith B8", "Relique", 14.29}, {"Lith G3", "Relique", 14.29},
-                     {"Lith P5", "Relique", 14.29}, {"Lith T5", "Relique", 14.29}, {"Lith I1", "Relique", 14.29},
+                     {RELICMAP[3], "Relique", 14.29}, {"Lith T5", "Relique", 14.29}, {"Lith I1", "Relique", 14.29},
                      {"Lith T4", "Relique", 14.29}},
             ["C"] = {{"Meso C6", "Relique", 14.29}, {"Meso P2", "Relique", 14.29}, {"Meso K3", "Relique", 14.29},
                      {"Meso P4", "Relique", 14.29}, {"Meso D6", "Relique", 14.29}, {"Meso I1", "Relique", 14.29},
@@ -473,14 +534,14 @@ local DropData = {
             ["B"] = {{"Parade", "Mod", 7.69}, {"Fibre d'Acier", "Mod", 7.69}, {"Dentelure", "Mod", 7.69},
                      {"Balles Incendiaires", "Mod", 7.69}, {"Nuée de Dards", "Mod", 7.69}, {"Intensité", "Mod", 7.69},
                      {"Lith D4", "Relique", 7.69}, {"Lith B8", "Relique", 7.69}, {"Lith G3", "Relique", 7.69},
-                     {"Lith P5", "Relique", 7.69}, {"Lith T5", "Relique", 7.69}, {"Lith I1", "Relique", 7.69},
+                     {RELICMAP[3], "Relique", 7.69}, {"Lith T5", "Relique", 7.69}, {"Lith I1", "Relique", 7.69},
                      {"Lith T4", "Relique", 7.69}},
             ["C"] = {{"Mutation de Flèches", "Mod", 3.76}, {"Mutation de Munitions de Fusil", "Mod", 3.76},
                      {"Mutation de Munitions de Sniper", "Mod", 3.76},
                      {"Mutation de Munitions de Fusil à Pompe", "Mod", 3.76},
                      {"Mutation de Munitions de Pistolet", "Mod", 3.76}, {"Purifie-Grineer", "Mod", 3.76},
                      {"Lith D4", "Relique", 11.06}, {"Lith B8", "Relique", 11.06}, {"Lith G3", "Relique", 11.06},
-                     {"Lith P5", "Relique", 11.06}, {"Lith T5", "Relique", 11.06}, {"Lith I1", "Relique", 11.06},
+                     {RELICMAP[3], "Relique", 11.06}, {"Lith T5", "Relique", 11.06}, {"Lith I1", "Relique", 11.06},
                      {"Lith T4", "Relique", 11.06}}
         }
     }, {
@@ -604,8 +665,8 @@ local DropData = {
         ShortName = "[[Néant]]",
         Rewards = {
             ["A"] = {{"Lith D4", "Relique", 11.11}, {"Lith B8", "Relique", 11.11}, {"Lith G3", "Relique", 11.11},
-                     {"Lith P5", "Relique", 11.11}, {"Lith T5", "Relique", 11.11}, {"Lith I1", "Relique", 11.11},
-                     {"Lith K5", "Relique", 11.11}, {"Lith M7", "Relique", 11.11}, {"Lith T4", "Relique", 11.11}}
+                     {RELICMAP[3], "Relique", 11.11}, {"Lith T5", "Relique", 11.11}, {"Lith I1", "Relique", 11.11},
+                     {"Lith K5", "Relique", 11.11}, {RELICMAP[2], "Relique", 11.11}, {"Lith T4", "Relique", 11.11}}
         }
     }, {
         Type = "Extermination",
@@ -650,7 +711,7 @@ local DropData = {
             ["A"] = {{"Vitalité", "Mod", 7.69}, {"Mutation de Chargeur", "Mod", 7.69},
                      {"Chargeur Trafiqué", "Mod", 7.69}, {"Lith D4", "Relique", 7.69}, {"Lith B8", "Relique", 7.69},
                      {"Lith G3", "Relique", 7.69}, {"Meso P2", "Relique", 7.69}, {"Meso C6", "Relique", 7.69},
-                     {"Meso K3", "Relique", 7.69}, {"Lith P5", "Relique", 7.69}, {"Lith T5", "Relique", 7.69},
+                     {"Meso K3", "Relique", 7.69}, {RELICMAP[3], "Relique", 7.69}, {"Lith T5", "Relique", 7.69},
                      {"Lith I1", "Relique", 7.69}, {"Lith T4", "Relique", 7.69}},
             ["B"] = {{"Détente Rapide", "Mod", 5.88}, {"Déviation Rapide", "Mod", 5.88}, {"Course", "Mod", 5.88},
                      {"Craque-Cibles", "Mod", 5.88}, {"Sans Retour", "Mod", 5.88}, {"Dentelure", "Mod", 5.88},
@@ -756,9 +817,9 @@ local DropData = {
         Rewards = {
             ["A"] = {{"Meso P4", "Relique", 5.88}, {"Meso C6", "Relique", 5.88}, {"Meso I1", "Relique", 5.88},
                      {"Meso P2", "Relique", 5.88}, {"Lith D4", "Relique", 5.88}, {"Lith B8", "Relique", 5.88},
-                     {"Lith G3", "Relique", 5.88}, {"Lith P5", "Relique", 5.88}, {"Lith T5", "Relique", 5.88},
+                     {"Lith G3", "Relique", 5.88}, {RELICMAP[3], "Relique", 5.88}, {"Lith T5", "Relique", 5.88},
                      {"Lith I1", "Relique", 5.88}, {"Meso K3", "Relique", 5.88}, {"Meso D6", "Relique", 5.88},
-                     {"Meso T4", "Relique", 5.88}, {"Lith K5", "Relique", 5.88}, {"Lith M7", "Relique", 5.88},
+                     {"Meso T4", "Relique", 5.88}, {"Lith K5", "Relique", 5.88}, {RELICMAP[2], "Relique", 5.88},
                      {"Meso E5", "Relique", 5.88}, {"Lith T4", "Relique", 5.88}}
         }
     }, {
@@ -887,7 +948,7 @@ local DropData = {
                      {"Endo", "Endo", 77.44, 150}},
             ["C"] = {{"Météore Fracassant", "Mod", 7.52}, {"Nébuleuse Perçante", "Mod", 7.52},
                      {"Tranchant Astral", "Mod", 7.52}, {"Endo", "Endo", 9.68, 400}, {"Lith D4", "Relique", 9.68},
-                     {"Lith B8", "Relique", 9.68}, {"Lith G3", "Relique", 9.68}, {"Lith P5", "Relique", 9.68},
+                     {"Lith B8", "Relique", 9.68}, {"Lith G3", "Relique", 9.68}, {RELICMAP[3], "Relique", 9.68},
                      {"Lith T5", "Relique", 9.68}, {"Lith I1", "Relique", 9.68}, {"Lith T4", "Relique", 9.68}}
         }
     }, {
@@ -1049,9 +1110,9 @@ local DropData = {
         Rewards = {
             ["A"] = {{"Meso P4", "Relique", 5.88}, {"Meso C6", "Relique", 5.88}, {"Meso I1", "Relique", 5.88},
                      {"Meso P2", "Relique", 5.88}, {"Lith D4", "Relique", 5.88}, {"Lith B8", "Relique", 5.88},
-                     {"Lith G3", "Relique", 5.88}, {"Lith P5", "Relique", 5.88}, {"Lith T5", "Relique", 5.88},
+                     {"Lith G3", "Relique", 5.88}, {RELICMAP[3], "Relique", 5.88}, {"Lith T5", "Relique", 5.88},
                      {"Lith I1", "Relique", 5.88}, {"Meso K3", "Relique", 5.88}, {"Meso D6", "Relique", 5.88},
-                     {"Meso T4", "Relique", 5.88}, {"Lith K5", "Relique", 5.88}, {"Lith M7", "Relique", 5.88},
+                     {"Meso T4", "Relique", 5.88}, {"Lith K5", "Relique", 5.88}, {RELICMAP[2], "Relique", 5.88},
                      {"Meso E5", "Relique", 5.88}, {"Lith T4", "Relique", 5.88}}
         }
     }, {
@@ -1149,7 +1210,7 @@ local DropData = {
                      {"Endo", "Endo", 14.29, 100}, {"Endo", "Endo", 14.29, 100}, {"Réflexion", "Mod", 14.29},
                      {"Réflexe de Défense", "Mod", 14.29}, {"Parade", "Mod", 14.29}},
             ["B"] = {{"Lith D4", "Relique", 14.29}, {"Lith B8", "Relique", 14.29}, {"Lith G3", "Relique", 14.29},
-                     {"Lith P5", "Relique", 14.29}, {"Lith T5", "Relique", 14.29}, {"Lith I1", "Relique", 14.29},
+                     {RELICMAP[3], "Relique", 14.29}, {"Lith T5", "Relique", 14.29}, {"Lith I1", "Relique", 14.29},
                      {"Lith T4", "Relique", 14.29}},
             ["C"] = {{"Passe-Partout", "Mod", 10.00}, {"Réflexion", "Mod", 10.00}, {"Parade", "Mod", 10.00},
                      {"Impact Lourd", "Mod", 10.00}, {"Dentelure", "Mod", 10.00}, {"Nuée de Dards", "Mod", 10.00},
@@ -1258,8 +1319,8 @@ local DropData = {
         ShortName = "[[Épave Orokin|Épave]]",
         Rewards = {
             ["A"] = {{"Endo", "Endo", 11.11, 400}, {"Endo", "Endo", 11.11, 400}, {"Lith D4", "Relique", 11.11},
-                     {"Lith B8", "Relique", 11.11}, {"Lith G3", "Relique", 11.11}, {"Lith P5", "Relique", 11.11},
-                     {"Lith I1", "Relique", 11.11}, {"Lith P5", "Relique", 11.11}, {"Lith T4", "Relique", 11.11}},
+                     {"Lith B8", "Relique", 11.11}, {"Lith G3", "Relique", 11.11}, {RELICMAP[3], "Relique", 11.11},
+                     {"Lith I1", "Relique", 11.11}, {RELICMAP[3], "Relique", 11.11}, {"Lith T4", "Relique", 11.11}},
             ["B"] = {{"Coord. Nav Alad V Mutaliste", "Ressource", 12.50}, {"Neo T2", "Relique", 12.50},
                      {"Neo N14", "Relique", 12.50}, {"Neo N13", "Relique", 12.50}, {"Neo Z7", "Relique", 12.50},
                      {"Neo P2", "Relique", 12.50}, {"Neo B7", "Relique", 12.50}, {"Neo N15", "Relique", 12.50}},
@@ -1278,14 +1339,14 @@ local DropData = {
             ["B"] = {{"Parade", "Mod", 7.69}, {"Fibre d'Acier", "Mod", 7.69}, {"Dentelure", "Mod", 7.69},
                      {"Balles Incendiaires", "Mod", 7.69}, {"Nuée de Dards", "Mod", 7.69}, {"Intensité", "Mod", 7.69},
                      {"Lith D4", "Relique", 7.69}, {"Lith B8", "Relique", 7.69}, {"Lith G3", "Relique", 7.69},
-                     {"Lith P5", "Relique", 7.69}, {"Lith T5", "Relique", 7.69}, {"Lith I1", "Relique", 7.69},
+                     {RELICMAP[3], "Relique", 7.69}, {"Lith T5", "Relique", 7.69}, {"Lith I1", "Relique", 7.69},
                      {"Lith T4", "Relique", 7.69}},
             ["C"] = {{"Mutation de Flèches", "Mod", 3.76}, {"Mutation de Munitions de Fusil", "Mod", 3.76},
                      {"Mutation de Munitions de Sniper", "Mod", 3.76},
                      {"Mutation de Munitions de Fusil à Pompe", "Mod", 3.76},
                      {"Mutation de Munitions de Pistolet", "Mod", 3.76}, {"Purifie-Grineer", "Mod", 3.76},
                      {"Lith D4", "Relique", 11.06}, {"Lith B8", "Relique", 11.06}, {"Lith G3", "Relique", 11.06},
-                     {"Lith P5", "Relique", 11.06}, {"Lith T5", "Relique", 11.06}, {"Lith I1", "Relique", 11.06},
+                     {RELICMAP[3], "Relique", 11.06}, {"Lith T5", "Relique", 11.06}, {"Lith I1", "Relique", 11.06},
                      {"Lith T4", "Relique", 11.06}}
         }
     }, {
@@ -1377,9 +1438,9 @@ local DropData = {
         Rewards = {
             ["A"] = {{"Meso P4", "Relique", 2.82}, {"Meso C6", "Relique", 2.82}, {"Meso I1", "Relique", 2.82},
                      {"Meso P2", "Relique", 2.82}, {"Lith D4", "Relique", 8.60}, {"Lith B8", "Relique", 8.60},
-                     {"Lith G3", "Relique", 8.60}, {"Lith P5", "Relique", 8.60}, {"Lith T5", "Relique", 8.60},
+                     {"Lith G3", "Relique", 8.60}, {RELICMAP[3], "Relique", 8.60}, {"Lith T5", "Relique", 8.60},
                      {"Lith I1", "Relique", 8.60}, {"Meso K3", "Relique", 2.82}, {"Meso D6", "Relique", 2.82},
-                     {"Meso T4", "Relique", 2.82}, {"Lith K5", "Relique", 8.60}, {"Lith M7", "Relique", 8.60},
+                     {"Meso T4", "Relique", 2.82}, {"Lith K5", "Relique", 8.60}, {RELICMAP[2], "Relique", 8.60},
                      {"Meso E5", "Relique", 2.82}, {"Lith T4", "Relique", 8.60}},
             ["B"] = {{"Meso P4", "Relique", 9.68}, {"Meso C6", "Relique", 9.68}, {"Meso I1", "Relique", 9.68},
                      {"Meso P2", "Relique", 9.68}, {"Neo T2", "Relique", 2.82}, {"Neo N14", "Relique", 2.82},
@@ -1407,11 +1468,11 @@ local DropData = {
             ["B"] = {{"Parade", "Mod", 7.69}, {"Fibre d'Acier", "Mod", 7.69}, {"Dentelure", "Mod", 7.69},
                      {"Balles Incendiaires", "Mod", 7.69}, {"Nuée de Dards", "Mod", 7.69}, {"Intensité", "Mod", 7.69},
                      {"Lith D4", "Relique", 7.69}, {"Lith B8", "Relique", 7.69}, {"Lith G3", "Relique", 7.69},
-                     {"Lith P5", "Relique", 7.69}, {"Lith T5", "Relique", 7.69}, {"Lith I1", "Relique", 7.69},
+                     {RELICMAP[3], "Relique", 7.69}, {"Lith T5", "Relique", 7.69}, {"Lith I1", "Relique", 7.69},
                      {"Lith T4", "Relique", 7.69}},
             ["C"] = {{"Véritable Punition", "Mod", 11.28}, {"Accélération", "Mod", 11.28},
                      {"Lith D4", "Relique", 11.06}, {"Lith B8", "Relique", 11.06}, {"Lith G3", "Relique", 11.06},
-                     {"Lith P5", "Relique", 11.06}, {"Lith T5", "Relique", 11.06}, {"Lith I1", "Relique", 11.06},
+                     {RELICMAP[3], "Relique", 11.06}, {"Lith T5", "Relique", 11.06}, {"Lith I1", "Relique", 11.06},
                      {"Lith T4", "Relique", 11.06}}
         }
     }, {
@@ -1612,7 +1673,7 @@ local DropData = {
                      {"Scène du Vaisseau de Ravitaillement Corpus", "Scène", 9.17},
                      {"Scène Centrifugeuse du Laboratoire Sous-Marin Grineer", "Scène", 9.17},
                      {"Lith D4", "Relique", 9.17}, {"Lith B8", "Relique", 9.17}, {"Lith G3", "Relique", 9.17},
-                     {"Lith P5", "Relique", 9.17}, {"Lith T5", "Relique", 9.17}, {"Lith I1", "Relique", 9.17},
+                     {RELICMAP[3], "Relique", 9.17}, {"Lith T5", "Relique", 9.17}, {"Lith I1", "Relique", 9.17},
                      {"Lith T4", "Relique", 9.17}},
             ["B"] = {{"Éclat d'Eidolon Synthétique", "Ressource", 9.09},
                      {"Khora Neuroptiques Schéma", "Schéma", 9.09}, {"Endo", "Endo", 9.09, 300},
@@ -1987,7 +2048,7 @@ local DropData = {
         Ignore = true,
         Rewards = {
             ["A"] = {{"Dirac", "Ressource", 29.03, 300}, {"Lith D4", "Relique", 12.90}, {"Lith B8", "Relique", 12.90},
-                     {"Lith G3", "Relique", 12.90}, {"Lith P5", "Relique", 12.90}, {"Lith T5", "Relique", 6.45},
+                     {"Lith G3", "Relique", 12.90}, {RELICMAP[3], "Relique", 12.90}, {"Lith T5", "Relique", 6.45},
                      {"Lith I1", "Relique", 6.45}, {"Lith T4", "Relique", 6.45}},
             ["B"] = {{"Dirac", "Ressource", 33.33, 300}, {"Meso C6", "Relique", 12.12}, {"Meso P2", "Relique", 12.12},
                      {"Meso K3", "Relique", 12.12}, {"Meso P4", "Relique", 12.12}, {"Meso D6", "Relique", 6.06},
@@ -2005,10 +2066,10 @@ local DropData = {
         Ignore = true,
         Rewards = {
             ["A"] = {{"Lith D4", "Relique", 13.33}, {"Lith B8", "Relique", 13.33}, {"Lith G3", "Relique", 13.33},
-                     {"Lith P5", "Relique", 13.33}, {"Lith T5", "Relique", 6.67}, {"Lith I1", "Relique", 6.67},
+                     {RELICMAP[3], "Relique", 13.33}, {"Lith T5", "Relique", 6.67}, {"Lith I1", "Relique", 6.67},
                      {"Endo", "Endo", 26.67, 500}, {"Lith T4", "Relique", 6.67}},
             ["B"] = {{"Lith D4", "Relique", 13.33}, {"Lith B8", "Relique", 13.33}, {"Lith G3", "Relique", 13.33},
-                     {"Lith P5", "Relique", 13.33}, {"Lith T5", "Relique", 6.67}, {"Lith I1", "Relique", 6.67},
+                     {RELICMAP[3], "Relique", 13.33}, {"Lith T5", "Relique", 6.67}, {"Lith I1", "Relique", 6.67},
                      {"Endo", "Endo", 26.67, 500}, {"Lith T4", "Relique", 6.67}},
             ["C"] = {{"Meso C6", "Relique", 12.50}, {"Meso P2", "Relique", 12.50}, {"Meso K3", "Relique", 12.50},
                      {"Meso P4", "Relique", 12.50}, {"Meso D6", "Relique", 6.25}, {"Meso I1", "Relique", 6.25},
@@ -2026,9 +2087,9 @@ local DropData = {
                      {"Perception des Ennemis du Necramech", "Mod", 2.50}, {"Déviation du Necramech", "Mod", 2.50},
                      {"Reproche du Necramech", "Mod", 2.50}, {"Rafistolage du Necramech", "Mod", 2.50},
                      {"Augure du Necramech", "Mod", 2.50}, {"Lith D4", "Relique", 5.00}, {"Lith B8", "Relique", 5.00},
-                     {"Lith G3", "Relique", 5.00}, {"Lith P5", "Relique", 5.00}, {"Lith T5", "Relique", 5.00},
+                     {"Lith G3", "Relique", 5.00}, {RELICMAP[3], "Relique", 5.00}, {"Lith T5", "Relique", 5.00},
                      {"Lith I1", "Relique", 5.00}, {"Lith T4", "Relique", 5.00}, {"Lith K5", "Relique", 5.00},
-                     {"Lith M7", "Relique", 5.00}, {"Endo", "Endo", 37.50, 500}},
+                     {RELICMAP[2], "Relique", 5.00}, {"Endo", "Endo", 37.50, 500}},
             ["B"] = {{"{{Weapon|Cedo}}", "Schéma", 2.00}, {"{{Weapon|Cedo|Cedo - Canon}}", "Schéma", 2.00},
                      {"{{Weapon|Cedo|Cedo - Culasse}}", "Schéma", 2.00},
                      {"{{Weapon|Cedo|Cedo - Crosse}}", "Schéma", 2.00}, {"Meso P4", "Relique", 8.00},
@@ -2054,9 +2115,9 @@ local DropData = {
                      {"Perception des Ennemis du Necramech", "Mod", 3.00}, {"Déviation du Necramech", "Mod", 3.00},
                      {"Reproche du Necramech", "Mod", 3.00}, {"Rafistolage du Necramech", "Mod", 3.00},
                      {"Augure du Necramech", "Mod", 3.00}, {"Lith D4", "Relique", 6.00}, {"Lith B8", "Relique", 6.00},
-                     {"Lith G3", "Relique", 6.00}, {"Lith P5", "Relique", 6.00}, {"Lith T5", "Relique", 6.00},
+                     {"Lith G3", "Relique", 6.00}, {RELICMAP[3], "Relique", 6.00}, {"Lith T5", "Relique", 6.00},
                      {"Lith I1", "Relique", 6.00}, {"Lith T4", "Relique", 6.00}, {"Lith K5", "Relique", 6.00},
-                     {"Lith M7", "Relique", 6.00}, {"Endo", "Endo", 25.00, 750}},
+                     {RELICMAP[2], "Relique", 6.00}, {"Endo", "Endo", 25.00, 750}},
             ["B"] = {{"{{Weapon|Cedo}}", "Schéma", 3.00}, {"{{Weapon|Cedo|Cedo - Canon}}", "Schéma", 3.00},
                      {"{{Weapon|Cedo|Cedo - Culasse}}", "Schéma", 3.00},
                      {"{{Weapon|Cedo|Cedo - Crosse}}", "Schéma", 3.00}, {"Meso P4", "Relique", 6.00},
@@ -2094,9 +2155,9 @@ local DropData = {
                      {"Perception des Ennemis du Necramech", "Mod", 4.00}, {"Déviation du Necramech", "Mod", 4.00},
                      {"Reproche du Necramech", "Mod", 4.00}, {"Rafistolage du Necramech", "Mod", 4.00},
                      {"Augure du Necramech", "Mod", 4.00}, {"Lith D4", "Relique", 8.00}, {"Lith B8", "Relique", 8.00},
-                     {"Lith G3", "Relique", 8.00}, {"Lith P5", "Relique", 8.00}, {"Lith T5", "Relique", 8.00},
+                     {"Lith G3", "Relique", 8.00}, {RELICMAP[3], "Relique", 8.00}, {"Lith T5", "Relique", 8.00},
                      {"Lith I1", "Relique", 8.00}, {"Lith T4", "Relique", 8.00}, {"Lith K5", "Relique", 8.00},
-                     {"Lith M7", "Relique", 8.00}}
+                     {RELICMAP[2], "Relique", 8.00}}
         }
     }, {
         Type = "Mise à Prix de Cetus",
@@ -2203,7 +2264,7 @@ local DropData = {
             ["B"] = {{"Inversion d'Énergie", "Mod", 15.08}, {"Cryotique", "Ressource", 15.08, 200},
                      {"Cache de Crédits", "Credits", 15.08, 2500}, {"Endo", "Endo", 15.08, 100},
                      {"Gara Systèmes Schéma", "Schéma", 9.52}, {"Détente Rapide", "Mod", 9.52},
-                     {"Fauchage Tournoyant", "Mod", 9.52}, {"Lith M7", "Relique", 11.11}},
+                     {"Fauchage Tournoyant", "Mod", 9.52}, {RELICMAP[2], "Relique", 11.11}},
             ["C"] = {{"Frappe Tendue", "Mod", 15.08}, {"Circuits", "Ressource", 15.08, 300},
                      {"Cache de Crédits", "Credits", 15.08, 2500}, {"Endo", "Endo", 15.08, 100},
                      {"Gara Systèmes Schéma", "Schéma", 9.52}, {"Durabilité Améliorée", "Mod", 9.52},
@@ -2225,7 +2286,7 @@ local DropData = {
             ["B"] = {{"Inversion d'Énergie", "Mod", 14.50}, {"Cryotique", "Ressource", 14.50, 200},
                      {"Cache de Crédits", "Credits", 14.50, 2500}, {"Endo", "Endo", 14.50, 100},
                      {"Gara Systèmes Schéma", "Schéma", 9.16}, {"Détente Rapide", "Mod", 9.16},
-                     {"Fauchage Tournoyant", "Mod", 9.16}, {"Lith M7", "Relique", 10.69},
+                     {"Fauchage Tournoyant", "Mod", 9.16}, {RELICMAP[2], "Relique", 10.69},
                      {"Capteurs Neuronaux", "Ressource", 3.82, 2}},
             ["C"] = {{"Frappe Tendue", "Mod", 14.50}, {"Circuits", "Ressource", 14.50, 300},
                      {"Cache de Crédits", "Credits", 14.50, 2500}, {"Endo", "Endo", 14.50, 100},
@@ -2245,7 +2306,7 @@ local DropData = {
                      {"Guêpe Brûlante", "Mod", 21.82}, {"Lith K5", "Relique", 25.45},
                      {"Module de Contrôle", "Ressource", 9.09, 2}},
             ["B"] = {{"Gara Systèmes Schéma", "Schéma", 21.82}, {"Détente Rapide", "Mod", 21.82},
-                     {"Fauchage Tournoyant", "Mod", 21.82}, {"Lith M7", "Relique", 25.45},
+                     {"Fauchage Tournoyant", "Mod", 21.82}, {RELICMAP[2], "Relique", 25.45},
                      {"Capteurs Neuronaux", "Ressource", 9.09, 2}},
             ["C"] = {{"Gara Systèmes Schéma", "Schéma", 21.82}, {"Durabilité Améliorée", "Mod", 21.82},
                      {"Fureur Sombre", "Mod", 21.82}, {"Lith K5", "Relique", 25.45},
@@ -2722,7 +2783,7 @@ local DropData = {
                      {"Endo", "Endo", 15.18, 50}, {"Boue Thermique", "Ressource", 15.18, 5},
                      {"Obligations de dettes Étudiantes", "Ressource", 15.18, 2},
                      {"Garuda Châssis Schéma", "Schéma", 7.37}, {"Nodule Tepa", "Ressource", 7.37, 5},
-                     {"Cache de Crédits", "Credits", 7.37, 3000}, {"Lith M7", "Relique", 2.01}},
+                     {"Cache de Crédits", "Credits", 7.37, 3000}, {RELICMAP[2], "Relique", 2.01}},
             ["C"] = {{"Plastides", "Ressource", 15.18, 100}, {"Cache de Crédits", "Credits", 15.18, 1500},
                      {"Endo", "Endo", 15.18, 50}, {"Spore Gorgaricus", "Ressource", 15.18, 5},
                      {"Obligations de dettes Étudiantes", "Ressource", 15.18, 2},
@@ -2740,7 +2801,7 @@ local DropData = {
             ["A"] = {{"Garuda Châssis Schéma", "Schéma", 30.56}, {"Nodule Tepa", "Ressource", 30.56, 5},
                      {"Cache de Crédits", "Credits", 30.56, 3000}, {"Lith K5", "Relique", 8.33}},
             ["B"] = {{"Garuda Châssis Schéma", "Schéma", 30.56}, {"Nodule Tepa", "Ressource", 30.56, 5},
-                     {"Cache de Crédits", "Credits", 30.56, 3000}, {"Lith M7", "Relique", 8.33}},
+                     {"Cache de Crédits", "Credits", 30.56, 3000}, {RELICMAP[2], "Relique", 8.33}},
             ["C"] = {{"Garuda Châssis Schéma", "Schéma", 30.56}, {"Nodule Tepa", "Ressource", 30.56, 5},
                      {"Cache de Crédits", "Credits", 30.56, 3000}, {"Lith K5", "Relique", 8.33}}
         }
@@ -2774,7 +2835,7 @@ local DropData = {
                      {"Cache de Crédits", "Credits", 14.81, 2500}, {"Endo", "Endo", 14.81, 100},
                      {"Obligations de dettes de Couverture", "Ressource", 14.81, 2},
                      {"Garuda Systèmes Schéma", "Schéma", 7.41}, {"Nodule Tepa", "Ressource", 7.41, 5},
-                     {"Lith M7", "Relique", 11.11}},
+                     {RELICMAP[2], "Relique", 11.11}},
             ["B"] = {{"Boue Thermique", "Ressource", 14.81, 15}, {"Cryotique", "Ressource", 14.81, 200},
                      {"Cache de Crédits", "Credits", 14.81, 2500}, {"Endo", "Endo", 14.81, 100},
                      {"Obligations de dettes de Couverture", "Ressource", 14.81, 2},
@@ -2784,7 +2845,7 @@ local DropData = {
                      {"Cache de Crédits", "Credits", 14.81, 2500}, {"Endo", "Endo", 14.81, 100},
                      {"Obligations de dettes de Couverture", "Ressource", 14.81, 2},
                      {"Garuda Systèmes Schéma", "Schéma", 7.41}, {"Nodule Tepa", "Ressource", 7.41, 5},
-                     {"Lith M7", "Relique", 11.11}}
+                     {RELICMAP[2], "Relique", 11.11}}
         }
     }, {
         Type = "Mise à Prix Fortuna",
@@ -2798,7 +2859,7 @@ local DropData = {
                      {"Cache de Crédits", "Credits", 13.79, 2500}, {"Endo", "Endo", 13.79, 100},
                      {"Obligations de dettes de Couverture", "Ressource", 13.79, 2},
                      {"Garuda Systèmes Schéma", "Schéma", 6.90}, {"Nodule Tepa", "Ressource", 6.90, 5},
-                     {"Lith M7", "Relique", 10.34}, {"Charge Synth", "Mod", 6.90}},
+                     {RELICMAP[2], "Relique", 10.34}, {"Charge Synth", "Mod", 6.90}},
             ["B"] = {{"Boue Thermique", "Ressource", 13.79, 15}, {"Cryotique", "Ressource", 13.79, 200},
                      {"Cache de Crédits", "Credits", 13.79, 2500}, {"Endo", "Endo", 13.79, 100},
                      {"Obligations de dettes de Couverture", "Ressource", 13.79, 2},
@@ -2808,7 +2869,7 @@ local DropData = {
                      {"Cache de Crédits", "Credits", 13.79, 2500}, {"Endo", "Endo", 13.79, 100},
                      {"Obligations de dettes de Couverture", "Ressource", 13.79, 2},
                      {"Garuda Systèmes Schéma", "Schéma", 6.90}, {"Nodule Tepa", "Ressource", 6.90, 5},
-                     {"Lith M7", "Relique", 10.34}, {"Assaut Tek", "Mod", 6.90}}
+                     {RELICMAP[2], "Relique", 10.34}, {"Assaut Tek", "Mod", 6.90}}
         }
     }, {
         Type = "Mise à Prix Fortuna",
@@ -2819,11 +2880,11 @@ local DropData = {
         -- Ignore = true,
         Rewards = {
             ["A"] = {{"Garuda Systèmes Schéma", "Schéma", 22.22}, {"Nodule Tepa", "Ressource", 22.22, 5},
-                     {"Lith M7", "Relique", 33.33}, {"Charge Synth", "Mod", 22.22}},
+                     {RELICMAP[2], "Relique", 33.33}, {"Charge Synth", "Mod", 22.22}},
             ["B"] = {{"Garuda Systèmes Schéma", "Schéma", 22.22}, {"Nodule Tepa", "Ressource", 22.22, 5},
                      {"Lith K5", "Relique", 33.33}, {"Décharge Mecha", "Mod", 22.22}},
             ["C"] = {{"Garuda Systèmes Schéma", "Schéma", 22.22}, {"Nodule Tepa", "Ressource", 22.22, 5},
-                     {"Lith M7", "Relique", 33.33}, {"Assaut Tek", "Mod", 22.22}}
+                     {RELICMAP[2], "Relique", 33.33}, {"Assaut Tek", "Mod", 22.22}}
         }
     }, {
         Type = "Mise à Prix Fortuna",
@@ -3178,7 +3239,7 @@ local DropData = {
                      {"Endo", "Endo", 7.52, 250}, {"Lith K5", "Relique", 7.52}},
             ["B"] = {{"Cache de Crédits", "Credits", 25.81, 4500}, {"Endo", "Endo", 25.81, 150},
                      {"Pustulite", "Ressource", 25.81, 15}, {"Cache de Crédits", "Credits", 7.52, 6000},
-                     {"Endo", "Endo", 7.52, 250}, {"Lith M7", "Relique", 7.52}},
+                     {"Endo", "Endo", 7.52, 250}, {RELICMAP[2], "Relique", 7.52}},
             ["C"] = {{"Cache de Crédits", "Credits", 25.81, 4500}, {"Endo", "Endo", 25.81, 150},
                      {"Teroglobe Lumineux", "Ressource", 25.81, 15}, {"Cache de Crédits", "Credits", 7.52, 6000},
                      {"Endo", "Endo", 7.52, 250}, {"Lith K5", "Relique", 7.52}}
@@ -3193,7 +3254,7 @@ local DropData = {
             ["A"] = {{"Cache de Crédits", "Credits", 30.56, 6000}, {"Endo", "Endo", 30.56, 250},
                      {"Lith K5", "Relique", 30.56}, {"Scintillateur", "Ressource", 8.33}},
             ["B"] = {{"Cache de Crédits", "Credits", 30.56, 6000}, {"Endo", "Endo", 30.56, 250},
-                     {"Lith M7", "Relique", 30.56}, {"Scintillateur", "Ressource", 8.33}},
+                     {RELICMAP[2], "Relique", 30.56}, {"Scintillateur", "Ressource", 8.33}},
             ["C"] = {{"Cache de Crédits", "Credits", 30.56, 6000}, {"Endo", "Endo", 30.56, 250},
                      {"Lith K5", "Relique", 30.56}, {"Scintillateur", "Ressource", 8.33}}
         }
@@ -3262,13 +3323,13 @@ local DropData = {
         ShortName = "25-30",
         Rewards = {
             ["A"] = {{"Étoile Ayatan Ambre", "Sculpture Ayatan", 50.00}, {"Endo", "Endo", 25.00, 250},
-                     {"Lith M7", "Relique", 10.00}, {"Mandibule Carnis", "Mod", 5.00},
+                     {RELICMAP[2], "Relique", 10.00}, {"Mandibule Carnis", "Mod", 5.00},
                      {"Barbillon Jugulus", "Mod", 5.00}, {"Thorax Saxum", "Mod", 5.00}},
             ["B"] = {{"Étoile Ayatan Ambre", "Sculpture Ayatan", 40.00}, {"Endo", "Endo", 20.00, 250},
                      {"Lith K5", "Relique", 12.50}, {"Meso E5", "Relique", 12.50}, {"Mandibule Carnis", "Mod", 5.00},
                      {"Barbillon Jugulus", "Mod", 5.00}, {"Thorax Saxum", "Mod", 5.00}},
             ["C"] = {{"Étoile Ayatan Ambre", "Sculpture Ayatan", 50.00}, {"Endo", "Endo", 25.00, 250},
-                     {"Lith M7", "Relique", 10.00}, {"Mandibule Carnis", "Mod", 5.00},
+                     {RELICMAP[2], "Relique", 10.00}, {"Mandibule Carnis", "Mod", 5.00},
                      {"Barbillon Jugulus", "Mod", 5.00}, {"Thorax Saxum", "Mod", 5.00}}
         }
     }, {
@@ -3279,7 +3340,7 @@ local DropData = {
         ShortName = "25-30",
         Rewards = {
             ["A"] = {{"Étoile Ayatan Ambre", "Sculpture Ayatan", 25.00}, {"Endo", "Endo", 12.50, 250},
-                     {"Lith M7", "Relique", 5.00}, {"Mandibule Carnis", "Mod", 2.50},
+                     {RELICMAP[2], "Relique", 5.00}, {"Mandibule Carnis", "Mod", 2.50},
                      {"Barbillon Jugulus", "Mod", 2.50}, {"Thorax Saxum", "Mod", 2.50},
                      {"Étoile Ayatan Ambre", "Sculpture Ayatan", 25.00}, {"Endo", "Endo", 12.50, 500},
                      {"Meso E5", "Relique", 5.00}, {"Carapace Carnis", "Mod", 2.50}, {"Carapace Jugulus", "Mod", 2.50},
@@ -3291,7 +3352,7 @@ local DropData = {
                      {"Neo B6", "Relique", 4.44}, {"Carapace Carnis", "Mod", 2.22}, {"Carapace Jugulus", "Mod", 2.22},
                      {"Carapace Saxum", "Mod", 2.22}},
             ["C"] = {{"Étoile Ayatan Ambre", "Sculpture Ayatan", 25.00}, {"Endo", "Endo", 12.50, 250},
-                     {"Lith M7", "Relique", 5.00}, {"Mandibule Carnis", "Mod", 2.50},
+                     {RELICMAP[2], "Relique", 5.00}, {"Mandibule Carnis", "Mod", 2.50},
                      {"Barbillon Jugulus", "Mod", 2.50}, {"Thorax Saxum", "Mod", 2.50},
                      {"Étoile Ayatan Ambre", "Sculpture Ayatan", 25.00}, {"Endo", "Endo", 12.50, 500},
                      {"Neo B6", "Relique", 5.00}, {"Carapace Carnis", "Mod", 2.50}, {"Carapace Jugulus", "Mod", 2.50},
@@ -4213,7 +4274,7 @@ local DropData = {
                      {"Révêtement Lavan Mk I", "Schéma", 7.32}, {"Moteur Vidar Mk I", "Schéma", 7.32},
                      {"Réacteur Vidar Mk I", "Schéma", 7.32}, {"Réseau de Boucliers Vidar Mk I", "Schéma", 7.32},
                      {"Révêtement Vidar Mk I", "Schéma", 7.32}, {"Lith G4", "Relique", 2.44},
-                     {"Lith B8", "Relique", 2.44}, {"Lith K6", "Relique", 2.44}, {"Lith P5", "Relique", 2.44},
+                     {"Lith B8", "Relique", 2.44}, {"Lith K6", "Relique", 2.44}, {RELICMAP[3], "Relique", 2.44},
                      {"Lith A4", "Relique", 2.44}, {"Lith I1", "Relique", 2.44}, {"Lith T4", "Relique", 2.44}}
         }
     }, {
@@ -4226,7 +4287,7 @@ local DropData = {
                      {"Revêtement Lavan Mk I", "Schéma", 7.32}, {"Moteurs Vidar Mk I", "Schéma", 7.32},
                      {"Réacteur Vidar Mk I", "Schéma", 7.32}, {"Réseau de Bouclier Vidar Mk I", "Schéma", 7.32},
                      {"Revêtement Vidar Mk I", "Schéma", 7.32}, {"Lith D4", "Relique", 2.44},
-                     {"Lith B8", "Relique", 2.44}, {"Lith G3", "Relique", 2.44}, {"Lith P5", "Relique", 2.44},
+                     {"Lith B8", "Relique", 2.44}, {"Lith G3", "Relique", 2.44}, {RELICMAP[3], "Relique", 2.44},
                      {"Lith T5", "Relique", 2.44}, {"Lith I1", "Relique", 2.44}, {"Lith T4", "Relique", 2.44}}
         }
     }, {
@@ -4239,7 +4300,7 @@ local DropData = {
                      {"Lith B8", "Relique", 6.67}, {"Lith K6", "Relique", 6.67}},
             ["B"] = {{"Endo", "Endo", 35.29, 100}, {"Réseau de Boucliers Lavan Mk I", "Schéma", 17.65},
                      {"Moteur Vidar Mk I", "Schéma", 17.65}, {"Revêtement Lavan Mk I", "Schéma", 17.65},
-                     {"Lith P5", "Relique", 5.88}, {"Lith A4", "Relique", 5.88}},
+                     {RELICMAP[3], "Relique", 5.88}, {"Lith A4", "Relique", 5.88}},
             ["C"] = {{"Endo", "Endo", 31.58, 150}, {"Réacteur Vidar Mk I", "Schéma", 15.79},
                      {"Réseau de Boucliers Vidar Mk I", "Schéma", 15.79},
                      {"Revêtement Vidar Mk I", "Schéma", 15.79}, {"{{WF|Ash}} - Systèmes", "Schéma", 10.53},
@@ -4256,7 +4317,7 @@ local DropData = {
                      {"Lith B8", "Relique", 4.76}, {"Lith K6", "Relique", 4.76}},
             ["B"] = {{"Endo", "Endo", 27.27, 150}, {"Moteurs Vidar Mk I", "Schéma", 13.64},
                      {"Réacteur Vidar Mk I", "Schéma", 13.64}, {"Réseau de Bouclier Vidar Mk I", "Schéma", 13.64},
-                     {"Revêtement Vidar Mk I", "Schéma", 13.64}, {"Lith P5", "Relique", 4.55},
+                     {"Revêtement Vidar Mk I", "Schéma", 13.64}, {RELICMAP[3], "Relique", 4.55},
                      {"Lith T5", "Relique", 4.55}, {"Lith I1", "Relique", 4.55}, {"Lith T4", "Relique", 4.55}},
             ["C"] = {{"Arcane Tempo", "Arcane", 10.34}, {"Arcane Conséquence", "Arcane", 10.34},
                      {"Arcane Élan", "Arcane", 10.34}, {"Arcane Glace", "Arcane", 10.34},
@@ -4276,7 +4337,7 @@ local DropData = {
                      {"Lith B8", "Relique", 6.67}, {"Lith K6", "Relique", 6.67}},
             ["B"] = {{"Endo", "Endo", 35.29, 100}, {"Réseau de Boucliers Lavan Mk I", "Schéma", 17.65},
                      {"Moteur Vidar Mk I", "Schéma", 17.65}, {"Revêtement Lavan Mk I", "Schéma", 17.65},
-                     {"Lith P5", "Relique", 5.88}, {"Lith A4", "Relique", 5.88}},
+                     {RELICMAP[3], "Relique", 5.88}, {"Lith A4", "Relique", 5.88}},
             ["C"] = {{"Endo", "Endo", 33.33, 150}, {"Réacteur Vidar Mk I", "Schéma", 12.5},
                      {"Réseau de Boucliers Vidar Mk I", "Schéma", 12.5}, {"Revêtement Vidar Mk I", "Schéma", 12.5},
                      {"Ambassadeur Canon", "Schéma", 8.33}, {"{{WF|Ash}} - Systèmes", "Schéma", 8.33},
@@ -4291,7 +4352,7 @@ local DropData = {
                      {"Drain de Puissance", "Mod", 10}, {"Pare-Feu", "Mod", 10}, {"Code Malicieux", "Mod", 6.67},
                      {"Réinitialisation Complète", "Mod", 6.67}, {"Brisure Riven", "Ressource", 3.33}},
             ["B"] = {{"Endo", "Endo", 30, 400}, {"Lith G4", "Relique", 10}, {"Lith B8", "Relique", 10},
-                     {"Lith K6", "Relique", 10}, {"Lith P5", "Relique", 10}, {"Lith A4", "Relique", 10},
+                     {"Lith K6", "Relique", 10}, {RELICMAP[3], "Relique", 10}, {"Lith A4", "Relique", 10},
                      {"Lith I1", "Relique", 10}, {"Lith T4", "Relique", 10}},
             ["C"] = {{"Endo", "Endo", 24, 600}, {"{{WF|Ivara}} - Systèmes", "Schéma", 12},
                      {"Moteur Lavan Mk I", "Schéma", 8}, {"Réacteur Lavan Mk I", "Schéma", 8},
@@ -4316,7 +4377,7 @@ local DropData = {
             ["A"] = {{"Endo", "Endo", 26.09, 100}, {"Endo", "Endo", 17.39, 150}, {"Grelin", "Mod", 8.70},
                      {"Bélier à Particules", "Mod", 8.70}, {"Explosion Éclatante", "Mod", 8.70},
                      {"Lith G4", "Relique", 4.35}, {"Lith B8", "Relique", 4.35}, {"Lith K6", "Relique", 4.35},
-                     {"Lith P5", "Relique", 4.35}, {"Lith A4", "Relique", 4.35}, {"Lith I1", "Relique", 4.35},
+                     {RELICMAP[3], "Relique", 4.35}, {"Lith A4", "Relique", 4.35}, {"Lith I1", "Relique", 4.35},
                      {"Lith T4", "Relique", 4.35}},
             ["B"] = {{"Endo", "Endo", 19.35, 100}, {"Endo", "Endo", 12.90, 150}, {"Hémorragie Interne", "Mod", 9.68},
                      {"Hémorragie", "Mod", 9.68}, {"Massacre Votif", "Mod", 9.68}, {"Lith C7", "Relique", 9.68},
@@ -4335,7 +4396,7 @@ local DropData = {
                      {"Revêtement Lavan Mk I", "Schéma", 6.00}, {"Moteur Vidar Mk I", "Schéma", 6.00},
                      {"Réacteur Vidar Mk I", "Schéma", 6.00}, {"Réseau de Bouclier Vidar Mk I", "Schéma", 6.00},
                      {"Revêtement Vidar Mk I", "Schéma", 6.00}, {"Lith G4", "Relique", 3.00},
-                     {"Lith B8", "Relique", 3.00}, {"Lith K6", "Relique", 3.00}, {"Lith P5", "Relique", 3.00},
+                     {"Lith B8", "Relique", 3.00}, {"Lith K6", "Relique", 3.00}, {RELICMAP[3], "Relique", 3.00},
                      {"Lith A4", "Relique", 3.00}, {"Lith I1", "Relique", 3.00}, {"Lith T4", "Relique", 3.00}}
         }
     }, {
@@ -4355,7 +4416,7 @@ local DropData = {
             ["A"] = {{"Endo", "Endo", 20.00, 100}, {"Endo", "Endo", 10.00, 150}, {"Oberon Systèmes", "Schéma", 10.00},
                      {"Grelin", "Mod", 4.03}, {"Bélier à Particules", "Mod", 4.03},
                      {"Explosion Éclatante", "Mod", 4.03}, {"Lith G4", "Relique", 5.99}, {"Lith B8", "Relique", 5.99},
-                     {"Lith K6", "Relique", 5.99}, {"Lith P5", "Relique", 5.99}, {"Lith A4", "Relique", 5.99},
+                     {"Lith K6", "Relique", 5.99}, {RELICMAP[3], "Relique", 5.99}, {"Lith A4", "Relique", 5.99},
                      {"Lith I1", "Relique", 5.99}, {"Lith T4", "Relique", 5.99}, {"Meso N11", "Relique", 6.00}}
         }
     }, {
