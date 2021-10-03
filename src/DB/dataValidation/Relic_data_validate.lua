@@ -69,8 +69,8 @@ function p.checkObsoleteDPT(frame)
 			if(#dropLocs > 0) then
 				local errorMsg = '# "[[%s]]" is still appearing %d times.'
 				local cpt = 0
-				for _, missionRots in ipairs(dropLocs) do
-					cpt = cpt + SHARED.tableCount(missionRots)
+				for _, couple in ipairs(dropLocs) do
+					cpt = cpt + SHARED.tableCount(couple[2])
 				end
 				table.insert(modErrors, string.format(errorMsg, relic.Name, cpt))
 			end
