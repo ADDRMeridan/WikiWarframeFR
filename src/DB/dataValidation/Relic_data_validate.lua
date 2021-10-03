@@ -1,5 +1,6 @@
 local p = {}
 
+local DPT = require('Module:DropTables')
 local RELIC = require('Module:Relic')
 local SHARED = require('Module:Shared')
 
@@ -52,6 +53,26 @@ function p.validateDataTypes(frame)
 			elseif (type(value) ~= DATA_TYPE_MAP[key]) then
 				local errorMsg = '# "[[%s]]" contains a %s type instead of a %s type for <code>%s</code>'
 				table.insert(modErrors, string.format(errorMsg, relic.Name, type(value), DATA_TYPE_MAP[key], key))
+			end
+		end
+	end
+	modErrors[1] = string.format(modErrors[1], #modErrors - 1)
+	return frame:preprocess(table.concat(modErrors, '\n'))
+end
+
+function p.checkObsoleteDPT(frame)
+
+	local modErrors = { '<strong class="error">p.checkObsoleteDPT(frame): There are a total of %d [[Module:DropTables/data]] errors</strong>' }
+	for _, relic in ipairs(RELIC.getRelics()) do
+		if(relic.Vaulted ~= nil) then
+			local dropLocs = DPT.getItemMissionsDropLoc(relic.Name, 'Relique')
+			if(#dropLocs > 0) then
+				local errorMsg = '# "[[%s]]" is still appearing %d times.'
+				local cpt = 0
+				for _, missionRots in ipairs(dropLocs) do
+					cpt = cpt + SHARED.tableCount(missionRots)
+				end
+				table.insert(modErrors, string.format(errorMsg, relic.Name, cpt))
 			end
 		end
 	end
