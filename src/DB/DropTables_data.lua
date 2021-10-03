@@ -1,3 +1,8 @@
+-- Map pour les reliques
+local RELICMAP = {
+    [1] = "Axi A14"
+}
+
 -- Constantes pour les warframes de bases
 local WFDefault = {{{
     Part = "Schéma Châssis",
@@ -95,18 +100,35 @@ local DropData = {
         Alias = "Defection3",
         ShortName = "[[Récompense de Mission#Tier de Mission|T3]]",
         Rewards = {
-            ["A"] = {{"Cache de Crédits", "Credits", 24.35, 3000}, {"Cache de Crédits", "Credits", 24.35, 3000},
-                     {"Cache de Crédits", "Credits", 24.35, 3000}, {"Endo", "Endo", 24.35, 250},
-                     {"Expulse-Corrompu", "Mod", 2.58}},
-            ["B"] = {{"{{WF|Harrow}} - Systèmes", "Schéma", 2.01}, {"Châtie-Corrompu", "Mod", 7.37},
-                     {"Purifie-Corrompu", "Mod", 7.37}, {"Fléau des Corrompus", "Mod", 7.37},
-                     {"Neo T2", "Relique", 10.84}, {"Neo N14", "Relique", 10.84}, {"Neo N13", "Relique", 10.84},
-                     {"Neo Z7", "Relique", 10.84}, {"Neo P2", "Relique", 10.84}, {"Neo B7", "Relique", 10.84},
-                     {"Neo N15", "Relique", 10.84}},
-            ["C"] = {{"Frappe Vitale", "Mod", 11.28}, {"{{WF|Harrow}} - Systèmes", "Schéma", 11.28},
-                     {"Axi A11", "Relique", 11.06}, {"Axi O5", "Relique", 11.06}, {"Axi A13", "Relique", 11.06},
-                     {"Axi W2", "Relique", 11.06}, {"Axi C6", "Relique", 11.06}, {"Axi Z1", "Relique", 11.06},
-                     {"Axi T6", "Relique", 11.06}}
+            ["A"] = {
+                {"Cache de Crédits", "Credits", 24.35, 3000},
+                {"Cache de Crédits", "Credits", 24.35, 3000},
+                {"Cache de Crédits", "Credits", 24.35, 3000},
+                {"Endo", "Endo", 24.35, 250},
+                {"Expulse-Corrompu", "Mod", 2.58}},
+            ["B"] = {
+                {"{{WF|Harrow}} - Systèmes", "Schéma", 2.01},
+                {"Châtie-Corrompu", "Mod", 7.37},
+                {"Purifie-Corrompu", "Mod", 7.37},
+                {"Fléau des Corrompus", "Mod", 7.37},
+                {"Neo N16", "Relique", 10.84},
+                {"Neo T4", "Relique", 10.84},
+                {"Neo T5", "Relique", 10.84},
+                {"Neo V10", "Relique", 10.84},
+                {"Neo P2", "Relique", 10.84},
+                {"Neo P3", "Relique", 10.84},
+                {"Neo N17", "Relique", 10.84}},
+            ["C"] = {
+                {"Frappe Vitale", "Mod", 15},
+                {"{{WF|Harrow}} - Systèmes", "Schéma", 15},
+                {RELICMAP[1], "Relique", 10},
+                {"Axi O5", "Relique", 10},
+                {"Axi A13", "Relique", 10},
+                {"Axi I2", "Relique", 10},
+                {"Axi C6", "Relique", 10},
+                {"Axi G6", "Relique", 10},
+                {"Axi M2", "Relique", 10}
+            }
         }
     }, {
         Type = "Défense",
@@ -158,22 +180,54 @@ local DropData = {
         Alias = "Défense3",
         ShortName = "[[Récompense de Mission#Tier de Mission|T3]]",
         Rewards = {
-            ["A"] = {{"Vitalité", "Mod", 10.00}, {"Mutation de Chargeur", "Mod", 10.00},
-                     {"Chargeur Trafiqué", "Mod", 10.00}, {"Neo T2", "Relique", 10.00}, {"Neo N14", "Relique", 10.00},
-                     {"Neo N13", "Relique", 10.00}, {"Neo Z7", "Relique", 10.00}, {"Neo P2", "Relique", 10.00},
-                     {"Neo B7", "Relique", 10.00}, {"Neo N15", "Relique", 10.00}},
-            ["B"] = {{"Nuée de Dards", "Mod", 6.67}, {"Bobine Réflexe", "Mod", 6.67},
-                     {"Froid Pénétrant", "Mod", 6.67}, {"Vent du Nord", "Mod", 6.67},
-                     {"Antre de l'Enfer", "Mod", 6.67}, {"Rationalisation", "Mod", 6.67},
-                     {"Toucher Choquant", "Mod", 6.67}, {"Endo", "Endo", 6.67, 200}, {"Axi A11", "Relique", 6.67},
-                     {"Axi O5", "Relique", 6.67}, {"Axi A13", "Relique", 6.67}, {"Axi W2", "Relique", 6.67},
-                     {"Axi C6", "Relique", 6.67}, {"Axi Z1", "Relique", 6.67}, {"Axi T6", "Relique", 6.67}},
-            ["C"] = {{"Perception Vitale", "Mod", 2.26}, {"Pointe Métallique", "Mod", 2.26}, {"Ravage", "Mod", 2.26},
-                     {"Allonge", "Mod", 2.26}, {"Mains sur Ressorts", "Mod", 2.26}, {"Convulsion", "Mod", 2.26},
-                     {"Chambre Divisée", "Mod", 2.26}, {"Continuité", "Mod", 2.26}, {"Maître Voleur", "Mod", 2.26},
-                     {"Endo", "Endo", 2.26, 400}, {"Axi A11", "Relique", 11.06}, {"Axi O5", "Relique", 11.06},
-                     {"Axi A13", "Relique", 11.06}, {"Axi W2", "Relique", 11.06}, {"Axi C6", "Relique", 11.06},
-                     {"Axi Z1", "Relique", 11.06}, {"Axi T6", "Relique", 11.06}}
+            ["A"] = {
+                {"Vitalité", "Mod", 10.00},
+                {"Mutation de Chargeur", "Mod", 10.00},
+                {"Chargeur Trafiqué", "Mod", 10.00},
+                {"Neo N16", "Relique", 10.00},
+                {"Neo T4", "Relique", 10.00},
+                {"Neo T5", "Relique", 10.00},
+                {"Neo V10", "Relique", 10.00},
+                {"Neo P2", "Relique", 10.00},
+                {"Neo P3", "Relique", 10.00},
+                {"Neo N17", "Relique", 10.00}
+            },
+            ["B"] = {
+                {"Nuée de Dards", "Mod", 6.67},
+                {"Bobine Réflexe", "Mod", 6.67},
+                {"Froid Pénétrant", "Mod", 6.67},
+                {"Vent du Nord", "Mod", 6.67},
+                {"Antre de l'Enfer", "Mod", 6.67},
+                {"Rationalisation", "Mod", 6.67},
+                {"Toucher Choquant", "Mod", 6.67},
+                {"Endo", "Endo", 6.67, 200},
+                {RELICMAP[1], "Relique", 6.67},
+                {"Axi O5", "Relique", 6.67},
+                {"Axi A13", "Relique", 6.67},
+                {"Axi I2", "Relique", 6.67},
+                {"Axi C6", "Relique", 6.67},
+                {"Axi G6", "Relique", 6.67},
+                {"Axi M2", "Relique", 6.67}
+            },
+            ["C"] = {
+                {"Perception Vitale", "Mod", 2.26},
+                {"Pointe Métallique", "Mod", 2.26},
+                {"Ravage", "Mod", 2.26},
+                {"Allonge", "Mod", 2.26},
+                {"Mains sur Ressorts", "Mod", 2.26},
+                {"Convulsion", "Mod", 2.26},
+                {"Chambre Divisée", "Mod", 2.26},
+                {"Continuité", "Mod", 2.26},
+                {"Maître Voleur", "Mod", 2.26},
+                {"Endo", "Endo", 2.26, 400},
+                {RELICMAP[1], "Relique", 11.06},
+                {"Axi O5", "Relique", 11.06},
+                {"Axi A13", "Relique", 11.06},
+                {"Axi I2", "Relique", 11.06},
+                {"Axi C6", "Relique", 11.06},
+                {"Axi G6", "Relique", 11.06},
+                {"Axi M2", "Relique", 11.06}
+            }
         }
     }, {
         Type = "Défense",
@@ -252,21 +306,52 @@ local DropData = {
         Alias = "NéantDéfense3",
         ShortName = "[[Néant]]",
         Rewards = {
-            ["A"] = {{"Meso P4", "Relique", 6.25}, {"Meso C6", "Relique", 6.25}, {"Meso I1", "Relique", 6.25},
-                     {"Meso P2", "Relique", 6.25}, {"Meso K3", "Relique", 6.25}, {"Meso D6", "Relique", 6.25},
-                     {"Meso T4", "Relique", 6.25}, {"Meso E5", "Relique", 6.25}, {"Neo T2", "Relique", 6.25},
-                     {"Neo N14", "Relique", 6.25}, {"Neo N13", "Relique", 6.25}, {"Neo Z7", "Relique", 6.25},
-                     {"Neo P2", "Relique", 6.25}, {"Neo B7", "Relique", 6.25}, {"Neo N15", "Relique", 6.25},
-                     {"Neo B6", "Relique", 6.25}},
-            ["B"] = {{"Neo T2", "Relique", 12.50}, {"Neo N14", "Relique", 12.50}, {"Neo N13", "Relique", 12.50},
-                     {"Neo Z7", "Relique", 12.50}, {"Neo P2", "Relique", 12.50}, {"Neo B7", "Relique", 12.50},
-                     {"Neo N15", "Relique", 12.50}, {"Neo B6", "Relique", 12.50}},
-            ["C"] = {{"Neo T2", "Relique", 9.68}, {"Neo N14", "Relique", 9.68}, {"Neo N13", "Relique", 9.68},
-                     {"Neo Z7", "Relique", 9.68}, {"Neo P2", "Relique", 9.68}, {"Neo B7", "Relique", 9.68},
-                     {"Neo N15", "Relique", 9.68}, {"Neo B6", "Relique", 9.68}, {"Axi O5", "Relique", 2.51},
-                     {"Axi A13", "Relique", 2.51}, {"Axi A11", "Relique", 2.51}, {"Axi Z1", "Relique", 2.51},
-                     {"Axi W2", "Relique", 2.51}, {"Axi C6", "Relique", 2.51}, {"Axi T6", "Relique", 2.51},
-                     {"Axi H5", "Relique", 2.51}, {"Axi A12", "Relique", 2.51}}
+            ["A"] = {
+                { "Meso P4", "Relique", 6.25 },
+                { "Meso C6", "Relique", 6.25 },
+                { "Meso B6", "Relique", 6.25 },
+                { "Meso B5", "Relique", 6.25 },
+                { "Meso P5", "Relique", 6.25 },
+                { "Meso S10", "Relique", 6.25 },
+                { "Meso Z4", "Relique", 6.25 },
+                { "Meso N6", "Relique", 6.25 },
+                { "Neo N16", "Relique", 6.25 },
+                { "Neo T4", "Relique", 6.25 },
+                { "Neo T5", "Relique", 6.25 },
+                { "Neo V10", "Relique", 6.25 },
+                { "Neo P2", "Relique", 6.25 },
+                { "Neo P3", "Relique", 6.25 },
+                { "Neo N17", "Relique", 6.25 },
+                { "Neo R1", "Relique", 6.25 },
+            },
+            ["B"] = {
+                { "Neo N16", "Relique", 12.50 },
+                { "Neo T4", "Relique", 12.50 },
+                { "Neo T5", "Relique", 12.50 },
+                { "Neo V10", "Relique", 12.50 },
+                { "Neo P2", "Relique", 12.50 },
+                { "Neo P3", "Relique", 12.50 },
+                { "Neo N17", "Relique", 12.50 },
+                { "Neo R1", "Relique", 12.50 },
+            },
+            ["C"] = {
+                {" Neo N16", "Relique", 9.68 },
+                { "Neo T4", "Relique", 9.68 },
+                { "Neo T5", "Relique", 9.68 },
+                { "Neo V10", "Relique", 9.68 },
+                { "Neo P2", "Relique", 9.68 },
+                { "Neo P3", "Relique", 9.68 },
+                { "Neo N17", "Relique", 9.68 },
+                { "Neo R1", "Relique", 9.68 },
+                { "Axi O5", "Relique", 2.82 },
+                { "Axi A13", "Relique", 2.82 },
+                { RELICMAP[1], "Relique", 2.82 },
+                { "Axi I2", "Relique", 2.82 },
+                { "Axi G6", "Relique", 2.82 },
+                { "Axi C6", "Relique", 2.82 },
+                { "Axi M2", "Relique", 2.82 },
+                { "Axi S3", "Relique", 2.82 },
+            },
         }
     }, {
         Type = "Perturbation",
@@ -298,7 +383,7 @@ local DropData = {
                      {"Neo N13", "Relique", 5.56}, {"Jet Proton", "Mod", 11.11}, {"Impact Motus", "Mod", 11.11},
                      {"Avantage Aéro", "Mod", 11.11}, {"Neo Z7", "Relique", 5.56}, {"Neo P2", "Relique", 5.56},
                      {"Neo B7", "Relique", 5.56}, {"Neo N15", "Relique", 5.56}},
-            ["C"] = {{"Hexenon", "Ressource", 30.00, 15}, {"Axi A11", "Relique", 5.00}, {"Axi O5", "Relique", 5.00},
+            ["C"] = {{"Hexenon", "Ressource", 30.00, 15}, {RELICMAP[1], "Relique", 5.00}, {"Axi O5", "Relique", 5.00},
                      {"Axi A13", "Relique", 5.00}, {"Claquement Proton", "Mod", 10.00},
                      {"Configuration Motus", "Mod", 10.00}, {"Agilité Aéro", "Mod", 10.00},
                      {"Médaillon Universel", "Ressource", 5.00}, {"Axi W2", "Relique", 5.00},
@@ -342,7 +427,7 @@ local DropData = {
             ["B"] = {{"Neo T2", "Relique", 14.29}, {"Neo N14", "Relique", 14.29}, {"Neo N13", "Relique", 14.29},
                      {"Neo Z7", "Relique", 14.29}, {"Neo P2", "Relique", 14.29}, {"Neo B7", "Relique", 14.29},
                      {"Neo N15", "Relique", 14.29}},
-            ["C"] = {{"Axi A11", "Relique", 10.20}, {"Axi O5", "Relique", 10.20}, {"Axi A13", "Relique", 10.20},
+            ["C"] = {{RELICMAP[1], "Relique", 10.20}, {"Axi O5", "Relique", 10.20}, {"Axi A13", "Relique", 10.20},
                      {"Gauss Châssis Schéma", "Schéma", 7.84}, {"Gauss Neuroptiques Schéma", "Schéma", 7.84},
                      {"Gauss Systèmes Schéma", "Schéma", 7.84}, {"Médaillon Universel", "Ressource", 5.10},
                      {"Axi W2", "Relique", 10.20}, {"Axi C6", "Relique", 10.20}, {"Axi Z1", "Relique", 10.20},
@@ -357,10 +442,10 @@ local DropData = {
             ["A"] = {{"Neo T2", "Relique", 14.29}, {"Neo N14", "Relique", 14.29}, {"Neo N13", "Relique", 14.29},
                      {"Neo Z7", "Relique", 14.29}, {"Neo P2", "Relique", 14.29}, {"Neo B7", "Relique", 14.29},
                      {"Neo N15", "Relique", 14.29}},
-            ["B"] = {{"Axi A11", "Relique", 14.29}, {"Axi O5", "Relique", 14.29}, {"Axi A13", "Relique", 14.29},
+            ["B"] = {{RELICMAP[1], "Relique", 14.29}, {"Axi O5", "Relique", 14.29}, {"Axi A13", "Relique", 14.29},
                      {"Axi W2", "Relique", 14.29}, {"Axi C6", "Relique", 14.29}, {"Axi Z1", "Relique", 14.29},
                      {"Axi T6", "Relique", 14.29}},
-            ["C"] = {{"Axi A11", "Relique", 12.42}, {"Axi O5", "Relique", 12.42}, {"Axi A13", "Relique", 12.42},
+            ["C"] = {{RELICMAP[1], "Relique", 12.42}, {"Axi O5", "Relique", 12.42}, {"Axi A13", "Relique", 12.42},
                      {"Lentille Lua Schéma", "Schéma", 8.05}, {"Médaillon Universel", "Ressource", 5.03},
                      {"Axi W2", "Relique", 12.42}, {"Axi C6", "Relique", 12.42}, {"Axi Z1", "Relique", 12.42},
                      {"Axi T6", "Relique", 12.42}}
@@ -438,7 +523,7 @@ local DropData = {
             ["C"] = {{"Purifie-Infestés", "Mod", 3.76}, {"Mutation de Munitions de Pistolet", "Mod", 3.76},
                      {"Mutation de Flèches", "Mod", 3.76}, {"Mutation de Munitions de Fusil", "Mod", 3.76},
                      {"Mutation de Munitions de Sniper", "Mod", 3.76},
-                     {"Mutation de Munitions de Fusil à Pompe", "Mod", 3.76}, {"Axi A11", "Relique", 11.06},
+                     {"Mutation de Munitions de Fusil à Pompe", "Mod", 3.76}, {RELICMAP[1], "Relique", 11.06},
                      {"Axi O5", "Relique", 11.06}, {"Axi A13", "Relique", 11.06}, {"Axi W2", "Relique", 11.06},
                      {"Axi C6", "Relique", 11.06}, {"Axi Z1", "Relique", 11.06}, {"Axi T6", "Relique", 11.06}}
         }
@@ -551,7 +636,7 @@ local DropData = {
                      {"Débordement", "Mod", 10.00}, {"Rebord Glacial", "Mod", 10.00},
                      {"Canon Électrifié", "Mod", 10.00}, {"Inversion d'Énergie", "Mod", 10.00},
                      {"Endo", "Endo", 10.00, 250}, {"Endo", "Endo", 10.00, 250}},
-            ["C"] = {{"Endo", "Endo", 22.56, 400}, {"Endo", "Endo", 9.68, 400}, {"Axi A11", "Relique", 9.68},
+            ["C"] = {{"Endo", "Endo", 22.56, 400}, {"Endo", "Endo", 9.68, 400}, {RELICMAP[1], "Relique", 9.68},
                      {"Axi O5", "Relique", 9.68}, {"Axi A13", "Relique", 9.68}, {"Axi Z1", "Relique", 9.68},
                      {"Axi W2", "Relique", 9.68}, {"Axi C6", "Relique", 9.68}, {"Axi T6", "Relique", 9.68}}
         }
@@ -608,10 +693,10 @@ local DropData = {
                      {"Chargeur Trafiqué", "Mod", 10.00}, {"Neo T2", "Relique", 10.00}, {"Neo N14", "Relique", 10.00},
                      {"Neo N13", "Relique", 10.00}, {"Neo Z7", "Relique", 10.00}, {"Neo P2", "Relique", 10.00},
                      {"Neo B7", "Relique", 10.00}, {"Neo N15", "Relique", 10.00}},
-            ["B"] = {{"Axi A11", "Relique", 14.29}, {"Axi O5", "Relique", 14.29}, {"Axi A13", "Relique", 14.29},
+            ["B"] = {{RELICMAP[1], "Relique", 14.29}, {"Axi O5", "Relique", 14.29}, {"Axi A13", "Relique", 14.29},
                      {"Axi W2", "Relique", 14.29}, {"Axi C6", "Relique", 14.29}, {"Axi Z1", "Relique", 14.29},
                      {"Axi T6", "Relique", 14.29}},
-            ["C"] = {{"Axi A11", "Relique", 14.29}, {"Axi O5", "Relique", 14.29}, {"Axi A13", "Relique", 14.29},
+            ["C"] = {{RELICMAP[1], "Relique", 14.29}, {"Axi O5", "Relique", 14.29}, {"Axi A13", "Relique", 14.29},
                      {"Axi W2", "Relique", 14.29}, {"Axi C6", "Relique", 14.29}, {"Axi Z1", "Relique", 14.29},
                      {"Axi T6", "Relique", 14.29}}
         }
@@ -621,15 +706,36 @@ local DropData = {
         Alias = "NéantInterception4",
         ShortName = "[[Néant]]",
         Rewards = {
-            ["A"] = {{"Neo T2", "Relique", 12.50}, {"Neo N14", "Relique", 12.50}, {"Neo N13", "Relique", 12.50},
-                     {"Neo Z7", "Relique", 12.50}, {"Neo P2", "Relique", 12.50}, {"Neo B7", "Relique", 12.50},
-                     {"Neo N15", "Relique", 12.50}, {"Neo B6", "Relique", 12.50}},
-            ["B"] = {{"Neo T2", "Relique", 12.50}, {"Neo N14", "Relique", 12.50}, {"Neo N13", "Relique", 12.50},
-                     {"Neo Z7", "Relique", 12.50}, {"Neo P2", "Relique", 12.50}, {"Neo B7", "Relique", 12.50},
-                     {"Neo N15", "Relique", 12.50}, {"Neo B6", "Relique", 12.50}},
-            ["C"] = {{"Axi O5", "Relique", 11.11}, {"Axi A13", "Relique", 11.11}, {"Axi A11", "Relique", 11.11},
-                     {"Axi Z1", "Relique", 11.11}, {"Axi W2", "Relique", 11.11}, {"Axi C6", "Relique", 11.11},
-                     {"Axi T6", "Relique", 11.11}, {"Axi H5", "Relique", 11.11}, {"Axi A12", "Relique", 11.11}}
+            ["A"] = {
+                {"Neo T2", "Relique", 12.50},
+                {"Neo N14", "Relique", 12.50},
+                {"Neo N13", "Relique", 12.50},
+                {"Neo Z7", "Relique", 12.50},
+                {"Neo P2", "Relique", 12.50},
+                {"Neo B7", "Relique", 12.50},
+                {"Neo N15", "Relique", 12.50},
+                {"Neo B6", "Relique", 12.50}
+            },
+            ["B"] = {
+                {"Neo T2", "Relique", 12.50},
+                {"Neo N14", "Relique", 12.50},
+                {"Neo N13", "Relique", 12.50},
+                {"Neo Z7", "Relique", 12.50},
+                {"Neo P2", "Relique", 12.50},
+                {"Neo B7", "Relique", 12.50},
+                {"Neo N15", "Relique", 12.50},
+                {"Neo B6", "Relique", 12.50}
+            },
+            ["C"] = {
+                {"Axi O5", "Relique", 12.50},
+                {"Axi A13", "Relique", 12.50},
+                {RELICMAP[1], "Relique", 12.50},
+                {"Axi I2", "Relique", 12.50},
+                {"Axi G6", "Relique", 12.50},
+                {"Axi C6", "Relique", 12.50},
+                {"Axi M2", "Relique", 12.50},
+                {"Axi S3", "Relique", 12.50}
+            }
         }
     }, {
         Type = "Défense Mobile",
@@ -661,12 +767,24 @@ local DropData = {
         Alias = "NéantMDéfense4",
         ShortName = "[[Néant]]",
         Rewards = {
-            ["A"] = {{"Axi O5", "Relique", 5.88}, {"Axi A13", "Relique", 5.88}, {"Neo T2", "Relique", 5.88},
-                     {"Neo N14", "Relique", 5.88}, {"Neo N13", "Relique", 5.88}, {"Neo Z7", "Relique", 5.88},
-                     {"Axi A11", "Relique", 5.88}, {"Axi Z1", "Relique", 5.88}, {"Axi W2", "Relique", 5.88},
-                     {"Neo P2", "Relique", 5.88}, {"Neo B7", "Relique", 5.88}, {"Axi C6", "Relique", 5.88},
-                     {"Axi T6", "Relique", 5.88}, {"Neo N15", "Relique", 5.88}, {"Neo B6", "Relique", 5.88},
-                     {"Axi H5", "Relique", 5.88}, {"Axi A12", "Relique", 5.88}}
+            ["A"] = {
+                {"Axi O5", "Relique", 6.25},
+                {"Axi A13", "Relique", 6.25},
+                {"Neo N16", "Relique", 6.25},
+                {"Neo T4", "Relique", 6.25},
+                {"Neo T5", "Relique", 6.25},
+                {"Neo V10", "Relique", 6.25},
+                {RELICMAP[1], "Relique", 6.25},
+                {"Axi I2", "Relique", 6.25},
+                {"Axi G6", "Relique", 6.25},
+                {"Neo P2", "Relique", 6.25},
+                {"Neo P3", "Relique", 6.25},
+                {"Axi C6", "Relique", 6.25},
+                {"Axi M2", "Relique", 6.25},
+                {"Neo N17", "Relique", 6.25},
+                {"Neo R1", "Relique", 6.25},
+                {"Axi S3", "Relique", 6.25},
+            }
         }
     }, {
         Type = "Soute Orokin",
@@ -943,13 +1061,25 @@ local DropData = {
         Alias = "NéantSabotage4",
         ShortName = "[[Néant]]",
         Rewards = {
-            ["A"] = {{"Axi O5", "Relique", 5.88}, {"Axi A13", "Relique", 5.88}, {"Neo T2", "Relique", 5.88},
-                     {"Neo N14", "Relique", 5.88}, {"Neo N13", "Relique", 5.88}, {"Neo Z7", "Relique", 5.88},
-                     {"Axi A11", "Relique", 5.88}, {"Axi Z1", "Relique", 5.88}, {"Axi W2", "Relique", 5.88},
-                     {"Neo P2", "Relique", 5.88}, {"Neo B7", "Relique", 5.88}, {"Axi C6", "Relique", 5.88},
-                     {"Axi T6", "Relique", 5.88}, {"Neo N15", "Relique", 5.88}, {"Neo B6", "Relique", 5.88},
-                     {"Axi H5", "Relique", 5.88}, {"Axi A12", "Relique", 5.88}}
-        }
+            ["A"] = {
+                {"Axi O5", "Relique", 6.25},
+                {"Axi A13", "Relique", 6.25},
+                {"Neo N16", "Relique", 6.25},
+                {"Neo T4", "Relique", 6.25},
+                {"Neo T5", "Relique", 6.25},
+                {"Neo V10", "Relique", 6.25},
+                {RELICMAP[1], "Relique", 6.25},
+                {"Axi I2", "Relique", 6.25},
+                {"Axi G6", "Relique", 6.25},
+                {"Neo P2", "Relique", 6.25},
+                {"Neo P3", "Relique", 6.25},
+                {"Axi C6", "Relique", 6.25},
+                {"Axi M2", "Relique", 6.25},
+                {"Neo N17", "Relique", 6.25},
+                {"Neo R1", "Relique", 6.25},
+                {"Axi S3", "Relique", 6.25}
+            }
+        },
     }, {
         Type = "Sabotage",
         Tier = "NéantFacile",
@@ -1001,7 +1131,7 @@ local DropData = {
             ["B"] = {{"Nuée de Dards", "Mod", 6.67}, {"Bobine Réflexe", "Mod", 6.67},
                      {"Froid Pénétrant", "Mod", 6.67}, {"Vent du Nord", "Mod", 6.67},
                      {"Antre de l'Enfer", "Mod", 6.67}, {"Rationalisation", "Mod", 6.67},
-                     {"Toucher Choquant", "Mod", 6.67}, {"Endo", "Endo", 6.67, 150}, {"Axi A11", "Relique", 6.67},
+                     {"Toucher Choquant", "Mod", 6.67}, {"Endo", "Endo", 6.67, 150}, {RELICMAP[1], "Relique", 6.67},
                      {"Axi O5", "Relique", 6.67}, {"Axi A13", "Relique", 6.67}, {"Axi W2", "Relique", 6.67},
                      {"Axi C6", "Relique", 6.67}, {"Axi Z1", "Relique", 6.67}, {"Axi T6", "Relique", 6.67}},
             ["C"] = {{"Nidus Systèmes Schéma", "Schéma", 14.29}, {"Nidus Neuroptiques Schéma", "Schéma", 14.29},
@@ -1134,7 +1264,7 @@ local DropData = {
                      {"Neo N14", "Relique", 12.50}, {"Neo N13", "Relique", 12.50}, {"Neo Z7", "Relique", 12.50},
                      {"Neo P2", "Relique", 12.50}, {"Neo B7", "Relique", 12.50}, {"Neo N15", "Relique", 12.50}},
             ["C"] = {{"{{WF|Octavia}} - Neuroptiques", "Schéma", 22.56}, {"Axi O5", "Relique", 11.06},
-                     {"Axi A13", "Relique", 11.06}, {"Axi A11", "Relique", 11.06}, {"Axi Z1", "Relique", 11.06},
+                     {"Axi A13", "Relique", 11.06}, {RELICMAP[1], "Relique", 11.06}, {"Axi Z1", "Relique", 11.06},
                      {"Axi W2", "Relique", 11.06}, {"Axi C6", "Relique", 11.06}, {"Axi T6", "Relique", 11.06}}
         }
     }, {
@@ -1198,7 +1328,7 @@ local DropData = {
             ["C"] = {{"Purifie-Infestés", "Mod", 3.76}, {"Mutation de Munitions de Pistolet", "Mod", 3.76},
                      {"Mutation de Flèches", "Mod", 3.76}, {"Mutation de Munitions de Fusil", "Mod", 3.76},
                      {"Mutation de Munitions de Sniper", "Mod", 3.76},
-                     {"Mutation de Munitions de Fusil à Pompe", "Mod", 3.76}, {"Axi A11", "Relique", 11.06},
+                     {"Mutation de Munitions de Fusil à Pompe", "Mod", 3.76}, {RELICMAP[1], "Relique", 11.06},
                      {"Axi O5", "Relique", 11.06}, {"Axi A13", "Relique", 11.06}, {"Axi W2", "Relique", 11.06},
                      {"Axi C6", "Relique", 11.06}, {"Axi Z1", "Relique", 11.06}, {"Axi T6", "Relique", 11.06}}
         }
@@ -1206,17 +1336,38 @@ local DropData = {
         Type = "Survie",
         Tier = "Néant T4",
         Alias = "NéantSurvie4",
-        ShortName = "[[Récompense de Mission#Tier de Mission|T4]]",
+        ShortName = "Néant T4",
         Rewards = {
-            ["A"] = {{"Neo T2", "Relique", 12.50}, {"Neo N14", "Relique", 12.50}, {"Neo N13", "Relique", 12.50},
-                     {"Neo Z7", "Relique", 12.50}, {"Neo P2", "Relique", 12.50}, {"Neo B7", "Relique", 12.50},
-                     {"Neo N15", "Relique", 12.50}, {"Neo B6", "Relique", 12.50}},
-            ["B"] = {{"Neo T2", "Relique", 12.50}, {"Neo N14", "Relique", 12.50}, {"Neo N13", "Relique", 12.50},
-                     {"Neo Z7", "Relique", 12.50}, {"Neo P2", "Relique", 12.50}, {"Neo B7", "Relique", 12.50},
-                     {"Neo N15", "Relique", 12.50}, {"Neo B6", "Relique", 12.50}},
-            ["C"] = {{"Axi O5", "Relique", 11.11}, {"Axi A13", "Relique", 11.11}, {"Axi A11", "Relique", 11.11},
-                     {"Axi Z1", "Relique", 11.11}, {"Axi W2", "Relique", 11.11}, {"Axi C6", "Relique", 11.11},
-                     {"Axi T6", "Relique", 11.11}, {"Axi H5", "Relique", 11.11}, {"Axi A12", "Relique", 11.11}}
+            ["A"] = {
+                {"Neo T2", "Relique", 12.50},
+                {"Neo N14", "Relique", 12.50},
+                {"Neo N13", "Relique", 12.50},
+                {"Neo Z7", "Relique", 12.50},
+                {"Neo P2", "Relique", 12.50},
+                {"Neo B7", "Relique", 12.50},
+                {"Neo N15", "Relique", 12.50},
+                {"Neo B6", "Relique", 12.50}
+            },
+            ["B"] = {
+                {"Neo T2", "Relique", 12.50},
+                {"Neo N14", "Relique", 12.50},
+                {"Neo N13", "Relique", 12.50},
+                {"Neo Z7", "Relique", 12.50},
+                {"Neo P2", "Relique", 12.50},
+                {"Neo B7", "Relique", 12.50},
+                {"Neo N15", "Relique", 12.50},
+                {"Neo B6", "Relique", 12.50}
+            },
+            ["C"] = {
+                {"Axi O5", "Relique", 12.50},
+                {"Axi A13", "Relique", 12.50},
+                {RELICMAP[1], "Relique", 12.50},
+                {"Axi I2", "Relique", 12.50},
+                {"Axi G6", "Relique", 12.50},
+                {"Axi C6", "Relique", 12.50},
+                {"Axi M2", "Relique", 12.50},
+                {"Axi S3", "Relique", 12.50}
+            }
         }
     }, {
         Type = "Survie",
@@ -1297,7 +1448,7 @@ local DropData = {
                      {"Chambre Divisée", "Mod", 6.67}, {"Stabilisateur", "Mod", 6.67}, {"Neo T2", "Relique", 6.67},
                      {"Neo N14", "Relique", 6.67}, {"Neo N13", "Relique", 6.67}, {"Neo Z7", "Relique", 6.67},
                      {"Neo P2", "Relique", 6.67}, {"Neo B7", "Relique", 6.67}, {"Neo N15", "Relique", 6.67}},
-            ["C"] = {{"Frappe Durable", "Mod", 11.28}, {"Frappe Vitale", "Mod", 11.28}, {"Axi A11", "Relique", 11.06},
+            ["C"] = {{"Frappe Durable", "Mod", 11.28}, {"Frappe Vitale", "Mod", 11.28}, {RELICMAP[1], "Relique", 11.06},
                      {"Axi O5", "Relique", 11.06}, {"Axi A13", "Relique", 11.06}, {"Axi W2", "Relique", 11.06},
                      {"Axi C6", "Relique", 11.06}, {"Axi Z1", "Relique", 11.06}, {"Axi T6", "Relique", 11.06}}
         }
@@ -1313,7 +1464,7 @@ local DropData = {
             ["B"] = {{"Neo T2", "Relique", 14.29}, {"Neo N14", "Relique", 14.29}, {"Neo N13", "Relique", 14.29},
                      {"Neo Z7", "Relique", 14.29}, {"Neo P2", "Relique", 14.29}, {"Neo B7", "Relique", 14.29},
                      {"Neo N15", "Relique", 14.29}},
-            ["C"] = {{"Frappe Vitale", "Mod", 12.50}, {"Axi A11", "Relique", 12.50}, {"Axi O5", "Relique", 12.50},
+            ["C"] = {{"Frappe Vitale", "Mod", 12.50}, {RELICMAP[1], "Relique", 12.50}, {"Axi O5", "Relique", 12.50},
                      {"Axi A13", "Relique", 12.50}, {"Axi W2", "Relique", 12.50}, {"Axi C6", "Relique", 12.50},
                      {"Axi Z1", "Relique", 12.50}, {"Axi T6", "Relique", 12.50}}
         }
@@ -1480,29 +1631,55 @@ local DropData = {
         Alias = "Onslaught",
         ShortName = "Assaut du Sanctuaire Élite",
         Rewards = {
-            ["A"] = {{"Endo", "Endo", 9.48, 400}, {"Lato Vandal Culasse", "Schéma", 2.01},
-                     {"Scène Fente Forteresse Kuva", "Scène", 5.53}, {"Scène du Balcon de Lua", "Scène", 5.53},
-                     {"Meso C6 (Éclatante)", "Relique", 5.53}, {"Lith D4 (Éclatante)", "Relique", 9.48},
-                     {"Lith B8 (Éclatante)", "Relique", 9.48}, {"Lith G3 (Éclatante)", "Relique", 9.48},
-                     {"Lith P5 (Éclatante)", "Relique", 9.48}, {"Lith T5 (Éclatante)", "Relique", 9.48},
-                     {"Lith I1 (Éclatante)", "Relique", 9.48}, {"Meso K3 (Éclatante)", "Relique", 5.53},
-                     {"Lith T4 (Éclatante)", "Relique", 9.48}},
-            ["B"] = {{"Éclat d'Eidolon Synthétique", "Ressource", 10.84}, {"Endo", "Endo", 10.84, 400},
-                     {"Meso P4 (Éclatante)", "Relique", 10.84}, {"Braton Vandal Canon", "Schéma", 4.42},
-                     {"Braton Vandal Culasse", "Schéma", 4.42}, {"Lato Vandal Schéma", "Schéma", 2.01},
-                     {"Meso I1 (Éclatante)", "Relique", 10.84}, {"Meso P2 (Éclatante)", "Relique", 10.84},
-                     {"Neo N14 (Éclatante)", "Relique", 4.42}, {"Neo Z7 (Éclatante)", "Relique", 4.42},
-                     {"Meso D6 (Éclatante)", "Relique", 10.84}, {"Meso T4 (Éclatante)", "Relique", 10.84},
-                     {"Neo N13 (Éclatante)", "Relique", 4.42}},
-            ["C"] = {{"Endo", "Endo", 15.18, 750}, {"Braton Vandal Crosse", "Schéma", 2.01},
-                     {"Braton Vandal Schéma", "Schéma", 2.01}, {"Lato Vandal Canon", "Schéma", 2.01},
-                     {"Floraison Atypique", "Mod", 2.01}, {"Boursouflure Atypique", "Mod", 2.01},
-                     {"Axi O5 (Éclatante)", "Relique", 2.01}, {"Axi Z1 (Éclatante)", "Relique", 2.01},
-                     {"Neo T2 (Éclatante)", "Relique", 15.18}, {"Neo P2 (Éclatante)", "Relique", 15.18},
-                     {"Axi A11 (Éclatante)", "Relique", 2.01}, {"Axi A13 (Éclatante)", "Relique", 2.01},
-                     {"Axi W2 (Éclatante)", "Relique", 2.01}, {"Neo B7 (Éclatante)", "Relique", 15.18},
-                     {"Axi C6 (Éclatante)", "Relique", 2.01}, {"Axi T6 (Éclatante)", "Relique", 2.01},
-                     {"Neo N15 (Éclatante)", "Relique", 15.18}}
+            ["A"] = {
+                {"Endo", "Endo", 9.48, 400},
+                {"Lato Vandal Culasse", "Schéma", 2.01},
+                {"Scène Fente Forteresse Kuva", "Scène", 5.53},
+                {"Scène du Balcon de Lua", "Scène", 5.53},
+                {"Meso C6 (Éclatante)", "Relique", 5.53},
+                {"Lith D4 (Éclatante)", "Relique", 9.48},
+                {"Lith B8 (Éclatante)", "Relique", 9.48},
+                {"Lith G3 (Éclatante)", "Relique", 9.48},
+                {"Lith P5 (Éclatante)", "Relique", 9.48},
+                {"Lith T5 (Éclatante)", "Relique", 9.48},
+                {"Lith I1 (Éclatante)", "Relique", 9.48},
+                {"Meso K3 (Éclatante)", "Relique", 5.53},
+                {"Lith T4 (Éclatante)", "Relique", 9.48}
+            },
+            ["B"] = {
+                {"Éclat d'Eidolon Synthétique", "Ressource", 10.84},
+                {"Endo", "Endo", 10.84, 400},
+                {"Meso P4 (Éclatante)", "Relique", 10.84},
+                {"Braton Vandal Canon", "Schéma", 4.42},
+                {"Braton Vandal Culasse", "Schéma", 4.42},
+                {"Lato Vandal Schéma", "Schéma", 2.01},
+                {"Meso I1 (Éclatante)", "Relique", 10.84},
+                {"Meso P2 (Éclatante)", "Relique", 10.84},
+                {"Neo N14 (Éclatante)", "Relique", 4.42},
+                {"Neo Z7 (Éclatante)", "Relique", 4.42},
+                {"Meso D6 (Éclatante)", "Relique", 10.84},
+                {"Meso T4 (Éclatante)", "Relique", 10.84},
+                {"Neo N13 (Éclatante)", "Relique", 4.42}
+            },
+            ["C"] = {
+                {"Endo", "Endo", 15.18, 750},
+                {"Braton Vandal Crosse", "Schéma", 2.01},
+                {"Braton Vandal Schéma", "Schéma", 2.01},
+                {"Lato Vandal Canon", "Schéma", 2.01},
+                {"Floraison Atypique", "Mod", 2.01},
+                {"Boursouflure Atypique", "Mod", 2.01},
+                {"Axi O5 (Éclatante)", "Relique", 2.01},
+                {"Axi Z1 (Éclatante)", "Relique", 2.01},
+                {"Neo T2 (Éclatante)", "Relique", 15.18},
+                {"Neo P2 (Éclatante)", "Relique", 15.18},
+                {"Axi A11 (Éclatante)", "Relique", 2.01},
+                {"Axi A13 (Éclatante)", "Relique", 2.01},
+                {"Axi W2 (Éclatante)", "Relique", 2.01},
+                {"Neo B7 (Éclatante)", "Relique", 15.18},
+                {"Axi C6 (Éclatante)", "Relique", 2.01},
+                {"Axi T6 (Éclatante)", "Relique", 2.01},
+                {"Neo N15 (Éclatante)", "Relique", 15.18}
+            }
         }
     }, {
         Type = "Arbitrage",
@@ -3875,7 +4052,7 @@ local DropData = {
                      {"Meso T5", "Relique", 5.71}, {"Meso P5", "Relique", 5.71}, {"Brisure Riven", "Ressource", 2.86}},
             ["C"] = {{"Endo", "Endo", 31.25, 450}, {"Réacteur Vidar Mk II", "Schéma", 12.50},
                      {"Réseau de Bouclier Vidar Mk II", "Schéma", 12.50},
-                     {"Revêtement Vidar Mk II", "Schéma", 12.50}, {"Ambassador Stock", "Schéma", 8.33},
+                     {"Revêtement Vidar Mk II", "Schéma", 12.50}, {"Ambassadeur Crosse", "Schéma", 8.33},
                      {"{{WF|Ash}} - Neuroptiques", "Schéma", 8.33}, {"Meso D6", "Relique", 6.25},
                      {"Meso Z4", "Relique", 6.25}, {"Brisure Riven", "Ressource", 2.08, 2}}
         }
@@ -4181,8 +4358,8 @@ local DropData = {
             ["A"] = {{"Endo", "Endo", 20.00, 100}, {"Endo", "Endo", 10.00, 150},
                      {"Brisure Riven", "Ressource", 1.00, 2}, {"Moteur Lavan Mk I", "Schéma", 6.00},
                      {"Réacteur Lavan Mk I", "Schéma", 6.00}, {"Réseau de Bouclier Lavan Mk I", "Schéma", 6.00},
-                     {"Revêtement Lavan Mk I", "Schéma", 6.00}, {"Vidar Moteur Mk I", "Schéma", 6.00},
-                     {"Vidar Réacteur Mk I", "Schéma", 6.00}, {"Réseau de Bouclier Vidar Mk I", "Schéma", 6.00},
+                     {"Revêtement Lavan Mk I", "Schéma", 6.00}, {"Moteur Vidar Mk I", "Schéma", 6.00},
+                     {"Réacteur Vidar Mk I", "Schéma", 6.00}, {"Réseau de Bouclier Vidar Mk I", "Schéma", 6.00},
                      {"Revêtement Vidar Mk I", "Schéma", 6.00}, {"Lith G4", "Relique", 3.00},
                      {"Lith B8", "Relique", 3.00}, {"Lith K6", "Relique", 3.00}, {"Lith P5", "Relique", 3.00},
                      {"Lith A4", "Relique", 3.00}, {"Lith I1", "Relique", 3.00}, {"Lith T4", "Relique", 3.00}}
@@ -4264,9 +4441,9 @@ local DropData = {
         Tier = "GrineerVoileExtra",
         Alias = "GrineerVoileProximaExtra",
         Rewards = {
-            ["A"] = {{"Carbides", "Resource", 28.57, 200}, {"Titanium", "Resource", 28.57, 200},
-                     {"Gallos Rods", "Resource", 14.29, 5}, {"Asterite", "Resource", 14.29, 5},
-                     {"Komms", "Resource", 7.14}, {"Nullstones", "Resource", 7.14}}
+            ["A"] = {{"Carbures", "Ressource", 28.57, 200}, {"Titane", "Ressource", 28.57, 200},
+                     {"Barres de Gallos", "Ressource", 14.29, 5}, {"Astérite", "Ressource", 14.29, 5},
+                     {"Komms", "Ressource", 7.14}, {"Larmes du Néant", "Ressource", 7.14}}
         }
     }, {
         Type = "Empyrée",
@@ -4274,16 +4451,16 @@ local DropData = {
         Alias = "GrineerVoileProximaCaches",
         Rewards = {
             ["A"] = {{"Endo", "Endo", 20, 400}, {"Endo", "Endo", 10, 600},
-                     {"Oberon Neuroptics Blueprint", "Blueprint", 10}, {"Seeker Volley", "Mod", 4},
-                     {"Void Hole", "Mod", 4}, {"Phoenix Blaze", "Mod", 4}, {"Neo D3", "Relic", 4.8},
-                     {"Neo T4", "Relic", 4.8}, {"Neo A5", "Relic", 4.8}, {"Neo V10", "Relic", 4.8},
-                     {"Neo P2", "Relic", 4.8}, {"Neo B7", "Relic", 4.8}, {"Neo N15", "Relic", 4.8},
-                     {"Neo V9", "Relic", 4.8}, {"Axi V10", "Relic", 4.8}, {"Axi S8", "Relic", 4.8}},
-            ["B"] = {{"Spectra Vandal Blueprint", "Blueprint", 8.7}, {"Spectra Vandal Barrel", "Blueprint", 6.52},
-                     {"Spectra Vandal Chassis", "Blueprint", 6.52}, {"Spectra Vandal Handle", "Blueprint", 6.52},
+                     {"Oberon Neuroptiques", "Schéma", 10}, {"Salve de Missiles", "Mod", 4},
+                     {"Trou du Néant", "Mod", 4}, {"Éclat du Phénix", "Mod", 4}, {"Neo D3", "Relique", 4.8},
+                     {"Neo T4", "Relique", 4.8}, {"Neo A5", "Relique", 4.8}, {"Neo V10", "Relique", 4.8},
+                     {"Neo P2", "Relique", 4.8}, {"Neo B7", "Relique", 4.8}, {"Neo N15", "Relique", 4.8},
+                     {"Neo V9", "Relique", 4.8}, {"Axi V10", "Relique", 4.8}, {"Axi S8", "Relique", 4.8}},
+            ["B"] = {{"Spectra Vandal", "Schéma", 8.7}, {"Spectra Vandal Canon", "Schéma", 6.52},
+                     {"Spectra Vandal Châssis", "Schéma", 6.52}, {"Spectra Vandal Poignée", "Schéma", 6.52},
                      {"Endo", "Endo", 17.39, 450}, {"Endo", "Endo", 13.04, 1200}, {"Endo", "Endo", 8.7, 450},
-                     {"Endo", "Endo", 4.35, 600}, {"Ignis Wraith Blueprint", "Blueprint", 8.7},
-                     {"Neo V9", "Relic", 6.52}, {"Axi V10", "Relic", 6.52}, {"Axi S8", "Relic", 6.52}},
+                     {"Endo", "Endo", 4.35, 600}, {"Ignis Wraith", "Schéma", 8.7},
+                     {"Neo V9", "Relique", 6.52}, {"Axi V10", "Relique", 6.52}, {"Axi S8", "Relique", 6.52}},
             ["C"] = {}
         }
     }, {
@@ -4292,13 +4469,13 @@ local DropData = {
         Alias = "GrineerVoileProximaExtermination",
         Rewards = {
             ["A"] = {{"Endo", "Endo", 14.46, 400}, {"Endo", "Endo", 9.64, 600},
-                     {"Vidar Engines Mk III", "Blueprint", 7.23}, {"Vidar Reactor Mk III", "Blueprint", 7.23},
-                     {"Vidar Shield Array Mk III", "Blueprint", 7.23}, {"Vidar Plating Mk III", "Blueprint", 7.23},
-                     {"Zetki Engines Mk III", "Blueprint", 7.23}, {"Zetki Reactor Mk III", "Blueprint", 7.23},
-                     {"Zetki Shield Array Mk III", "Blueprint", 7.23}, {"Zetki Plating Mk III", "Blueprint", 7.23},
-                     {"Axi O5", "Relic", 2.41}, {"Axi A13", "Relic", 2.41}, {"Axi N7", "Relic", 2.41},
-                     {"Axi T7", "Relic", 2.41}, {"Axi G6", "Relic", 2.41}, {"Axi C6", "Relic", 2.41},
-                     {"Axi I1", "Relic", 2.41}, {"Riven Sliver", "Resource", 1.2, 3}}
+                     {"Moteur Vidar Mk III", "Schéma", 7.23}, {"Réacteur Vidar Mk III", "Schéma", 7.23},
+                     {"Réseau de Boucliers Vidar Mk III", "Schéma", 7.23}, {"Révêtement Vidar Mk III", "Schéma", 7.23},
+                     {"Moteur Zetki Mk III", "Schéma", 7.23}, {"Réacteur Zetki Mk III", "Schéma", 7.23},
+                     {"Réseau de Boucliers Zetki Mk III", "Schéma", 7.23}, {"Révêtement Zetki Mk III", "Schéma", 7.23},
+                     {"Axi O5", "Relique", 2.41}, {"Axi A13", "Relique", 2.41}, {"Axi N7", "Relique", 2.41},
+                     {"Axi T7", "Relique", 2.41}, {"Axi G6", "Relique", 2.41}, {"Axi C6", "Relique", 2.41},
+                     {"Axi I1", "Relique", 2.41}, {"Brisure Riven", "Ressource", 1.2, 3}}
         }
     }, {
         Type = "Empyrée",
@@ -4306,111 +4483,143 @@ local DropData = {
         Alias = "GrineerVoileProximaVolatile",
         Rewards = {
             ["A"] = {{"Endo", "Endo", 14.46, 400}, {"Endo", "Endo", 9.64, 600},
-                     {"Vidar Engines Mk III", "Blueprint", 7.23}, {"Vidar Reactor Mk III", "Blueprint", 7.23},
-                     {"Vidar Shield Array Mk III", "Blueprint", 7.23}, {"Vidar Plating Mk III", "Blueprint", 7.23},
-                     {"Zetki Engines Mk III", "Blueprint", 7.23}, {"Zetki Reactor Mk III", "Blueprint", 7.23},
-                     {"Zetki Shield Array Mk III", "Blueprint", 7.23}, {"Zetki Plating Mk III", "Blueprint", 7.23},
-                     {"Axi O5", "Relic", 2.41}, {"Axi A13", "Relic", 2.41}, {"Axi N7", "Relic", 2.41},
-                     {"Axi T7", "Relic", 2.41}, {"Axi G6", "Relic", 2.41}, {"Axi C6", "Relic", 2.41},
-                     {"Axi I1", "Relic", 2.41}, {"Riven Sliver", "Resource", 1.2, 2}}
+                     {"Moteur Vidar Mk III", "Schéma", 7.23}, {"Réacteur Vidar Mk III", "Schéma", 7.23},
+                     {"Réseau de Boucliers Vidar Mk III", "Schéma", 7.23}, {"Révêtement Vidar Mk III", "Schéma", 7.23},
+                     {"Moteur Zetki Mk III", "Schéma", 7.23}, {"Réacteur Zetki Mk III", "Schéma", 7.23},
+                     {"Réseau de Boucliers Zetki Mk III", "Schéma", 7.23}, {"Révêtement Zetki Mk III", "Schéma", 7.23},
+                     {"Axi O5", "Relique", 2.41}, {"Axi A13", "Relique", 2.41}, {"Axi N7", "Relique", 2.41},
+                     {"Axi T7", "Relique", 2.41}, {"Axi G6", "Relique", 2.41}, {"Axi C6", "Relique", 2.41},
+                     {"Axi I1", "Relique", 2.41}, {"Brisure Riven", "Ressource", 1.2, 2}}
         }
     }, {
         Type = "Empyrée",
         Tier = "CorpusVoileDefense",
         Alias = "GrineerVoileProximaDefense",
         Rewards = {
-            ["A"] = {{"Endo", "Endo", 42.86, 400}, {"Vidar Engines Mk III", "Blueprint", 21.43},
-                     {"Vidar Reactor Mk III", "Blueprint", 21.43}, {"Axi O5", "Relic", 4.29},
-                     {"Axi A13", "Relic", 4.29}, {"Axi N7", "Relic", 5.71}},
-            ["B"] = {{"Endo", "Endo", 34.29, 400}, {"Vidar Shield Array Mk III", "Blueprint", 17.14},
-                     {"Zetki Engines Mk III", "Blueprint", 17.14}, {"Vidar Plating Mk III", "Blueprint", 17.14},
-                     {"Axi T7", "Relic", 5.71}, {"Axi G6", "Relic", 5.71}, {"Riven Sliver", "Resource", 2.86, 3}},
-            ["C"] = {{"Endo", "Endo", 34.29, 600}, {"Zetki Reactor Mk III", "Blueprint", 17.14},
-                     {"Zetki Shield Array Mk III", "Blueprint", 17.14}, {"Zetki Plating Mk III", "Blueprint", 17.14},
-                     {"Axi C6", "Relic", 5.71}, {"Axi I1", "Relic", 5.71}, {"Riven Sliver", "Resource", 2.86, 3}}
+            ["A"] = {{"Endo", "Endo", 42.86, 400}, {"Moteur Vidar Mk III", "Schéma", 21.43},
+                     {"Réacteur Vidar Mk III", "Schéma", 21.43}, {"Axi O5", "Relique", 4.29},
+                     {"Axi A13", "Relique", 4.29}, {"Axi N7", "Relique", 5.71}},
+            ["B"] = {{"Endo", "Endo", 34.29, 400}, {"Réseau de Boucliers Vidar Mk III", "Schéma", 17.14},
+                     {"Moteur Zetki Mk III", "Schéma", 17.14}, {"Révêtement Vidar Mk III", "Schéma", 17.14},
+                     {"Axi T7", "Relique", 5.71}, {"Axi G6", "Relique", 5.71}, {"Brisure Riven", "Ressource", 2.86, 3}},
+            ["C"] = {{"Endo", "Endo", 34.29, 600}, {"Réacteur Zetki Mk III", "Schéma", 17.14},
+                     {"Réseau de Boucliers Zetki Mk III", "Schéma", 17.14}, {"Révêtement Zetki Mk III", "Schéma", 17.14},
+                     {"Axi C6", "Relique", 5.71}, {"Axi I1", "Relique", 5.71}, {"Brisure Riven", "Ressource", 2.86, 3}}
         }
     }, {
         Type = "Empyrée",
         Tier = "CorpusVoileOrphix",
         Alias = "GrineerVoileProximaOrphix",
         Rewards = {
-            ["A"] = {{"Endo", "Endo", 28.57, 400}, {"Vidar Engines Mk III", "Blueprint", 14.29},
-                     {"Vidar Reactor Mk III", "Blueprint", 14.29}, {"Vidar Shield Array Mk III", "Blueprint", 14.29},
-                     {"Vidar Plating Mk III", "Blueprint", 14.29}, {"Axi O5", "Relic", 4.76},
-                     {"Axi A13", "Relic", 4.76}, {"Axi N7", "Relic", 4.76}},
-            ["B"] = {{"Endo", "Endo", 27.27, 600}, {"Zetki Engines Mk III", "Blueprint", 13.64},
-                     {"Zetki Reactor Mk III", "Blueprint", 13.64}, {"Zetki Shield Array Mk III", "Blueprint", 13.64},
-                     {"Zetki Plating Mk III", "Blueprint", 13.64}, {"Axi T7", "Relic", 4.55}, {"Axi G6", "Relic", 4.55},
-                     {"Axi C6", "Relic", 4.55}, {"Axi I1", "Relic", 4.55}},
-            ["C"] = {{"Arcane Resistance", "Resource", 5.63}, {"Arcane Healing", "Resource", 5.63},
-                     {"Arcane Deflection", "Resource", 5.63}, {"Arcane Victory", "Resource", 5.63},
-                     {"Arcane Strike", "Resource", 5.63}, {"Arcane Awakening", "Resource", 5.63},
-                     {"Arcane Guardian", "Resource", 5.63}, {"Arcane Phantasm", "Resource", 5.63},
-                     {"Arcane Eruption", "Resource", 5.63}, {"Arcane Acceleration", "Resource", 5.63},
-                     {"Arcane Trickery", "Resource", 5.63}, {"Arcane Velocity", "Resource", 5.63},
-                     {"Arcane Agility", "Resource", 5.63}, {"Arcane Aegis", "Resource", 2.82},
-                     {"Arcane Precision", "Resource", 2.82}, {"Arcane Pulse", "Resource", 2.82},
-                     {"Arcane Ultimatum", "Resource", 2.82}, {"Arcane Rage", "Resource", 2.82},
-                     {"Arcane Fury", "Resource", 2.82}, {"Arcane Avenger", "Resource", 2.82},
-                     {"Arcane Arachne", "Resource", 2.82}, {"Arcane Grace", "Resource", 1.41},
-                     {"Arcane Energize", "Resource", 1.41}, {"Arcane Barrier", "Resource", 1.41}}
+            ["A"] = {{"Endo", "Endo", 28.57, 400}, {"Moteur Vidar Mk III", "Schéma", 14.29},
+                     {"Réacteur Vidar Mk III", "Schéma", 14.29}, {"Réseau de Boucliers Vidar Mk III", "Schéma", 14.29},
+                     {"Révêtement Vidar Mk III", "Schéma", 14.29}, {"Axi O5", "Relique", 4.76},
+                     {"Axi A13", "Relique", 4.76}, {"Axi N7", "Relique", 4.76}},
+            ["B"] = {{"Endo", "Endo", 27.27, 600}, {"Moteur Zetki Mk III", "Schéma", 13.64},
+                     {"Réacteur Zetki Mk III", "Schéma", 13.64}, {"Réseau de Boucliers Zetki Mk III", "Schéma", 13.64},
+                     {"Révêtement Zetki Mk III", "Schéma", 13.64}, {"Axi T7", "Relique", 4.55}, {"Axi G6", "Relique", 4.55},
+                     {"Axi C6", "Relique", 4.55}, {"Axi I1", "Relique", 4.55}},
+            ["C"] = {{"Arcane Résistance", "Ressource", 5.63}, {"Arcane Guérison", "Ressource", 5.63},
+                     {"Arcane Déviation", "Ressource", 5.63}, {"Arcane Victoire", "Ressource", 5.63},
+                     {"Arcane Attaque", "Ressource", 5.63}, {"Arcane Éveil", "Ressource", 5.63},
+                     {"Arcane Gardien", "Ressource", 5.63}, {"Arcane Fantasme", "Ressource", 5.63},
+                     {"Arcane Éruption", "Ressource", 5.63}, {"Arcane Accélération", "Ressource", 5.63},
+                     {"Arcane Tromperie", "Ressource", 5.63}, {"Arcane Vélocité", "Ressource", 5.63},
+                     {"Arcane Agilité", "Ressource", 5.63}, {"Arcane Égide", "Ressource", 2.82},
+                     {"Arcane Précision", "Ressource", 2.82}, {"Arcane Pulsation", "Ressource", 2.82},
+                     {"Arcane Ultimatum", "Ressource", 2.82}, {"Arcane Rage", "Ressource", 2.82},
+                     {"Arcane Furie", "Ressource", 2.82}, {"Arcane Vengeance", "Ressource", 2.82},
+                     {"Arcane Arachne", "Ressource", 2.82}, {"Arcane Grâce", "Ressource", 1.41},
+                     {"Arcane Énergétique", "Ressource", 1.41}, {"Arcane Barrière", "Ressource", 1.41}}
         }
-    }, {
+    }, 
+    
+    {
+			Alias = "VoileProxima",
+			Rewards = {
+				A = {
+					{ "Drone de Réparation Accélérée", "Ressource", 0.5 },
+					{ "Endo", "Endo", 20, 400 },
+					{ "Endo", "Endo", 10, 600 },
+					{ "Brisure Riven", "Ressource", 5, 3 },
+					{ "Forma (Schéma)", "Schéma", 2.5 },
+					{ "Moteur Lavan Mk III", "Schéma", 6 },
+					{ "Réacteur Lavan Mk III", "Schéma", 6 },
+					{ "Réseau de Boucliers Lavan Mk III", "Schéma", 6 },
+					{ "Revêtement Lavan Mk III", "Schéma", 6 },
+					{ "Moteur Vidar Mk III", "Schéma", 6 },
+					{ "Réacteur Vidar Mk III", "Schéma", 6 },
+					{ "Réseau de Boucliers Vidar Mk III", "Schéma", 6 },
+					{ "Revêtement Vidar Mk III", "Schéma", 6 },
+					{ "Neo N16", "Relique", 2 },
+					{ "Neo T4", "Relique", 2 },
+					{ "Neo T5", "Relique", 2 },
+					{ "Neo V10", "Relique", 2 },
+					{ "Neo P2", "Relique", 2 },
+					{ "Neo P3", "Relique", 2 },
+					{ "Neo N17", "Relique", 2 } 
+				} 
+			},
+			Tier = "Voile",
+			Type = "Empyrean" 
+		},
+    
+    {
         Type = "Empyrée",
         Tier = "CorpusVoileSurvie",
         Alias = "GrineerVoileProximaSurvie",
         Rewards = {
-            ["A"] = {{"Endo", "Endo", 42.86, 400}, {"Vidar Engines Mk III", "Blueprint", 21.43},
-                     {"Vidar Reactor Mk III", "Blueprint", 21.43}, {"Axi O5", "Relic", 4.29},
-                     {"Axi A13", "Relic", 4.29}, {"Axi N7", "Relic", 5.71}},
-            ["B"] = {{"Endo", "Endo", 34.29, 400}, {"Vidar Shield Array Mk III", "Blueprint", 17.14},
-                     {"Zetki Engines Mk III", "Blueprint", 17.14}, {"Vidar Plating Mk III", "Blueprint", 17.14},
-                     {"Axi T7", "Relic", 5.71}, {"Axi G6", "Relic", 5.71}, {"Riven Sliver", "Resource", 2.86, 3}},
-            ["C"] = {{"Endo", "Endo", 31.25, 600}, {"Ambassador Blueprint", "Blueprint", 16.67},
-                     {"Zetki Reactor Mk III", "Blueprint", 12.5}, {"Zetki Shield Array Mk III", "Blueprint", 12.5},
-                     {"Zetki Plating Mk III", "Blueprint", 12.5}, {"Axi C6", "Relic", 6.25}, {"Axi I1", "Relic", 6.25},
-                     {"Riven Sliver", "Resource", 2.08, 3}}
+            ["A"] = {{"Endo", "Endo", 42.86, 400}, {"Moteur Vidar Mk III", "Schéma", 21.43},
+                     {"Réacteur Vidar Mk III", "Schéma", 21.43}, {"Axi O5", "Relique", 4.29},
+                     {"Axi A13", "Relique", 4.29}, {"Axi N7", "Relique", 5.71}},
+            ["B"] = {{"Endo", "Endo", 34.29, 400}, {"Réseau de Boucliers Vidar Mk III", "Schéma", 17.14},
+                     {"Moteur Zetki Mk III", "Schéma", 17.14}, {"Révêtement Vidar Mk III", "Schéma", 17.14},
+                     {"Axi T7", "Relique", 5.71}, {"Axi G6", "Relique", 5.71}, {"Brisure Riven", "Ressource", 2.86, 3}},
+            ["C"] = {{"Endo", "Endo", 31.25, 600}, {"Ambassadeur", "Schéma", 16.67},
+                     {"Réacteur Zetki Mk III", "Schéma", 12.5}, {"Réseau de Boucliers Zetki Mk III", "Schéma", 12.5},
+                     {"Révêtement Zetki Mk III", "Schéma", 12.5}, {"Axi C6", "Relique", 6.25}, {"Axi I1", "Relique", 6.25},
+                     {"Brisure Riven", "Ressource", 2.08, 3}}
         }
     }, {
         Type = "Empyrée",
         Tier = "CorpusVoileEspionnage",
         Alias = "GrineerVoileProximaEspionnage",
         Rewards = {
-            ["A"] = {{"Endo", "Endo", 30, 400}, {"Endo", "Endo", 16.67, 600}, {"Swift Mercy", "Mod", 16.67},
-                     {"Power Drain", "Mod", 10}, {"Firewall", "Mod", 10}, {"Malicious Code", "Mod", 6.67},
-                     {"Hard Reset", "Mod", 6.67}, {"Riven Sliver", "Resource", 3.33, 2}},
-            ["B"] = {{"Endo", "Endo", 30, 400}, {"Axi O5", "Relic", 10}, {"Axi A13", "Relic", 10},
-                     {"Axi N7", "Relic", 10}, {"Axi T7", "Relic", 10}, {"Axi G6", "Relic", 10}, {"Axi C6", "Relic", 10},
-                     {"Axi I1", "Relic", 10}},
-            ["C"] = {{"Endo", "Endo", 24, 600}, {"Ivara Blueprint", "Blueprint", 12},
-                     {"Vidar Engines Mk III", "Blueprint", 8}, {"Vidar Reactor Mk III", "Blueprint", 8},
-                     {"Vidar Shield Array Mk III", "Blueprint", 8}, {"Zetki Engines Mk III", "Blueprint", 8},
-                     {"Vidar Plating Mk III", "Blueprint", 8}, {"Zetki Reactor Mk III", "Blueprint", 8},
-                     {"Zetki Shield Array Mk III", "Blueprint", 8}, {"Zetki Plating Mk III", "Blueprint", 8}}
+            ["A"] = {{"Endo", "Endo", 30, 400}, {"Endo", "Endo", 16.67, 600}, {"Miséricorde Rapide", "Mod", 16.67},
+                     {"Drain de Puissance", "Mod", 10}, {"Pare-Feu", "Mod", 10}, {"Code Malicieux", "Mod", 6.67},
+                     {"Réinitialisation Complète", "Mod", 6.67}, {"Brisure Riven", "Ressource", 3.33, 2}},
+            ["B"] = {{"Endo", "Endo", 30, 400}, {"Axi O5", "Relique", 10}, {"Axi A13", "Relique", 10},
+                     {"Axi N7", "Relique", 10}, {"Axi T7", "Relique", 10}, {"Axi G6", "Relique", 10}, {"Axi C6", "Relique", 10},
+                     {"Axi I1", "Relique", 10}},
+            ["C"] = {{"Endo", "Endo", 24, 600}, {"Ivara", "Schéma", 12},
+                     {"Moteur Vidar Mk III", "Schéma", 8}, {"Réacteur Vidar Mk III", "Schéma", 8},
+                     {"Réseau de Boucliers Vidar Mk III", "Schéma", 8}, {"Moteur Zetki Mk III", "Schéma", 8},
+                     {"Révêtement Vidar Mk III", "Schéma", 8}, {"Réacteur Zetki Mk III", "Schéma", 8},
+                     {"Réseau de Boucliers Zetki Mk III", "Schéma", 8}, {"Révêtement Zetki Mk III", "Schéma", 8}}
         }
     }, {
         Type = "Empyrée",
         Tier = "CorpusVoileExtra",
         Alias = "GrineerVoileProximaExtra",
         Rewards = {
-            ["A"] = {{"Cubic Diodes", "Resource", 28.57, 200}, {"Titanium", "Resource", 28.57, 200},
-                     {"Isos", "Resource", 14.29, 5}, {"Asterite", "Resource", 14.29, 5},
-                     {"Aucrux Capacitors", "Resource", 7.14}, {"Nullstones", "Resource", 7.14}}
+            ["A"] = {{"Diodes Cubiques", "Ressource", 28.57, 200}, {"Titane", "Ressource", 28.57, 200},
+                     {"Isos", "Ressource", 14.29, 5}, {"Astérite", "Ressource", 14.29, 5},
+                     {"Condensateurs Aucrux ", "Ressource", 7.14}, {"Larmes du Néant", "Ressource", 7.14}}
         }
     }, {
         Type = "Empyrée",
         Tier = "CorpusVoileCaches",
         Alias = "GrineerVoileProximaCaches",
         Rewards = {
-            ["A"] = {{"Endo", "Endo", 26.09, 400}, {"Endo", "Endo", 17.39, 600}, {"Seeker Volley", "Mod", 8.7},
-                     {"Void Hole", "Mod", 8.7}, {"Phoenix Blaze", "Mod", 8.7}, {"Neo D3", "Relic", 4.35},
-                     {"Neo T4", "Relic", 4.35}, {"Neo A5", "Relic", 4.35}, {"Neo V10", "Relic", 4.35},
-                     {"Neo P2", "Relic", 4.35}, {"Neo B7", "Relic", 4.35}, {"Neo N15", "Relic", 4.35}},
-            ["B"] = {{"Endo", "Endo", 18.18, 400}, {"Endo", "Endo", 12.12, 600}, {"Internal Bleeding", "Mod", 9.09},
-                     {"Hemorrhage", "Mod", 9.09}, {"Votive Onslaught", "Mod", 9.09}, {"Axi V10", "Relic", 9.09},
-                     {"Axi S8", "Relic", 9.09}, {"Carmine Penta Blueprint", "Blueprint", 6.06},
-                     {"Carmine Penta Barrel", "Blueprint", 6.06}, {"Carmine Penta Receiver", "Blueprint", 6.06},
-                     {"Carmine Penta Stock", "Blueprint", 6.06}},
+            ["A"] = {{"Endo", "Endo", 26.09, 400}, {"Endo", "Endo", 17.39, 600}, {"Salve de Missiles", "Mod", 8.7},
+                     {"Trou du Néant", "Mod", 8.7}, {"Éclat du Phénix", "Mod", 8.7}, {"Neo D3", "Relique", 4.35},
+                     {"Neo T4", "Relique", 4.35}, {"Neo A5", "Relique", 4.35}, {"Neo V10", "Relique", 4.35},
+                     {"Neo P2", "Relique", 4.35}, {"Neo B7", "Relique", 4.35}, {"Neo N15", "Relique", 4.35}},
+            ["B"] = {{"Endo", "Endo", 18.18, 400}, {"Endo", "Endo", 12.12, 600}, {"Hémorragie Interne", "Mod", 9.09},
+                     {"Hémorragie", "Mod", 9.09}, {"Massacre Votif", "Mod", 9.09}, {"Axi V10", "Relique", 9.09},
+                     {"Axi S8", "Relique", 9.09}, {"Penta Carmine Schéma", "Schéma", 6.06},
+                     {"Penta Carmine Canon", "Schéma", 6.06}, {"Penta Carmine Culasse", "Schéma", 6.06},
+                     {"Penta Carmine Crosse", "Schéma", 6.06}},
             ["C"] = {}
         }
     }, {
@@ -4685,7 +4894,7 @@ local DropData = {
                      {"Munitions Rasoirs", "Mod", 10000}, {"Cartouches Comètes", "Mod", 10000},
                      {"Cartouches Déchirantes", "Mod", 10000}, {"Cartouches Dentelées", "Mod", 10000},
                      {"Tir Crash", "Mod", 10000}, {"Tir Déchiquetant", "Mod", 10000},
-                     {"Tir Antiaérien", "Mod", 10000}, {"Contrepoids", "Mod", 10000},
+                     {"Tir Antiaérien", "Mod", 10000},
                      {"Bordures Dentelées", "Mod", 10000}, {"Lame Aiguisée", "Mod", 10000},
                      {"Regard Vif", "Mod", 10000}, {"Visée Agile", "Mod", 10000}, {"Instantané", "Mod", 10000},
                      {"Reconnaissance Aérienne", "Mod", 10000}, {"Vue d'Ensemble", "Mod", 10000},
