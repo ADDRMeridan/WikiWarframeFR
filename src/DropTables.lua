@@ -19,7 +19,7 @@ local Missions = require("Module:Missions")
 local MissionData = mw.loadData('Module:Missions/data')
 local ModsData = mw.loadData('Module:Mods/data')
 local Icon = require("Module:Icon")
-local Shared = require("Module:Shared")
+local SHARED = require("Module:Shared")
 local TT = require("Module:Tooltip")
 
 local RELICSORDER = {"Lith", "Meso", "Neo", "Axi", "Requiem"}
@@ -156,7 +156,7 @@ local function asPercent(val, digits)
     if (val == nil) then
         val = 0
     end
-    return Shared.round(val, digits) .. "%"
+    return SHARED.round(val, digits) .. "%"
 end
 
 -- Links a Syndicate and returns it.
@@ -274,7 +274,7 @@ local function formatDropString(drop, frame)
                     TT._tooltipText(dropContent[2], "Weapon"))
             end,
             ["Relique"] = function(dropContent)
-                local tmpRelicTokens = Shared.splitString(dropContent, ' ') -- Split pour recuperer uniquement le nom de base quand il y a un raffinage
+                local tmpRelicTokens = SHARED.splitString(dropContent, ' ') -- Split pour recuperer uniquement le nom de base quand il y a un raffinage
                 local tmpRelicName = tmpRelicTokens[1] .. ' ' .. tmpRelicTokens[2]
                 return TT._tooltipText(tmpRelicName, "Relic", dropContent)
             end,
@@ -318,7 +318,7 @@ local function getRewardsForMission(theMission)
     local result = {}
 
     if (theMission.Rewards ~= nil) then
-        for key, dropTable in Shared.skpairs(theMission.Rewards) do
+        for key, dropTable in SHARED.skpairs(theMission.Rewards) do
             local temp = {}
 
             for i, drop in ipairs(dropTable) do
@@ -347,7 +347,7 @@ local function findMaxLines(missionRewards)
 
     local ret = 0
     for _, drops in pairs(missionRewards) do
-        local tmp = Shared.tableCount(drops)
+        local tmp = SHARED.tableCount(drops)
         if (tmp > ret) then
             ret = tmp
         end
@@ -361,13 +361,13 @@ local function buildMissionRewardsTable(missionRewards, frame)
     local ret = {}
     if (missionRewards ~= nil) then
         table.insert(ret, '{| class="wikitable" style="margin:auto" border="0"')
-        local nbCol = Shared.tableCount(missionRewards)
+        local nbCol = SHARED.tableCount(missionRewards)
         -- Header
         if (nbCol == 1) then
             table.insert(ret, '! colspan="2" style="text-align:center;" | Récompenses')
         else
-            for rot, loot in Shared.skpairs(missionRewards) do
-                if (Shared.contains({"A", "B", "C"}, rot)) then
+            for rot, loot in SHARED.skpairs(missionRewards) do
+                if (SHARED.contains({"A", "B", "C"}, rot)) then
                     table.insert(ret, '! colspan="2" style="text-align:center;" | Rotation ' .. rot)
                 else
                     table.insert(ret, '! colspan="2" style="text-align:center;" | ' .. rot)
@@ -378,7 +378,7 @@ local function buildMissionRewardsTable(missionRewards, frame)
         local nbLines = findMaxLines(missionRewards)
         for i = 1, nbLines, 1 do
             table.insert(ret, '|-')
-            for _, loot in Shared.skpairs(missionRewards) do
+            for _, loot in SHARED.skpairs(missionRewards) do
                 table.insert(ret, '| align="right" | ' .. formatDropString(loot[i], frame))
             end
         end
@@ -402,7 +402,7 @@ function p.getRewards(frame)
         if (tmpArr ~= nil) then
             for _, tmpMiss in pairs(tmpArr) do
                 if (tmpMiss.Rewards ~= nil) then
-                    for key, drops in Shared.skpairs(tmpMiss.Rewards) do
+                    for key, drops in SHARED.skpairs(tmpMiss.Rewards) do
                         if (mission.Rewards[key] == nil) then
                             mission.Rewards[key] = {}
                         end
@@ -417,7 +417,7 @@ function p.getRewards(frame)
         mission = p.getMission(missType, missCat)
     end
     if (mission == nil) then
-        ret = Shared.printModuleError('Aucune mission avec "' .. tostring(missType) .. '" et "' .. tostring(missCat) ..
+        ret = SHARED.printModuleError('Aucune mission avec "' .. tostring(missType) .. '" et "' .. tostring(missCat) ..
                                           '"', 'DropTables.getRewards')
     else
         ret = buildMissionRewardsTable(mission.Rewards, frame)
@@ -520,13 +520,13 @@ function p.getRewardTableAllTier(frame)
     end
 
     -- Goes through all three rotations to find which one has the most items
-    local ACount = Shared.tableCount(RotA)
+    local ACount = SHARED.tableCount(RotA)
     local maxLen = ACount
-    local BCount = Shared.tableCount(RotB)
+    local BCount = SHARED.tableCount(RotB)
     if (BCount > maxLen) then
         maxLen = BCount
     end
-    local CCount = Shared.tableCount(RotC)
+    local CCount = SHARED.tableCount(RotC)
     if (CCount > maxLen) then
         maxLen = CCount
     end
@@ -584,7 +584,7 @@ local function getDropMissions(itemName)
         -- ... if it has rewards...
         if (theMission.Rewards ~= nil and theMission.Ignore ~= true) then
             -- ... then for each rotation in the mission...
-            for key, dropTable in Shared.skpairs(theMission.Rewards) do
+            for key, dropTable in SHARED.skpairs(theMission.Rewards) do
                 -- ... for each drop in the rotation...
                 for j, drop in pairs(dropTable) do
                     -- ... if the drop is the right item, add it to the list
@@ -638,12 +638,12 @@ local function getRelicMissionAlias(tableMissionAlias2Include)
 
     local ret = {}
     for _, mission in ipairs(DropData["Missions"]) do
-        if ((tableMissionAlias2Include == nil or (Shared.contains(tableMissionAlias2Include, mission.Alias))) and
+        if ((tableMissionAlias2Include == nil or (SHARED.contains(tableMissionAlias2Include, mission.Alias))) and
             mission.Rewards ~= nil) then
             for rot, rewards in pairs(mission.Rewards) do
                 for _, loot in ipairs(rewards) do
                     if (loot[2] == "Relique") then
-                        local splitRelic = Shared.splitString(loot[1], ' ')
+                        local splitRelic = SHARED.splitString(loot[1], ' ')
                         local relicTier = splitRelic[1]
                         local relicName = splitRelic[2]
                         if (ret[relicTier] == nil) then
@@ -678,20 +678,20 @@ function p.getRelicByPlanet(frame)
         end
         -- Search for corresponding missions drops
         local missionsDrops = getRelicMissionAlias(missAliasWanted)
-        if (Shared.tableCount(missionsDrops) > 0) then
+        if (SHARED.tableCount(missionsDrops) > 0) then
             local missionsTiersFound = {}
             -- Build html table header
             table.insert(ret, '\n{| class="wikitable"\n! rowspan="2" | Noeud (Type)')
             for _, relicTier in pairs(RELICSORDER) do
                 if (missionsDrops[relicTier] ~= nil) then
                     table.insert(ret, '\n! colspan="')
-                    table.insert(ret, Shared.tableCount(missionsDrops[relicTier]))
+                    table.insert(ret, SHARED.tableCount(missionsDrops[relicTier]))
                     table.insert(ret, '" | ')
                     table.insert(ret, relicTier)
                     -- Store which mission tier was found
                     for _, missionsTiers in pairs(missionsDrops[relicTier]) do
                         for tierFound, _ in pairs(missionsTiers) do
-                            if (not Shared.contains(missionsTiersFound, tierFound)) then
+                            if (not SHARED.contains(missionsTiersFound, tierFound)) then
                                 table.insert(missionsTiersFound, tierFound)
                             end
                         end
@@ -714,7 +714,7 @@ function p.getRelicByPlanet(frame)
             -- Filter missions to corresponding found tiers
             local correctMissions = {}
             for _, mission in pairs(missions) do
-                if (Shared.contains(missionsTiersFound, Missions.getValue(mission, "TIER"))) then
+                if (SHARED.contains(missionsTiersFound, Missions.getValue(mission, "TIER"))) then
                     table.insert(correctMissions, mission)
                 end
             end
@@ -755,7 +755,13 @@ local function findItemInDrops(itemName, itemType, drops)
     local ret = {}
     if(itemName ~= nil and itemType ~= nil) then
         for _, drop in ipairs(drops) do
-            if(drop[1] == itemName and drop[2] == itemType) then
+            
+            local dropName = drop[1]
+            if(type(dropName) == "table") then
+                dropName = dropName[1]
+            end
+            -- Find rather than == because of relic variants
+            if(string.find(dropName, itemName) ~= nil and drop[2] == itemType) then
                 table.insert(ret, drop)
             end
         end
@@ -770,11 +776,15 @@ local function getItemMissionsDropLoc(itemName, itemType)
     if(itemName ~= nil and itemType ~= nil) then
         for _, mission in ipairs(DropData["Missions"]) do
             if(mission.Rewards ~= nil and (not mission.Ignore)) then
+                local missionRots = {}
                 for rotation, rotationDrops in pairs(mission.Rewards) do
                     local dropsFound = findItemInDrops(itemName, itemType, rotationDrops)
                     if(#dropsFound > 0) then
-                        table.insert(ret, {mission, rotation})
+                        missionRots[rotation] = dropsFound[1][3]
                     end
+                end
+                if(SHARED.tableCount(missionRots) > 0) then
+                    table.insert(ret, {mission, missionRots})
                 end
             end
         end
@@ -788,23 +798,6 @@ local function getMissionName(mission)
     return mission.Name or mission.ShortName or mission.Alias
 end
 
-local function sort_MissionsDropLoc(a, b) 
-
-    local aMission = a[1]
-    local bMission = b[1]
-    if(aMission.Type == bMission.Type) then
-        if(aMission.Name == bMission.Name) then
-            local aRot = a[2]
-            local bRot = b[2]
-            return aRot < bRot
-        else
-            return getMissionName(aMission) < getMissionName(bMission)
-        end
-    else
-        return aMission.Type < bMission.Type
-    end
-end
-
 function p.getRelicDropLoc(relicName)
 
     local ret = nil
@@ -812,22 +805,55 @@ function p.getRelicDropLoc(relicName)
         local itemType = 'Relique'
         local dropLocs = getItemMissionsDropLoc(relicName, itemType)
         if(#dropLocs > 0) then
-            table.sort(dropLocs, sort_MissionsDropLoc)
-            ret = {'\n{| class="article-table sortable"', '! Type', '! Catégorie', '! Rotation', '! Chance'}
+            --Organize data (groupby)
+            local tmpArray = {}
             for _, dropLoc in ipairs(dropLocs) do
-                table.insert(ret, '|-')
                 local mission = dropLoc[1]
-                local rotation = dropLoc[2]
-                local strB = {'| [[', mission.Type, ']] || ', getMissionName(mission), ' || ', rotation, ' || '}
-                local pourcent = {}
-                for _, drop in ipairs(findItemInDrops(relicName, itemType, mission.Rewards[rotation])) do
-                    table.insert(pourcent, asPercent(drop[3]))
+                if(tmpArray[mission.Type] == nil) then
+                    tmpArray[mission.Type] = {}
                 end
-                table.insert(strB, table.concat(pourcent, '\n'))
-                table.insert(ret, table.concat(strB))
+                tmpArray[mission.Type][getMissionName(mission)] = dropLoc[2]
             end
-            table.insert(ret, '|}')
-            ret = table.concat(ret, '\n')
+            dropLocs = nil
+            --Build html table
+            ret = {'\n{| class="article-table sortable"\n! Type\n! Catégorie\n! Rotation\n! Chance'}
+            for missType, typeData in SHARED.skpairs(tmpArray) do
+                local typeSpan = 0
+                local strCat = {}
+                for missCat, rotations in SHARED.skpairs(typeData) do
+                    local catSpan = SHARED.tableCount(rotations)
+                    typeSpan = typeSpan + catSpan
+                    if(#strCat == 0) then
+                        table.insert(strCat, '\n| ')
+                    else
+                        table.insert(strCat, '\n|-\n| ')
+                    end
+                    table.insert(strCat, 'rowspan="')
+                    table.insert(strCat, catSpan)
+                    table.insert(strCat, '" | ')
+                    table.insert(strCat, missCat)
+                    local strRotations = {}
+                    for rot, chance in SHARED.skpairs(rotations) do
+                        if(#strRotations == 0) then
+                            table.insert(strRotations, '\n| ')
+                        else
+                            table.insert(strRotations, '\n|-\n| ')
+                        end
+                        table.insert(strRotations, rot)
+                        table.insert(strRotations, '\n| ')
+                        table.insert(strRotations, asPercent(chance))
+                    end
+                    table.insert(strCat, table.concat(strRotations))
+                end
+                table.insert(ret, '\n|-\n| rowspan="')
+                table.insert(ret, typeSpan)
+                table.insert(ret, '" | [[')
+                table.insert(ret, missType)
+                table.insert(ret, ']]')
+                table.insert(ret, table.concat(strCat))
+            end
+            table.insert(ret, '\n|}')
+            ret = table.concat(ret)
         end
     end
 
@@ -838,10 +864,10 @@ end
 -- Function used for building Void Relic/DropLocation table
 function p.getRelicByLocation(frame)
     local tier = frame.args ~= nil and frame.args[1] or frame
-    local tierPieces = Shared.splitString(tier, " ")
+    local tierPieces = SHARED.splitString(tier, " ")
 
     -- 5/26/2018: You can now call on a single relic and get just the table
-    if (Shared.tableCount(tierPieces) == 2) then
+    if (SHARED.tableCount(tierPieces) == 2) then
         tier = tierPieces[1]
         local relic = tierPieces[2]
         return p.getSingleRelicByLocation(tier, relic)
@@ -858,12 +884,12 @@ function p.getRelicByLocation(frame)
     for i, theMission in pairs(DropData["Missions"]) do
         if (theMission.Rewards ~= nil and theMission.Ignore ~= true) then
 
-            for rot, dropTable in Shared.skpairs(theMission.Rewards) do
+            for rot, dropTable in SHARED.skpairs(theMission.Rewards) do
                 for j, drop in pairs(dropTable) do
                     -- When we find a relic drop, make sure it's for the right tier
                     if (drop[misTypeCol] == "Relic") then
                         -- Example: {"Lith", "A1"}
-                        local RelicBits = Shared.splitString(drop[misNameCol], " ")
+                        local RelicBits = SHARED.splitString(drop[misNameCol], " ")
                         -- Example: "Lith"
                         local RTier = RelicBits[1]
                         -- Example: "A1"
@@ -904,7 +930,7 @@ function p.getRelicByLocation(frame)
     rHeader = rHeader .. "\n!Rotation"
     rHeader = rHeader .. "\n!Chance"
 
-    for RName, RTable in Shared.skpairs(relicData) do
+    for RName, RTable in SHARED.skpairs(relicData) do
         result = result .. "\n|-\n| " .. "[[" .. tier .. " " .. RName .. "]]"
         for i, reward in pairs(RTable.Rewards) do
             local ItemName = Void.getItemName(reward.Item)
@@ -959,12 +985,12 @@ function p.getSingleRelicByLocation(tier, name)
     -- We're looking through all drops for all missions to find relic drops
     for i, theMission in pairs(DropData["Missions"]) do
         if (theMission.Rewards ~= nil and theMission.Ignore ~= true) then
-            for rot, dropTable in Shared.skpairs(theMission.Rewards) do
+            for rot, dropTable in SHARED.skpairs(theMission.Rewards) do
                 for j, drop in pairs(dropTable) do
                     -- When relic drop found, make sure it's for the right relic
                     if (drop[misTypeCol] == "Relic") then
                         -- Example: {"Lith", "A1"}
-                        local RelicBits = Shared.splitString(drop[misNameCol], " ")
+                        local RelicBits = SHARED.splitString(drop[misNameCol], " ")
                         -- Example: "Lith"
                         local RTier = RelicBits[1]
                         -- Example: "A1"
@@ -1032,7 +1058,7 @@ function p.getSingleRelicByLocation(tier, name)
             end
         end
         local num = string.gsub(chances[i], "%%", "")
-        local ChancesBits = Shared.splitString(num, ",&nbsp;")
+        local ChancesBits = SHARED.splitString(num, ",&nbsp;")
         local highchance = nil
         if (table.getn(ChancesBits) <= 1) or (ChancesBits == nil) then
             highchance = tonumber(num)
@@ -1210,7 +1236,7 @@ function p.getItemDropList(frame)
     end
 
     local Drops = getDropSyndicates(theDrop)
-    if (Shared.tableCount(Drops) > 0) then
+    if (SHARED.tableCount(Drops) > 0) then
         table.sort(Drops, function(d1, d2)
             return d1.SName < d2.SName
         end)
@@ -1221,7 +1247,7 @@ function p.getItemDropList(frame)
         result = result .. "'''Syndicats :'''"
         for i, Drop in pairs(Drops) do
             result = result .. "<br/>" .. linkSyndicate(Drop.SName) .. ' ' .. Icon._Syndicat("Drapeau", "", "x20") ..
-                         ' ' .. Shared.formatnum(Drop.Cost)
+                         ' ' .. SHARED.formatnum(Drop.Cost)
         end
         table.insert(ret, result)
         result = ""
@@ -1252,7 +1278,7 @@ function p.getItemByEnemyCount(frame)
 
     local Drops = getDropEnemies(theDrop)
 
-    return Shared.tableCount(Drops)
+    return SHARED.tableCount(Drops)
 end
 
 function p.getItemByMissionCount(frame)
@@ -1260,7 +1286,7 @@ function p.getItemByMissionCount(frame)
 
     local Drops = getDropMissions(theDrop)
 
-    return Shared.tableCount(Drops)
+    return SHARED.tableCount(Drops)
 end
 
 function p.getFullEnemyList(frame)
@@ -1285,7 +1311,7 @@ function p._getEnemyModDrops(EnemyName)
 
     local Drops = getAllModDrops(EnemyName)
 
-    if (Shared.tableCount(Drops) == 0) then
+    if (SHARED.tableCount(Drops) == 0) then
         return;
     end
 
